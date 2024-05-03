@@ -6,12 +6,10 @@
   
   <title>行者无畏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="在峡江的转弯处，仿佛若有光">
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="行者无畏">
 <meta property="og:url" content="https://flyingpuppyy.github.io/index.html">
 <meta property="og:site_name" content="行者无畏">
-<meta property="og:description" content="在峡江的转弯处，仿佛若有光">
 <meta property="og:locale">
 <meta property="article:author" content="明昧">
 <meta name="twitter:card" content="summary">
@@ -44,6 +42,10 @@
         <a href="/" id="logo">行者无畏</a>
       </h1>
       
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">在峡江的转弯处，仿佛若有光</a>
+        </h2>
+      
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
@@ -70,6 +72,89 @@
 
       <div class="outer">
         <section id="main">
+  
+    <article id="post-20240503-关于hexo的其他问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/05/03/20240503-%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2024-05-03T09:26:13.000Z" itemprop="datePublished">2024-05-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/05/03/20240503-%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98/">20240503 关于hexo的其他问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="npx和npm"><a href="#npx和npm" class="headerlink" title="npx和npm"></a>npx和npm</h1><h1 id="npx-和hexo"><a href="#npx-和hexo" class="headerlink" title="npx 和hexo"></a>npx 和hexo</h1><h1 id="git-bash-和cmd-和powershell的区别"><a href="#git-bash-和cmd-和powershell的区别" class="headerlink" title="git bash 和cmd 和powershell的区别"></a>git bash 和cmd 和powershell的区别</h1><p><strong>区别</strong></p>
+<p>在 Windows 下，Git Bash、Command Prompt (cmd) 和 PowerShell 是三种常见的命令行工具，它们之间有一些重要的区别：</p>
+<ol>
+<li><strong>Git Bash</strong> ： <ul>
+<li>Git Bash 是一个模拟 Unix 环境的命令行工具，它在 Windows 上提供了一个类似于 Linux&#x2F;Unix Shell 的环境。  </li>
+<li>它集成了 Git，并且可以运行大多数标准的 Unix&#x2F;Linux 命令，例如 ls、grep、sed 等。  </li>
+<li>Git Bash 使用的是 MinGW 工具集，因此可以让用户在 Windows 上更轻松地使用类 Unix 的命令和工具。</li>
+</ul>
+</li>
+<li><strong>命令提示符 （cmd）：</strong> :<ul>
+<li>Command Prompt 是 Windows 操作系统的原生命令行工具，也称为命令提示符或 cmd.exe。 </li>
+<li>它使用的是 Windows 命令行解释器，执行的是 Windows 特定的命令和操作。  </li>
+<li>Cmd 具有一些基本的功能，但相对而言，它的功能和扩展性较为有限。</li>
+</ul>
+</li>
+<li><strong>PowerShell</strong> ： <ul>
+<li>PowerShell 是由 Microsoft 开发的命令行 shell 和脚本语言，旨在成为一个功能强大的管理工具。  </li>
+<li>PowerShell 提供了丰富的功能，包括对象管道、脚本编写、自动化任务、远程管理等。  </li>
+<li>它具有现代化的语法和功能，支持大量的命令、模块和扩展，适合于系统管理和自动化任务。</li>
+</ul>
+</li>
+</ol>
+<p>总的来说，Git Bash 更适合于在 Windows 上使用类 Unix&#x2F;Linux 命令和运行 Git 命令；Cmd 是 Windows 原生的命令行工具，用于执行 Windows 特定的命令；而 PowerShell 则是功能更强大、更适合于系统管理和自动化任务的工具。  </p>
+<hr>
+<p><strong>联系</strong></p>
+<p>这三者之间确实有联系，主要体现在以下几个方面：</p>
+<ol>
+<li><strong>共享基础功能</strong>：<ul>
+<li>Git Bash、Command Prompt 和 PowerShell 在某种程度上都是依赖于 Windows 操作系统提供的基础功能和服务。它们都可以执行文件操作、系统管理等基本任务。</li>
+</ul>
+</li>
+<li><strong>命令行接口</strong>：<ul>
+<li>尽管它们在设计和功能上有所不同，但 Git Bash、Command Prompt 和 PowerShell 都是命令行接口，允许用户通过输入命令来执行各种操作。</li>
+</ul>
+</li>
+<li><strong>脚本编写</strong>：<ul>
+<li>Git Bash、Command Prompt 和 PowerShell 都支持脚本编写。你可以编写批处理文件（.bat）来在 Command Prompt 中执行一系列命令；在 PowerShell 中，你可以编写 PowerShell 脚本（.ps1）来进行更加复杂的任务；而在 Git Bash 中，你也可以编写 Shell 脚本来执行类 Unix 命令。</li>
+</ul>
+</li>
+<li><strong>集成 Git</strong>：<ul>
+<li>Git Bash 集成了 Git，并且提供了一种在 Windows 上使用 Git 的方式。虽然在 Command Prompt 和 PowerShell 中也可以使用 Git，但 Git Bash 更加专注于提供与 Git 相关的功能和命令。</li>
+</ul>
+</li>
+</ol>
+<p>尽管它们在某些方面有联系，但它们各自的设计目标和用途不同，因此在不同的场景下可能会选择不同的工具来完成任务。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flyingpuppyy.github.io/2024/05/03/20240503-%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98/" data-id="clvqh66xo0000bsv7elrrfq5s" data-title="20240503 关于hexo的其他问题" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
   
     <article id="post-20240503-《亲密关系》" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
@@ -127,7 +212,67 @@
 <li><p>关键因素：社会文化对于婚姻恋爱的价值判断的影响、个人经历的影响、性别差异、性认同差异、人格差异、自尊差异、人际互动的影响</p>
 </li>
 </ul>
-<h1 id="第二章-研究方法"><a href="#第二章-研究方法" class="headerlink" title="第二章 研究方法"></a>第二章 研究方法</h1>
+<h1 id="第二章-研究方法"><a href="#第二章-研究方法" class="headerlink" title="第二章 研究方法"></a>第二章 研究方法</h1><blockquote>
+<p>看完之后的感受是：</p>
+<p>我其实上能知道用什么方法来进行研究</p>
+<p>但是这些不同的研究方法是怎样对我们的结论造成影响的</p>
+<p>使用这些方法获得的结论的可信度是……?</p>
+</blockquote>
+<ul>
+<li>研究历史</li>
+</ul>
+<p><img src="/imgs/$%7Bfiilename%7D/1714718594374.png" alt="1714718594374"></p>
+<p><img src="/imgs/$%7Bfiilename%7D/1714718757307.png" alt="1714718757307"></p>
+<p><img src="/imgs/$%7Bfiilename%7D/1714718769870.png" alt="1714718769870"></p>
+<p><img src="/imgs/$%7Bfiilename%7D/1714718779432.png" alt="1714718779432"></p>
+<p><img src="/imgs/$%7Bfiilename%7D/1714718787469.png" alt="1714718787469"></p>
+<ul>
+<li>问题的提出</li>
+</ul>
+<p>问题是怎样被提出的：</p>
+<blockquote>
+<p>1.来自个人经验</p>
+<p>2.广泛存在的社会问题</p>
+<p>3.先前的研究</p>
+<p>4.对关系事件提供解释的理论</p>
+</blockquote>
+<ul>
+<li>问题的分类</li>
+</ul>
+<blockquote>
+<p>1.全面精确描述事件的性质</p>
+<p>2.确定事件之间的因果关系</p>
+</blockquote>
+<ul>
+<li>参与者的选取的一些基本方法</li>
+</ul>
+<blockquote>
+<p>1.方便取样（容易接触到的人）</p>
+<p>2.代表性取样</p>
+</blockquote>
+<ul>
+<li><p>研究的设计</p>
+</li>
+<li><p>场景的选择</p>
+</li>
+<li><p>数据的性质</p>
+</li>
+<li><p>道德规范</p>
+</li>
+<li><p>结果的解释和整合</p>
+</li>
+<li><p>请你思考（？？）</p>
+</li>
+</ul>
+<p><img src="/imgs/$%7Bfiilename%7D/1714725009441.png" alt="1714725009441"></p>
+<blockquote>
+<p>设计的问题以及问题所可能引发的….?</p>
+</blockquote>
+<h1 id="第三章-吸引力"><a href="#第三章-吸引力" class="headerlink" title="第三章 吸引力"></a>第三章 吸引力</h1><blockquote>
+<p>看完第二章感觉有些单调无聊了</p>
+<p>找点感兴趣的读一下先</p>
+</blockquote>
+
       
     </div>
     <footer class="article-footer">
@@ -213,8 +358,102 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="INFO-Install-dependencies"><a href="#INFO-Install-dependencies" class="headerlink" title="INFO  Install dependencies"></a>INFO  Install dependencies</h1><p>‘npm’ is not recognized as an internal or external command,<br>operable program or batch file. WARN  Failed to install dependencies. Please run ‘npm install’ in “E:\gitblog” folder.</p>
+        <h1 id="hexo官网"><a href="#hexo官网" class="headerlink" title="hexo官网"></a>hexo官网</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+<h1 id="hexo构建中的注意事项"><a href="#hexo构建中的注意事项" class="headerlink" title="hexo构建中的注意事项"></a>hexo构建中的注意事项</h1><p>1.由于我之前自己已经配置过github多账号了，这里关于ssh的相关配置和验证连接过程不必说</p>
+<p>2.github多账号的话在设置hexo的配置文件的时候要注意repo参数的ssh链接的填写形式</p>
+<h1 id="hexo基本知识"><a href="#hexo基本知识" class="headerlink" title="hexo基本知识"></a>hexo基本知识</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://daringfireball.net/projects/markdown/">Markdown</a>（或其他<strong>渲染引擎</strong>）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="node-js的工作原理"><a href="#node-js的工作原理" class="headerlink" title="node.js的工作原理"></a>node.js的工作原理</h2><p>既然是基于node.js的我们先来看看node.js的基本工作原理是什么</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/momoyan/p/9128076.html">https://www.cnblogs.com/momoyan/p/9128076.html</a></p>
+<hr>
+<p><strong>chatgpt</strong></p>
+<p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。它使用事件驱动、非阻塞 I&#x2F;O 模型，使得它能够高效地处理并发请求。</p>
+<p>其基本工作原理如下：</p>
+<ol>
+<li><strong>V8 引擎</strong>：Node.js 使用 Google Chrome 浏览器中使用的 V8 引擎，它负责解析和执行 JavaScript 代码。</li>
+<li><strong>事件驱动</strong>：Node.js 使用事件驱动的编程范式。它基于事件和回调函数的概念，使得服务器能够在不阻塞的情况下响应请求。当有请求到达时，Node.js 将触发相应的事件，并调用相应的回调函数来处理请求。</li>
+<li><strong>非阻塞 I&#x2F;O</strong>：Node.js 使用非阻塞 I&#x2F;O 模型，这意味着当执行 I&#x2F;O 操作（如文件读取、网络请求等）时，它不会等待 I&#x2F;O 操作完成再继续执行后续代码，而是会继续执行其他任务。当 I&#x2F;O 操作完成后，通过回调函数来处理结果。这样可以充分利用 CPU 和内存资源，提高了系统的吞吐量和性能。</li>
+<li><strong>单线程</strong>：Node.js 是单线程的，但是通过事件循环机制实现了并发处理。它使用一个主事件循环来监听事件，并通过线程池执行异步操作，从而实现并发处理。</li>
+</ol>
+<p>总的来说，Node.js 的工作原理可以概括为使用 V8 引擎执行 JavaScript 代码，在事件驱动和非阻塞 I&#x2F;O 模型下处理请求，并通过单线程和事件循环实现并发处理。</p>
+<hr>
+<p><strong>chatgpt2</strong></p>
+<p>Hexo 是一个基于 Node.js 的静态博客框架，它利用了 Node.js 的许多特性来实现静态博客的构建和管理。下面是 Hexo 框架如何利用 Node.js 的一些方面：</p>
+<ol>
+<li><strong>服务器功能</strong>：Hexo 提供了一个内置的本地服务器，可以在本地预览生成的博客网站。这个服务器是基于 Node.js 的，利用了 Node.js 的 HTTP 模块来处理 HTTP 请求。</li>
+<li><strong>构建工具</strong>：Hexo 利用 Node.js 的文件系统（fs）模块来读取、写入和操作文件。它使用模板引擎（如 EJS、Swig 等）来生成静态 HTML 内容，然后将这些内容写入到文件中。Hexo 还利用了 Node.js 的路径处理模块（path）来处理文件路径。</li>
+<li><strong>插件系统</strong>：Hexo 允许用户编写插件来扩展其功能。这些插件也是基于 Node.js 的，它们可以直接访问和操作 Hexo 内部的数据结构和 API，从而实现各种功能扩展。</li>
+<li><strong>异步处理</strong>：在 Hexo 的构建过程中，可能涉及到一些异步操作，比如读取文件、下载资源等。Hexo 利用了 Node.js 的异步编程模型，通过回调函数或者 Promise 来处理这些异步操作，保证了系统的高效性和响应性。</li>
+</ol>
+<p>总的来说，Hexo 框架充分利用了 Node.js 的文件系统、HTTP 模块、路径处理模块等特性，通过构建工具和插件系统来实现静态博客的构建和管理。同时，它也充分发挥了 Node.js 的异步编程模型，保证了系统的高效性和响应性。</p>
+<blockquote>
+<p>要看懂hexo 必须从node.js入手，然后再来观察hexo的结构</p>
+<p>未完待续</p>
+</blockquote>
+<h1 id="hexo相关操作"><a href="#hexo相关操作" class="headerlink" title="hexo相关操作"></a>hexo相关操作</h1><blockquote>
+<p>没有特殊情况下，一般这些命令都是在git bash完成</p>
+</blockquote>
+<p>初始化hexo博客工程：hexo init</p>
+<p>编译博客系统：hexo g</p>
+<p>启动本地服务器进行预览：hexo s（启动之后访问相关给予的端口4000）</p>
+<p>新建文章 hexo new “2024 神经病在打字”</p>
+<p>图片插入 1.执行hexo new插入之后在typora</p>
+<p><img src="/imgs/$%7Bfiilename%7D/1714726613206.png" alt="1714726613206"></p>
+<p>的图片工具中 -&gt;设置图片根目录为source文件夹</p>
+<p>清除缓存文件 hexo clean</p>
+<p>将本地数据部署到远端仓库 hexo d</p>
+<h2 id="个人一般操作"><a href="#个人一般操作" class="headerlink" title="个人一般操作"></a>个人一般操作</h2><blockquote>
+<p>当你想要编辑新的文章写完并且需要更新部署的时候</p>
+<p>1.新建文章 hexo new “2024 神经病在打字”</p>
+<p>2.图片插入 1.执行hexo new插入之后在typora</p>
+<p><img src="/imgs/$%7Bfiilename%7D/1714726613206.png" alt="1714726613206"></p>
+<p>的图片工具中 -&gt;设置图片根目录为source文件夹</p>
+<p>3.编译博客系统：hexo g</p>
+<p>4.启动本地服务器进行预览：hexo s（启动之后访问相关给予的端口4000）</p>
+<p>5.将本地数据部署到远端仓库 hexo d</p>
+</blockquote>
+<h1 id="hexo的配置文件"><a href="#hexo的配置文件" class="headerlink" title="hexo的配置文件"></a>hexo的配置文件</h1><h1 id="npm的配置文件"><a href="#npm的配置文件" class="headerlink" title="npm的配置文件"></a>npm的配置文件</h1><blockquote>
+<p>需要这个知识点是因为之前设置npm的下载的代理命令和缓存存储的时候</p>
+<p>自己胡乱设置导致后面重新安装的时候反复报错</p>
+<p>因此必须要找到相关的配置文件删除再重新生成才可以</p>
+</blockquote>
+<p>npm，他的配置文件(即.npmrc文件)</p>
+<p><strong>作用</strong></p>
+<p>.npmrc，可以理解成npm running cnfiguration, 即npm运行时配置文件。</p>
+<p><strong>npm最大的作用就是帮助开发者安装需要的依赖包</strong>，但是要从哪里下载？</p>
+<p>下载哪一个版本的包，把包下载到电脑的哪个路径下？</p>
+<p><strong>这些都可以在.npmrc中进行配置。</strong></p>
+<p>在设置.npmrc之前，我们需要知道：在你的电脑上，不止存在一个.npmrc文件，而是有多个。在我们安装包的时候，</p>
+<h2 id="npmrc的读取"><a href="#npmrc的读取" class="headerlink" title=".npmrc的读取"></a>.npmrc的读取</h2><p>npm按照如下顺序读取这些配置文件：</p>
+<p>项目配置文件：你可以在项目的根目录下创建一个.npmrc文件，只用于管理这个项目的npm安装。</p>
+<p>用户配置文件：在你使用一个账号登陆的电脑的时候，可以为当前用户创建一个.npmrc文件，之后用该用户登录电脑，就可以使用该配置文件。可以通过 npm config get userconfig 来获取该文件的位置。</p>
+<p>全局配置文件： 一台电脑可能有多个用户，在这些用户之上，你可以设置一个公共的.npmrc文件，供所有用户使用。</p>
+<p>该文件的路径为： P R E F I X &#x2F; e t c &#x2F; n p m r c ，使用 n p m c o n f i g g e t p r e f i x 获取 PREFIX&#x2F;etc&#x2F;npmrc，使用 npm config get prefix 获取 PREFIX&#x2F;etc&#x2F;npmrc，使用npmconfiggetprefix获取PREFIX。</p>
+<p>如果你不曾配置过全局文件，该文件不存在。</p>
+<p>npm内嵌配置文件：最后还有npm内置配置文件，基本上用不到，不用过度关注。</p>
+<blockquote>
+<p><strong>windows单个用户下，.npmrc存在于C:\Users\Lucinda中</strong></p>
+<p><strong>上次配置太多导致配置混乱的时候之间删掉这个文件</strong></p>
+</blockquote>
+<h1 id="在git-bash-中-npm命令无法运行"><a href="#在git-bash-中-npm命令无法运行" class="headerlink" title="在git bash 中 npm命令无法运行"></a>在git bash 中 npm命令无法运行</h1><p><strong>问题：cmd验证npm node安装后 在git bash npm命令无法运行</strong></p>
+<p>‘npm’ is not recognized as an internal or external command,<br>operable program or batch file. WARN  Failed to install dependencies. Please run ‘npm install’ in “E:\gitblog” folder.</p>
 <p><img src="/imgs/$%7Bfiilename%7D/1714704669502.png" alt="1714704669502"></p>
+<blockquote>
+<p>尝试解决方案：</p>
+<p>1.换成cmd执行相关命令</p>
+<p><img src="/imgs/$%7Bfiilename%7D/1714726192641.png" alt="1714726192641"></p>
+<p>2.换成powershell执行一下命令</p>
+<p><img src="/imgs/$%7Bfiilename%7D/1714726341992.png" alt="1714726341992"></p>
+<blockquote>
+<p>用powershell成功了，但是的话并没有像题主所说候没都需要npx命令</p>
+<p><strong>直接在blog文件夹中使用git bash进行相关命令即可</strong></p>
+</blockquote>
+</blockquote>
+<h1 id="fatal-unable-to-auto-detect-email-address"><a href="#fatal-unable-to-auto-detect-email-address" class="headerlink" title="fatal: unable to auto-detect email address"></a>fatal: unable to auto-detect email address</h1><p><img src="/imgs/$%7Bfiilename%7D/1714727224226.png" alt="1714727224226"></p>
+<h1 id="为什么部署完毕-命令执行之后还是不显示更新之后的页面"><a href="#为什么部署完毕-命令执行之后还是不显示更新之后的页面" class="headerlink" title="为什么部署完毕 命令执行之后还是不显示更新之后的页面"></a>为什么部署完毕 命令执行之后还是不显示更新之后的页面</h1><p><img src="/imgs/$%7Bfiilename%7D/1714728273886.png" alt="1714728273886"></p>
+<p><img src="/imgs/$%7Bfiilename%7D/1714728291596.png" alt="1714728291596"></p>
+<blockquote>
+<p>涉及到缓存问题好像是的</p>
+</blockquote>
 
       
     </div>
@@ -612,6 +851,10 @@
       <ul>
         
           <li>
+            <a href="/2024/05/03/20240503-%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98/">20240503 关于hexo的其他问题</a>
+          </li>
+        
+          <li>
             <a href="/2024/05/03/20240503-%E3%80%8A%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E3%80%8B/">20240503 《亲密关系》</a>
           </li>
         
@@ -625,10 +868,6 @@
         
           <li>
             <a href="/2024/05/02/20240502-%E4%BB%8A%E6%97%A5%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/">20240502 今日面试题目</a>
-          </li>
-        
-          <li>
-            <a href="/2024/05/02/20240502-%E6%9C%80%E8%BF%91%E7%9A%84%E8%AE%A1%E5%88%92/">20240502 最近的计划</a>
           </li>
         
       </ul>
