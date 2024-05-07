@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20240506 C加加复习（二） |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首頁
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                歸檔
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首頁</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >歸檔</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20240506 C加加复习（二）
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv2</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-05-06 19:58:58</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Tue May 07 2024 00:04:22 GMT+0800">2024-05-07 00:04:22</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="C-Primer快速回顾"><a href="#C-Primer快速回顾" class="headerlink" title="C++Primer快速回顾"></a>C++Primer快速回顾</h1><h1 id="复习思路"><a href="#复习思路" class="headerlink" title="复习思路"></a>复习思路</h1><ul>
+<li>不用一章一章看看，这段时间遇到的问题，当你看到这个目录的时候，想到的问题，感兴趣的问题都可以看，你看知识的目的是为了解决问题，不是纯粹背诵概念，你要明白这一点。</li>
+</ul>
+<h1 id="看目录想问题"><a href="#看目录想问题" class="headerlink" title="看目录想问题"></a>看目录想问题</h1><ul>
+<li>C++语言的三大特性以及相关的代码体现，这样做有什么优点和缺点	</li>
+<li>一个C++程序从编写编译倒运行的过程</li>
+<li>要你自己实现一个字符串的类你要怎样设计拷贝、赋值、析构函数</li>
+<li>C++是怎样来管理内存的，和java有什么区别和联系</li>
+<li>C++11、C++14的关键新特性有什么</li>
+<li>using namespace std,解释一下这句话</li>
+<li>虚基类是什么？底层是怎样实现的？</li>
+<li>C++一般的作用域规则是什么？</li>
+<li>C++的const你要怎样区分和分辨</li>
+<li>强制类型转换中可能会出现什么样的错误？</li>
+<li>lambda、函数对象是怎么一回事？</li>
+<li>函数模板能干什么？</li>
+</ul>
+<h2 id="一些次级问题和主观感受"><a href="#一些次级问题和主观感受" class="headerlink" title="一些次级问题和主观感受"></a>一些次级问题和主观感受</h2><ul>
+<li>感觉写代码就是符合规范写东西，试图在某个时机把一个东西从一个地方传另一个地方并且能够保证被合理的使用</li>
+</ul>
+<h1 id="C-三大特性"><a href="#C-三大特性" class="headerlink" title="C++三大特性"></a>C++三大特性</h1><ul>
+<li><p>C++语言的三大特性？相关的代码体现？代码实现？这样做有什么优点和缺点	？和其他的类比？</p>
+</li>
+<li><p>其实最大的问题不是你记得了什么，而是你是怎样思考的，现在我的思考范式是什么呢？</p>
+</li>
+</ul>
+<blockquote>
+<p>我有一个功能，我需要实现它，我需要一段在框架之下的符合逻辑代码</p>
+<p>我有一个框架，我需要代码来理解它</p>
+<p>我有一个东西，你想要理解，我找比喻来给你解释，或者是拿基础的东西来给你解释</p>
+<hr>
+<p>类比</p>
+<p>优化</p>
+<p>底层</p>
+<p>彼此之间到底有什么层次和环节</p>
+<p>不同抽象层次之间的底层到底是什么</p>
+<p>从代码（函数，数据，类和对象）到寄存器</p>
+<p>从一个端口到另一个端口</p>
+<p>从一个ip到另一个ip</p>
+<p>函数的实现判断和边界是什么</p>
+<p>实现这一个功能调动了多少资源</p>
+<p>内存如何被管理</p>
+<p>是否有一个合理的评估标准和判断标准</p>
+</blockquote>
+<h2 id="三大特性定义"><a href="#三大特性定义" class="headerlink" title="三大特性定义"></a>三大特性定义</h2><blockquote>
+<p>定义</p>
+<p>1.<strong>封装</strong> ：封装是将数据和操作数据的方法&#x3D;&#x3D;捆绑在一起&#x3D;&#x3D;的机制，以&#x3D;&#x3D;防止外部&#x3D;&#x3D;对数据的直接访问。 在C++中，封装通常通过&#x3D;&#x3D;类&#x3D;&#x3D;来实现，将数据成员私有化，通过公有成员函数提供对数据的访问和操作。 </p>
+<p>2.<strong>继承</strong> ：继承是指一个类可以&#x3D;&#x3D;基于另一个类而创&#x3D;&#x3D;建的机制，新创建的类可以&#x3D;&#x3D;继承基类的属性和方法&#x3D;&#x3D;，并且可以添加新的成员或者重写已有的成员函数。</p>
+<p>3.<strong>多态</strong> ：多态是指&#x3D;&#x3D;同一操作在不同对象上具有不同的行为&#x3D;&#x3D;的能力。</p>
+<p>在C++中，多态通过虚函数和函数重写来实现。子类可以重写基类的虚函数，当通过基类指针或引用调用这个函数时，根据指针或引用所指向的具体对象的类型，会调用对应的子类函数。</p>
+</blockquote>
+<h2 id="三大特性优缺点"><a href="#三大特性优缺点" class="headerlink" title="三大特性优缺点"></a>三大特性优缺点</h2><h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a><strong>封装</strong></h3><blockquote>
+<p>封闭起来，包起来，实现隐藏</p>
+<p>通过类来实现</p>
+<p>不仅将私有数据封闭起来，也将方法的具体实现隐藏起来</p>
+<p>&#x3D;&#x3D;修改类的内部不会影响外部&#x3D;&#x3D;</p>
+<p>&#x3D;&#x3D;隐藏了方法的实现细节，提高了安全性，代码更方便读和规范&#x3D;&#x3D;</p>
+</blockquote>
+<p>优点： </p>
+<ul>
+<li>提高了代码的&#x3D;&#x3D;可维护性和可重用性&#x3D;&#x3D;，因为修改类的内部实现不会影响外部用户。  </li>
+<li>&#x3D;&#x3D;隐藏了数据的实现细节，提高了安全性&#x3D;&#x3D;，避免了数据被不合理地</li>
+</ul>
+<p>缺点： </p>
+<ul>
+<li>需要&#x3D;&#x3D;编写额外的公有成员函数来访问&#x3D;&#x3D;和操作私有数据，增加了代码量和复杂性。  </li>
+<li>有时候 &#x3D;&#x3D;过度的封装可能会导致性能损失&#x3D;&#x3D;，因为需要通过函数调用来访问数据。</li>
+</ul>
+<hr>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><blockquote>
+<p>提高代码的复用性</p>
+<p>建立类的层次，能够更好管理类</p>
+</blockquote>
+<p>优点： </p>
+<ul>
+<li>提高了代码的&#x3D;&#x3D;可重用性&#x3D;&#x3D;，可以在不修改基类代码的情况下扩展类的功能。</li>
+<li>通过建立类的&#x3D;&#x3D;层次结构&#x3D;&#x3D;，可以更好地组织和管理代码，提高了代码的可维护性。</li>
+</ul>
+<p>缺点： </p>
+<ul>
+<li>可能导致类之间的耦合性增加，&#x3D;&#x3D;增加了代码的复杂性&#x3D;&#x3D;。  </li>
+<li>如果不正确使用，可能会导致继承层次结构混乱，难以理解和</li>
+</ul>
+<hr>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><blockquote>
+<p>实现动态绑定</p>
+</blockquote>
+<ul>
+<li>提高了代码的&#x3D;&#x3D;灵活&#x3D;&#x3D;性和可扩展性，允许以通用的方式操作对象，而不需要知道对象的具体类型。</li>
+<li>可以在运行时动态确定调用哪个函数，&#x3D;&#x3D;实现了动态绑定&#x3D;&#x3D;，提高了代码的&#x3D;&#x3D;可扩展&#x3D;&#x3D;性。</li>
+</ul>
+<p>缺点： </p>
+<ul>
+<li><del>如果过度使用，可能会导致代码难以理解和调试，降低代码的可维护性</del></li>
+<li>使用虚函数会带来一定的运行时&#x3D;&#x3D;开销&#x3D;&#x3D;</li>
+</ul>
+<h1 id="三大特性的具体实现"><a href="#三大特性的具体实现" class="headerlink" title="三大特性的具体实现"></a>三大特性的具体实现</h1><ul>
+<li><p>封装：类</p>
+</li>
+<li><p>继承：子类父类</p>
+</li>
+<li><p>多态：虚函数和函数重写（调用和重写双方面来实现多态的）</p>
+<blockquote>
+<p>简而言之就是用父类型别的指针指向其子类的实例，然后通过父类的指针调用了子类的成员函数。这种技术可以让父类的指针有“多种形态”。这种类型的识别是在程序运行时定义的，也叫运行时多态。</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="虚函数-暗含继承"><a href="#虚函数-暗含继承" class="headerlink" title="虚函数&#x2F;暗含继承"></a>虚函数&#x2F;暗含继承</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>父类中允许子类重写的类</p>
+<blockquote>
+<p>在 C++ 中，只有&#x3D;&#x3D;公有继承（public inheritance）&#x3D;&#x3D;才能实现虚函数的重写（覆盖）。如果使用私有继承（private inheritance）或保护继承（protected inheritance），则无法重写父类中的虚函数。</p>
+<blockquote>
+<p>×</p>
+<p>#include <iostream><br>using namespace std;</p>
+<p>class father<br>{<br>    int num;<br>public:<br>    virtual void printNum()<br>    {<br>        cout &lt;&lt; “father” &lt;&lt; num &lt;&lt; endl;<br>    }</p>
+<p>};</p>
+<p>class son:private father<br>{<br>public:<br>    void printNum()override<br>    {<br>        cout &lt;&lt; “son” &lt;&lt; endl;<br>    }<br>};</p>
+<p>int main()<br>{<br>    father u;<br>    son k;</p>
+<pre><code>u.printNum();
+k.printNum();
+
+return 0;
+</code></pre>
+<p>}</p>
+<p>编译通过</p>
+<p>并且能够正常运行</p>
+</blockquote>
+</blockquote>
+<h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2><p>虚函数的实现是由两个部分组成的，虚<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88&spm=1001.2101.3001.7020" >函数指针<i class="fas fa-external-link-alt"></i></a>与虚函数表。</p>
+<p>2.1 虚函数指针</p>
+<p>为了指定对象的虚表，对象内部包含一个虚表的指针，来指向自己所使用的虚表。为了让&#x3D;&#x3D;每个包含虚表的类的对象都拥有一个虚表指针&#x3D;&#x3D;，编译器在类中添加了一个私有指针，*__vptr，用来指向虚表。</p>
+<p>这样，当类的对象在创建时便拥有了这个指针，且这个指针的值会自动被设置为指向类的虚表。</p>
+<p>只有拥有虚函数的类才会拥有虚函数指针，所以拥有虚函数的类的所有对象都会因为虚函数产生额外的开销，并且也会在一定程度上降低程序速度。与JAVA不同，C++将是否使用虚函数这一权利交给了开发者，所以开发者应该谨慎的使用。</p>
+<p><img   src="/../imgs/$%7Bfiilename%7D/1715010423132.png"  alt="1715010423132"></p>
+<blockquote>
+<p>自己尝试理解这张图：</p>
+<p>同一个类的对象所拥有虚指针是相同的，且所拥有的虚指针所指向的表也是相同的</p>
+</blockquote>
+<hr>
+<p>2.2 虚函数表</p>
+<p>虚函数表是一个类的虚函数的地址表，用于索引类本身以及父类的虚函数的地址，假如子类的虚函数重写了父类的虚函数，则对应在虚函数表中会把对应的虚函数替换为子类的 虚函数的地址；</p>
+<p>虚函数表指针存在于每个对象中（通常出于效率考虑，会放在对象的开始地址处）， 它指向对象所在类的虚函数表的地址；在多继承环境下，会存在多个虚函数表指针，分别指向对应 不同基类的虚函数表。</p>
+<p>&#x3D;&#x3D;虚表是属于类的，对于基类与派生类，基类有基类的虚函数表，派生类有派生类的虚函数表。&#x3D;&#x3D;</p>
+<blockquote>
+<p>不同类的对象所拥有的虚指针是不同的</p>
+<p>存在继承关系的类的虚函数指针关系和虚表关系是怎么样的呢？</p>
+<p>有重叠的部分吗？</p>
+</blockquote>
+<p>举个例子，定义三个类A,B,C依次继承</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ClassA</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="type">int</span> m_data1;</span><br><span class="line">	<span class="type">int</span> m_data2;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">func1</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">func2</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">vfunc1</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">vfunc2</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"> </span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ClassB</span>:<span class="keyword">public</span> ClassA</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"> </span><br><span class="line">	<span class="type">int</span> m_data3;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">func2</span><span class="params">()</span> </span>&#123;&#125; <span class="comment">// 非虚函数，基类的同名函数会被隐藏</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">vfunc1</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"> </span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ClassC</span> :<span class="keyword">public</span> ClassB</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="type">int</span> m_data1;</span><br><span class="line">	<span class="type">int</span> m_data4;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">func2</span><span class="params">()</span> </span>&#123;&#125;  <span class="comment">// 非虚函数，基类的同名函数会被隐藏</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">vfunc1</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果想要观察的话最好就是获取虚指针，观察其所指向的内容的对应索引们的位置和对应的函数代码存储的位置是否相同</p>
+</blockquote>
+<p><img   src="/imgs/$%7Bfiilename%7D/1715011326730.png"  alt="1715011326730"></p>
+<p>三、一些遗留问题</p>
+<p>1、 构造函数是否能为虚函数？</p>
+<p>不能，</p>
+<p>1）如果构造函数是虚函数，那么就需要通过虚表指针vtable 来调用，但此时面对一块没有初始化的内存，到哪里去找 vtable 呢？毕竟，vtable 是在构造函数中才初始化的啊，而不是在其之前。因此构造函数不能为虚函数。</p>
+<p>2）构造函数在进行调用时还不存在父类和子类的概念，父类只会调用父类的构造函数，子类调用子类 的，因此不存在动态绑定的概念</p>
+<p>2、析构函数可以是虚函数吗？</p>
+<p>可以，而且最好是虚的，因为此时 vtable 已经初始化了；况且我们通常通过基类的指针来销毁对象，如果析构函数不为虚的话，就不能正确识别对象类型，从而不能正确销毁对象。</p>
+<p>3、使用虚函数的时候，子类也要使用virtual关键字吗？</p>
+<p>父类使用虚函数是为了让子类重写，那子类重写的时候也需要带virtual关键字吗？比如：<br><img   src="/imgs/$%7Bfiilename%7D/1715011371491.png"  alt="1715011371491"></p>
+<p>4、构造函数中可以调用虚函数吗？</p>
+<p>可以，但是没有动态绑定的效果，父类构造函数中调用的仍然是父类版本的函数，子类中调用的仍然是子类版本的函数</p>
+<p>5、内联函数、静态成员函数可以是虚函数吗？（&#x3D;&#x3D;看到虚函数的运行实现时机和其他机制的实现时机是不一样的&#x3D;&#x3D;）</p>
+<p>内联函数可以，但是不要这么写。内联函数需要在编译阶段展开，而虚函数是运行时动态绑定的，编译时无法展开，当然你可以写 inline virtual 这样的函数，它也不报错，因为内联是编译器决定的，并不跟是否有关键字inline有关系。而虚函数的多态性在运行期，编译器无法知道运行期调用哪个代码，因此虚函数表现为多态性时（运行期）不可以内联；</p>
+<p>静态成员函数不可以，因为它是以类为单位的函数，与具体对象无关，无this指针，虚函数是与对象动态绑定的，必定是成员函数，成员函数肯定有this指针，因此是两个冲突的概念；</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_31608641/article/details/104801425" >https://blog.csdn.net/sinat_31608641/article/details/104801425<i class="fas fa-external-link-alt"></i></a></p>
+<p>睡觉</p>
+<p>…….</p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/05/06/20240506-C%E5%8A%A0%E5%8A%A0%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/"
+                                   title="20240506 C加加复习（一）"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240506 C加加复习（一）</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Primer%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text">C++Primer快速回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E4%B9%A0%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">复习思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9C%8B%E7%9B%AE%E5%BD%95%E6%83%B3%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">看目录想问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%AC%A1%E7%BA%A7%E9%97%AE%E9%A2%98%E5%92%8C%E4%B8%BB%E8%A7%82%E6%84%9F%E5%8F%97"><span class="nav-number">3.1.</span> <span class="nav-text">一些次级问题和主观感受</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">C++三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">三大特性定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.2.</span> <span class="nav-text">三大特性优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">4.2.1.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">4.2.2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">4.2.3.</span> <span class="nav-text">多态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.</span> <span class="nav-text">三大特性的具体实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0-%E6%9A%97%E5%90%AB%E7%BB%A7%E6%89%BF"><span class="nav-number">6.</span> <span class="nav-text">虚函数&#x2F;暗含继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">6.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">6.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">讀者</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">閱覽</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Primer%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text">C++Primer快速回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E4%B9%A0%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">复习思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9C%8B%E7%9B%AE%E5%BD%95%E6%83%B3%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">看目录想问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%AC%A1%E7%BA%A7%E9%97%AE%E9%A2%98%E5%92%8C%E4%B8%BB%E8%A7%82%E6%84%9F%E5%8F%97"><span class="nav-number">3.1.</span> <span class="nav-text">一些次级问题和主观感受</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">C++三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">三大特性定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.2.</span> <span class="nav-text">三大特性优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">4.2.1.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">4.2.2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">4.2.3.</span> <span class="nav-text">多态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.</span> <span class="nav-text">三大特性的具体实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0-%E6%9A%97%E5%90%AB%E7%BB%A7%E6%89%BF"><span class="nav-number">6.</span> <span class="nav-text">虚函数&#x2F;暗含继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">6.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">6.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
