@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首頁
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                歸檔
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -117,14 +117,14 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首頁</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >歸檔</a>
+                    >ARCHIVES</a>
                 </li>
             
         </ul>
@@ -166,7 +166,7 @@
                             <div class="author border-box">
                                 <span class="name">明昧</span>
                                 
-                                    <span class="author-badge">Lv2</span>
+                                    <span class="author-badge">Lv3</span>
                                 
                             </div>
                             <div class="meta-info border-box">
@@ -184,7 +184,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue May 07 2024 00:04:22 GMT+0800">2024-05-07 00:04:22</span>
+                <span class="datetime" data-updated="Tue May 07 2024 13:38:49 GMT+0800">2024-05-07 13:38:49</span>
             </span>
         
 
@@ -218,7 +218,7 @@
 </ul>
 <h1 id="看目录想问题"><a href="#看目录想问题" class="headerlink" title="看目录想问题"></a>看目录想问题</h1><ul>
 <li>C++语言的三大特性以及相关的代码体现，这样做有什么优点和缺点	</li>
-<li>一个C++程序从编写编译倒运行的过程</li>
+<li>一个C++程序从编写编译到运行的过程</li>
 <li>要你自己实现一个字符串的类你要怎样设计拷贝、赋值、析构函数</li>
 <li>C++是怎样来管理内存的，和java有什么区别和联系</li>
 <li>C++11、C++14的关键新特性有什么</li>
@@ -379,11 +379,165 @@ return 0;
 <p>4、构造函数中可以调用虚函数吗？</p>
 <p>可以，但是没有动态绑定的效果，父类构造函数中调用的仍然是父类版本的函数，子类中调用的仍然是子类版本的函数</p>
 <p>5、内联函数、静态成员函数可以是虚函数吗？（&#x3D;&#x3D;看到虚函数的运行实现时机和其他机制的实现时机是不一样的&#x3D;&#x3D;）</p>
+<blockquote>
+</blockquote>
 <p>内联函数可以，但是不要这么写。内联函数需要在编译阶段展开，而虚函数是运行时动态绑定的，编译时无法展开，当然你可以写 inline virtual 这样的函数，它也不报错，因为内联是编译器决定的，并不跟是否有关键字inline有关系。而虚函数的多态性在运行期，编译器无法知道运行期调用哪个代码，因此虚函数表现为多态性时（运行期）不可以内联；</p>
 <p>静态成员函数不可以，因为它是以类为单位的函数，与具体对象无关，无this指针，虚函数是与对象动态绑定的，必定是成员函数，成员函数肯定有this指针，因此是两个冲突的概念；</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_31608641/article/details/104801425" >https://blog.csdn.net/sinat_31608641/article/details/104801425<i class="fas fa-external-link-alt"></i></a></p>
 <p>睡觉</p>
 <p>…….</p>
+<h1 id="内联函数的实现"><a href="#内联函数的实现" class="headerlink" title="内联函数的实现"></a>内联函数的实现</h1><p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35902025/article/details/127912415" >https://blog.csdn.net/qq_35902025/article/details/127912415<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>基本问题思路：</p>
+<p>什么是内联函数</p>
+<p>为什么需要使用内联函数</p>
+</blockquote>
+<h2 id="什么是内联函数"><a href="#什么是内联函数" class="headerlink" title="什么是内联函数"></a>什么是内联函数</h2><h4 id="1-直观上定义："><a href="#1-直观上定义：" class="headerlink" title="1.直观上定义："></a>1.<strong>直观上定义：</strong></h4><p>联函数的定义与普通函数基本相同,只是在函数定义前加上关键字 inline。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">print</span><span class="params">(<span class="type">char</span> *s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, s);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-更深入的思考："><a href="#2-更深入的思考：" class="headerlink" title="2.更深入的思考："></a>2.<strong>更深入的思考：</strong></h4><ul>
+<li>函数前面加上inline一定会有效果吗？</li>
+<li>如果不加inline就不是内联函数了吗？</li>
+</ul>
+<p>后面让我们慢慢来解答这两个问题</p>
+<h2 id="为什么使用内联函数"><a href="#为什么使用内联函数" class="headerlink" title="为什么使用内联函数"></a>为什么使用内联函数</h2><ul>
+<li><strong>内联函数最初的目的：*代替部分 #define 宏定义</strong>；</li>
+<li><strong>使用内联函数替代普通函数的目的：提高程序的运行效率；</strong></li>
+</ul>
+<p>针对上述两个方面我们展开讨论</p>
+<p><strong>1.为什么要代替部分宏定义</strong></p>
+<blockquote>
+<p>宏是预处理指令，在预处理的时候把所有的宏名用宏体来替换；</p>
+<p>内联函数是函数，在编译阶段把所有调用内联函数的地方把内联函数插入；</p>
+<hr>
+<p>宏没有类型检查，无论对还是错都是直接替换；</p>
+<p>而内联函数在编译时进行安全检查；</p>
+<hr>
+<p>宏的编写有很多限制，例如只能写一行，不能使用return控制流程等；</p>
+<hr>
+<p>对于C++ 而言，使用宏代码还有另一种缺点：无法操作类的私有数据成员。</p>
+</blockquote>
+<p><strong>2.普通函数频繁调用的过程消耗栈空间</strong></p>
+<p>函数是一个可以重复使用的代码块，CPU 会一条一条地挨着执行其中的代码。CPU 在执行主调函数代码时如果遇到了被调函数，主调函数就会暂停，CPU 转而执行被调函数的代码；被调函数执行完毕后再返回到主调函数，主调函数根据刚才的状态继续往下执行。</p>
+<p>一个 C&#x2F;C++程序的执行过程可以认为是多个函数之间的相互调用过程，它们形成了一个或简单或复杂的调用链条，这个链条的起点是main()，终点也是main()。当main()调用完了所有的函数，它会返回一个值（例如return 0;）来结束自己的生命，从而结束整个程序。</p>
+<p>函数调用是有时间和空间开销的。程序在执行一个函数之前需要做一些准备工作，要将实参、局部变量、返回地址以及若干寄存器都<strong>压入栈</strong>中，然后才能<strong>执行函数体中的代码</strong>；函数体中的代码执行完毕后还要<strong>清理现场</strong>，将之前压入栈中的数据都出栈，才能接着执行函数调用位置以后的代码。</p>
+<blockquote>
+<p>数据和函数都压入栈，执行代码，执行完毕后要清理现场&#x2F;实现出栈</p>
+</blockquote>
+<p>栈空间就是指放置程式的局部数据也就是函数内数据的内存空间，在系统下，栈空间是有限的，假如频繁大量的使用就会造成因栈空间不足所造成的程式出错的问题，函数的死循环递归调用的最终结果就是导致栈内存空间枯竭。</p>
+<p>如果函数体代码比较多，需要较长的执行时间，那么函数调用机制占用的时间可以忽略；</p>
+<p>如果函数只有一两条语句，那么大部分的时间都会花费在函数调用机制上，这种时间开销就就不容忽视。</p>
+<blockquote>
+<p>总结：函数调用机制所产生的开销（栈的空间开销和出栈入栈的时间开销）</p>
+</blockquote>
+<hr>
+<p>为了消除函数调用的时空开销，C++ 提供一种提高效率的方法，即在编译时将函数调用处用函数体替换，类似于C语言中的宏展开。这种在函数调用处直接嵌入函数体的函数称为内联函数（Inline Function）。但也存在缺点，就是每一调用处均会展开，增加了重复的代码量。</p>
+<blockquote>
+<p>可以理解为内联函数的关键词是：<strong>替换</strong></p>
+</blockquote>
+<h2 id="展开的关键"><a href="#展开的关键" class="headerlink" title="展开的关键"></a>展开的关键</h2><h4 id="3-更深入的思考"><a href="#3-更深入的思考" class="headerlink" title="3.更深入的思考"></a><strong>3.更深入的思考</strong></h4><p>通过上述内容我们知道内联函数是在调用的地方展开函数定义，那么问题又来了，展开也好，替换也好，都存在下面两个问题：</p>
+<ul>
+<li>内联函数一定就会展开吗？</li>
+<li>在什么情况下内联函数会展开？</li>
+</ul>
+<p>三.内联函数和编译过程的相爱相杀</p>
+<p>在这一节，我们先一口气回答前两节的所有问题，然后慢慢引出后面的话题。</p>
+<blockquote>
+<p>函数前面加上inline一定会有效果吗</p>
+<p>如果不加inline就不是内联函数了吗？</p>
+<p>内联函数一定就会展开吗？</p>
+<p>在什么情况下内联函数会展开？</p>
+<blockquote>
+<p>关键 inline到底起没起作用&#x2F;展开与否&#x2F;效果与否</p>
+</blockquote>
+</blockquote>
+<hr>
+<p>函数前面加上inline一定会有效果吗</p>
+<blockquote>
+<p>不会，使用内联inline关键字修饰函数只是一种提示，编译器不一定认。</p>
+</blockquote>
+<p>如果不加inline就不是内联函数了吗？</p>
+<blockquote>
+<p><strong>存在隐式内联，不用inline关键字，C++中在类内定义的所有函数都自动称为内联函数。</strong></p>
+</blockquote>
+<p>内联函数一定就会展开吗？</p>
+<blockquote>
+<p>其实和第一个问题类似，还是看编译器认不认。</p>
+</blockquote>
+<p>在什么情况下内联函数会展开？</p>
+<blockquote>
+<p> 首先需要满足有inline修饰或者是类中的定义的函数，然后再&#x3D;&#x3D;由编译器决定（关键）&#x3D;&#x3D;。 </p>
+</blockquote>
+<hr>
+<hr>
+<p><strong>其实说白了，内联函数管不管用是由编译器说了算的！</strong></p>
+<p><strong>那如何要求编译器展开内联函数呢？</strong></p>
+<blockquote>
+<p>1.编译器开优化：gcc -O2 test.c -o test，只有在编译器&#x3D;&#x3D;开启优化选项&#x3D;&#x3D;的时候，才会有inline行为的存在，比如对g++在-O0时就不会作任何的inline处理，对于-O2的优化方式，编译器会通过启发式算法决定是否值得对一个函数进行内联，同时要保证不会对生成文件的大小产生较大影响。 而-O3模式则不在考虑生成文件的大小；</p>
+<p>2.使用attribute属性：static inline <strong>attribute</strong>((always_inline)) int add_i(int a,int b)；</p>
+<p>3.使用auto_inline：#pragma auto_inline(on&#x2F;off)，当使用#pragma auto_inline(off)指令时，会关闭对函数的inline处理，这时即使在函数前面加了inline指令，也不会对函数进行内联处理。</p>
+</blockquote>
+<p>上述操作都仅仅是对编译器提出内联的建议，最终是否进行内联由编译器自己决定，大多数编译器拒绝它们认为太复杂的内联函数（例如，那些包含循环或者递归的），而且类的构造函数、析构函数和虚函数往往不是内联函数的最佳选择。</p>
+<p>有关visual studio中编译优化选择的位置如图，gcc编译见上面的例子也可以直接man gcc查看。</p>
+<p><img   src="/imgs/$%7Bfiilename%7D/1715056497761.png"  alt="1715056497761"></p>
+<h2 id="内联函数怎么用，在哪儿用？"><a href="#内联函数怎么用，在哪儿用？" class="headerlink" title="内联函数怎么用，在哪儿用？"></a>内联函数怎么用，在哪儿用？</h2><p>基本介绍完内联的概念，接下来说说内联怎么用，在哪儿用？</p>
+<p><strong>内联函数是定义在头文件还是源文件？</strong></p>
+<p>内联展开是在编译时进行的，只有链接的时候源文件之间才有关系。</p>
+<p>1.所以内联要想跨源文件必须把实现&#x3D;&#x3D;写在头文件里&#x3D;&#x3D;。</p>
+<blockquote>
+<p>2.&#x3D;&#x3D;如果一个内联函数会在多个源文件中被用到，那么必须把它定义在头文件中&#x3D;&#x3D;</p>
+<p>3.内联函数的定义不一定要跟声明放在一个头文件里面：</p>
+<p>4.&#x3D;&#x3D;定义可以放在一个单独的头文件中，里面需要给函数定义前加上inline 关键字&#x3D;&#x3D;，</p>
+<blockquote>
+<p>这里到底想讲什么</p>
+</blockquote>
+</blockquote>
+<p>原因看下面第 2.点；然后声明 放在另一个头文件中，此文件include上一个头文件。</p>
+<p>这种用法 boost里很常见：优点1. 实现跟API分离封装。优点2. 可以解决有关inline函数的循环调用问题。</p>
+<p>1.隐式内联：如第三节说的C++中在类内定义的所有函数都自动称为内联函数，类的成员函数的定义直接写在类的声明中时，不需要inline关键字</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Trace</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Trace</span>()</span><br><span class="line">	&#123;</span><br><span class="line">		noisy = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">(<span class="type">char</span> *s)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (noisy)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, s);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">on</span><span class="params">()</span></span>&#123; noisy = <span class="number">1</span>; &#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">off</span><span class="params">()</span></span>&#123; noisy = <span class="number">0</span>; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">int</span> noisy;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2.<strong>显式内联：</strong>需要使用<strong>inline</strong>关键字</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Trace</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Trace</span>()</span><br><span class="line">	&#123;</span><br><span class="line">		noisy = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">(<span class="type">char</span> *s)</span></span>; <span class="comment">//类内没有显示声明</span></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">on</span><span class="params">()</span></span>&#123; noisy = <span class="number">1</span>; &#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">off</span><span class="params">()</span></span>&#123; noisy = <span class="number">0</span>; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">int</span> noisy;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//类外显示定义</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">Trace::print</span><span class="params">(<span class="type">char</span> *s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (noisy)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, s);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="内联函数和重定义"><a href="#内联函数和重定义" class="headerlink" title="内联函数和重定义"></a>内联函数和重定义</h2><p><strong>这一部分我们带着问题一步步进行分析思考</strong></p>
+<p><strong>什么是重定义？</strong></p>
+<p>答：C&#x2F;C++语法中，如果变量、函数在同一个工程中被多次定义，链接期间会报类似“对 xxx 多重定义”的错误。</p>
+<p>当内联函数的声明和定义分别在头文件和源文件中，并且在其他文件中被调用时，链接期间编译器会报“对 xxx 未定义的引用”错误。&#x3D;&#x3D;内联函数如果会在多处被调用，则需要将函数的定义写在头文件中。&#x3D;&#x3D;</p>
+<p>为什么inline关键字修饰的函数定义在头文件中（函数可能会被多次定义），编译器不会报“对 xxx 多重定义”的错误呢？</p>
+<p>答：编译器对被inline修饰的函数做了特殊处理，inline起到了内联的作用</p>
+<hr>
+<p><strong>inline为什么能起作用？</strong></p>
+<p>答：因为inline是一个弱符号；</p>
+<hr>
+<p><strong>什么是弱符号？</strong></p>
+<p>答：在C语言中，编译器默认函数和初始化了的全局变量为强符号（Strong Symbol），未初始化的全局变量为弱符号（Weak Symbol）。</p>
+<p>强符号之所以强，是因为它们拥有确切的数据，变量有值，函数有函数体；弱符号之所以弱，是因为它们还未被初始化，没有确切的数据。</p>
+<p>链接器会按照如下的规则处理被多次定义的强符号和弱符号：</p>
+<ol>
+<li><p>不允许强符号被多次定义，也即不同的目标文件中不能有同名的强符号；如果有多个强符号，那么链接器会报符号重复定义错误。</p>
+</li>
+<li><p>如果一个符号在某个目标文件中是强符号，在其他文件中是弱符号，那么选择强符号。</p>
+</li>
+<li><p>如果一个符号在所有的目标文件中都是弱符号，那么选择其中占用空间最大的一个。</p>
+</li>
+</ol>
+<hr>
+<p><strong>怎么知道inline是个弱符号的？</strong></p>
+<p>答：反汇编：objdump -dS test，看下面两个例子：</p>
+<p>下面两个.cpp文件，除Function()的inline修饰符外其他内容完全一致</p>
+<p>1.正常的函数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* NormalMain.cpp */</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Function</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;[Function]========= Get!!!\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">Function</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>汇编结果 ：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	.file	<span class="string">&quot;NormalMain.cpp&quot;</span></span><br><span class="line">	.section	.rodata</span><br><span class="line">.LC0:</span><br><span class="line">	.string	<span class="string">&quot;[Function]========= Get!!!&quot;</span></span><br><span class="line">	.text</span><br><span class="line">	.globl	_Z8Functionv</span><br><span class="line">	.type	_Z8Functionv, @function</span><br><span class="line">_Z8Functionv:</span><br><span class="line">;...</span><br></pre></td></tr></table></figure>
+
+<p>……</p>
+<blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35902025/article/details/127912415" >https://blog.csdn.net/qq_35902025/article/details/127912415<i class="fas fa-external-link-alt"></i></a></p>
+<p>讲到汇编已经开始吐血了</p>
+<p>我只想了解到内联函数和C++的关系就好了</p>
+</blockquote>
 
                 </div>
                 
@@ -402,6 +556,22 @@ return 0;
                 
                     <div class="post-nav border-box">
                         
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/05/07/20240507-C%E5%8A%A0%E5%8A%A0%E5%A4%8D%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/"
+                                   title="20240507 C加加复习（三）"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240507 C加加复习（三）</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
                         
                             <div class="next-post">
                                 <a class="next"
@@ -411,7 +581,7 @@ return 0;
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240506 C加加复习（一）</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -438,7 +608,7 @@ return 0;
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Primer%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text">C++Primer快速回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E4%B9%A0%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">复习思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9C%8B%E7%9B%AE%E5%BD%95%E6%83%B3%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">看目录想问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%AC%A1%E7%BA%A7%E9%97%AE%E9%A2%98%E5%92%8C%E4%B8%BB%E8%A7%82%E6%84%9F%E5%8F%97"><span class="nav-number">3.1.</span> <span class="nav-text">一些次级问题和主观感受</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">C++三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">三大特性定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.2.</span> <span class="nav-text">三大特性优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">4.2.1.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">4.2.2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">4.2.3.</span> <span class="nav-text">多态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.</span> <span class="nav-text">三大特性的具体实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0-%E6%9A%97%E5%90%AB%E7%BB%A7%E6%89%BF"><span class="nav-number">6.</span> <span class="nav-text">虚函数&#x2F;暗含继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">6.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">6.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Primer%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text">C++Primer快速回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E4%B9%A0%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">复习思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9C%8B%E7%9B%AE%E5%BD%95%E6%83%B3%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">看目录想问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%AC%A1%E7%BA%A7%E9%97%AE%E9%A2%98%E5%92%8C%E4%B8%BB%E8%A7%82%E6%84%9F%E5%8F%97"><span class="nav-number">3.1.</span> <span class="nav-text">一些次级问题和主观感受</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">C++三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">三大特性定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.2.</span> <span class="nav-text">三大特性优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">4.2.1.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">4.2.2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">4.2.3.</span> <span class="nav-text">多态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.</span> <span class="nav-text">三大特性的具体实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0-%E6%9A%97%E5%90%AB%E7%BB%A7%E6%89%BF"><span class="nav-number">6.</span> <span class="nav-text">虚函数&#x2F;暗含继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">6.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">6.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">7.</span> <span class="nav-text">内联函数的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="nav-number">7.1.</span> <span class="nav-text">什么是内联函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%9B%B4%E8%A7%82%E4%B8%8A%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-number">7.1.0.1.</span> <span class="nav-text">1.直观上定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%9B%B4%E6%B7%B1%E5%85%A5%E7%9A%84%E6%80%9D%E8%80%83%EF%BC%9A"><span class="nav-number">7.1.0.2.</span> <span class="nav-text">2.更深入的思考：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="nav-number">7.2.</span> <span class="nav-text">为什么使用内联函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%95%E5%BC%80%E7%9A%84%E5%85%B3%E9%94%AE"><span class="nav-number">7.3.</span> <span class="nav-text">展开的关键</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%9B%B4%E6%B7%B1%E5%85%A5%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">7.3.0.1.</span> <span class="nav-text">3.更深入的思考</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%8C%E5%9C%A8%E5%93%AA%E5%84%BF%E7%94%A8%EF%BC%9F"><span class="nav-number">7.4.</span> <span class="nav-text">内联函数怎么用，在哪儿用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E5%92%8C%E9%87%8D%E5%AE%9A%E4%B9%89"><span class="nav-number">7.5.</span> <span class="nav-text">内联函数和重定义</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -465,7 +635,7 @@ return 0;
             </div>
 
             <div class="theme-info info-item default">
-                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -478,14 +648,14 @@ return 0;
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">讀者</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">閱覽</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -582,7 +752,7 @@ return 0;
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Primer%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text">C++Primer快速回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E4%B9%A0%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">复习思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9C%8B%E7%9B%AE%E5%BD%95%E6%83%B3%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">看目录想问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%AC%A1%E7%BA%A7%E9%97%AE%E9%A2%98%E5%92%8C%E4%B8%BB%E8%A7%82%E6%84%9F%E5%8F%97"><span class="nav-number">3.1.</span> <span class="nav-text">一些次级问题和主观感受</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">C++三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">三大特性定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.2.</span> <span class="nav-text">三大特性优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">4.2.1.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">4.2.2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">4.2.3.</span> <span class="nav-text">多态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.</span> <span class="nav-text">三大特性的具体实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0-%E6%9A%97%E5%90%AB%E7%BB%A7%E6%89%BF"><span class="nav-number">6.</span> <span class="nav-text">虚函数&#x2F;暗含继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">6.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">6.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Primer%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text">C++Primer快速回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E4%B9%A0%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">复习思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9C%8B%E7%9B%AE%E5%BD%95%E6%83%B3%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">看目录想问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%AC%A1%E7%BA%A7%E9%97%AE%E9%A2%98%E5%92%8C%E4%B8%BB%E8%A7%82%E6%84%9F%E5%8F%97"><span class="nav-number">3.1.</span> <span class="nav-text">一些次级问题和主观感受</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">4.</span> <span class="nav-text">C++三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">三大特性定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.2.</span> <span class="nav-text">三大特性优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-number">4.2.1.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">4.2.2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-number">4.2.3.</span> <span class="nav-text">多态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E7%9A%84%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.</span> <span class="nav-text">三大特性的具体实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0-%E6%9A%97%E5%90%AB%E7%BB%A7%E6%89%BF"><span class="nav-number">6.</span> <span class="nav-text">虚函数&#x2F;暗含继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">6.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="nav-number">6.2.</span> <span class="nav-text">具体实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">7.</span> <span class="nav-text">内联函数的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="nav-number">7.1.</span> <span class="nav-text">什么是内联函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%9B%B4%E8%A7%82%E4%B8%8A%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="nav-number">7.1.0.1.</span> <span class="nav-text">1.直观上定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%9B%B4%E6%B7%B1%E5%85%A5%E7%9A%84%E6%80%9D%E8%80%83%EF%BC%9A"><span class="nav-number">7.1.0.2.</span> <span class="nav-text">2.更深入的思考：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0"><span class="nav-number">7.2.</span> <span class="nav-text">为什么使用内联函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%95%E5%BC%80%E7%9A%84%E5%85%B3%E9%94%AE"><span class="nav-number">7.3.</span> <span class="nav-text">展开的关键</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%9B%B4%E6%B7%B1%E5%85%A5%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">7.3.0.1.</span> <span class="nav-text">3.更深入的思考</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%8C%E5%9C%A8%E5%93%AA%E5%84%BF%E7%94%A8%EF%BC%9F"><span class="nav-number">7.4.</span> <span class="nav-text">内联函数怎么用，在哪儿用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E8%81%94%E5%87%BD%E6%95%B0%E5%92%8C%E9%87%8D%E5%AE%9A%E4%B9%89"><span class="nav-number">7.5.</span> <span class="nav-text">内联函数和重定义</span></a></li></ol></li></ol>
     </div>
 </div>
 

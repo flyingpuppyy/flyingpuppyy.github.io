@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20240510 编程范式素材（一） |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                HOME
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >HOME</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20240510 编程范式素材（一）
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-05-10 14:46:04</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Fri May 10 2024 15:05:43 GMT+0800">2024-05-10 15:05:43</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="文章总结"><a href="#文章总结" class="headerlink" title="文章总结"></a>文章总结</h1><ul>
+<li><p>对照文章，我自己是陷入了一个“&#x3D;&#x3D;有代码,有能够跑通运行的代码即会编程的误区&#x3D;&#x3D;”中，很多之前的概念的思维过程是很重要的</p>
+</li>
+<li><p>自我改进：</p>
+<p>1.半默写半思考的模式进行代码的仿写和重构</p>
+<p>2.采用书写文章的方式复现和叙述自己的代码思考过程和模式，并且对照层次来观察一下自己</p>
+<blockquote>
+<ul>
+<li><p>初等：我定义了一个整数类型的变量，名字叫num，这个变量等于42(这个思绪严格来说是错的)</p>
+</li>
+<li><p>进阶：我定义了一个可以存储int类型数据的变量，命名为num，并且我给它赋值为42(这个是正确的，但是认知太浅了)</p>
+</li>
+<li><p>原理：我在栈中有一个int型大小的空间，这个空间保存着42这个值的<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%A0%81&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:817776678%7D" >二进制码<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>底层：我在这个函数栈寄存器指针(例如ESP)所在的第N个位置存储着42这个值，我可以通过num这个名字来取到这个值，唔···可能有些CPU会有不同的行为(初学者就不用考虑这一层了，如果对汇编没什么概念的话。而且正常来说也没必要)</p>
+</li>
+<li><p>物理：CPU寄存器的某些位置会聚集电荷，表示存储了数据······(额······还是去搞集成电路吧)</p>
+</li>
+<li><p>神话：And God said, “Let there be light” and there was light.(行了，已经不用学了)</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h1 id="学习编程照着别人的代码敲进去有效率吗？"><a href="#学习编程照着别人的代码敲进去有效率吗？" class="headerlink" title="学习编程照着别人的代码敲进去有效率吗？"></a>学习编程照着别人的代码敲进去有效率吗？</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/people/xnan-15/answers" >https://www.zhihu.com/people/xnan-15/answers<i class="fas fa-external-link-alt"></i></a></p>
+<p>正好最近公司一个同事想学编程。就把这个贡献给题主了~~~</p>
+<p>每一门学科都有它自己的思维方式，学习的过程就是通过它的知识描述、实例、习题来去感知这门学科究竟是用什么样的思维去运作的。在初学的时候，去<strong>感知这门学科的思维方式</strong>是<strong>非常重要的，非常重要的，非常重要的</strong>。</p>
+<p>举个例子，比如音乐，别人给你唱一段，只要你不是<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E4%BA%94%E9%9F%B3%E4%B8%8D%E5%85%A8&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:817776678%7D" >五音不全<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="/../imgs/$%7Bfiilename%7D/1715323882545.png"  alt="1715323882545"></p>
+<p>​                                                                    《与西斯图合作的树的习作》 – 达芬奇</p>
+<p>但是，如果你去搜一下达芬奇的《论绘画》，你就会明白，这是一颗不存在这个世界的树，但是却是一颗真实的树。</p>
+<p>回归正题</p>
+<p>其实学编程也一样，逐行抄代码的作用，当然会有，但是并不大。你应该明确自己逐行抄代码的意义；</p>
+<p><strong>那就是熟悉这门语言的语法的拼写，而已，也就是强行记语法&amp;单词，你需要尽早摆脱抄代码，学习一周以内，你就不应该一句一句地抄了。你真正想学的编程，是一种思维活动，这个涉及到你是否真的明白教材里面的知识。</strong></p>
+<p>从我之前教人编程总结的一些经验给你说说如何入门编程。</p>
+<h3 id="0-据我的经验，初学编程所遇到的问题无非就是以下3种："><a href="#0-据我的经验，初学编程所遇到的问题无非就是以下3种：" class="headerlink" title="0.据我的经验，初学编程所遇到的问题无非就是以下3种："></a>0.据我的经验，初学编程所遇到的问题无非就是以下3种：</h3><ul>
+<li>思路混乱(问题领域)</li>
+<li>不清楚每行代码的作用(静态思考)</li>
+<li>不知道每行代码当前所处的状态(动态思考)</li>
+</ul>
+<p><strong>思路混乱</strong>，这个问题在很多的程序员中也会出现，它属于领域问题，在于对需求理解不够，对问题的分析不到位所导致的。</p>
+<p>而对于初学者，则会容易出现另一个问题：<strong>把问题领域等同于编程问题</strong>。也就是从一开始就以 “<strong>我要写代码</strong>” 的方式去思考，结果越想越混乱。为什么呢？因为初学编程首先对语法就不熟悉，更别提语言里面的各种概念了。所以，以 “写代码” 的方式直接思考问题领域中的问题，本身就会让你的思维更加混乱。</p>
+<blockquote>
+<p>存在“我的任务就是让代码出现在这里并且跑通”</p>
+</blockquote>
+<p>例如，我现在叫你写一个判断9102年是不是闰年的程序，</p>
+<p>如果你的脑子里面飞出来一堆 “应该怎么写？”、“是用if吗？”、“还是要用到for？”、“if语句怎么写来着？”、“糟糕，我忘了main函数的写法了”；那么你应该先去买杯奶茶冷静一下(顺便给我带一杯)。</p>
+<p>接下来，你应该准备纸笔，边喝奶茶边想 “闰年是什么意思？”、“我应该先判断它能不能被4整除(在纸上写下 <em>判断9102&#x2F;4是整数</em>)”、”噢，这样还不行，我还应该判断它是否同时满足不能被100整除(在纸上写下 <em>判断9102&#x2F;100不是整数)<em>“、“哎呀，还有还有，如果刚好是400的倍数，那么虽然可以被100整除，但是也是闰年(在纸上写下 判断9102&#x2F;400是整数)”。**你看，这就是所谓的问题领域，跟编程其实一毛钱关系都没有，大家都是这样思考问题的，而编程，只是把问题转化为语句罢了(其实你在纸上写下这些的时候，也是把问题转化为中文而已，只是因为你对中文的表达形式太熟悉了，所以能直接写出来)。</em></em></p>
+<p><strong>不清楚每行代码的作用</strong>，你已经知道什么是闰年了，也知道靠你自己的脑子里的数学运算知识，就可以知道9102年是不是闰年了。但是，程序应该如何表达你的思维过程呢？这个就是你需要学习的所谓的“编程语言”，也就是它的语法以及语句所表达的含义。</p>
+<p><strong>不知道每行代码当前所处的状态</strong>，这点对于初学者来说是个非常头疼的问题，因为它需要你去感知代码在CPU上跑的时候，究竟是怎么样的，&#x3D;&#x3D;也就是你的大脑在模拟CPU&#x3D;&#x3D;，这也是程序员的标准日常。而对于初学者来说，最难越过的就是这道坎。</p>
+<p>这相当于什么呢？比如在学音乐的时候，会不断地听音、模唱、脑补这个音在五线谱上的位置，以及在你所学乐器中如何表现出来，直到你能够看到五线谱上的音符的时候，脑中就自然地响起那个音，这在音乐中被称为<strong>内心听觉</strong></p>
+<p>或者说你对绘画比较熟悉？那么在学习绘画的时候，学习勾线，然后看看别人的画是怎么布局的、怎么勾线的，锻炼自己在画的时候就能在脑中<strong>清晰地脑补出想要画的事物</strong>。</p>
+<p>你看，其实每个学科都是同样的，需要你培养对这个学科的感知能力。编程也不例外，它要求你在看别人的代码或者自己写代码的时候，你的脑中应该有清晰的“图像”，并且这个图像是动态的，随着你关注问题的不同部分，这个图像就会不同。</p>
+<p>OK。既然知道了初学会面临什么样的问题，那么就等于有了目标。不过，在谈如何解决这些困难之前，我们先来学点最简单的“哲学”，当然，不是专业课上的哲学，而是经过简化的编程哲学。</p>
+<p>*PS：另外提几句，如果题主是想以编程为主业或者对编程特别感兴趣，那么建议你从C、Java&#x2F;Kotlin、Golang等(半)编译型语言<strong>，理由很简单，这些语言会迫使你去认知你写的代码到CPU执行会经过什么步骤，让你对计算机基础概念的理解有极大的帮助。我的建议当然是直接学C，虽然入门之后的指针、垃圾回收等概念有些困难，但是你会了解到非常多计算机原理的知识，对你未来学习其他语言，以及精进的帮助是非常大的。如果你只是想学个编程来辅助你的工作，比如，你是搞金融的、搞地质勘测的、社交&#x2F;交易数据分析的，那么学个Python、JavaScript就非常合适，没必要去碰真·程序员的那些“烧脑”的东西。(最近不知道哪来的风气，说C、Java不适合入门，要学Python之类的脚本语言</strong>，并且一律全是学爬虫<strong>，看得我一脸懵逼。我只能说，如果你先学了这些语言，倒也问题不大，只是你可能很难再去认真学计算机原理</strong>了；为什么？因为你会选这些所谓的“简单”的语言的时候，就已经表明你并没有想要去接触计算机原理了，而当你学会之后，你就会有一种“我都已经学会编程了”，我还学那些干嘛？当然，一切还是看你自己。)</p>
+<h3 id="1、抽象-认知"><a href="#1、抽象-认知" class="headerlink" title="1、抽象&amp;认知"></a>1、抽象&amp;认知</h3><p>题主千万不要被<strong>抽象</strong>和<strong>认知</strong>这两个词吓到。大家都说程序员需要抽象思维，并且<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E6%8A%BD%E8%B1%A1%E6%80%9D%E7%BB%B4&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:817776678%7D" >抽象思维<i class="fas fa-external-link-alt"></i></a></p>
+<p>听起来好像很难的样子。其实抽象比你想象的要简单的多，也普遍得多。比如，当你在街上看到一只狗，你的脑中就会浮现“狗”这个词，以及“狗很可爱”、“狗有很多毛”、“狗有尾巴”等特征，还有“狗会跑”、“狗会尿尿”、“狗会吠”、“狗会咬人”等行为。其实这个时候，你就是在利用抽象能力，只是多数情况下你会忽略这种思绪，因为它实在是太平常了。</p>
+<p>而你现在，需要做的，就是如何刻意去练习抽象，从最基础的认知开始：抽象就是从具体事物中提取出它们的共同特征。你看，刚刚说的对狗的认知，就包含了大部分的狗都符合的特征和行为。</p>
+<p>所以，当我们要去学习“大象”的本质是什么之前，首先要看到整头大象大概是长什么样的。</p>
+<p>认知，就是我要讲的第一个重要的点。很多初学者在学习的时候，并不是真正的对编程有了认知，而是只是记住了编程语言的语法，而不是它的核心概念。什么叫做&#x3D;&#x3D;核心概念&#x3D;&#x3D;呢？下面就开始详细的说明：</p>
+<p>在大多数逻辑型语言中(例如比较主流的C&#x2F;C++、Java、Python；</p>
+<p>而所谓非逻辑语言，是指像Json、HTML、CSS等不包含逻辑的描述语言)，都会存在一些核心的基本概念，这些概念其实和语法没有任何关系，语法仅仅是为了表达这些概念而存在的。对于初学者来说，并不要求立刻就理解这些抽象的概念。但是，这是我们的学习目标，**我们的学习目标并不是学会X语言的语法，&#x3D;&#x3D;而是语法背后的核心概念&#x3D;&#x3D;(敲敲~敲黑板)**。</p>
+<p><strong>编程其实就是处理各种各样的数据</strong>。说得很抽象对吧？别怕，跟着我来。</p>
+<p>大多数编程语言一上来都会给个“Hello   World！”程序，这就是我上面所说的那头“大象”，它的意义就是让你先对这个语言长成什么样有个感性的认识。它告诉你，在我这个语言里面，你这样写，就能在终端&#x2F;屏幕上输出“Hello  World！”，让你先体验一下即时反馈的乐趣。</p>
+<p>这时，你可以做的最简单的事情就是去修改输出的内容，比如改成“Hello,  XNan！”，你就能感受到你的修改是有效的。不过，接下来，就没那么简单的，因为当你看到这头“大象”之后，就要开始“解剖”这头“大象”了(<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E5%8A%A8%E7%89%A9%E4%BF%9D%E6%8A%A4%E5%8D%8F%E4%BC%9A&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:817776678%7D" >动物保护协会<i class="fas fa-external-link-alt"></i></a>的不要来找我啊~~~)。</p>
+<blockquote>
+<p>哈哈哈哈，好有意思这个人</p>
+</blockquote>
+<p>比如说C语言，你会接触到的是<strong>变量和数据类型</strong>，然后是<strong>各种运算符</strong>，接着是<strong>if语句</strong>，再接着是<strong>while语句</strong>，再再接着就是<strong>for语句</strong>，说不定还有<strong>switch语句</strong>，一直到结构体、联合体、指针、函数 balabalabala~。眼花缭乱，一脸懵逼，生无可恋······</p>
+<p>但是，你先拿起笔，在本子里记下下面的列表：</p>
+<ul>
+<li>数据存储(定义变量&amp;数据类型&amp;自定义类型)</li>
+<li>数据运算(运算符)</li>
+<li>条件判断(if语句&amp;switch语句)</li>
+<li>重复(while、do…while、for循环)</li>
+<li>拆解问题(函数)</li>
+</ul>
+<p>是的，这就是我说的核心概念，几乎任何一种逻辑型语言，都会存在上面这个列表中的概念，唯一不同的，就是这个语言究竟是如何去表达它的。</p>
+<p>再举个  ：“我”，其实是一个概念，还记得你小时候，你妈妈或者幼儿园老师教你 “我” 这个概念的时候的情景吗？一般都会指着自己，然后说  “我”，来去传达这个概念给你，而这个“我”字，只不过是表达 “我自己” 这个概念的形式而已，在英语中，也有 “我”  的概念，并且表现形式很不一样，使用“I”来表达“我”这个意思的。</p>
+<p>那么现在你应该大概能理解了，<strong>定义变量</strong>这种具体的行为，其实只是<strong>数据存储</strong>的概念，它的本质是你有了一个可以存储数据的空间，你可以把一些数据放进去。那么编程思维就构建起来了。其他几个也是同理，你在学习的时候，你要去理解语法背后的概念。那么现在也就有了学习的方法。</p>
+<p>好了，有了目标，也有了学习方法，就可以开始学习了。</p>
+<h3 id="2、分析问题"><a href="#2、分析问题" class="headerlink" title="2、分析问题"></a>2、分析问题</h3><p>上面已经说到，初学者第一个面临的问题是思路混乱，也就是没有对问题领域有清晰的认识，没有在逻辑层面解决所提出的问题，而上面所使用的闰年的例子已经说得很清楚了。在你还没有非常熟悉语言的语法的时候，你需要现在纸上把问题先解决了。</p>
+<p>为什么呢？因为你对所使用的工具还不熟悉，所以你根本没办法一边思考问题，一边思考代码怎么写，所以你需要先分开思考。想要越过这个坎，还是很简单的，看到习题的时候，首先在脑子里去解决问题，然后再把问题分步骤写在纸上，最后再去找每一步，在你所学习的语言里面是如何表达的。很容易，对吧？不就是一杯奶茶的事情嘛，如果不够，那就两杯。</p>
+<h3 id="3、理解每行代码的作用"><a href="#3、理解每行代码的作用" class="headerlink" title="3、理解每行代码的作用"></a>3、理解每行代码的作用</h3><p>理解一行代码究竟是什么作用的，是一种静态思考，这是必须的，这就是上面所举的音乐和绘画的例子中的一个概念；<strong>在写代码的时候，脑子里面应该想些什么</strong>。你需要非常清楚地知道你写的这一行代码的作用究竟是什么。</p>
+<p>比如</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">42</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这行代码，应该在脑子里想什么呢？下面给出不同层次的思绪。</p>
+<ul>
+<li><p>初等：我定义了一个整数类型的变量，名字叫num，这个变量等于42(这个思绪严格来说是错的)</p>
+</li>
+<li><p>进阶：我定义了一个可以存储int类型数据的变量，命名为num，并且我给它赋值为42(这个是正确的，但是认知太浅了)</p>
+</li>
+<li><p>原理：我在栈中有一个int型大小的空间，这个空间保存着42这个值的<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%A0%81&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:817776678%7D" >二进制码<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>底层：我在这个函数栈寄存器指针(例如ESP)所在的第N个位置存储着42这个值，我可以通过num这个名字来取到这个值，唔···可能有些CPU会有不同的行为(初学者就不用考虑这一层了，如果对汇编没什么概念的话。而且正常来说也没必要)</p>
+</li>
+<li><p>物理：CPU寄存器的某些位置会聚集电荷，表示存储了数据······(额······还是去搞集成电路吧)</p>
+</li>
+<li><p>神话：And God said, “Let there be light” and there was light.(行了，已经不用学了)</p>
+</li>
+</ul>
+<p>OK，扯淡完毕。对于初学者，应该可能目前处于“初等”的思维，有些可能可以达到“进阶”思维。我的建议是，努力达到“原理”思维。至于“底层”思维，如果有兴趣可以去学汇编，了解CPU的构造，如果没兴趣，也没必要。</p>
+<p>只有一个例子，可能还无法理解。那么就针对if语句来举例子吧。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( num &gt;= <span class="number">42</span> )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;yes&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里就不列每个思绪了，直接说你脑子应该想什么：我想要判断num变量是不是大于或等于42，num的值保存在栈的某个空间里面，这样我就能取到它的值，并且使用&gt;&#x3D;运算符来进行判断，if语句就是这样的，使用单词if，后面括号里面的是条件，条件表达式会返回这个判断是不是对的，如果是对的，那么CPU就会跳到执行“对的”情况下的代码，也就是那句<code>printf</code>语句。很清晰，对吧？那就按照这个方式，去真正理解程序里面每一句代码的作用是什么。</p>
+<p>以上，看起来很繁琐，但是，初学的时候，你必须这样去思考，一开始可能会很慢，看代码可能一行要看几秒甚至几十秒才能反应出它的含义，但是随着你这样的思考越来越频繁，不出半年，你就可以瞬间反应出来，并且都是潜意识的活动，你不注意都可能没发现自己已经想的那么深入了。</p>
+<h3 id="4、跟踪每行代码运行时所处的状态"><a href="#4、跟踪每行代码运行时所处的状态" class="headerlink" title="4、跟踪每行代码运行时所处的状态"></a>4、跟踪每行代码运行时所处的状态</h3><p>这是初学者面对的最难解决的问题，因为初学者的思维比较单一，并且在对语法都还不熟悉的情况下，更加难保持清晰的认知状态，在这些<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=debuff&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:817776678%7D" >debuff<i class="fas fa-external-link-alt"></i></a>叠加的状态下，让初学者苦不堪言。不过没关系，下面我就来谈谈如何解决这个问题。</p>
+<p>首先，这里的“运行时”，并不是说程序真的在运行的时候，而是我们在写代码的时候，就要在脑中模拟运行这个程序。那么什么叫做状态呢？也就是当程序运行到某行代码的时候，究竟有多少数据？这些数据的含义是什么？这些数据的值我能确定吗？这些值在现在这行代码执行的时候，值域范围是什么？我应该如何处理它才能达到我的目的？</p>
+<p>上面的所有问题，都是要你在写代码的时候，能瞬间回答的问题。下面我就拿判断闰年的例子，来说明如何动态思考：</p>
+<p>作者：XNan</p>
+<p>链接：<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/297309123/answer/817776678" >https://www.zhihu.com/question/297309123/answer/817776678<i class="fas fa-external-link-alt"></i></a></p>
+<p>来源：知乎</p>
+<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 首先，我们定义一个变量，赋值为9102，当执行代码之前，</span></span><br><span class="line"><span class="comment"> * 没有变量被定义，所以我们不需要跟踪任何状态</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">int</span> year = <span class="number">9102</span>;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 当执行完上面这句代码的时候，我们的脑子里面就需要保存year这个变量了，</span></span><br><span class="line"><span class="comment"> * 你应该记住year是一个整数类型的变量，并且在接下来都清楚地知道，</span></span><br><span class="line"><span class="comment"> * 这个变量的含义，就是表示我们需要判断的年份，那么你就等于知道了</span></span><br><span class="line"><span class="comment"> * year可以进行什么操作。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 当你准备写下面这句代码的时候，</span></span><br><span class="line"><span class="comment"> * 你应该先去了解你所使用的语言中，有什么运算符，</span></span><br><span class="line"><span class="comment"> * 以及什么运算符可以用来判断一个整数是否有余数</span></span><br><span class="line"><span class="comment"> * (整除的概念不需要我说了吧~~~)</span></span><br><span class="line"><span class="comment"> * 很明显，C语言里面就有一个运算符叫做“取余”，你去看一下它的使用说明，</span></span><br><span class="line"><span class="comment"> * 就知道，如果左操作数能够被右操作数除尽，那么结果就会是0，</span></span><br><span class="line"><span class="comment"> * 其次，C语言中，用来判断两个数据是否相等的操作符是“==”。</span></span><br><span class="line"><span class="comment"> * (有够啰嗦的，不过对于初学者需要非常清楚这些思考)</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * 接下来，就是最重要的跟踪了，根据之前所说的，你需要记住year这个变量</span></span><br><span class="line"><span class="comment"> * 的类型，在这里你无法确定year的值是什么，别看上面已经写了9102，但是</span></span><br><span class="line"><span class="comment"> * 对于计算机来说，还没运行下面的代码的情况下， 就是不知道的，所以你也</span></span><br><span class="line"><span class="comment"> * 要用这种思维，只要是变量，那么你唯一能确定的就是值域，也就是int类型</span></span><br><span class="line"><span class="comment"> * 能够被赋予哪些数据，比如int类型就是整数，不考虑类型范围的情况下</span></span><br><span class="line"><span class="comment"> * 它的值域就是所有整数。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">if</span> ( year % <span class="number">400</span> == <span class="number">0</span> )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;yes&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ......其他的代码就不给了。</span></span><br></pre></td></tr></table></figure>
+
+<p>呐，通过这个简单的例子。应该毫无压力的就能理解所谓的 “跟踪每行代码运行时所处的状态”了。</p>
+<p>作者：XNan</p>
+<p>链接：<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/297309123/answer/817776678" >https://www.zhihu.com/question/297309123/answer/817776678<i class="fas fa-external-link-alt"></i></a></p>
+<p>来源：知乎</p>
+<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h3 id="5、实例"><a href="#5、实例" class="headerlink" title="5、实例"></a>5、实例</h3><p>下面就用一个稍微复杂一点的实例来结束这个回答吧。</p>
+<p>我个人在教初学者的时候，习惯用<strong>判断一个数是否是素数</strong>来作为最基础的实例。原因是它简单，不管是问题的描述还是用代码去实现，都很简单，但是却用到了语言的所有基础概念和语法(变量定义、条件判断、循环)。这里我并不打算讲函数，只作为对那3个问题的一个讲解实例而已。</p>
+<p>首先，我们先在问题领域把这个问题解决了。</p>
+<p><em>素数的定义：一个数，如果只能被1和它本身整除，那么它就是一个素数</em>。</p>
+<p>那么在逻辑上，我们是怎么去判断的呢？比如说，一个数，如果比较小，那么你的大脑很容易就能判断出来，比如5，是一个素数，它不能被234整除，而大于5的数就肯定不可能整除5了。再比如，17，它不能2~16的数整除，但是···你确定吗？你有拿每个数去除过吗？没有，那么你现在就去试试，拿2 3 4 ~ 16每个数都去除一下，然后告诉我，17是不是素数？</p>
+<p>PS：<em>当然其实你只需要除到8就可以了，因为一个数被任何一个数整除的最小值是2，所以能整除17的整数绝对不会超过8，不过我们这里不考虑</em></p>
+<p>是的，17确实是素数，但是如果你没有一个一个去除过，你就不能保证它的确是素数，而计算机，判断一个数是否是素数的思路，也是一样。你需要从2开始，拿每一个数去除17，这样才能证明17是素数。那么，我们就在问题领域里面，解决了这个问题了。但是，如果按照这个思路，你可能会写出每个除数一行代码来判断的程序，这样一点都不符合程序员“偷懒”的思维，还不如我在纸上直接写来得快呢，是吧？那么应该如何写呢？</p>
+<p>OK。看代码(我这里使用C语言，如果你学的是其他语言，那么你可以作为参考，然后自己用目标语言去写):</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"> <span class="number">2</span> </span><br><span class="line"> <span class="number">3</span> <span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line"> 4 &#123;</span><br><span class="line"> <span class="number">5</span>     <span class="type">int</span> num = <span class="number">17</span>;</span><br><span class="line"> <span class="number">6</span> </span><br><span class="line"> <span class="number">7</span>     <span class="type">int</span> i = <span class="number">2</span>;</span><br><span class="line"> <span class="number">8</span>     <span class="keyword">while</span> ( i &lt; num )</span><br><span class="line"> <span class="number">9</span>     &#123;</span><br><span class="line"><span class="number">10</span>         <span class="keyword">if</span> ( num % i == <span class="number">0</span> )</span><br><span class="line"><span class="number">11</span>         &#123;</span><br><span class="line"><span class="number">12</span>             <span class="keyword">break</span>;</span><br><span class="line"><span class="number">13</span>         &#125;</span><br><span class="line"><span class="number">14</span> </span><br><span class="line"><span class="number">15</span>         i = i + <span class="number">1</span>;</span><br><span class="line"><span class="number">16</span>     &#125;</span><br><span class="line"><span class="number">17</span> </span><br><span class="line"><span class="number">18</span>     <span class="keyword">if</span> ( i == num )</span><br><span class="line"><span class="number">19</span>     &#123;</span><br><span class="line"><span class="number">20</span>         <span class="built_in">printf</span>(<span class="string">&quot;is prime&quot;</span>);</span><br><span class="line"><span class="number">21</span>     &#125;</span><br><span class="line"><span class="number">22</span>     <span class="keyword">else</span></span><br><span class="line"><span class="number">23</span>     &#123;</span><br><span class="line"><span class="number">24</span>         <span class="built_in">printf</span>(<span class="string">&quot;is not prime&quot;</span>);</span><br><span class="line"><span class="number">25</span>     &#125;</span><br><span class="line"><span class="number">26</span> </span><br><span class="line"><span class="number">27</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">28</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面跟着我来一步一步地在大脑中执行代码。注意格式，适当的空行有助于分隔代码，也有助于你的思路清晰。</p>
+<ul>
+<li>首先，main函数是C语言的入口，对于初学者，你只要知道，把代码写到main下面的大括号里面就可以了。</li>
+<li>第5行，定义int型的变量num，这个变量的含义是我们要判断是否为素数的数字。记住你定义了一个这样的变量。</li>
+<li>第7行，定义int型的变量i，这个变量表示num需要除的数，它是动态的，你会在每次除完以后，将它+1，比如先让num除以2，然后再除以3，再除以4······，所以你必须很清晰地知道i的作用。它是用来充当每次验证num的除数。因为我们判断素数是从2开始的，所以它的初始值是2。</li>
+<li>第8行(开始判断是否进入循环)，现在想想那几个问题；究竟有多少数据？这些数据的含义是什么？这些数据的值我能确定吗？这些值在现在这行代码执行的时候，值域范围是什么？在运行到这行代码的时候，num和i的作用你必须要很清楚。那么就可以这样思考，当前的i为2，num的值是什么，我们并不需要知道，但我们依然可以先假设为17。总之我们的目的就是看i是不是比num小，如果是，我们就应该拿i去除num。所以我们进入循环的条件就是 i &lt; num。而按照目前的数据来看，2 显然小于 17。所以会进入循环。</li>
+<li>第10行(第1次进入循环)，上面说了，i当前的值是2，我们拿它去除num，并且看看余数是不是0，如果余数是0，就表示被整除了，那么说明就不是素数；如果不能被整除，那么就继续检查下一个数字。而在这行代码中，我们拿2 去除 17，并不能整除，所以就会跳过if的大括号里面的代码。</li>
+<li>第15行，这就是将i的值+1，<strong>注意了</strong>，当执行到这行代码的时候，i的值，改变了，根据当前状态，i的值会变成3，而num依然是17。接下来，就是很多初学者会脑抽的地方，那就是代码执行的顺序会改变，它不会16行、17行、18行这样执行。因为while语句是循环语句，并且while的整个大括号都属于循环体，所以当执行到16行的时候，它会重新回到第8行，并且重新执行判断。接下来就是这样的，我们继续按照当前变量的状态来执行。</li>
+<li>第8行(第二次判断是否进入循环)，然后还是那几个问题，你要清楚i和num的状态。刚刚已经知道了，i的值被+1了，所以就等于3了。3 &lt; 17 依然成立，所以继续进入循环。</li>
+<li>第10行(第2次进入循环)，这里最后一次强调你要清楚i和num的状态。i 等于 3，那么17 &#x2F; 3并不能整除，所以依然跳过if的大括号里面的代码。</li>
+<li>第15行，再次将i的值+1，所以就变成4了。接下来，就会一直执行循环，不断拿新的i值去除num，只要每次都不会除尽，那么循环就会继续，i不断+1，一直到i的值等于num的值为止，在这里，i最终会等于17。那么我们这时就会再回到第8行，判断是否进入循环的时候。来看看这个临界时刻。</li>
+<li>第8行(经过15次的循环之后···)，可以发现，17 &lt; 17 显然不成立了，所以这个时候，就不会再进入循环了，而是会直接跳过循环，继续执行。</li>
+<li>第18行，运行到达这里，就说明我们已经有明确的可以判断num是否为素数的条件了。那么条件是什么？我们来看看，如果一个数不是素数，那么在i 小于 num并且被除的时候就会被除尽，例如，如果我们的num是9，那么在i等于3的时候，第10行就会判断num能够被i整除，所以就会进入if语句的大括号里面，也就是第12行的<code>break;</code>语句，这条语句表示直接跳出循环，所以当i被整除的时候，就会直接跳出循环，也就会直接跳到现在这行代码。现在就简单了，如果i的值能够被整除，那么它当然就还没被加到num的时候，就已经跳出来了，所以i一定不会等于num。但是如果i一直没有被整除，那么最后必然会等于num(这也是我为什么说先不管可以除到num的一半就可以)，所以当i等于num的时候，就说明num是素数；不相等的时候，就表示num不是素数。</li>
+</ul>
+<p>这个程序，就已经分析完了。那么简单的程序啰嗦了那么多，目的是让初学者去感知写代码的时候，大脑就行是如何运作的。</p>
+<h3 id="6、总结"><a href="#6、总结" class="headerlink" title="6、总结"></a>6、总结</h3><p>在编程里面，最难的是思维的转变，很多说学不会编程的，其实是因为并没有把思维转到程序中来。初学的时候，千万不要以为抄个代码，运行成功，结果也对就万事大吉了。而是要认真看书、看文档，去搞清楚每一个概念，只有理解了概念，才是真的会编程。也不要觉得按照上面的实例分析来去跟踪思考每一步程序很麻烦，这和其他学科一样的，你一开始会觉得阻力如山，但是一旦你每一个实例都去用正确的思维方式去思考，很快就可以变成潜意识的活动了。</p>
+<p>感觉挺多人对编程的理解有障碍的。弄得我都想搞个培训了~~~哈哈哈哈！！！</p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/05/16/20240516-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/"
+                                   title="20240516 软件测试基本概念"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240516 软件测试基本概念</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/05/10/20240510-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0/"
+                                   title="20240510 内存管理的相关函数"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240510 内存管理的相关函数</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">文章总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B%E7%85%A7%E7%9D%80%E5%88%AB%E4%BA%BA%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B2%E8%BF%9B%E5%8E%BB%E6%9C%89%E6%95%88%E7%8E%87%E5%90%97%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">学习编程照着别人的代码敲进去有效率吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-%E6%8D%AE%E6%88%91%E7%9A%84%E7%BB%8F%E9%AA%8C%EF%BC%8C%E5%88%9D%E5%AD%A6%E7%BC%96%E7%A8%8B%E6%89%80%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%97%A0%E9%9D%9E%E5%B0%B1%E6%98%AF%E4%BB%A5%E4%B8%8B3%E7%A7%8D%EF%BC%9A"><span class="nav-number">2.0.1.</span> <span class="nav-text">0.据我的经验，初学编程所遇到的问题无非就是以下3种：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%8A%BD%E8%B1%A1-%E8%AE%A4%E7%9F%A5"><span class="nav-number">2.0.2.</span> <span class="nav-text">1、抽象&amp;认知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%88%86%E6%9E%90%E9%97%AE%E9%A2%98"><span class="nav-number">2.0.3.</span> <span class="nav-text">2、分析问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E7%90%86%E8%A7%A3%E6%AF%8F%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.0.4.</span> <span class="nav-text">3、理解每行代码的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E8%B7%9F%E8%B8%AA%E6%AF%8F%E8%A1%8C%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E6%97%B6%E6%89%80%E5%A4%84%E7%9A%84%E7%8A%B6%E6%80%81"><span class="nav-number">2.0.5.</span> <span class="nav-text">4、跟踪每行代码运行时所处的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.0.6.</span> <span class="nav-text">5、实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">2.0.7.</span> <span class="nav-text">6、总结</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">文章总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%BC%96%E7%A8%8B%E7%85%A7%E7%9D%80%E5%88%AB%E4%BA%BA%E7%9A%84%E4%BB%A3%E7%A0%81%E6%95%B2%E8%BF%9B%E5%8E%BB%E6%9C%89%E6%95%88%E7%8E%87%E5%90%97%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">学习编程照着别人的代码敲进去有效率吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-%E6%8D%AE%E6%88%91%E7%9A%84%E7%BB%8F%E9%AA%8C%EF%BC%8C%E5%88%9D%E5%AD%A6%E7%BC%96%E7%A8%8B%E6%89%80%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%97%A0%E9%9D%9E%E5%B0%B1%E6%98%AF%E4%BB%A5%E4%B8%8B3%E7%A7%8D%EF%BC%9A"><span class="nav-number">2.0.1.</span> <span class="nav-text">0.据我的经验，初学编程所遇到的问题无非就是以下3种：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%8A%BD%E8%B1%A1-%E8%AE%A4%E7%9F%A5"><span class="nav-number">2.0.2.</span> <span class="nav-text">1、抽象&amp;认知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%88%86%E6%9E%90%E9%97%AE%E9%A2%98"><span class="nav-number">2.0.3.</span> <span class="nav-text">2、分析问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E7%90%86%E8%A7%A3%E6%AF%8F%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.0.4.</span> <span class="nav-text">3、理解每行代码的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E8%B7%9F%E8%B8%AA%E6%AF%8F%E8%A1%8C%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E6%97%B6%E6%89%80%E5%A4%84%E7%9A%84%E7%8A%B6%E6%80%81"><span class="nav-number">2.0.5.</span> <span class="nav-text">4、跟踪每行代码运行时所处的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.0.6.</span> <span class="nav-text">5、实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">2.0.7.</span> <span class="nav-text">6、总结</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
