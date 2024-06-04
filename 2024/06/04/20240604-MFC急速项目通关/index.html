@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20240604 MFC急速项目通关 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                HOME
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >HOME</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20240604 MFC急速项目通关
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-06-04 19:36:09</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Tue Jun 04 2024 20:31:19 GMT+0800">2024-06-04 20:31:19</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h1><p>只要赶得好，天天期末考</p>
+<h1 id="MFC实现基本机制"><a href="#MFC实现基本机制" class="headerlink" title="MFC实现基本机制"></a>MFC实现基本机制</h1><p>在MFC软件开发中，界面操作或者线程之间通信都会经常用到消息，通过对消息的处理实现相应的操作。</p>
+<p>  比较典型的过程是，用户操作窗口，然后有<strong>消息产生</strong>，送给窗口的<strong>消息处理函数处理</strong>，对用户的操作做出响应。</p>
+<h2 id="一、什么是消息？"><a href="#一、什么是消息？" class="headerlink" title="一、什么是消息？"></a><strong>一、什么是消息？</strong></h2><blockquote>
+<p>消息产生<strong>，送给窗口的</strong>消息处理函数处理（<strong>想想这里得代码实现</strong>）</p>
+</blockquote>
+<p>窗口消息一般由三个部分组成：</p>
+<p>1、一个无符号整数，是消息值；</p>
+<p>2、消息附带的WPARAM类型的参数；</p>
+<p>3、消 息附带的LPARAM类型的参数。</p>
+<blockquote>
+<p>无符号证书 WPARAM LPARAM</p>
+</blockquote>
+<hr>
+<p>其实，我们一般所说的消息是侠义上的消息值，也就是一个无符号整数，经常被定义为宏。</p>
+<h2 id="二、MFC处理消息机制"><a href="#二、MFC处理消息机制" class="headerlink" title="二、MFC处理消息机制"></a><strong>二、MFC处理消息机制</strong></h2><p>MFC使用一种消息映射机制来处理消息，<br>在应用程序框架中的表现就是一个消息与消息处理函数<strong>一一对应的消息映射表</strong>，以及消息处理函数的声明和实现等代码。当窗口接收到消息时，会到消息映射表中查找该消息对应的消息处理函数，  然后由消息处理函数进行相应的处理。</p>
+<blockquote>
+<p>一个对应的消息映射表</p>
+<p>当窗口接收到消息时，会到消息映射表中查找该消息对应的消息处理函数，  然后由消息处理函数进行相应的处理。</p>
+</blockquote>
+<h2 id="与QT信号与槽的机制比较"><a href="#与QT信号与槽的机制比较" class="headerlink" title="与QT信号与槽的机制比较"></a>与QT信号与槽的机制比较</h2><h3 id="MFC消息映射机制"><a href="#MFC消息映射机制" class="headerlink" title="MFC消息映射机制"></a>MFC消息映射机制</h3><h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ol>
+<li><p><strong>直接与Windows消息系统集成</strong>：</p>
+<ul>
+<li>MFC直接处理Windows消息，这意味着开发者可以更细粒度地控制消息传递和处理。这在需要高度优化和直接与操作系统交互的应用中非常有用。</li>
+</ul>
+</li>
+<li><p><strong>简单明了的消息映射</strong>：</p>
+<ul>
+<li><p>MFC使用消息映射表（Message Map）将消息与处理函数关联起来，代码结构清晰。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cpp</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><ul>
+<li><pre><code>BEGIN_MESSAGE_MAP(CMyDialog, CDialogEx)
+    ON_WM_PAINT()
+    ON_BN_CLICKED(IDC_BUTTON1, &amp;CMyDialog::OnBnClickedButton1)
+END_MESSAGE_MAP()
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. **高性能**：</span><br><span class="line"></span><br><span class="line">   - 由于MFC的消息处理是基于Windows消息机制，通常在性能上更优，尤其是在处理大量窗口消息或需要精确控制消息传递的情况下。</span><br><span class="line"></span><br><span class="line">3. **细粒度控制**：</span><br><span class="line"></span><br><span class="line">   - MFC允许开发者直接操作窗口句柄和Windows API，这在需要进行复杂的自定义绘制和操作时非常有用。</span><br><span class="line"></span><br><span class="line">#### 缺点</span><br><span class="line"></span><br><span class="line">1. **学习曲线陡峭**：</span><br><span class="line">   - MFC的学习曲线相对陡峭，开发者需要深入理解Windows消息机制和MFC的内部工作原理。</span><br><span class="line">2. **代码冗长**：</span><br><span class="line">   - MFC代码相对冗长，消息映射表和处理函数的定义可能使代码变得复杂。</span><br><span class="line"></span><br><span class="line">### Qt信号与槽机制</span><br><span class="line"></span><br><span class="line">#### 优点</span><br><span class="line"></span><br><span class="line">1. **更高的抽象层次**：</span><br><span class="line"></span><br><span class="line">   - Qt的信号与槽机制提供了更高的抽象层次，使得对象之间的通信更加直观和灵活。例如：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+cpp
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1. - ```</span><br><span class="line">     connect(button, SIGNAL(clicked()), this, SLOT(handleButtonClick()));</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>松耦合</strong>：</p>
+<ul>
+<li>信号与槽机制实现了对象之间的松耦合，信号发出者并不需要知道槽的存在。这使得代码更易于维护和扩展。</li>
+</ul>
+</li>
+<li><p><strong>跨平台支持</strong>：</p>
+<ul>
+<li>Qt是一个跨平台框架，信号与槽机制在不同操作系统上保持一致，而MFC则是特定于Windows平台的。</li>
+</ul>
+</li>
+<li><p><strong>更简洁的代码</strong>：</p>
+<ul>
+<li>Qt的信号与槽机制可以减少代码的复杂度，使得事件处理更加简洁明了。</li>
+</ul>
+</li>
+</ol>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ol>
+<li><strong>性能开销</strong>：<ul>
+<li>信号与槽机制引入了一些额外的性能开销，尤其是在大量信号与槽连接或频繁触发信号的情况下。</li>
+</ul>
+</li>
+<li><strong>间接性</strong>：<ul>
+<li>由于信号与槽机制的高抽象层次，某些情况下可能会导致间接性过高，降低了对低级消息处理的控制。</li>
+</ul>
+</li>
+</ol>
+<h3 id="综合比较"><a href="#综合比较" class="headerlink" title="综合比较"></a>综合比较</h3><ol>
+<li><strong>控制与性能</strong>：<ul>
+<li>如果需要直接控制Windows消息，并且对性能有高要求，MFC的消息映射机制可能更适合。</li>
+</ul>
+</li>
+<li><strong>开发效率与跨平台</strong>：<ul>
+<li>如果追求开发效率和代码简洁性，特别是需要跨平台支持，Qt的信号与槽机制会更有优势。</li>
+</ul>
+</li>
+<li><strong>复杂性与维护</strong>：<ul>
+<li>MFC的代码可能更加复杂和冗长，维护难度较大。Qt通过信号与槽机制实现松耦合，使得代码维护和扩展更容易。</li>
+</ul>
+</li>
+</ol>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>MFC的消息映射机制和Qt的信号与槽机制各有优缺点。选择使用哪个机制，主要取决于具体的应用场景、开发者的需求和对特定特性的偏好。如果你开发的是Windows平台下的高性能应用程序，并且需要细粒度控制，那么MFC可能更适合。如果你需要跨平台支持，并且希望代码更简洁和易于维护，那么Qt的信号与槽机制会更好。</p>
+<h2 id="三、Windows消息分类"><a href="#三、Windows消息分类" class="headerlink" title="三、Windows消息分类"></a>三、Windows消息分类</h2><p>Windows消息分为系统消息和用户自定义消息。</p>
+<p>Windows系统消息有三种：   　　</p>
+<p>1、标准Windows消息。除WM_COMMAND以外WM_开头的消息是标准消息。</p>
+<p>例如，WM_CREATE、WM_CLOSE。  　　</p>
+<p> 2、命令消息。</p>
+<p>消息名为WM_COMMAND，消息中附带了标识符ID来区分是来自哪个菜单、工具栏按钮或加速键的消息。  　　 </p>
+<p>3、通知消息。</p>
+<p>通知消息一般由列表框等子窗口发送给父窗口，消息名称也是WM_COMMAND，其中附带了控件通知码  来区分控件。  　　</p>
+<p>CWnd的派生类都可以接收到标准Windows消息、通知消息和命令消息。命令消息还可以由文档类等接收。</p>
+<p>用户自定义消息实际上就是用户定义一个宏作为消息，此宏的值应该大于等于WM_USER，然后此宏就可以跟系统消息  一样使用，窗口类中可以定义它的处理函数。</p>
+<p><strong>四、消息映射表</strong>   　</p>
+<p>除了一些没有基类的类或CObject的直接派生类外，其他的类都可以自动生成消息映射表。</p>
+<p>下面的讲解都以CMainFrame  为例。</p>
+<p>消息映射表如下：  </p>
+<p><img   src="/../imgs/$%7Bfiilename%7D/1717502513425.png"  alt="1717502513425"></p>
+<p>在BEGIN_MESSAGE_MAG和END_MESSAGE_MAP之间的内容成为<strong>消息映射入口项。</strong></p>
+<p>消息映射除了在CMainFrame的实线文件中  添加消息映射表外，</p>
+<p>在类的定义文件MainFrame.h中还会添加一个宏调用:   　</p>
+<p>　DECLARE_MESSAGE_MAP()  一般这个宏调用写在类定义的结尾处。</p>
+<p><strong>五、添加消息处理函数</strong>   　</p>
+<blockquote>
+<p><strong>要注意MFC的定义形式</strong></p>
+</blockquote>
+<p>不管是自动添加还是手动添加都有三个步骤：   　</p>
+<blockquote>
+<p>加入　afx_msg 开头函数 afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);   </p>
+<p>添加映射入口项   ON_WM_CREATE()</p>
+<p>添加消息处理函数的函数实现</p>
+</blockquote>
+<p>1、在类定义中加入消息处理函数的函数声明，注意要以afx_msg打头。例如MainFrame.h中WM_CREATE的消息处理函数  声明:afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);   　　</p>
+<p>2、在类的消息映射表中添加该消息的消息映射入口项。例如WM_CREATE的消息映射入口项：ON_WM_CREATE()。   　　</p>
+<p>3、在类的实现中添加消息处理函数的函数实现。</p>
+<p>例如，MainFrm.cpp中WM_CREATE的消息处理函数的实现：  </p>
+<p>　　 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)   　</p>
+<p>　{  　　</p>
+<p>　　  ……   　　</p>
+<p>}   　　</p>
+<p>通过以上三个步骤以后，WM_CREATE等消息就可以在窗口类中被消息处理函数处理了。</p>
+<p><strong>六、各种Windows消息的消息处理函数</strong>   　　</p>
+<p>标准Windows消息的消息处理函数都与WM_CREATE消息类似。   　　</p>
+<p>1.命令消息的消息映射入口项形式如:</p>
+<p>ON_COMMAND(  <strong>ID_VIEW_CUSTOMIZE</strong>  , &amp;CMainFrame::OnViewCustomize)，</p>
+<p>消息为  ID_VIEW_CUSTOMIZE，消息处理函数为OnViewCustomize。   　　</p>
+<p>如果想要使用某个处理函数批量处理某些命令消息，则可以像CMainFrame消息映射表中的</p>
+<p>ON_COMMAND_RANGE(ID_VIEW_APPLOOK_WIN_2000,   ID_VIEW_APPLOOK_WINDWOS_7, &amp;CMainFrame::OnApplicationLook)</p>
+<p>一样添加消息映射入口项，</p>
+<p>这样值在ID_VIEW_APPLOOK_WIN_2000到ID_VIEW_  APPLOOK_WINDOWS_7之间的菜单项等的命令消息都由CMainFrame的OnApplicationLook函数处理。</p>
+<p>函数原型为afx_msg void OnApplicationLook  (UINT id);参数id为用户操作的菜单项等的ID。   　　</p>
+<hr>
+<p>在操作列表框等控件时往往会给父窗口发送WM_NOTIFY通知消息。</p>
+<p>WM_NOTIFY消息的wParam参数为发送通知消息的控件的ID，lParam参数指向  一个结构体，可能是NMHDR结构体，也可能是第一个元素为NMHDR结构体变量的其他结构体。</p>
+<p>NMHDR结构体的定义如下（仅作了解）:   　　</p>
+<p>Typedef struct tagNMHDR   　　{    　　　　</p>
+<p>HWND hwndFrom;    　　　　</p>
+<p>UINT idFrom;    　　　　</p>
+<p>UINT code;   　　</p>
+<p>} NMHDR;  </p>
+<p> hwndFrom为发送通知消息控件的句柄，idFrom为控件ID，code为要处理的通知消息的通知码，例如NM_CLICk。   </p>
+<p>通知消息的消息映射入口项形式如：   　　ON_NOTIFY(wNotifyCode, id, memberFxn)   wNotifyCode为要处理的消息通知码，例如：NM_CLICK。id为控件标识ID。memberFxn为此消息的处理函数。   </p>
+<p>通知消息的处理函数的原型为：   　　afx_msg void memberFxn(NMHDR * pNotifyStruct, LRESULT *result);   </p>
+<p>如果需要使用用户自定义消息，首先要定义消息宏，如:#define WM_UPDATE_WND(WM_USER+1)，</p>
+<p>再到消息映射表中添加消息映射入口项：  　　</p>
+<p>ON_MESSAGE(WM_UPDATE_WND, &amp;CMainFrame::OnUpdateWnd),然后在MainFrm,h中添加消息处理函数的函数声明：afx_msg LRESULT OnUpdateWnd(  WPARAM wParam, LPARAM lParam);最后在MainFrm.cpp中实现此函数。</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/06/04/20240604-stl%E5%A4%8D%E4%B9%A0/"
+                                   title="20240604 stl复习"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240604 stl复习</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%84%9F%E6%82%9F"><span class="nav-number">1.</span> <span class="nav-text">感悟</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MFC%E5%AE%9E%E7%8E%B0%E5%9F%BA%E6%9C%AC%E6%9C%BA%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">MFC实现基本机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E6%B6%88%E6%81%AF%EF%BC%9F"><span class="nav-number">2.1.</span> <span class="nav-text">一、什么是消息？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81MFC%E5%A4%84%E7%90%86%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">二、MFC处理消息机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8EQT%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%A7%BD%E7%9A%84%E6%9C%BA%E5%88%B6%E6%AF%94%E8%BE%83"><span class="nav-number">2.3.</span> <span class="nav-text">与QT信号与槽的机制比较</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MFC%E6%B6%88%E6%81%AF%E6%98%A0%E5%B0%84%E6%9C%BA%E5%88%B6"><span class="nav-number">2.3.1.</span> <span class="nav-text">MFC消息映射机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%BC%E5%90%88%E6%AF%94%E8%BE%83"><span class="nav-number">2.3.2.</span> <span class="nav-text">综合比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">2.3.3.</span> <span class="nav-text">结论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81Windows%E6%B6%88%E6%81%AF%E5%88%86%E7%B1%BB"><span class="nav-number">2.4.</span> <span class="nav-text">三、Windows消息分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text"></span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%84%9F%E6%82%9F"><span class="nav-number">1.</span> <span class="nav-text">感悟</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MFC%E5%AE%9E%E7%8E%B0%E5%9F%BA%E6%9C%AC%E6%9C%BA%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">MFC实现基本机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E6%B6%88%E6%81%AF%EF%BC%9F"><span class="nav-number">2.1.</span> <span class="nav-text">一、什么是消息？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81MFC%E5%A4%84%E7%90%86%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">二、MFC处理消息机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8EQT%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%A7%BD%E7%9A%84%E6%9C%BA%E5%88%B6%E6%AF%94%E8%BE%83"><span class="nav-number">2.3.</span> <span class="nav-text">与QT信号与槽的机制比较</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MFC%E6%B6%88%E6%81%AF%E6%98%A0%E5%B0%84%E6%9C%BA%E5%88%B6"><span class="nav-number">2.3.1.</span> <span class="nav-text">MFC消息映射机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%BC%E5%90%88%E6%AF%94%E8%BE%83"><span class="nav-number">2.3.2.</span> <span class="nav-text">综合比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">2.3.3.</span> <span class="nav-text">结论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81Windows%E6%B6%88%E6%81%AF%E5%88%86%E7%B1%BB"><span class="nav-number">2.4.</span> <span class="nav-text">三、Windows消息分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text"></span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
