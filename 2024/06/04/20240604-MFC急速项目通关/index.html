@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首頁
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                歸檔
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -117,14 +117,14 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首頁</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >歸檔</a>
+                    >ARCHIVES</a>
                 </li>
             
         </ul>
@@ -184,7 +184,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Jun 04 2024 23:58:59 GMT+0800">2024-06-04 23:58:59</span>
+                <span class="datetime" data-updated="Wed Jun 05 2024 13:07:27 GMT+0800">2024-06-05 13:07:27</span>
             </span>
         
 
@@ -401,10 +401,13 @@ cpp
 <p>这样值在ID_VIEW_APPLOOK_WIN_2000到ID_VIEW_  APPLOOK_WINDOWS_7之间的菜单项等的命令消息都由CMainFrame的OnApplicationLook函数处理。</p>
 <p>函数原型为afx_msg void OnApplicationLook  (UINT id);参数id为用户操作的菜单项等的ID。   　　</p>
 </blockquote>
-<p>3.　　在操作列表框等控件时往往会给父窗口发送WM_NOTIFY通知消息。WM_NOTIFY消息的wParam参数为发送通知消息的控件的ID，lParam参数指向<br>一个结构体，可能是NMHDR结构体，也可能是第一个元素为NMHDR结构体变量的其他结构体。NMHDR结构体的定义如下（仅作了解）:<br> 　　Typedef struct tagNMHDR<br> 　　{<br>    　　　　HWND hwndFrom;<br>    　　　　UINT idFrom;<br>    　　　　UINT code;<br> 　　} NMHDR;<br> hwndFrom为发送通知消息控件的句柄，idFrom为控件ID，code为要处理的通知消息的通知码，例如NM_CLICk。</p>
-<ol start="4">
-<li>通知消息的消息映射入口项形式如：<br> 　　ON_NOTIFY(wNotifyCode, id, memberFxn)<br> wNotifyCode为要处理的消息通知码，例如：NM_CLICK。id为控件标识ID。memberFxn为此消息的处理函数。<br> 通知消息的处理函数的原型为：<br> 　　afx_msg void memberFxn(NMHDR * pNotifyStruct, LRESULT *result);</li>
-<li>如果需要使用用户自定义消息，首先要定义消息宏，如:#define WM_UPDATE_WND(WM_USER+1)，再到消息映射表中添加消息映射入口项：<br> ON_MESSAGE(WM_UPDATE_WND, &amp;CMainFrame::OnUpdateWnd),然后在MainFrm,h中添加消息处理函数的函数声明：afx_msg LRESULT OnUpdateWnd(<br> WPARAM wParam, LPARAM lParam);最后在MainFrm.cpp中实现此函数。</li>
+<ol start="3">
+<li><p>在操作列表框等控件时往往会给父窗口发送WM_NOTIFY通知消息。WM_NOTIFY消息的wParam参数为发送通知消息的控件的ID，lParam参数指向<br>  一个结构体，可能是NMHDR结构体，也可能是第一个元素为NMHDR结构体变量的其他结构体。NMHDR结构体的定义如下（仅作了解）:<br>   　　Typedef struct tagNMHDR<br>   　　{<br>  　　　　HWND hwndFrom;<br>  　　　　UINT idFrom;<br>  　　　　UINT code;<br>   　　} NMHDR;<br>   hwndFrom为发送通知消息控件的句柄，idFrom为控件ID，code为要处理的通知消息的通知码，例如NM_CLICk。</p>
+</li>
+<li><p>通知消息的消息映射入口项形式如：<br>   ON_NOTIFY(wNotifyCode, id, memberFxn)<br>wNotifyCode为要处理的消息通知码，例如：NM_CLICK。id为控件标识ID。memberFxn为此消息的处理函数。<br>通知消息的处理函数的原型为：<br>　　afx_msg void memberFxn(NMHDR * pNotifyStruct, LRESULT *result);</p>
+</li>
+<li><p>如果需要使用用户自定义消息，首先要定义消息宏，如:#define WM_UPDATE_WND(WM_USER+1)，再到消息映射表中添加消息映射入口项：<br>  ON_MESSAGE(WM_UPDATE_WND, &amp;CMainFrame::OnUpdateWnd),然后在MainFrm,h中添加消息处理函数的函数声明：afx_msg LRESULT OnUpdateWnd(<br>  WPARAM wParam, LPARAM lParam);最后在MainFrm.cpp中实现此函数。</p>
+</li>
 </ol>
 
                 </div>
@@ -433,7 +436,7 @@ cpp
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240604 stl</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -450,15 +453,15 @@ cpp
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;留言
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">評論插件加載失敗</span>
-    <button class="reload keep-button">點擊重新加載</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加載評論插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -569,7 +572,7 @@ cpp
             </div>
 
             <div class="theme-info info-item default">
-                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -582,14 +585,14 @@ cpp
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">讀者</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">閱覽</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
