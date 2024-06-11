@@ -9,7 +9,7 @@
     
     <title>
         
-            20240607 C++11 C++14 |
+            20240611  深圳面试 |
         
         行者无畏
     </title>
@@ -151,7 +151,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240607 C++11 C++14
+                        20240611  深圳面试
                     </div>
                 
 
@@ -179,12 +179,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-07 14:56:57</span>
+                <span class="datetime">2024-06-11 11:05:02</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Sun Jun 09 2024 21:30:49 GMT+0800">2024-06-09 21:30:49</span>
+                <span class="datetime" data-updated="Tue Jun 11 2024 18:07:59 GMT+0800">2024-06-11 18:07:59</span>
             </span>
         
 
@@ -213,23 +213,51 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我里个去，面试推迟一个小时，我感觉得准备一下</p>
-<h1 id="C-11-和C-14"><a href="#C-11-和C-14" class="headerlink" title="C++11  和C++14"></a>C++11  和C++14</h1><p><code>auto</code> </p>
-<p>decltype</p>
-<p>shared_ptr</p>
-<p> Lambda</p>
-<p>多线程  thread</p>
-<p>mutex</p>
-<p>std::lock_guard</p>
-<p>std::unique_lock</p>
-<p>移动语义与右值引用</p>
-<blockquote>
-<p>C++11 </p>
-</blockquote>
+                    <h1 id="自我感受"><a href="#自我感受" class="headerlink" title="自我感受"></a>自我感受</h1><ul>
+<li><p>面试十二分钟非常快</p>
+</li>
+<li><p>面试官头秃，看起来很强</p>
+</li>
+<li><p>面试问的问题很经典但是我一个都答不上来</p>
+</li>
+<li><p>早上起来大脑混乱没做准备，脑子里面只有是或者不是</p>
+</li>
+</ul>
+<h1 id="malloc和new的区别"><a href="#malloc和new的区别" class="headerlink" title="malloc和new的区别"></a>malloc和new的区别</h1><h1 id="静态区和一般区的区别"><a href="#静态区和一般区的区别" class="headerlink" title="静态区和一般区的区别"></a>静态区和一般区的区别</h1><h1 id="static变量和一般变量的区别"><a href="#static变量和一般变量的区别" class="headerlink" title="static变量和一般变量的区别"></a>static变量和一般变量的区别</h1><h1 id="linux为什么要设置用户态和内核态"><a href="#linux为什么要设置用户态和内核态" class="headerlink" title="linux为什么要设置用户态和内核态"></a>linux为什么要设置用户态和内核态</h1><h1 id="linux进程之间通信有多少种方式"><a href="#linux进程之间通信有多少种方式" class="headerlink" title="linux进程之间通信有多少种方式"></a>linux进程之间通信有多少种方式</h1><h1 id="红黑树简单描述一下"><a href="#红黑树简单描述一下" class="headerlink" title="红黑树简单描述一下"></a>红黑树简单描述一下</h1><h1 id="TCP和UDP的区别"><a href="#TCP和UDP的区别" class="headerlink" title="TCP和UDP的区别"></a>TCP和UDP的区别</h1><h1 id="UDP会不会粘包？请回答原因"><a href="#UDP会不会粘包？请回答原因" class="headerlink" title="UDP会不会粘包？请回答原因"></a>UDP会不会粘包？请回答原因</h1><ul>
+<li>什么是粘包</li>
+<li>描述方面：底层是什么（TCP和UDP的传输机制是），因为这种传输机制的什么不同UDP不会粘包</li>
+</ul>
 <hr>
-<p>泛型Lambda表达式</p>
-<p>变量模板</p>
-<p>返回类型推导</p>
+<ul>
+<li><p>TCP协议面向字节流</p>
+<p>发送端可以是一K一K地发送数据</p>
+<p>而接收端的应用程序可以两K两K地提走数据，</p>
+<p>当然也有可能一次提走3K或6K数据，</p>
+<p>或者一次只提走几个字节的数据。</p>
+<blockquote>
+<p>也就是说，<strong>应用程序所看到的数据是一个整体，或说是一个流（stream）</strong>，一条消息有多少字节对应用程序是不可见的，因此<strong>TCP协议是面向流的协议，这也是容易出现粘包问题的原因</strong></p>
+<hr>
+<p>自我概括</p>
+<p>TCP是一种协议</p>
+<p>在这个协议中</p>
+<p><strong>TCP将应用层传递给它</strong>的<strong>数据视为一个连续的字节流</strong>，而不是离散的消息或数据包。</p>
+<p>这意味着，应用层的数据可以是任意大小和格式，TCP会将这些数据拆分成适合传输的片段，</p>
+<p>然后发送给接收方，并在接收方重新组装成原始的字节流。</p>
+</blockquote>
+<ul>
+<li>UDP协议面向数据报</li>
+</ul>
+<p>而UDP是面向消息的协议，每个UDP段都是一条消息，应用程序必须以消息为单位提取数据，不能一次提取任意字节的数据，这一点和TCP是很不同的。<br>怎样定义消息呢？可以认为对方一次性write&#x2F;send的数据为一个消息，需要明白的是当对方send一条信息的时候，无论底层怎样分段分片，UDP协议层会把构成整条消息的数据段排序完成后才呈现在内核缓冲区。</p>
+<p>例如基于TCP的套接字客户端往服务端上传文件，发送时文件内容是按照一段一段的字节流发送的，在接收方看了，根本不知道该文件的字节流从何处开始，在何处结束。</p>
+<p>所谓粘包问题主要还是因为接收方不知道消息之间的界限，不知道一次性提取多少字节的数据所造成的。</p>
+<p>此外，发送方引起的粘包是由TCP协议本身造成的，TCP为提高传输效率，发送方往往要收集到足够多的数据后才发送一个TCP段。若连续几次需要send的数据都很少，通常TCP会根据优化算法把这些数据合成一个TCP段后一次发送出去，这样接收方就收到了粘包数据。</p>
+<p>1、TCP（transport control protocol，传输控制协议）是面向连接的，面向流的，提供高可靠性服务。<br>收发两端（客户端和服务器端）都要有一一成对的socket，因此，发送端为了将多个发往接收端的包，更有效的发到对方，使用了优化方法（Nagle算法），将多次间隔较小且数据量小的数据，合并成一个大的数据块，然后进行封包。这样，接收端，就难于分辨出来了，必须提供科学的拆包机制。 即面向流的通信是无消息保护边界的。</p>
+<p>2、UDP（user datagram protocol，用户数据报协议）是无连接的，面向消息的，提供高效率服务。不会使用块的合并优化算法，由于UDP支持的是一对多的模式，所以接收端的skbuff(套接字缓冲区）采用了链式结构来记录每一个到达的UDP包，在每个UDP包中就有了消息头（消息来源地址，端口等信息），这样，对于接收端来说，就容易进行区分处理了。 即面向消息的通信是有消息保护边界的。</p>
+<p>3、tcp是基于数据流的，于是收发的消息不能为空，这就需要在客户端和服务端都添加空消息的处理机制，防止程序卡住，而udp是基于数据报的，即便是你输入的是空内容（直接回车），那也不是空消息，udp协议会帮你封装上消息头.</p>
+<p>udp的recvfrom是阻塞的，一个recvfrom(x)必须对唯一一个sendinto(y)，收完了x个字节的数据就算完成，若是y&gt;x数据就丢失，这意味着udp根本不会粘包，但是会丢数据，不可靠</p>
+<p>tcp的协议数据不会丢，没有收完包，下次接收，会继续上次继续接收，己端总是在收到ack时才会清除缓冲区内容。数据是可靠的，但是会粘包。</p>
+</li>
+</ul>
 
                 </div>
                 
@@ -251,14 +279,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/06/09/20240609-%E4%B8%8D%E6%9C%BD%E7%9A%84%E7%94%9F%E5%91%BD/"
-                                   title="20240609 不朽的生命"
+                                   href="/2024/06/11/20240611-%E5%8A%A0%E6%B2%B9/"
+                                   title="20240611 加油"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240609 不朽的生命</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240611 加油</span>
                                         <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
@@ -268,11 +296,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/07/20240607-%E6%97%A9%E8%B5%B7bb/"
-                                   title="20240607 早起bb"
+                                   href="/2024/06/10/20240610-%E5%A0%86/"
+                                   title="20240610 堆"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240607 早起bb</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240610 堆</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -382,7 +410,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11-%E5%92%8CC-14"><span class="nav-number">2.</span> <span class="nav-text">C++11  和C++14</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E6%88%91%E6%84%9F%E5%8F%97"><span class="nav-number">1.</span> <span class="nav-text">自我感受</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#malloc%E5%92%8Cnew%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">malloc和new的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%8C%BA%E5%92%8C%E4%B8%80%E8%88%AC%E5%8C%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">静态区和一般区的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#static%E5%8F%98%E9%87%8F%E5%92%8C%E4%B8%80%E8%88%AC%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text">static变量和一般变量的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81"><span class="nav-number">5.</span> <span class="nav-text">linux为什么要设置用户态和内核态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux%E8%BF%9B%E7%A8%8B%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%9C%89%E5%A4%9A%E5%B0%91%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">6.</span> <span class="nav-text">linux进程之间通信有多少种方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B"><span class="nav-number">7.</span> <span class="nav-text">红黑树简单描述一下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP%E5%92%8CUDP%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.</span> <span class="nav-text">TCP和UDP的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UDP%E4%BC%9A%E4%B8%8D%E4%BC%9A%E7%B2%98%E5%8C%85%EF%BC%9F%E8%AF%B7%E5%9B%9E%E7%AD%94%E5%8E%9F%E5%9B%A0"><span class="nav-number">9.</span> <span class="nav-text">UDP会不会粘包？请回答原因</span></a></li></ol>
     </div>
 </div>
 
@@ -535,7 +563,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11-%E5%92%8CC-14"><span class="nav-number">2.</span> <span class="nav-text">C++11  和C++14</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E6%88%91%E6%84%9F%E5%8F%97"><span class="nav-number">1.</span> <span class="nav-text">自我感受</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#malloc%E5%92%8Cnew%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">malloc和new的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%8C%BA%E5%92%8C%E4%B8%80%E8%88%AC%E5%8C%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">静态区和一般区的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#static%E5%8F%98%E9%87%8F%E5%92%8C%E4%B8%80%E8%88%AC%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text">static变量和一般变量的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81"><span class="nav-number">5.</span> <span class="nav-text">linux为什么要设置用户态和内核态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux%E8%BF%9B%E7%A8%8B%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%9C%89%E5%A4%9A%E5%B0%91%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">6.</span> <span class="nav-text">linux进程之间通信有多少种方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B"><span class="nav-number">7.</span> <span class="nav-text">红黑树简单描述一下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP%E5%92%8CUDP%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.</span> <span class="nav-text">TCP和UDP的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UDP%E4%BC%9A%E4%B8%8D%E4%BC%9A%E7%B2%98%E5%8C%85%EF%BC%9F%E8%AF%B7%E5%9B%9E%E7%AD%94%E5%8E%9F%E5%9B%A0"><span class="nav-number">9.</span> <span class="nav-text">UDP会不会粘包？请回答原因</span></a></li></ol>
     </div>
 </div>
 
