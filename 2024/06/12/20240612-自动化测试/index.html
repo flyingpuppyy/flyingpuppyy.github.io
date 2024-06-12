@@ -9,7 +9,7 @@
     
     <title>
         
-            20240611 浅拷贝深拷贝 |
+            20240612 自动化测试 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240611 浅拷贝深拷贝
+                        20240612 自动化测试
                     </div>
                 
 
@@ -196,24 +196,15 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-11 18:30:58</span>
+                <span class="datetime">2024-06-12 14:07:14</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Jun 11 2024 18:46:47 GMT+0800">2024-06-11 18:46:47</span>
+                <span class="datetime" data-updated="Wed Jun 12 2024 16:37:07 GMT+0800">2024-06-12 16:37:07</span>
             </span>
         
 
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/C-basic/">C++ basic</a></li>
-                        
-                    
-                </ul>
-            </span>
         
 
         
@@ -239,27 +230,91 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">X</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">int</span> *pi;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">X</span>()</span><br><span class="line">        : <span class="built_in">pi</span>(<span class="keyword">new</span> <span class="type">int</span>)</span><br><span class="line">    &#123; &#125;</span><br><span class="line">    <span class="built_in">X</span>(<span class="type">const</span> X&amp; copy)  </span><br><span class="line">        : <span class="built_in">i</span>(copy.i), <span class="built_in">pi</span>(copy.pi) <span class="comment">//仔细观察这里的指针和下面指针的区别</span></span><br><span class="line">    &#123; &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>在这里，<code>pi</code>原始<code>X</code>对象和复制对象的成员都将指向同一个<code>int</code>.</p>
-<h1 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h1><p>原始的所有成员都被克隆（如有必要，递归）。没有共享对象：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">X</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">int</span> *pi;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">X</span>()</span><br><span class="line">        : <span class="built_in">pi</span>(<span class="keyword">new</span> <span class="type">int</span>)</span><br><span class="line">    &#123; &#125;</span><br><span class="line">    <span class="built_in">X</span>(<span class="type">const</span> X&amp; copy)   </span><br><span class="line">        : <span class="built_in">i</span>(copy.i), <span class="built_in">pi</span>(<span class="keyword">new</span> <span class="built_in">int</span>(*copy.pi))  <span class="comment">// //仔细观察这里的指针和下面指针的区别</span></span><br><span class="line">    &#123; &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>在这里，<code>pi</code>原始对象和复制<code>X</code>对象的成员将指向不同的<code>int</code>对象，但它们具有相同的值。</p>
-<h1 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h1><p><img   src="/../imgs/$%7Bfiilename%7D/1680315559105.png"  alt="1680315559105"></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
-<li><p>主要就是有指针&#x2F;会被动态分配内存的地方必须要小心深拷贝和浅拷贝</p>
+                    <h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><ul>
+<li>wen端自动化</li>
+<li>接口自动化</li>
+<li>app自动化</li>
+</ul>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ul>
+<li>语言：java、python、ruby</li>
+<li>pycharm</li>
+<li>selenium</li>
+<li>浏览器</li>
+<li>浏览器驱动</li>
+</ul>
+<h1 id="相关包的检查"><a href="#相关包的检查" class="headerlink" title="相关包的检查"></a>相关包的检查</h1><ul>
+<li>selenium</li>
+</ul>
+<p>cmd输入pip show selenium</p>
+<blockquote>
+<p><img   src="/../imgs/$%7Bfiilename%7D/1718172882357.png"  alt="1718172882357"></p>
+</blockquote>
+<p>cmd输入pip install selenium</p>
+<h1 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h1><ul>
+<li><p>通过基本网页代码的id span值来进行定位</p>
 </li>
-<li><p>复制构造函数执行什么类型的复制？</p>
+<li><p>id是身份证肯定不会重复</p>
+</li>
+<li><p>name也许会重复（在单选框中）</p>
+</li>
+<li><p>name重复只找第一个</p>
+</li>
+<li><p>能用element就不要用elements</p>
+</li>
+<li><p>在console查找$（[name &#x3D; ‘wd’]）</p>
+</li>
+<li><p>class相同的比较多</p>
+</li>
+<li><p>前端中class属性中前端一次性写很多属性</p>
+<blockquote>
+<p>py中利用selenium中定位</p>
+<p>只写其中一个就行了</p>
+<p>而不是把里面的全部复制</p>
+</blockquote>
+</li>
+<li><p>如果是在控制台搜索元素的话</p>
 </li>
 </ul>
-<p>它依赖于实现。这意味着没有严格的规则，你可以像深拷贝或浅拷贝一样实现它，但据我所知，在拷贝构造函数中实现深拷贝是一种常见的做法。<strong>不过，默认复制构造函数执行浅拷贝。</strong></p>
+<blockquote>
+<p>必须得要</p>
+<p>￥（”.mnav”）</p>
+<p>类选择器</p>
+<p>三种元素中协议写一种就行</p>
+</blockquote>
 <ul>
-<li><h3 id="自定义拷贝构造函数和赋值操作符"><a href="#自定义拷贝构造函数和赋值操作符" class="headerlink" title="自定义拷贝构造函数和赋值操作符"></a>自定义拷贝构造函数和赋值操作符</h3>为了防止浅拷贝带来的问题，可以自定义拷贝构造函数和赋值操作符来实现深拷贝。</li>
+<li><strong>linktext</strong></li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义拷贝构造函数（深拷贝）</span></span><br><span class="line"><span class="built_in">Deep</span>(<span class="type">const</span> Deep&amp; other) &#123;</span><br><span class="line">    data = <span class="keyword">new</span> <span class="built_in">int</span>(*other.data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义赋值操作符（深拷贝）</span></span><br><span class="line">Deep&amp; <span class="keyword">operator</span>=(<span class="type">const</span> Deep&amp; other) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == &amp;other) &#123;</span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>; <span class="comment">// 防止自赋值</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 释放旧内存</span></span><br><span class="line">    <span class="keyword">delete</span> data;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 分配新内存并复制值</span></span><br><span class="line">    data = <span class="keyword">new</span> <span class="built_in">int</span>(*other.data);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>根据部分链接文本值来进行定位</p>
+</blockquote>
+<ul>
+<li><p>ctrl shift c</p>
+<p>在页面快捷定位的快捷键</p>
+</li>
+</ul>
+<h1 id="等待"><a href="#等待" class="headerlink" title="等待"></a>等待</h1><ul>
+<li>time.sleep()</li>
+<li>隐式等待</li>
+</ul>
+<h1 id="窗口的切换"><a href="#窗口的切换" class="headerlink" title="窗口的切换"></a>窗口的切换</h1><ul>
+<li><p>window_handles</p>
+</li>
+<li><p>handles的值可以被打印</p>
+</li>
+<li><p>switch_to.window(a[-1])</p>
+<blockquote>
+<p>先使用driver.window获取所有的窗口</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h2 id="actionchains"><a href="#actionchains" class="headerlink" title="actionchains"></a>actionchains</h2><ul>
+<li><p>实现悬停</p>
+<blockquote>
+<p>webdriver.actionchain(driver).move_to_element(ele)</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="百度-输入lol-切换窗口-点击周边商城-搜索-关闭窗口"><a href="#百度-输入lol-切换窗口-点击周边商城-搜索-关闭窗口" class="headerlink" title="百度 输入lol 切换窗口 点击周边商城 搜索 关闭窗口"></a>百度 输入lol 切换窗口 点击周边商城 搜索 关闭窗口</h1>
                 </div>
                 
 
@@ -280,14 +335,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/06/12/20240612-python-review/"
-                                   title="20240612 python review"
+                                   href="/2024/06/12/20240612-%E6%8A%BD%E8%B1%A1%E7%90%86%E8%A7%A3/"
+                                   title="20240612 抽象理解"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240612 python review</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240612 抽象理解</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -297,11 +352,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/11/20240611-%E6%AD%A6%E6%B1%89%E9%9D%A2%E8%AF%95%E2%80%9C/"
-                                   title="20240611 武汉面试"
+                                   href="/2024/06/12/20240612-python-review/"
+                                   title="20240612 python review"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240611 武汉面试</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240612 python review</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -411,7 +466,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="nav-number">1.</span> <span class="nav-text">浅拷贝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="nav-number">2.</span> <span class="nav-text">深拷贝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="nav-number">3.</span> <span class="nav-text">一个例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E8%B5%8B%E5%80%BC%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">4.0.1.</span> <span class="nav-text">自定义拷贝构造函数和赋值操作符</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%8C%85%E7%9A%84%E6%A3%80%E6%9F%A5"><span class="nav-number">3.</span> <span class="nav-text">相关包的检查</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8D"><span class="nav-number">4.</span> <span class="nav-text">定位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%BE%85"><span class="nav-number">5.</span> <span class="nav-text">等待</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E7%9A%84%E5%88%87%E6%8D%A2"><span class="nav-number">6.</span> <span class="nav-text">窗口的切换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-number">7.</span> <span class="nav-text">操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#actionchains"><span class="nav-number">7.1.</span> <span class="nav-text">actionchains</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6-%E8%BE%93%E5%85%A5lol-%E5%88%87%E6%8D%A2%E7%AA%97%E5%8F%A3-%E7%82%B9%E5%87%BB%E5%91%A8%E8%BE%B9%E5%95%86%E5%9F%8E-%E6%90%9C%E7%B4%A2-%E5%85%B3%E9%97%AD%E7%AA%97%E5%8F%A3"><span class="nav-number">8.</span> <span class="nav-text">百度 输入lol 切换窗口 点击周边商城 搜索 关闭窗口</span></a></li></ol>
     </div>
 </div>
 
@@ -564,7 +619,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="nav-number">1.</span> <span class="nav-text">浅拷贝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D"><span class="nav-number">2.</span> <span class="nav-text">深拷贝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90"><span class="nav-number">3.</span> <span class="nav-text">一个例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E8%B5%8B%E5%80%BC%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">4.0.1.</span> <span class="nav-text">自定义拷贝构造函数和赋值操作符</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%8C%85%E7%9A%84%E6%A3%80%E6%9F%A5"><span class="nav-number">3.</span> <span class="nav-text">相关包的检查</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8D"><span class="nav-number">4.</span> <span class="nav-text">定位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%BE%85"><span class="nav-number">5.</span> <span class="nav-text">等待</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E7%9A%84%E5%88%87%E6%8D%A2"><span class="nav-number">6.</span> <span class="nav-text">窗口的切换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-number">7.</span> <span class="nav-text">操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#actionchains"><span class="nav-number">7.1.</span> <span class="nav-text">actionchains</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6-%E8%BE%93%E5%85%A5lol-%E5%88%87%E6%8D%A2%E7%AA%97%E5%8F%A3-%E7%82%B9%E5%87%BB%E5%91%A8%E8%BE%B9%E5%95%86%E5%9F%8E-%E6%90%9C%E7%B4%A2-%E5%85%B3%E9%97%AD%E7%AA%97%E5%8F%A3"><span class="nav-number">8.</span> <span class="nav-text">百度 输入lol 切换窗口 点击周边商城 搜索 关闭窗口</span></a></li></ol>
     </div>
 </div>
 
