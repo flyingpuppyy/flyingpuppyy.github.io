@@ -9,7 +9,7 @@
     
     <title>
         
-            20240614 pstest |
+            20240614 hexo博客 加密实现 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240614 pstest
+                        20240614 hexo博客 加密实现
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-14 22:00:38</span>
+                <span class="datetime">2024-06-14 22:50:22</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Jun 14 2024 22:15:05 GMT+0800">2024-06-14 22:15:05</span>
+                <span class="datetime" data-updated="Sat Jun 15 2024 00:01:42 GMT+0800">2024-06-15 00:01:42</span>
             </span>
         
 
@@ -230,18 +230,34 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="812e9894c004daafab75550d147ddc7f3af7edd3196ea6200af888a6d521a212">4630436162ade97ba2718b7d0c4b3b63fe35ee40a6756d31496d9c77a5b5b7b57a4df68e402b2f88ce0a68bbf9a60a5c</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+                    <h1 id="自己复盘主要步骤"><a href="#自己复盘主要步骤" class="headerlink" title="自己复盘主要步骤"></a>自己复盘主要步骤</h1><ul>
+<li>主要原理</li>
+</ul>
+<p>1.安装Encrypt</p>
+<p>2.在md文件头写入相关字段</p>
+<blockquote>
+<p><img   src="/20240614-hexo-%E5%8A%A0%E5%AF%86%E5%AE%9E%E7%8E%B0.assets/1718379425707.png"  alt="1718379425707"></p>
+<p>在其后添加password: 123456</p>
+</blockquote>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://z.arlmy.me/posts/hexo/Hexo_BlogEncrypt/" >https://z.arlmy.me/posts/hexo/Hexo_BlogEncrypt/<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>hexo框架下安装过程</p>
+</blockquote>
+</li>
+<li><p>Keep主题关于本次加密过程的相关参考文档</p>
+</li>
+</ul>
+<h1 id="新的思考"><a href="#新的思考" class="headerlink" title="新的思考"></a>新的思考</h1><ul>
+<li><p>hexo是通过生成静态页面显示内容的，插件是用什么方式进行加密和解密的</p>
+</li>
+<li><p>hexo有没有其他的加密方案</p>
+</li>
+<li><p>什么是Obsidian</p>
+</li>
+<li></li>
+</ul>
+
                 </div>
                 
 
@@ -259,31 +275,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/06/14/20240614-hexo-%E5%8A%A0%E5%AF%86%E5%AE%9E%E7%8E%B0/"
-                                   title="20240614 hexo博客 加密实现"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240614 hexo博客 加密实现</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/13/20240613-%E6%A0%A1%E6%8B%9B%E8%AE%B2%E8%A7%A3%E5%89%8D%E7%9A%84%E8%87%AA%E6%88%91%E5%87%86%E5%A4%87/"
-                                   title="20240613 校招讲解前的自我准备"
+                                   href="/2024/06/14/20240614-pstest/"
+                                   title="20240614 pstest"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240613 校招讲解前的自我准备</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240614 pstest</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -393,7 +393,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E5%B7%B1%E5%A4%8D%E7%9B%98%E4%B8%BB%E8%A6%81%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.</span> <span class="nav-text">自己复盘主要步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">新的思考</span></a></li></ol>
     </div>
 </div>
 
@@ -546,7 +546,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E5%B7%B1%E5%A4%8D%E7%9B%98%E4%B8%BB%E8%A6%81%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.</span> <span class="nav-text">自己复盘主要步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">新的思考</span></a></li></ol>
     </div>
 </div>
 
