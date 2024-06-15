@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue May 14 2024 00:27:55 GMT+0800">2024-05-14 00:27:55</span>
+                <span class="datetime" data-updated="Sat Jun 15 2024 12:17:44 GMT+0800">2024-06-15 12:17:44</span>
             </span>
         
 
@@ -246,7 +246,7 @@
 
 <p>如果从数学的角度去分析的话，strlen(“abc”)的长度是3，strlen(“abcdef”)的长度是6，3-6的结果是-3呀，打印出来的结果就应该是&lt;。</p>
 <p>但实际上当我们去运行这个代码的时候会发现打印出来的结果为&gt;&#x3D;。</p>
-<p><img   src="/../imgs/$%7Bfiilename%7D/1715329104118.png"  alt="1715329104118"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615121737441.png"  alt="image-20240615121737441"></p>
 <p>为什么是&gt;&#x3D;呢，就是因为strlen的返回值为无符号整型size_t，而两个无符号数相减得到的还是无符号数，当-3被当作无符号数的时候得到的会是一个非常大的正数，肯定是&gt;0的，所以运行结果就为&gt;&#x3D;。 </p>
 <h2 id="模拟实现strlen"><a href="#模拟实现strlen" class="headerlink" title="模拟实现strlen"></a>模拟实现strlen</h2><p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_65931202/article/details/133608862" >https://blog.csdn.net/weixin_65931202/article/details/133608862<i class="fas fa-external-link-alt"></i></a></p>
 

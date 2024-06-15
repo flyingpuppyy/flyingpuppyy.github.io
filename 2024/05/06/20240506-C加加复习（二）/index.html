@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue May 07 2024 13:38:49 GMT+0800">2024-05-07 13:38:49</span>
+                <span class="datetime" data-updated="Sat Jun 15 2024 12:16:26 GMT+0800">2024-06-15 12:16:26</span>
             </span>
         
 
@@ -349,7 +349,7 @@
 <p>int main()<br>{<br>    father u;<br>    son k;</p>
 <pre><code>u.printNum();
 k.printNum();
-
+    
 return 0;
 </code></pre>
 <p>}</p>
@@ -383,7 +383,7 @@ return 0;
 <blockquote>
 <p>如果想要观察的话最好就是获取虚指针，观察其所指向的内容的对应索引们的位置和对应的函数代码存储的位置是否相同</p>
 </blockquote>
-<p><img   src="/imgs/$%7Bfiilename%7D/1715011326730.png"  alt="1715011326730"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615121550566.png"  alt="image-20240615121550566"></p>
 <p>三、一些遗留问题</p>
 <p>1、 构造函数是否能为虚函数？</p>
 <p>不能，</p>
@@ -496,7 +496,7 @@ return 0;
 </blockquote>
 <p>上述操作都仅仅是对编译器提出内联的建议，最终是否进行内联由编译器自己决定，大多数编译器拒绝它们认为太复杂的内联函数（例如，那些包含循环或者递归的），而且类的构造函数、析构函数和虚函数往往不是内联函数的最佳选择。</p>
 <p>有关visual studio中编译优化选择的位置如图，gcc编译见上面的例子也可以直接man gcc查看。</p>
-<p><img   src="/imgs/$%7Bfiilename%7D/1715056497761.png"  alt="1715056497761"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615121608339.png"  alt="image-20240615121608339"></p>
 <h2 id="内联函数怎么用，在哪儿用？"><a href="#内联函数怎么用，在哪儿用？" class="headerlink" title="内联函数怎么用，在哪儿用？"></a>内联函数怎么用，在哪儿用？</h2><p>基本介绍完内联的概念，接下来说说内联怎么用，在哪儿用？</p>
 <p><strong>内联函数是定义在头文件还是源文件？</strong></p>
 <p>内联展开是在编译时进行的，只有链接的时候源文件之间才有关系。</p>
