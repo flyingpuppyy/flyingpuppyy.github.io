@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20240615 C++ 第一个音视频项目尝试 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20240615 C++ 第一个音视频项目尝试
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv4</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-06-15 14:23:39</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Sun Jun 16 2024 11:29:41 GMT+0800">2024-06-16 11:29:41</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="基本学习思路"><a href="#基本学习思路" class="headerlink" title="基本学习思路"></a>基本学习思路</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>我们先假设某人在音视频方面是零基础，也没学过任何数字信号处理相关知识，数学基础基本是高中水准，但是熟悉 C&#x2F;C++ 开发，至少熟悉某一个平台下的编译调试IDE。</p>
+<p>着重研究两个开源项目 ffmpeg 和 webRTC，主要看ffmpeg的视频部分和webRTC的音频部分。</p>
+<p>首先，从视频解码入手，这个最简单，调用 ffmpeg视频解码的基本代码只有100行左右，具体可以参考 <a class="link"   target="_blank" rel="noopener" href="http://www.zhihu.com/people/65ee22f587d603505e11b90daf924a33" >@雷霄骅<i class="fas fa-external-link-alt"></i></a>  的blog，有详细示例和说明。视频解码只要搞懂h.264就好了，80%+场景都是这个编码格式了，了解基本的 H.264 的 sps pps  NAL等文件格式概念，了解YUV图像格式原理，了解YUV到RGB的转换，这样就可以做图像渲染，可以实现一个简单的视频播放器。 <strong>（第一阶段基本符合）</strong></p>
+<p>然后，学习视频编码，建议从x264入手，一个简单的调用x264的编码代码也不到100行。编码比解码复杂在于，解码是不需要配置什么参数的，而编码有大量参数需要配置，初期只要了解几个基本概念就好了，比如 帧速率, 常用流控方式  ABR CRF，GOP，I&#x2F;B&#x2F;P Frame分别是什么意思。<strong>（再次熟悉X264编码）</strong></p>
+<p>音频部分的编解码和视频差不多，初期只需要了解两种编码器EAAC+和Silk，了解 声道，采样率等概念，了解 Wave文件格式。可以做一个简单音频播放器。<strong>（做一个音频播放器）</strong></p>
+<p>音频复杂的地方不是编解码，而是音效，看下 webRTC里的 Audio Processing  module，理解以下几个概念，去噪NS，消回声AEC，静音检测VAD，自动增益控制AGC，webRTC内置的这几个算法虽然不是最好的，但是可以解决90%+的问题了，值得学习下。<strong>（学习webrtc音频处理）</strong></p>
+<p>学到了这里需要思考个问题了，自己是想走工程路线还是算法路线，如果是算法路线，那么必须要去学数学了，数字信号处理背后是大量的数学基础理论。如果是工程路线，那么要去学习跨平台开发，学习多个平台下音视频的采集，播放和处理，学习多平台下汇编语言优化。（平台相关）</p>
+<p>音视频是个水很深的领域，学一辈子都学不完，但这个领域有个好处，就是知识更新速度比较慢，学的东西不容易被淘汰，经验的积累非常重要。</p>
+<blockquote>
+<p>著作权归作者所有。<br>商业转载请联系作者获得授权，非商业转载请注明出处。<br>作者：姚冬<br>链接：<a class="link"   target="_blank" rel="noopener" href="http://www.zhihu.com/question/31156766/answer/54645514" >http://www.zhihu.com/question/31156766/answer/54645514<i class="fas fa-external-link-alt"></i></a><br>来源：知乎</p>
+</blockquote>
+<hr>
+<blockquote>
+<p> <strong>ffmpeg</strong></p>
+<p>视频解码</p>
+<p>1.调用 ffmpeg视频解码的基本代码只有100行左右，具体可以参考 <a class="link"   target="_blank" rel="noopener" href="http://www.zhihu.com/people/65ee22f587d603505e11b90daf924a33" >@雷霄骅<i class="fas fa-external-link-alt"></i></a>  的blog，有详细示例和说明</p>
+<p>2.视频解码只要搞懂h.264就好了，80%+场景都是这个编码格式了</p>
+<p>3.了解基本的 H.264 的 sps pps  NAL等文件格式概念</p>
+<p>4.了解YUV图像格式原理，了解YUV到RGB的转换，这样就可以做图像渲染，可以实现一个简单的视频播放器。 <strong>（第一阶段基本符合）</strong></p>
+<p><strong>视频编码</strong></p>
+<p>5.从x264入手，一个简单的调用x264的编码代码也不到100行。</p>
+<p>6.编码比解码复杂在于，解码是不需要配置什么参数的，</p>
+<p><strong>而编码有大量参数需要配置</strong>，</p>
+<blockquote>
+<p> 初期只要了解几个基本概念就好了，</p>
+<p>比如 帧速率, 常用流控方式  ABR CRF，GOP，I&#x2F;B&#x2F;P Frame分别是什么意思。<strong>（再次熟悉X264编码）</strong></p>
+</blockquote>
+<p>7.初期只需要了解两种编码器EAAC+和Silk</p>
+<p>8.了解 声道，采样率等概念，</p>
+<p>9.了解 Wave文件格式。可以做一个简单音频播放器。<strong>（做一个音频播放器）</strong></p>
+<p>音频复杂的地方不是编解码，而是音效，</p>
+<p>10.看下 webRTC里的 Audio Processing  module，</p>
+<blockquote>
+<p>理解以下几个概念，去噪NS，消回声AEC，静音检测VAD，自动增益控制AGC，webRTC内置的这几个算法虽然不是最好的，但是可以解决90%+的问题了，值得学习下。<strong>（学习webrtc音频处理）</strong></p>
+</blockquote>
+</blockquote>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>先看看两三个视频</p>
+<p>如果看累了自己做一下</p>
+<h1 id="ffmpeg"><a href="#ffmpeg" class="headerlink" title="ffmpeg"></a>ffmpeg</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1bT4y1w78z/?spm_id_from=333.337.search-card.all.click&vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV1bT4y1w78z/?spm_id_from=333.337.search-card.all.click&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615151623033.png"  alt="image-20240615151623033"></p>
+<blockquote>
+<p>我们搞视频必须自定义协议？</p>
+<p>有固定的格式吗？</p>
+<p>ffmpeg不具备直接使用的效果（?）</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615151947783.png" ></p>
+<blockquote>
+<p>其实就是说ffmpeg还是处理数据的！</p>
+<p>处理图像和音频数据</p>
+</blockquote>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615161327462.png"  alt="image-20240615161327462"></p>
+<blockquote>
+<p>什么鬼</p>
+<p>反正说有啥比例来着</p>
+</blockquote>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/06/15/20240615-%E8%8E%AB%E5%90%8D%E7%9A%84%E5%88%86%E7%A6%BB%E7%84%A6%E8%99%91/"
+                                   title="20240615 莫名的分离焦虑"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240615 莫名的分离焦虑</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/06/15/20240615-hexo%E5%8D%9A%E5%AE%A2-%E5%9B%BE%E5%BA%8A/"
+                                   title="20240615 hexo博客+picgo图床"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240615 hexo博客+picgo图床</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%AD%A6%E4%B9%A0%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">基本学习思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-number">1.1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-number">1.2.</span> <span class="nav-text">2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ffmpeg"><span class="nav-number">2.</span> <span class="nav-text">ffmpeg</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">基本流程</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%AD%A6%E4%B9%A0%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">基本学习思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-number">1.1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-number">1.2.</span> <span class="nav-text">2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ffmpeg"><span class="nav-number">2.</span> <span class="nav-text">ffmpeg</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">基本流程</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
