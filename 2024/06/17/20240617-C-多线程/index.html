@@ -9,7 +9,7 @@
     
     <title>
         
-            20240617 自我探索与生活的界限 |
+            20240617 C++多线程 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240617 自我探索与生活的界限
+                        20240617 C++多线程
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-17 19:03:08</span>
+                <span class="datetime">2024-06-17 19:14:51</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Mon Jun 17 2024 19:09:12 GMT+0800">2024-06-17 19:09:12</span>
+                <span class="datetime" data-updated="Mon Jun 17 2024 22:12:52 GMT+0800">2024-06-17 22:12:52</span>
             </span>
         
 
@@ -230,18 +230,89 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="d8703c1b228282f2598f51c491c070e60deaabee316efad8bd2a6cdbc31d50c1">ccc03bb707e66f6732d54c5d65637f97048ee04de0f4c322fa26abc615c98a7c676a6d2cc89b7b84a0ab5cfcd547ff9339c729e0906c2bf3d5656ca6547bf0433c10f03f7ff3280f3ea5a773048225dc2b7753dd5bb29a7603874bff1d631f19aa0a21d687604094f7268e059bd82666702d214bd5debfc0ae84ab6306e1bfc42823ce549a4bc6731184cbaffd859b2469f231ee9a3c7c684e2aff85a50a1ce5fa474ea2cecf19f8e7ee19d77cb33cd483f1ed1ddb73799f864d3735e31b42ccd00e2a49a1d31179a42dd2411f0f89b67528d2676d39cbc40a5acb7f23f074aecd6a1f2800726ef9feddc35583e2a0ba349364546572925139ad4bed1a406217d34185af4974dae0f546e13e28355fc09b480e7a01159d0ee39a49d7dc09e911472faf907011c0a5b0ebe9b332dc8c8feaa960e3e545b845bbc31df0372b60987a0c82c3fb92804c77ccb9ee3e833c9cfef2c1870e6cae3ffd95f37c5c956cd1e2a2315d97c589029ba49e32289061d8cccdff477aeeccdc8f9e459e3853062158489d340a2969c53c1baa56f79d3eee2879ec4a73cea6b290a0d6d6f655ee59e3c65f368e06c0badc7ad250e5e2a95cd4e1396c4c2bdb9ea99d55d580c369c27d44dee30dfcdaaeeb98ba0e4df6281b2c592516534c1fbf9836da0c6ba47273b48cd533d0f09959d39a0a3d9f34e03305d99c9e91e586f780ea740d6ce8decaba2928bce7803950115c19ed55b3a7b941e127efcbb8f281f2f980b6f4f73e3824e44b72b0111b1d9cc3a5cee6bbf18c0ce9e60407931ab2590271aae08f75e34c99f98f3024c0733bb46a7585b8508e9439ea4df0596bd562a4af7030afaec9f3828e89ed54aca6c835b214c83101fd72970b525ed4e654398ed207f3d09d6675283ff880e37c56a7178e81a3d3f71cad8d39fc9cd47725d0b582e881a17e77</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
+<li><p>先从最熟悉的东西开始完成自己的开始</p>
+</li>
+<li><h1 id="开始吧"><a href="#开始吧" class="headerlink" title="开始吧"></a>开始吧</h1></li>
+</ul>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>前4章，介绍了标准库提供的各种库工具，展示了使用方法。</p>
+<p>第5章，涵盖了底层内存模型和原子操作的实际情况，包括原子操作如何对执行顺序进行限制(这章标志着介绍部分的结束)。</p>
+<p>第6、7章，开始讨论高级主题，如何使用基本工具去构建复杂的数据结构——第6章是基于锁的数据结构，第7章是无锁数据结构。</p>
+<p>第8章，对设计多线程代码给了一些指导意见，覆盖了性能问题和并行算法。</p>
+<p>第9章，线程管理——线程池，工作队列和中断操作。</p>
+<p>第10章，测试和调试——Bug类型，定位Bug的技巧，以及如何进行测试等等。</p>
+<p>附录，包括新的语言特性的简要描述，主要是与多线程相关的特性，以及在第4章中提到的消息传递库的实现细节和C++11线程库的完整的参考。</p>
+<h1 id="C-11"><a href="#C-11" class="headerlink" title="C++11"></a>C++11</h1><h2 id="右值引用"><a href="#右值引用" class="headerlink" title="右值引用"></a>右值引用</h2><blockquote>
+<p>这玩意是什么来着</p>
+<p>反正是有左值和右值的区别来着</p>
+<p>左值好像是一个有实际内存的书</p>
+<p>右值是一个没有实际内存的数</p>
+<p>（我可以这样理解吗？）</p>
+<hr>
+<p>那么左值引用和右值引用的区别是什么呢？</p>
+<p>为什么C++11中需要纳入右值引用？是为了解决什么问题呢？</p>
+<p>或者是说能够实现什么优化呢？</p>
+<blockquote>
+<p>为了减小开销，实际上move函数本身不是真正意义上实现“拷贝复制”，而是由对象b接受右值对象a的所有资源（如果底层是由指针来控制的话），并且将对象a 的控制权置空</p>
+</blockquote>
+</blockquote>
+<h2 id="右值引用理解和测试"><a href="#右值引用理解和测试" class="headerlink" title="右值引用理解和测试"></a>右值引用理解和测试</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240617204552086.png"  alt="image-20240617204552086"></p>
+<blockquote>
+<p>报错原因：编码问题</p>
+</blockquote>
+<h2 id="右值机制验证"><a href="#右值机制验证" class="headerlink" title="右值机制验证"></a>右值机制验证</h2><ul>
+<li><p>预设或者问题：在转移a资源的掌控之后，a会在什么时候被调用析构函数？以及被析构之前的指针指向究竟是什么？对象们的被析构顺序是？</p>
+</li>
+<li><p>验证代码</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">MyClass</span>() : <span class="built_in">data</span>(<span class="keyword">new</span> <span class="type">int</span>[<span class="number">1000</span>]) </span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;MyClass has born!!&quot;</span> &lt;&lt; <span class="keyword">this</span>&lt;&lt;<span class="string">&quot;  &quot;</span> &lt;&lt; data &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ~<span class="built_in">MyClass</span>() </span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;MyClass is dying!!&quot;</span> &lt;&lt; <span class="keyword">this</span> &lt;&lt;<span class="string">&quot;  &quot;</span> &lt;&lt; data &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">delete</span>[] data;  <span class="comment">// 释放资源</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 拷贝构造函数</span></span><br><span class="line">    <span class="built_in">MyClass</span>(<span class="type">const</span> MyClass&amp; other)</span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;copy ing!&quot;</span> &lt;&lt; <span class="keyword">this</span> &lt;&lt; <span class="string">&quot;  &quot;</span> &lt;&lt; data &lt;&lt; std::endl;</span><br><span class="line">        data = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">1000</span>];</span><br><span class="line">       std::<span class="built_in">copy</span>(other.data, other.data + <span class="number">1000</span>, data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 移动构造函数</span></span><br><span class="line">    <span class="built_in">MyClass</span>(MyClass&amp;&amp; other) <span class="keyword">noexcept</span> : <span class="built_in">data</span>(other.data) </span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;right value to!&quot;</span> &lt;&lt; <span class="keyword">this</span> &lt;&lt;<span class="string">&quot;  &quot;</span> &lt;&lt; data &lt;&lt; std::endl;</span><br><span class="line">        other.data = <span class="literal">nullptr</span>;  <span class="comment">// 将源对象的指针设为 nullptr</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 移动赋值运算符</span></span><br><span class="line">    MyClass&amp; <span class="keyword">operator</span>=(MyClass&amp;&amp; other) <span class="keyword">noexcept</span> </span><br><span class="line">    &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;equal to ing&quot;</span> &lt;&lt; <span class="keyword">this</span> &lt;&lt; <span class="string">&quot;  &quot;</span> &lt;&lt; data &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> != &amp;other) &#123;</span><br><span class="line">            <span class="keyword">delete</span>[] data;       <span class="comment">// 释放当前对象的资源</span></span><br><span class="line">            data = other.data;   <span class="comment">// 转移资源</span></span><br><span class="line">            other.data = <span class="literal">nullptr</span>;  <span class="comment">// 将源对象的指针设为 nullptr</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span>* data;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    MyClass a;</span><br><span class="line">    <span class="function">MyClass <span class="title">b</span><span class="params">(std::move(a))</span></span>;  <span class="comment">// 移动构造函数被调用，a 的资源被转移到 b</span></span><br><span class="line"></span><br><span class="line">    <span class="function">MyClass <span class="title">c</span><span class="params">(b)</span></span>;</span><br><span class="line">    <span class="comment">// 此时 a.data 是 nullptr，不会释放任何资源</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  <span class="comment">// b 的析构函数释放资源，a 的析构函数不释放任何资源</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240617210044731.png"  alt="image-20240617210044731"></p>
+<blockquote>
+<p>不对不对</p>
+<p>我们是在验证右值</p>
+<p>那么</p>
+<p>这个已经被定义不算右值吧</p>
+<p>但是可以被肯定的一点是</p>
+<p>move（）函数本身是需要用到右值移动函数的</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MyClass d;</span><br><span class="line">MyClass a;</span><br><span class="line"><span class="function">MyClass <span class="title">b</span><span class="params">(std::move(a))</span></span>;  <span class="comment">// 移动构造函数被调用，a 的资源被转移到 b</span></span><br><span class="line"></span><br><span class="line"><span class="function">MyClass <span class="title">c</span><span class="params">(b)</span></span>;</span><br><span class="line"><span class="comment">// 此时 a.data 是 nullptr，不会释放任何资源</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  <span class="comment">// b 的析构函数释放资源，a 的析构函数不释放任何资源</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240617210804193.png"  alt="image-20240617210804193"></p>
+<blockquote>
+<p>很明显看出被析构顺序的规律：谁先被创建谁就最后被析构</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240617212226782.png"  alt="image-20240617212226782"></p>
+<blockquote>
+<p>？？这里应该是右值，为什么为什么不行</p>
+<p>这里应该是调用了移动赋值函数，怎么不行呢？</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240617212455015.png"  alt="image-20240617212455015"></p>
+<blockquote>
+<p>加了一个还是不行</p>
+<p>不知道为什么</p>
+<p>它无论是左值的调用还是右值的调用都相当奇怪</p>
+<p>是我们自己的加法有问题好吧</p>
+<p>修改成int来试一下</p>
+<blockquote>
+<p>我们要解决的问题是看清楚右值被调用的时机</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240617214849304.png"  alt="image-20240617214849304"></p>
+<blockquote>
+<p>为什么</p>
+<p>为什么</p>
+<p>MyClass c这一行右值没有被隐式调用右值引用</p>
+<p>靠靠靠靠靠靠靠靠靠</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
                 </div>
                 
 
@@ -259,31 +330,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/06/17/20240617-C-%E5%A4%9A%E7%BA%BF%E7%A8%8B/"
-                                   title="20240617 C++多线程"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240617 C++多线程</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/17/20240617-13%E5%8F%B7%E7%9A%84%E4%BA%A4%E6%B5%81%E5%92%8C%E6%84%9F%E5%8F%97/"
-                                   title="20240617 13号的交流和感受"
+                                   href="/2024/06/17/20240617-%E8%87%AA%E6%88%91%E6%8E%A2%E7%B4%A2%E4%B8%8E%E7%94%9F%E6%B4%BB%E7%9A%84%E7%95%8C%E9%99%90/"
+                                   title="20240617 自我探索与生活的界限"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240617 13号的交流和感受</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240617 自我探索与生活的界限</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -393,7 +448,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="nav-number">2.</span> <span class="nav-text">开始吧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11"><span class="nav-number">4.</span> <span class="nav-text">C++11</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8"><span class="nav-number">4.1.</span> <span class="nav-text">右值引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8%E7%90%86%E8%A7%A3%E5%92%8C%E6%B5%8B%E8%AF%95"><span class="nav-number">4.2.</span> <span class="nav-text">右值引用理解和测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%B3%E5%80%BC%E6%9C%BA%E5%88%B6%E9%AA%8C%E8%AF%81"><span class="nav-number">4.3.</span> <span class="nav-text">右值机制验证</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -546,7 +601,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="nav-number">2.</span> <span class="nav-text">开始吧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11"><span class="nav-number">4.</span> <span class="nav-text">C++11</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8"><span class="nav-number">4.1.</span> <span class="nav-text">右值引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8%E7%90%86%E8%A7%A3%E5%92%8C%E6%B5%8B%E8%AF%95"><span class="nav-number">4.2.</span> <span class="nav-text">右值引用理解和测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%B3%E5%80%BC%E6%9C%BA%E5%88%B6%E9%AA%8C%E8%AF%81"><span class="nav-number">4.3.</span> <span class="nav-text">右值机制验证</span></a></li></ol></li></ol>
     </div>
 </div>
 
