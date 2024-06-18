@@ -9,7 +9,7 @@
     
     <title>
         
-            20240615 hexo博客+picgo图床 |
+            20240618 git使用和问题 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240615 hexo博客+picgo图床
+                        20240618 git使用和问题
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-15 09:36:30</span>
+                <span class="datetime">2024-06-18 10:30:05</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Jun 18 2024 14:21:21 GMT+0800">2024-06-18 14:21:21</span>
+                <span class="datetime" data-updated="Tue Jun 18 2024 14:15:35 GMT+0800">2024-06-18 14:15:35</span>
             </span>
         
 
@@ -230,33 +230,38 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
-<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/Mancuojie/article/details/119906677" >https://blog.csdn.net/Mancuojie/article/details/119906677<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
-<li><p>github仓库token问题</p>
+                    <h1 id="基本使用命令"><a href="#基本使用命令" class="headerlink" title="基本使用命令"></a>基本使用命令</h1><p>git init</p>
+<p>git config user.name &#x2F;&#x2F;看看局部名字</p>
+<p>git config user.email&#x2F;&#x2F;同上</p>
+<p>git config –global user.name&#x2F;&#x2F;看看全局</p>
+<p>git config –global user.email</p>
+<p>ssh -T  <a class="link"   href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#x6f;&#x6d;" >&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a>&#x2F;&#x2F;粘仓库的ssh，记得自己的双配置要记得修改前缀</p>
+<p>&#x2F;&#x2F;添加远程仓库</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;主机名&gt; &lt;网址&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm &lt;主机名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>git remote -v</p>
+<p>&#x2F;&#x2F;关于提交</p>
+<p>git add .</p>
+<p>git push master origin</p>
+<p>&#x2F;&#x2F;如果有过大的文件</p>
+<p>看下面的提示</p>
+<h1 id="git-单个文件过大"><a href="#git-单个文件过大" class="headerlink" title="git 单个文件过大"></a>git 单个文件过大</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240618103020768.png"  alt="image-20240618103020768"></p>
 <blockquote>
-<p>github的token需要定时更新，比如每个月定时更新一次</p>
+<p>文件太大产生了问题</p>
+<p>我们需要通过lfs来解决</p>
+<p>git lfs install</p>
+<p>git init</p>
+<p>git lfs track “*.zip”&#x2F;&#x2F;在git add之前要记得开始跟踪大文件</p>
+<p>git add .</p>
+<p>git commit -m “Add large files”</p>
 </blockquote>
-</li>
-<li><p>图床配置问题</p>
-</li>
-<li><p>关闭picgo提示</p>
-</li>
-</ul>
+<h1 id="fatal-Not-a-git-repository-or-any-of-the-parent-directories-git的情况。"><a href="#fatal-Not-a-git-repository-or-any-of-the-parent-directories-git的情况。" class="headerlink" title="fatal: Not a git repository (or any of the parent directories): .git的情况。"></a>fatal: Not a git repository (or any of the parent directories): .git的情况。</h1><p> 其实字面意思写得挺明显的：（当前）不是一个git的目录（或任何一个父目录），</p>
+<p> 所以按照字面意思使用 git init 新建一个.git目录就能解决问题了。</p>
 <blockquote>
-<p><a class="link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/b0ab002852fe" >https://www.jianshu.com/p/b0ab002852fe<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/forforever/p/13201612.html" >https://www.cnblogs.com/forforever/p/13201612.html<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<ul>
-<li><p>当前typra版本过低没有图床上传功能的问题</p>
-<blockquote>
-<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44627608/article/details/121734682" >https://blog.csdn.net/qq_44627608/article/details/121734682<i class="fas fa-external-link-alt"></i></a></p>
-<p>最后这个哥的0407是最终的解决方案</p>
-</blockquote>
-</li>
-</ul>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615101259326.png"  alt="image-20240615101259326"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615101315525.png"  alt="image-20240615101315525"></p>
 
                 </div>
                 
@@ -278,14 +283,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/06/15/20240615-C-%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%9F%B3%E8%A7%86%E9%A2%91%E9%A1%B9%E7%9B%AE%E5%B0%9D%E8%AF%95/"
-                                   title="20240615 C++ 第一个音视频项目尝试"
+                                   href="/2024/06/18/20240618-%E5%95%8A%EF%BC%9F/"
+                                   title="20240618 啊？"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240615 C++ 第一个音视频项目尝试</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240618 啊？</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -295,11 +300,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/14/20240614-hexo-%E5%8A%A0%E5%AF%86%E5%AE%9E%E7%8E%B0/"
-                                   title="20240614 hexo博客 加密实现"
+                                   href="/2024/06/17/20240617-C++%E5%8F%B3%E5%80%BC%E6%9C%BA%E5%88%B6%E5%9B%B0%E6%83%91/"
+                                   title="20240617 C++ 右值 的验证困惑"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240614 hexo博客 加密实现</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240617 C++ 右值 的验证困惑</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -409,7 +414,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">1.</span> <span class="nav-text">参考链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.</span> <span class="nav-text">注意事项</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">基本使用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E8%BF%87%E5%A4%A7"><span class="nav-number">2.</span> <span class="nav-text">git 单个文件过大</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fatal-Not-a-git-repository-or-any-of-the-parent-directories-git%E7%9A%84%E6%83%85%E5%86%B5%E3%80%82"><span class="nav-number">3.</span> <span class="nav-text">fatal: Not a git repository (or any of the parent directories): .git的情况。</span></a></li></ol>
     </div>
 </div>
 
@@ -562,7 +567,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">1.</span> <span class="nav-text">参考链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.</span> <span class="nav-text">注意事项</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">基本使用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E8%BF%87%E5%A4%A7"><span class="nav-number">2.</span> <span class="nav-text">git 单个文件过大</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fatal-Not-a-git-repository-or-any-of-the-parent-directories-git%E7%9A%84%E6%83%85%E5%86%B5%E3%80%82"><span class="nav-number">3.</span> <span class="nav-text">fatal: Not a git repository (or any of the parent directories): .git的情况。</span></a></li></ol>
     </div>
 </div>
 
