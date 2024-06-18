@@ -9,7 +9,7 @@
     
     <title>
         
-            20240524 C++面试题 |
+            20240618 C++多线程实现 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240524 C++面试题
+                        20240618 C++多线程实现
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-05-24 10:13:44</span>
+                <span class="datetime">2024-06-18 18:38:01</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Sat Jun 15 2024 12:18:25 GMT+0800">2024-06-15 12:18:25</span>
+                <span class="datetime" data-updated="Tue Jun 18 2024 18:46:19 GMT+0800">2024-06-18 18:46:19</span>
             </span>
         
 
@@ -230,21 +230,26 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="二级指针的理解"><a href="#二级指针的理解" class="headerlink" title="二级指针的理解"></a>二级指针的理解</h1><p>int a [5] [4],  ( * p)[4]&#x3D;a;，数组a的首地址为100，* ( p+2)+3等于 （ ）</p>
-<ul>
-<li>A  116</li>
-<li>B  118</li>
-<li>C  144</li>
-<li>D  122</li>
+                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
+<li><p>先从最熟悉的东西开始完成自己的开始</p>
+</li>
+<li><h1 id="开始吧"><a href="#开始吧" class="headerlink" title="开始吧"></a>开始吧</h1></li>
 </ul>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>前4章，介绍了标准库提供的各种库工具，展示了使用方法。</p>
+<p>第5章，涵盖了底层内存模型和原子操作的实际情况，包括原子操作如何对执行顺序进行限制(这章标志着介绍部分的结束)。</p>
+<p>第6、7章，开始讨论高级主题，如何使用基本工具去构建复杂的数据结构——第6章是基于锁的数据结构，第7章是无锁数据结构。</p>
+<p>第8章，对设计多线程代码给了一些指导意见，覆盖了性能问题和并行算法。</p>
+<p>第9章，线程管理——线程池，工作队列和中断操作。</p>
+<p>第10章，测试和调试——Bug类型，定位Bug的技巧，以及如何进行测试等等。</p>
+<p>附录，包括新的语言特性的简要描述，主要是与多线程相关的特性，以及在第4章中提到的消息传递库的实现细节和C++11线程库的完整的参考。</p>
+<h1 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h1><ul>
+<li><p>什么是并发，什么场景算是并发？</p>
 <blockquote>
-<p>要做对这个题关键就是理解指针和内存</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615121758642.png"  alt="image-20240615121758642"></p>
-<hr>
-<p>一个地址+1就是一个字节</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615121817825.png"  alt="image-20240615121817825"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615121758642.png" ></p>
+<p>理解并发你才能够明白我们需要处理什么问题。</p>
+<p>计算机领域的并发指的是在单个系统里同时执行多个独立的任务，而非顺序的进行一些活动。</p>
 </blockquote>
+</li>
+</ul>
 
                 </div>
                 
@@ -263,31 +268,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/05/24/20240524-cmake/"
-                                   title="20240524 cmake"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240524 cmake</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/05/24/20240524-%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%8A%80%E6%9C%AF%E6%A0%88%E6%B1%87%E6%80%BB%E5%92%8C%E6%80%9D%E8%80%83/"
-                                   title="20240524 嵌入式技术栈汇总和思考"
+                                   href="/2024/06/18/20240618-%E5%B0%8F%E7%9B%AE%E6%A0%87%E4%B9%8BNAS/"
+                                   title="20240618 小目标之NAS"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240524 嵌入式技术栈汇总和思考</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240618 小目标之NAS</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -397,7 +386,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E7%BA%A7%E6%8C%87%E9%92%88%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">二级指针的理解</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="nav-number">2.</span> <span class="nav-text">开始吧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91"><span class="nav-number">4.</span> <span class="nav-text">并发</span></a></li></ol>
     </div>
 </div>
 
@@ -550,7 +539,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E7%BA%A7%E6%8C%87%E9%92%88%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">二级指针的理解</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="nav-number">2.</span> <span class="nav-text">开始吧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91"><span class="nav-number">4.</span> <span class="nav-text">并发</span></a></li></ol>
     </div>
 </div>
 

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20240618 小目标之NAS |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"你过于安静勇敢，我忘了你正在承受苦痛","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首頁
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                歸檔
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分類
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首頁</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >歸檔</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分類</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20240618 小目标之NAS
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv4</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-06-18 18:25:45</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Tue Jun 18 2024 18:27:20 GMT+0800">2024-06-18 18:27:20</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="NAS"><a href="#NAS" class="headerlink" title="NAS"></a>NAS</h1><p>NAS 是 “Network Attached Storage”（网络附加存储）的缩写，是一种连接到网络并提供文件存储服务的设备。NAS设备通常用于集中存储和管理数据，使得多个用户或客户端设备可以通过网络访问、共享和备份文件。以下是NAS的一些关键特性和用途：</p>
+<ol>
+<li><strong>集中存储和管理</strong>：NAS设备提供一个集中的存储位置，便于管理和访问数据，减少了数据分散存储带来的管理复杂性。</li>
+<li><strong>文件共享</strong>：多个用户可以通过网络访问NAS上的文件，支持文件共享和协作。</li>
+<li><strong>数据备份和恢复</strong>：NAS设备可以用于自动备份数据，提高数据安全性和可靠性，并在数据丢失时方便恢复。</li>
+<li><strong>媒体存储</strong>：NAS常用于存储和流媒体，如视频、音乐和照片，使用户可以通过网络设备（如智能电视、手机、平板等）访问和播放媒体内容。</li>
+<li><strong>远程访问</strong>：一些NAS设备支持远程访问功能，使用户可以通过互联网在任何地方访问存储的数据。</li>
+</ol>
+<h3 id="NAS设备的组成和功能"><a href="#NAS设备的组成和功能" class="headerlink" title="NAS设备的组成和功能"></a>NAS设备的组成和功能</h3><ol>
+<li><strong>硬件</strong>：<ul>
+<li><strong>存储驱动器</strong>：通常是多个硬盘驱动器或固态硬盘，配置为RAID（独立磁盘冗余阵列）以提高数据可靠性和性能。</li>
+<li><strong>网络接口</strong>：用于连接到网络的以太网端口，有时支持多个以太网端口以实现负载平衡和冗余。</li>
+<li><strong>处理器和内存</strong>：用于处理数据请求和运行操作系统及应用程序。</li>
+</ul>
+</li>
+<li><strong>软件</strong>：<ul>
+<li><strong>操作系统</strong>：专用的NAS操作系统，用于管理存储和网络功能，常见的NAS操作系统有Synology DSM、QNAP QTS等。</li>
+<li><strong>文件系统</strong>：支持多种文件系统，如EXT4、Btrfs、NTFS等。</li>
+<li><strong>应用程序</strong>：支持各种应用程序和服务，如FTP服务器、Web服务器、数据库服务器、媒体服务器等。</li>
+</ul>
+</li>
+</ol>
+<h3 id="常见用途"><a href="#常见用途" class="headerlink" title="常见用途"></a>常见用途</h3><ul>
+<li><strong>家庭用户</strong>：用于备份家庭照片、视频、音乐等，提供流媒体服务。</li>
+<li><strong>小型企业</strong>：用于集中存储和备份业务数据，文件共享和协作。</li>
+<li><strong>大中型企业</strong>：用于存储海量数据，支持虚拟化、数据库、文件服务器等高性能应用。</li>
+</ul>
+<p>总的来说，NAS是一个功能强大且灵活的存储解决方案，适用于不同规模的用户和各种应用场景。</p>
+<h1 id="别人的实现方案备份"><a href="#别人的实现方案备份" class="headerlink" title="别人的实现方案备份"></a>别人的实现方案备份</h1><h2 id="一种基于E3处理器平台的NAS完整方案（从电脑组装到网站部署）"><a href="#一种基于E3处理器平台的NAS完整方案（从电脑组装到网站部署）" class="headerlink" title="一种基于E3处理器平台的NAS完整方案（从电脑组装到网站部署）"></a>一种基于E3处理器平台的NAS完整方案（从电脑组装到网站部署）</h2><p>本文将简要简要介绍本人自建NAS的完整配置，截至发文此NAS已经连续良好运行一年，应当说具有良好的稳定性。</p>
+<p><em><strong>本文所述配置包含洋垃圾成分，在仿照本文搭建系统前，请确保自己已掌握相关知识和具备足够的问题解决能力</strong></em></p>
+<h2 id="0-概论"><a href="#0-概论" class="headerlink" title="0. 概论"></a>0. 概论</h2><p>本文将按照以下主题逐一介绍整个搭建方案：</p>
+<ol>
+<li>硬件选择和组装</li>
+<li>操作系统的选择</li>
+<li>网盘的挂载与管理程序</li>
+<li>将网盘服务穿透到公网</li>
+<li>其他注意事项</li>
+</ol>
+<h2 id="1-硬件选择和组装"><a href="#1-硬件选择和组装" class="headerlink" title="1. 硬件选择和组装"></a>1. 硬件选择和组装</h2><h3 id="a-CPU"><a href="#a-CPU" class="headerlink" title="a. CPU"></a>a. CPU</h3><p>基于稳定性和性价比考虑，自组NAS最好选择服务器CPU，比较合理的选择是英特尔E3平台和E5平台的服务器（洋垃圾）CPU。服务器CPU具有比普通消费级CPU更好的稳定性和设计冗余，同时支持ECC内存，保证电脑能够长时间开机运行。</p>
+<p>E3 CPU更便宜，同时兼容英特尔4代CPU的主板，但是生产时间比较早，只支持一些较早的硬件和协议。E3 CPU一般都是4核8线程，只支持ddr3内存，最高容量支持到32G，部分型号有核显（核显可以用在流媒体解码加速上），功耗在20w到85w不等。</p>
+<p>E5 CPU更新一些，核心数也有了显著提升，支持ddr4内存，但是E5开始服务器处理器彻底不兼容消费级主板，也就是说必须去寻找二手的服务器主板。这些主板通常比较贵，功耗通常上百瓦，开机时风扇直接起飞。</p>
+<p>介于NAS本身并不从事高负载工作，所以E3 CPU的性能是完全够用的，而且E3 CPU功耗足够低，不需要强力的散热。</p>
+<p>最后本人选择的CPU是E3 1265L v3，L代表低功耗CPU，这颗CPU的TDP只有45w，120块到手。</p>
+<h3 id="b-主板"><a href="#b-主板" class="headerlink" title="b. 主板"></a>b. 主板</h3><p>如果选择了E3 CPU，那么所有1150插槽的主板都可以用（包括支持4代酷睿的主板）。但是考虑到稳定性，最好还是用上服务器主板，或者工作站主板。这类主板支持ecc内存</p>
+<p>如果选择E5 CPU，那么只能去找旧服务器主板了，价位略高；还有一些华强北产的寨板（x99），不过这种板子能撑多久不好说。</p>
+<p>我最后选择的是华硕的 P9D-WS 主板，工作站主板，支持ecc内存，大概四五百块钱。这个板子有多达6个sata接口和四个pcie插槽，可以满足外接大量硬盘的需求。</p>
+<p><strong>买旧主板一定要仔细检查接口和功能，老主板经常会有各种小毛病</strong>。比如我第一次买到的主板风扇控制器是坏的，风扇一直满速运转。</p>
+<h3 id="c-内存"><a href="#c-内存" class="headerlink" title="c. 内存"></a>c. 内存</h3><p>E3 CPU只支持ddr3内存，都装服务器了，直接4根插满，内存频率能跑就行，1333M和1600M就够了。</p>
+<p>再说一遍，<strong>为了保证稳定性一定要用ecc内存（ecc，带奇偶校验的内存，可以检测内存比特错误翻转，极大提高系统的稳定性）</strong>。ecc内存价格反而比普通内存更便宜，因为普通消费级CPU是用不了的，所以有了大量存货。</p>
+<p>不过<strong>ecc内存也分成两种</strong>，一种是带缓冲的ecc内存（Buffered ecc），还有一种是不带缓冲的（也叫纯ecc）。买之前要看清主板支持哪种ecc内存。我这里的P9D-WS主板就只支持纯ecc内存而不支持buffered ecc。<strong>买错内存轻则失去ecc功能，重则无法开机</strong>。（你也不想为了一个内存干等两天吧，笑）</p>
+<p>我最后买的是三星的纯ecc内存8G * 4，一共240块。</p>
+<h3 id="d-硬盘"><a href="#d-硬盘" class="headerlink" title="d. 硬盘"></a>d. 硬盘</h3><p>硬盘没啥好说的，建议一个固态（SSD）做系统盘，剩下的就是组NAS的机械盘（HDD）了。</p>
+<p>固态买个一两百G的就够用了，一定要买大厂的。或者可以逝逝去捡服务器拆机的slc,mlc硬盘。</p>
+<p>机械盘不要买氦气盘，坏得快；不要买nas盘，智商税（点名批评西数红盘）；注意一下不要买叠瓦盘。一般来说买监控用的黑盘就行了，写数据优化，不容易坏也不是叠瓦盘。</p>
+<h3 id="e-其他"><a href="#e-其他" class="headerlink" title="e. 其他"></a>e. 其他</h3><p>用E3 1650L的话电源大于250w绝对够了；不要显卡；散热器用最基础的下吹式就够了；机箱要选多盘位的；服务器不需要显示器。</p>
+<p><strong>强烈建议再购买一个pcie&#x2F;pci转Sata的转接卡，用来接系统盘，从而实现将系统盘和数据盘隔离</strong>，pcie x1转2Sata的就行了，具体原因我会在下一章讲。</p>
+<h3 id="总合"><a href="#总合" class="headerlink" title="总合"></a>总合</h3><p>除去一堆机械硬盘一整套加起来1千2以内绝对能搞定。</p>
+<h2 id="2-操作系统的选择"><a href="#2-操作系统的选择" class="headerlink" title="2. 操作系统的选择"></a>2. 操作系统的选择</h2><h3 id="a-虚拟化：ESXI系统"><a href="#a-虚拟化：ESXI系统" class="headerlink" title="a. 虚拟化：ESXI系统"></a>a. 虚拟化：ESXI系统</h3><p>虽然最初目标只是搭建一个NAS机器，但是为了灵活性和充分利用服务器硬件资源，强烈推荐在裸机上先安装一个虚拟机系统ESXI。ESXI系统也是VMware同公司出品的，你可以把它理解为一个系统级的VMware，在上面可以运行各个虚拟机。同时，还能即时对上面的子系统进行备份和快照存档，避免手残。此外，如果一个虚拟机崩了，不会影响其他系统。</p>
+<p>关于ESXI系统的教程，请另行寻找学习资源，<strong>并特别留意虚拟网卡相关内容</strong>，这对面内容有很大关联。大部分机制和VMware类似。<strong>本章下面介绍的所有系统都是安装在ESXI上的</strong>。</p>
+<p>使用ESXI6或者ESXI7都没有问题，虽然ESXI7会提示硬件将在未来版本不受支持，but who cares。</p>
+<hr>
+<p><strong>补充一个小关键点</strong>：如果通过ESXI将Sata硬盘资源共享给TrueNas系统的话，硬盘是不会空载休眠的（也就是会一直转）。如果嫌费电或者费硬盘寿命，可以将六个Sata口<em><strong>直通</strong></em>给TrueNas系统。详情可参见：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qiaohewei/article/details/108284358" >https://blog.csdn.net/qiaohewei/article/details/108284358<i class="fas fa-external-link-alt"></i></a></p>
+<p>此外，你会发现P9D-WS主板的六个Sata口不在直通支持列表上（乐）。但是实际上是可以直通的，需要更改ESXI系统的配置，跟着 <a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/priorhong/article/details/134393270" >https://blog.csdn.net/priorhong/article/details/134393270<i class="fas fa-external-link-alt"></i></a> 做就行了</p>
+<p>但是如果把六个Sata口直通给Nas系统了，那么系统盘就不能直接接在这组Sata口上了。<strong>所以需要再买一个pcie转sata的转接卡，把系统盘接在转接卡上</strong>。</p>
+<h3 id="b-硬盘管理：TrueNas系统"><a href="#b-硬盘管理：TrueNas系统" class="headerlink" title="b. 硬盘管理：TrueNas系统"></a>b. 硬盘管理：TrueNas系统</h3><p>此系统是本方案的核心，TrueNas是一个开源的NAS系统，提供了完整的磁盘管理，RAID组建方案，并且支持将磁盘以网络存储器的形式共享给其他设备使用。</p>
+<p>关于TrueNas的安装和使用，请参考其他教程。在新建虚拟机的时候，将磁盘分配给TrueNas虚拟机，就可以利用TrueNas构建软件冗余磁盘阵列（RAID）了。关于RAID的种类，请参考其他资料。这里我选择的是用三块盘组建RAID5，使用一块盘做校验位，保证一块盘的故障冗余。当然，还是建议将磁盘<strong>直通</strong>给TrueNas，这样TrueNas可以实现更完备的硬件监控功能。</p>
+<p>TrueNas支持多种网络文件协议，包括SMB，NFS和WebDav，也就是说安装并配置好TrueNas后，已经相当于完成了内网NAS的搭建，并且可以从内网访问并使用磁盘了。</p>
+<h3 id="c-搭载其他服务：Linux-Debian系统"><a href="#c-搭载其他服务：Linux-Debian系统" class="headerlink" title="c. 搭载其他服务：Linux&#x2F;Debian系统"></a>c. 搭载其他服务：Linux&#x2F;Debian系统</h3><p>为了完成一些其他的任务，例如内网穿透或者网盘程序，我们还需要一个Linux系统来搭载这些服务。在Linux发行版中，比较稳定适合做服务器的有Debian和CentOS，但是CentOS已经不再被支持，所以这里首推Debian。什么，还有人不会用Linux，不会吧不会吧（手动滑稽）。</p>
+<h3 id="d-更好的网络管理：OpenWrt软路由系统（可选）"><a href="#d-更好的网络管理：OpenWrt软路由系统（可选）" class="headerlink" title="d. 更好的网络管理：OpenWrt软路由系统（可选）"></a>d. 更好的网络管理：OpenWrt软路由系统（可选）</h3><p>如果有更复杂的路由管理需求，可以考虑安装这个软路由系统。不过绝大部分情况ESXI系统自带的虚拟路由器和家用路由器已经足够应对了。</p>
+<h2 id="3-网盘的挂载与管理程序"><a href="#3-网盘的挂载与管理程序" class="headerlink" title="3. 网盘的挂载与管理程序"></a>3. 网盘的挂载与管理程序</h2><h3 id="a-将NAS挂载到Linux系统上"><a href="#a-将NAS挂载到Linux系统上" class="headerlink" title="a. 将NAS挂载到Linux系统上"></a>a. 将NAS挂载到Linux系统上</h3><p>为了完成这一步，需要将TrueNas中的SMB或者NFS共享打开，并且在Linux中挂载到本地文件树下。这样就可以以访问本地目录的形式访问NAS了。这一步请确认ESXI虚拟网卡的设置，最好使用桥接模式，让每个系统都分配到家中路由器的独立ip。</p>
+<p>还可以考虑使用<strong>autofs</strong>这个工具实现挂载管理，好处是在一段时间没有访问行为后，会自动断开挂载，然后在下次访问时重新挂载，可能对硬盘休眠有一定帮助。</p>
+<hr>
+<p>另：如果路由器的网口不够了，一个交换机就能够解决问题。</p>
+<h3 id="b-NAS的管理程序（网盘软件）"><a href="#b-NAS的管理程序（网盘软件）" class="headerlink" title="b. NAS的管理程序（网盘软件）"></a>b. NAS的管理程序（网盘软件）</h3><p>如果我们希望能够在浏览器上利用一个网页就能够完成文件的上传&#x2F;下载与管理，就像那些商业网盘一样，我们还需要一个网盘软件。有很多软件可供选择，这里只推荐我试过的两个：Alist和Nextcloud。这些软件都推荐安装在那个Linux上。</p>
+<p>Nextcloud是一个开源的网盘软件，基本实现了所有市面上的网盘功能，甚至做得更好。功能全面的代价就是占用的资源会大一些。不过上文的配置完全能够流畅运行Nextcloud。Alist相比则比较轻量，只实现了文件相关的功能，但是在用户分组或者访问权限方面功能没有那么全面。</p>
+<p>总体而言，如果你想用作公共网盘，需要给其他人创建账号或者有其他协作内容，我推荐使用Nextcloud。如果只是想用作私有网盘，不共享给其他陌生人使用，我推荐Alist。</p>
+<hr>
+<p>这里还有一个细节，一般的网盘，特别是涉及多用户权限的网盘，会使用自己的文件存储格式，例如打乱的存储路径，重命名而不可认的文件名等等。也就是说使用这类网盘软件之后，绕过网盘软件直接去访问磁盘，会根本看不懂也找不到对应文件。而Alist的优点就体现出来了，Alist软件中列出的文件组织和硬盘上实际的文件组织是完全相同的，也就是说，不管从网盘程序中看，还是直接到磁盘中看，文件夹层次和文件名都是完全一致的。<strong>在这么多款网盘软件中只有Alist是这样设计的</strong>。但正因为这样，Alist的用户管理就不够好了。</p>
+<h3 id="c-题外话：一定要试试docker"><a href="#c-题外话：一定要试试docker" class="headerlink" title="c. 题外话：一定要试试docker"></a>c. 题外话：一定要试试docker</h3><p>docker相当于一种程序级别的虚拟机，相当于为不同的程序提供了不同的运行环境。如果你因为配运行环境心态爆炸过，就懂得docker的好了。（比如，两个程序，一个需要某某库版本&gt;&#x3D;1.6.0，而另一个程序，需要同一个库版本&#x3D;&#x3D;1.5.0。在普通环境下，两个程序根本就同时跑不起来，而docker直接创建了两个虚拟运行环境，两个程序装在自己的环境中就能够同时运行）</p>
+<p>使用docker，很多程序被封装在镜像中，直接下载下来就能运行，实现了真正的开箱即用。此外，docker还保证了一个程序的崩溃并不会影响到其他的程序，更不会导致系统崩溃。</p>
+<h2 id="4-将网盘服务穿透到公网"><a href="#4-将网盘服务穿透到公网" class="headerlink" title="4. 将网盘服务穿透到公网"></a>4. 将网盘服务穿透到公网</h2><p><strong>如果你有公网IP，可以直接跳过这章</strong>，不过这种情况应该很少。还有网上一堆免费内网穿透的教程，一个都不要信，天下没有免费的午餐。</p>
+<h3 id="a-购买一个云服务器"><a href="#a-购买一个云服务器" class="headerlink" title="a. 购买一个云服务器"></a>a. 购买一个云服务器</h3><p>为了完成内网穿透，需要先租用一个拥有公网IP的（云）服务器（VPS）。国内有各种云，国外也有很多厂商。建议还是优先选择国外厂商。国内虽然便宜，但是买服务器还要备份，买到的服务器带宽更是小得可怜。普遍正常价位只能买到5M，10M带宽的VPS，折成字节最多也就1.2MBps，传个上G的东西要十几分钟，完全不能用。</p>
+<p>国外的可以自己去找，有每个月五美刀的服务器，带宽基本是千兆级上下等宽，每个月1个t流量，个人完全够用。当然国外服务器最重要的还是能不能直连，这个要自己想办法。</p>
+<hr>
+<p>如果云服务器的带宽足够，那么一般NAS的传输瓶颈就变成了家里宽带的上行带宽了(也就是公网上的下载带宽)。我家里的电信带宽上行最高50M，算是勉强够用了。如果上行带宽太小打电话找通信公司的人去要。</p>
+<hr>
+<p>拿到一台新的云服务器请留意一下系统防火墙的设置，一般默认是全部关闭的，开启服务的时候不要忘了把防火墙的对应端口也打开。</p>
+<h3 id="b-安装内网穿透软件：frp"><a href="#b-安装内网穿透软件：frp" class="headerlink" title="b. 安装内网穿透软件：frp"></a>b. 安装内网穿透软件：frp</h3><p>frp是一个开源的内网穿透程序，分为客户端和服务端两个程序。frp的作用是将内网中指定机器和端口的服务投射到拥有公网ip的机器上，在其他电脑上看来就像公网ip机器上在运行这个服务（也就是隧道技术）。</p>
+<p>frp服务端（也叫frps）安装在有公网IP的机器上，而frp客户端（frpc）安装在内网机器上（在我的方案中，当然也是安装在Linux上）。映射类型选择tcp类型就可以了，具体的配置方法请参照frp官方网站和其他博客。</p>
+<p>配置好以后，输入云服务器的ip和端口号，就可以访问到内网的网盘服务了。例如：<code>12.34.56.78:11451</code>（怎么确定端口号？frp里面可以自己设置）。</p>
+<hr>
+<p>frp软件是提供docker镜像的，上面的alist和nextcloud和下面的nginx也是。Why not try？</p>
+<h3 id="c-做得更好：购买域名"><a href="#c-做得更好：购买域名" class="headerlink" title="c. 做得更好：购买域名"></a>c. 做得更好：购买域名</h3><p>如果您记不住自己的服务器ip，或者觉得直接把ip分享给别人有些掉价，可以去购买一个域名，然后让域名和服务器ip相关联。这样访问网站时输入域名就等同于输入ip，例如：输入<code>domain.top:11451</code>也可以访问到网盘。具体操作请参阅其他教程。</p>
+<p><strong>域名最好也去国外网站购买</strong>，虽然国内便宜，但是要审核和报备。如果绑定的ip是国外的，大概率不过审。</p>
+<h3 id="d-给完美主义者：利用nginx实现子域名转发"><a href="#d-给完美主义者：利用nginx实现子域名转发" class="headerlink" title="d. 给完美主义者：利用nginx实现子域名转发"></a>d. 给完美主义者：利用nginx实现子域名转发</h3><p>绑定域名后，网站看起来很完美了，但是最后的那个端口号看起来仍然不舒服。这个最终问题可以使用<strong>nginx</strong>的端口转发功能实现。具体实现可以参见 <a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/u013810234/article/details/89707077" >https://blog.csdn.net/u013810234/article/details/89707077<i class="fas fa-external-link-alt"></i></a> 或者其它教程。当然，需要先熟悉nginx的使用。配置成功后，输入类似<code>nas.domain.top</code>的url就会被重定向到<code>domain.top:11451</code>上。这样，url中终于看不到数字了。当然，nginx的功能比这强大得多，可以试试再搭建一个个人主页或者个人博客，然后用不同的子域名定位到他们上面。</p>
+<hr>
+<p><em><strong>重要：如果用nginx转发网盘程序的话，上传文件时会出现上传大小超过nginx默认值的问题</strong></em>。解决方法见：<a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/hellojesson/p/13393512.html" >https://www.cnblogs.com/hellojesson/p/13393512.html<i class="fas fa-external-link-alt"></i></a> nginx默认的文件上传大小限制为1M，可以手动改成更大的数值，比如几个G。</p>
+<h2 id="5-其他事项"><a href="#5-其他事项" class="headerlink" title="5. 其他事项"></a>5. 其他事项</h2><ul>
+<li>如果家里路由器网口不够，可以买一个交换机。</li>
+<li>断电对机器极为不好，如果家里供电不稳，可以考虑配置一个ups（不间断电源）</li>
+<li>虽然TrueNas也有自己的插件库，里面也有类似nextcloud的插件，但还是建议将这些功能单独配置到隔壁Linux上。一方面这些插件不好自定义和管理，另一方面插件会降低系统的稳定性。NAS系统专注于NAS就够了。</li>
+<li>一篇文章不可能覆盖到所有内容，更何况还有很多隐藏的问题我没有遇到。请善用程序提示和搜索引擎，独立解决问题，也欢迎将问题与解决方法分享出来。</li>
+</ul>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/06/18/20240618-C-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AE%9E%E7%8E%B0/"
+                                   title="20240618 C++多线程实现"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240618 C++多线程实现</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/06/18/20240618-%E4%BA%BA%E7%B1%BB%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0/"
+                                   title="20240618 人类观察日记"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240618 人类观察日记</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;留言
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">評論插件加載失敗</span>
+    <button class="reload keep-button">點擊重新加載</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加載評論插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NAS"><span class="nav-number">1.</span> <span class="nav-text">NAS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NAS%E8%AE%BE%E5%A4%87%E7%9A%84%E7%BB%84%E6%88%90%E5%92%8C%E5%8A%9F%E8%83%BD"><span class="nav-number">1.0.1.</span> <span class="nav-text">NAS设备的组成和功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%94%A8%E9%80%94"><span class="nav-number">1.0.2.</span> <span class="nav-text">常见用途</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%AB%E4%BA%BA%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88%E5%A4%87%E4%BB%BD"><span class="nav-number">2.</span> <span class="nav-text">别人的实现方案备份</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8EE3%E5%A4%84%E7%90%86%E5%99%A8%E5%B9%B3%E5%8F%B0%E7%9A%84NAS%E5%AE%8C%E6%95%B4%E6%96%B9%E6%A1%88%EF%BC%88%E4%BB%8E%E7%94%B5%E8%84%91%E7%BB%84%E8%A3%85%E5%88%B0%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">一种基于E3处理器平台的NAS完整方案（从电脑组装到网站部署）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E6%A6%82%E8%AE%BA"><span class="nav-number">2.2.</span> <span class="nav-text">0. 概论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%A1%AC%E4%BB%B6%E9%80%89%E6%8B%A9%E5%92%8C%E7%BB%84%E8%A3%85"><span class="nav-number">2.3.</span> <span class="nav-text">1. 硬件选择和组装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-CPU"><span class="nav-number">2.3.1.</span> <span class="nav-text">a. CPU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-%E4%B8%BB%E6%9D%BF"><span class="nav-number">2.3.2.</span> <span class="nav-text">b. 主板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E5%86%85%E5%AD%98"><span class="nav-number">2.3.3.</span> <span class="nav-text">c. 内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-%E7%A1%AC%E7%9B%98"><span class="nav-number">2.3.4.</span> <span class="nav-text">d. 硬盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-%E5%85%B6%E4%BB%96"><span class="nav-number">2.3.5.</span> <span class="nav-text">e. 其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E5%90%88"><span class="nav-number">2.3.6.</span> <span class="nav-text">总合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">2.4.</span> <span class="nav-text">2. 操作系统的选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-%E8%99%9A%E6%8B%9F%E5%8C%96%EF%BC%9AESXI%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.4.1.</span> <span class="nav-text">a. 虚拟化：ESXI系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-%E7%A1%AC%E7%9B%98%E7%AE%A1%E7%90%86%EF%BC%9ATrueNas%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.4.2.</span> <span class="nav-text">b. 硬盘管理：TrueNas系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E6%90%AD%E8%BD%BD%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1%EF%BC%9ALinux-Debian%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.4.3.</span> <span class="nav-text">c. 搭载其他服务：Linux&#x2F;Debian系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%EF%BC%9AOpenWrt%E8%BD%AF%E8%B7%AF%E7%94%B1%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">2.4.4.</span> <span class="nav-text">d. 更好的网络管理：OpenWrt软路由系统（可选）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%BD%91%E7%9B%98%E7%9A%84%E6%8C%82%E8%BD%BD%E4%B8%8E%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F"><span class="nav-number">2.5.</span> <span class="nav-text">3. 网盘的挂载与管理程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-%E5%B0%86NAS%E6%8C%82%E8%BD%BD%E5%88%B0Linux%E7%B3%BB%E7%BB%9F%E4%B8%8A"><span class="nav-number">2.5.1.</span> <span class="nav-text">a. 将NAS挂载到Linux系统上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-NAS%E7%9A%84%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F%EF%BC%88%E7%BD%91%E7%9B%98%E8%BD%AF%E4%BB%B6%EF%BC%89"><span class="nav-number">2.5.2.</span> <span class="nav-text">b. NAS的管理程序（网盘软件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E9%A2%98%E5%A4%96%E8%AF%9D%EF%BC%9A%E4%B8%80%E5%AE%9A%E8%A6%81%E8%AF%95%E8%AF%95docker"><span class="nav-number">2.5.3.</span> <span class="nav-text">c. 题外话：一定要试试docker</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%B0%86%E7%BD%91%E7%9B%98%E6%9C%8D%E5%8A%A1%E7%A9%BF%E9%80%8F%E5%88%B0%E5%85%AC%E7%BD%91"><span class="nav-number">2.6.</span> <span class="nav-text">4. 将网盘服务穿透到公网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-%E8%B4%AD%E4%B9%B0%E4%B8%80%E4%B8%AA%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.6.1.</span> <span class="nav-text">a. 购买一个云服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-%E5%AE%89%E8%A3%85%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BD%AF%E4%BB%B6%EF%BC%9Afrp"><span class="nav-number">2.6.2.</span> <span class="nav-text">b. 安装内网穿透软件：frp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E5%81%9A%E5%BE%97%E6%9B%B4%E5%A5%BD%EF%BC%9A%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D"><span class="nav-number">2.6.3.</span> <span class="nav-text">c. 做得更好：购买域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-%E7%BB%99%E5%AE%8C%E7%BE%8E%E4%B8%BB%E4%B9%89%E8%80%85%EF%BC%9A%E5%88%A9%E7%94%A8nginx%E5%AE%9E%E7%8E%B0%E5%AD%90%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%8F%91"><span class="nav-number">2.6.4.</span> <span class="nav-text">d. 给完美主义者：利用nginx实现子域名转发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%85%B6%E4%BB%96%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.7.</span> <span class="nav-text">5. 其他事项</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">讀者</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">閱覽</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NAS"><span class="nav-number">1.</span> <span class="nav-text">NAS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NAS%E8%AE%BE%E5%A4%87%E7%9A%84%E7%BB%84%E6%88%90%E5%92%8C%E5%8A%9F%E8%83%BD"><span class="nav-number">1.0.1.</span> <span class="nav-text">NAS设备的组成和功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%94%A8%E9%80%94"><span class="nav-number">1.0.2.</span> <span class="nav-text">常见用途</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%AB%E4%BA%BA%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88%E5%A4%87%E4%BB%BD"><span class="nav-number">2.</span> <span class="nav-text">别人的实现方案备份</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8EE3%E5%A4%84%E7%90%86%E5%99%A8%E5%B9%B3%E5%8F%B0%E7%9A%84NAS%E5%AE%8C%E6%95%B4%E6%96%B9%E6%A1%88%EF%BC%88%E4%BB%8E%E7%94%B5%E8%84%91%E7%BB%84%E8%A3%85%E5%88%B0%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">一种基于E3处理器平台的NAS完整方案（从电脑组装到网站部署）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E6%A6%82%E8%AE%BA"><span class="nav-number">2.2.</span> <span class="nav-text">0. 概论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%A1%AC%E4%BB%B6%E9%80%89%E6%8B%A9%E5%92%8C%E7%BB%84%E8%A3%85"><span class="nav-number">2.3.</span> <span class="nav-text">1. 硬件选择和组装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-CPU"><span class="nav-number">2.3.1.</span> <span class="nav-text">a. CPU</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-%E4%B8%BB%E6%9D%BF"><span class="nav-number">2.3.2.</span> <span class="nav-text">b. 主板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E5%86%85%E5%AD%98"><span class="nav-number">2.3.3.</span> <span class="nav-text">c. 内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-%E7%A1%AC%E7%9B%98"><span class="nav-number">2.3.4.</span> <span class="nav-text">d. 硬盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-%E5%85%B6%E4%BB%96"><span class="nav-number">2.3.5.</span> <span class="nav-text">e. 其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E5%90%88"><span class="nav-number">2.3.6.</span> <span class="nav-text">总合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">2.4.</span> <span class="nav-text">2. 操作系统的选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-%E8%99%9A%E6%8B%9F%E5%8C%96%EF%BC%9AESXI%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.4.1.</span> <span class="nav-text">a. 虚拟化：ESXI系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-%E7%A1%AC%E7%9B%98%E7%AE%A1%E7%90%86%EF%BC%9ATrueNas%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.4.2.</span> <span class="nav-text">b. 硬盘管理：TrueNas系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E6%90%AD%E8%BD%BD%E5%85%B6%E4%BB%96%E6%9C%8D%E5%8A%A1%EF%BC%9ALinux-Debian%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.4.3.</span> <span class="nav-text">c. 搭载其他服务：Linux&#x2F;Debian系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%EF%BC%9AOpenWrt%E8%BD%AF%E8%B7%AF%E7%94%B1%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">2.4.4.</span> <span class="nav-text">d. 更好的网络管理：OpenWrt软路由系统（可选）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%BD%91%E7%9B%98%E7%9A%84%E6%8C%82%E8%BD%BD%E4%B8%8E%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F"><span class="nav-number">2.5.</span> <span class="nav-text">3. 网盘的挂载与管理程序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-%E5%B0%86NAS%E6%8C%82%E8%BD%BD%E5%88%B0Linux%E7%B3%BB%E7%BB%9F%E4%B8%8A"><span class="nav-number">2.5.1.</span> <span class="nav-text">a. 将NAS挂载到Linux系统上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-NAS%E7%9A%84%E7%AE%A1%E7%90%86%E7%A8%8B%E5%BA%8F%EF%BC%88%E7%BD%91%E7%9B%98%E8%BD%AF%E4%BB%B6%EF%BC%89"><span class="nav-number">2.5.2.</span> <span class="nav-text">b. NAS的管理程序（网盘软件）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E9%A2%98%E5%A4%96%E8%AF%9D%EF%BC%9A%E4%B8%80%E5%AE%9A%E8%A6%81%E8%AF%95%E8%AF%95docker"><span class="nav-number">2.5.3.</span> <span class="nav-text">c. 题外话：一定要试试docker</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%B0%86%E7%BD%91%E7%9B%98%E6%9C%8D%E5%8A%A1%E7%A9%BF%E9%80%8F%E5%88%B0%E5%85%AC%E7%BD%91"><span class="nav-number">2.6.</span> <span class="nav-text">4. 将网盘服务穿透到公网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-%E8%B4%AD%E4%B9%B0%E4%B8%80%E4%B8%AA%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.6.1.</span> <span class="nav-text">a. 购买一个云服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-%E5%AE%89%E8%A3%85%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BD%AF%E4%BB%B6%EF%BC%9Afrp"><span class="nav-number">2.6.2.</span> <span class="nav-text">b. 安装内网穿透软件：frp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-%E5%81%9A%E5%BE%97%E6%9B%B4%E5%A5%BD%EF%BC%9A%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D"><span class="nav-number">2.6.3.</span> <span class="nav-text">c. 做得更好：购买域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-%E7%BB%99%E5%AE%8C%E7%BE%8E%E4%B8%BB%E4%B9%89%E8%80%85%EF%BC%9A%E5%88%A9%E7%94%A8nginx%E5%AE%9E%E7%8E%B0%E5%AD%90%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%8F%91"><span class="nav-number">2.6.4.</span> <span class="nav-text">d. 给完美主义者：利用nginx实现子域名转发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%85%B6%E4%BB%96%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.7.</span> <span class="nav-text">5. 其他事项</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
