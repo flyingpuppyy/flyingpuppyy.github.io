@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20230222 电子沙漏 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"你过于安静勇敢，我忘了你正在承受苦痛","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                HOME
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >HOME</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >CATEGORIES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20230222 电子沙漏
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv5</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2023-02-22 14:09:14</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Jun 19 2024 14:18:59 GMT+0800">2024-06-19 14:18:59</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="20221223-20230222-电子沙漏"><a href="#20221223-20230222-电子沙漏" class="headerlink" title="20221223-20230222 电子沙漏"></a>20221223-20230222 电子沙漏</h1><h1 id="基本开发思路"><a href="#基本开发思路" class="headerlink" title="基本开发思路"></a>基本开发思路</h1><p>调试获取ADXL345数据</p>
+<p>根据g值来设计沙漏的显示代码</p>
+<p>测试沙漏显示代码</p>
+<p>设计3D打印体</p>
+<p>粘贴固定ADXL345芯片并且进行校正</p>
+<h1 id="开发记录"><a href="#开发记录" class="headerlink" title="开发记录"></a>开发记录</h1><p>20221228 今天购买第一批材料</p>
+<p>20221229 </p>
+<blockquote>
+<p>计划寻找XYZ相关直接调用的代码 </p>
+<p>点阵相关生成软件</p>
+<p>电路连接模拟软件</p>
+<p>点阵的全阳和全阴的判断方法</p>
+<p>在卖家那里获得相关模块的接口和电压</p>
+<p>计算所需电池&#x2F;充电电压</p>
+<p>如何焊接驱动板和LED模块</p>
+<p>焊接材料须知（锡条 电焊笔 热风机 海绵 焊台）</p>
+</blockquote>
+<h1 id="开发成本计算"><a href="#开发成本计算" class="headerlink" title="开发成本计算"></a>开发成本计算</h1><blockquote>
+<p>第一批材料</p>
+<p>杜康线*n  9.9</p>
+<p>开发板*1  23.8</p>
+<p>重力模块（带焊针*1）12</p>
+<p>矩阵模块（带焊针*3）31.5</p>
+<p>万用表 *1 17.8</p>
+<p>面包板* 1 6</p>
+<p><del>电阻 * n</del></p>
+<p>跳线*n       6.8</p>
+<p>垫板*1 10.5</p>
+<p>总计：118.3</p>
+</blockquote>
+<p><strong>总结：差不多两百了靠北，啊啊啊啊啊啊啊啊啊啊啊</strong></p>
+<p>开关模块 </p>
+<p>杜康线  all 10*3</p>
+<p>重力模块 10*3</p>
+<p>开发板 25*3</p>
+<p>8 * 8矩阵  7*6</p>
+<p>30+30+75+42&#x3D;102+75&#x3D;177</p>
+<p>充电模块</p>
+<p>面包板 </p>
+<p>电烙铁</p>
+<p>无铅含松香焊条</p>
+<p>USB线 </p>
+<p>万用表</p>
+<p>垫板</p>
+<p>钳子</p>
+<h1 id="制作步骤"><a href="#制作步骤" class="headerlink" title="制作步骤"></a>制作步骤</h1><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>1.尝试从重力传感器中获取需要的X Y Z数据</p>
+<p>2.按照下面连接图连接后，将代码放到开发板里面进行测试</p>
+<blockquote>
+<p> <img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1672150187255.png"  alt="1672150187255"></p>
+<p> 这里很好说了我的矩阵将怎样利用这些数据</p>
+</blockquote>
+<p>3设计3D打印图纸</p>
+<p>4.将所有开发板+重力模块+矩阵模块一起封装进去，需要焊接和充电模块&#x2F;电源模块</p>
+<p>（能不能找一个便宜一点的开发板啊）</p>
+<blockquote>
+<p>这里的问题是我应该如何封装我的东西，我难道是得把开发板一起封装进去吗，开发板很便宜吗尼玛？</p>
+</blockquote>
+<h2 id="教程一"><a href="#教程一" class="headerlink" title="教程一"></a>教程一</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15Y4y1x7dY/?from=search&seid=15476780042123065693&spm_id_from=333.337.0.0&vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV15Y4y1x7dY/?from=search&amp;seid=15476780042123065693&amp;spm_id_from=333.337.0.0&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>接线</p>
+<p>驱动</p>
+<p>相关代码编译放入</p>
+</blockquote>
+<h1 id=""><a href="#" class="headerlink" title="***********"></a>***********</h1><h1 id="这里是材料区"><a href="#这里是材料区" class="headerlink" title="&#x3D;&#x3D;这里是材料区&#x3D;&#x3D;"></a>&#x3D;&#x3D;这里是材料区&#x3D;&#x3D;</h1><h1 id="8-8LED点阵"><a href="#8-8LED点阵" class="headerlink" title="8*8LED点阵"></a>8*8LED点阵</h1><p>MAX7219</p>
+<h1 id="ADXL345加速度传感器模块"><a href="#ADXL345加速度传感器模块" class="headerlink" title="ADXL345加速度传感器模块"></a>ADXL345加速度传感器模块</h1><h2 id="教程一-1"><a href="#教程一-1" class="headerlink" title="教程一"></a>教程一</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wi4y147t9/?from=search&seid=14456763076679052414&spm_id_from=333.337.0.0&vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV1Wi4y147t9/?from=search&amp;seid=14456763076679052414&amp;spm_id_from=333.337.0.0&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>参考网站</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://howtomechatronics.com/tutorials/arduino/how-to-track-orientation-with-arduino-and-adxl345-accelerometer/" >https://howtomechatronics.com/tutorials/arduino/how-to-track-orientation-with-arduino-and-adxl345-accelerometer/<i class="fas fa-external-link-alt"></i></a></p>
+<p>我感觉就是在那个英文视频里面的相关内容</p>
+<p>网站里面有相关调用和读取XYZ的代码</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1672142803183.png"  alt="1672142803183"></p>
+<blockquote>
+<p>连线图</p>
+<p>ADXL345模块已经焊接好针</p>
+<p>里面这个arduino开发板好像是nano的</p>
+</blockquote>
+<h2 id="第一家"><a href="#第一家" class="headerlink" title="第一家"></a>第一家</h2><p><a class="link"   target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?ali_refid=a3_430582_1006:1109983619:N:urOf1HF32NNhy0CL/5xHV9laW7nnE8LJ:ce1308993710a75c659fbea2d0cdad2e&ali_trackid=1_ce1308993710a75c659fbea2d0cdad2e&id=41254989230&skuId=4144188152451&spm=a230r.1.14.1" >https://detail.tmall.com/item.htm?ali_refid=a3_430582_1006:1109983619:N:urOf1HF32NNhy0CL/5xHV9laW7nnE8LJ:ce1308993710a75c659fbea2d0cdad2e&amp;ali_trackid=1_ce1308993710a75c659fbea2d0cdad2e&amp;id=41254989230&amp;skuId=4144188152451&amp;spm=a230r.1.14.1<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1672127463999.png"  alt="1672127463999"></p>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1672127519538.png"  alt="1672127519538"></p>
+<blockquote>
+<p>这个和这个视频里面的是一模一样的</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1672127542309.png"  alt="1672127542309"></p>
+<blockquote>
+<p>这个和上面那个的区别是什么</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1672127580407.png"  alt="1672127580407"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1672127591650.png"  alt="1672127591650"></p>
+</blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://detail.tmall.com/item.htm?ali_refid=a3_430582_1006:1109983619:N:urOf1HF32NNhy0CL/5xHV9laW7nnE8LJ:ce1308993710a75c659fbea2d0cdad2e&ali_trackid=1_ce1308993710a75c659fbea2d0cdad2e&id=41254989230&skuId=4144188152451&spm=a230r.1.14.1" >https://detail.tmall.com/item.htm?ali_refid=a3_430582_1006:1109983619:N:urOf1HF32NNhy0CL/5xHV9laW7nnE8LJ:ce1308993710a75c659fbea2d0cdad2e&amp;ali_trackid=1_ce1308993710a75c659fbea2d0cdad2e&amp;id=41254989230&amp;skuId=4144188152451&amp;spm=a230r.1.14.1<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="20230221-ADXL345加速度"><a href="#20230221-ADXL345加速度" class="headerlink" title="20230221 ADXL345加速度"></a>20230221 ADXL345加速度</h1><h1 id="三坐标"><a href="#三坐标" class="headerlink" title="三坐标"></a>三坐标</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240619141438483.png"  alt="image-20240619141438483"></p>
+<h1 id="相关协议"><a href="#相关协议" class="headerlink" title="相关协议"></a>相关协议</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1676965779005.png"  alt="1676965779005"></p>
+<h1 id="连接方式"><a href="#连接方式" class="headerlink" title="连接方式"></a>连接方式</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1676965815289.png"  alt="1676965815289"></p>
+<h1 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1676966656763.png"  alt="1676966656763"></p>
+<h1 id="Arduino开发板"><a href="#Arduino开发板" class="headerlink" title="Arduino开发板"></a>Arduino开发板</h1><p>做这个项目最基础的开发板足够了吗？</p>
+<h1 id="面包板"><a href="#面包板" class="headerlink" title="面包板"></a>面包板</h1><h1 id="杜邦线"><a href="#杜邦线" class="headerlink" title="杜邦线"></a>杜邦线</h1><h1 id="3D打印外壳"><a href="#3D打印外壳" class="headerlink" title="3D打印外壳"></a>3D打印外壳</h1><h1 id="焊条"><a href="#焊条" class="headerlink" title="焊条"></a>焊条</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?type=content&q=%E9%94%A1%E7%84%8A%E5%90%AB%E9%93%85" >https://www.zhihu.com/search?type=content&amp;q=%E9%94%A1%E7%84%8A%E5%90%AB%E9%93%85<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>没错，有毒！</p>
+<p>但是你闻到的<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E6%9D%BE%E9%A6%99%E5%91%B3&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:%2226034617%22%7D" >松香味<i class="fas fa-external-link-alt"></i></a></p>
+<p>无毒，主要是在你手上沾的焊锡的铅和你吸入的<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E9%93%85%E8%92%B8%E6%B1%BD&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:%2226034617%22%7D" >铅蒸汽<i class="fas fa-external-link-alt"></i></a></p>
+<p>。</p>
+<p>用完焊锡必须洗手，过程中注意通风，减少焊锡蒸汽的吸入。</p>
+<p>我们老师说现在的焊锡无毒，你妹啊，老子的焊锡卷上明明标注着pb37%，您用过焊锡没啊。</p>
+<p>目前主流的焊丝为Pb、<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=Sn%E5%B7%A5%E8%89%BA&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:%2226034617%22%7D" >Sn工艺<i class="fas fa-external-link-alt"></i></a></p>
+<p>。也就是说，没有标注ROHS的<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E7%84%8A%E9%94%A1%E4%B8%9D&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:%2226034617%22%7D" >焊锡丝<i class="fas fa-external-link-alt"></i></a></p>
+<p>都是<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E9%94%A1%E9%93%85%E5%90%88%E9%87%91&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:%2226034617%22%7D" >锡铅合金<i class="fas fa-external-link-alt"></i></a></p>
+<p>的，这种含37%的铅。</p>
+<p>你可以选择购买符合ROHS标准的焊锡，这样是无铅的，但是熔点高，不容易使用。</p>
+<p>简单判断方法：用焊锡和手摩擦，留下黑色痕迹的是有铅的，留下黄色痕迹的是无铅的。实在不放心的买<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E7%BA%AF%E9%94%A1&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:%2226034617%22%7D" >纯锡<i class="fas fa-external-link-alt"></i></a></p>
+<p>，一小坨花了我10块钱啊，不够我焊两次的。</p>
+</blockquote>
+<h1 id="取模代码"><a href="#取模代码" class="headerlink" title="取模代码"></a>取模代码</h1><p>0x38,0x44,0x82,0x82,0x82,0x42,0x3E,0x01</p>
+<p>球头</p>
+<p>0x80,0x40,0x20,0x10,0x08,0x04,0x02,0x00</p>
+<p>手柄</p>
+<hr>
+<p>0x00,0x66,0x99,0x49,0x29,0x99,0x66,0x00</p>
+<p>SO</p>
+<p>0x00,0x96,0xD9,0xD8,0xBB,0xB9,0x96,0x00</p>
+<p>NG</p>
+<hr>
+<p>0x00,0x6A,0x8A,0x8E,0x8A,0x8A,0x6A,0x00,</p>
+<p>CH</p>
+<p>0x00,0xEA,0xAA,0xEE,0x8A,0xAA,0xEA,0x00</p>
+<p>EH</p>
+<hr>
+<p>0x00,0x8A,0x55,0x27,0x25,0x25,0x25,0x00</p>
+<p>YA</p>
+<p>0x00,0x96,0xD9,0xD8,0xBB,0xB9,0x96,0x00</p>
+<p>NG</p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/05/01/hello-world/"
+                                   title="Hello World"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Hello World</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2022/12/23/20240619-arduino/"
+                                   title="20221223 arduino"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20221223 arduino</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20221223-20230222-%E7%94%B5%E5%AD%90%E6%B2%99%E6%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">20221223-20230222 电子沙漏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">基本开发思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">开发记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%88%90%E6%9C%AC%E8%AE%A1%E7%AE%97"><span class="nav-number">4.</span> <span class="nav-text">开发成本计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">5.</span> <span class="nav-text">制作步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.1.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E7%A8%8B%E4%B8%80"><span class="nav-number">5.2.</span> <span class="nav-text">教程一</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">***********</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%99%E9%87%8C%E6%98%AF%E6%9D%90%E6%96%99%E5%8C%BA"><span class="nav-number">7.</span> <span class="nav-text">&#x3D;&#x3D;这里是材料区&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-8LED%E7%82%B9%E9%98%B5"><span class="nav-number">8.</span> <span class="nav-text">8*8LED点阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ADXL345%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97"><span class="nav-number">9.</span> <span class="nav-text">ADXL345加速度传感器模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E7%A8%8B%E4%B8%80-1"><span class="nav-number">9.1.</span> <span class="nav-text">教程一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%AE%B6"><span class="nav-number">9.2.</span> <span class="nav-text">第一家</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20230221-ADXL345%E5%8A%A0%E9%80%9F%E5%BA%A6"><span class="nav-number">10.</span> <span class="nav-text">20230221 ADXL345加速度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E5%9D%90%E6%A0%87"><span class="nav-number">11.</span> <span class="nav-text">三坐标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE"><span class="nav-number">12.</span> <span class="nav-text">相关协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">13.</span> <span class="nav-text">连接方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-number">14.</span> <span class="nav-text">寄存器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arduino%E5%BC%80%E5%8F%91%E6%9D%BF"><span class="nav-number">15.</span> <span class="nav-text">Arduino开发板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%8C%85%E6%9D%BF"><span class="nav-number">16.</span> <span class="nav-text">面包板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%9C%E9%82%A6%E7%BA%BF"><span class="nav-number">17.</span> <span class="nav-text">杜邦线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3D%E6%89%93%E5%8D%B0%E5%A4%96%E5%A3%B3"><span class="nav-number">18.</span> <span class="nav-text">3D打印外壳</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%84%8A%E6%9D%A1"><span class="nav-number">19.</span> <span class="nav-text">焊条</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%96%E6%A8%A1%E4%BB%A3%E7%A0%81"><span class="nav-number">20.</span> <span class="nav-text">取模代码</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20221223-20230222-%E7%94%B5%E5%AD%90%E6%B2%99%E6%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">20221223-20230222 电子沙漏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">基本开发思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">开发记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%88%90%E6%9C%AC%E8%AE%A1%E7%AE%97"><span class="nav-number">4.</span> <span class="nav-text">开发成本计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">5.</span> <span class="nav-text">制作步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.1.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E7%A8%8B%E4%B8%80"><span class="nav-number">5.2.</span> <span class="nav-text">教程一</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">***********</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%99%E9%87%8C%E6%98%AF%E6%9D%90%E6%96%99%E5%8C%BA"><span class="nav-number">7.</span> <span class="nav-text">&#x3D;&#x3D;这里是材料区&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-8LED%E7%82%B9%E9%98%B5"><span class="nav-number">8.</span> <span class="nav-text">8*8LED点阵</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ADXL345%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E6%A8%A1%E5%9D%97"><span class="nav-number">9.</span> <span class="nav-text">ADXL345加速度传感器模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E7%A8%8B%E4%B8%80-1"><span class="nav-number">9.1.</span> <span class="nav-text">教程一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%AE%B6"><span class="nav-number">9.2.</span> <span class="nav-text">第一家</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20230221-ADXL345%E5%8A%A0%E9%80%9F%E5%BA%A6"><span class="nav-number">10.</span> <span class="nav-text">20230221 ADXL345加速度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E5%9D%90%E6%A0%87"><span class="nav-number">11.</span> <span class="nav-text">三坐标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%8D%8F%E8%AE%AE"><span class="nav-number">12.</span> <span class="nav-text">相关协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">13.</span> <span class="nav-text">连接方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%84%E5%AD%98%E5%99%A8"><span class="nav-number">14.</span> <span class="nav-text">寄存器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Arduino%E5%BC%80%E5%8F%91%E6%9D%BF"><span class="nav-number">15.</span> <span class="nav-text">Arduino开发板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%8C%85%E6%9D%BF"><span class="nav-number">16.</span> <span class="nav-text">面包板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%9C%E9%82%A6%E7%BA%BF"><span class="nav-number">17.</span> <span class="nav-text">杜邦线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3D%E6%89%93%E5%8D%B0%E5%A4%96%E5%A3%B3"><span class="nav-number">18.</span> <span class="nav-text">3D打印外壳</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%84%8A%E6%9D%A1"><span class="nav-number">19.</span> <span class="nav-text">焊条</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%96%E6%A8%A1%E4%BB%A3%E7%A0%81"><span class="nav-number">20.</span> <span class="nav-text">取模代码</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
