@@ -9,7 +9,7 @@
     
     <title>
         
-            20240618 置身事内 兰小欢 |
+            20240619 opnet |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240618 置身事内 兰小欢
+                        20240619 opnet
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-18 20:56:40</span>
+                <span class="datetime">2024-06-19 17:49:05</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Jun 18 2024 21:09:19 GMT+0800">2024-06-18 21:09:19</span>
+                <span class="datetime" data-updated="Wed Jun 19 2024 18:47:07 GMT+0800">2024-06-19 18:47:07</span>
             </span>
         
 
@@ -230,18 +230,60 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="6febba665aa9a257824755d7a0315b3c3e2fd2e47df6fa27b0d299f2bd23632f">ccc03bb707e66f6732d54c5d65637f9734d8f30f4d76c124c2f429086b128cd2450120b50b8f7806bf072ccb6c95369313873bc5a257bbcd7afd1eaad9d78a79c5a0b4c01079d9fdda8b9b56f337e703be0d68cbcac9b67bbc71b6c8d298824670933fca0d610ad223bf18ebfeb972eea5243683d4a13b3ae99bcd409395fac256264ccb0859f689b9b0acf65db35375ec65127807c5bcc15062d88ebfc45d01c9d3f315e3943e4010d254c4d592eea26ec639559071ce4900407b42b08041458c0d78797da3f2afc5c410fbbe3e213ba4e76f90f499e3d7379f219d2157de5dce1701d89bc2eb505ed2ee75e2c6f8274b633dab6e5cfdd3ce6fd6c1ae88eb031fb904546cf5fc4ba326dfd160144adc494039c6f2863292a7961d98cc2d1f6fd53f99022a63b3b1f192202746a10da096579250b6cba79e625256e822b574f73b00da2b84f71b48db7f8e1585052b9d2f5138387178adc819994a161ed948488d6d8c49bb80217ec161e171c1dff3bf6f89a819998afe058731586980ffb2a0342683b0664f4cc037d912b5cb750a99</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+                    <h1 id="基本认识"><a href="#基本认识" class="headerlink" title="基本认识"></a>基本认识</h1><ul>
+<li>主观上：一个网络仿真软件，超级细粒度的</li>
+</ul>
+<h1 id="思科与其区别"><a href="#思科与其区别" class="headerlink" title="思科与其区别"></a>思科与其区别</h1><p>思科模拟器（如Packet Tracer和Cisco VIRL）和OPNET（现称为Riverbed Modeler）都是网络仿真和建模工具，但它们有不同的侧重点和应用场景。以下是它们之间的主要区别：<br>思科模拟器</p>
+<p>Packet Tracer 和 Cisco VIRL 是思科提供的网络模拟工具，主要用于思科网络设备和技术的学习和认证考试准备。</p>
+<pre><code>目标用户：
+    Packet Tracer：主要面向学生和初学者，用于学习和模拟思科网络设备和配置。
+    Cisco VIRL：面向网络工程师和专业人员，用于高级网络设计和测试。
+
+功能和特性：
+    Packet Tracer：
+        支持常见的思科设备（如路由器、交换机）和思科协议的模拟。
+        提供直观的用户界面，易于使用和学习。
+        适合小规模网络设计和基本的网络概念学习。
+    Cisco VIRL：
+        支持更广泛的思科设备和更高级的网络配置。
+        提供真实的思科IOS镜像，允许更精确的网络模拟。
+        适合大规模网络设计、测试和验证。
+
+应用场景：
+    Packet Tracer：用于网络基础学习、CCNA等认证考试准备、简单的网络设计和配置练习。
+    Cisco VIRL：用于复杂网络设计、测试和验证，企业级网络方案开发和测试。
+</code></pre>
+<p>OPNET (Riverbed Modeler)</p>
+<p>OPNET 是一种高级网络建模和仿真工具，适用于网络性能分析、协议开发和网络优化。</p>
+<pre><code>目标用户：
+    面向网络研究人员、工程师和开发人员，用于深入的网络分析和优化。
+
+功能和特性：
+    提供详细的网络建模功能，可以创建复杂的有线和无线网络拓扑。
+    支持多种通信协议的仿真，包括TCP/IP、UDP、HTTP、FTP、VoIP等。
+    强大的性能分析工具，支持延迟、吞吐量、丢包率等多种网络性能指标的分析。
+    支持协议开发和优化，可以设计、测试和验证新协议。
+    提供高级的仿真功能，可以进行动态仿真、瓶颈分析、故障分析等。
+
+应用场景：
+    用于网络研究和开发、新协议设计和验证、网络性能优化和容量规划。
+    广泛应用于学术研究、企业网络优化、电信运营商网络规划等。
+</code></pre>
+<p>主要区别总结</p>
+<pre><code>目标用户：
+    思科模拟器：主要面向思科网络学习者和认证考试准备者，以及企业网络设计和测试。
+    OPNET：面向网络研究人员和开发者，适用于深入的网络分析和优化。
+
+功能侧重点：
+    思科模拟器：侧重于思科设备和协议的模拟和配置，适合网络配置练习和认证考试准备。
+    OPNET：侧重于全面的网络建模和性能分析，适用于复杂网络的研究、开发和优化。
+
+应用场景：
+    思科模拟器：适用于网络基础学习、认证考试准备、小规模网络设计和测试。
+    OPNET：适用于学术研究、企业网络优化、电信网络规划、新协议开发和验证。
+</code></pre>
+<p>通过了解这些区别，用户可以根据自己的需求选择适合的工具。例如，学习思科网络和准备认证考试的用户可能会选择Packet Tracer或Cisco VIRL，而需要进行深入网络分析和优化的研究人员则可能选择OPNET。</p>
+
                 </div>
                 
 
@@ -259,31 +301,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/06/19/20240619-%E5%8E%9F%E5%AD%90%E5%8C%96%E7%A4%BE%E4%BC%9A%E4%B8%8E%E8%B5%84%E6%9C%AC/"
-                                   title="20240619 原子化社会与资本"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240619 原子化社会与资本</span>
-                                        <span class="post-nav-item">Prev posts</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/18/20240618-%E5%81%9A%E6%A2%A6/"
-                                   title="20240618 做梦"
+                                   href="/2024/06/19/20240619-%E5%BE%AE%E6%B4%BE%E8%AF%95%E5%A4%8D%E7%9B%98/"
+                                   title="20240619 微派试复盘"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240618 做梦</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240619 微派试复盘</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -393,7 +419,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基本认识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E7%A7%91%E4%B8%8E%E5%85%B6%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">思科与其区别</span></a></li></ol>
     </div>
 </div>
 
@@ -546,7 +572,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基本认识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E7%A7%91%E4%B8%8E%E5%85%B6%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">思科与其区别</span></a></li></ol>
     </div>
 </div>
 
