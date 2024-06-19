@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -201,10 +201,19 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri May 03 2024 00:51:12 GMT+0800">2024-05-03 00:51:12</span>
+                <span class="datetime" data-updated="Wed Jun 19 2024 20:01:10 GMT+0800">2024-06-19 20:01:10</span>
             </span>
         
 
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></li>
+                        
+                    
+                </ul>
+            </span>
         
 
         
@@ -230,143 +239,18 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="常用linux命令"><a href="#常用linux命令" class="headerlink" title="常用linux命令"></a>常用linux命令</h1><p>cd</p>
-<p>ls</p>
-<p><strong>grep ？</strong> 记这个的话不会还要延伸下去考吧</p>
-<p>cp ？复制文件或者文件夹</p>
-<p>mv 移动文件或者文件夹</p>
-<p>rm</p>
-<p>mv</p>
-<p>ps 查看进程情况</p>
-<p>kill 向进程发送信号</p>
-<p>tar 对文件进行打包</p>
-<p>cat 查看文件内容</p>
-<p>top 查看操作系统的信息，如进程CPu占用率</p>
-<p>free</p>
-<p>pwd 查看当前工作目录</p>
-<p>df</p>
-<p>netstat</p>
-<p>touch</p>
-<p>sudo</p>
-<p>fine</p>
-<p>ssh</p>
-<p>scp</p>
-<p>chown</p>
-<p>chmod</p>
-<h1 id="静态库和动态库"><a href="#静态库和动态库" class="headerlink" title="静态库和动态库*"></a>静态库和动态库*</h1><h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>1.静态库gcc进行链接的时候，会把静态库中代码打包到可执行程序中，编译时加载</p>
-<p>2.发布的时候无需提供静态库，移植方便，消耗内存</p>
-<p>3.更新部署发布麻烦</p>
-<p>4.静态链接生成的可执行文件体积大，消耗内存，如果所使用的静态库发生更新改变，程序必须重新编译，更加麻烦</p>
-<hr>
-<p>1.动态库用gcc进行链接的时候，动态库的代码不会被打包到可执行的程序中，运行的时候加载</p>
-<p>2.发布程序的时候需要提供动态库，内存占用小</p>
-<p>3.更新部署发布简单</p>
-<p>4.链接时机不同</p>
-<p>5.优点是更加节省内存并且减少页面交换</p>
-<hr>
-<blockquote>
-<p><strong>链接</strong>过程主要包括了地址和空间分配，符号决议和重定位这些步骤。</p>
-<p>比如我们再main.c 模块中调用了另一个模块的foo()方法，由于每个c文件是单独编译的，所以我们并不知道foo的地址是什么。于是在链接的时候，链接器就会帮我们把main.c 的foo 方法的地址填充好。地址的分配和填充由链接器完成，这大大的提高了程序员的效率，如果要手动填写地址无法想象是多么庞大的工作量。</p>
-<hr>
-<p>链接分为静态链接和动态链接，前面我们介绍了静态链接，本文将介绍动态链接。动态链接的基本原理与静态链接其实一样，也是把各个目标文件连接到一起生生一个可执行的文件。只是链接时机不同而已。</p>
-<hr>
-</blockquote>
-<h2 id="静态库"><a href="#静态库" class="headerlink" title="静态库"></a>静态库</h2><p>静态库的制作和使用 </p>
-<ul>
-<li><p>命名规则 Linux : libxxx.a </p>
-<blockquote>
-<p>lib : 前缀（固定） xxx : 库的名字，自己起 .a : 后缀（固定）</p>
-</blockquote>
-</li>
-<li><p>Windows : libxxx.lib</p>
-</li>
-</ul>
-<blockquote>
-<p>制作 a.gcc 获得 .o 文件 </p>
-<p>gcc xxx.c xxx.c -c b.将 .o 文件打包，</p>
-<p>使用 ar 工具（archive） </p>
-<p>ar rcs libxxx.a xxx.o xxx.o - </p>
-<p>使用 静态库使用需要有库文件和头文件，</p>
-<p>编译程序时通过 “-l 静态库名” 参数进行编译</p>
-</blockquote>
-<h2 id="动态库"><a href="#动态库" class="headerlink" title="动态库"></a>动态库</h2><ul>
-<li><p>命名规则 Linux : libxxx.so </p>
-<blockquote>
-<p> lib : 前缀（固定） xxx : 库的名字，自己起 .so : 后缀（固定）</p>
-</blockquote>
-</li>
-<li><p>Windows : libxxx.dll</p>
-</li>
-</ul>
-<blockquote>
-<p>制作 a.gcc 得到 .o 文件，得到和位置无关的代码 </p>
-<p>gcc -c –fpic&#x2F;-fPIC a.c b.c </p>
-<p>gcc得到动态库</p>
-<p>gcc -shared a.o b.o -o libcalc.so </p>
-<p>使用 动态库使用需要有库文件和头文件，</p>
-<p>编译程序时通过 “-l 动态库名” 参数进行编译。</p>
-<p>在运行程序之前还需要配置动态库的加载路径，程序才能够正常运行</p>
-</blockquote>
-<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_64011418/article/details/131453048" >https://blog.csdn.net/qq_64011418/article/details/131453048<i class="fas fa-external-link-alt"></i></a></p>
-<blockquote>
-<p>明天练手做做这个吧</p>
-</blockquote>
-<h1 id="进程通信的方式"><a href="#进程通信的方式" class="headerlink" title="进程通信的方式"></a>进程通信的方式</h1><p>每个进程都有自己的用户空间，而内核空间是每个进程共享的。因此进程之间想要进行通信，就需要通过内核来实现。</p>
-<blockquote>
-<p>进程 用户空间 内核空间之间的关系</p>
-</blockquote>
-<p>1.管道</p>
-<p>2.命名管道</p>
-<p>3.信号</p>
-<p>4.消息队列</p>
-<p>5.共享内存</p>
-<p>6.内存映射</p>
-<p>7.信号量</p>
-<p>8.socket</p>
-<h2 id="进程-用户空间-内核空间之间的关系"><a href="#进程-用户空间-内核空间之间的关系" class="headerlink" title="进程 用户空间 内核空间之间的关系"></a>进程 用户空间 内核空间之间的关系</h2><blockquote>
-<p>问题：进程 用户空间 内核空间之间的关系</p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/m0_74282605/article/details/132119378" >https://blog.csdn.net/m0_74282605/article/details/132119378<i class="fas fa-external-link-alt"></i></a></p>
-<p>操作系统的核心是内核(kernel)，它独立于普通的应用程序，可以访问受保护的内存空间，也有访问底层硬件设备的所有权限。为了保证内核的安全，现在的操作系统一般都强制用户进程不能直接操作内核。</p>
-<p>具体的实现方式基本都是由操作系统将虚拟地址空间划分为两部分，一部分为内核空间，另一部分为用户空间。针对 Linux 操作系统而言，最高的 1G 字节(从虚拟地址 0xC0000000 到 0xFFFFFFFF)由内核使用，称为内核空间。而较低的 3G 字节(从虚拟地址 0x00000000 到 0xBFFFFFFF)由各个进程使用，称为用户空间。<br>对上面这段内容我们可以这样理解：</p>
-<p><strong>每个进程的 4G 地址空间中，最高 1G 都是一样的，即内核空间。只有剩余的 3G 才归进程自己使用。</strong><br><strong>换句话说就是， 最高 1G 的内核空间是被所有进程共享的！</strong></p>
-<hr>
-</blockquote>
-<h2 id="为什么需要区分内核空间与用户空间-为什么这样设计"><a href="#为什么需要区分内核空间与用户空间-为什么这样设计" class="headerlink" title="为什么需要区分内核空间与用户空间&#x2F;为什么这样设计"></a>为什么需要区分内核空间与用户空间&#x2F;为什么这样设计</h2><blockquote>
-<blockquote>
-<p>我自己的想法是电脑本身总会有一些非常非常细粒度的指令，相当关键不应该出错那种</p>
-<p>多进程运行程序本来就很容易出问题（出什么问题呢）</p>
-<p>大家都是同时在用这些指令会很危险</p>
-</blockquote>
-<p>在 CPU 的所有指令中，有些指令是非常危险的，如果错用，将导致系统崩溃，比如清内存、设置时钟等。如果允许所有的程序都可以使用这些指令，那么系统崩溃的概率将大大增加。</p>
-<p>所以，CPU 将指令分为特权指令和非特权指令，对于那些危险的指令，只允许操作系统及其相关模块使用，普通应用程序只能使用那些不会造成灾难的指令。比如 Intel 的 CPU 将特权等级分为 4 个级别：Ring0~Ring3。<br>其实 Linux 系统只使用了 Ring0 和 Ring3 两个运行级别(Windows 系统也是一样的)。当进程运行在 Ring3 级别时被称为运行在用户态，而运行在 Ring0 级别时被称为运行在内核态。</p>
-<hr>
-</blockquote>
-<h3 id="内核态与用户态"><a href="#内核态与用户态" class="headerlink" title="内核态与用户态"></a>内核态与用户态</h3><blockquote>
-<p>好了我们现在需要再解释一下什么是内核态、用户态：</p>
-<p>当进程运行在内核空间时就处于内核态，而进程运行在用户空间时则处于用户态。</p>
-<p>在内核态下，进程运行在内核地址空间中，此时 CPU 可以执行任何指令。运行的代码也不受任何的限制，可以自由地访问任何有效地址，也可以直接进行端口的访问。</p>
-<p>在用户态下，进程运行在用户地址空间中，<strong>被执行的代码要受到 CPU 的诸多检查</strong>，它们只能访问映射其地址空间的页表项中规定的在用户态下可访问页面的虚拟地址，且只能对任务状态段(TSS)中 I&#x2F;O 许可位图(I&#x2F;O Permission Bitmap)中规定的<strong>可访问端口进行直接访问</strong>。</p>
-<hr>
-<p>对于<strong>以前的 DOS 操作系统</strong>来说，是没有内核空间、用户空间以及内核态、用户态这些概念的。</p>
-<p>可以认为所有的代码都是运行在内核态的，因而用户编写的应用程序代码可以很容易的让操作系统崩溃掉。对于 Linux 来说，通过区分内核空间和用户空间的设计，隔离了操作系统代码(操作系统的代码要比应用程序的代码健壮很多)与应用程序代码。即便是单个应用程序出现错误也不会影响到操作系统的稳定性，这样其它的程序还可以正常的运行(Linux 可是个多任务系统啊！)。</p>
-<pre><code>所以，区分内核空间和用户空间本质上是要提高操作系统的稳定性及可用性。
-</code></pre>
-</blockquote>
-<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/m0_74282605/article/details/132119378" >https://blog.csdn.net/m0_74282605/article/details/132119378<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>管道是最简单，效率最差的一种通信方式。</p>
-<p>管道本质上就是内核中的一个缓存，</p>
-<p>当进程创建一个管道后，Linux会返回两个文件描述符，一个是写入端的描述符，一个是输出端的描述符，可以通过这两个描述符往管道写入或者读取数据。</p>
-<p>如果想要实现两个进程通过管道来通信，则需要让创建管道的进程fork子进程，这样子进程们就拥有了父进程的文件描述符，这样子进程之间也就有了对同一管道的操作。</p>
-<p>缺点：</p>
-<p>半双工通信，一条管道只能一个进程写，一个进程读。</p>
-<p>一个进程写完后，另一个进程才能读，反之同理。</p>
-<blockquote>
-<p>基本问题</p>
-<p>linux中管道应该怎样通过代码来实现和观测</p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/OYMNCHR/article/details/124728256" >https://blog.csdn.net/OYMNCHR/article/details/124728256<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
-<p>明天继续</p>
-
+                    <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="28d8ea62acf1cd7cd311872eba5bd098e8a59914e50f70f2f82aba7a150c9c2d">ccc03bb707e66f6732d54c5d65637f97005fe29fea6d828f045a0b7051c0aadb684f5759bc8a0699676de1e284896923732d87165c59fe5c5b1a33ca6bea5a178d3956d297e31b4104418dd546e6594801e5293d60497a78f651543052fea0a6b853665efac94324635a5159d3bf639bedbac7769c0e5043c56705f8bf8618ba77c9a448a0bac6a93c861fca4f350bd03b07e746c9eb6237f619c64e3fd513c402152a7f0643f711105002d7b1aace986cfabcd195cfedf030f101b96c000cabbe66cdbe955add2a5cc099a9bcfbd23344dc1be867e4b29dffe1c7fac19aef603d9ac6600281db6b3889d84207f5e49ef4cd9a490ea3f446b71ffd05f18e722cbdde179b37c5783ec4536dbd5cb6712ce21de3a2aaaa4e0cd2fa1b341377091df15b3824553ebaed5cb51a51520bd42cb3793ed9628e20eca6a493a3d91453aa00ab89227661e1bfe36882cbf39fb78916779fe0137c128775ac667a1701d71ca65899941b2026e5f2aa4f0a47e1b8436596f915e60d439ec15a792fe45e41c6241d87b88ac769b5230b859b06788f6268ddc89511f7ed71d33ea8301f7be9eac0f00b3682778be24a5b226516b5b0e2e2b46c1247ffbfcb18cedf30e1c6e4660bed66df6282fcfe4cb91728ff469cc3a44403dc57d8348b57671d59da6c5175d87e0e57337b8615d11432d856addffb8eccdfef1b56126a2900d8f0bbda88e3664c4f2c92ca7ca430fbc1d35ccd4d3367260b633a27f817d1457d0e512a8c5716d5ab7c990edc5096e316f0773039e24b819a895fa1045fd0d27150252747d61eb50c530c69339db9845e1e3302b4b71d60272cc98d71cfaf9d2a239743fad574ef3949599814d340fdc16b6aa98bbc90a1a47d11ac5a3c0f931588b9373aaa0b4041859d30fc5d735e3bf188ed7ea45c7aa093f6ead28ff1211f685bcd89c9d4e58a42094aeb2967b9883db05eaf3f02ec229c2bfb3cea97e271738a7acffdbc03f5f3614b9a110d68ff7b48734e9ba8592ee147ef3ba795b7b472478e7eb693944622dd0416ba24f0621955b4bc9bfebce7b1941305cd5dd9692a54c43d0db800a0896c8c684536efbc67a7a06cab766141296fc0f3db4f0387c366b74d4dc60f6b65f8f5b1bc73290a82f86a2207f9ddd7c549245e8481c7722f1671189dd6ab7ae681935d39d7867400bcf4010f2101840148ce7b665bd45746b7abdd3f775515384f947233a0b1ad89440dff3fd0285fdfef1727bcba768aea1148db16e2ed0566f4d5577db3c34d5c9c142cbd1f68e87f39ffa1371fd7e67b00d499413b8696b9a241f4bb8975e55f5fbaf4377115f583464b290af4897bde1ba234c9293ed25e194fd5cee3604eeecfda93466a8be5ba26019b2b17ecd27c2bf78661cf309fe7ba3c55a0fa1c192c44725f14a360d34584b507ddcb93daff484d105c0fd506ad85025de7ae3ddf622be7f019463ae8e7553b0bf5f2442f83b7a036b6608ae084601e47e53b0938fb4dd6aab568de86c71fe9e3b8b45f8c5e3c82a91faf8b9d21313a9ed93ba26558c0256438d6257dcd28a43ab4b3b6341262819b7a377ae63f90aa22dcc890b3834df41485c9fb59e373a8d6174782ebe7e5ee8e3548178328c263d02309dc560239cda4690a277b1002ca9b45b6a149436a3cf3315d347f98cd50c227b5cca58ad2cdf45a8b60d5ba5b8946f35e164126a8731e394db93b5b5f6a4a7919513d2383b698fcb44daa811146d966e42c6c5f1e0c8c6e75e59c1bc3e5f8c7991be1a495882eff5acb7d75690ae6acd189ce34ff2bfd55ef8558e4b4ba40e89516f6787063dc9370d3614ff5263622250571ffc2556cd5827520c97ed52eb661ab8ea0466d4e25eaf0980fecd576f78384249d2caecdeb2e0e6c64683e7797fd6acba5ff4c085973292222b0e037c988092566351296223a2e2ab2ee6d9e9c32954379940053af1fe0d6c40944de9f5a5efcb17518e23c7777ad97296545474f67585cfb763ffa30e6f94dd66245d4c0383456ea2d1d25098efe78a74579f545819f57921273a95b1a242dc1a6bae98a362185434cf5f5a685c457000c0fb8520a4e4409e85957b01195bf12c66e70cac94aac4b984136bb91c635a67f55820d82f85800bd9dd714b793046a7a9307c050e446f09aaa156ceda0448bc4c5894f3fa1df42de5fc636ecb89da9342251ef061c9f252a1d7d42ead79d8c8390f35b0f63db86041a37dede866a2597cd46f17367a100022af0937cbaab7b25194ede762bb80a6a843d376502e4ea5eba47e45ebac7fc5ecf79dffb7db5d9af242eeb59d608c7329b13b55e873d585dcf6ee379723ddf49d554706f331fdfef2e96f84a7b2c0741d0c18fc8c70f99b7c2e51f13f51af36bb28d27018696e75e98c2a0967624aa2ab2a275630d3883d28212bfac02bcf94a24587179dc56832eed0985323f98fed712ffee6f749e13745035390975fb003af679f0191e02be3327fe8588198f06c3672540cf857fc980401bbfa383930afbaf9f1d77d4f1b9b5e19bdeb420d91015cdd79e8681cb2bab3feabc77d5d20cedf5dbe7877f72993e6869ac1ad023956542ebdb4002358c5f0ad8409a720984f4468bbac6cbcf23570854cb8c47d1d55d6aaac5f0e6b22d029babd20e8532ff2d61b4301870c550eaee53ef44329b929e4691cad58a2b2a4f199f865cd320bbf34c89b188d74cef4c676aea28bd568f5d55b5d41b5ca83ea2fcc65a4a1f45a74cc938cb77294b712a1794dd3ca376fc44ed7b5834f90482d8b41a88029d13080d8ceb53134534d0815427387c783caccab385df462864faa734a4a0a750c31c163684f49807e3d2551439694e7fdacddea8e69aa319a7cda36d81570771632284ba3914dbc7ad918239639135412615e4d0ff4c5d56cf229b4903c429f27a64ee86e14d5a15fe0defedb195031147fe48841d55c9b27c1a3c2e336849f58153ae2feda3371261572b02f309127225be7c1c25a59bf6ffa2acfb8024a2ea55ff578060eba1a5497d26c2665ec4a6dc8f7578753cd53a298d5f4780471fb8452070fd4cf82ae352e13bbe3ebfd4c1d0c6416e90ecf7f8e4f8a65c6af1af312b65813a8103ae340b440e1d12f5551ba9fe020f11df05736ec8d22af851437f1eab67d24ad0f5e817723c73b06ac3dfa84ca84d566c29d16135a2d439bb07761772b622a2a6a5da2d0c6abb0db87f53382807d3289a4a00e44b99a6280e3f37d2615e1fd4e692ccca75a061d546307c8e111db1287bc190f79ceffd45d7a664ff0296b085b0e69fb4a9368f25c29ad0d7f2d732f77aced8b10fbd079131ad0a467a9b1c5aac984bc9ab7b4e8cebc4bb0514abed92bc209d6b0cd45dad6c19bf6effbb1414be91ca88b7f440567a2bb4bafb3a36e2abd2cfb052a31fca72dcd1ae488880fa80b8c52cd51d21e035cdf00f00e29af8ebf7005002549169f8413567eabccdb6b8162e3383ca1306255c9f804f16bd3db2e8e34df6a2875a78b368bda52928b95dbf0abda0b83d80460eb342ec5b9c1536bfd69d40f74c111dde7713ed65a2fcc482b810b38d7666423ca1b461558dc3c868b3141deb107632f63ec23f7019f9472b8a8ca7c50cd6e1394cbff495666c6981c81dd2d548e7e5ae03a16766503a8d9c89c7555359fd86c79f389a020631af1e47674f57e86c2f39edafb2e7d17eb7f734c5911825fe808ab84ce96f417bb1ad8699bad6bb0991b086e67a289bb9d4511657bf485c0e5202dd4a754a014c7572da25abe4e7a9a1048cf32362bd1c982b37aec4284aba9b2910688d36798aa917036ffd2e1006450c39a65a9627fdea20fce95780fe6c595bfc937f5434ae7a08a5dbf748e705d579575d8d53f6e08fc1625a86b844bf47825614e5c966b3adf51f38c3fe3e7287a17960f0ad238fe0012a593fe4c85a802b69a6c92e88726123ee650c7965ad5610f51fbbab1a6de02ae9cafd0031caf1b75412abad6d9681aec0a1993909993c49776c4550a788c440d7e03e724a1a36d5048d7ae315db10a2ccb35cded6a297bcf22774e6de60f2be463705df3fc985292c89a6b664b752f09e25eab5e48ea3c5345be47130a41ac0adb74c03c4c9293afcc4ebb8699c9eb094d02e53f50c7de18b4894372719b90e2b4ad0646dc49513d3093a94260145159196902d076871fdc14c56c3968eea39099c24156ad837cdb61c8e563306c078567ec4e6233a65b91e8b14cf8c2ee298cf25d198688396e095b9e8bb23afe79143be6292cabf3cf2e83e8a7f00f3b3d6d01d5b5587a0c28dc396d3908a9cb943c7940b4b61fcb8e51ec98f73eaf1a8ee3a01b777500dac89c969b3344ca874e2d462311a22a3a5bea44799cbb82c3564eebcf0df3081685d92a2a25f3f7a84fc924ea711377602311b4b6bf4e4b3671933000434f888eff3792f1b09810cb3d6a924b16fd4a5eb9ff3537eb5b4d5fdb489bb96ad8b296a0959c5dffdfbc9eeeace275d84cb3bc36b31a2e1fe6069f97a7d45d997cfd57ee5ff7ea65761a0099d242f78a470af0777da04ab83a891783522704f90e39c9f7702b71f209f1a1cb7b709dec895443069ea31cc647e3a46c6ec16f50ea3b28f721577b0f5fc0201bf96adffd61559dc25b031e87d0eece66b98d890d9dbdc5a1e87f17e0df8421eaf720a0c03a07c5cdee1ad6a836dc568dd58c92d5780df6e6b0949c26c81c8ef63587c217d52081d92dc768728f85cf2246ed325376959f7a4679ebf75865656874ed609a25c5ea8980e83aae3911d2754c42e4e5c5b44a6b2c1465a4d3cecfbe6670df5c45c65b3a1bb55890696ef079b1615f857e4ed54340416042c5a1d6c42c6a4776251690925eba45718907e745e291b637c6e1e2a20a856270f6240bc8cba9c6e03308921d34622055119a21dbf86fa7033a14a76a6a6e107da71447f458492a12e00b0164fb544f5b7fda03768d1e33ca61e610d402df0eeba896199f76c801f6635d22e4aca267ecdb81626fa9e7f35525d00878386b9007492f6df2aebe019fbb5afc104567d5aa23591833bf2549cf9263deabe554f971e83ba9c1afc8960986f73e57e1ae131aeb452c798c08f84bd5a788d2cf6b1e88501490c247f0d41a88e1c314b162ddb21fb8f56d1ad33b34d69713734c470d8b38033e9782bd60d7071bdb1b6ed48e8c1ac26bd812ae3aab587b5f8409af236394d2633be4cbdcd300a95f2c018b045d4b1ada4bba552a77b8c5c446dbf9b52dabd5f25a6fddad6f06fc0256c5412e69d592ef64569864039fe6b672a34f2cfb59b09c893a7b5cafd93e9c5ca147cd683781aa4784d0099e5338fc36c0fad1bced872edb7db0f88c74b83d47eaa02d2e12d0b7c90cd166cb3982f25d70f093a122ec034cf3b26081dd09ea5179094252e29fdfc47999ed69927812e4b59d897c3eb7b2bd8aac661e94324cfe089e1f6f339851ac597f043b44a3665e64166d17814889f61c8ab0a8e039c98387bbc4399d1475bd1421679b79a2b29b6706472d4557446b192128a87dceede092a56c915891b4bf91243fcdb2837e1e6b2e743b2fade7882b204b00578419cf1321ae52dc101fdbe47bc587c07ef3972436df35a686b1304e6229343eb5d734e2e50f697f7ab929de93c4e36078f2b70e865d019d10a7518fab43dbc407e056daa984cc9159fd4ce9a600d5a187b42a1971f3e07e91511e85b131a4ab76832fa7e0b5af669741c4fd184d1a406dc5dfe17e9e8f2ebc4b6b6e4566b432b346ebc01a34866c79bf80e09a0f96fd0af6ed8e5764e1cd1730bcc1dc9de577cc707d7d9e38b7f154d339fe2db6526b0e79b5de4031c441aba8293863702658eb068dfc00b6dc8c1e503dfebe923c7ad30a43c3ba38ff8655ab5dd400a97bc90e5296405a3fee15778dfd75940cf53e14f548a2da5bfc956ab0a9ac09abc780508131098ec6e0493ef43bb1bd633136ffec5adab06bfc67450d61a77a550a122cdaf05c45dc1df5ee771533e519730eaa1eed7c49a17d555bc0a85f5561adc56a1bcf40cbcb1fb5c7ff7fee481f97d6548779bef988cb9274e7f4cee7becc880fbb508ee02a127c642db3f887237d929dc8e2641bdc3c19c33c718b55f2a6c1d45fd419a1d3af011405b8732a83cf36138888881d0b7ee0517fb4b1d208842e9429709669686142f63a6257bf4b2369c7146dc16fe7fd1d498913fdf16892c6eacf05f6f8f657e5489b6cda3fb303071a2ef09d3d8e073a356fe8c69aff36217d079296a0162faef8e3d3ac088dcea49678813c40aca2a0bbbe390842451edfb0b13c71bd5fb53dbe6c95bc6a87b095d619f10b72e8a928bb2d4d29b4e77676bf70c5c5fbca5606c8f18506d0e30ccb0ffc4e681be1efc0c05bd0a05722aac98c910246dc869220fe1f62c0f77b8e966f70d517d82254773dbf7389d6d472480cd05a7be6d233358472b70318683fba38de32f2257a5fd218da09c952546f5a681356b7df3b73e339faea79cc8e2c469c345a7365e4452bdf0a7a564dc6ac12092561cdef1d744920d89229f8fb8dcdd16b084e92ad9afd74a3195df298e67b2474b537805695fdac0c0a8885e36995833d250dad3ba4e9be62321993018581902ec942ac59d68c4b0c5a2e37644ea7f1d748e89621303fbfbda30b90289901e45c55ad1f640a2df46d9721bc64b2528d496101bf0fc4c4ef7df63168692e00176ee2e428b5671692ff4a5e708f58a63de548c7e3a8ad148104fb11c8314eff334cf1cc5975574c184b14735e77ab366cef9c8e6d2a26f60c24fc5c346a0f5ce6ffe29a244f9f40bc64b18ec8439ef2588b288319b8a8f9434cac78ab022f5d956d2e1931a9908c70ee9a11476bb0a3a550e1448c72e9b0caa6336d9766f16b010669150ce81b574fd8df995c56f6cbda7262135d52094ebf79b1f880735913f2155d7ea8874edba7cf031742392cffb2c518cdc9b5c6cdf93660c5a3018cc4daac3b46de2636d2f2dc16edac9e9f9291e74e0417d3c7d3d532c462d2bf008f3487495983bf0ee3c01bc8226457895d7b7ae3a0bcfcca61bb05bbd9f15a88e48a32805ea58958cbea81888973be728140361aefc17d82581b028cf9926491e9f12235385b79d869eec92b0d5d986088ab06dcd7f44aab3c6d37d94577f847b10c0088a8b224d600a5e92aa0d72b0d56be21818382482f795ddc36124c007ecc72cd05c754cd20ba1d078d77348593cee77c09713fba345758418277b90dccdb53f48a0b617039c63551622a67f0258090c337c4e27ed1cdce00c732ce9f33e991d65766b7dc47c4d62e548049c60e31668f7b890d9d4949216a4341010be4b34d32f5539cd48d5c1c1d82963d2ea3311b62a184225e55d51a91946c81d4ff3ac2af2cd7a8bf4b77721988ec50a373e85222719dc2ba8fc184031cb1496f1493c3067eb3e7b0de5c36d27b5cda24e2a0d0de31d33c2e565c35b63c3b0679306203d253a8f53f3154a57ab5c80fc82f56c1c7939f60f93403dd0b08c204ba8f7836bbbd10e1f82ee39279e1f44fa89211f0bc6c9103f0b6ec167902d48a50a69c2f7096b949d55f30985826a2911a1ecd42d79edb47fe1ff08d20531f888f89a2965f939edca3b9db829881d85b7670a595390d7c45ebefc1ee9b08b7099f601e1f18656aa64357b9e169c8e79074fd21e2c41fe3a5f53101941f70efcc9435676f925049bae2ecd1d8d349e06d05cbf54fa2529fb215b7e1740a58d1c8e09130a7dbc7887b9b552eee9ecea5f88bfbf8e157fea80ca19ab0e995ec1906f634472e64999f2b01e6bf3238e53d1313005c25902482883c5f1e489994adacfc47a18034393046ff65afe8a7be0e66ef5c02d91b7bfe2d6b458927162e006fdab204984ee74da63ca6ab74363e1899ff69a1d6289c879818d24a4af862cea270ba2f9438df6313311027ec5ed88a5f50b0b922e24e91c226884062642b10e339f9f21d1bb9dae75194b98e24e123ebb729163fabc90baad6c1e2cf6efd4221d00b3e43216dc00678815ccd22b9be097d9ac1935c8c6bf0cfa135570cf494e41b72ded5e5384a70ee8090192368c78242c2535785b516390046afde94b15c77eaffc1dd7f5b0b3be697410154bdea51ff4fe997547dee6ec26e43869141e366aed3ca1886bce7f9d41d752acce99129cc014a35327fabfbf4d7eeeb84bcb3954ea66a18356ddeda0faf1c4a2dfcba4baa95b4cef48d98e227eed1e0f0c8767c1cf58c81c54262277b8a73bf88f2d599e8392132b738a66e359f7726f38bb6c0d00a57817f9cd86cb9759fbb602819f12b1b436cc4bf056ed58c0f08ec1cb93ef75e52eadca07efdeff5037d1ee4009f0ce26b32d798306a5f54d088dc8753e16b982afc3f51804f1a8f85b5d9b683a6c17f422e30f7f7a5583a62d3d6465cd9105a7df1cd75800462d7444f7dd9e1ad51e568b85831be2c3be8b509b15194c27375aead87a8f8ad5ca1a0630d4e9e5c0720b2acb9a3f1c174dfffae8728cc8c8ea50d04012cde69fea5790d098a350bc1f0fa587685ebc4ea7c8593e512c0ede68b7438af6c21e3bc718139e6b1681c3bb1f7392f796e8ac28dbcb44ab4f173e3ca43964056d12680e190f5ad43b6d2ac655ce0db3460807dc24d70a1e00fa7cc9741c7ea045ba39b7584bb7c340ec0137ca829990d2c07514877612ae55add8c2e449caf427534e3b1ec3f8b818f0176716908c1785c05b13af6f8758b0973e24fb546f08282e57e6ad7383d4ccf45a4f4ee217dfecc4037ad0441ef2d56e684bb38e1a7df7e9c67b7cfa54dc9ddc49559816aaf6c7f73412a63f55546f5660a6ee0aa4d5280d9374ce399c08acfba29fa78e1a7e2c38d5c9065bd96a5e9b3fe020c1ff6ec1e76a561506bb27ed5eafa9b479b784fa96cc1f7102c6fa7a27f29b169ca2a41fe81262d18580c30f5688ad8cfbfad8b39279d7674fe85ce2c539b6e585cc26e6a50240787091edc575aee941281eb740de0aeb66889eccd3e87cf6877cd1e0b36c1a56edd6d24f432fda59b14b9ed933a9278fcd6c65c2f95dde8636ab2533fa58224a522845705ccd35823589c6abe3c373fafb16630461977b76b0b5bd808760057108495ac01e4e4eb0c32da4d3df4bb73dd913cd86b5b2c8ace3fd5627479f88812a09022fa30e594207d05a5d0e8025ebbde243d40884f43be1c8aa08ac0489710cfffa840409ae213f33d46bc3dcd12cabb1ac719cf6fdfeebe87e59c24df8791cb9ae79104ee27ec71cd665657e68a88cd05be86c787ae969d4db75a468cb17b59d65d983918a0116aa444232f9d0139b9572b8b2bb9ae9696cc55836b0deb0a4391b4dc16537c28b52620eb4ccbd291a8ee9a2fdda4ff1c5d5c0d612833eb78508647be85d2d0ad7691547ce83a66db187b96545c1b62f596f895b7db52657ce9b90c7eeeefb4a6c64ee341e05898733ab9d43f20c42300da5d52eeca3ed0c86159b49f455e18f1e09717db736a6dce4ae46641db7745dd792841ee2be00f17523c16b0b321ae0cb3c25e397691a54208e209001618f8e2cfd3316c2b428f156ac1a0b363bbac25fe51f192d01681a5701d50ca10536243236544d09bd8d27f992990596359b708ef7db2c88b437a1dd97c23d4744bb45a53c2d84837993ad9c0754d9d243321d085d6822f26de3f8ca5e649f8c9ef3be1124c94b5bdfd8edff3d0cb6a5cb626bbbaf695b5e576e002da6e8a396b82a4737bcd5ff5e855e258b648962609641016c4d2e293efd86b332547106eac4d26083600e77b9356097a8ccbb7bd0558b3f1acd7f43eab58b98a88f74684e00f623d3b50a90d350f926def963097eebc58dd6719f94cb3991e3b58937274b92428e3bc1c120d5f8b77fe8d1d059750fcbdc3f90ceda5142509b7f58b548857f5a99c258cbf7d5d5b0ec6480cec95a695ab2dfc8a5619998310b0ff2c97a3795876baee67291994db3ca77041e0658d6c495825d17151603ea67b72781c7d86f39978fd2986fced2bd2e4a2362d1e4b78ab32f88ad4f05a637af5d482e9d57e59e1b9bed184013084d6a8ff9d88074aa4301d361d09f176dd87dc470f72047a1b63257b911ab8ffd384f336c557cf98164ef04aa1142fd8d230e0034474e09b4b433685d30f10284cd7e0fa997fbd36b9a5c169f589bd7675b08241a14e57ef47afe7dde903211d62caa62d4ca3a21cf29ff77e31a8aaa01e9701a032b8992eb70dec2cea37a320f80364969d7cbc470d5388c07e7d0a7e684b2974d6564048caeede1973c4717a5fefd21ceee559ce32d9b01909709d13cf48d3165b24454c55175392685f2a5390b9f592fe8f888bb3348972afc256a6235fdff47aeaaf45739c31088841d0695ee242085db35f043c0aaf6d8ea9cd3a7918f0c0c6d42bebc5c8824a003e4d76caa4cd895c5a960f72768dce5213864934b1527b68dbbf6b4bf9018b6109bb5db133715836d777ef88b99e332a19f58ef99e2c755e36ea08021a055149bb4c1902d7fa5cfe1d2661c9b5a3d611b4fed0c5826be33c670da3baf30284e092a96270c8d73ef1537a9481ce540080c40204c5154e341f2a6b2fbf03b0212b836607ec8af83faa76dce143101e6dc77cab952ea05239ccd881d409f79d9fb1f628375f94b53d408289dc5462629515e9e8429a508f63d88c2f56ee71a0fe5f427c4837fce439c751448b0157aaa1166003843a30301fdcc38091c55e987bcb109881e82ebfb8680f5f5e6f4bbe319774fa529620648b0bb6cffe2fff62e06b181e8e0fb983781435e974a04c5b4c2acf272138383d644bbe6a3bb046d157299cfd91dc75e979a17216e2e1137b46e60383c0128cc094b9b6e3a913a68236d21cef624f54a031cf36e569e5fc1f5fb8a91e86ef517cdd0b214f9ee28dc931e3a9eafd14e3588cd51d4e63821968160ff5f7070c1e37530b575b273399144461a8db4385d7012c90d19467515a57aec6dae03e96566d0c03f3684ee9a75bcb67a9abbc93e315215ffd86a64d070b7665417f87d762d56da1c6376fdbaec5210ac1ea028df4e1219316b85fc2d2a625ace5e1350aa785b1b0560f42fe25bc688638e297a3d3deb0b1db7cb0cf273c7cc05eebdb48b776d9f1e94f4a9525c2e354ec2d31a6f46c61ae0d67445d5fe56bb204b1030421bc7c9586c57038b557c033851f1626735d5e15972c4f6c25c7379b178ed8773b574aef45f66d9c30a8e30ea83b3b82c3461cab7199abdf67a495463a2ca7bc33d310568c9048e945d22ec93611e671b5f060754ec131835c87824e2da8c318bd118d49c719d4910cb7cdb2f0acaf9c9ffcda5b37c547fd81109f254dc189994a4610af1dfbfc66e46ff519b402d72e3021770443a05cce5c048ec3461cc5d733cad4c915d741ac1eef8d6feffa6086166e12cc7ba2ef2d3738d7ca4c091c0fa4278dc250c045c068f7ea39df961775082ed3f2ad0d83eaa54ef0a683b627bae9041abd02d4ad33b3ddff2f0c20e5a5b97a65a0339b8ef11d87846668e9120f04fe08702ef98a2184fcb0cad748595c17fd4c233b75c881b3d2f3cd6220387ea672c8a18ca5e65c4fbb2c90139a2b05f8a7dcbdc083db05fd9ffdd9741bab6cb115732b4550849dded6543730ae1549210ff28ef62486c2bddd4179b7183cabecffa8685deb1ea5fe0ed96dc91c15fddf9e810644dc4ba55ec9f91d546d84ad8a7871a24512b723aadd99a86b7cf975b4a032480398c4edb649dab57f665a8ef9dc30d32cb0cd065662600214859367d489267d2ff679e5987bd888639830b2240c751c1186182bfe5ddb6db9286038f415b8fdeeb75aaecd799e0271c75cfe996020242a936093b93d00aa06eaaa8d27dfaec5d9331dce3780d0bf45ff6588ec3f681d8bd6195341ff15d8e4e532203a1655f62374c366121effd2384545aeb5912e4fcb083dab853866bc943780c1c312ead4cd9fc88e702826f918cec131c8845031384125ac5aa7789376b47a58c7842c8320c2bc596c4b8c7717384625e49abb809701f2d606e5b29b81c1966e8e41c9cf429c836a2bb80ffa45ab90340973b7e19d84afe7f32a5a080e9b7d8cb893b6c23eafe7599b6cfc958a5831d8bfc6cab83a3be231441667cac7697a5e44a2067e9a753c52a8c82d5b52127117bb5cd7637508043682d029a074eafdc014be74f7aba5c9c6b9846f86479dadd13d61fca2d660a1b3e29bc10ed58c3e87e3644b635691216acf5ff207fe62520033f2167f573544ba9b65a688fc1ac1f2be9c7bd94b08e9e8e5a35d76798fcab1587daaa59b9075a32e7134aafa4012eaffc302d2a2f93bd841a8cee29fbbac9cebf2418380dc08ededc387cdaee0a3799d60c5280fbc04398299cb25a2d5cb6dd8eb4730a6c4754f926c34c97530eb5fd51f5e6e3926e1dbac4829d258d514c9a76f2176bb16050b80b778577f5b01b3bc5b517f316927ef29867c8b0b34ea359dab2ee29da19cca30a9231fb48631e6eb152c314c762e52a4bd84edd59327e8989ec2afdf4715fad2b6e9e172d2b0dbf44cf18e9f1645857da9f4ccbbec281e776de796c78f600e634e08cf68c4f6da817a745129ef26d860bc3b0d9a56de749543cc6fd0a02f20b305ed346420df34ee2b972ad492e55ae3f55586b2459a659f62a8f9036b20ec0c9281679bfaea7ffaad76bb09d79f440e5bbca5397a154e6df499e7207129bb14938b66f57cea1f7a256bd61804b565b027824837f109fbb79b6961cd7e8d80e00ec3d4164ca7b118974410ff6417b88c8552830acc5b9d5c76a055dc0411827b16324bdf9c094ba463f6c4d271dc7fd40e96a1fd437a12255e2d8c9fe12e1fe3f1f7195ba85fc28d38e8b4e410dca7ba600c668bc979c22cc8d9bf16670619b202e343d707a210fdfb1e86b1c18b6a3da58e299591940c35640340c0ed18ef2d53beb59ad2206492f2a61ba0465a659da50ca2757e792f5a2f286fe16de96c1f2f9fa6a8e14a900a931126c38d7605517f402924cf9b66970e6f60eeca6fa3aa4539bd0b5ca8a69334f893376b26f4e51c5cfc3e92b17778aa4ef13474d513200e313d7a506f81498edb035b1dd8f92b3d97c5e84a10255ee446b58fa324f8f98d0af1a4a90a691891051f8879ae5b65147c8fb0b469503eaca9fca105659ed03a16ec27c4f7d435a8ba3c3cc61a8b78d24e363fe839e64d2be0f9a007a725a90f527878588794a89461dae022cf276ada154ca1ee7a0849d5f839dea1aa8bc3967c9470b42ab8975d5685711dcaefbfb92e5d2e5b4684653b68465d88e635cc8ce4d531b57eb6dd84bd41209cae0c7f45f22817714b469e29419fef002b09b25be0a6859cad7531759f2f1618309f1ca1a20cbb10adfc5ba109139319898be4b4a8916d3e6fc914c3c9a114dc9c0f876a57c28cdc1d3448930cfd931d82056eb0443905bd194e3f803ac2a263e8bfb96d7e119c3e6af37ea6ee13160a815492fca95c66be1383281a3cafddd3da49d689b94029a232d1e029a171b0c7d635d18694fa6c3e259ef757c787aa683a7e726e0d76254b30db9d3074b19f57fc3cae10dd240a3fe3257297fd4468355515b167692daafd4945da32beefd3b846094a75afc6904bea5f6d2111a15cb5e1955cca443662685df9b57d85f810c8b2a0497f4634f0d5174e37aec6fe85484b9852319f2cbd893b5e0fe73fdf72e33947aad1dc444a8b29519b28b9d43f872b3ffa3e122b0979ddab1568401f0b36295096f15d1fd9c5ba49fb9b28af064d8509b25974be872859e9b64a6980be0f0a68a97f25b4d63a572ce192c1d062ff7c12ac440b36fe25ab578ea403dbcff642b84256beebf3d1b7db0b1cacb92733d2e1dd1ca974e68e6fe041f4b5fa182857f1023efb5cccdeeaa0ab2633a16beec45445b19fe923e8ec731d4ddf5da3fde4cbd0e74145b91cb3a8b80446da28603ece965d9b079405282505fd8af65855381022c71e6dd5c69911cb097ac335da88fe324a6088f7d21d89c9433b62cbcf11e1d703dcc7b87795f8e2a3302637abb6a4e89c724088ec42c6e7cf04381382cb1c99aa2a5698f0a8fe4441c873b6b0ae657989762257a62db7b2e7246c87135d432c216313281fd2ad64701b5d13ba9f996d7f32fa68690b3c494f1688f9cfcd59842570ac9d68c05e03162c3263953264292a1c2942ad43b8e7c4dac8df1e164466246974230ee85224f66bfcdca4ec19eab1606bc2d113d60d92bcad44487655f13c16747711c6a2ea11b85ae8cae4859c0431864061f4c4a01d282bb723d8fe3feff55a084213326d1b9a688387c579aa903b7ec24d80d064e42770e1ec5e6be63772c06ede941f705ef93bf6bdc58d6c0dcb6d1366542c653ab09aea61e090ea007e808f1ca9db2edc6e631066409dc1bc9a27d35ddb205764ca4010b106ea0c006bb072d39ea85ed6326be624890a37adc259f4825f4f58524e4f9a6137dd381473e6a6b9eaf406fefc0d650f11a1f9e6e664651677882a534ea31e5ebd015c78fd80c7e1f8b376eb243ad5a89adc7260511e5a964169f8122fb20f1086ddcd755a7e1148b794c37f2f1ebfcf48449d23891265f8e3dc7ffcbb6a7cbcd710158a4b47d436a6e1a41227fc1873c8ebbeb5e509e652174f557b2db641385a22e0babee1a709b4fa70c0feb45bdd49786dab26459614a3fa81db989b805bffc60e52598a9b83a726b8adf785b003585b1a27e2cc76a7e840b776b5a1f15f8601e28f765f069436ce3a5887179fa79f76172fdc4b300bd4cfa0b0725be342f8c22c34b210d7caaacd27edc7541f766bb5e295abca021b4f2b8ada8c7c8d756f856ebcdd260ad532fa724c3fa963bdd4ac445b8b09a9a553c1675ee631fdba914fcdb00b11490441c45a7ed032c5020929d54550e4da09671e6d0ea7628f48e710547696b80ed7dd25d812ef70392e8b73bdd61d46a1acffa0ed8a1902f2f9862b6bf863ad39531d68cb74c5c6bd126e40c345c027a71ee66743927fc7888ca7f1b4ebfe6b8e14dbc4a0b50a7469eddc98a2f8177645d46892e8c9328daf6453a2c319463a9d4641e38638e25d8280d7b2bf432202986406d58582235da1f8f9d7d920fad59cb0cf2a6bd0643914b6e013a690b795d70cf9013891d35636589fde8ad64f7783a26f9d4637c0eeb8f626f1f4cafaa8aa048eb60125eca0dd82e3997aaa474051aa8fc3f2fdadb0277ca3ccca354ab5315683ce604645178607c7777601704e5ad8a20cbd3a1367ae3b2f9a9fa807117b775bd1d88cbece6326b3b04d8c386ac83d9e0c943b23cd414e59baddc253ba6ee8065dbddb6e5d1c380cc27a6da8342fc46e838cec96461</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 </div>
                 
 
@@ -395,7 +279,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240503 hexo搭建+关键计划复盘</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -409,7 +293,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240503</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -426,15 +310,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -518,7 +402,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">常用linux命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">静态库和动态库*</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="nav-number">2.1.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%BA%93"><span class="nav-number">2.2.</span> <span class="nav-text">静态库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%BA%93"><span class="nav-number">2.3.</span> <span class="nav-text">动态库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">进程通信的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B-%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4-%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">3.1.</span> <span class="nav-text">进程 用户空间 内核空间之间的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%8C%BA%E5%88%86%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E6%A0%B7%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.2.</span> <span class="nav-text">为什么需要区分内核空间与用户空间&#x2F;为什么这样设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E6%A0%B8%E6%80%81%E4%B8%8E%E7%94%A8%E6%88%B7%E6%80%81"><span class="nav-number">3.2.1.</span> <span class="nav-text">内核态与用户态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E9%81%93"><span class="nav-number">3.3.</span> <span class="nav-text">管道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.3.1.</span> <span class="nav-text">基本介绍</span></a></li></ol></li></ol></li></ol>
+        
     </div>
 </div>
 
@@ -545,7 +429,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -558,14 +442,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -671,7 +555,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">常用linux命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%BA%93%E5%92%8C%E5%8A%A8%E6%80%81%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">静态库和动态库*</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="nav-number">2.1.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%BA%93"><span class="nav-number">2.2.</span> <span class="nav-text">静态库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%BA%93"><span class="nav-number">2.3.</span> <span class="nav-text">动态库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">进程通信的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B-%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4-%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">3.1.</span> <span class="nav-text">进程 用户空间 内核空间之间的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%8C%BA%E5%88%86%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4%E4%B8%8E%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E6%A0%B7%E8%AE%BE%E8%AE%A1"><span class="nav-number">3.2.</span> <span class="nav-text">为什么需要区分内核空间与用户空间&#x2F;为什么这样设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E6%A0%B8%E6%80%81%E4%B8%8E%E7%94%A8%E6%88%B7%E6%80%81"><span class="nav-number">3.2.1.</span> <span class="nav-text">内核态与用户态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E9%81%93"><span class="nav-number">3.3.</span> <span class="nav-text">管道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.3.1.</span> <span class="nav-text">基本介绍</span></a></li></ol></li></ol></li></ol>
+        
     </div>
 </div>
 
