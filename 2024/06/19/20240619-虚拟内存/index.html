@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Wed Jun 19 2024 23:28:15 GMT+0800">2024-06-19 23:28:15</span>
+                <span class="datetime" data-updated="Fri Jun 21 2024 14:01:36 GMT+0800">2024-06-21 14:01:36</span>
             </span>
         
 
@@ -250,6 +250,32 @@
 <li><p>虚拟内存和物理内存的计算关系和抽象关系是什么？</p>
 </li>
 </ul>
+<h1 id="为什么我们需要设置虚拟内存"><a href="#为什么我们需要设置虚拟内存" class="headerlink" title="为什么我们需要设置虚拟内存"></a>为什么我们需要设置虚拟内存</h1><ul>
+<li>假设我们都是物理寻址的话，</li>
+</ul>
+<blockquote>
+<p>1.操作系统的地址直接暴露给用户程序，用户程序可以破坏操作系统</p>
+<p>2.多个用户程序如果都直接引用物理地址，很容易互相干扰。</p>
+<p>3.此外，进程申请的内存可能并没有使用，如果有太多的进程同时申请了大量的内存，也会导致物理内存不够用。</p>
+</blockquote>
+<p>针对以上三种情况，我认为虚拟内存的作用应该是</p>
+<blockquote>
+<p>1.内存保护：使得每个进程只能访问其自己的虚拟地址空间，无法直接访问操作系统的内存区域</p>
+<p>2.虚拟内存为每个进程提供了独立的地址空间，进程之间的地址空间互不干扰，避免了多个用户程序引用相同物理地址导致的互相干扰。</p>
+<p>3.虚拟内存通过使用磁盘使得系统可以支持比实际物理内存更多的内存需求。这种技术允许进程申请的内存超过物理内存的大小，从而有效解决了物理内存不足的问题。</p>
+</blockquote>
+<h1 id="简单描述一下虚拟内存的工作过程"><a href="#简单描述一下虚拟内存的工作过程" class="headerlink" title="简单描述一下虚拟内存的工作过程"></a>简单描述一下虚拟内存的工作过程</h1><ul>
+<li><p><strong>程序运行</strong>：CPU执行程序代码，生成虚拟地址0x1234。</p>
+<p><strong>地址转换</strong>：MMU查找页表，发现虚拟地址0x1234对应的物理地址为0x5678。</p>
+<p><strong>内存访问</strong>：MMU使用物理地址0x5678访问内存中的数据。</p>
+<p><strong>页面缺失</strong>：如果页表中没有找到对应的物理地址，发生页面缺失。</p>
+<p>操作系统将所需页面从磁盘换入内存，并更新页表。</p>
+<p><strong>页面置换</strong>：如果物理内存已满，操作系统使用页面置换算法选择一个页面换出到磁盘，以腾出空间加载新页面。</p>
+</li>
+</ul>
+<blockquote>
+<p>现在常用的操作系统们大多是分页并非分段！</p>
+</blockquote>
 
                 </div>
                 
@@ -279,7 +305,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240620 思索</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -293,7 +319,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240619 opnet</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -310,15 +336,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -402,7 +428,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B2%A1%E7%9C%8B%E7%9F%A5%E8%AF%86%E5%89%8D%E7%9A%84%E4%B8%BB%E8%A7%82%E5%9B%9E%E5%BF%86"><span class="nav-number">1.</span> <span class="nav-text">没看知识前的主观回忆</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B2%A1%E7%9C%8B%E7%9F%A5%E8%AF%86%E5%89%8D%E7%9A%84%E4%B8%BB%E8%A7%82%E5%9B%9E%E5%BF%86"><span class="nav-number">1.</span> <span class="nav-text">没看知识前的主观回忆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98"><span class="nav-number">2.</span> <span class="nav-text">为什么我们需要设置虚拟内存</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%9A%84%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">简单描述一下虚拟内存的工作过程</span></a></li></ol>
     </div>
 </div>
 
@@ -429,7 +455,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -442,14 +468,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -555,7 +581,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B2%A1%E7%9C%8B%E7%9F%A5%E8%AF%86%E5%89%8D%E7%9A%84%E4%B8%BB%E8%A7%82%E5%9B%9E%E5%BF%86"><span class="nav-number">1.</span> <span class="nav-text">没看知识前的主观回忆</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B2%A1%E7%9C%8B%E7%9F%A5%E8%AF%86%E5%89%8D%E7%9A%84%E4%B8%BB%E8%A7%82%E5%9B%9E%E5%BF%86"><span class="nav-number">1.</span> <span class="nav-text">没看知识前的主观回忆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98"><span class="nav-number">2.</span> <span class="nav-text">为什么我们需要设置虚拟内存</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%9A%84%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">简单描述一下虚拟内存的工作过程</span></a></li></ol>
     </div>
 </div>
 
