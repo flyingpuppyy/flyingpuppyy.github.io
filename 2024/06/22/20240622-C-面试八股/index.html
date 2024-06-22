@@ -9,7 +9,7 @@
     
     <title>
         
-            20240621 算法：递归回溯字符串输出 |
+            20240622 C++面试八股 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240621 算法：递归回溯字符串输出
+                        20240622 C++面试八股
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-21 16:33:25</span>
+                <span class="datetime">2024-06-22 18:25:00</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Jun 21 2024 16:40:17 GMT+0800">2024-06-21 16:40:17</span>
+                <span class="datetime" data-updated="Sat Jun 22 2024 20:38:32 GMT+0800">2024-06-22 20:38:32</span>
             </span>
         
 
@@ -209,7 +209,7 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li>
+                            <li class="category-item"><a href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></li>
                         
                     
                 </ul>
@@ -239,27 +239,62 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>创建一个递归回溯算法，注意：字符串的排列组合，而不是字符的排列组合。</p>
-<p>如果输入是 “123”，”456”，”789”输出的结果是 “123456789” “456123789” “456789123” “789123456 “等。</p>
-<p> (a) 一个递归函数 “permutate_strings”，它将接收一个字符串数组作为输入，并生成所有可能的字符串排列组合</p>
-<p> (b) 一个 “swap_strings “函数，它将被用于 “permutate_strings”，以帮助你生成所有可能的排列组合</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap_strings</span><span class="params">(std::vector&lt;std::string&gt;&amp; strs, <span class="type">int</span> i, <span class="type">int</span> j)</span> </span>&#123;</span><br><span class="line">    std::string temp = strs[i];</span><br><span class="line">    strs[i] = strs[j];</span><br><span class="line">    strs[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">permutate_strings</span><span class="params">(std::vector&lt;std::string&gt;&amp; strs, <span class="type">int</span> start, std::vector&lt;std::string&gt;&amp; result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//探索终点将当前站位拼接输出</span></span><br><span class="line">    <span class="keyword">if</span> (start == strs.<span class="built_in">size</span>() - <span class="number">1</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        std::string permutation;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; str : strs)</span><br><span class="line">        &#123;</span><br><span class="line">            permutation += str;</span><br><span class="line">        &#125;</span><br><span class="line">        result.<span class="built_in">push_back</span>(permutation);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//进行排列组合</span></span><br><span class="line">    <span class="comment">//基本思路：定初始一位，后面其他位同样定且交换</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = start; i &lt; strs.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">        <span class="built_in">swap_strings</span>(strs, start, i);</span><br><span class="line">        <span class="built_in">permutate_strings</span>(strs, start + <span class="number">1</span>, result);</span><br><span class="line">        <span class="built_in">swap_strings</span>(strs, start, i);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//回溯过程中将交换还原到初始位置</span></span><br><span class="line">        <span class="comment">//递归多少层就回溯多少层</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::vector&lt;std::string&gt; input = &#123;<span class="string">&quot;123&quot;</span>, <span class="string">&quot;456&quot;</span>, <span class="string">&quot;789&quot;</span>&#125;;</span><br><span class="line">    std::vector&lt;std::string&gt; result;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">permutate_strings</span>(input, <span class="number">0</span>, result);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; permutation : result) &#123;</span><br><span class="line">        std::cout &lt;&lt; permutation &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="回溯总结"><a href="#回溯总结" class="headerlink" title="回溯总结"></a>回溯总结</h1><p>chatgpt</p>
-<h3 id="回溯算法的结构"><a href="#回溯算法的结构" class="headerlink" title="回溯算法的结构"></a>回溯算法的结构</h3><p>回溯算法通常采用递归的形式实现。典型的回溯算法可以描述如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">backtrack</span><span class="params">(部分解)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (当前部分解是完整解) &#123;</span><br><span class="line">        处理完整解;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (选择 : 当前可行的选项) &#123;</span><br><span class="line">        <span class="keyword">if</span> (选择满足约束条件) &#123;</span><br><span class="line">            做选择;</span><br><span class="line">            <span class="built_in">backtrack</span>(新的部分解);</span><br><span class="line">            撤销选择; <span class="comment">// 回溯</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="回溯的应用场景"><a href="#回溯的应用场景" class="headerlink" title="回溯的应用场景"></a>回溯的应用场景</h3><p>回溯算法常用于解决以下类型的问题：</p>
+                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
+<li>这个题库里几乎所有东西你都你能看懂，对于面试来说，最重要的就是复述！带有自己逻辑和框架的复述！</li>
+</ul>
+<h1 id="C-11新特性"><a href="#C-11新特性" class="headerlink" title="C++11新特性"></a>C++11新特性</h1><h2 id="unique-ptr和shared-ptr的区别是什么"><a href="#unique-ptr和shared-ptr的区别是什么" class="headerlink" title="unique_ptr和shared_ptr的区别是什么"></a>unique_ptr和shared_ptr的区别是什么</h2><p>uptr指向的对象只能有一个uptr指针作为访问入口</p>
+<p>sptr指向的对象可以有多个sptr指向同一个对象作为访问入口</p>
+<p>两者都能实现内存的自动管理与释放</p>
+<h2 id="shared-ptr是线程安全的吗"><a href="#shared-ptr是线程安全的吗" class="headerlink" title="shared_ptr是线程安全的吗"></a>shared_ptr是线程安全的吗</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/56836057" >https://www.zhihu.com/question/56836057<i class="fas fa-external-link-alt"></i></a></p>
 <ul>
-<li><strong>组合问题</strong>：例如子集生成、排列生成、组合生成。</li>
-<li><strong>约束满足问题</strong>：例如数独、N皇后问题、图的着色问题。</li>
-<li><strong>路径搜索问题</strong>：例如迷宫求解、骑士巡游问题。</li>
+<li>线程安全：线程的操作都按照预期执行。如果多线程环境下代码运行的结果是符合我们预期的，即在单线程环境应该的结果，则说这个程序是线程安全的。 </li>
+<li>谈到sptr的时候，要分不同的操作对象和操作行为来讨论其线程安全性</li>
+</ul>
+<blockquote>
+<p>1.shareptr引用记数的行为（是线程安全的，因为源码是原子操作）</p>
+<p>2.shareptr修改指针指向的行为是线程安全的吗？</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240622193609122.png"  alt="image-20240622193609122"></p>
+<p>3.所管理数据的线程安全性（不是线程安全的，</p>
+<blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240622193840841.png"  alt="image-20240622193840841"></p>
+</blockquote>
+</blockquote>
+<h2 id="C-11引入了哪些新的指针类型？简单描述一下它们的作用"><a href="#C-11引入了哪些新的指针类型？简单描述一下它们的作用" class="headerlink" title="C++11引入了哪些新的指针类型？简单描述一下它们的作用*"></a>C++11引入了哪些新的指针类型？简单描述一下它们的作用*</h2><blockquote>
+<p>引入了s u w</p>
+<p>s</p>
+<p>u</p>
+<p>w  弱引用：不增加引用计数，不影响对象的生命周期。</p>
+<blockquote>
+<p>还是不太懂w会被用在哪里</p>
+</blockquote>
+</blockquote>
+<h2 id="C-11中的右值引用与移动语义是怎样提高性能的"><a href="#C-11中的右值引用与移动语义是怎样提高性能的" class="headerlink" title="C++11中的右值引用与移动语义是怎样提高性能的"></a>C++11中的右值引用与移动语义是怎样提高性能的</h2><ul>
+<li><p>右值引用：通过 <code>&amp;&amp;</code> 实现，允许对临时对象进行引用。</p>
+</li>
+<li><p>在对象的传递和返回操作中。<strong>通过减少不必要的拷贝操作</strong>，右值引用和移动语义可以显著提升效率。</p>
+</li>
+<li><p>移动语义：允许资源从一个对象“移动”到另一个对象，而不是复制资源。这对于涉及动态内存、文件句柄等资源的对象非常有用，因为移动操作可以显著减少资源管理的开销。</p>
+</li>
+<li><p>实现所需步骤：自己实现移动构造函数和移动赋值运算符</p>
+</li>
+</ul>
+<h2 id="C11中右值左值相互转换的问题"><a href="#C11中右值左值相互转换的问题" class="headerlink" title="C11中右值左值相互转换的问题"></a>C11中右值左值相互转换的问题</h2><p><strong>左值可以隐式转换成右值</strong>：当左值在需要右值的地方使用时，编译器会自动完成这种转换。</p>
+<p><strong>右值不能直接转换成左值</strong>：右值是临时对象，不能直接转换成左值。但可以通过右值引用或 <code>const</code> 左值引用来间接地将右值绑定为左值，从而在需要时操作或读取它。</p>
+<blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">manipulateRvalue</span><span class="params">(<span class="type">int</span>&amp;&amp; x)</span> </span>&#123;</span><br><span class="line">    x = <span class="number">20</span>; <span class="comment">// x 是一个右值引用，但在函数体内它被视为左值</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;x: &quot;</span> &lt;&lt; x &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">manipulateRvalue</span>(<span class="number">10</span>); <span class="comment">// 10 是右值</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printRvalue</span><span class="params">(<span class="type">const</span> <span class="type">int</span>&amp; x)</span> </span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;x: &quot;</span> &lt;&lt; x &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printRvalue</span>(<span class="number">10</span>); <span class="comment">// 10 是右值</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="C-请你谈谈对auto关键字的理解-并且谈谈在实际应用中它的作用"><a href="#C-请你谈谈对auto关键字的理解-并且谈谈在实际应用中它的作用" class="headerlink" title="C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用"></a>C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用</h2><ul>
+<li>使用 <code>auto</code> 关键字时，你不需要显式地指定变量的类型，编译器会根据变量的初始化表达式来推断其类型。</li>
+<li><code>auto</code> 可以用于局部变量、函数参数、返回类型等场景。</li>
+</ul>
+<ul>
+<li>类型推断推断变量的类型。</li>
+<li>在泛型编程中，当类型参数非常复杂或者难以显式指定时用</li>
+<li></li>
 </ul>
 
                 </div>
@@ -279,31 +314,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/06/22/20240622-C-%E9%9D%A2%E8%AF%95%E5%85%AB%E8%82%A1/"
-                                   title="20240622 C++面试八股"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240622 C++面试八股</span>
-                                        <span class="post-nav-item">Prev posts</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/21/20240621-%E6%B3%A8%E5%86%8C%E9%A1%B9/"
-                                   title="20240621 注册项"
+                                   href="/2024/06/21/20240621-%E9%80%92%E5%BD%92%E5%9B%9E%E6%BA%AF%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BE%93%E5%87%BA/"
+                                   title="20240621 算法：递归回溯字符串输出"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240621 注册项</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240621 算法：递归回溯字符串输出</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -413,7 +432,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">回溯总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.0.1.</span> <span class="nav-text">回溯算法的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.0.2.</span> <span class="nav-text">回溯的应用场景</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">C++11新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#unique-ptr%E5%92%8Cshared-ptr%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">unique_ptr和shared_ptr的区别是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shared-ptr%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97"><span class="nav-number">2.2.</span> <span class="nav-text">shared_ptr是线程安全的吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E5%BC%95%E5%85%A5%E4%BA%86%E5%93%AA%E4%BA%9B%E6%96%B0%E7%9A%84%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B%EF%BC%9F%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E5%AE%83%E4%BB%AC%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">C++11引入了哪些新的指针类型？简单描述一下它们的作用*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E4%B8%AD%E7%9A%84%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8%E4%B8%8E%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89%E6%98%AF%E6%80%8E%E6%A0%B7%E6%8F%90%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84"><span class="nav-number">2.4.</span> <span class="nav-text">C++11中的右值引用与移动语义是怎样提高性能的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C11%E4%B8%AD%E5%8F%B3%E5%80%BC%E5%B7%A6%E5%80%BC%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text">C11中右值左值相互转换的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E8%AF%B7%E4%BD%A0%E8%B0%88%E8%B0%88%E5%AF%B9auto%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E7%90%86%E8%A7%A3-%E5%B9%B6%E4%B8%94%E8%B0%88%E8%B0%88%E5%9C%A8%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E4%B8%AD%E5%AE%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.6.</span> <span class="nav-text">C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -566,7 +585,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">回溯总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.0.1.</span> <span class="nav-text">回溯算法的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.0.2.</span> <span class="nav-text">回溯的应用场景</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">C++11新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#unique-ptr%E5%92%8Cshared-ptr%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">unique_ptr和shared_ptr的区别是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shared-ptr%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97"><span class="nav-number">2.2.</span> <span class="nav-text">shared_ptr是线程安全的吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E5%BC%95%E5%85%A5%E4%BA%86%E5%93%AA%E4%BA%9B%E6%96%B0%E7%9A%84%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B%EF%BC%9F%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E5%AE%83%E4%BB%AC%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">C++11引入了哪些新的指针类型？简单描述一下它们的作用*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E4%B8%AD%E7%9A%84%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8%E4%B8%8E%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89%E6%98%AF%E6%80%8E%E6%A0%B7%E6%8F%90%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84"><span class="nav-number">2.4.</span> <span class="nav-text">C++11中的右值引用与移动语义是怎样提高性能的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C11%E4%B8%AD%E5%8F%B3%E5%80%BC%E5%B7%A6%E5%80%BC%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text">C11中右值左值相互转换的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E8%AF%B7%E4%BD%A0%E8%B0%88%E8%B0%88%E5%AF%B9auto%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E7%90%86%E8%A7%A3-%E5%B9%B6%E4%B8%94%E8%B0%88%E8%B0%88%E5%9C%A8%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E4%B8%AD%E5%AE%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.6.</span> <span class="nav-text">C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用</span></a></li></ol></li></ol>
     </div>
 </div>
 
