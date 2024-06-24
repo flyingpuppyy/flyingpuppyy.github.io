@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20210713 STL |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"你过于安静勇敢，我忘了你正在承受苦痛","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20210713 STL
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv5</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2021-07-13 23:11:12</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Mon Jun 24 2024 12:37:21 GMT+0800">2024-06-24 12:37:21</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <p>STL&#x2F;7&#x2F;13</p>
+<h2 id="STL简介"><a href="#STL简介" class="headerlink" title="STL简介"></a>STL简介</h2><ul>
+<li><strong>标准库&gt;STL,标准模板库</strong></li>
+<li>STL内含六大部件</li>
+<li>展现形式：</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231350225.png"  alt="image-20240623231350225"></p>
+<blockquote>
+<p>补充：命名空间：封装你自己写的东西（函数，模板类等）</p>
+<p><strong>标准库里的东西都在命名空间中</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231406177.png"  alt="image-20240623231406177"></p>
+<blockquote>
+<p>把std里面的东西都给放出来能够被使用</p>
+</blockquote>
+</blockquote>
+<hr>
+<ul>
+<li>迭代器分类的设计&#x2F;&#x2F;&#x3D;&#x3D;移动的性质&#x3D;&#x3D;因此特别需要搞清楚<strong>不理解</strong></li>
+<li>数据结构和算法的标准</li>
+<li>六大组件：&#x3D;&#x3D;容器，算法，迭代器，仿函数（？）&#x3D;&#x3D;，适配器（搞接口），空间配置器</li>
+</ul>
+<p>&#x3D;&#x3D;<strong>六大组件关系图</strong>&#x3D;&#x3D;</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641829659949.png"  alt="1641829659949"></p>
+<blockquote>
+<p> 算法看不到容器,只看见迭代器，</p>
+<p> 通过迭代器看到容器，</p>
+<p> 这就是迭代器需要回答的原因。（上图左下文字</p>
+</blockquote>
+<hr>
+<h2 id="仿函数"><a href="#仿函数" class="headerlink" title="仿函数"></a>仿函数</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210825160347147.png"  alt="image-20210825160347147"></p>
+<p>1.普通函数</p>
+<p>2.可以记录调用次数</p>
+<p>3.可以重载（自定义重载）</p>
+<h3 id="谓词"><a href="#谓词" class="headerlink" title="谓词"></a>谓词</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210825164442565.png"  alt="image-20210825164442565"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	negate&lt;<span class="type">int</span>&gt;n;</span><br><span class="line">	cout &lt;&lt; <span class="built_in">n</span>(<span class="number">50</span>) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test2</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	plus&lt;<span class="type">int</span>&gt;p;</span><br><span class="line">	cout &lt;&lt; <span class="built_in">p</span>(<span class="number">10</span>, <span class="number">20</span>) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">test1</span>();</span><br><span class="line">	<span class="built_in">test2</span>();</span><br><span class="line">	std::cout &lt;&lt; <span class="string">&quot;Hello World!\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="内建对象"><a href="#内建对象" class="headerlink" title="内建对象"></a>内建对象</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210826160208052.png"  alt="image-20210826160208052"></p>
+<h3 id="使用例子"><a href="#使用例子" class="headerlink" title="使用例子"></a>使用例子</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641884351189.png"  alt="1641884351189"></p>
+<blockquote>
+<p>左四紫：给定类型，产生函数对象，放进去</p>
+<p>左五紫：</p>
+</blockquote>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231436779.png"  alt="image-20240623231436779"></p>
+<blockquote>
+<p>黄色部分：内部的这些仿函数都有继承关系</p>
+</blockquote>
+<ul>
+<li>这里是所继承的东西</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641884647946.png"  alt="1641884647946"></p>
+<blockquote>
+<p>binary_function:两个操作数的操作</p>
+<p>unart_function：一个操作数的操作，比如取反</p>
+<blockquote>
+<p>虽然说这些仿函数单独存在的时候大小实际可能为1</p>
+<p>如果被继承了，那么成为父类的仿函数一定是0</p>
+</blockquote>
+<p>对于less，在继承之后：</p>
+<p>对于迭代器，需要回答算法的问题</p>
+<p>对于仿函数，需要回答适配器的问题</p>
+<p>怎样回答，通过继承上图左边两个中的其中一个来回答</p>
+<blockquote>
+<p>想要自己写的仿函数融入STL，最好继承上图左边两个中的其中一个</p>
+</blockquote>
+</blockquote>
+<h4 id="算术仿函数"><a href="#算术仿函数" class="headerlink" title="算术仿函数"></a>算术仿函数</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//////算术类仿函数 + - * / %////////////////////////////////</span></span><br><span class="line"><span class="comment">//plus仿函数，生成一个对象，里面仅仅有一个函数重载的方法。</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">plus</span> : <span class="keyword">public</span> binary_function&lt;T, T, T&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">T <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">const</span> T&amp; x, <span class="type">const</span> T&amp; y)</span> <span class="type">const</span></span></span><br><span class="line"><span class="function">    </span>&#123; <span class="keyword">return</span> x + y; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//minus仿函数</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">minus</span> : <span class="keyword">public</span> binary_function&lt;T, T, T&gt; </span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">T <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">const</span> T&amp; x, <span class="type">const</span> T&amp; y)</span> <span class="type">const</span> </span></span><br><span class="line"><span class="function">    </span>&#123; <span class="keyword">return</span> x - y; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">multiplies</span> : <span class="keyword">public</span> binary_function&lt;T, T, T&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">T <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">const</span> T&amp; x, <span class="type">const</span> T&amp; y)</span> <span class="type">const</span></span></span><br><span class="line"><span class="function">    </span>&#123; <span class="keyword">return</span> x * y; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">divides</span> : <span class="keyword">public</span> binary_function&lt;T, T, T&gt; </span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">T <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">const</span> T&amp; x, <span class="type">const</span> T&amp; y)</span> <span class="type">const</span> </span></span><br><span class="line"><span class="function">    </span>&#123; <span class="keyword">return</span> x / y; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">modulus</span> : <span class="keyword">public</span> binary_function&lt;T, T, T&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">T <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">const</span> T&amp; x, <span class="type">const</span> T&amp; y)</span> <span class="type">const</span></span></span><br><span class="line"><span class="function">    </span>&#123; <span class="keyword">return</span> x % y; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//取负值</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">negate</span> : <span class="keyword">public</span> unary_function&lt;T, T&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">T <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">const</span> T&amp; x)</span> <span class="type">const</span> </span>&#123; <span class="keyword">return</span> -x; &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="关系仿函数"><a href="#关系仿函数" class="headerlink" title="关系仿函数"></a>关系仿函数</h4><h4 id="逻辑仿函数"><a href="#逻辑仿函数" class="headerlink" title="逻辑仿函数"></a>逻辑仿函数</h4><h3 id="特殊仿函数介绍"><a href="#特殊仿函数介绍" class="headerlink" title="特殊仿函数介绍"></a>特殊仿函数介绍</h3><ul>
+<li>GNUC++&#x3D;&#x3D;特有&#x3D;&#x3D;</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641883342840.png"  alt="1641883342840"></p>
+<ul>
+<li>G2.9和G4.9名称不一样</li>
+</ul>
+<h2 id="分配器"><a href="#分配器" class="headerlink" title="分配器"></a>分配器</h2><ul>
+<li>分配器在几个奇怪的命名空间里</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231501393.png"  alt="image-20240623231501393"></p>
+<ul>
+<li><p>都放在ext库下</p>
+</li>
+<li><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641651446039.png"  alt="1641651446039"></p>
+</li>
+<li><p>例子：双向链表搭配，放100个元素，看不同分配器的执行时间</p>
+</li>
+<li><p>分配器是一个class</p>
+</li>
+<li><p>没必要单独需要分配器</p>
+</li>
+<li><p>分配器和容器一起使用</p>
+</li>
+<li><p>一般的分配空间的方式：malloc，free，new……</p>
+</li>
+<li><p>反正直接用分配器不好，会需要记住当时利用了多少个</p>
+</li>
+<li><p><strong>底层都是</strong>：malloc，free</p>
+</li>
+<li><p>operator_new一个函数</p>
+</li>
+<li><p><strong>malloc会有一些额外的开销&#x2F;空间使用，相对于你需要申请的内存空间，有时候额外开销比你需要申请的空间所使用的开销都大这个相对程度一般取决于看区块的大小吧，区块小，开销相对而言就很大</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>元素小小，有时候开销更大大</p>
+</blockquote>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p><strong>VC6</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231542515.png"  alt="image-20240623231542515"></p>
+<ul>
+<li><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641656381088.png"  alt="1641656381088">知道是什么类型的一个小技巧</li>
+<li>分配器的直接使用:&#x2F;&#x2F;VC6</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641656426536.png"  alt="1641656426536"></p>
+<blockquote>
+<p>需要记忆当时候申请了多少内存，挺难用的</p>
+</blockquote>
+<p><strong>BC5</strong>&#x2F;&#x2F;有默认值</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122109145.png"  alt="image-20240624122109145"></p>
+<p><strong>G2.9</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122126543.png"  alt="image-20240624122126543"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641658369093.png"  alt="1641658369093"></p>
+<ul>
+<li>这个版本的容器用的分配器和通常意义一般的分配器不是同一个分配器</li>
+<li>特殊分配器：alloc会尽量减少底层malloc的次数&#x2F;&#x2F;这样会减少额外开销，cookie记录着空间的大小，</li>
+<li>对于容器，可以不需要cookie</li>
+<li>alloc十六条链表，问这个分配器要内存，并且内存块大小调整到8的倍数<strong>也不是很理解，反正省空间，省空间的原理是减少了cookie的空间</strong></li>
+</ul>
+<p><strong>G4.9</strong></p>
+<ul>
+<li>这容器不再用alloc分配器&#x2F;&#x2F;没有特殊设计了</li>
+<li>G2.9中的alloc仍在，换了个名字，想用的话也可以自己指定继续用</li>
+</ul>
+<h2 id="适配器"><a href="#适配器" class="headerlink" title="适配器"></a>适配器</h2><ul>
+<li><p>标准库定义了三个顺序容器适配器：stack、queue和priority_queue。</p>
+</li>
+<li><p>适配器(adaptor)是标准库中的一个通用概念。<strong>容器、迭代器和函数都有适配器。</strong>本质上，一个适配器是一种机制，<strong>能使某种事物的行为看起来像另外一种事物一样。</strong></p>
+<p>一个容器适配器接受一种已有的容器类型，使其行为看起来像一种不同的类型。</p>
+</li>
+<li><p>底层不是拥有自己的数据结构的容器（stack，queue）</p>
+</li>
+<li><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641797251477.png"  alt="1641797251477"></p>
+</li>
+<li><p>存在形式：</p>
+</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641886434915.png"  alt="1641886434915"></p>
+<blockquote>
+<p>B改造某一个东西之后，为A，</p>
+<p>用A的时候，大家只看到A，看不到B，实际做还是用B</p>
+<p>A用B的功能咋用：1.继承；2.内含&#x2F;&#x2F;这里适配器大部分都是采用了内含的方式</p>
+</blockquote>
+<h3 id="分类-1"><a href="#分类-1" class="headerlink" title="分类"></a>分类</h3><h4 id="容器适配器"><a href="#容器适配器" class="headerlink" title="容器适配器"></a>容器适配器</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122143007.png"  alt="image-20240624122143007"></p>
+<blockquote>
+<p>蓝色部分：已经改变的名称，但是实际的运行还是按照底层容器的对应函数的运行方式</p>
+</blockquote>
+<h4 id="函数适配器"><a href="#函数适配器" class="headerlink" title="函数适配器"></a>函数适配器</h4><blockquote>
+<p>把参数记录，后面调用的时候传给被修饰的对象？？？？</p>
+</blockquote>
+<h5 id="例子一binder2nd"><a href="#例子一binder2nd" class="headerlink" title="例子一binder2nd"></a>例子一binder2nd</h5><p><strong>不理解</strong></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641887414016.png"  alt="1641887414016"></p>
+<blockquote>
+<p>灰色部分帮助检查&lt;&gt;里面的类型和传入的参数，比如40，的类型相同还是不相同</p>
+<blockquote>
+<p>typename的作用：加上了为了让编译器通过<strong>不理解</strong></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>bind2nd要修饰less，less是两个操作数的动作，执行了什么问答过程（第一个操作数类型是什么，第二个操作数类型是什么，最后结果的操作结果类型是什么），回答好这三个问题之后，less才能被binder2nd修饰，这才是<strong>可适配的</strong></p>
+</li>
+<li><p>可适配的条件：回答被继承的东西的里面的问题</p>
+</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122156982.png"  alt="image-20240624122156982"></p>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641887542347.png"  alt="1641887542347"></p>
+<blockquote>
+<p>传入自定义的规则，这里可以自己单独写，也可以传参给函数适配器，再把适配器传给函数</p>
+<blockquote>
+<p>红色部分是库里已经给过的的适配器，是一个对象</p>
+<p>传进去的时候，这一行的时候，并没有被调用</p>
+</blockquote>
+</blockquote>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641888733761.png"  alt="1641888733761"></p>
+<blockquote>
+<p>这里的not1当作不存在</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641888578709.png"  alt="1641888578709"></p>
+<blockquote>
+<p>刚传进去的时候，</p>
+<p>less 是主体里的op</p>
+<p>value是40被记录在主体中</p>
+<hr>
+<p>真正被调用的时候，是上图的蓝色被重载部分里面发挥作用</p>
+<hr>
+<p>less<int>()是什么类型，是一个类型+小括号形成的对象</p>
+<hr>
+<p>如果这个把别人修饰的之后所形成的东西又得被修饰的话，就必须得要，继承unary_function</p>
+<hr>
+<p>不论怎样，对外面直接展示的接口是下面这样的</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641889129328.png"  alt="1641889129328"></p>
+<blockquote>
+<p> 返回的是对象</p>
+<p> 所产生的对象就被传给最上面count——if&#x2F;&#x2F;不含not1的</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122216318.png"  alt="image-20240624122216318"></p>
+<blockquote>
+<p>运行到蓝色部分，然后就调用operator（）的紫色部分</p>
+</blockquote>
+<h5 id="not1"><a href="#not1" class="headerlink" title="not1"></a>not1</h5><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122231232.png"  alt="image-20240624122231232"></p>
+<blockquote>
+<p>继续修饰，bind2nd已经修饰过的函数对象</p>
+</blockquote>
+<blockquote>
+<p>左上红色部分进行实参推导，在实际运行的时候，顺着线走到右下能够创建出一个对象。</p>
+<p>接着到左下角，这个被传进去的东西能够被用，在蓝色部分执行的时候，才会到右边最下面紫色部分进行执行</p>
+</blockquote>
+<h5 id="新型适配器-bind"><a href="#新型适配器-bind" class="headerlink" title="新型适配器 bind"></a>新型适配器 bind</h5><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641890660808.png"  alt="1641890660808"></p>
+<blockquote>
+<p>右边的使用是过时的东西，要用也可以，仍然存在</p>
+</blockquote>
+<ul>
+<li>作用</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122244593.png"  alt="image-20240624122244593"></p>
+<blockquote>
+<p>_1占位符号</p>
+</blockquote>
+<ul>
+<li>被测试的东西：</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641892075650.png"  alt="1641892075650"></p>
+<ul>
+<li>测试实例：</li>
+</ul>
+<p>看注释表示的是上面对应注释应用类型的哪一种</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641892115596.png"  alt="1641892115596"></p>
+<blockquote>
+<p>最上面的作用：显示占位符</p>
+</blockquote>
+<blockquote>
+<p>直接看最上面三个例子来理解占位符</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122255931.png"  alt="image-20240624122255931"></p>
+<blockquote>
+<p>加上模板参数<int>这里将3.33333转话成3</p>
+</blockquote>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641892447219.png"  alt="1641892447219"></p>
+<blockquote>
+<p>单单看前三个我有点糊涂<strong>不理解</strong></p>
+</blockquote>
+<blockquote>
+<p>cbegin(),cend()不允许改变容器里面的东西</p>
+</blockquote>
+<h2 id="容器简介"><a href="#容器简介" class="headerlink" title="容器简介"></a>容器简介</h2><ul>
+<li>容器之间联系联系</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641659570140.png"  alt="1641659570140"></p>
+<ul>
+<li>stack里有deque</li>
+<li>priority中有vector</li>
+<li>A怎样用B的方法：1.继承2.复合</li>
+<li>下面有C++11特性</li>
+<li>蓝色：容器本身的基础东西的大小</li>
+</ul>
+<h3 id="分类-2"><a href="#分类-2" class="headerlink" title="分类"></a>分类</h3><ul>
+<li><p>序列式容器</p>
+</li>
+<li><p>关联式容器</p>
+</li>
+<li><p>常用的：数组，链表，树，栈，队列，集合，映射表</p>
+</li>
+<li><p><strong>序列式容器&#x2F;顺序容器</strong></p>
+<ul>
+<li>数组，&#x3D;&#x3D;C++11&#x3D;&#x3D;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>容器（只有后头可以扩充自动增长）<ul>
+<li>队列（前后都可自动增长）</li>
+<li>list（双向链表） </li>
+<li>单向链表 &#x3D;&#x3D;C++11&#x3D;&#x3D;</li>
+</ul>
+</li>
+</ul>
+<p>1.这些容器在<strong>添加或删除元素</strong>和<strong>非顺序访问元素</strong>都有不同的性能折中</p>
+<p>2.除了array是固定大小的，其他容器都有自己的<strong>内存管理策略</strong>（增，删元素，扩缩容器大小…）。该策略会影响特定容器是否支持某些操作。</p>
+<p>3.几乎可以保存任意类型的元素</p>
+<p><strong>关联式容器</strong></p>
+<ul>
+<li><p>set&#x2F;multiset（大多数编译器都是红黑树&#x2F;平衡树）</p>
+<ul>
+<li>map&#x2F;multimap</li>
+<li>查找很快</li>
+<li>小型数据库</li>
+</ul>
+<ul>
+<li><strong>底层：红黑树，hash_table</strong></li>
+</ul>
+<p>  <strong>查找很快</strong></p>
+<blockquote>
+<p>set和map的区别是键值对与否，mul和非mul的区别是是否含有重复的数据</p>
+</blockquote>
+<p>  <strong>不定序式容器</strong></p>
+<ul>
+<li>没定序的排列</li>
+</ul>
+</li>
+<li><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122312119.png"  alt="image-20240624122312119"></p>
+<p><strong>额外补充哈希表</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641476208798.png"  alt="1641476208798"></p>
+</li>
+</ul>
+<p>​    </p>
+<p>​    </p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122328695.png"  alt="image-20240624122328695"></p>
+<blockquote>
+<p>输入需要查找的目标</p>
+</blockquote>
+<p>​    </p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641476563218.png"  alt="1641476563218"></p>
+<blockquote>
+<p>查找目标字符串</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641476695969.png"  alt="1641476695969"></p>
+<blockquote>
+<p>比较两个long是否相等</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122343769.png"  alt="image-20240624122343769"></p>
+<pre><code>&gt; 比较两个string是否相等
+</code></pre>
+<h3 id="相关数据结构基础"><a href="#相关数据结构基础" class="headerlink" title="相关数据结构基础"></a>相关数据结构基础</h3><h4 id="红黑树-非公开"><a href="#红黑树-非公开" class="headerlink" title="红黑树&#x2F;&#x2F;非公开"></a>红黑树&#x2F;&#x2F;非公开</h4><ul>
+<li>高度平衡，并且排列有序&#x2F;&#x2F;<strong>左根右的遍历树就会有序</strong></li>
+<li>可以有迭代器</li>
+<li>红黑树迭代器最好不能用来改变元素值&#x2F;&#x2F;导致排列顺序改变</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641798329985.png"  alt="1641798329985"></p>
+<blockquote>
+<p>key不能改，value可以改，因此并没有禁止&#x2F;&#x2F;为了map服务</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641798521065.png"  alt="1641798521065"></p>
+<blockquote>
+<p> 不同的插入方式,相同5都是unique放入不会报错，但是也不会实现</p>
+</blockquote>
+<ul>
+<li>传参</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641798622646.png"  alt="1641798622646"></p>
+<blockquote>
+<p>第三个是传date返回key的规则&#x2F;&#x2F;以前不是标准库的一部分</p>
+</blockquote>
+<ul>
+<li>源代码</li>
+</ul>
+<p><strong>G2.9</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641798650980.png"  alt="1641798650980"></p>
+<ul>
+<li>树的数据结构</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641798720003.png"  alt="1641798720003"></p>
+<blockquote>
+<p>compare是一个类….是一个仿函数…compare是实现上是1</p>
+<p>三者之和调整到四之和，变成12</p>
+</blockquote>
+<ul>
+<li><strong>黑结点的部分不是真正的元素，如同双向链表的最后结点</strong></li>
+</ul>
+<p><strong>G4.9</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641799672588.png"  alt="1641799672588"></p>
+<blockquote>
+<p> 采用OO里面的设计思想：handle和body，数据和实际操作分离？</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122400793.png"  alt="image-20240624122400793"></p>
+<blockquote>
+<p>公共继承，漏！</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122416718.png"  alt="image-20240624122416718"></p>
+<blockquote>
+<p>color是枚举</p>
+</blockquote>
+<h4 id="hashtable"><a href="#hashtable" class="headerlink" title="hashtable"></a>hashtable</h4><blockquote>
+<p>空间有限的情况下，映射无法一一实现，通过链表解决冲突。</p>
+<p>可能会有一个冲突点的链表很长，这样子很麻烦，我们要怎样做呢？</p>
+<p>如果元素个数比篮子个数多，就得把元素打散。</p>
+<blockquote>
+<p>篮子个数一般是素数，增长之后篮子的个数也是素数。</p>
+</blockquote>
+<p>通过增长篮子的方法来实现。改变篮子长度之后，映射函数不会改变，解决冲突的函数和解决冲突的结果将会改变。</p>
+</blockquote>
+<ul>
+<li><p>在链表很短的时候，搜索的速度很快</p>
+</li>
+<li><p>源代码</p>
+</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641824079811.png"  alt="1641824079811"></p>
+<blockquote>
+<p>传参</p>
+<blockquote>
+<p>HashFcn：映射函数</p>
+<p>EXtractkey:怎么从传入的数值数据中&#x2F;&#x2F;一包东西中 取key</p>
+<p>equalkey：怎样比较传入的数据的大小</p>
+</blockquote>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641824267068.png"  alt="1641824267068"></p>
+<blockquote>
+<p>计算大小：三个函数对象（理论值都是0，但是其实他们都是1，一共是3）+node+bucke（12）t&#x2F;&#x2F;容器+记录元素个数（4），为了对其，调整为20</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641824648843.png"  alt="1641824648843"></p>
+<blockquote>
+<p>迭代器设计：有一个指向现在结点的指针，还有一个ht，是指向当前在哪个bucket的指针</p>
+</blockquote>
+<ul>
+<li>声明一个看看</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122430671.png"  alt="image-20240624122430671"></p>
+<blockquote>
+<p>左边是初始化，右边是标准库源代码</p>
+<p>identity<strong>不理解</strong></p>
+<p>eqstr比较着两个字符串是否相等</p>
+<blockquote>
+<p>直接写strcmp行不行？不行，因为这个hashtable必须要传入只有bool的结果strump有三个结果</p>
+</blockquote>
+<p>hash&lt;const char*&gt;：有点麻烦，必须写</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122536609.png"  alt="image-20240624122536609"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641827022210.png"  alt="1641827022210"></p>
+<blockquote>
+<p>面对数值，把数值转换成编号的函数</p>
+</blockquote>
+<p>如果传入的东西没有上述的情况，就必须得自己写一个偏特化版本（类似上上图，比如string得自己写</p>
+<p><strong>映射函数</strong>？？？？？</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122548059.png"  alt="image-20240624122548059"></p>
+<blockquote>
+<p>这里到底是映射函数还是解决冲突</p>
+</blockquote>
+<h4 id="hash-function"><a href="#hash-function" class="headerlink" title="hash_function"></a>hash_function</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1642002254633.png"  alt="1642002254633"></p>
+<blockquote>
+<p>哈希函数：通过这个东西，拿到每个数据的key</p>
+</blockquote>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1642002320339.png"  alt="1642002320339"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122602084.png"  alt="image-20240624122602084"></p>
+<blockquote>
+<p>上面是一些偏特化的版本</p>
+</blockquote>
+<ul>
+<li>下面这个新版本里面的偏特化版本</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122609917.png"  alt="image-20240624122609917"></p>
+<blockquote>
+<p>这里的获得key通过黄色部分的函数实现</p>
+<p>在下面列出</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1642004361995.png"  alt="1642004361995"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1642004392332.png"  alt="1642004392332"></p>
+<ul>
+<li>在新版本里面几乎对所有的版本都做了特化</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1642004494879.png"  alt="1642004494879"></p>
+<h5 id="万能的hash-function"><a href="#万能的hash-function" class="headerlink" title="万能的hash_function"></a>万能的hash_function</h5><h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p><strong>迭代器是STL将数据容器和算法分开后连接的纽带，</strong></p>
+<p>(就当前所见例子而言，一般都是算法需要知道容器头尾迭代器+迭代器性质，然后利用迭代器对容器进行操作，如下方trait中的rotate函数具体例子分析)</p>
+<p>也是<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E6%B3%9B%E5%9E%8B&spm=1001.2101.3001.7020" >泛型<i class="fas fa-external-link-alt"></i></a>思维发展的必然结果。</p>
+<p>泛型算法就是通过迭代器操作容器的，使得算法和容器本身分离开来。</p>
+<p><strong>迭代器模式：提供一种方式，可以依次访问一个聚合物（容器）中所有元素而不暴露聚合物内部的表达方式。</strong></p>
+<p>迭代器类似与智能指针，但是它一般不会对所指向的元素进行释放空间，因为迭代器只是在指针外面包裹一层外加一些操作。</p>
+<p><strong>迭代器最重要编码工作是完成一些操作符的重载，</strong></p>
+<p>这些重载都是针对指针类型的操作，例如，++，——，*，-&gt;等，不同类型的迭代器完成的功能都不相同，详解见下文。</p>
+<p><strong>迭代器定义的位置最好是在容器内，将定义的任务交给了容器的设计者</strong>，因为每一种容器都对应一种迭代器，而定义在内部也不会暴露容器的内部元素。</p>
+<hr>
+<p><strong>迭代器是泛化的指针</strong>，可以看下面的例子试图理解，这里的泛化指的是对于数据结构类型都为list，但是数据本身的结构是多种多样的</p>
+<p><strong>基本所有容器都有记录头和尾的迭代器（类似指针）</strong></p>
+<p>起始迭代器是指向第一个</p>
+<p>&#x3D;&#x3D;<strong>但是结尾迭代器指向最后一个元素后面一个的位置</strong>&#x3D;&#x3D;</p>
+<hr>
+<h3 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h3><ul>
+<li>某些对vector对象的操作会使迭代器失效</li>
+</ul>
+<h3 id="迭代器支持的操作"><a href="#迭代器支持的操作" class="headerlink" title="迭代器支持的操作"></a>迭代器支持的操作</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122651994.png"  alt="image-20240624122651994"></p>
+<blockquote>
+<p>类似指针</p>
+</blockquote>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122701221.png"  alt="image-20240624122701221"></p>
+<hr>
+<ul>
+<li><p>小细节：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(*it).<span class="built_in">empty</span>()</span><br><span class="line">    <span class="comment">//等价于it-&gt;empty（）</span></span><br><span class="line">    <span class="comment">//不等价于*it.empyty</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="迭代器和操作符重载"><a href="#迭代器和操作符重载" class="headerlink" title="迭代器和操作符重载"></a><strong>迭代器和操作符重载</strong></h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122714337.png"  alt="image-20240624122714337"></p>
+<blockquote>
+<p>这里可以看到，无论是什么迭代器，都需要重载下方的黑色部分，<strong>这里的黑色部分其实就是利用指针一般都会进行的行为</strong>，但是因为这里定义迭代器它就不仅仅只有指针的功能，还有一些其他特性，所以迭代器得对自身类似指针的那部分功能进行重载</p>
+</blockquote>
+<h3 id="迭代器类型"><a href="#迭代器类型" class="headerlink" title="迭代器类型"></a>迭代器类型</h3><ul>
+<li>iterator和const_iterator</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122723701.png"  alt="image-20240624122723701"></p>
+<ul>
+<li><p>begin(),end(),cbegin(),cend()</p>
+<p>常量容器返回只读迭代器</p>
+<p>一般容器返回读写迭代器</p>
+<p>常量返只读就用cbegin(),cend()</p>
+</li>
+</ul>
+<h3 id="迭代器和trait"><a href="#迭代器和trait" class="headerlink" title="迭代器和trait"></a>迭代器和trait</h3><p><strong>迭代器的trait型别主要有五种：value_type,catalog,reference,pointer,diffrence。</strong></p>
+<p>value_type迭代器所指对象类型，</p>
+<p>catalog迭代器类型，&#x2F;&#x2F;<strong>主要是指迭代器的移动性质</strong></p>
+<p>reference迭代器所指类型引用，</p>
+<p>pointer迭代器所指类型指针，</p>
+<p>diffrence用什么基本数据类型表示迭代器之间距离（如int类型）。</p>
+<hr>
+<h4 id="五个trait"><a href="#五个trait" class="headerlink" title="五个trait"></a>五个trait</h4><h5 id="value-type"><a href="#value-type" class="headerlink" title="value type"></a>value type</h5><p>每个STL中的类都有value_type这种东西，</p>
+<p>通俗的说<strong>value_type 就是stl容器盛装的数据的数据类型</strong>，</p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::value_type x;</span><br></pre></td></tr></table></figure>
+
+<p>上述两句代码，第一句是声明一个盛装数据类型是int的数据的vector，</p>
+<p>第二句是使用vector<int>::value_type定义一个变量x，这个变量x实际上是int类型的，因为vector<int>::value_type中声明的为int型。相应的，假设有：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;C&gt; vec;  <span class="comment">//假设C是自定义类型</span></span><br><span class="line"></span><br><span class="line">vector&lt;C&gt;::value_type x;</span><br></pre></td></tr></table></figure>
+
+<p>那么第二句定义的变量x的数据类型是C。</p>
+<hr>
+<p>每个STL容器类（感觉应该是迭代器类更加准确），都有一句相同的代码：</p>
+<p>typede T value_type;</p>
+<p>其中T则是类模板中使用的参数 ：</p>
+<p>template <class T> </p>
+<hr>
+<p>以STL的list容器为例，那么它的类定义就应该有下面的语句:</p>
+<p>template<class T></p>
+<p>class list{</p>
+<p>publict:</p>
+<p>typedef  T  value_type;</p>
+<p>&#x2F;&#x2F;……</p>
+<p>};</p>
+<p>上述写法，在《STL源码剖析》中称为“声明内嵌型别”技术。</p>
+<hr>
+<p>template <class T></p>
+<p><strong>T也可以是一个class，那么value_type也就是可以用来定义class的对象了</strong>。</p>
+<hr>
+<p>迭代器所指对象的类型，原生指针也是一种迭代器，</p>
+<p>**对于原生指针  int *，int 即为指针所指对象的类型 **，也就是所谓的 value_type 。</p>
+<h5 id="iterator-category"><a href="#iterator-category" class="headerlink" title="iterator_category"></a>iterator_category</h5><p><strong>简单理解</strong></p>
+<p>不同的数据结构会有不同的类型的迭代器来对其进行操作。</p>
+<p>有的迭代器只能往前走++，有的迭代器只能往后走–，有的迭代器能进行双向走（能++也能–。</p>
+<p>有的迭代器可以修改容器所指东西内容，有的迭代器不可以。</p>
+<p>不同迭代器有许多不同的特征。</p>
+<p>而在迭代器类中，这个iterator_category就是为了告诉算法某些迭代器移动和读写特征信息的。</p>
+<hr>
+<p><strong>基本概念</strong></p>
+<p><strong>iterator_category： 的作用是标识迭代器的移动特性和可以对迭代器执行的操作，</strong></p>
+<p>从 iterator_category 上，可将迭代器分为 Input Iterator、Output Iterator、Forward Iterator、Bidirectional Iterator、Random Access Iterator 五类，这样分可以尽可能地提高效率。</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122737449.png"  alt="image-20240624122737449"></p>
+<blockquote>
+<p>左边讲述了iterator_category之间的继承关系</p>
+<p>右边作为例子举例不同的iterator_category可能对应怎怎样不同的容器结构</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">单向，双向，随机，input,output</span><br><span class="line"></span><br><span class="line">Input Iterator： 此迭代器不允许修改所指的对象，是只读的。支持 ==、!=、++、 *、-&gt; 等操作。</span><br><span class="line">Output Iterator：允许算法在这种迭代器所形成的区间上进行只写操作。支持 ++、 * 等操作。</span><br><span class="line">Forward Iterator：允许算法在这种迭代器所形成的区间上进行读写操作，但只能单向移动，每次只能移动一步。支持 Input Iterator  和 Output Iterator 的所有操作。</span><br><span class="line">Bidirectional Iterator：允许算法在这种迭代器所形成的区间上进行读写操作，可双向移动，每次只能移动一步。支持 Forward Iterator 的所有操作，并另外支持 –  操作。</span><br><span class="line"></span><br><span class="line">Random Access Iterator：包含指针的所有操作，可进行随机访问，随意移动指定的步数。支持前面四种  Iterator  的所有操作，并另外支持 [n] 操作符等操作。</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>实例一</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122749769.png"  alt="image-20240624122749769"></p>
+<blockquote>
+<p>左下的最下面部分是老师设计的一个萃取机机制的入口</p>
+<p>左下的上面部分对应的是回答</p>
+<p>右边是测试代码和结果显示</p>
+<p><strong>尤为值得注意的是右下角的虚线部分的相应测试代码和输出（实例三）</strong></p>
+</blockquote>
+<p><strong>实例二</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122803113.png"  alt="image-20240624122803113"></p>
+<blockquote>
+<p>左方是老师测试所用代码</p>
+<p>写一个函数问并且显示迭代器的类型是什么？</p>
+<hr>
+<p>typeid（itr）. name 理解上来说</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122812590.png"  alt="image-20240624122812590"></p>
+<p>比如这里，一般来说只应该出现Deque——iteratorl…之后的内容</p>
+<p>前面的St15出现实现因为类的名称经过编译器编译后实际上确实会不一样</p>
+<p><strong>这个其实可以自己试一试</strong></p>
+</blockquote>
+<p><strong>实例三</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122824225.png"  alt="image-20240624122824225"></p>
+<blockquote>
+<p>Input Iterator 萃取机制入口的传参不同版本设计</p>
+<p>g2.9 g3.3 g4.9（看虚线引导）</p>
+<hr>
+<p>不同标准库实现方法不同，接口相同（并且能兼容之前的接口）</p>
+<hr>
+<p>注意在g4.9的设计中</p>
+</blockquote>
+<p><strong>实例四</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122836410.png"  alt="image-20240624122836410"></p>
+<blockquote>
+<p>output Iterator 萃取机制入口的传参不同版本设计</p>
+<p>g2.9 g3.3 g4.9（看虚线引导）</p>
+</blockquote>
+<hr>
+<ul>
+<li>迭代器类型对算法的影响&#x2F;&#x2F;下面迭代器那里也有一个例子</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641833845378.png"  alt="1641833845378"></p>
+<blockquote>
+<p>这里的小方块说是写了一个函数来问迭代器类型，以便这个前进函数使用</p>
+</blockquote>
+<blockquote>
+<p>虽然这里是只有三种迭代器类型，但是迭代器之间存在着继承关系，最终这五种类型一定都会拥有自己的调用</p>
+</blockquote>
+<hr>
+<h5 id="different-type"><a href="#different-type" class="headerlink" title="different_type"></a>different_type</h5><p>  &#x2F;&#x2F;两个迭代器的距离用什么来表现</p>
+<p>&#x2F;&#x2F;一个容器中两个迭代器的距离</p>
+<p>&#x2F;&#x2F;带符号类型，其数值可正可负</p>
+<p>对于原生指针，STL 以 C++ 内建的 ptrdiff_t 作为原生指针的 difference_type。</p>
+<ul>
+<li>迭代器类型对算法的影响</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641831292672.png"  alt="1641831292672"></p>
+<blockquote>
+<p>传入两个参数</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641831467540.png"  alt="1641831467540"></p>
+<blockquote>
+<p>连续的话可以直接相减</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641831481224.png"  alt="1641831481224"></p>
+<blockquote>
+<p>非连续的话只能一步步数，一步步算</p>
+</blockquote>
+<h5 id="reference-type"><a href="#reference-type" class="headerlink" title="reference type"></a>reference type</h5><p>是指迭代器所指对象的类型的引用，reference_type 一般用在迭代器的 * 运算符重载上，</p>
+<p>如果 value_type 是 T，那么对应的 reference_type 就是 T&amp;；</p>
+<p>如果 value_type 是 const T，那么对应的reference_type 就是 const T&amp;。</p>
+<h5 id="pointer-type"><a href="#pointer-type" class="headerlink" title="pointer_type"></a>pointer_type</h5><p>就是相应的指针类型，对于指针来说，最常用的功能就是 operator* 和 operator-&gt; 两个运算符</p>
+<h4 id="迭代器trait的作用"><a href="#迭代器trait的作用" class="headerlink" title="迭代器trait的作用"></a><strong>迭代器trait的作用</strong></h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122901306.png"  alt="image-20240624122901306"></p>
+<blockquote>
+<p>只要迭代器内有定义，并且能够传进去，就算能够回答问题&#x2F;&#x2F;虚线连接的部分</p>
+</blockquote>
+<hr>
+<h4 id="trait具体回答的机制"><a href="#trait具体回答的机制" class="headerlink" title="trait具体回答的机制"></a><strong>trait具体回答的机制</strong></h4><p><strong>所有迭代器都需继承以下这个共同的模板</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//迭代器模板</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">Category</span>, <span class="keyword">class</span> <span class="title class_">T</span>, <span class="keyword">class</span> <span class="title class_">Distance</span> = <span class="type">ptrdiff_t</span>,  </span><br><span class="line">          <span class="keyword">class</span> Pointer = T*, <span class="keyword">class</span> Reference = T&amp;&gt;  </span><br><span class="line">          </span><br><span class="line"><span class="keyword">struct</span> iterator &#123;  </span><br><span class="line">  <span class="keyword">typedef</span> Category  iterator_category;  </span><br><span class="line">  <span class="keyword">typedef</span> T         value_type;  </span><br><span class="line">  <span class="keyword">typedef</span> Distance  difference_type;  </span><br><span class="line">  <span class="keyword">typedef</span> Pointer   pointer;  </span><br><span class="line">  <span class="keyword">typedef</span> Reference reference;  </span><br><span class="line">&#125;;  </span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>当具体开始写某一个迭代器时</strong></p>
+<p>当定义迭代器的时候，必须给定迭代器的特性。</p>
+<p>STL为提取迭代器的特性，提供了一个模板类iterator_trait，适用于所有的迭代器和原生指针，定义如下</p>
+<p>(要理解的话，就想想，<strong>当你拥有这个模板之后应当怎样使用这个模板来进行迭代器特征的定义</strong>)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">Iterator</span>&gt;  <span class="comment">//看这里</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">iterator_traits</span>  </span><br><span class="line">&#123;  </span><br><span class="line">  <span class="comment">// 迭代器类型, STL提供五种迭代器  </span></span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::iterator_category iterator_category;  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 迭代器所指对象的型别  </span></span><br><span class="line">  <span class="comment">// 如果想与STL算法兼容, 那么在类内需要提供value_type定义  </span></span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::value_type        value_type;  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 这个是用于处理两个迭代器间距离的类型  </span></span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::difference_type   difference_type;  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 直接指向对象的原生指针类型  </span></span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::pointer           pointer;  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 这个是对象的引用类型  </span></span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::reference         reference;  </span><br><span class="line">&#125;;  </span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>这里的特化是偏特化</strong>：顾名思义，偏特化就是对部分进行了特化，全特化就是将全部进行特化。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 针对指针提供特化版本  </span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;  </span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">iterator_traits</span>&lt;T*&gt;  </span><br><span class="line">&#123;  </span><br><span class="line">  <span class="keyword">typedef</span> random_access_iterator_tag iterator_category; <span class="comment">//不理解 </span></span><br><span class="line">  <span class="keyword">typedef</span> T                          value_type;  <span class="comment">//不理解</span></span><br><span class="line">  <span class="keyword">typedef</span> <span class="type">ptrdiff_t</span>                  difference_type;  <span class="comment">//ptrdiff_t是C/C++标准库中定义的一个与机器相关的数据类型。ptrdiff_t类型变量通常用来保存两个指针减法操作的结果。</span></span><br><span class="line">  <span class="keyword">typedef</span> T*                         pointer;  </span><br><span class="line">  <span class="keyword">typedef</span> T&amp;                         reference;  </span><br><span class="line">&#125;;  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"><span class="comment">// 针对指向常对象的指针提供特化  </span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;  </span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">iterator_traits</span>&lt;<span class="type">const</span> T*&gt;  </span><br><span class="line">&#123;  </span><br><span class="line">  <span class="keyword">typedef</span> random_access_iterator_tag iterator_category;  <span class="comment">//不理解</span></span><br><span class="line">  <span class="keyword">typedef</span> T                          value_type;  <span class="comment">//不理解</span></span><br><span class="line">  <span class="keyword">typedef</span> <span class="type">ptrdiff_t</span>                  difference_type;  <span class="comment">//不理解</span></span><br><span class="line">  <span class="keyword">typedef</span> <span class="type">const</span> T*                   pointer;  </span><br><span class="line">  <span class="keyword">typedef</span> <span class="type">const</span> T&amp;                   reference;  </span><br><span class="line">&#125;; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//这里是上面正常版本，对比一下</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">Iterator</span>&gt;  <span class="comment">//看这里</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">iterator_traits</span>  </span><br><span class="line">&#123;  </span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::iterator_category iterator_category;  </span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::value_type        value_type;  </span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::difference_type   difference_type;  </span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::pointer           pointer;  </span><br><span class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> Iterator::reference         reference;  </span><br><span class="line">    </span><br><span class="line">&#125;;  </span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>trait：迭代器中的基本特征特点</strong></p>
+<p><del><strong>迭代器的trait</strong>：&#x2F;&#x2F;迭代器需要遵循的桥梁</del></p>
+<p>例子：rotate函数中迭代器传参分析</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122912990.png"  alt="image-20240624122912990"></p>
+<blockquote>
+<p>rotate函数想要迭代器移动的性质&#x2F;&#x2F;iterator_category</p>
+<p>右下角是完整的实例传参应用</p>
+<p>左上角是rotate的函数定义以及所需传参和内部函数定义，</p>
+<p>rotate里面的rotate需要右上角的函数_iterator_category返回迭代器的特征（在没有将对于的移动性质传进去的时候，自动将 _first放入函数进行分析）</p>
+<p>至于2和3黑圆圈则是根据该实例的具体typename那里的传参来确定的</p>
+</blockquote>
+<hr>
+<p><strong>总结：迭代器得有回答算法的能力</strong></p>
+<p>迭代器得有回答算法的能力，在具体设计代码中，基本需要回答以下五种问题</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122922484.png"  alt="image-20240624122922484"></p>
+<blockquote>
+<p>只要迭代器内有定义，并且能够传进去，就算能够回答问题</p>
+<p>&#x2F;&#x2F;虚线连接的部分</p>
+<p>虽然有两者基本不怎么会被用到pointer reference（这两个问题基本不会设置）</p>
+</blockquote>
+<h4 id="完整的trait基本回答能力的设计"><a href="#完整的trait基本回答能力的设计" class="headerlink" title="完整的trait基本回答能力的设计"></a><strong>完整的trait基本回答能力的设计</strong></h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122933713.png"  alt="image-20240624122933713"></p>
+<blockquote>
+<p>即（包括萃取机偏特化一般指针）</p>
+<p>先看下面再食用这个</p>
+</blockquote>
+<h4 id="其他trait"><a href="#其他trait" class="headerlink" title="其他trait"></a><strong>其他trait</strong></h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122942710.png"  alt="image-20240624122942710"></p>
+<hr>
+<h3 id="“萃取机”"><a href="#“萃取机”" class="headerlink" title="“萃取机”"></a><strong>“萃取机”</strong></h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624122954446.png"  alt="image-20240624122954446"></p>
+<blockquote>
+<p>迭代器内被定义如上五个问题答案，才能回答问题。</p>
+<p>有的容器底部用普通指针，不能回答问题，怎么办？</p>
+<p>但是我们又得用指针对容器进行操作</p>
+</blockquote>
+<p><strong>“萃取机“：分辨传进来究竟是指针还是迭代器，帮助不具备迭代器特征的指针回答问题</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641712378064.png"  alt="1641712378064"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123006703.png"  alt="image-20240624123006703"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123016366.png"  alt="image-20240624123016366"></p>
+<p>总结：核心知识点在于 <strong>模板参数推导机制+内嵌类型定义</strong>机制， 为了能处理原生指针这种特殊的迭代器，引入了偏特化机制。traits 就像一台 “特性萃取机”，把迭代器放进去，就能榨取出迭代器的特性。</p>
+<p>这种偏特化是针对可调用函数 func 的偏特化，想象一种极端情况，假如 func 有几百万行代码，那么如果不这样做的话，就会造成非常大的代码污染。同时增加了代码冗余。</p>
+<h4 id="具体例子分析"><a href="#具体例子分析" class="headerlink" title="具体例子分析"></a><strong>具体例子分析</strong></h4><p><strong>在没有设计萃取机机制前，算法如何问</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123027532.png"  alt="image-20240624123027532"></p>
+<p><strong>设计萃取机机制后</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123040520.png"  alt="image-20240624123040520"></p>
+<blockquote>
+<p>算法想知道五种类型（最下方），</p>
+<p>就会来问萃取机（iterator_trait）,</p>
+<p>传参们从萃取机入口进入（最上方1）</p>
+<p>通过传参的类型j进入不同的偏特化模板（2 3）</p>
+<p>如果不是正常的迭代器，而是一般指针进来由偏特化里面的内容来回答问题</p>
+</blockquote>
+<p><strong>上例为什么value type是T而不是const T</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123054108.png"  alt="image-20240624123054108"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641712790470.png"  alt="1641712790470"></p>
+<blockquote>
+<hr>
+<p>通过偏特化添加一层中间转换的 traits 模板 class，能实现对原生指针和迭代器的支持，有的读者可能会继续追问：对于指向常数对象的指针又该怎么处理呢？比如下面的例子：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123106351.png"  alt="image-20240624123106351"></p>
+<p>const 变量只能初始化，而不能赋值（这两个概念必须区分清楚）。这将带来下面的问题：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123114608.png"  alt="image-20240624123114608"></p>
+<p>那该如何是好呢？答案还是偏特化，来看实现：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123125044.png"  alt="image-20240624123125044"></p>
+</blockquote>
+<p><strong>完整的萃取机制</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Category,</span><br><span class="line">         <span class="keyword">typename</span> T,</span><br><span class="line">         <span class="keyword">typename</span> Distance = <span class="type">ptrdiff_t</span>,</span><br><span class="line">         <span class="keyword">typename</span> Pointer = T*,</span><br><span class="line">         <span class="keyword">typename</span> Reference = T&amp;&gt;</span><br><span class="line"><span class="keyword">struct</span> iterator <span class="comment">//迭代器的定义</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">typedef</span> Category iterator_category;</span><br><span class="line">    <span class="keyword">typedef</span> T value_type;</span><br><span class="line">    <span class="keyword">typedef</span> Distance difference_type;</span><br><span class="line">    <span class="keyword">typedef</span> Pointer pointer;</span><br><span class="line">    <span class="keyword">typedef</span> Reference reference;</span><br><span class="line">&#125;;</span><br><span class="line">-----------------------------------</span><br><span class="line">【STL 源码剖析】浅谈 STL 迭代器与 traits 编程技法</span><br><span class="line">https:<span class="comment">//blog.51cto.com/u_15098004/2611939</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">tempalte&lt;<span class="keyword">typename</span> I&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">iterator_traits</span> &#123;<span class="comment">//特性萃取机，萃取迭代器特性</span></span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> I::iterator_category iterator_category;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> I::value_type value_type;</span><br><span class="line">    <span class="keyword">typedef</span> typeanme I:difference_type difference_type;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> I::pointer pointer;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> I::reference reference;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//需要对型别为指针和 const 指针设计特化版本看</span></span><br><span class="line"><span class="comment">//更具体例子看下方图片</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123145956.png"  alt="image-20240624123145956"></p>
+<hr>
+<h2 id="这里部分的视频有待总结和回看"><a href="#这里部分的视频有待总结和回看" class="headerlink" title="!这里部分的视频有待总结和回看"></a>!这里部分的视频有待总结和回看</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641834259303.png"  alt="1641834259303"></p>
+<blockquote>
+<p>copy通过不断检查迭代器的类型？，来选择更快更合适的copy方法</p>
+</blockquote>
+<p><img   src="C:/Users/Lucinda/Desktop/1641834489578.png"  alt="1641834489578"></p>
+<blockquote>
+<p>先检查迭代器的类型</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641834543170.png"  alt="1641834543170"></p>
+<blockquote>
+<p>上面那个是一般的方式，下面那两个能传入进去的是指针</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641834614793.png"  alt="1641834614793"></p>
+<blockquote>
+<p>这里又再问有没有这种迭代器，如果有又可以使用更快的方法</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641834835438.png"  alt="1641834835438"></p>
+<blockquote>
+<p>如果是上面的拷贝赋值不重要的话，就调用memmove</p>
+<p>如果拷贝赋值重要的话，调用最下面的黄色方框</p>
+<blockquote>
+<p>什么叫拷贝赋值 重要？什么叫不重要？</p>
+<p>比如虚数，的拷贝赋值不用设计，所以这种的拷贝赋值不重要<strong>不理解</strong></p>
+</blockquote>
+</blockquote>
+<ul>
+<li>迭代器类型影响的例子：destroy</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641835389918.png"  alt="1641835389918"></p>
+<ul>
+<li>迭代器类型影响的例子：unique_copy</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123215361.png"  alt="image-20240624123215361"></p>
+<blockquote>
+<p>功能：复制独一无二的懂细</p>
+<p>右侧版本是针对右侧紫色部分迭代器类型的版本</p>
+<p>左侧版本是针对左侧紫色部分迭代器类型的版本</p>
+<p>两者的功能不同</p>
+</blockquote>
+<hr>
+<ul>
+<li><p>这里模板种T的位置，虽然是说算法接收all类型的东西，但是T这里已经给了，算法能接收什么迭代器已经给暗示</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641835915392.png"  alt="1641835915392"></p>
+</li>
+</ul>
+<h2 id="具体容器介绍"><a href="#具体容器介绍" class="headerlink" title="具体容器介绍"></a>具体容器介绍</h2><ul>
+<li><p>遍历的三种方法</p>
+</li>
+<li><p>容器里的容器</p>
+</li>
+<li><p>自定义类型容器（指针的理解和代码形式上的表现）</p>
+</li>
+<li><p>用的时候要确保容器是否空，明确迭代器现在在哪，执行之后长度会不会改变</p>
+<hr>
+</li>
+</ul>
+<h3 id="array"><a href="#array" class="headerlink" title="array"></a>array</h3><h4 id="温馨提示-1"><a href="#温馨提示-1" class="headerlink" title="温馨提示"></a>温馨提示</h4><ul>
+<li><p>数组可以获得最后一个容器位置之后的那个位置</p>
+</li>
+<li><p>使用数组作为一个auto的变量的初始值时，推断得到的类型是<strong>指针而不是数组</strong>，用decltype的时候，这种情况不会发生（<strong>为啥去decltype看</strong>）</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123236083.png"  alt="image-20240624123236083"></p>
+</li>
+<li><p><strong>用auto或者decltype代替指针类型声明</strong></p>
+</li>
+<li><p>类型别名化简多维数组指针</p>
+</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123236083.png" ></p>
+<hr>
+<ul>
+<li>string和char*的混用</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123236083.png" ></p>
+<blockquote>
+<p>string转char*：c_str函数  </p>
+<p>char*转string：直接转，string可以兼容</p>
+</blockquote>
+<hr>
+<ul>
+<li><p>数组相关声明的理解</p>
+<ul>
+<li>元素为指针的数组</li>
+<li>数组的指针</li>
+<li>数组的引用</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123317623.png"  alt="image-20240624123317623"></p>
+<blockquote>
+<p>理解记忆：</p>
+<p>首先，存在 * 号的声明 不要看* 靠近哪个就认为 星号赋予名字意义</p>
+<p>第二  遵循从左到右的原则 比如，第一个例子 int 和 * 号结合获得意义</p>
+<p>第三  如果有小括号 <strong>括号大于从左到右的优先级</strong> 括号内的空间首先结合获得意义</p>
+</blockquote>
+</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123328089.png"  alt="image-20240624123328089"></p>
+<h4 id="底层"><a href="#底层" class="headerlink" title="底层"></a>底层</h4><ul>
+<li><p>数组大小不能随意改变</p>
+</li>
+<li><p><strong>维度必须是常量表达式</strong></p>
+</li>
+<li><p>封装成容器的原因：使其像个容器，符合容器规则，能够使用容器的相关算法</p>
+<p><strong>源代码&#x2F;&#x2F;98-11的过度版本</strong></p>
+</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123339148.png"  alt="image-20240624123339148"></p>
+<ul>
+<li>没有构造函数，没有析构函数</li>
+<li>迭代器为普通指针&#x2F;&#x2F;萃取剂走偏特化的路</li>
+</ul>
+<p><strong>G4.9</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641749756726.png"  alt="1641749756726"></p>
+<hr>
+<p><img   src="C:/Users/Lucinda/Desktop/1641749658681.png"  alt="1641749658681"></p>
+<blockquote>
+<p> 最根本类型</p>
+</blockquote>
+<h4 id="声明"><a href="#声明" class="headerlink" title="声明"></a><strong>声明</strong></h4><ul>
+<li>长度必为常量</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123356309.png"  alt="image-20240624123356309"></p>
+<h4 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123415186.png"  alt="image-20240624123415186"></p>
+<ul>
+<li><p>指针可以+1 +2 来进行移动</p>
+</li>
+<li><p>小心指针越界</p>
+</li>
+<li><p>指针相加减的结果类型是<strong>ptrdiff_t</strong></p>
+</li>
+<li><p>指向不同对象的指针不能相互比较</p>
+</li>
+</ul>
+<h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a><strong>基本操作</strong></h4><p>1.数组没有拷贝和直接等号赋值</p>
+<p>2.下标访问和修改（<strong>其实每个容器的下标运算符都不太一样，专属于容器</strong>）</p>
+<p>3..初始化</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123428990.png"  alt="image-20240624123428990"></p>
+<hr>
+<blockquote>
+<p>tip:</p>
+<ul>
+<li>&#x3D;&#x3D;<strong>维度必须已知</strong>&#x3D;&#x3D;</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123438086.png"  alt="image-20240624123438086"></p>
+<hr>
+<ul>
+<li><p><strong>字符串赋值别忘记‘&#x2F;0’的空间要给够</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123447746.png"  alt="image-20240624123447746"></p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>data的话是输出起始位置</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641484772996.png"  alt="1641484772996"></p>
+<h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><h4 id="温馨提示-2"><a href="#温馨提示-2" class="headerlink" title="温馨提示"></a>温馨提示</h4><ul>
+<li><p>string+运算允许C风格字符数组作为其中一个进行</p>
+</li>
+<li><p>利用for改变字符用引用</p>
+</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123459039.png"  alt="image-20240624123459039"></p>
+<ul>
+<li><p>string相加时要注意：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string s4 =s1 +<span class="string">&quot;,&quot;</span>;√</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>一条表达式中有size（），不要再使用int，因为size（）返回的是….</p>
+</li>
+<li><p>小妙用<strong>（？）</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123509473.png"  alt="image-20240624123509473"></p>
+</li>
+<li><p>读取未知数量的string对象</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span>	</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span>	</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	string word;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; word &amp;&amp; word!=#)</span><br><span class="line">    <span class="comment">//输入#时可以结束</span></span><br><span class="line">    <span class="comment">//输入操作符返回输入流对象，如果输入流对象处于有效状态，表示没有遇到文件结束或非法输入(Ctrl+z)</span></span><br><span class="line">    cout &lt;&lt; word &lt;&lt; endl;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>(3)使用getline()函数</strong></p>
+<p>目的：得到输入时候的空白符</p>
+<p>①两个参数：输入流对象和存放读入字符串的string对象</p>
+<p>②从指定输入流中读取内容，遇到换行符（回车）为止；（）</p>
+<p>将所读内容存入指定的string对象中，<strong>流中的换行符虽然被读取到流中但在string被丢弃</strong></p>
+<p>③返回参数输入流对象</p>
+<blockquote>
+<p>getline（）会返回它的流参数</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span>	</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span>	</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	string line;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">getline</span>(cin, line))</span><br><span class="line">    cout &lt;&lt; line &lt;&lt; endl;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>size_type类型</li>
+</ul>
+<p><strong>1.size()函数返回的并不是int类型数据，而是size_type类型的数据</strong></p>
+<p>2.它是一个无符号类型的值足够放下任何string对象的大小</p>
+<p>3.所有存放string类的size函数返回值的<strong>变量</strong>都应该是size_type</p>
+<p>4.auto可以推断出来</p>
+<h4 id="基本内容"><a href="#基本内容" class="headerlink" title="基本内容"></a>基本内容</h4><ul>
+<li>相关头文件</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> std::string</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li><strong>本质：里面封装char*，实质是个容器&#x2F;类</strong></li>
+</ul>
+<hr>
+<ul>
+<li><strong>可进行操作：</strong></li>
+</ul>
+<p>1.初始化</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123522611.png"  alt="image-20240624123522611"></p>
+<blockquote>
+<p> <strong>拷贝初始化（s3 &#x3D; “ a”）和直接初始化（s3（“a”））之分</strong></p>
+</blockquote>
+<hr>
+<p>2.增（+和append，insert）&#x3D;&#x3D;看看下面&#x3D;&#x3D;</p>
+<p>3.删（erase）</p>
+<p>4.改</p>
+<p>5.查</p>
+<p>6.拷贝（直接拷贝，切片substr&#x3D;&#x3D;左闭右开&#x3D;&#x3D;）</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123535167.png"  alt="image-20240624123535167"></p>
+<blockquote>
+<ul>
+<li><p>关于加法：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123544660.png"  alt="image-20240624123544660"></p>
+<p>&#x3D;&#x3D;<strong>但是不能够两个字面值直接相加，如下</strong>&#x3D;&#x3D;</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123553601.png"  alt="image-20240624123553601"></p>
+</li>
+</ul>
+</blockquote>
+<p>7.处理单个字符的函数</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123604340.png"  alt="image-20240624123604340"></p>
+<h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><ul>
+<li>自己设计的话必须得考虑vector得兼容deque的操作</li>
+<li>兼容stack的设计</li>
+<li>不兼容queue的设计</li>
+<li>元素为vector的声明</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vertor&lt;<span class="type">int</span>&gt; &gt;  √   老版</span><br><span class="line">vector&lt;vertor&lt;<span class="type">int</span>&gt;&gt;  √ ×  不一定对</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>小心下标操作和空容器之间的矛盾</p>
+</li>
+<li><p>范围for语句体内不应该改变其所遍历序列大小</p>
+</li>
+<li><p>size_type的使用</p>
+</li>
+</ul>
+<p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1661821937060.png"  alt="1661821937060"></p>
+<h4 id="底层-1"><a href="#底层-1" class="headerlink" title="底层"></a>底层</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123614961.png"  alt="image-20240624123614961"></p>
+<ul>
+<li>基本存储结构</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641748235474.png"  alt="1641748235474"></p>
+<ul>
+<li>push-back的实现：</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641748573429.png"  alt="1641748573429"></p>
+<ul>
+<li>小心容器为0时候的处理</li>
+<li>原来的空间记得删除，在拓展之后</li>
+<li>拷贝安插点后面的内容，容易漏&#x2F;&#x2F;insert</li>
+</ul>
+<h4 id="迭代器分析"><a href="#迭代器分析" class="headerlink" title="迭代器分析"></a>迭代器分析</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123624661.png"  alt="image-20240624123624661"></p>
+<ul>
+<li>底层的迭代器为普通的指针</li>
+</ul>
+<p><strong>G4.9</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641748906781.png"  alt="1641748906781"></p>
+<blockquote>
+<p>这里的public的继承设计有一些不很合理&#x2F;&#x2F;这里这个继承只是为了让下面用上面父类的功能</p>
+</blockquote>
+<p><strong>萃取器过程</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641749157906.png"  alt="1641749157906"></p>
+<blockquote>
+<p>反正这里这个版本把迭代器搞成了一个对象 ，这个对象本身的trait特征仍然是普通指针，但是也可以做容器的这一个迭代器，之前的G2.9就是一个偏特化的处理就解决了</p>
+</blockquote>
+<h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>&#x3D;&#x3D;动态拓展&#x3D;&#x3D;数组（原理：找新地方拷贝在放新东西，旧空间释放）</li>
+<li>支持随机访问</li>
+<li>动态拓展空间是<strong>两倍</strong>增长的</li>
+<li>好像有find不能用来着，会破坏其独特性stack，queue同理</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240624123647698.png"  alt="image-20240624123647698"></p>
+<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><ul>
+<li><p>容器大小可以指定，库会自动创建初始值</p>
+<ul>
+<li><p>基本数据类型，库已经设置好</p>
+</li>
+<li><p>自定义数据类型，根据类默认初始化</p>
+<p>（如果类没有默认初始化值，那么就得明确提供初始值）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h4><p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1661737366842.png"  alt="1661737366842"></p>
+<blockquote>
+<p>&#x3D;&#x3D;v4理解容易出错，传参是元素数量哦&#x3D;&#x3D;</p>
+</blockquote>
+<hr>
+<p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1661737454096.png"  alt="1661737454096"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">push_back</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;<span class="built_in">v2</span>(v1.<span class="built_in">begin</span>(),v1.<span class="built_in">end</span>());</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;<span class="built_in">v3</span>(<span class="number">10</span>,<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;<span class="built_in">v4</span>(v3);</span><br></pre></td></tr></table></figure>
+
+<h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641485877380.png"  alt="1641485877380"></p>
+<h4 id="赋值"><a href="#赋值" class="headerlink" title="赋值&#x3D;"></a>赋值&#x3D;</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt;v2;</span><br><span class="line">v2=v1;</span><br><span class="line"></span><br><span class="line"><span class="meta">#assign</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;v3;</span><br><span class="line">v3.<span class="built_in">assign</span>(v1.<span class="built_in">begin</span>(),v1.<span class="built_in">end</span>())；</span><br><span class="line"></span><br><span class="line">v4.<span class="built_in">assign</span>(<span class="number">10</span>,<span class="number">100</span>)#<span class="number">10</span>个<span class="number">100</span></span><br></pre></td></tr></table></figure>
+<h4 id="vector容量和大小"><a href="#vector容量和大小" class="headerlink" title="vector容量和大小"></a>vector容量和大小</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>(<span class="type">int</span>)v1;</span><br><span class="line">v1.<span class="built_in">empty</span>();<span class="comment">//为空返回1</span></span><br><span class="line"><span class="built_in">capacity</span>();<span class="comment">//容器容量</span></span><br><span class="line"><span class="built_in">size</span>();<span class="comment">//元素个数</span></span><br><span class="line">v1.<span class="built_in">resize</span>(<span class="number">15</span>);<span class="comment">//重新容器大小，扩大型，默认用0填充新位置</span></span><br><span class="line">v1.<span class="built_in">resize</span>(<span class="number">15</span>，<span class="number">100</span>);<span class="comment">//重载用100填充</span></span><br></pre></td></tr></table></figure>
+<h4 id="插入和删除"><a href="#插入和删除" class="headerlink" title="插入和删除"></a>插入和删除</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">push_back</span>();</span><br><span class="line"><span class="built_in">pop_back</span>();<span class="comment">//尾删</span></span><br><span class="line"><span class="built_in">erase</span>(迭代器位置);</span><br><span class="line"><span class="built_in">erase</span>(迭代器位置,迭代器位置);</span><br><span class="line"><span class="built_in">insert</span>(迭代器位置，n个数据，数据内容);</span><br><span class="line"><span class="built_in">push_back</span>();</span><br><span class="line"><span class="built_in">clear</span>();</span><br></pre></td></tr></table></figure>
+<hr>
+<p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1661821592357.png"  alt="1661821592357"></p>
+<hr>
+<p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1661821604989.png"  alt="1661821604989"></p>
+<hr>
+<p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1661821751697.png"  alt="1661821751697"></p>
+<blockquote>
+<p>这个真的有点怪</p>
+</blockquote>
+<h4 id="数据存取"><a href="#数据存取" class="headerlink" title="数据存取"></a>数据存取</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//v1[n]   返回v1第n个位置上元素的引用</span></span><br><span class="line">cout&lt;&lt;v1[<span class="number">1</span>]&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">cout&lt;&lt;v1.<span class="built_in">at</span>(<span class="number">1</span>)&lt;&lt;;</span><br><span class="line"></span><br><span class="line">cout&lt;&lt;v1.<span class="built_in">front</span>();</span><br><span class="line"></span><br><span class="line">cout&lt;&lt;v1.<span class="built_in">back</span>();</span><br></pre></td></tr></table></figure>
+
+<h4 id="互换容器"><a href="#互换容器" class="headerlink" title="互换容器"></a>互换容器</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">v1.<span class="built_in">swap</span>(v2);</span><br><span class="line">##长度不一样可以交换吗(可以，因为swap交换的是指针)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># <span class="number">1.</span>题目：求众数</span><br><span class="line"></span><br><span class="line">封装 继承 多态</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt;v.swap（v）;<span class="comment">//收缩内存</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyCompare</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="type">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">int</span> num1, <span class="type">int</span> num2)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> num1 &gt; num2;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">	v.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">	v.<span class="built_in">push_back</span>(<span class="number">40</span>);</span><br><span class="line">	v.<span class="built_in">push_back</span>(<span class="number">20</span>);</span><br><span class="line">	v.<span class="built_in">push_back</span>(<span class="number">30</span>);</span><br><span class="line">	v.<span class="built_in">push_back</span>(<span class="number">50</span>);</span><br><span class="line">	<span class="comment">//默认从小到大</span></span><br><span class="line">	<span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">	<span class="comment">//使用函数对象改变算法策略，排序从大到小</span></span><br><span class="line">	<span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>(), <span class="built_in">MyCompare</span>());</span><br><span class="line">	<span class="keyword">for</span> (vector&lt;<span class="type">int</span>&gt;::iterator it = v.<span class="built_in">begin</span>(); it != v.<span class="built_in">end</span>(); it++)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; *it &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">test01</span>();</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210722163346116.png"  alt="image-20210722163346116"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210722163428904.png"  alt="image-20210722163428904"></p>
+<h5 id="使用的问题"><a href="#使用的问题" class="headerlink" title="使用的问题"></a>使用的问题</h5><ul>
+<li>当我在使用容器时能否显示里面某个量的地址。（可以的）</li>
+<li></li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//无法实现这种形式的赋值</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string x;</span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> c[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">	c[<span class="number">0</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">	c[<span class="number">1</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">	c[<span class="number">2</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">	c[<span class="number">3</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line">	c[<span class="number">4</span>] = <span class="string">&#x27;l&#x27;</span>;</span><br><span class="line"></span><br><span class="line">	x = c;</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; c &lt;&lt; <span class="string">&quot;                  &quot;</span> &lt;&lt; x[<span class="number">0</span>]&lt;&lt;<span class="string">&quot;                       &quot;</span>&lt;&lt;x;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="stack"><a href="#stack" class="headerlink" title="stack"></a>stack</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210728192334850.png"  alt="image-20210728192334850"></p>
+<ul>
+<li><p>能否判断容器是否为空？可以。为什么呢？为什么呢？</p>
+</li>
+<li><p>能否可以返回元素个数吗？可以。为什么呢？</p>
+</li>
+<li><p>先进后出</p>
+</li>
+<li><p><strong>不提供迭代器</strong></p>
+<p><strong>底层</strong></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641797213938.png"  alt="1641797213938"></p>
+<blockquote>
+<p>也可以选择list和vector作为底层，不可以选set和map</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h4><p><strong>这里是push</strong></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210728200309139.png"  alt="image-20210728200309139"></p>
+<h3 id="deque"><a href="#deque" class="headerlink" title="deque"></a>deque</h3><h4 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>两头可以扩充</li>
+<li>一个buffer一个buffer地扩充</li>
+<li>其实是<strong>假连续</strong>。<strong>并不是元素的存放地址都相连</strong></li>
+</ul>
+<h4 id="底层-2"><a href="#底层-2" class="headerlink" title="底层"></a>底层</h4><ul>
+<li><p>存有缓冲区指针的vector</p>
+<p><strong>迭代器分析</strong></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641793743370.png"  alt="1641793743370"></p>
+<blockquote>
+<p>node：控制中心&#x2F;vector</p>
+<p>cur：迭代器现在指向的元素</p>
+</blockquote>
+</li>
+<li><p>源代码&#x2F;&#x2F;老版本</p>
+</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641794060898.png"  alt="1641794060898"></p>
+<hr>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641794360896.png"  alt="1641794360896"></p>
+<blockquote>
+<p>这里的buffer缓冲区可以为0&#x2F;&#x2F;新版本不可以</p>
+</blockquote>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641794114524.png"  alt="1641794114524"></p>
+<ul>
+<li>最本质理解</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641794171056.png"  alt="1641794171056"></p>
+<blockquote>
+<p>deque最本质有40个字节</p>
+</blockquote>
+<p><strong>insert</strong></p>
+<ul>
+<li>插入需要腾出空间，移动前面元素还是后面元素是个问题，inset内部需要完成这个功能。</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641794551290.png"  alt="1641794551290"></p>
+<blockquote>
+<p>为头部和尾部的情况</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641794618464.png"  alt="1641794618464"></p>
+<blockquote>
+<p>一般情况</p>
+</blockquote>
+<p><strong>模拟连续空间</strong></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641795282509.png"  alt="1641795282509"></p>
+<blockquote>
+<p>这里对迭代器进行了操作符重载&#x2F;&#x2F;上图左下</p>
+<p>&#x2F;&#x2F;下面这张图是具体实现</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641795489803.png"  alt="1641795489803"></p>
+<blockquote>
+<p>这里值得自己细推一下</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641795630232.png"  alt="1641795630232"></p>
+<blockquote>
+<p>++:</p>
+<p>++之后是否到达边界</p>
+<p>到边界之后：</p>
+<p>没到边界：</p>
+</blockquote>
+<blockquote>
+<p>–:</p>
+<p>–之前在不在容器的起点</p>
+<p>在边界上的起点上，就会退回控制中心并且返回前一个node给他，并且cur&#x3D;前一个的最末端</p>
+</blockquote>
+<blockquote>
+<p><strong>这里前++和后++的设计很经典,–同理</strong></p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641795967832.png"  alt="1641795967832"></p>
+<blockquote>
+<p>一下子移动多个空间如何设&#x2F;&#x2F;+&#x3D;的设计</p>
+<ul>
+<li><p>cur加之后有没有超出当前缓冲区</p>
+<ul>
+<li>已跨：到了正确的缓冲区再计算跨几个</li>
+<li>未跨：直接跨</li>
+</ul>
+</li>
+</ul>
+<p><strong>-&#x3D;同理设计，照抄+&#x3D;</strong></p>
+</blockquote>
+<p><strong>G4.9</strong></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641796402440.png"  alt="1641796402440"></p>
+<blockquote>
+<p>左边黑框算迭代器存储结构大小</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641796502146.png"  alt="1641796502146"></p>
+<blockquote>
+<p>好：没有必要这样</p>
+<p>坏：专业者更快无法调整buffer</p>
+</blockquote>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641796649320.png"  alt="1641796649320"></p>
+<blockquote>
+<p>vector&#x2F;控制中心扩充之后，原来的char*数据到新的区域的中段</p>
+</blockquote>
+<h3 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h3><ul>
+<li><p>底层：deque，并且只有一部分deque的功能</p>
+</li>
+<li><p>queue是<strong>适配器</strong>：把别人改装一下，成自己的功能</p>
+</li>
+<li><p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641796915345.png"  alt="1641796915345"></p>
+<blockquote>
+<p>底层也可以用list实现，不可以用vector实现，不可以选set和map</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="特点-3"><a href="#特点-3" class="headerlink" title="特点"></a>特点</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210802185112337.png"  alt="image-20210802185112337"></p>
+<ul>
+<li><strong>队尾进数据</strong></li>
+<li>双向开口</li>
+<li>不允许遍历</li>
+<li>先进先出</li>
+<li>不提供迭代器</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210802185645103.png"  alt="image-20210802185645103"></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><ul>
+<li>遍历的实现</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">		cout &lt;&lt; q.<span class="built_in">front</span>() &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>max_size（）</li>
+<li>只能用<strong>全局sort</strong>，自己没有sort</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210802185824784.png"  alt="image-20210802185824784"></p>
+<h3 id="priority-queue"><a href="#priority-queue" class="headerlink" title="priority_queue"></a>priority_queue</h3><ul>
+<li>具有优先级的队列</li>
+</ul>
+<h3 id="forward-list"><a href="#forward-list" class="headerlink" title="forward_list"></a>forward_list</h3><p><strong>相关函数</strong></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641648615931.png"  alt="1641648615931"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641648634155.png"  alt="1641648634155"></p>
+<h3 id="slist"><a href="#slist" class="headerlink" title="slist"></a>slist</h3><ul>
+<li>相关库ext</li>
+</ul>
+<p><strong>特点</strong></p>
+<ul>
+<li>单向串</li>
+<li>stdexcept</li>
+</ul>
+<p><strong>相关函数</strong></p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><h4 id="迭代器分析-1"><a href="#迭代器分析-1" class="headerlink" title="迭代器分析"></a>迭代器分析</h4><ul>
+<li>基本构成：五个typeof+一堆的重载</li>
+<li>区分i++和++i的重载</li>
+</ul>
+<p>前++：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641661369322.png"  alt="1641661369322"></p>
+<p>后++：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641661438421.png"  alt="1641661438421"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641661597298.png"  alt="1641661597298"></p>
+<ul>
+<li>第一点的部分：&#x3D; *两个重载的一个分析的大动作</li>
+<li>两个++的返回类型不一样，因为学习整数的规定</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641661840705.png"  alt="1641661840705"></p>
+<p>阻止做第二行的操作返回自身，做第一行的动作返回自身的引用<strong>一个大不理解的状态</strong></p>
+<ul>
+<li>*的重载：取值<img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641661975405.png"  alt="1641661975405"></li>
+<li>-&gt;的重载</li>
+<li>G2.9&#x2F;G4.9的迭代器定义比较</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641663351654.png"  alt="1641663351654"></p>
+<h4 id="链表特点"><a href="#链表特点" class="headerlink" title="链表特点"></a>链表特点</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210802191113924.png"  alt="image-20210802191113924"></p>
+<ul>
+<li>链表的储存是非连续的，而动态数组的储存是连续的</li>
+<li>链表由节点构成</li>
+<li>节点由数据域和指针域构成的</li>
+<li>一个一个扩充</li>
+<li>G2.91&#x2F;G4.91的链表的存储结构有一些不一样</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210802192425481.png"  alt="image-20210802192425481"></p>
+<ul>
+<li>链表的优点：快速删除和插入元素</li>
+<li>链表的缺点：占用空间大，容器的遍历速度慢</li>
+<li>链表实际上是环状双向</li>
+<li>两个版本的list存储结构的定义和大小的区别</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641664032470.png"  alt="1641664032470"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641663939630.png"  alt="1641663939630"></p>
+<ul>
+<li>伪元素的实现</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641663628558.png"  alt="1641663628558"></p>
+<h4 id="list特点"><a href="#list特点" class="headerlink" title="list特点"></a>list特点</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210802192739206.png"  alt="image-20210802192739206"></p>
+<ul>
+<li><p>&#x3D;&#x3D;双向 循环&#x3D;&#x3D; ：循环指的是最后一个链表的尾指针指向第一个链表的位置</p>
+</li>
+<li><p>&#x3D;&#x3D;迭代器支持++&#x3D;&#x3D;（双向迭代器）</p>
+</li>
+<li><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210802193054120.png"  alt="image-20210802193054120"></p>
+</li>
+</ul>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
+<li>在STL中，像vector、list、string这些容器都含有**max_size()**这个函数，想请教一下，关于这个max_size()函数的值。在我机子上vector的max_size（）&#x3D;1073741823，list的max_size（）&#x3D;357913941，而string的max_size（）&#x3D;4294967294。。。请问这些值是固定的吗？？ 为什么要设为这么大的值？？是由电脑的配置决定的吗？？？</li>
+</ul>
+<p>4294967294是2^32，也就是用一个int表示长度，能表示的最大值。1073741823是上一个值的1&#x2F;4，如果有什么原因它需要的存储是前者的4倍的话，那么最大值就是1&#x2F;4。<strong>这个应该是C++编译器&#x2F;标准库规范&#x2F;操作系统决定的， 不是电脑配置决定的。</strong></p>
+<ul>
+<li>所有容器的指针都必须得是一个类，才能完成这个智能指针&#x2F;&#x2F;迭代器的一个动作，在++的时候，自动指向下一个</li>
+</ul>
+<h4 id="构造-1"><a href="#构造-1" class="headerlink" title="构造"></a>构造</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210802193228775.png"  alt="image-20210802193228775"></p>
+<p> <img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210803195324870.png"  alt="image-20210803195324870"></p>
+<h4 id="赋值-1"><a href="#赋值-1" class="headerlink" title="赋值"></a>赋值</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210803195544933.png"  alt="image-20210803195544933"></p>
+<h4 id="交换"><a href="#交换" class="headerlink" title="交换"></a>交换</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210803195901401.png"  alt="image-20210803195901401"></p>
+<h4 id="大小操作"><a href="#大小操作" class="headerlink" title="大小操作"></a>大小操作</h4><p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210803200017638.png"  alt="image-20210803200017638"></p>
+<h4 id="插入删除"><a href="#插入删除" class="headerlink" title="插入删除"></a>插入删除</h4><p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210803201326304.png"  alt="image-20210803201326304"></p>
+<h4 id="数据存取-1"><a href="#数据存取-1" class="headerlink" title="数据存取"></a>数据存取</h4><ul>
+<li>不能使用at&amp;[]，因为空间不是连续的</li>
+<li>迭代器不支持随机访问，只能前后移</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210804133904024.png"  alt="image-20210804133904024"></p>
+<h4 id="反转和排序"><a href="#反转和排序" class="headerlink" title="反转和排序"></a>反转和排序</h4><p>* </p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210804135816635.png"  alt="image-20210804135816635"></p>
+<ul>
+<li><p>反转用reverse</p>
+</li>
+<li></li>
+<li><p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210804135955569.png"  alt="image-20210804135955569"></p>
+</li>
+<li><p>从小到大排序</p>
+</li>
+<li><p>从大到小的话，可以传入一个布尔函数来说明自己排序的顺序</p>
+</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210804140235412.png"  alt="image-20210804140235412"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210804140251480.png"  alt="image-20210804140251480"></p>
+<ul>
+<li>sort是成员函数不是全局函数</li>
+</ul>
+<h3 id="unordered-multiset"><a href="#unordered-multiset" class="headerlink" title="unordered_multiset"></a>unordered_multiset</h3><ul>
+<li><p>底层都是hash_table</p>
+</li>
+<li><p>大量数据查找适合这玩意儿</p>
+</li>
+<li><p>backet比元素多很正常</p>
+</li>
+<li><p>底层：backet不会太长，元素个数超过backet的话，</p>
+<p>backet会进行扩充</p>
+<p>怎么还有数backet，数装载因子啊</p>
+</li>
+<li><p>使用方法</p>
+</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641650539920.png"  alt="1641650539920"></p>
+<p><img   src="C:\Users\Lucinda\AppData\Roaming\Typora\typora-user-images\1641650897450.png"  alt="1641650897450"></p>
+<h3 id="unordered-set"><a href="#unordered-set" class="headerlink" title="unordered_set"></a>unordered_set</h3><ul>
+<li>调用</li>
+</ul>
+<blockquote>
+<p>这里是4.9版，不遵循上面的素数规则，从篮子的数量可以观察得出</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641828614830.png"  alt="1641828614830"></p>
+<blockquote>
+<p>不管篮子个数的设定和拓展规则（比如一定是素数）是怎么样的，篮子的个数肯定大于总结点的个数</p>
+</blockquote>
+<h3 id="multiset"><a href="#multiset" class="headerlink" title="multiset"></a>multiset</h3><ul>
+<li><p>底层：红黑树</p>
+</li>
+<li><p>有规则地形成结果，数据有规律地插入，但插入会慢一点</p>
+</li>
+<li><p>全局find和自己拥有find</p>
+</li>
+<li><p>查找速度极快&#x2F;自己的find</p>
+</li>
+<li><p>可以放重复放</p>
+</li>
+</ul>
+<h3 id="set-multiset"><a href="#set-multiset" class="headerlink" title="set&#x2F;multiset"></a>set&#x2F;multiset</h3><h4 id="set底层"><a href="#set底层" class="headerlink" title="set底层"></a>set底层</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641801030469.png"  alt="1641801030469"></p>
+<ul>
+<li>源代码：</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641801059873.png"  alt="1641801059873"></p>
+<hr>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641801149057.png"  alt="1641801149057"></p>
+<blockquote>
+<p>每一个的传参</p>
+<p>less是模板，允许你指定你要比什么东西，怎么写&#x2F;&#x2F;后面再讲</p>
+</blockquote>
+<ul>
+<li><p>set里面拿到的红黑树的迭代器是const的，防止使用者改变</p>
+</li>
+<li><p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641801378701.png"  alt="1641801378701"></p>
+</li>
+<li><p>格鲁C提供identity，vc不提供</p>
+<p><strong>VC6的版本源代码</strong></p>
+<p><img   src="C:\Users\Lucinda\AppData\Roaming\Typora\typora-user-images\1641801546164.png"  alt="1641801546164"></p>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641801590741.png"  alt="1641801590741"></p>
+</li>
+</ul>
+<h4 id="特点-4"><a href="#特点-4" class="headerlink" title="特点"></a>特点</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210804172426298.png"  alt="image-20210804172426298"></p>
+<ul>
+<li>一般用set头文件</li>
+<li>可以遍历</li>
+<li>set是容器适配器</li>
+<li>自己有<strong>find可以使用</strong>&#x2F;&#x2F;自己的这个真的很快</li>
+<li>这里的key和value的理解要<strong>和map里面的区分</strong></li>
+</ul>
+<h4 id="赋值和构造"><a href="#赋值和构造" class="headerlink" title="赋值和构造"></a>赋值和构造</h4>  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#插入值</span><br><span class="line">insert</span><br><span class="line"></span><br><span class="line">#拷贝构造</span><br></pre></td></tr></table></figure>
+
+<h4 id="大小和交换"><a href="#大小和交换" class="headerlink" title="大小和交换"></a>大小和交换</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210804173247994.png"  alt="image-20210804173247994"></p>
+<h4 id="插入和删除-1"><a href="#插入和删除-1" class="headerlink" title="插入和删除"></a>插入和删除</h4><p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210804195046785.png"  alt="image-20210804195046785"></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>set</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>insert</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>size</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>empty</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>swap</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>erase（可重载为remove）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>clear</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>find</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>count（参数和remove一样）</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>√</td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="查找和统计"><a href="#查找和统计" class="headerlink" title="查找和统计"></a>查找和统计</h4><p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210807185055580.png"  alt="image-20210807185055580"></p>
+<h4 id="set和multiset区别"><a href="#set和multiset区别" class="headerlink" title="set和multiset区别"></a>set和multiset区别</h4><ul>
+<li>底层有一个pair</li>
+</ul>
+<p><img   src="C:\Users\Lucinda\AppData\Roaming\Typora\typora-user-images\image-20210807191158714.png"  alt="image-20210807191158714"></p>
+<h3 id="pair"><a href="#pair" class="headerlink" title="pair"></a>pair</h3><ul>
+<li>使用不需要头文件</li>
+</ul>
+<h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210807191710047.png"  alt="image-20210807191710047"></p>
+<h4 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210807192359654.png"  alt="image-20210807192359654"></p>
+<h3 id="map-multimap"><a href="#map-multimap" class="headerlink" title="map&#x2F;multimap"></a>map&#x2F;multimap</h3><h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><h5 id="map"><a href="#map" class="headerlink" title="map"></a>map</h5><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641802019941.png"  alt="1641802019941"></p>
+<p>1、map是<strong>关联式容器</strong>，它按照key值比较存储，默认是小于；</p>
+<p>2、在map中，</p>
+<p>键值key通常用于唯一的标识元素，而值value中存储与此键值key关联的内容；</p>
+<p>键值key和value的类型可能不同，并且在map的内部，key与value通过成员类型value_type绑定在一起，为其取别名为pair；</p>
+<p>3、map中的元素是键值对；</p>
+<p>4、map中的key是唯一的，并且不能修改，遇到重复的key就会插入失败；但可以利用operator[]对value进行修改；</p>
+<p>5、map的底层实现为红黑树，查找效率比较高，是O(logN);<br>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/yam_sunshine/article/details/89930311" >https://blog.csdn.net/yam_sunshine/article/details/89930311<i class="fas fa-external-link-alt"></i></a></p>
+<p>&#x3D;&#x3D;6.Map是键值对，Set是值的<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E9%9B%86%E5%90%88&spm=1001.2101.3001.7020" >集合<i class="fas fa-external-link-alt"></i></a>，<strong>当然键和值可以是任何的值</strong>；&#x3D;&#x3D;</p>
+<h5 id="multimap"><a href="#multimap" class="headerlink" title="multimap"></a>multimap</h5><p>multimap和map的功能类似，就不一一介绍了，下面主要说一下这两者的不同：</p>
+<p>1、multimap中的key可以重复</p>
+<p>2、multimap中没有重载operator[ ]功能</p>
+<p>3、对于重复的元素，查找的时候也是返回中序遍历的第一个元素，<strong>小不理解</strong></p>
+<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/yam_sunshine/article/details/89930311" >https://blog.csdn.net/yam_sunshine/article/details/89930311<i class="fas fa-external-link-alt"></i></a></p>
+<h4 id="multimap底层"><a href="#multimap底层" class="headerlink" title="multimap底层"></a>multimap底层</h4><ul>
+<li><p>底层：红黑树</p>
+</li>
+<li><p>元素可以重复</p>
+</li>
+<li><p>不可以直接取元素</p>
+</li>
+<li><p>data不一定只是一个数据，可能是数据集</p>
+</li>
+<li><p>使用方法：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641650388593.png"  alt="1641650388593"></p>
+</li>
+<li><p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641802145765.png"  alt="1641802145765"></p>
+</li>
+<li></li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641802746849.png"  alt="1641802746849"></p>
+<hr>
+<ul>
+<li>测试结果</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641802679216.png"  alt="1641802679216"></p>
+<hr>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641802853309.png"  alt="1641802853309"></p>
+<h4 id="map底层"><a href="#map底层" class="headerlink" title="map底层"></a>map底层</h4><ul>
+<li>底部红黑树</li>
+<li>键值对</li>
+<li>唯一的，不重复</li>
+<li>这玩意还会自己成键值对</li>
+<li>key没重复</li>
+<li>key禁止改</li>
+<li>value重复不算重复</li>
+</ul>
+<p><img   src="C:\Users\Lucinda\AppData\Roaming\Typora\typora-user-images\1641651144372.png"  alt="，1641651144372"></p>
+<p>* </p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641802145765.png"  alt="1641802145765"></p>
+<ul>
+<li>map独有的<strong>中括号</strong></li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641802921569.png"  alt="1641802921569"></p>
+<blockquote>
+<p>key存在，可以通过中括号直接取值，key不存在，可以通过中括号建立并放入map</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641803215866.png"  alt="1641803215866"></p>
+<blockquote>
+<p>找得到的时候，直接返回一个迭代器位置</p>
+<p>找不到时候，lowerbond返回一个最合适安插的位置的返回</p>
+</blockquote>
+<hr>
+<ul>
+<li>源代码：</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231937836.png"  alt="image-20240623231937836"></p>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231922944.png"  alt="image-20240623231922944"></p>
+<blockquote>
+<p>一个map和它里面的红黑树</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641802260043.png"  alt="1641802260043"></p>
+<blockquote>
+<p>一堆里面拿出第一个，拿出key</p>
+<p>是这个编译器独有的</p>
+</blockquote>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641802368000.png"  alt="1641802368000"></p>
+<blockquote>
+<p>这个pair的key不能够被改变&#x2F;&#x2F;之前set的不改变是利用const迭代器实现的，这里不一样</p>
+</blockquote>
+<ul>
+<li>与其他版本比较</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1641802505427.png"  alt="1641802505427"></p>
+<blockquote>
+<p> 底层还有pair</p>
+</blockquote>
+<h4 id="复制和构造"><a href="#复制和构造" class="headerlink" title="复制和构造"></a>复制和构造</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210807184657996.png"  alt="image-20210807184657996"></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210824215338473.png"  alt="image-20210824215338473"></p>
+<h4 id="大小交换插入删除"><a href="#大小交换插入删除" class="headerlink" title="大小交换插入删除"></a>大小交换插入删除</h4><table>
+<thead>
+<tr>
+<th>拷贝</th>
+<th>√</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>赋值</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>交换</td>
+<td>√</td>
+<td>swap</td>
+</tr>
+<tr>
+<td>判断为空</td>
+<td>√</td>
+<td>empty</td>
+</tr>
+<tr>
+<td>获得数目（大小</td>
+<td>√</td>
+<td>size</td>
+</tr>
+<tr>
+<td>插入</td>
+<td>√</td>
+<td>insert</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>make_pair(2,20)</td>
+</tr>
+<tr>
+<td>删除</td>
+<td>√</td>
+<td>erase</td>
+</tr>
+<tr>
+<td>清空</td>
+<td>√</td>
+<td>clear</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>不同大小的map容器互换，容量小的将会损失数据</p>
+</li>
+<li><p>如果插入的数据在map中已经存在，则不会插入，不能用insert完成覆盖更新！切记！！！！</p>
+</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210825111810558.png"  alt="image-20210825111810558"></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20210825111931049.png"  alt="image-20210825111931049"></p>
+<ul>
+<li>第四种不用的原因：不存在的数会自动给value赋值为0</li>
+</ul>
+<h4 id="查找统计"><a href="#查找统计" class="headerlink" title="查找统计"></a>查找统计</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20210825112608053.png"  alt="image-20210825112608053"></p>
+<p><img   src="C:\Users\Lucinda\AppData\Roaming\Typora\typora-user-images\image-20210825112908684.png"  alt="image-20210825112908684"></p>
+<ul>
+<li><p>key不可以重复，那么value可以重复吗？可以</p>
+</li>
+<li><p>count（key）的话就是说搜索相同key的个数（map中只有0或1）</p>
+</li>
+</ul>
+<h4 id="排序-1"><a href="#排序-1" class="headerlink" title="排序"></a>排序</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">mylist</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="type">int</span> v1,intv <span class="number">2</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> v1 &lt; v2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">map&lt;<span class="type">int</span>,<span class="type">int</span>,mylist&gt;   <span class="meta">#mylist自定义排序</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="旧版本的数据结构"><a href="#旧版本的数据结构" class="headerlink" title="旧版本的数据结构"></a>旧版本的数据结构</h2><ul>
+<li>也可以用，就是用的时候需要特别注意</li>
+</ul>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/1641651295193.png"  alt="1641651295193"></p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
+<li>质变算法（对数据进行改变）</li>
+<li>非质变算法（不改）</li>
+</ul>
+<p><img   src="C:\Users\Lucinda\AppData\Roaming\Typora\typora-user-images\1641653055995.png"  alt="1641653055995"></p>
+<ul>
+<li>复习标准库六个部分整体关系</li>
+</ul>
+<p><img   src="C:\Users\Lucinda\AppData\Roaming\Typora\typora-user-images\1641829528383.png"  alt="1641829528383"></p>
+<p><strong>迭代器是STL将数据容器和算法分开后连接的纽带，</strong></p>
+<p><strong>语言层面 容器 迭代器 算法的关联</strong></p>
+<ul>
+<li>迭代器和算法的关系单独成章</li>
+</ul>
+<h2 id="迭代器与算法-！！！！"><a href="#迭代器与算法-！！！！" class="headerlink" title="迭代器与算法&#x2F;！！！！"></a>迭代器与算法&#x2F;！！！！</h2><p><strong>实例一</strong></p>
+<p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1658406764432.png"  alt="1658406764432"></p>
+<blockquote>
+<hr>
+<p>右下角distance函数（入口）：计算连续空间容器的距离，利用两个指针</p>
+<p>方案一（非连续空间计算个数）：数数</p>
+<p>方案二（连续空间计算个数）：尾指针减去头指针</p>
+<hr>
+<p>为什么入口函数的返回类型不直接写为int（反正都是数个数）</p>
+<p>其实我感觉很奇怪，怎么说返回的都得是(last-first)*difference_type吧，</p>
+<p>难道对于指针的加减运算已经进行过重载了吗</p>
+<hr>
+<p><strong>总结：这个例子以distance的入口（包含主函数入口和次函数入口）</strong></p>
+<p><strong>和两个次函数偏特化版本入手，显示迭代器中两种trait的具体使用（红色部分）</strong></p>
+<hr>
+<p><strong>其实我不理解，直接像偏特化那样子写不可吗，为啥还要分主次函数来写，</strong></p>
+<p><strong>主函数接口之间写三个传参不行吗</strong></p>
+<hr>
+<p>为啥只有两种？而不是有刚才显示的五种迭代器类型的不同偏特化版本</p>
+<p><strong>因为左下方的继承关系的存在，使得f is a input and ram is a bid</strong></p>
+<p>子类可以通过父类接口来调用函数</p>
+<p><strong>这样也是为什么用struct对象代替数字的trait的tag的存在形式的原因之一（？）</strong></p>
+<p>这有效减少了代码复用（?）</p>
+</blockquote>
+<p><strong>实例二</strong></p>
+<p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1658416259956.png"  alt="1658416259956"></p>
+<blockquote>
+<p>右方函数的作用是直接问出迭代器的类型 单独提取作为函数</p>
+<p>其他的思路和实例一类似</p>
+</blockquote>
+<p><strong>实例三</strong></p>
+<p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1658468611070.png"  alt="1658468611070"></p>
+<blockquote>
+</blockquote>
+<h2 id="具体算法"><a href="#具体算法" class="headerlink" title="具体算法"></a>具体算法</h2><p>&#x2F;&#x2F;这里有点听快</p>
+<h3 id="相关头文件"><a href="#相关头文件" class="headerlink" title="相关头文件"></a>相关头文件</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231858114.png"  alt="image-20240623231858114"></p>
+<h3 id="for-each"><a href="#for-each" class="headerlink" title="for each"></a>for each</h3><p>&#x2F;&#x2F;对每一个对象进行一个啥啥的操作f()&#x2F;&#x2F;这个f是需要自定义的</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231837724.png"  alt="image-20240623231837724"></p>
+<blockquote>
+<p>这里atuo是C++11的新特性</p>
+</blockquote>
+<h3 id="replace相关函数"><a href="#replace相关函数" class="headerlink" title="replace相关函数"></a>replace相关函数</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231822413.png"  alt="image-20240623231822413"></p>
+<blockquote>
+<p>功能是：</p>
+<p>传参是：</p>
+<p>传参的类型暗示：</p>
+</blockquote>
+<h3 id="count相关函数"><a href="#count相关函数" class="headerlink" title="count相关函数"></a>count相关函数</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231809783.png"  alt="image-20240623231809783"></p>
+<blockquote>
+<p>左边源代码是在std命名空间里面&#x2F;&#x2F;差不多全局函数的，右边是容器自带的，有右边这几个的，最好用右边的。</p>
+<blockquote>
+<p>是关联式容器的才可以用自己的比较快的做法</p>
+</blockquote>
+</blockquote>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231755697.png"  alt="image-20240623231755697"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231746914.png"  alt="image-20240623231746914"></p>
+<h3 id="accumlate"><a href="#accumlate" class="headerlink" title="accumlate"></a>accumlate</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231727019.png"  alt="image-20240623231727019"></p>
+<blockquote>
+<p>左侧：</p>
+<blockquote>
+<p>上面是直接累加</p>
+<p>下面是对初值进行一个什么什么样的操作&#x2F;&#x2F;binary_op&#x2F;&#x2F;可以自己设定这里的行为是什么</p>
+<blockquote>
+<p>这里的myclass是仿函数，对小括号进行了重载</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231656479.png"  alt="image-20240623231656479"></p>
+<blockquote>
+<p>内部已经排列有序的没必要再用sort&#x2F;&#x2F;虽然有时候也是需要的</p>
+<blockquote>
+<p>i&lt;j由小到大的排序</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>list和单向链表不能用sort，因为不能跳跃式交换<strong>小不理解</strong></p>
+</blockquote>
+<blockquote>
+<p>rbegin(): rend():看下面</p>
+</blockquote>
+<h3 id="rbegin-和rend"><a href="#rbegin-和rend" class="headerlink" title="rbegin()和rend()"></a>rbegin()和rend()</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231641756.png"  alt="image-20240623231641756"></p>
+<blockquote>
+<p>reverse_iterator是适配器</p>
+</blockquote>
+<h3 id="binary-search"><a href="#binary-search" class="headerlink" title="binary_search"></a>binary_search</h3><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231615178.png"  alt="image-20240623231615178"></p>
+<blockquote>
+<p>先排序才能够使用二分搜寻&#x2F;&#x2F;<strong>只是判断在不在的函数</strong></p>
+</blockquote>
+<ul>
+<li>有个兄弟叫top_bound</li>
+<li>两者的理解：</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240623231559709.png"  alt="image-20240623231559709"></p>
+<blockquote>
+<p>low_bound是合适安插位置的最低点，top则是最适合安插位置的最高点</p>
+</blockquote>
+<h1 id="选择容器的规则"><a href="#选择容器的规则" class="headerlink" title="选择容器的规则"></a>选择容器的规则</h1><p>以下是一些选择容器的基本原则：</p>
+<p>(1)、除法你有很好的理由选择其他容器，否则应该使用vector；</p>
+<p>(2)、如果你的程序有很多小的元素，且空间的额外开销很重要，则不要使用list或forward_list；</p>
+<p>(3)、如果程序要求随机访问元素，应使用vector或deque；</p>
+<p><del>(4)、如果程序要求在容器的中间插入或删除元素，应使用list或forward_list；</del></p>
+<p><del>(5)、如果程序需要在头尾位置插入或删除元素，但不会在中间位置进行插入或删除操作，则使用deque；</del></p>
+<p>(6)、如果程序只有在读取输入时才需要在容器中间位置插入元素，随后需要随机访问元素，</p>
+<p>则：首先，确定是否真的需要在容器中间位置添加元素。当处理输入数据时，通常可以很容器地向vector追加数据，然后再调用标准库的sort函数来重排容器中的元素，从而避免在中间位置添加元素。</p>
+<p>如果必须在中间位置插入元素，考虑在输入阶段使用list，一旦输入完成，将list中的内容拷贝到一个vector中。</p>
+<p>如果你不确定应该使用哪种容器，那么可以在程序中只使用vector和list公共的操作：使用迭代器，不使用下标操作，避免随机访问。这样，在必要时选择使用vector或list都很方便。</p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2022/02/26/20220226-inline/"
+                                   title="20220226 inline"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20220226 inline</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#STL%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">STL简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BF%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">仿函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">2.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%93%E8%AF%8D"><span class="nav-number">2.2.</span> <span class="nav-text">谓词</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">2.2.1.</span> <span class="nav-text">概念</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.3.</span> <span class="nav-text">内建对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BE%8B%E5%AD%90"><span class="nav-number">2.4.</span> <span class="nav-text">使用例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">2.5.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E4%BB%BF%E5%87%BD%E6%95%B0"><span class="nav-number">2.5.1.</span> <span class="nav-text">算术仿函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E4%BB%BF%E5%87%BD%E6%95%B0"><span class="nav-number">2.5.2.</span> <span class="nav-text">关系仿函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E4%BB%BF%E5%87%BD%E6%95%B0"><span class="nav-number">2.5.3.</span> <span class="nav-text">逻辑仿函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E4%BB%BF%E5%87%BD%E6%95%B0%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.6.</span> <span class="nav-text">特殊仿函数介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E9%85%8D%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">分配器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90"><span class="nav-number">3.1.</span> <span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%82%E9%85%8D%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">适配器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB-1"><span class="nav-number">4.1.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E9%80%82%E9%85%8D%E5%99%A8"><span class="nav-number">4.1.1.</span> <span class="nav-text">容器适配器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%80%82%E9%85%8D%E5%99%A8"><span class="nav-number">4.1.2.</span> <span class="nav-text">函数适配器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%80binder2nd"><span class="nav-number">4.1.2.1.</span> <span class="nav-text">例子一binder2nd</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#not1"><span class="nav-number">4.1.2.2.</span> <span class="nav-text">not1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%96%B0%E5%9E%8B%E9%80%82%E9%85%8D%E5%99%A8-bind"><span class="nav-number">4.1.2.3.</span> <span class="nav-text">新型适配器 bind</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E7%AE%80%E4%BB%8B"><span class="nav-number">5.</span> <span class="nav-text">容器简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB-2"><span class="nav-number">5.1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80"><span class="nav-number">5.2.</span> <span class="nav-text">相关数据结构基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91-%E9%9D%9E%E5%85%AC%E5%BC%80"><span class="nav-number">5.2.1.</span> <span class="nav-text">红黑树&#x2F;&#x2F;非公开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hashtable"><span class="nav-number">5.2.2.</span> <span class="nav-text">hashtable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hash-function"><span class="nav-number">5.2.3.</span> <span class="nav-text">hash_function</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%87%E8%83%BD%E7%9A%84hash-function"><span class="nav-number">5.2.3.1.</span> <span class="nav-text">万能的hash_function</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="nav-number">6.</span> <span class="nav-text">迭代器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="nav-number">6.1.</span> <span class="nav-text">基本介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA"><span class="nav-number">6.2.</span> <span class="nav-text">温馨提示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%94%AF%E6%8C%81%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">6.3.</span> <span class="nav-text">迭代器支持的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">6.4.</span> <span class="nav-text">迭代器和操作符重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.5.</span> <span class="nav-text">迭代器类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8Ctrait"><span class="nav-number">6.6.</span> <span class="nav-text">迭代器和trait</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E4%B8%AAtrait"><span class="nav-number">6.6.1.</span> <span class="nav-text">五个trait</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#value-type"><span class="nav-number">6.6.1.1.</span> <span class="nav-text">value type</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#iterator-category"><span class="nav-number">6.6.1.2.</span> <span class="nav-text">iterator_category</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#different-type"><span class="nav-number">6.6.1.3.</span> <span class="nav-text">different_type</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#reference-type"><span class="nav-number">6.6.1.4.</span> <span class="nav-text">reference type</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pointer-type"><span class="nav-number">6.6.1.5.</span> <span class="nav-text">pointer_type</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8trait%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">6.6.2.</span> <span class="nav-text">迭代器trait的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#trait%E5%85%B7%E4%BD%93%E5%9B%9E%E7%AD%94%E7%9A%84%E6%9C%BA%E5%88%B6"><span class="nav-number">6.6.3.</span> <span class="nav-text">trait具体回答的机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%9A%84trait%E5%9F%BA%E6%9C%AC%E5%9B%9E%E7%AD%94%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">6.6.4.</span> <span class="nav-text">完整的trait基本回答能力的设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96trait"><span class="nav-number">6.6.5.</span> <span class="nav-text">其他trait</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C%E8%90%83%E5%8F%96%E6%9C%BA%E2%80%9D"><span class="nav-number">6.7.</span> <span class="nav-text">“萃取机”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E4%BE%8B%E5%AD%90%E5%88%86%E6%9E%90"><span class="nav-number">6.7.1.</span> <span class="nav-text">具体例子分析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E9%87%8C%E9%83%A8%E5%88%86%E7%9A%84%E8%A7%86%E9%A2%91%E6%9C%89%E5%BE%85%E6%80%BB%E7%BB%93%E5%92%8C%E5%9B%9E%E7%9C%8B"><span class="nav-number">7.</span> <span class="nav-text">!这里部分的视频有待总结和回看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%B9%E5%99%A8%E4%BB%8B%E7%BB%8D"><span class="nav-number">8.</span> <span class="nav-text">具体容器介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#array"><span class="nav-number">8.1.</span> <span class="nav-text">array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA-1"><span class="nav-number">8.1.1.</span> <span class="nav-text">温馨提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%95%E5%B1%82"><span class="nav-number">8.1.2.</span> <span class="nav-text">底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E"><span class="nav-number">8.1.3.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">8.1.4.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">8.1.5.</span> <span class="nav-text">基本操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string"><span class="nav-number">8.2.</span> <span class="nav-text">string</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA-2"><span class="nav-number">8.2.1.</span> <span class="nav-text">温馨提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9"><span class="nav-number">8.2.2.</span> <span class="nav-text">基本内容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-number">8.3.</span> <span class="nav-text">vector</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%95%E5%B1%82-1"><span class="nav-number">8.3.1.</span> <span class="nav-text">底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%88%86%E6%9E%90"><span class="nav-number">8.3.2.</span> <span class="nav-text">迭代器分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-1"><span class="nav-number">8.3.3.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">8.3.4.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0"><span class="nav-number">8.3.5.</span> <span class="nav-text">构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">8.3.6.</span> <span class="nav-text">查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC"><span class="nav-number">8.3.7.</span> <span class="nav-text">赋值&#x3D;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E5%AE%B9%E9%87%8F%E5%92%8C%E5%A4%A7%E5%B0%8F"><span class="nav-number">8.3.8.</span> <span class="nav-text">vector容量和大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"><span class="nav-number">8.3.9.</span> <span class="nav-text">插入和删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%8F%96"><span class="nav-number">8.3.10.</span> <span class="nav-text">数据存取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%92%E6%8D%A2%E5%AE%B9%E5%99%A8"><span class="nav-number">8.3.11.</span> <span class="nav-text">互换容器</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">8.3.11.0.1.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">8.3.11.1.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">8.3.11.2.</span> <span class="nav-text">使用的问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stack"><span class="nav-number">8.4.</span> <span class="nav-text">stack</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3"><span class="nav-number">8.4.1.</span> <span class="nav-text">接口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deque"><span class="nav-number">8.5.</span> <span class="nav-text">deque</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-2"><span class="nav-number">8.5.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%95%E5%B1%82-2"><span class="nav-number">8.5.2.</span> <span class="nav-text">底层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#queue"><span class="nav-number">8.6.</span> <span class="nav-text">queue</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-3"><span class="nav-number">8.6.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">8.6.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#priority-queue"><span class="nav-number">8.7.</span> <span class="nav-text">priority_queue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forward-list"><span class="nav-number">8.8.</span> <span class="nav-text">forward_list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slist"><span class="nav-number">8.9.</span> <span class="nav-text">slist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list"><span class="nav-number">8.10.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%88%86%E6%9E%90-1"><span class="nav-number">8.10.1.</span> <span class="nav-text">迭代器分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8%E7%89%B9%E7%82%B9"><span class="nav-number">8.10.2.</span> <span class="nav-text">链表特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list%E7%89%B9%E7%82%B9"><span class="nav-number">8.10.3.</span> <span class="nav-text">list特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">8.10.4.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0-1"><span class="nav-number">8.10.5.</span> <span class="nav-text">构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC-1"><span class="nav-number">8.10.6.</span> <span class="nav-text">赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%A4%E6%8D%A2"><span class="nav-number">8.10.7.</span> <span class="nav-text">交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E5%B0%8F%E6%93%8D%E4%BD%9C"><span class="nav-number">8.10.8.</span> <span class="nav-text">大小操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4"><span class="nav-number">8.10.9.</span> <span class="nav-text">插入删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%8F%96-1"><span class="nav-number">8.10.10.</span> <span class="nav-text">数据存取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E8%BD%AC%E5%92%8C%E6%8E%92%E5%BA%8F"><span class="nav-number">8.10.11.</span> <span class="nav-text">反转和排序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-multiset"><span class="nav-number">8.11.</span> <span class="nav-text">unordered_multiset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-set"><span class="nav-number">8.12.</span> <span class="nav-text">unordered_set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiset"><span class="nav-number">8.13.</span> <span class="nav-text">multiset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set-multiset"><span class="nav-number">8.14.</span> <span class="nav-text">set&#x2F;multiset</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#set%E5%BA%95%E5%B1%82"><span class="nav-number">8.14.1.</span> <span class="nav-text">set底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-4"><span class="nav-number">8.14.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E5%92%8C%E6%9E%84%E9%80%A0"><span class="nav-number">8.14.3.</span> <span class="nav-text">赋值和构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E5%B0%8F%E5%92%8C%E4%BA%A4%E6%8D%A2"><span class="nav-number">8.14.4.</span> <span class="nav-text">大小和交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4-1"><span class="nav-number">8.14.5.</span> <span class="nav-text">插入和删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%92%8C%E7%BB%9F%E8%AE%A1"><span class="nav-number">8.14.6.</span> <span class="nav-text">查找和统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#set%E5%92%8Cmultiset%E5%8C%BA%E5%88%AB"><span class="nav-number">8.14.7.</span> <span class="nav-text">set和multiset区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pair"><span class="nav-number">8.15.</span> <span class="nav-text">pair</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">8.15.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96"><span class="nav-number">8.15.2.</span> <span class="nav-text">获取</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map-multimap"><span class="nav-number">8.16.</span> <span class="nav-text">map&#x2F;multimap</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">8.16.1.</span> <span class="nav-text">特点：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#map"><span class="nav-number">8.16.1.1.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#multimap"><span class="nav-number">8.16.1.2.</span> <span class="nav-text">multimap</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#multimap%E5%BA%95%E5%B1%82"><span class="nav-number">8.16.2.</span> <span class="nav-text">multimap底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#map%E5%BA%95%E5%B1%82"><span class="nav-number">8.16.3.</span> <span class="nav-text">map底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E5%92%8C%E6%9E%84%E9%80%A0"><span class="nav-number">8.16.4.</span> <span class="nav-text">复制和构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E5%B0%8F%E4%BA%A4%E6%8D%A2%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4"><span class="nav-number">8.16.5.</span> <span class="nav-text">大小交换插入删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E7%BB%9F%E8%AE%A1"><span class="nav-number">8.16.6.</span> <span class="nav-text">查找统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F-1"><span class="nav-number">8.16.7.</span> <span class="nav-text">排序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">9.</span> <span class="nav-text">旧版本的数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-number">10.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95-%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-number">11.</span> <span class="nav-text">迭代器与算法&#x2F;！！！！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E7%AE%97%E6%B3%95"><span class="nav-number">12.</span> <span class="nav-text">具体算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">12.1.</span> <span class="nav-text">相关头文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-each"><span class="nav-number">12.2.</span> <span class="nav-text">for each</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#replace%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">12.3.</span> <span class="nav-text">replace相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">12.4.</span> <span class="nav-text">count相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-number">12.5.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#accumlate"><span class="nav-number">12.6.</span> <span class="nav-text">accumlate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">12.7.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rbegin-%E5%92%8Crend"><span class="nav-number">12.8.</span> <span class="nav-text">rbegin()和rend()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-search"><span class="nav-number">12.9.</span> <span class="nav-text">binary_search</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%AE%B9%E5%99%A8%E7%9A%84%E8%A7%84%E5%88%99"><span class="nav-number"></span> <span class="nav-text">选择容器的规则</span></a>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#STL%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">STL简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BF%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">仿函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">2.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%93%E8%AF%8D"><span class="nav-number">2.2.</span> <span class="nav-text">谓词</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">2.2.1.</span> <span class="nav-text">概念</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.3.</span> <span class="nav-text">内建对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BE%8B%E5%AD%90"><span class="nav-number">2.4.</span> <span class="nav-text">使用例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">2.5.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E4%BB%BF%E5%87%BD%E6%95%B0"><span class="nav-number">2.5.1.</span> <span class="nav-text">算术仿函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E4%BB%BF%E5%87%BD%E6%95%B0"><span class="nav-number">2.5.2.</span> <span class="nav-text">关系仿函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E4%BB%BF%E5%87%BD%E6%95%B0"><span class="nav-number">2.5.3.</span> <span class="nav-text">逻辑仿函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E4%BB%BF%E5%87%BD%E6%95%B0%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.6.</span> <span class="nav-text">特殊仿函数介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E9%85%8D%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">分配器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90"><span class="nav-number">3.1.</span> <span class="nav-text">例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%82%E9%85%8D%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">适配器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB-1"><span class="nav-number">4.1.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E9%80%82%E9%85%8D%E5%99%A8"><span class="nav-number">4.1.1.</span> <span class="nav-text">容器适配器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%80%82%E9%85%8D%E5%99%A8"><span class="nav-number">4.1.2.</span> <span class="nav-text">函数适配器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%80binder2nd"><span class="nav-number">4.1.2.1.</span> <span class="nav-text">例子一binder2nd</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#not1"><span class="nav-number">4.1.2.2.</span> <span class="nav-text">not1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%96%B0%E5%9E%8B%E9%80%82%E9%85%8D%E5%99%A8-bind"><span class="nav-number">4.1.2.3.</span> <span class="nav-text">新型适配器 bind</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8%E7%AE%80%E4%BB%8B"><span class="nav-number">5.</span> <span class="nav-text">容器简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB-2"><span class="nav-number">5.1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80"><span class="nav-number">5.2.</span> <span class="nav-text">相关数据结构基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91-%E9%9D%9E%E5%85%AC%E5%BC%80"><span class="nav-number">5.2.1.</span> <span class="nav-text">红黑树&#x2F;&#x2F;非公开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hashtable"><span class="nav-number">5.2.2.</span> <span class="nav-text">hashtable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hash-function"><span class="nav-number">5.2.3.</span> <span class="nav-text">hash_function</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%87%E8%83%BD%E7%9A%84hash-function"><span class="nav-number">5.2.3.1.</span> <span class="nav-text">万能的hash_function</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="nav-number">6.</span> <span class="nav-text">迭代器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="nav-number">6.1.</span> <span class="nav-text">基本介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA"><span class="nav-number">6.2.</span> <span class="nav-text">温馨提示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%94%AF%E6%8C%81%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">6.3.</span> <span class="nav-text">迭代器支持的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8C%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">6.4.</span> <span class="nav-text">迭代器和操作符重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.5.</span> <span class="nav-text">迭代器类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%92%8Ctrait"><span class="nav-number">6.6.</span> <span class="nav-text">迭代器和trait</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E4%B8%AAtrait"><span class="nav-number">6.6.1.</span> <span class="nav-text">五个trait</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#value-type"><span class="nav-number">6.6.1.1.</span> <span class="nav-text">value type</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#iterator-category"><span class="nav-number">6.6.1.2.</span> <span class="nav-text">iterator_category</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#different-type"><span class="nav-number">6.6.1.3.</span> <span class="nav-text">different_type</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#reference-type"><span class="nav-number">6.6.1.4.</span> <span class="nav-text">reference type</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pointer-type"><span class="nav-number">6.6.1.5.</span> <span class="nav-text">pointer_type</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8trait%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">6.6.2.</span> <span class="nav-text">迭代器trait的作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#trait%E5%85%B7%E4%BD%93%E5%9B%9E%E7%AD%94%E7%9A%84%E6%9C%BA%E5%88%B6"><span class="nav-number">6.6.3.</span> <span class="nav-text">trait具体回答的机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%9A%84trait%E5%9F%BA%E6%9C%AC%E5%9B%9E%E7%AD%94%E8%83%BD%E5%8A%9B%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">6.6.4.</span> <span class="nav-text">完整的trait基本回答能力的设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96trait"><span class="nav-number">6.6.5.</span> <span class="nav-text">其他trait</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C%E8%90%83%E5%8F%96%E6%9C%BA%E2%80%9D"><span class="nav-number">6.7.</span> <span class="nav-text">“萃取机”</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E4%BE%8B%E5%AD%90%E5%88%86%E6%9E%90"><span class="nav-number">6.7.1.</span> <span class="nav-text">具体例子分析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E9%87%8C%E9%83%A8%E5%88%86%E7%9A%84%E8%A7%86%E9%A2%91%E6%9C%89%E5%BE%85%E6%80%BB%E7%BB%93%E5%92%8C%E5%9B%9E%E7%9C%8B"><span class="nav-number">7.</span> <span class="nav-text">!这里部分的视频有待总结和回看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E5%AE%B9%E5%99%A8%E4%BB%8B%E7%BB%8D"><span class="nav-number">8.</span> <span class="nav-text">具体容器介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#array"><span class="nav-number">8.1.</span> <span class="nav-text">array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA-1"><span class="nav-number">8.1.1.</span> <span class="nav-text">温馨提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%95%E5%B1%82"><span class="nav-number">8.1.2.</span> <span class="nav-text">底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E"><span class="nav-number">8.1.3.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">8.1.4.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">8.1.5.</span> <span class="nav-text">基本操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string"><span class="nav-number">8.2.</span> <span class="nav-text">string</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA-2"><span class="nav-number">8.2.1.</span> <span class="nav-text">温馨提示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9"><span class="nav-number">8.2.2.</span> <span class="nav-text">基本内容</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-number">8.3.</span> <span class="nav-text">vector</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%95%E5%B1%82-1"><span class="nav-number">8.3.1.</span> <span class="nav-text">底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%88%86%E6%9E%90"><span class="nav-number">8.3.2.</span> <span class="nav-text">迭代器分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-1"><span class="nav-number">8.3.3.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">8.3.4.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0"><span class="nav-number">8.3.5.</span> <span class="nav-text">构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">8.3.6.</span> <span class="nav-text">查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC"><span class="nav-number">8.3.7.</span> <span class="nav-text">赋值&#x3D;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E5%AE%B9%E9%87%8F%E5%92%8C%E5%A4%A7%E5%B0%8F"><span class="nav-number">8.3.8.</span> <span class="nav-text">vector容量和大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4"><span class="nav-number">8.3.9.</span> <span class="nav-text">插入和删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%8F%96"><span class="nav-number">8.3.10.</span> <span class="nav-text">数据存取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%92%E6%8D%A2%E5%AE%B9%E5%99%A8"><span class="nav-number">8.3.11.</span> <span class="nav-text">互换容器</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">8.3.11.0.1.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">8.3.11.1.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">8.3.11.2.</span> <span class="nav-text">使用的问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stack"><span class="nav-number">8.4.</span> <span class="nav-text">stack</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3"><span class="nav-number">8.4.1.</span> <span class="nav-text">接口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#deque"><span class="nav-number">8.5.</span> <span class="nav-text">deque</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-2"><span class="nav-number">8.5.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%95%E5%B1%82-2"><span class="nav-number">8.5.2.</span> <span class="nav-text">底层</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#queue"><span class="nav-number">8.6.</span> <span class="nav-text">queue</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-3"><span class="nav-number">8.6.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">8.6.2.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#priority-queue"><span class="nav-number">8.7.</span> <span class="nav-text">priority_queue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forward-list"><span class="nav-number">8.8.</span> <span class="nav-text">forward_list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slist"><span class="nav-number">8.9.</span> <span class="nav-text">slist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list"><span class="nav-number">8.10.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%88%86%E6%9E%90-1"><span class="nav-number">8.10.1.</span> <span class="nav-text">迭代器分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8%E7%89%B9%E7%82%B9"><span class="nav-number">8.10.2.</span> <span class="nav-text">链表特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list%E7%89%B9%E7%82%B9"><span class="nav-number">8.10.3.</span> <span class="nav-text">list特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">8.10.4.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0-1"><span class="nav-number">8.10.5.</span> <span class="nav-text">构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC-1"><span class="nav-number">8.10.6.</span> <span class="nav-text">赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%A4%E6%8D%A2"><span class="nav-number">8.10.7.</span> <span class="nav-text">交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E5%B0%8F%E6%93%8D%E4%BD%9C"><span class="nav-number">8.10.8.</span> <span class="nav-text">大小操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4"><span class="nav-number">8.10.9.</span> <span class="nav-text">插入删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%8F%96-1"><span class="nav-number">8.10.10.</span> <span class="nav-text">数据存取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E8%BD%AC%E5%92%8C%E6%8E%92%E5%BA%8F"><span class="nav-number">8.10.11.</span> <span class="nav-text">反转和排序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-multiset"><span class="nav-number">8.11.</span> <span class="nav-text">unordered_multiset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-set"><span class="nav-number">8.12.</span> <span class="nav-text">unordered_set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiset"><span class="nav-number">8.13.</span> <span class="nav-text">multiset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set-multiset"><span class="nav-number">8.14.</span> <span class="nav-text">set&#x2F;multiset</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#set%E5%BA%95%E5%B1%82"><span class="nav-number">8.14.1.</span> <span class="nav-text">set底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-4"><span class="nav-number">8.14.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E5%92%8C%E6%9E%84%E9%80%A0"><span class="nav-number">8.14.3.</span> <span class="nav-text">赋值和构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E5%B0%8F%E5%92%8C%E4%BA%A4%E6%8D%A2"><span class="nav-number">8.14.4.</span> <span class="nav-text">大小和交换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4-1"><span class="nav-number">8.14.5.</span> <span class="nav-text">插入和删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%92%8C%E7%BB%9F%E8%AE%A1"><span class="nav-number">8.14.6.</span> <span class="nav-text">查找和统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#set%E5%92%8Cmultiset%E5%8C%BA%E5%88%AB"><span class="nav-number">8.14.7.</span> <span class="nav-text">set和multiset区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pair"><span class="nav-number">8.15.</span> <span class="nav-text">pair</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA"><span class="nav-number">8.15.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96"><span class="nav-number">8.15.2.</span> <span class="nav-text">获取</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map-multimap"><span class="nav-number">8.16.</span> <span class="nav-text">map&#x2F;multimap</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">8.16.1.</span> <span class="nav-text">特点：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#map"><span class="nav-number">8.16.1.1.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#multimap"><span class="nav-number">8.16.1.2.</span> <span class="nav-text">multimap</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#multimap%E5%BA%95%E5%B1%82"><span class="nav-number">8.16.2.</span> <span class="nav-text">multimap底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#map%E5%BA%95%E5%B1%82"><span class="nav-number">8.16.3.</span> <span class="nav-text">map底层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E5%92%8C%E6%9E%84%E9%80%A0"><span class="nav-number">8.16.4.</span> <span class="nav-text">复制和构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E5%B0%8F%E4%BA%A4%E6%8D%A2%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4"><span class="nav-number">8.16.5.</span> <span class="nav-text">大小交换插入删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E7%BB%9F%E8%AE%A1"><span class="nav-number">8.16.6.</span> <span class="nav-text">查找统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F-1"><span class="nav-number">8.16.7.</span> <span class="nav-text">排序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A7%E7%89%88%E6%9C%AC%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">9.</span> <span class="nav-text">旧版本的数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-number">10.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%AE%97%E6%B3%95-%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-number">11.</span> <span class="nav-text">迭代器与算法&#x2F;！！！！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E7%AE%97%E6%B3%95"><span class="nav-number">12.</span> <span class="nav-text">具体算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">12.1.</span> <span class="nav-text">相关头文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-each"><span class="nav-number">12.2.</span> <span class="nav-text">for each</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#replace%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">12.3.</span> <span class="nav-text">replace相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">12.4.</span> <span class="nav-text">count相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-number">12.5.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#accumlate"><span class="nav-number">12.6.</span> <span class="nav-text">accumlate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">12.7.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rbegin-%E5%92%8Crend"><span class="nav-number">12.8.</span> <span class="nav-text">rbegin()和rend()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#binary-search"><span class="nav-number">12.9.</span> <span class="nav-text">binary_search</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%AE%B9%E5%99%A8%E7%9A%84%E8%A7%84%E5%88%99"><span class="nav-number"></span> <span class="nav-text">选择容器的规则</span></a>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>

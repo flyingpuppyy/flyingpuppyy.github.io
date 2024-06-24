@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20230109 Selenium |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"你过于安静勇敢，我忘了你正在承受苦痛","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20230109 Selenium
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv5</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-06-23 23:04:37</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Sun Jun 23 2024 23:06:23 GMT+0800">2024-06-23 23:06:23</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">自动化测试</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="20230109-Selenium"><a href="#20230109-Selenium" class="headerlink" title="20230109 Selenium"></a>20230109 Selenium</h1><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Z4411o7TA?p=1" >点击这里，边看视频讲解，边学习以下内容<i class="fas fa-external-link-alt"></i></a></p>
+<p>Selenium 是一套 Web网站 的<strong>程序&#x3D;&#x3D;自动化&#x3D;&#x3D;操作 解决方案</strong>。</p>
+<p>通过它，我们可以写出自动化程序，像人一样在浏览器里操作web界面。 比如点击界面按钮，在文本框中输入文字 等操作。</p>
+<p>而且还能从web界面获取信息。  比如获取 火车、汽车票务信息，招聘网站职位信息，财经网站股票价格信息 等等，然后用程序进行分析处理。</p>
+<h1 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h1><p>Selenium 的自动化原理是这样的</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1673241676761.png"  alt="1673241676761"></p>
+<p>我们再总结一下，selenium 自动化流程如下：</p>
+<ol>
+<li>自动化程序调用Selenium 客户端库函数（比如点击按钮元素）</li>
+<li>客户端库会发送Selenium 命令 给浏览器的驱动程序</li>
+<li>浏览器驱动程序接收到命令后 ,驱动浏览器去执行命令</li>
+<li>浏览器执行命令</li>
+<li>浏览器驱动程序获取命令执行的结果，返回给我们自动化程序</li>
+<li>自动化程序对返回结果进行处理</li>
+</ol>
+<blockquote>
+<p>补充</p>
+<p>从上图可以看出：</p>
+<p>我们写的自动化程序 需要使用 <strong>客户端库</strong>。</p>
+<p>我们程序的自动化请求都是通过这个库里面的编程接口发送给浏览器。</p>
+<p>比如，我们要模拟用户点击界面按钮， 自动化程序里面就应该 调用客户端库相应的函数， 就会发送 <strong>点击元素</strong> 的请求给 下方的 <strong>浏览器驱动</strong>。 然后，浏览器驱动再转发这个请求给浏览器。</p>
+<p><strong>这个自动化程序发送给浏览器驱动的请求 是HTTP请求。</strong></p>
+<p><strong>客户端库从哪里来的？ 是Selenium组织提供的。</strong></p>
+<p>Selenium组织提供了多种 编程语言的Selenium客户端库， 包括 java，python，js， ruby等，方便不同编程语言的开发者使用。</p>
+<p>我们只需要安装好客户端库，调用这些库，就可以发出自动化请求给浏览器咯。</p>
+<p><strong>浏览器驱动</strong> 也是一个独立的程序，是由浏览器厂商提供的， 不同的浏览器需要不同的浏览器驱动。 比如 Chrome浏览器和 火狐浏览器有 各自不同的驱动程序。</p>
+<p>浏览器驱动接收到我们的自动化程序发送的界面操作请求后，会转发请求给浏览器， 让浏览器去执行对应的自动化操作。</p>
+<p>浏览器执行完操作后，会将自动化的<strong>结果</strong>返回给浏览器驱动， 浏览器驱动再通过HTTP响应的消息返回给我们的自动化程序的客户端库。</p>
+<p>自动化程序的客户端库 接收到响应后，将结果转化为   <code>数据对象</code>  返回给 我们的代码。</p>
+<p>我们的程序就可以知道这次自动化操作的结果如何了。</p>
+</blockquote>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Selenium环境的安装主要就是安装两样东西：  <code>客户端库</code>  和 <code>浏览器 驱动</code> 。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.byhy.net/tut/auto/selenium/01/" >https://www.byhy.net/tut/auto/selenium/01/<i class="fas fa-external-link-alt"></i></a></p>
+<p>驱动下载（要和浏览器版本号对应）：<a class="link"   target="_blank" rel="noopener" href="https://chromedriver.storage.googleapis.com/index.html?path=101.0.4951.41/" >https://chromedriver.storage.googleapis.com/index.html?path=101.0.4951.41/<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="加载代码"><a href="#加载代码" class="headerlink" title="加载代码"></a>加载代码</h1><ul>
+<li>注：Linux用的是&#x2F;分隔符，而Windows才用的是\</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 驱动路径设置</span><br><span class="line">https://blog.csdn.net/weixin_38210066/article/details/113994975</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/lonlon29/article/details/79112830</span><br><span class="line"></span><br><span class="line">https://www.bbsmax.com/A/KE5QwKqyzL/</span><br></pre></td></tr></table></figure>
+
+<h2 id="os-path-abspath"><a href="#os-path-abspath" class="headerlink" title="os.path.abspath"></a>os.path.abspath</h2><ul>
+<li>获取当前目录的绝对路径</li>
+</ul>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 用例补充</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(os.path.abspath(<span class="string">&quot;.&quot;</span>)) <span class="comment">#当前目录的绝对路径</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(os.path.abspath(<span class="string">r&quot;..&quot;</span>)) <span class="comment">#上级目录的绝对路径</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(os.path.abspath(<span class="string">r&quot;D:\python_workshop\python6\revise\函数.py&quot;</span>))</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h2 id="os-path-join"><a href="#os-path-join" class="headerlink" title="os.path.join()"></a>os.path.join()</h2><p>os.path.join()函数用于路径<strong>拼接文件路径</strong>，可以传入多个路径。</p>
+<ul>
+<li><strong>从后往前看，会从第一个以”&#x2F;”开头</strong>的参数开始拼接，之前的参数全部丢弃；</li>
+<li>以上一种情况为先。在上一种情况确保情况下，若出现”.&#x2F;”开头的参数，会从”.&#x2F;”开头的参数的前面参数全部保留；</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">import</span> os</span><br><span class="line">     </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;1:&quot;</span>,os.path.join(<span class="string">&#x27;aaaa&#x27;</span>,<span class="string">&#x27;/bbbb&#x27;</span>,<span class="string">&#x27;ccccc.txt&#x27;</span>))</span><br><span class="line">     </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;2:&quot;</span>,os.path.join(<span class="string">&#x27;/aaaa&#x27;</span>,<span class="string">&#x27;/bbbb&#x27;</span>,<span class="string">&#x27;/ccccc.txt&#x27;</span>))</span><br><span class="line">     </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;3:&quot;</span>,os.path.join(<span class="string">&#x27;aaaa&#x27;</span>,<span class="string">&#x27;ddd&#x27;</span>,<span class="string">&#x27;./bbb&#x27;</span>,<span class="string">&#x27;ccccc.txt&#x27;</span>))</span><br><span class="line"></span><br><span class="line">输出为：</span><br><span class="line"></span><br><span class="line">    <span class="number">1</span>: /bbbb\ccccc.txt</span><br><span class="line">    <span class="number">2</span>: /ccccc.txt</span><br><span class="line">    <span class="number">3</span>: aaaa\ddd\./bbb\ccccc.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>果最后一个组件为空，则生成的路径以一个’&#x2F;’分隔符结尾 ；</p>
+<p> 输出：</p>
+<ul>
+<li><p>import os</p>
+<p>Path1 &#x3D; ‘home’<br>Path2 &#x3D; ‘develop’<br>Path3 &#x3D; ‘’</p>
+<p>Path10 &#x3D; Path1 + Path2 + Path3<br>Path20 &#x3D; os.path.join(Path1, Path2, Path3)<br>Path30 &#x3D; os.path.join(Path2, Path1, Path3)<br>print(‘Path10 &#x3D; ‘,Path10)<br>print(‘Path20 &#x3D; ‘,Path20)</p>
+</li>
+</ul>
+<p> Path10 &#x3D;  homedevelop<br> Path20 &#x3D;  home\develop\
+ </p>
+</li>
+<li><p>os.path.join()的功能只是起到连接文件的作用，而不能生成文件，如果执行这条语句之后就想生成一个目录或者文件名，可以用：os.mkdir(os.path.join(“F:&quot;, “test.txt”))<br>os.path.join(os.getcwd(),’data’)是获取当前目录，并组合成新目录</p>
+</li>
+<li><p>————————————————<br>版权声明：本文为CSDN博主「MclarenSenna」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/MclarenSenna/article/details/117046027" >https://blog.csdn.net/MclarenSenna/article/details/117046027<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+<h1 id="爬虫应用"><a href="#爬虫应用" class="headerlink" title="爬虫应用"></a>爬虫应用</h1><h2 id="原理-2"><a href="#原理-2" class="headerlink" title="原理"></a>原理</h2><ul>
+<li><strong>调用selenium&#x3D;&#x3D;选择元素&#x3D;&#x3D;并且利用相关函数实现基本操作</strong></li>
+</ul>
+<p>对于百度搜索页面，如果我们想自动化输入 <code>白月黑羽</code> ，怎么做呢？</p>
+<p>这就是在网页中，操控界面元素。</p>
+<p>web界面自动化，要操控元素，首先需要 <code>选择</code> 界面元素 ，或者说  <code>定位</code>  界面元素</p>
+<p>就是 先告诉浏览器，你要操作 <code>哪个</code> 界面元素， 让它找到你要操作的界面元素。</p>
+<p>我们必须要让浏览器 <strong>先找到元素，然后，才能操作元素</strong>。</p>
+<p>常见的基本操作如下：</p>
+<ul>
+<li>点击元素</li>
+<li>在元素中输入字符串，通常是对输入框这样的元素</li>
+<li>获取元素包含的信息，比如文本内容，元素的属性</li>
+</ul>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.byhy.net/tut/auto/selenium/03/" >https://www.byhy.net/tut/auto/selenium/03/<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="选择元素方法"><a href="#选择元素方法" class="headerlink" title="选择元素方法"></a>选择元素方法</h2><ul>
+<li>CSS语法选择元素</li>
+<li>Xpath选择元素（可以比上面的多选择<strong>父节点</strong>和<strong>兄弟节点</strong>）</li>
+</ul>
+<blockquote>
+<p>可以安装xpath插件来帮助爬虫内容的筛选</p>
+</blockquote>
+<h1 id="特殊总结"><a href="#特殊总结" class="headerlink" title="特殊总结"></a>特殊总结</h1><h2 id="元素存在判断"><a href="#元素存在判断" class="headerlink" title="元素存在判断"></a>元素存在判断</h2><p>isEnable()、isDisplayed()和isSelected()  </p>
+<p> 1、以上三个为<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B&spm=1001.2101.3001.7020" >布尔类型<i class="fas fa-external-link-alt"></i></a>的函数  </p>
+<p> 2、isEnable用于存储input、select等元素的可编辑状态，可以编辑返回true，否则返回false     </p>
+<p>3、isDisplayed()这个有点陌生，在大神写的脚本看到几次不知道何用意先不管，本身这个函数用于判断某个元素是否存在页面上（这里的存在不是肉眼看到的存在，而是html代码的存在。某些情况元素的visibility为hidden或者display属性为none，我们在页面看不到但是实际是存在页面的一些元素）  </p>
+<p> 4、isSelected()，很显然，这个是判断某个元素是否被选中。例如   页面展示如下：   isEnable（）、isDisplayed（）和isSelected()   html代码如下：   isEnable（）、isDisplayed（）和isSelected()</p>
+<h2 id="js相关语句"><a href="#js相关语句" class="headerlink" title="js相关语句"></a>js相关语句</h2><h2 id="iframe内元素"><a href="#iframe内元素" class="headerlink" title="iframe内元素"></a>iframe内元素</h2>
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/06/23/20240623-%E6%85%A7%E6%95%8F%E7%9A%84%E8%AF%9D/"
+                                   title="20240623 今日的头脑风暴"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240623 今日的头脑风暴</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230109-Selenium"><span class="nav-number">1.</span> <span class="nav-text">20230109 Selenium</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-1"><span class="nav-number">3.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">加载代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#os-path-abspath"><span class="nav-number">5.1.</span> <span class="nav-text">os.path.abspath</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-path-join"><span class="nav-number">5.2.</span> <span class="nav-text">os.path.join()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%88%AC%E8%99%AB%E5%BA%94%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">爬虫应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-2"><span class="nav-number">6.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text">选择元素方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">特殊总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E5%AD%98%E5%9C%A8%E5%88%A4%E6%96%AD"><span class="nav-number">7.1.</span> <span class="nav-text">元素存在判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js%E7%9B%B8%E5%85%B3%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.2.</span> <span class="nav-text">js相关语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iframe%E5%86%85%E5%85%83%E7%B4%A0"><span class="nav-number">7.3.</span> <span class="nav-text">iframe内元素</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230109-Selenium"><span class="nav-number">1.</span> <span class="nav-text">20230109 Selenium</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-1"><span class="nav-number">3.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">加载代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#os-path-abspath"><span class="nav-number">5.1.</span> <span class="nav-text">os.path.abspath</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-path-join"><span class="nav-number">5.2.</span> <span class="nav-text">os.path.join()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%88%AC%E8%99%AB%E5%BA%94%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">爬虫应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-2"><span class="nav-number">6.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text">选择元素方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">特殊总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E5%AD%98%E5%9C%A8%E5%88%A4%E6%96%AD"><span class="nav-number">7.1.</span> <span class="nav-text">元素存在判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js%E7%9B%B8%E5%85%B3%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.2.</span> <span class="nav-text">js相关语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iframe%E5%86%85%E5%85%83%E7%B4%A0"><span class="nav-number">7.3.</span> <span class="nav-text">iframe内元素</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
