@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                HOME
+                                首页
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                ARCHIVES
+                                归档
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                CATEGORIES
+                                分类
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >HOME</a>
+                    >首页</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >ARCHIVES</a>
+                    >归档</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >CATEGORIES</a>
+                    >分类</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Sun Jun 23 2024 23:01:06 GMT+0800">2024-06-23 23:01:06</span>
+                <span class="datetime" data-updated="Tue Jun 25 2024 20:17:43 GMT+0800">2024-06-25 20:17:43</span>
             </span>
         
 
@@ -254,12 +254,24 @@
 <blockquote>
 <p>1.shareptr引用记数的行为（是线程安全的，因为源码是原子操作）</p>
 <p>2.shareptr们修改指针指向的行为是线程安全的吗？</p>
+<blockquote>
+<p>修改也分几种情况</p>
+<p>修改有的是将该指针变为空指针</p>
+<p>有的情况的将该指针指向对象改变</p>
+</blockquote>
 <p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240622193609122.png"  alt="image-20240622193609122"></p>
 <p>3.所管理数据的线程安全性（不是线程安全的，</p>
 <blockquote>
 <p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240622193840841.png"  alt="image-20240622193840841"></p>
 </blockquote>
 </blockquote>
+<hr>
+<p>不行，我的探索欲望上来了</p>
+<p>引用计数改变我们一般是在什么情况下改变，那么多个对象，这么多个线程，难道我们需要通过一张庞大的线程的对照表来对来查找并且维护对于相关对象的引用计数吗？</p>
+<p>明确引用技术是在什么函数被调用的情况下实现的？</p>
+<p>我们明确知道引用技术的修改和实际的指向修改肯定不是同一条语句</p>
+<p>在我们通过变量修改指向的时候，如果不是整个过程实现原子操作，很容易出问题</p>
+<p>可能执行上一条之后这个变量应该被销毁了（记数层面来看被销毁了）</p>
 <h2 id="C-11引入了哪些新的指针类型？简单描述一下它们的作用"><a href="#C-11引入了哪些新的指针类型？简单描述一下它们的作用" class="headerlink" title="C++11引入了哪些新的指针类型？简单描述一下它们的作用*"></a>C++11引入了哪些新的指针类型？简单描述一下它们的作用*</h2><blockquote>
 <p>引入了s u w</p>
 <p>s</p>
@@ -360,7 +372,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240623 今日的头脑风暴</span>
-                                        <span class="post-nav-item">Prev posts</span>
+                                        <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
                             </div>
@@ -374,7 +386,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240621 算法：递归回溯字符串输出</span>
-                                        <span class="post-nav-item">Next posts</span>
+                                        <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -391,15 +403,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;Comments
+            <i class="fas fa-comments"></i>&nbsp;评论
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">Comment plugin failed to load</span>
-    <button class="reload keep-button">Click to reload</button>
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">Loading comment plugin</span>
+    <span class="load-tip">正在加载评论插件</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -510,7 +522,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -523,14 +535,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-type border-box">访客数</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">Page View</span>
+                    <span class="item-type border-box">访问量</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
