@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Jun 25 2024 20:17:43 GMT+0800">2024-06-25 20:17:43</span>
+                <span class="datetime" data-updated="Thu Jun 27 2024 02:40:41 GMT+0800">2024-06-27 02:40:41</span>
             </span>
         
 
@@ -242,7 +242,7 @@
                     <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
 <li>这个题库里几乎所有东西你都你能看懂，对于面试来说，最重要的就是复述！带有自己逻辑和框架的复述！</li>
 </ul>
-<h1 id="C-11新特性"><a href="#C-11新特性" class="headerlink" title="C++11新特性"></a>C++11新特性</h1><h2 id="unique-ptr和shared-ptr的区别是什么"><a href="#unique-ptr和shared-ptr的区别是什么" class="headerlink" title="unique_ptr和shared_ptr的区别是什么"></a>unique_ptr和shared_ptr的区别是什么</h2><p>uptr指向的对象只能有一个uptr指针作为访问入口</p>
+<h1 id="C-11新特性"><a href="#C-11新特性" class="headerlink" title="C++11新特性"></a>C++11新特性</h1><h2 id="30、unique-ptr和shared-ptr的区别是什么"><a href="#30、unique-ptr和shared-ptr的区别是什么" class="headerlink" title="30、unique_ptr和shared_ptr的区别是什么"></a>30、unique_ptr和shared_ptr的区别是什么</h2><p>uptr指向的对象只能有一个uptr指针作为访问入口</p>
 <p>sptr指向的对象可以有多个sptr指向同一个对象作为访问入口</p>
 <hr>
 <p>两者都能实现内存的自动管理与释放</p>
@@ -272,7 +272,7 @@
 <p>我们明确知道引用技术的修改和实际的指向修改肯定不是同一条语句</p>
 <p>在我们通过变量修改指向的时候，如果不是整个过程实现原子操作，很容易出问题</p>
 <p>可能执行上一条之后这个变量应该被销毁了（记数层面来看被销毁了）</p>
-<h2 id="C-11引入了哪些新的指针类型？简单描述一下它们的作用"><a href="#C-11引入了哪些新的指针类型？简单描述一下它们的作用" class="headerlink" title="C++11引入了哪些新的指针类型？简单描述一下它们的作用*"></a>C++11引入了哪些新的指针类型？简单描述一下它们的作用*</h2><blockquote>
+<h2 id="1、C-11引入了哪些新的指针类型？简单描述一下它们的作用"><a href="#1、C-11引入了哪些新的指针类型？简单描述一下它们的作用" class="headerlink" title="1、C++11引入了哪些新的指针类型？简单描述一下它们的作用*"></a>1、C++11引入了哪些新的指针类型？简单描述一下它们的作用*</h2><blockquote>
 <p>引入了s u w</p>
 <p>s</p>
 <p>u</p>
@@ -300,50 +300,317 @@
 
 
 
-<h2 id="C-请你谈谈对auto关键字的理解-并且谈谈在实际应用中它的作用"><a href="#C-请你谈谈对auto关键字的理解-并且谈谈在实际应用中它的作用" class="headerlink" title="C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用"></a>C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用</h2><ul>
+<h2 id="3、C-请你谈谈对auto关键字的理解-并且谈谈在实际应用中它的作用"><a href="#3、C-请你谈谈对auto关键字的理解-并且谈谈在实际应用中它的作用" class="headerlink" title="3、C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用"></a>3、C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用</h2><ul>
 <li>使用 <code>auto</code> 关键字时，你不需要显式地指定变量的类型，编译器会根据变量的初始化表达式来推断其类型。</li>
 <li><code>auto</code> 可以用于局部变量、函数参数、返回类型等场景。</li>
 </ul>
 <ul>
-<li><p>类型推断推断变量的类型。</p>
-</li>
-<li><p>在泛型编程中，当类型参数非常复杂或者难以显式指定时用</p>
-</li>
-<li></li>
+<li>类型推断推断变量的类型。</li>
+<li>在泛型编程中，当类型参数非常复杂或者难以显式指定时用</li>
 </ul>
-<h1 id="C-内存"><a href="#C-内存" class="headerlink" title="C++内存"></a>C++内存</h1><h2 id="栈和堆的区别是什么"><a href="#栈和堆的区别是什么" class="headerlink" title="栈和堆的区别是什么"></a>栈和堆的区别是什么</h2><ul>
-<li>栈：编译器分配和释放，存放局部变量、函数的参数值、函数跳转地址，一旦出了作用域就会被销毁，栈区地址从高到低分配</li>
-<li></li>
-</ul>
-<ul>
-<li>栈区(stack):由编译器自动分配和释放，存放函数的参数值、局部变量的值等。其操作方式类似于数据结构中的栈。</li>
-<li>堆区(heap):一般由程序员分配和释放，若程序员不释放，程序结束时可能由操作系统回收。<strong>它与数据机构中的堆是两回事，分配方式类似于链表。</strong></li>
-<li>全局区(静态区)(static):全局变量和静态变量的存储是放在一起的，初始化的全局变量和静态变量在一块区域，未初始化的全局变量和未初始化的静态变量在相邻的另外一块区域。程序结束后由系统释放。</li>
-<li>文字常量区:常量字符串就是放在这里。程序结束后由系统释放。</li>
-<li>程序代码区:存放函数体的二进制代码</li>
-</ul>
-<blockquote>
-<p>栈有壳子，堆没有壳子	</p>
+<h2 id="4-、C-11中lambda表达式是什么，如何使用它们"><a href="#4-、C-11中lambda表达式是什么，如何使用它们" class="headerlink" title="4 、C++11中lambda表达式是什么，如何使用它们"></a>4 、C++11中lambda表达式是什么，如何使用它们</h2><blockquote>
+<p>是一个<del>不用声明</del><strong>（匿名）</strong>的函数区块或者是说是函数对象</p>
+<hr>
+<p>使用</p>
+<p><a href=""></a>{}</p>
+<p>[&#x3D;] 按值捕获</p>
+<p>[x]</p>
+<p>​	[&amp;]按引用捕获</p>
 </blockquote>
-<ul>
-<li>栈：在函数调用时，第一个进栈的是主函数的中的下一条指令（函数调用的下一个可执行语句）的地址，然后是函数的各个参数。在C编译器中，参数是由右往左入栈的，然后是函数的局部变量。静态变量不入栈。</li>
-<li>堆：一般是在堆的头部用一个字节存放堆的大小。堆中的具体内容由程序员安排。 数据结构方面的堆和栈与上边叙述不同。这里的堆是指优先队列的一种数据结构，第一个元素有最高的优先权；栈实际就是满足先进后出的性质的数学或数据结构。</li>
+<h1 id="C-内存"><a href="#C-内存" class="headerlink" title="C++内存"></a>C++内存</h1><h2 id="全局变量和静态变量的区别"><a href="#全局变量和静态变量的区别" class="headerlink" title="全局变量和静态变量的区别"></a>全局变量和静态变量的区别</h2><h2 id="栈和堆的区别是什么"><a href="#栈和堆的区别是什么" class="headerlink" title="栈和堆的区别是什么"></a>栈和堆的区别是什么</h2><ul>
+<li>全局区(静态区)(static):全局变量和静态变量的存储是放在一起的，初始化的全局变量和静态变量在一块区域，未初始化的全局变量和未初始化的静态变量在相邻的另外一块区域。程序结束后由系统释放。</li>
 </ul>
-<h2 id="栈区（stack）"><a href="#栈区（stack）" class="headerlink" title="栈区（stack）"></a>栈区（stack）</h2><p>栈：stack，<br> 栈又称堆栈，<strong>存放程序的局部变量</strong>(但不包括static声明的变量， static 意味着在数据段中 存放变量)。除此以外，在函数被调用时，栈用来传递参数和返回值。</p>
-<ul>
-<li>存放的局部变量、函数的参数值、函数跳转地址</li>
-<li>先进后出，一旦出了作用域就会被销毁</li>
-<li>栈区地址从高到低分配</li>
-<li>自动管理内存</li>
+<h3 id="栈区（stack）"><a href="#栈区（stack）" class="headerlink" title="栈区（stack）"></a>栈区（stack）</h3><ul>
+<li>问地址分配就说高低（<strong>其实架构不同不一定遵守这个分配规则</strong>）</li>
+<li>存放程序的局部变量，在函数被调用时，栈用来传递参数和返回值</li>
 </ul>
-<h2 id="堆区（heap）"><a href="#堆区（heap）" class="headerlink" title="堆区（heap）"></a>堆区（heap）</h2><p>堆：heap，<br> 堆是用于存放进程运行中被<strong>动态分配的内存段</strong>，它的大小并不固定，可动态扩张或缩减。当进程调用malloc&#x2F;free等函数分配内存时，新分配的内存就被动态添加到堆上(堆被扩张)&#x2F;释放的内存从堆中被剔除(堆被缩减)。</p>
+<ul>
+<li><p>先进后出，一旦出了作用域就会被销毁</p>
+</li>
+<li><p>编译器自动管理内存</p>
+</li>
+</ul>
+<h3 id="堆区（heap）"><a href="#堆区（heap）" class="headerlink" title="堆区（heap）"></a>堆区（heap）</h3><p> 堆是用于存放进程运行中被<strong>动态分配的内存段</strong>，它的大小并不固定，可动态扩张或缩减。当进程调用malloc&#x2F;free等函数分配内存时，新分配的内存就被动态添加到堆上(堆被扩张)&#x2F;释放的内存从堆中被剔除(堆被缩减)。</p>
+<ul>
+<li>问地址分配就说低高</li>
+</ul>
 <ul>
 <li>堆区的内存分配使用的是alloc；</li>
-<li>ARC的内存的管理，是编译器再便宜的时候自动添加 retain、release、autorelease；</li>
-<li>堆区的地址是从低到高分配）</li>
-<li>需要程序员管理内存；</li>
+<li>需要程序员管理内存</li>
 </ul>
-
+<h1 id="C-基础"><a href="#C-基础" class="headerlink" title="C++基础"></a>C++基础</h1><h2 id="1、C和C-有什么区别"><a href="#1、C和C-有什么区别" class="headerlink" title="1、C和C++有什么区别"></a>1、C和C++有什么区别</h2><p>C是面向过程的语言</p>
+<p>C++是面向对象的语言</p>
+<p>C++支持继承和多态、泛型编程，函数重载，具有更强大的抽象和灵活构建能力</p>
+<p>C不支持上述功能</p>
+<p> C++是在C语言基础上发展而来的，因此C++完全兼容C语言，可以将C语言代码直接编译为C++代码。这意味着C++可以使用C语言的库和函数，使得既有的C语言代码可以无缝地与C++代码进行交互。</p>
+<p>C语言更加接近底层硬件和相关内存操控，具有高效性和可移植性。</p>
+<h2 id="2、C语言的结构体和C-的有什么区别"><a href="#2、C语言的结构体和C-的有什么区别" class="headerlink" title="2、C语言的结构体和C++的有什么区别"></a>2、C语言的结构体和C++的有什么区别</h2><p>1.C语言中的结构体不能为空，否则会报错</p>
+<p>C语言中的结构体只涉及到数据结构，而不涉及到算法，也就是说在C中数据结构和算法是分离的。换句话说就是C语言中的结构体只能定义成员变量，但是不能定义成员函数。</p>
+<p>2.在C++中既可以定义成员变量又可以定义成员函数，默认为public</p>
+<p>虽然C语言的结构体中不能定义成员函数，但是却可以定义函数指针，不过函数指针本质上不是函数而是指针，所以总的来说C语言中的结构体只是一个复杂数据类型 ，只能定义成员变量，不能定义成员函数，不能用于面向对象编程。</p>
+<p>在 C 中，必须显式使用 struct 关键字来声明结构。 在 c + + 中，不需要在 struct 定义类型后使用关键字。</p>
+<h2 id="3、C语言的关键字static和C-的关键字static有什么区别？"><a href="#3、C语言的关键字static和C-的关键字static有什么区别？" class="headerlink" title="3、C语言的关键字static和C++的关键字static有什么区别？"></a>3、C语言的关键字static和C++的关键字static有什么区别？</h2><blockquote>
+<p>C语言中起到两个作用</p>
+<p>1.修饰变量；</p>
+<p>2.修饰函数；</p>
+<p>1.1 修饰全局变量：让全局变量只能在本文件中被直接访问，不能直接的跨文件访问</p>
+<p>1.2 修饰局部变量：让局部变量超出了作用域之后还不会被销毁</p>
+<p>2.1 修饰函数：修饰函数，不能直接的跨文件访问	</p>
+<hr>
+<p>C++ </p>
+<p>1.修饰变量</p>
+<p>2.修饰函数</p>
+<p>3.修饰类中成员变量</p>
+<p>4.修饰类中成员函数</p>
+<p>3.1 static成员变量只能类内声明，类外初始化</p>
+<p>3.2 static成员函数只能使用static修饰的变量</p>
+<p>3.3static 对于同一个类只有一份</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46606290/article/details/119939553" >https://blog.csdn.net/m0_46606290/article/details/119939553<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<h2 id="4、C-和-Java有什么核心区别？"><a href="#4、C-和-Java有什么核心区别？" class="headerlink" title="4、C++ 和 Java有什么核心区别？"></a>4、C++ 和 Java有什么核心区别？</h2><p>C++是一门编译语言，代码经过编译器编译后成为机器码后被执行</p>
+<p>java是一种解释型语言，需要jvm来一面解释一面执行	</p>
+<hr>
+<p>重载</p>
+<hr>
+<p>多重继承</p>
+<hr>
+<p>C++指针允许直接在内存空间中进行值管理</p>
+<h2 id="5、C-中，a和-a有什么区别"><a href="#5、C-中，a和-a有什么区别" class="headerlink" title="5、C++中，a和&amp;a有什么区别"></a>5、C++中，a和&amp;a有什么区别</h2><p>变量</p>
+<p>对变量取地址</p>
+<p>对于数组对象的理解</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240627013802742.png"  alt="image-20240627013802742"></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1387793" >https://cloud.tencent.com/developer/article/1387793<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="6、C-中stactic关键字有什么用"><a href="#6、C-中stactic关键字有什么用" class="headerlink" title="6、C++中stactic关键字有什么用"></a>6、C++中stactic关键字有什么用</h2><p><strong>1、全局静态变量</strong></p>
+<p>　　在全局变量加上关键字static，全局变量就定义成一个全局静态变量，存放于静态存储区，在整个程序运行期间一直存在；未经初始化的全局静态变量会被自动初始化为0；全局静态变量在声明他的文件之外是不可见的，准确地说是从定义之处开始，到文件结尾。</p>
+<p><strong>2、局部静态变量</strong></p>
+<p>　　在局部变量之前加上关键字static，局部变量就成为一个局部静态变量，局部静态变量只初始化一次。作用域仍为局部作用域，当定义它的函数或者语句块结束的时候，作用域结束。但是当局部静态变量离开作用域后，并没有销毁，而是仍然驻留在内存当中，只不过我们不能再对它进行访问，直到该函数再次被调用，并且值不变。</p>
+<p><strong>3、静态函数</strong></p>
+<p>　　在函数返回类型前加static，函数就定义为静态函数。函数的定义和声明在默认情况下都是extern的，但静态函数只是在声明他的文件当中可见，不能被其他文件所用。函数的实现使用static修饰，那么这个函数只可在本cpp内使用，不会同其他cpp中的同名函数引起冲突；</p>
+<p>　　注意：不要在头文件中声明static的全局函数，不要在cpp内声明非static的全局函数，如果你要在多个cpp中复用该函数，就把它的声明提到头文件里去，否则cpp内部声明需加上static修饰。</p>
+<p><strong>4、类的静态数据成员</strong></p>
+<p>　　在类中，静态数据成员可以实现多个对象之间的额数据共享，并且使用静态数据成员还不会破坏隐藏的原则，即保证了安全性。因此，静态数据成员是类的所有对象中共享的成员，而不是某个对象的成员。对于多个对象来说，静态数据成员只存储一处，供所有对象共用。</p>
+<p><strong>5、类的静态成员函数</strong></p>
+<p>　　静态成员函数和静态数据成员一样，它们都属于类的静态成员，他们都不是对象成员。因此对静态成员的引用不需要用对象名。在静态成员函数的实现中不能直接引用类中的非静态成员，可以引用类中的静态成员（这点非常重要）。如果静态成员函数中要引用非静态成员时，可通过对象来引用。从中可看出，调用静态成员函数使用如下格式：&lt;类名&gt;::&lt;静态成员函数名&gt;（&lt;参数表&gt;）</p>
+<h2 id="7、C-中，-define和const有什么区别？"><a href="#7、C-中，-define和const有什么区别？" class="headerlink" title="7、C++中，#define和const有什么区别？"></a>7、C++中，#define和const有什么区别？</h2><p>define 只是直接展开，没有类型检查</p>
+<p>const 有类型，会在编译时期进行类型检查</p>
+<h2 id="8、静态链接与动态链接有什么区别"><a href="#8、静态链接与动态链接有什么区别" class="headerlink" title="8、静态链接与动态链接有什么区别"></a>8、静态链接与动态链接有什么区别</h2><p>静态库会在<strong>链接阶段将静态库中的代码复制到可执行文件中</strong>，当程序在执行的时候，在可执行文件中本身就有了静态库的代码，可以直接调用。</p>
+<p>静态链接将所有程序以及相关的库都打包到可执行文件中</p>
+<p>动态链接只是将程序</p>
+<p>动态库则不会将代码打包到可执行文件中，<strong>而是打包动态库的名称等信息</strong>，在可执行程序运行的时候，需要去找到动态库的文件，然后把动态库加载到内存中才可以使用动态库中的代码。</p>
+<p>所需要的函数名和库名打包到可执行文件中，到了程序执行的时候，才会将这些信息传递给操作系统，操作系统再将需要的库文件加载到内存中</p>
+<p>静态库被打包到可执行程序中，生成的可执行文件较大，但是程序加载运行速度会比较快，发布程序时，也无需提供静态库，移植比较方便。但是当多个程序链接同一个静态库时，生成的每一个可执行文件中，都会含有这个静态库，相当于在内存中同时运行着两个相同的静态库，比较浪费系统资源。另外，当静态库的内容发生更新时，依赖该静态库的程序也需要重新进行链接，导致程序的更新升级会比较麻烦。</p>
+<p>动态库可以实现进程间资源共享，比如可执行程序A在运行时用到了某个动态库，那么系统会将该动态库的代码动态加载到内存中，此时若正在运行的程序B也需要用到该动态库中的代码，则不需要再次加载该动态库，而是可以与程序A共享。此外，当动态库的内容更新时，只需重新编译生成新的动态库即可，而不需要对依赖该动态库的程序重新进行编译链接。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.nowcoder.com/discuss/551170508180516864" >https://www.nowcoder.com/discuss/551170508180516864<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51819222/article/details/129348478" >https://blog.csdn.net/m0_51819222/article/details/129348478<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.nowcoder.com/discuss/551170508180516864" >https://www.nowcoder.com/discuss/551170508180516864<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="9、变量的声明和定义有什么区别"><a href="#9、变量的声明和定义有什么区别" class="headerlink" title="9、变量的声明和定义有什么区别"></a>9、变量的声明和定义有什么区别</h2><p>变量的声明不分配地址</p>
+<p>变量的定义为变量分配地址和存储空间</p>
+<h2 id="10、typedef-和define-有什么区别呢？"><a href="#10、typedef-和define-有什么区别呢？" class="headerlink" title="10、typedef 和define 有什么区别呢？"></a>10、typedef 和define 有什么区别呢？</h2><p>typedef 别名，编译过程的一部分，类型检查，作用域限定。</p>
+<p>define 常量，宏，预编译，不进行类型检查。</p>
+<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36585538/article/details/115696235" >https://blog.csdn.net/qq_36585538/article/details/115696235<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="11、final和override-关键字"><a href="#11、final和override-关键字" class="headerlink" title="11、final和override 关键字"></a>11、final和override 关键字</h2><p>final 类 不能被继承</p>
+<p>final 虚函数 不能被重写</p>
+<p>override 重写基类中的虚函数（编译器会进行检查）</p>
+<h2 id="12、宏定义和函数有什么区别"><a href="#12、宏定义和函数有什么区别" class="headerlink" title="12、宏定义和函数有什么区别"></a>12、宏定义和函数有什么区别</h2><p>宏定义 预处理阶段 文本替换 不做检查</p>
+<p>函数 编译阶段 有编译器做检查</p>
+<h2 id="13、sizeof-和strlen-的区别"><a href="#13、sizeof-和strlen-的区别" class="headerlink" title="13、sizeof 和strlen 的区别"></a>13、sizeof 和strlen 的区别</h2><p>sizeof是C++中的一个运算符，用于获取特定类型或对象在内存中所占的字节大小。<strong>其值在编译时就已经确定，并且与运行时无关。</strong></p>
+<p>strlen是一个函数，用于计算字符串的长度，即返回字符串中字符的个数，<strong>不包括字符串末尾的空字符’\0’。</strong>它是从代表该字符串的第一个地址开始遍历，直到遇到结束符NULL。</p>
+<h2 id="14、简述strcpy、sprintf-与memcpy-的区别"><a href="#14、简述strcpy、sprintf-与memcpy-的区别" class="headerlink" title="&#x3D;&#x3D;14、简述strcpy、sprintf 与memcpy 的区别&#x3D;&#x3D;"></a>&#x3D;&#x3D;14、简述strcpy、sprintf 与memcpy 的区别&#x3D;&#x3D;</h2><p>strcpy  字符串 另一个复制块 含有’\0’结束符的源字符串复制到目标地址空间。</p>
+<p>sprintf <code>sprintf</code>主要用于生成格式化字符串，其返回值是格式化后的字符串长度（不包括末尾的空字符）。如果发生错误，它可能会返回一个负数。</p>
+<p>memcpy <code>memcpy</code>则是根据第三个参数来决定复制的字节数，从而控制复制的长度。它逐个字节地从源地址复制到目标地址，直到达到指定的字节数。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/eason22/article/details/137157714" >https://blog.csdn.net/eason22/article/details/137157714<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="15、结构体可以直接赋值吗"><a href="#15、结构体可以直接赋值吗" class="headerlink" title="15、结构体可以直接赋值吗"></a>15、结构体可以直接赋值吗</h2><p>不可以</p>
+<p>可以通过自定义构造函数 拷贝构造函数 赋值构造函数</p>
+<h2 id="16、volatile的作用"><a href="#16、volatile的作用" class="headerlink" title="16、volatile的作用"></a>16、volatile的作用</h2><p>int volatile vInt;</p>
+<p>当要求使用 volatile 声明的变量的值的时候，</p>
+<p>系统总是重新从它所在的内存读取数据</p>
+<h2 id="21、一个指针占用多少字节"><a href="#21、一个指针占用多少字节" class="headerlink" title="21、一个指针占用多少字节"></a>21、一个指针占用多少字节</h2><p>一个指针在32位的计算机上，占4个字节</p>
+<p> 一个指针在64位的计算机上，占8个字节</p>
+<blockquote>
+<p>总结</p>
+<p>一个指针占多少字节与计算机系统本身是多少位（32、64位）系统有关</p>
+<hr>
+<p>在32位系统中，</p>
+<p><strong>地址总线宽度为32位，所以可以寻址的最大内存空间是4GB（2的32次方），</strong></p>
+<p><strong>因此一个指针（即一个地址）需要4字节（32位）的空间来存储。</strong></p>
+<p><strong>类似地，在64位系统中，地址总线宽度为64位，所以一个指针需要8字节的空间来存储。</strong></p>
+</blockquote>
+<blockquote>
+<p>多少位的计算机实际上说的是地址总线的宽度</p>
+<p>地址是门牌号</p>
+<p>里面存的东西是数据，是一个类似于真实的人的人</p>
+<p>计算机能够处理的最小单元是 字节Byte 而不是 位bit</p>
+<hr>
+<p>指针存储的是地址</p>
+<p>地址是内存单元的编号</p>
+<p>所以，一个指针占几个字节，等于是一个地址的内存单元编号有多长</p>
+<hr>
+<p>我们都知道，在计算机中，CPU不能直接与硬盘进行数据交换，CPU只能直接跟内存进行数据交换。</p>
+<p>而CPU是通过<strong>地址总线、数据总线、控制总线</strong>三条线与内存进行数据传输与操作。</p>
+<p>问：假如，我们想通过CPU在内存中读取一个数字3，那么是怎样一个操作呢？</p>
+<p>首先，CPU通过地址总线，在内存中找到数字3的地址；</p>
+<p>然后，通过控制总线知道该操作是读还是写；</p>
+<p>最后，通过数据总线，把数字3传输到CPU中。</p>
+<blockquote>
+<p>地址总线的宽度决定了CPU的寻址能力，或者说寻址的最大内存容量；</p>
+<p> 控制总线决定了CPU对其他控件的控制能力以及控制方式。</p>
+<p> 数据总线的宽度决定了CPU单次数据传输的传送量，</p>
+<p>也就是数据传输速度，或者说一次可以处理的数据的宽度；</p>
+</blockquote>
+<p>我们平时所说的计算机是16位、32位、64位，</p>
+<p>指的是计算机CPU中通用寄存器一次性处理、传输、暂时存储的信息的最大长度，</p>
+<p>或者说是CPU的数据总线宽度。即CPU在单位时间内(同一时间)能一次处理的二进制数的位数。</p>
+<p>即电脑是多少位的，与数据总线有关</p>
+<p>地址总线</p>
+<p>指针的本质是一个整数，它存储的是内存地址。</p>
+<p>通过指针能找到或访问到内存中所有的地方</p>
+<p>某计算机的地址总线是32位，那么其一次可以处理的信息是32条，每一条地址总线有0或1两种可能，那么32根地址总线一共有232种可能，也就是其描述的地址空间为0x0000 0000 ~ 232-1。</p>
+<p>我们一般需要32个0或1的组合就可以找到内存中所有的地址，而32个0或1的组合，就是32个位，也就是4个字节的大小，因此，我们只需要4个字节就可以找到所有的数据。<br>所以，在32位的计算机中，指针占4个字节。<br>同理，在64位的计算机中，指针占8个字节。</p>
+<pre><code>这就是上面所说的：地址总线的宽度决定了CPU的寻址能力
+</code></pre>
+<hr>
+<p>同时也可以看出，由于地址总线为32，那么每次寻址的空间为</p>
+<p>0000 0000 0000 0000 0000 0000 0000 0000 ~ 232-1，那么CPU的最大内存为</p>
+<p>2^32 &#x3D; 2^22K &#x3D; 2^12M &#x3D; 2^2G &#x3D; 4G</p>
+<p>而单位是内存最小操作单位Byte，因此，加上单位Byte后：</p>
+<p>2^32Byte &#x3D; 2^22KB &#x3D; 2^12MB &#x3D; 2^2GB &#x3D; 4GB</p>
+<p>也就是，32位的电脑，CPU的最大内存为4GB</p>
+<pre><code>此处单位加的是Byte，而不是bit，有兴趣的小伙伴可以查一下为什么
+</code></pre>
+<p>而64位，最大内存是264Byte &#x3D; 232 * 232Byte &#x3D; 232 * 4GB 约等于 17179869184GB。</p>
+<pre><code>这就是上面所说的：地址总线的宽度决定了CPU寻址的最大内存容量
+</code></pre>
+<p><strong>即：在32位系统中，</strong></p>
+<p><strong>地址总线宽度为32位，所以可以寻址的最大内存空间是4GB（2的32次方），因此一个指针（即一个地址）需要4字节（32位）的空间来存储。类似地，在64位系统中，地址总线宽度为64位，所以一个指针需要8字节的空间来存储。</strong></p>
+<p>常见硬件架构下数据总线和地址总线宽度的示例：</p>
+<table>
+<thead>
+<tr>
+<th>CPU架构</th>
+<th>数据总线宽度</th>
+<th>地址总线宽度</th>
+<th>最大内存寻址</th>
+<th>指针大小</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8位</td>
+<td>8位</td>
+<td>16位</td>
+<td>64KB</td>
+<td>1字节</td>
+</tr>
+<tr>
+<td>16位</td>
+<td>16位</td>
+<td>20位</td>
+<td>1MB</td>
+<td>2字节</td>
+</tr>
+<tr>
+<td>32位</td>
+<td><strong>32位</strong></td>
+<td><strong>32 位</strong></td>
+<td>4 GB</td>
+<td>4字节</td>
+</tr>
+<tr>
+<td>64位</td>
+<td><strong>64位</strong></td>
+<td><strong>64位</strong></td>
+<td>16 EB</td>
+<td>8字节</td>
+</tr>
+</tbody></table>
+<hr>
+<p>1位&#x3D;1bit&#x2F;比特，表示一个二进制0或1（比特币）</p>
+<p>1字节(Byte) &#x3D; 8位&#x2F;bit&#x2F;比特（字节跳动）</p>
+<p>数据存储是以“字节”（Byte）为单位，数据传输大多是以“位”（bit，又名“比特”）为单位</p>
+<p>每8个位（bit，简写为b）组成一个字节（Byte，简写为B），是最小一级的信息单位。</p>
+<p>1个英文字母（不分大小写）占一个字节Byte的空间</p>
+<p>计算机能够处理的最小单元是 字节Byte 而不是 位bit</p>
+<p>位bit，是由软件通过位运算符操作的</p>
+</blockquote>
+<blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44369667/article/details/129776458" >https://blog.csdn.net/qq_44369667/article/details/129776458<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000037537285#:~:text=%E6%97%A2%E7%84%B61%E4%B8%AA%E5%AD%97%E8%8A%82%E6%98%AF8,%E8%AE%BF%E9%97%AE%E7%9A%84%E6%9C%80%E5%B0%8F%E5%8D%95%E4%BD%8D%E3%80%82" >https://segmentfault.com/a/1190000037537285#:~:text=%E6%97%A2%E7%84%B61%E4%B8%AA%E5%AD%97%E8%8A%82%E6%98%AF8,%E8%AE%BF%E9%97%AE%E7%9A%84%E6%9C%80%E5%B0%8F%E5%8D%95%E4%BD%8D%E3%80%82<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/IOSSHAN/article/details/88944637" >https://blog.csdn.net/IOSSHAN/article/details/88944637<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<h2 id="28、句柄和指针的区别和联系是什么"><a href="#28、句柄和指针的区别和联系是什么" class="headerlink" title="28、句柄和指针的区别和联系是什么"></a>28、句柄和指针的区别和联系是什么</h2><p>联系: 都是用来控制与管理资源的，指针直接操作内存，句柄则通过操作系统或者库函数进行资源管理</p>
+<p>区别：指针式直接指向具体的内存地址，句柄则是间接引用资源，程序不能通过句柄直接访问资源的内存地址来访问和管理相关内存，而是通过操作系统提供的API或者库函数来操作资源</p>
+<h1 id="C-面向对象"><a href="#C-面向对象" class="headerlink" title="C++面向对象"></a>C++面向对象</h1><h2 id="1、什么是类"><a href="#1、什么是类" class="headerlink" title="1、什么是类"></a>1、什么是类</h2><blockquote>
+<p>原文</p>
+<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/h8062651/article/details/136262716" >https://blog.csdn.net/h8062651/article/details/136262716<i class="fas fa-external-link-alt"></i></a></p>
+<p>是面向对象程序设计的基本构成单位，它是一种自定义的数据类型，用于封装数据以及操作这些数据的方法。类是创建对象的模板，它定义了对象的属性和行为。对象是根据类创建的实例。</p>
+<p>类具有以下基本特性：</p>
+<p>封装：封装是将数据（也称为属性或成员变量）和操作这些数据的方法（也称为成员函数或方法）结合在一起的过程。这样，数据就被隐藏或封装在类内部，只能通过类提供的方法进行访问和修改。这有助于保护数据免受外部代码的非法访问和修改，同时也提高了代码的可维护性和可重用性。</p>
+<p>继承：继承是从已有的类（称为父类或基类）创建新类（称为子类或派生类）的过程。子类继承了父类的所有属性和方法，同时还可以定义自己的新属性和方法。这样，可以重用已有的代码，提高代码的可重用性和可扩展性。</p>
+<p>多态：多态是指允许一个接口（或函数名）有多种实现方式。在 C++ 中，多态通常通过虚函数（virtual functions）实现。子类可以重写父类的虚函数，从而实现多态。这样，在运行时可以根据对象的实际类型调用相应的函数，提高了代码的灵活性和可扩展性。</p>
+<p>抽象：抽象是一种隐藏具体实现细节的机制，只展示必要的信息给用户。在 C++ 中，可以通过抽象类（含有至少一个纯虚函数的类）来实现抽象。抽象类不能被实例化，只能被其他类继承。这样，可以定义一种通用的接口或行为，让子类去实现具体的细节。</p>
+<p>总的来说，C++ 中的类是一种强大的工具，它使得代码更加模块化、可重用、可维护和可扩展。通过封装、继承、多态和抽象等特性，类可以更好地模拟现实世界中的事物和行为，从而实现更加复杂和灵活的程序设计。</p>
+</blockquote>
+<blockquote>
+<p>总结</p>
+<p>自定义的<strong>数据类型</strong></p>
+<p>面向<strong>对象</strong>程序设计的<strong>基本单位</strong></p>
+<p>能够实现数据和操作封装、继承、多态、抽象等多种特性</p>
+<p>封装（保护、可维护、可重用）</p>
+<p>继承（重用、可维护、可重用）</p>
+<p>多态（多态、灵活、可拓展性）</p>
+<p>抽象（对用户：隐藏具体实现细节；对子类：定义一种通用的接口或行为，让子类去实现具体的细节）</p>
+</blockquote>
+<h2 id="2、面向对象程序设计思想是什么"><a href="#2、面向对象程序设计思想是什么" class="headerlink" title="2、面向对象程序设计思想是什么"></a>2、面向对象程序设计思想是什么</h2><blockquote>
+<p>封装（将数据和操作数据的方法捆绑，并对外隐藏，内部实现，提高可复用性，可维护性）</p>
+<p>继承（重用、可维护、可重用）</p>
+<p>多态（父类接口，子类实现，多态、灵活、可拓展性）</p>
+<p>抽象 （提取共性、细节隐藏、保留必要接口）</p>
+</blockquote>
+<h2 id="25、RTTI是什么？其原理是什么？"><a href="#25、RTTI是什么？其原理是什么？" class="headerlink" title="25、RTTI是什么？其原理是什么？"></a>25、RTTI是什么？其原理是什么？</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/RioTian/p/17746167.html" >https://www.cnblogs.com/RioTian/p/17746167.html<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>总结</p>
+<p>run time type identification</p>
+<p>运行时类型识别</p>
+<p>运行的时候检查所指实际类型</p>
+<p>有虚函数的时候，基类指针可以指向任何派生对象</p>
+<p>类型的确定是要在运行的时候进行类型识别</p>
+<blockquote>
+<p>原理</p>
+<p>1.dynamic_cast操作符，<strong>将基类类型的指针或引用安全地转换为派生类型的指针或引用。</strong></p>
+<blockquote>
+<p>当我们进行dynamic_cast时，编译器会帮我们进行语法检查。</p>
+<p>如果指针的静态类型和目标类型相同，那么就什么事情都不做；</p>
+<p>否则，首先对指针进行调整，使得它指向vftable，并将其和调整之后的指针、调整的偏移量、静态类型以及目标类型传递给内部函数。其中最后一个参数指明转换的是指针还是引用。</p>
+</blockquote>
+<p>2.<code>typeid</code> 运算符用于获取对象的类型信息，它返回一个 <code>std::type_info</code> 对象。</p>
+<blockquote>
+<p><strong>编译时信息</strong>：</p>
+<ul>
+<li>当编译器遇到<code>typeid</code>操作符时，它会检查操作数的类型。</li>
+<li>对于静态类型（如基类指针或引用），编译器生成适当的代码来获取类型信息。</li>
+</ul>
+<p><strong>运行时信息</strong>（RTTI）：</p>
+<ul>
+<li>如果操作数是多态类型（即包含虚函数的类类型），编译器会在对象中存储运行时类型信息。通常，这些信息存储在对象的虚表（vtable）中。</li>
+<li>在程序运行时，<code>typeid</code>操作符会利用这些信息来确定对象的动态类型。</li>
+</ul>
+</blockquote>
+<hr>
+<p><code>typeid</code>操作符返回一个<code>const std::type_info&amp;</code>，它是一个标准库中的类，包含了类型信息。</p>
+<p><code>std::type_info</code>类通常包含以下成员函数：</p>
+<ul>
+<li><code>name()</code>：返回一个C风格字符串，表示类型的名称。</li>
+<li><code>before(const type_info&amp; rhs) const</code>：提供类型的顺序比较。</li>
+<li><code>operator==</code>和<code>operator!=</code>：用于比较类型信息。</li>
+</ul>
+</blockquote>
+</blockquote>
+<h2 id="29、为什么析构函数一般写成虚函数"><a href="#29、为什么析构函数一般写成虚函数" class="headerlink" title="29、为什么析构函数一般写成虚函数"></a>29、为什么析构函数一般写成虚函数</h2><p>基类指针指向派生类的时候</p>
+<p>若基类析构函数不声明为虚函数</p>
+<p>在析构时，只会调用基类而不会调用派生类的析构函数，从而导致相关资源可能释放管理不完全，导致内存泄漏</p>
+<blockquote>
+<p><strong>实际上，派生类的析构函数会自动调用基类的析构函数。 只要基类的析构函数是虚函数，那么派生类的析构函数不论是否用virtual关键字声明，都自动成为虚析构函数</strong></p>
+</blockquote>
+<h1 id="C-语言面试题"><a href="#C-语言面试题" class="headerlink" title="C 语言面试题"></a>C 语言面试题</h1><h2 id="请解释C语言中的extern关键字，并描述其在多文件编程中的应用"><a href="#请解释C语言中的extern关键字，并描述其在多文件编程中的应用" class="headerlink" title="请解释C语言中的extern关键字，并描述其在多文件编程中的应用"></a>请解释C语言中的extern关键字，并描述其在多文件编程中的应用</h2>
                 </div>
                 
 
@@ -372,7 +639,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240623 今日的头脑风暴</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -386,7 +653,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240621 算法：递归回溯字符串输出</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -403,15 +670,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -495,7 +762,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">C++11新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#unique-ptr%E5%92%8Cshared-ptr%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">unique_ptr和shared_ptr的区别是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shared-ptr%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97"><span class="nav-number">2.2.</span> <span class="nav-text">shared_ptr是线程安全的吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E5%BC%95%E5%85%A5%E4%BA%86%E5%93%AA%E4%BA%9B%E6%96%B0%E7%9A%84%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B%EF%BC%9F%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E5%AE%83%E4%BB%AC%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">C++11引入了哪些新的指针类型？简单描述一下它们的作用*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E4%B8%AD%E7%9A%84%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8%E4%B8%8E%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89%E6%98%AF%E6%80%8E%E6%A0%B7%E6%8F%90%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84"><span class="nav-number">2.4.</span> <span class="nav-text">C++11中的右值引用与移动语义是怎样提高性能的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C11%E4%B8%AD%E5%8F%B3%E5%80%BC%E5%B7%A6%E5%80%BC%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text">C11中右值左值相互转换的问题*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E8%AF%B7%E4%BD%A0%E8%B0%88%E8%B0%88%E5%AF%B9auto%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E7%90%86%E8%A7%A3-%E5%B9%B6%E4%B8%94%E8%B0%88%E8%B0%88%E5%9C%A8%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E4%B8%AD%E5%AE%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.6.</span> <span class="nav-text">C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%86%85%E5%AD%98"><span class="nav-number">3.</span> <span class="nav-text">C++内存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88%E5%92%8C%E5%A0%86%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">3.1.</span> <span class="nav-text">栈和堆的区别是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88%E5%8C%BA%EF%BC%88stack%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">栈区（stack）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E5%8C%BA%EF%BC%88heap%EF%BC%89"><span class="nav-number">3.3.</span> <span class="nav-text">堆区（heap）</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">C++11新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#30%E3%80%81unique-ptr%E5%92%8Cshared-ptr%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">30、unique_ptr和shared_ptr的区别是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shared-ptr%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97"><span class="nav-number">2.2.</span> <span class="nav-text">shared_ptr是线程安全的吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81C-11%E5%BC%95%E5%85%A5%E4%BA%86%E5%93%AA%E4%BA%9B%E6%96%B0%E7%9A%84%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B%EF%BC%9F%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E5%AE%83%E4%BB%AC%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">1、C++11引入了哪些新的指针类型？简单描述一下它们的作用*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E4%B8%AD%E7%9A%84%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8%E4%B8%8E%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89%E6%98%AF%E6%80%8E%E6%A0%B7%E6%8F%90%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84"><span class="nav-number">2.4.</span> <span class="nav-text">C++11中的右值引用与移动语义是怎样提高性能的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C11%E4%B8%AD%E5%8F%B3%E5%80%BC%E5%B7%A6%E5%80%BC%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text">C11中右值左值相互转换的问题*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81C-%E8%AF%B7%E4%BD%A0%E8%B0%88%E8%B0%88%E5%AF%B9auto%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E7%90%86%E8%A7%A3-%E5%B9%B6%E4%B8%94%E8%B0%88%E8%B0%88%E5%9C%A8%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E4%B8%AD%E5%AE%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.6.</span> <span class="nav-text">3、C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E3%80%81C-11%E4%B8%ADlambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%83%E4%BB%AC"><span class="nav-number">2.7.</span> <span class="nav-text">4 、C++11中lambda表达式是什么，如何使用它们</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%86%85%E5%AD%98"><span class="nav-number">3.</span> <span class="nav-text">C++内存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%92%8C%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.1.</span> <span class="nav-text">全局变量和静态变量的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88%E5%92%8C%E5%A0%86%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">3.2.</span> <span class="nav-text">栈和堆的区别是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%E5%8C%BA%EF%BC%88stack%EF%BC%89"><span class="nav-number">3.2.1.</span> <span class="nav-text">栈区（stack）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86%E5%8C%BA%EF%BC%88heap%EF%BC%89"><span class="nav-number">3.2.2.</span> <span class="nav-text">堆区（heap）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%9F%BA%E7%A1%80"><span class="nav-number">4.</span> <span class="nav-text">C++基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81C%E5%92%8CC-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.1.</span> <span class="nav-text">1、C和C++有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BB%93%E6%9E%84%E4%BD%93%E5%92%8CC-%E7%9A%84%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.2.</span> <span class="nav-text">2、C语言的结构体和C++的有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97static%E5%92%8CC-%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97static%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">4.3.</span> <span class="nav-text">3、C语言的关键字static和C++的关键字static有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81C-%E5%92%8C-Java%E6%9C%89%E4%BB%80%E4%B9%88%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">4.4.</span> <span class="nav-text">4、C++ 和 Java有什么核心区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81C-%E4%B8%AD%EF%BC%8Ca%E5%92%8C-a%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.5.</span> <span class="nav-text">5、C++中，a和&amp;a有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81C-%E4%B8%ADstactic%E5%85%B3%E9%94%AE%E5%AD%97%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8"><span class="nav-number">4.6.</span> <span class="nav-text">6、C++中stactic关键字有什么用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81C-%E4%B8%AD%EF%BC%8C-define%E5%92%8Cconst%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">4.7.</span> <span class="nav-text">7、C++中，#define和const有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E9%9D%99%E6%80%81%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.8.</span> <span class="nav-text">8、静态链接与动态链接有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9%E3%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E%E5%92%8C%E5%AE%9A%E4%B9%89%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.9.</span> <span class="nav-text">9、变量的声明和定义有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10%E3%80%81typedef-%E5%92%8Cdefine-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%E5%91%A2%EF%BC%9F"><span class="nav-number">4.10.</span> <span class="nav-text">10、typedef 和define 有什么区别呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11%E3%80%81final%E5%92%8Coverride-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">4.11.</span> <span class="nav-text">11、final和override 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12%E3%80%81%E5%AE%8F%E5%AE%9A%E4%B9%89%E5%92%8C%E5%87%BD%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.12.</span> <span class="nav-text">12、宏定义和函数有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13%E3%80%81sizeof-%E5%92%8Cstrlen-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.13.</span> <span class="nav-text">13、sizeof 和strlen 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14%E3%80%81%E7%AE%80%E8%BF%B0strcpy%E3%80%81sprintf-%E4%B8%8Ememcpy-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.14.</span> <span class="nav-text">&#x3D;&#x3D;14、简述strcpy、sprintf 与memcpy 的区别&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%B5%8B%E5%80%BC%E5%90%97"><span class="nav-number">4.15.</span> <span class="nav-text">15、结构体可以直接赋值吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16%E3%80%81volatile%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">4.16.</span> <span class="nav-text">16、volatile的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21%E3%80%81%E4%B8%80%E4%B8%AA%E6%8C%87%E9%92%88%E5%8D%A0%E7%94%A8%E5%A4%9A%E5%B0%91%E5%AD%97%E8%8A%82"><span class="nav-number">4.17.</span> <span class="nav-text">21、一个指针占用多少字节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28%E3%80%81%E5%8F%A5%E6%9F%84%E5%92%8C%E6%8C%87%E9%92%88%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">4.18.</span> <span class="nav-text">28、句柄和指针的区别和联系是什么</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">5.</span> <span class="nav-text">C++面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E7%B1%BB"><span class="nav-number">5.1.</span> <span class="nav-text">1、什么是类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">5.2.</span> <span class="nav-text">2、面向对象程序设计思想是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25%E3%80%81RTTI%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%85%B6%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">5.3.</span> <span class="nav-text">25、RTTI是什么？其原理是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E4%B8%80%E8%88%AC%E5%86%99%E6%88%90%E8%99%9A%E5%87%BD%E6%95%B0"><span class="nav-number">5.4.</span> <span class="nav-text">29、为什么析构函数一般写成虚函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E8%AF%AD%E8%A8%80%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">C 语言面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B7%E8%A7%A3%E9%87%8AC%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84extern%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%8C%E5%B9%B6%E6%8F%8F%E8%BF%B0%E5%85%B6%E5%9C%A8%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BC%96%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">6.1.</span> <span class="nav-text">请解释C语言中的extern关键字，并描述其在多文件编程中的应用</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -522,7 +789,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -535,14 +802,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -648,7 +915,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">C++11新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#unique-ptr%E5%92%8Cshared-ptr%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">unique_ptr和shared_ptr的区别是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shared-ptr%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97"><span class="nav-number">2.2.</span> <span class="nav-text">shared_ptr是线程安全的吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E5%BC%95%E5%85%A5%E4%BA%86%E5%93%AA%E4%BA%9B%E6%96%B0%E7%9A%84%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B%EF%BC%9F%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E5%AE%83%E4%BB%AC%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">C++11引入了哪些新的指针类型？简单描述一下它们的作用*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E4%B8%AD%E7%9A%84%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8%E4%B8%8E%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89%E6%98%AF%E6%80%8E%E6%A0%B7%E6%8F%90%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84"><span class="nav-number">2.4.</span> <span class="nav-text">C++11中的右值引用与移动语义是怎样提高性能的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C11%E4%B8%AD%E5%8F%B3%E5%80%BC%E5%B7%A6%E5%80%BC%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text">C11中右值左值相互转换的问题*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E8%AF%B7%E4%BD%A0%E8%B0%88%E8%B0%88%E5%AF%B9auto%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E7%90%86%E8%A7%A3-%E5%B9%B6%E4%B8%94%E8%B0%88%E8%B0%88%E5%9C%A8%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E4%B8%AD%E5%AE%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.6.</span> <span class="nav-text">C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%86%85%E5%AD%98"><span class="nav-number">3.</span> <span class="nav-text">C++内存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88%E5%92%8C%E5%A0%86%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">3.1.</span> <span class="nav-text">栈和堆的区别是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88%E5%8C%BA%EF%BC%88stack%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">栈区（stack）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E5%8C%BA%EF%BC%88heap%EF%BC%89"><span class="nav-number">3.3.</span> <span class="nav-text">堆区（heap）</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-11%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">C++11新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#30%E3%80%81unique-ptr%E5%92%8Cshared-ptr%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text">30、unique_ptr和shared_ptr的区别是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shared-ptr%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97"><span class="nav-number">2.2.</span> <span class="nav-text">shared_ptr是线程安全的吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81C-11%E5%BC%95%E5%85%A5%E4%BA%86%E5%93%AA%E4%BA%9B%E6%96%B0%E7%9A%84%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B%EF%BC%9F%E7%AE%80%E5%8D%95%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E5%AE%83%E4%BB%AC%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">1、C++11引入了哪些新的指针类型？简单描述一下它们的作用*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-11%E4%B8%AD%E7%9A%84%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8%E4%B8%8E%E7%A7%BB%E5%8A%A8%E8%AF%AD%E4%B9%89%E6%98%AF%E6%80%8E%E6%A0%B7%E6%8F%90%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84"><span class="nav-number">2.4.</span> <span class="nav-text">C++11中的右值引用与移动语义是怎样提高性能的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C11%E4%B8%AD%E5%8F%B3%E5%80%BC%E5%B7%A6%E5%80%BC%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text">C11中右值左值相互转换的问题*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81C-%E8%AF%B7%E4%BD%A0%E8%B0%88%E8%B0%88%E5%AF%B9auto%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E7%90%86%E8%A7%A3-%E5%B9%B6%E4%B8%94%E8%B0%88%E8%B0%88%E5%9C%A8%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E4%B8%AD%E5%AE%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.6.</span> <span class="nav-text">3、C++请你谈谈对auto关键字的理解,并且谈谈在实际应用中它的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E3%80%81C-11%E4%B8%ADlambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%83%E4%BB%AC"><span class="nav-number">2.7.</span> <span class="nav-text">4 、C++11中lambda表达式是什么，如何使用它们</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%86%85%E5%AD%98"><span class="nav-number">3.</span> <span class="nav-text">C++内存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%92%8C%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.1.</span> <span class="nav-text">全局变量和静态变量的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88%E5%92%8C%E5%A0%86%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">3.2.</span> <span class="nav-text">栈和堆的区别是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%E5%8C%BA%EF%BC%88stack%EF%BC%89"><span class="nav-number">3.2.1.</span> <span class="nav-text">栈区（stack）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86%E5%8C%BA%EF%BC%88heap%EF%BC%89"><span class="nav-number">3.2.2.</span> <span class="nav-text">堆区（heap）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%9F%BA%E7%A1%80"><span class="nav-number">4.</span> <span class="nav-text">C++基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81C%E5%92%8CC-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.1.</span> <span class="nav-text">1、C和C++有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BB%93%E6%9E%84%E4%BD%93%E5%92%8CC-%E7%9A%84%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.2.</span> <span class="nav-text">2、C语言的结构体和C++的有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97static%E5%92%8CC-%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97static%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">4.3.</span> <span class="nav-text">3、C语言的关键字static和C++的关键字static有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81C-%E5%92%8C-Java%E6%9C%89%E4%BB%80%E4%B9%88%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">4.4.</span> <span class="nav-text">4、C++ 和 Java有什么核心区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81C-%E4%B8%AD%EF%BC%8Ca%E5%92%8C-a%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.5.</span> <span class="nav-text">5、C++中，a和&amp;a有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81C-%E4%B8%ADstactic%E5%85%B3%E9%94%AE%E5%AD%97%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8"><span class="nav-number">4.6.</span> <span class="nav-text">6、C++中stactic关键字有什么用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81C-%E4%B8%AD%EF%BC%8C-define%E5%92%8Cconst%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">4.7.</span> <span class="nav-text">7、C++中，#define和const有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E9%9D%99%E6%80%81%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.8.</span> <span class="nav-text">8、静态链接与动态链接有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9%E3%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E%E5%92%8C%E5%AE%9A%E4%B9%89%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.9.</span> <span class="nav-text">9、变量的声明和定义有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10%E3%80%81typedef-%E5%92%8Cdefine-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%E5%91%A2%EF%BC%9F"><span class="nav-number">4.10.</span> <span class="nav-text">10、typedef 和define 有什么区别呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11%E3%80%81final%E5%92%8Coverride-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">4.11.</span> <span class="nav-text">11、final和override 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12%E3%80%81%E5%AE%8F%E5%AE%9A%E4%B9%89%E5%92%8C%E5%87%BD%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">4.12.</span> <span class="nav-text">12、宏定义和函数有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13%E3%80%81sizeof-%E5%92%8Cstrlen-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.13.</span> <span class="nav-text">13、sizeof 和strlen 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14%E3%80%81%E7%AE%80%E8%BF%B0strcpy%E3%80%81sprintf-%E4%B8%8Ememcpy-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.14.</span> <span class="nav-text">&#x3D;&#x3D;14、简述strcpy、sprintf 与memcpy 的区别&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%B5%8B%E5%80%BC%E5%90%97"><span class="nav-number">4.15.</span> <span class="nav-text">15、结构体可以直接赋值吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16%E3%80%81volatile%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">4.16.</span> <span class="nav-text">16、volatile的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21%E3%80%81%E4%B8%80%E4%B8%AA%E6%8C%87%E9%92%88%E5%8D%A0%E7%94%A8%E5%A4%9A%E5%B0%91%E5%AD%97%E8%8A%82"><span class="nav-number">4.17.</span> <span class="nav-text">21、一个指针占用多少字节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28%E3%80%81%E5%8F%A5%E6%9F%84%E5%92%8C%E6%8C%87%E9%92%88%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">4.18.</span> <span class="nav-text">28、句柄和指针的区别和联系是什么</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">5.</span> <span class="nav-text">C++面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E7%B1%BB"><span class="nav-number">5.1.</span> <span class="nav-text">1、什么是类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">5.2.</span> <span class="nav-text">2、面向对象程序设计思想是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25%E3%80%81RTTI%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%85%B6%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">5.3.</span> <span class="nav-text">25、RTTI是什么？其原理是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E4%B8%80%E8%88%AC%E5%86%99%E6%88%90%E8%99%9A%E5%87%BD%E6%95%B0"><span class="nav-number">5.4.</span> <span class="nav-text">29、为什么析构函数一般写成虚函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E8%AF%AD%E8%A8%80%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">C 语言面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B7%E8%A7%A3%E9%87%8AC%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84extern%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%8C%E5%B9%B6%E6%8F%8F%E8%BF%B0%E5%85%B6%E5%9C%A8%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BC%96%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">6.1.</span> <span class="nav-text">请解释C语言中的extern关键字，并描述其在多文件编程中的应用</span></a></li></ol></li></ol>
     </div>
 </div>
 
