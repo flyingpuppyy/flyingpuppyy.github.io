@@ -9,7 +9,7 @@
     
     <title>
         
-            20240627 灵舸动力面试 |
+            20220912 快速排序 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240627 灵舸动力面试
+                        20220912 快速排序
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-27 22:21:16</span>
+                <span class="datetime">2022-09-12 23:07:58</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Thu Jun 27 2024 23:05:02 GMT+0800">2024-06-27 23:05:02</span>
+                <span class="datetime" data-updated="Thu Jun 27 2024 23:32:26 GMT+0800">2024-06-27 23:32:26</span>
             </span>
         
 
@@ -209,7 +209,7 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></li>
+                            <li class="category-item"><a href="/categories/%E7%AE%97%E6%B3%95%EF%BC%9A%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F/">算法：基本排序</a></li>
                         
                     
                 </ul>
@@ -239,30 +239,19 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="写一个交换指针的函数"><a href="#写一个交换指针的函数" class="headerlink" title="写一个交换指针的函数"></a>写一个交换指针的函数</h1><ul>
-<li><p>第一眼思路：考虑子类父类相关指针交换的话的类型判断和类型转化，模板化</p>
+                    <h1 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h1><ul>
+<li><p>提取基准点</p>
 </li>
-<li><p>今天面试官叫我把*号删掉，后面想想不太对劲，你传进去必然会是一个指针啊，删除掉就不符合题意了…….真的很神经，当时到底在扯皮什么，就是要传指针，删除什么 * 号啊</p>
+<li><p>以基准点作为标准对该区域进行比较</p>
 </li>
-<li><p>基本交换逻辑实现：</p>
+<li><p>基准点归位</p>
+</li>
+<li><p>缩小子区范围重新进行上述过程</p>
+</li>
+<li><p>从大到小是前数小就交换，从小到大是前数大就交换</p>
 </li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swapPointers</span><span class="params">(T* &amp;a, T* &amp;b)</span> </span>&#123;</span><br><span class="line">    T* temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>细化交换逻辑实现：</li>
-</ul>
-<p>考虑传入的指针们存在子类父类关系</p>
-<blockquote>
-<p>几种解决方案：</p>
-<p>1.特化萃取+强制类型转换</p>
-<p>2.类型判断之后再进行处理</p>
-</blockquote>
-<h2 id="解决方案一"><a href="#解决方案一" class="headerlink" title="解决方案一"></a>解决方案一</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Base class&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 派生类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Derived</span> : <span class="keyword">public</span> Base &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">show</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Derived class&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 模板化指针交换函数</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swapPointers</span><span class="params">(T*&amp; a, T*&amp; b)</span> </span>&#123;</span><br><span class="line">    T* temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 特化模板函数，用于处理子类指针和父类指针的交换</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> BaseT, <span class="keyword">typename</span> DerivedT&gt;</span><br><span class="line"><span class="keyword">typename</span> enable_if&lt;is_base_of&lt;BaseT, DerivedT&gt;::value&gt;::<span class="function">type</span></span><br><span class="line"><span class="function"><span class="title">swapPointers</span><span class="params">(DerivedT*&amp; a, BaseT*&amp; b)</span> </span>&#123;</span><br><span class="line">    BaseT* temp = a;</span><br><span class="line">    a = <span class="built_in">dynamic_cast</span>&lt;DerivedT*&gt;(b);</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 另一种特化模板函数，用于处理父类指针和子类指针的交换</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> BaseT, <span class="keyword">typename</span> DerivedT&gt;</span><br><span class="line"><span class="keyword">typename</span> enable_if&lt;is_base_of&lt;BaseT, DerivedT&gt;::value&gt;::<span class="function">type</span></span><br><span class="line"><span class="function"><span class="title">swapPointers</span><span class="params">(BaseT*&amp; a, DerivedT*&amp; b)</span> </span>&#123;</span><br><span class="line">    DerivedT* temp = <span class="built_in">dynamic_cast</span>&lt;DerivedT*&gt;(a);</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1>
                 </div>
                 
 
@@ -283,14 +272,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/06/27/20240627-%E5%A4%84%E7%90%86%E8%B6%85%E5%A4%A7%E6%96%87%E4%BB%B6%E6%96%B9%E6%A1%88/"
-                                   title="20240627 处理超大文件方案"
+                                   href="/2022/09/25/20220925-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"
+                                   title="20220925 函数式编程"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240627 处理超大文件方案</span>
+                                        <span class="post-nav-title-item text-ellipsis">20220925 函数式编程</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -300,11 +289,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/27/20240627-%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%AC%E4%BA%8C%E5%A4%A7%E7%9A%84%E6%95%B0/"
-                                   title="20240627 寻找数组中第二大的数"
+                                   href="/2022/09/03/20220903-%E9%9A%8F%E6%9C%BA%E6%95%B0/"
+                                   title="20220903 随机数"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240627 寻找数组中第二大的数</span>
+                                        <span class="post-nav-title-item text-ellipsis">20220903 随机数</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -414,7 +403,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E4%B8%80%E4%B8%AA%E4%BA%A4%E6%8D%A2%E6%8C%87%E9%92%88%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">写一个交换指针的函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%80"><span class="nav-number">1.1.</span> <span class="nav-text">解决方案一</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">基本思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li></ol>
     </div>
 </div>
 
@@ -567,7 +556,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E4%B8%80%E4%B8%AA%E4%BA%A4%E6%8D%A2%E6%8C%87%E9%92%88%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">写一个交换指针的函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%80"><span class="nav-number">1.1.</span> <span class="nav-text">解决方案一</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">基本思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li></ol>
     </div>
 </div>
 
