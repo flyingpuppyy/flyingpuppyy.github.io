@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                首頁
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                歸檔
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                分類
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >首頁</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >歸檔</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >分類</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Thu Jun 27 2024 23:05:02 GMT+0800">2024-06-27 23:05:02</span>
+                <span class="datetime" data-updated="Sat Jun 29 2024 21:14:06 GMT+0800">2024-06-29 21:14:06</span>
             </span>
         
 
@@ -239,30 +239,18 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="写一个交换指针的函数"><a href="#写一个交换指针的函数" class="headerlink" title="写一个交换指针的函数"></a>写一个交换指针的函数</h1><ul>
-<li><p>第一眼思路：考虑子类父类相关指针交换的话的类型判断和类型转化，模板化</p>
-</li>
-<li><p>今天面试官叫我把*号删掉，后面想想不太对劲，你传进去必然会是一个指针啊，删除掉就不符合题意了…….真的很神经，当时到底在扯皮什么，就是要传指针，删除什么 * 号啊</p>
-</li>
-<li><p>基本交换逻辑实现：</p>
-</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swapPointers</span><span class="params">(T* &amp;a, T* &amp;b)</span> </span>&#123;</span><br><span class="line">    T* temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>细化交换逻辑实现：</li>
-</ul>
-<p>考虑传入的指针们存在子类父类关系</p>
-<blockquote>
-<p>几种解决方案：</p>
-<p>1.特化萃取+强制类型转换</p>
-<p>2.类型判断之后再进行处理</p>
-</blockquote>
-<h2 id="解决方案一"><a href="#解决方案一" class="headerlink" title="解决方案一"></a>解决方案一</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">show</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Base class&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 派生类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Derived</span> : <span class="keyword">public</span> Base &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">show</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Derived class&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 模板化指针交换函数</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swapPointers</span><span class="params">(T*&amp; a, T*&amp; b)</span> </span>&#123;</span><br><span class="line">    T* temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 特化模板函数，用于处理子类指针和父类指针的交换</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> BaseT, <span class="keyword">typename</span> DerivedT&gt;</span><br><span class="line"><span class="keyword">typename</span> enable_if&lt;is_base_of&lt;BaseT, DerivedT&gt;::value&gt;::<span class="function">type</span></span><br><span class="line"><span class="function"><span class="title">swapPointers</span><span class="params">(DerivedT*&amp; a, BaseT*&amp; b)</span> </span>&#123;</span><br><span class="line">    BaseT* temp = a;</span><br><span class="line">    a = <span class="built_in">dynamic_cast</span>&lt;DerivedT*&gt;(b);</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 另一种特化模板函数，用于处理父类指针和子类指针的交换</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> BaseT, <span class="keyword">typename</span> DerivedT&gt;</span><br><span class="line"><span class="keyword">typename</span> enable_if&lt;is_base_of&lt;BaseT, DerivedT&gt;::value&gt;::<span class="function">type</span></span><br><span class="line"><span class="function"><span class="title">swapPointers</span><span class="params">(BaseT*&amp; a, DerivedT*&amp; b)</span> </span>&#123;</span><br><span class="line">    DerivedT* temp = <span class="built_in">dynamic_cast</span>&lt;DerivedT*&gt;(a);</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
+                    <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="d2f6150da164ec0c2f2dd6434831f698768822f71a9a5b13269d7a54bf529f2a">ccc03bb707e66f6732d54c5d65637f97005fe29fea6d828f045a0b7051c0aadbe389671af30eaa3897eecb36113536fbdccfc068b166d678faf907a15c49a95308b51b4a0186ea977e041a035c04abec9771ee28ef7c28caebf65b170379e34e2e0156ba8c221587a68fc49b507e8fbddf31cb66d92c648398ff990af70d7efa3eddba1886e4c08e2e8fdbc243dc77e308c6aaac5e2c16c966239c29e58540b0d6fca069b0e9bbdeb39d6db3b752c85b804938ecc9389a5aceed4e05783109b2208e4341026dfd20137607a75c75578a7e14e6d057a6f7cd809b047412471edb74f3b2bb8b61af1fd24c3acabca1acf9a50ad409eadeb0e19ec11c83b6716dc1fe07acc69ffd07e09e9f1b67712842fc1bf01bdac3d1ab5cc10ad28d97f3cb2fc06c56f91118124bcd668993d04c47d3a792942e247f6911909658dc71aef64b0980f7e28356bfe20bcb8b1ea476dc58ad495677933eb62a4dce440e9c1d5485a6ebb4c613e69e480f0a241d5cf455c891a302f282b5b424e114d3488bab79fea08787b2097bd10fed9c99fc62effbfa98ec02fe0158e28cd1c0afc65a99e4b54c34f28b037d41230df69cd79705777e261337b2905d9d14a9361638afe88341cbe14b03c1c51c41b4f47be9c3e2c0491d73528f685a9cff27ff42c3fb29acfb393e645221c90d1d76d713f5145675ac5dd8f9d9d100a2c0f5296e05d0da6a6bcf232c8b588cff5efc9006fe8b741519ab76e23f566c6a29df5931be76f677a43e1a9814b6296df0725b70208a150015806e96431315e02ccc4b8f6c75328d0c057beb514732feb3543f79dd2dfbbd96a79b0dcb3ebe8b0b720a65460fe427305a82ef83fab9a8729efb835a742580df20e9b949fe7c6f7a5bdf5a20b8a8eda2d077a7ef6024c0e4a4071f917f9424f974e367a55a67778ce503daa197a5bc2c33badd55ff5ce12b54850346c18b29bd8a10acd32b7e3215f96134788b7478d7c50a24d802b2c148ea8221489fdfa26eef6ad574304969b807c6163739885de5513d89f277c3a10db5297c77673518c253f4c4c9e0cf9c6d6de8226d726f144fe51f12e2bc85c74d49aa16f3ef9b99be8a365b2203a77119316a8286d3a66168764b9d60150867842dd78c4967e70ffff25659ac091582845f5a4723787bf889a4d68cd282aeb657b884b6204aa1cdf54defd5fe09e719974c19234be8f294d338ef631aa75f750d10a91c132ab8b198d4fd24919a57adc6a3b3ac7d031565e8a6c886f1ee3f0f975a53a533a6c75d1ecfb732547ba3bcf159b10989a401d6d534f3ce7a8e4557f8b638e9e1759216e846b4b39e72ae65b0fafbc145d11d561defbbe05ecee05b3dc79b008c8046b6e2a033872f3c4de8bd0a006c2806c0a315e059551aa09ed50a6f39374537b76c7af1535c85275fd5fbc8ab7d400500fc95835865f670ca9120ad9a51367ec610d1acb4bd55eaf3f1447b228a11ecbdcd1e8b9fcceeda012769dda3f2f9983e29fe7f8e9893fc80897d27a7214cd0aea5037d842d29aa852d65823daf9fe6572e589717c19ab1cb65b7c3dd8578884d957dd98f736790fcdb8ae628104f27f5c974751b71af21c9e9be449c70ee1dd548ac5ed48e683a9b14d22b16844ee6003269984571bce90ae294db6d5021bce01399aa876f8904ac9dbf382a5b72eab96c566cdfddbd8c691dcac9c8e8066a92a9ec0c5cc3e916a905a27b50debe5fc6c710ab7e103b9934cc05cb96be84e27f3648231e135085a1b92839a1f2df69fd464af1fdd10ea2706ae317157ec2bb0cf86bf7e9a540eb6c136249e29de91b84108d07ee4ea2595fa33befda3f58fffd342537ffe699df1cc60e3e6c1226cd4426db05d55ad6c710c7b99774222952c97d45cce9649a931127e9dd79bced892372af3814d6cad4cf99a5d81cecf4bf1a0871bf78628c4f495cc671ec1af56611d3248129748cb8ee8a6466d90a5e50227c23361a07a3160dd68c90a25be414f9a7723a8e6c0caeb83c6274c7fb204fdd031edd4a69d7c77cb7edbad4c000c4606620539d9f5601af4e8161ce4d9c801b73bc4cab172fae39d7c3b554b5bb46c590ccb1b8e37550fcb7b067094cabc8c55bb468b190ecf3665403513e1edd6e2c7cd4f9485fb9b55beb22f4b0c7f3b6e9461efe5b652b416ffc7f77783fe7e4c4c8667c1987ee8bf519762fb00f5d0de994d9847c461c82a537c2a9f3c7131a284fa35b9bd6fb71372cab6e638f0c92528f981f1f0c7aebc54ad9a06ffa7a43874764597aaccd168577ca46de723c2c104ba4742fbe76f6a9accc3a30ee277ecf1be2d4c37d93655118e614d1512d0d5333f3a91cd5342996be70530790c09aec11343fd36305f45293b14774801e278b11f444e840de918dcfdbcb693b5fdfbb89a1dfd070cd02979d2bb372a4e095909a0b61fa348599a814cb501d16f0949b2476935d758bb8a31a80737c51c16a4c54f4b20c3bca6d4a3cfb14fde12357af0570e0f9c9f33781127c7cc21507fc087a3ffd7cfb8102374522e05b9a2c0e6564e7c66f5c968efb21cd07ea1af3ebc1678a76ea38bdd081634f859481f117a5c14b6f3f19e4ab73850d049e98a0791b6d8f8b6ce1002cb4a69511868f1f1e50b4866d90d4bb246a70964a497240755dab6ac6c181d367ccb275e1da04b6f3111b5157572b39d525b626e323d26abca1d6c930cb2ed8002baeb908f7bc886ac38e06cadcb465ca9fc5dd719584a276dd10f56825b36cec3ed7e398ddeef4eccf1fb21201645d3ba754452b42b7c22c9629b9540a52305a8fa76948d7f97f30b9f0d0849b7b900767a46da3e7d533bbeb0d0839496bf7b6b8d361e7f471c401274964f8d73d864391402e9acbfce866729ff46d01aa083f9eff532d7839df9992f6af9c2ad95562bfb20533fc66e6a1eac170d4fdee86ef1a5860edfca31d639ceec8becab033882c5190f6116477927580abcf208aedce990f111269946cdc5ba07485507256339054cc04a76e71e2a3e0ab19fadc7f489a96ac805965bfcbeb2785cd6467bbcba7a41f986eacd6ee7a107b780ecc9966344b8b55980c96d619eaece5df6e24757bdefedc09491ea06e645142565263d4486dd79576391fef8d7643d908f1fa20dd41b306983b2c83ad759743a729fd93b3b25fd52f0e2a051e25d50c6bdee616118e84de8604c6e65d96167421a08d17eef5bd1d30a991c28be213502d3a27254599c4debb4bfc01f4edf31ca0a5304629694167fedf44dd14d2261bc4404b4a4fc1150d2cd2e75f852f620ff10ed1683e4e54907aabd2c2710a7119b721b7f00486d64b0739f969d2332aba330ac92eab0cc7146ccdc528d758aedb8f07a34b2c2488922e951d9f821766c411abceed67b0a3db7d7b9305d4aa7ed6cb9700bea1863388d5635106ac464843cf4120007f83b09004107983b6522e2b332c8112cb2373a3dca2cbf5826e5e592ad7558b290260c64cdd1c14d1582a898c0dd38b9c7ef9646f913637dd4de484bd4291678cdac9cb7779bcb52e4ec2c6b91b39a21ab9446086906ef8cdc06343e2d18f6896b73d0580e98e4b177a5aad20c1915b7ff29b698b79914b6bea00bd1544ba70fa4b1c9380612f997ebfdd2f2ba0a1e0692c8e4d5d7317cb5efc48f5bfd2de0a388cc3070b22f13b31c266c16d9170e749b929204ae384d7dd5ed2ac5fc7efb5bb01ffbf5922b1282983c061737462cae4fd02fa904cadebc2d0dd313edd81233aaef8f2c53955172596d83ab31fdf3361bf46923a117a7338133d81b6d31e626bee3945c27626b357f49290158b553d114c1c28ab7b748afb6d7030255e4ef762487f43e08e026934050012b09875c76acaa84c2cc48449bbac4d96fc41bc0889bb7497f97674682c3c140241804e31ba6dd1c2e8adf540d07d0a42e33f0fb0d0d0b97bd1bc7d3ace641b5e0262cfc36c4b108b54a9a87343af75fe09fa7c70be3ef0ebd7f20cd5a961abba4a2c1c7ad55ef9e37d638b71174da2e57ab588152befd04d204c31469db81864b9e48ddc331a9271b43dceafc905667e55b2d95442bbd2bd687d9d5f8e0a4155b6dc0bb7be56dd90719fa323bbf6aef50fd987b054d22360d37f92d449c4c1de5d38bd7ac8a3c291230e37972905a1e2f5e1a4515a4f17ce8f2d319d7fd26e467738109d7f2d212f5d833a9d041b87b69db3b660e0fd19962e4d780f16df2a7962c7ad857179e1998a1aefd4933f59e7f63e34219d87407a433e09d57b96dd53a0f5cefd4de5c9e8de038d8a1d70683ed7b50a4727fef68c6414b61fa03562699651bbed78b2a8012d364488bced4f91a3ef6c66c1c35801a49751357926b20211224ac07a04771e62161ea5568fcd393134c896eadbeb888fbafde077756e11ace6d8f859a14c37e0f4f03c2332ec0cb22c0e9fbfa2a171b75d6f1bc5ceb61b6954343ca53decf4195ea8d07ae0fc1e785a522850efde3ce50d2e5348f364134c99c1b555c97f956e6326fc18bf8354c7cb7b33b3ac75bf927c5fa76bf5d411ae4b1a1a4a87309bb8ef33e2d0f5a916c1cbb127e3cbbc1f48ad16a7a02eec30524cafb3c936c256278773d9c81752ad1a9d6f1fedaf914d182aef13e51bcb7c4bbbbfc05140e4fcc3d8d3eb920126203a22effc068aad61417166460228543ae388b719dcc5b7b2da5d979a54fdf01b97dfa186ddef94138feb6a7c6b9c83ab086b9b58706945b003555d7a23c7640164ab72221d9be7d97a1802da969a341572e4dcf9ae39f686ccb5ac3f2c23e1adbddcaf0b6e7aafefb5ae1098ebc586baa21542414dba3abf0083de52663210280b7be09eb90b9b82b163185958512c5cae72b091a72fd2d911fd78062bdb05549453c927d454e31d3aec58fb9565704aed45ea9f63c14ea74ba7a3361008fcf7a0205410922036c5ed2e884cabfd556bba2f6b101f7b3b5238db8d3f2257978635239924b5966b286c28c37d566d4bb8c9b8655ffc9f8954dc87f70bc58e68b5d3ca454bef42f2396dab813f70c307190005edaec410904d6dec1fe91209534caa19e0a02706248303ad9fec1e761121df0ca763f39dc33e262e2719f502102c39bf3aba3e1b006a348ff1c9b1a30dd7e59716afbe45f2e78095f6dd4dda9ff524dbc2f746a7d0616bd2361d59ed670bee75a04e0116a96877af89975d966d068958821a82aba8ad8ccf675cdac1b5df509029ea6f44ae43047e1265e258c23d4a2ef5e9870fbe8a00bd1c9380dc794ee59f59274e921c5e265c577e240c703af295ef91af2ef0097f3ffb31d03a59c30cdb056f063f91a76ca23e0e644bed4dba551c6f0e9233c7afe21fbf9bd349a534981c3067e6a7c7ab798f882f307e2468908052c2d1726a765a9c7b985512dbe321bf2281f37013750df9ce3f8b2436beb06273b86050b274f96165c59e6eecea1928ad44570e560171991f53489afa1c4ba6245a1a7f86f33de94c421caefb5c5e65256555485bfad9f5d476827c1222cddd432b55fa1fba6601a27e8adde99490111ce122c298b11b859a4110fea5873fd2fc768309bd386fc1a2e0a867dc8ecce1879156c472cc923ac24612402c542fa8cc6ccb10c8de17c9252ff7367490b7866ff60eaf1ffb450dcceb060082a1f942b4a58a1d8db787a5dcfac158d699964bc0a3d0de7dbd1354dde4e7a7d04d52daa34f4a955e8bd7b03775a5b9e8262f2c7b69182af06a7279c157a5023ed7ad99e40193c4c3bad114226e499d6df3d46d38a6942dff14b34a3abb4918b1c630164a118b03b6cc976a2f3e754d926d3e349a4dbe366190498f70a239cc305350b95538fdb3bfebe3e6509e1d94ae4be0bb133144a72cc8e8ad41b736a1827b96e1742fb018f14876feeb5323d0e8c8608a0319171f56dc201ac221ed1ff0b5646670bc344612e79bac0af9c9451582199a81508b1b032319408f486f25eb2b9154081b2b9eeaa16f15a4c831829d3db5cd5f25d3d858e039c9c1510dcb56de0759b58c09657db94c7677009e41d0522535f5ad1bfe477193dcb857fb77bbaec7ff9717bc26c3721bd22fb53b8cda56e5de32237124d22228958feb1d1c7d47e65a00c587c6ac8571085ee73644db54c1e3ab275a5da98bcf89a378e3f19f14ba961e549b5e49d04577792b680506108a6dcd146d58697163f1e8a87dfab3a199cc5f9beed510a4b424053c8b6736e84929d005db62b4475f6f1a15c6680f5a291641c8fb5e58d3079d3ce81d21264435c5603e4fb512289be8bf3b0bba7a65253a9cb49b689098c50c64487af545095238330525c63ea1d0e5ac9ca887b7bb5ee228cc87641b2eb99f5819572bc24fb80f069b93dbdff17e684ec7fc0226742ad8a77e419f6b0042f9c1c6e02acaf8b205e97cce0adf71511c240fa9a059d4285585d73aad14edf21cfe9bc1d1cc7db095fcce00f04832cc61c0cbc74eb263ac54363734a18ead55e7f33dcde65d3fb72b96d9e7079e0cbcceb7898f8b4105005b24f785066a45da4f5299a488b83db2573f0fda426d910b3b43317cfb57162b7035e4729f211f773d1c6ee1dc36965423697f18e68068ac04568f5dc01a3ab3e5a4467075e0945edbd0b28facf17e099e173831e95a8a7a0689ef03634eb137ed8208853101ba7b38a2fa9640aba2073953daa1f9a0d237eaf58e59b2bb0c6758bc9ecbf879d691b9bd40f191e29b1a4522e8909cb664e086167fa96e02ddb83d711409b7c73b55ee0d550a02a02d04a67ecb86f83f36ebd3b88f5d4108b414f9ccfb87218779593f56751f4976a21dc5bd554fde6803d46e4102440c308eb8ddd80869fac2f1bc2a260fde8ca2a23fe1e1ac52db56874ee797fddac4b7a9ab6c8f360f32fb133fc3953530637b62005e24c8275b5e2b1c2f5155cf8db6c1e42e68381862c0bc99f2b10197ead0da193b3b4491cfdfc6691b0b53703c969e032a25a71e2063cae6e729c4efc47c5514456bf890735b20e209ceaf7992bb7e982f980acaaefcb682857c422f1f70829e639847dba6130b87edbebdfd906e523b6c870f3d3562218a22b92c388e05eaa81d83654cb422ec1c8ad7308aa0323883ba1d918f29e61fa4d8769ba4727a04773c41e068f971c213a267a3f6420b939904d5ddbc0453c4d0809621335ff65bfe5786595d88615770b6e9732845a1cd3d5ec48fc4cd2831d6ef926536a24d424a6d736aa892113a97e9acdcb5db81b8c40cb6fc59843dc8f2abc863a281aa9ce42b9ddaf18a03385f7fdcba636cb0fc71c0e84d644b616bc6814f150479bc9d7233dd7706e97565d3aa88abbee1e931e347200d557d430a349a98c49ea329d02b6cb35369a311cb54d7264415065f1d925c3a83b3e40b3babde6ae761ee6f9ca18c410e9c1113288cff8cc6b0c778fc6d44e955935c94aff62b7205f121acd76f2a610ab8ce0d3f2f86e983087d709623f8e72fc0218472291238b2e31d1bef08ec3fb17caf855138f66766c0341ea24747a730917c66edfceadb9b13d05e4bbc329cec81d9736cb2510fb6a967e6b97a1fecc9c74fd458093bd8ebc67e17a2a5345087556cd27531cec7f0ac0c72ef7537387a5b4550e89510e759d1b886b11e5cc0717989fc4d2bad139b8677dc224c2b77aa3c3979bb3069138789c89b44f414a8d7c092b54e9c2df5146cb75c8d989f3c6b6242d0988484747811f273ee921d75811132ea1ecb5813174dd6ac26c239a7227dc5308e74e164033434234ac2353889cbc87f1a820de241b3e393e81d9394c8f40d5130ace11842ca93c93e294b7b830c50b099099365c6d0d59f94ff86d73a66db6aacc4d574fda4c113e80429f4781273ce243ae05b05d30d48ef0200f4239d9ee3c9f466c5e8d8892e5e79820e93dd34ed2401d02a9f037b48a17e39202ab5fe7ecfd92e730772c5d9a3b2180893d4f532313317591bd9ce1a480fcdfd588e97eadb05b766e2a648dd50169e1c5617c92514002fe755637946166796e6666d7f0eeb80437b8f7b0167f2c6f7feba562d31bedac672db3df1f41da71f9bf525778f183b3720b2341420adad968f0503c7ccbb1246ff580806088ab161c6807275c534e6e3a8b6a9db37647129ce7774e6a5d98799d75704f37ff41f24b20992fcf28c7099a9714fcd3d19998586a9190801d4494338950d1107151437c8442b6a6500352cbf48dd8ec1935ac9c3992c06576c75e655a6d2607c7a2f4dc7371b97adfd68d287e8a846a84b6cbd5c4700dbcdeebf5ec1e55492c69866ebd59e73ac2ef2995430b58cd3f9b3a9cc2a2a4e1668a7a4dd7b22d9284a9b6d001b3525be1c997c69c65bda74f9e00c485165627360e633c003a6e807d8401c2b04bd3bba5552014977cbcaa226d2838ba10bd7ca702e6638775e29c0bfb6a27d2d4efabf5a6bb58d6fb7dcc4ec07df6a61f17c22b1546cb78f54b73875082f6cb1f6d63d3c32715348660a53476f2e70862d40fa4968a15c6357f8536fc52b4db3553cbc30d5fdc4fa3023ecfee2cbfb388143de68ca51bb576415520fb46152c93c23e2b54cd65c24c655d4c16c21301a88514c723763d5e43af60bdc0ec03767def66bd9cea221098e0d63854c67092abb67b3fec544cbf2060c1ea8b5d60055703ce240df2cebb006bd09e927154e85a09aa8a64ad443eb67ea265ec4022a82382818e0d8d2d88c41f4e3649a62c837240622bcb0d2925698071d93a88e422807726665c4cb2f941d09ad96e0a4e1e4a63e8ddd30926130374a3a770c78ba7636cd2e656c70cc52543b7df46d449ea5db91802efaa25f6c5b2ccf78312c9c65ef6f0fe58cf8c66a6ead7c303ff337e2ece60a92229e23314f6f9c776c0fa2ae9b4bacde8ee9f9e4d023bf8905a9b6c521b379b3c2214be16380f74b9c1c5757668f81e4a335f1e89c6dd87d2eacee42a2f7d0bbe954e3d42a32181d682f115ff81c834afa605d8b7b14b99e754e2f0b4cc4e097b68df349bc8408139e6762cb37d576b55a04d8de027cc6ef2a825dddabbcc35d9afa0a7969ec158bb1f75faf68e37b8b90ace9fce1c682d1d25452bb890bebba58203606532fef2c8901781ea75c7ff4610c15b9015d301f43b22229b265aced502fcddde36e72fcff1cc1f3d3511e7ac3fef4a12f84962af7591728dd7bae8f81c2aee087efdf62c1a7e5bac0b3b0cb68d9f63f6a0b36697bd72c9879a25a93b62e48019f9a5ce3f7426c1c21c4188a8e6ebfe79d91551c1314df2dca0366d1d825f9d56d62fcf397b632d78735e39d344837509d8bca7fe177afa7ebf6ad5f0de1a593aeb8d4ff775642051c753613f65f3f4a15da66bcd61136c950a1df1373247d18062bf5446a37784389e43010c1f88ea9160b4b431168bac4c12b7e6a8a6b6f34f4def1522c26e419451aa580e05041320ff092cabb87c35b7a9b9d484ea018f1fa299c035b6400b4259822c0d6f492d1bb072f70723a2d506bc0e0260b361ea8fa8a5d330c609ccbfc4f35591894a8cd9b67af4133b4f510975d0a9e81b775852094ec5cf9cfdef1cd98b524907bf2292458815841375b2b2c4937b3812e9b7e25ff9933d54beb9787724a34250bc4ecb78f3af5d300ce14cfb61e12d6b2513e6ecfd1e2586cadaf838049f171163d7c2723d55b0e2ee33e6efa9292da967f893519a04c215c3cf73ebd9c817232d09549cfa1c8f6d7b7f2022fb1938cc33b9de56bc93c06d4bdb8c930a9744d39207a988fcf61859fd4150f375572e5365fc57d9e606c91240fa4147a8c47b7f5fc20f2e9c7430251fc9b19c3bdc227d6fe9c366b5069e970916d1f0b3a6fdcbf9fe13815073d0c5e51b826935838d568375fc1de872873a319e4c9b99d1e6e94ec3b463bbdc30057a49f85b4edc28429f21860359f</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 </div>
                 
 
@@ -322,15 +310,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;留言
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">評論插件加載失敗</span>
+    <button class="reload keep-button">點擊重新加載</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">正在加載評論插件</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -414,7 +402,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E4%B8%80%E4%B8%AA%E4%BA%A4%E6%8D%A2%E6%8C%87%E9%92%88%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">写一个交换指针的函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%80"><span class="nav-number">1.1.</span> <span class="nav-text">解决方案一</span></a></li></ol></li></ol>
+        
     </div>
 </div>
 
@@ -441,7 +429,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -454,14 +442,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">讀者</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">閱覽</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -567,7 +555,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E4%B8%80%E4%B8%AA%E4%BA%A4%E6%8D%A2%E6%8C%87%E9%92%88%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">写一个交换指针的函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%B8%80"><span class="nav-number">1.1.</span> <span class="nav-text">解决方案一</span></a></li></ol></li></ol>
+        
     </div>
 </div>
 
