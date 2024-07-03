@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                HOME
+                                首頁
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                ARCHIVES
+                                歸檔
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                CATEGORIES
+                                分類
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >HOME</a>
+                    >首頁</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >ARCHIVES</a>
+                    >歸檔</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >CATEGORIES</a>
+                    >分類</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Mon Jul 01 2024 00:42:48 GMT+0800">2024-07-01 00:42:48</span>
+                <span class="datetime" data-updated="Mon Jul 01 2024 12:30:19 GMT+0800">2024-07-01 12:30:19</span>
             </span>
         
 
@@ -240,13 +240,13 @@
                     
 
                     <h1 id="2022-03-01-Proxy代理模式"><a href="#2022-03-01-Proxy代理模式" class="headerlink" title="2022&#x2F;03&#x2F;01 Proxy代理模式"></a>2022&#x2F;03&#x2F;01 Proxy代理模式</h1><ul>
-<li>结构型模式</li>
+<li><strong>结构型模式</strong>（<strong>啥叫结构型，看不懂</strong>）</li>
 </ul>
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>代理模式为其他对象提供一种代理以控制对这个对象的访问。 在需要用比较通用和复杂的<strong>对象指针代替简单的的指针</strong>的时候，使用代理模式。有四种常用的情况：</p>
-<p>1、远程代理，也就是为一个对象在不同的地址空间提供局部代表。这样可以隐藏一个对象存在于不同地址空间的事实。</p>
-<p>2、虚拟代理，是根据需要创建开销很大的对象。通过它来存放实例化需要很长时间的真实对象。</p>
-<p>3、安全代理，用来控制真实对象访问的权限。</p>
-<p>4、智能指针，取代了简单的指针，它在访问对象时执行一些附加操作。</p>
+<p>1、远程代理，也就是为一个对象在&#x3D;&#x3D;不同的地址空间提供局部代表&#x3D;&#x3D;。这样可以隐藏一个对象存在于不同地址空间的事实。</p>
+<p>2、&#x3D;&#x3D;虚拟代理&#x3D;&#x3D;，是根据需要创建开销很大的对象。通过它来存放实例化需要很长时间的真实对象。</p>
+<p>3、&#x3D;&#x3D;安全代理&#x3D;&#x3D;，用来控制真实对象访问的权限。</p>
+<p>4、&#x3D;&#x3D;智能指针&#x3D;&#x3D;，取代了简单的指针，它在访问对象时执行一些附加操作。（？？？？）</p>
 <p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/20130529145407254"  alt="img"></p>
 <p>参与者：</p>
 <ul>
@@ -337,6 +337,22 @@
                 
                     <div class="post-nav border-box">
                         
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/07/01/20240701-%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"
+                                   title="20240701 学习计划"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240701 学习计划</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
                         
                             <div class="next-post">
                                 <a class="next"
@@ -346,7 +362,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240630 C++ 多维数组申请</span>
-                                        <span class="post-nav-item">Next posts</span>
+                                        <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -363,15 +379,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;Comments
+            <i class="fas fa-comments"></i>&nbsp;留言
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">Comment plugin failed to load</span>
-    <button class="reload keep-button">Click to reload</button>
+    <span class="fail-tip">評論插件加載失敗</span>
+    <button class="reload keep-button">點擊重新加載</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">Loading comment plugin</span>
+    <span class="load-tip">正在加載評論插件</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -482,7 +498,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -495,14 +511,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-type border-box">讀者</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">Page View</span>
+                    <span class="item-type border-box">閱覽</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
