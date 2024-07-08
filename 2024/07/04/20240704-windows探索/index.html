@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20240704 windows探索 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"你过于安静勇敢，我忘了你正在承受苦痛","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20240704 windows探索
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv5</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-07-04 15:56:43</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Thu Jul 04 2024 16:13:22 GMT+0800">2024-07-04 16:13:22</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="正在运行的任务"><a href="#正在运行的任务" class="headerlink" title="正在运行的任务"></a>正在运行的任务</h1><ul>
+<li>WIN+R、msinfo32、正在运行的任务（进程号，优先级，版本号，最大工作集、最小工作集）</li>
+</ul>
+<h1 id="进程工作集"><a href="#进程工作集" class="headerlink" title="进程工作集"></a>进程工作集</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240704161149890.png"  alt="image-20240704161149890"></p>
+<blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://books.google.com/books?id=ztNUqtlaRnEC&pg=PA159&lpg=PA159&dq=%E6%9C%80%E5%B0%8F%E5%B7%A5%E4%BD%9C%E9%9B%86%E6%9C%80%E5%A4%A7%E5%B7%A5%E4%BD%9C%E9%9B%86&source=bl&ots=vOTx3nEVb1&sig=ACfU3U0Ec2d7PaCVtttkLTiouH_ePVMkBQ&hl=zh-CN&sa=X&ved=2ahUKEwj5w5bY9IyHAxVGq44IHUzvDxk4ChDoAXoECAcQAw#v=onepage&q=%E6%9C%80%E5%B0%8F%E5%B7%A5%E4%BD%9C%E9%9B%86%E6%9C%80%E5%A4%A7%E5%B7%A5%E4%BD%9C%E9%9B%86&f=false" >https://books.google.com/books?id=ztNUqtlaRnEC&amp;pg=PA159&amp;lpg=PA159&amp;dq=%E6%9C%80%E5%B0%8F%E5%B7%A5%E4%BD%9C%E9%9B%86%E6%9C%80%E5%A4%A7%E5%B7%A5%E4%BD%9C%E9%9B%86&amp;source=bl&amp;ots=vOTx3nEVb1&amp;sig=ACfU3U0Ec2d7PaCVtttkLTiouH_ePVMkBQ&amp;hl=zh-CN&amp;sa=X&amp;ved=2ahUKEwj5w5bY9IyHAxVGq44IHUzvDxk4ChDoAXoECAcQAw#v=onepage&amp;q=%E6%9C%80%E5%B0%8F%E5%B7%A5%E4%BD%9C%E9%9B%86%E6%9C%80%E5%A4%A7%E5%B7%A5%E4%BD%9C%E9%9B%86&amp;f=false<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<h2 id="win32官方文档"><a href="#win32官方文档" class="headerlink" title="win32官方文档"></a>win32官方文档</h2><p><a class="link"   target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/win32/memory/working-set" >https://learn.microsoft.com/zh-cn/windows/win32/memory/working-set<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>一个进程当前使用的页的集合叫做它的工作集(working set)。如果整个工作集都在内存中，在进入下一个运行阶段之前进程的运行不会引起很多页面故障。如果内存太小无法容纳整个工作集，进程运行将引起大量的页面故障并且速度十分缓慢。一个每隔几条指令就发生一次页面故障的程序被称为是在颠簸。</p>
+<pre><code>现代计算机系统中内存的访问速度远远高于外存的访问速度。如果系统中不产生缺页中断，则访问数据的时间约等于内存访问时间。但是如果发生缺页中断，则需要从外存中将该页调入，因此会大大降低系统性能。通过对缺页率的长期研究，Denning提出了工作集理论。由于程序在运行时对页面的访问是不均匀的(即局部性)，如果能够预知程序在某段时间内要访问那些页面，并将它们提前调入内存，这将降低缺页率，提高CPU利用率。
+</code></pre>
+<p>进程工作集</p>
+<pre><code>因为频繁的调页操作引起的磁盘I/O会大大降低程序的运行效率，因此对每一个进程，虚拟内存管理器都会将其一定量的内存页驻留在物理内存中。并跟踪其执行的性能指标，动态调整这个数量。Win32中驻留在物理内存中的内存页称为进程的&quot;工作集&quot;（workingset），进程的工作集可以通过&quot;任务管理器&quot;查看，其中&quot;内存使用&quot;列即为工作集大小。
+
+工作集是会动态变化的，进程初始时只有很少的代码页和数据页被调入内存。当执行到未被调入内存的代码或者访问到尚未调入内存的数据时，这些代码页或者数据页会被调入物理内存，工作集也随之增长。但工作集不能无限增长，系统为每个进程都定义了一个默认的最小工作集（根据系统物理内存大小，此值可能为20~50 MB）和最大工作集（根据系统物理内存大小，此值可能为45~345 MB）。当工作集到达最大工作集，即进程需要再次调入新页到物理内存中时，虚拟内存管理器会将其原来的工作集中的某些页先置换出内存，然后将需要调入的新页调入内存。
+
+因为工作集的页驻留在物理内存中，因此对这些页的访问不涉及磁盘I/O，相对而言非常快；反之，如果执行的代码或者访问的数据不在工作集中，则会引发额外的磁盘I/O，从而降低程序的运行效率。一个极端的情况就是所谓的颠簸或抖动（thrashing），即程序的大部分的执行时间都花在了调页操作上，而不是代码执行上。
+
+如前所述，虚拟内存管理器在调页时，不仅仅只是调入需要的页，同时还将其附近的页也一起调入内存中。综合这些知识，对开发人员来说，如果想提高程序的运行效率，应该考虑以下两个因素。
+
+（1）对代码来说，尽量编写紧凑代码，这样最理想的情形就是工作集从不会到达最大阀值。在每次调入新页时，也就不需要置换已经载入内存的页。因为根据locality特性，以前执行的代码和访问的数据在后面有很大可能会被再次执行或访问。这样程序执行时，发生的缺页错误数就会大大降低，即减少了磁盘I/O，在图5-6中也可以看到一个程序执行时截至当时共发生的缺页错误次数。即使不能达到这种理想情形，紧凑的代码也往往意味着接下来执行的代码更大可能就在相同的页或相邻页。根据时间locality特性，程序80%的时间花在了20%的代码上。如果能将这20%的代码尽量紧凑且排在一起，无疑会大大提高程序的整体运行性能。
+
+（2）对数据来说，尽量将那些会一起访问的数据（比如链表）放在一起。这样当访问这些数据时，因为它们在同一页或相邻页，只需要一次调页操作即可完成；反之，如果这些数据分散在多个页（更糟的情况是这些页还不相邻），那么每次对这些数据的整体访问都会引发大量的缺页错误，从而降低性能。利用Win32提供的预留和提交两步机制，可以为这些会一同访问的数据预留出一大块空间。此时并没有分配实际存储空间，然后在后续执行过程中生成这些数据时随需为它们提交内存。这样既不浪费真正的物理存储（包括调页文件的磁盘空间和物理内存空间），又能利用locality特性。另外内存池机制也是基于类似的考虑。
+
+此外，工作集和驻留集不同，驻留集指当前在主存中的页面集，而工作集指不久后所需要的页面集。
+
+resident set, In a virtual memory system, a process&#39; resident set is that part of a process&#39; address space which is currently in main memory. If this does not include all of the process&#39; working set, the system may thrash.
+
+working set, The working set of a program or system is that memory or set of addresses which it will use in the near future.This term is generally used when discussing miss rates at some storage level; the time scale of &quot;near future&quot; depends upon the cost of a miss. The working set should fit in the storage level; otherwise the system may thrash.
+</code></pre>
+<p><a class="link"   target="_blank" rel="noopener" href="http://book.51cto.com/art/201006/203597.htm" >http://book.51cto.com/art/201006/203597.htm<i class="fas fa-external-link-alt"></i></a><br>————————————————</p>
+<pre><code>                        版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+</code></pre>
+<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/zhuliting/article/details/6118702" >https://blog.csdn.net/zhuliting/article/details/6118702<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>工作集</p>
+<p>@(OS)</p>
+<p>工作集是个动态的概念，但也是个经常被忽视的出题点。很多书上就寥寥几句话带过，根本不足以解决像2016年408的一道真题。在后面解释这个问题。</p>
+<p>首先为了讲清楚工作集，需要先明白几个替换算法。<br>局部最佳页面替换算法</p>
+<p>类似于全局最佳替换算法，需要事先知道页面的引用串，再根据进程行为改变页面数量。<br>思想：进程在t时刻访问某页面，如果该页面不在内存中，导致一次缺页。则把该页面装入一个空闲页框。无论是否发生缺页，算法在每一步需要考虑引用串，如果页面再时间间隔未被再次引用，那么就移出内存页面，否则该页被保留到进程的驻留集中，直到再次被引用。是一个系统常量，间隔称作滑动窗口。在任意时刻t，驻留集包含这个窗口中可见的那些页面，即：当前引用的页面，未来次内存访问引用的页面。实际窗口大小是.</p>
+<p>这就像我们说的最佳置换算法，是看未来时。实际上无法实现，但可以作为衡量其他替换算法是否优良的标准。<br>工作集模型和工作集替换算法</p>
+<p>工作集替换算法是可实现的算法，只不过不是往前看，而是往后看。驻留集未规定用多少页框，而是动态增长的，当然在实际系统中肯定设置了上限，比如Windows中大概32MB或者其他。对于一个进程来说，不用考虑那么远，看当下如何替换即可。工作集窗口大小是一个时间概念，不是说动态集合分配的页框数。而是过去k次（不含当前）访问的页面记号。比如工作集窗口大小是3，那么一个访问串为：0，2，3，2，1，4</p>
+<p>则当访问页面4时，往前看3个，1，2，3在被窗口覆盖，因此驻留集中页面是3，2，1，当然现在4也要加入驻留集，什么时候被踢出去，要看窗口滑动。形象说来就是用一个挖了k个洞的尺子，紧跟在你当前要访问的页面屁股后面，当前的页面并未加入到驻留集，所以窗口还不含当前页面。在窗口内能看到的页面就是当前驻留集的内容。可以是看到2，2，2，2这样重复的，也就是一直访问的是同一个页面，因为驻留集要动态更新，窗口里就只能看到一个页面了，这个情况是OK的。</p>
+<p>理解到这里，问题将非常容易解决。</p>
+<p>这篇文章的主要出发点就是下面这个题目。</p>
+<p>（2016.29）某进程访问页面的序列如下：<br>若工作集窗口大小是6，则在t时刻的工作集为：A</p>
+<p>A. {6,0,3,2}<br>B. {2,3,0,4}<br>C. {0,4,3,2,9}<br>D. {4,5,6,0,3,2}</p>
+<p>分析：由上面的理论储备，这题就是简单的小学题了。在t时刻往后看6个，页号是：6,0,3,2,3,2</p>
+<p>看到的就是这6个页号，即：6,0,3,2这四个页。那么驻留集就是这四个页。</p>
+<p>我想很多很多人会往前数6个不一样的，然后开心的选择D，实际这题就只考察了一个简单的概念：工作集窗口。<br>————————————————</p>
+<pre><code>                        版权声明：本文为博主原创文章，遵循 CC 4.0 BY 版权协议，转载请附上原文出处链接和本声明。
+</code></pre>
+<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/u011240016/article/details/53314170" >https://blog.csdn.net/u011240016/article/details/53314170<i class="fas fa-external-link-alt"></i></a></p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/07/04/20240704-wireshark/"
+                                   title="20240704 wireshark"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240704 wireshark</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/07/04/20240704-%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%BA%86%E8%A7%A3/"
+                                   title="20240704 公司开发工具了解"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240704 公司开发工具了解</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="nav-number">1.</span> <span class="nav-text">正在运行的任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E5%B7%A5%E4%BD%9C%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">进程工作集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#win32%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3"><span class="nav-number">2.1.</span> <span class="nav-text">win32官方文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">2.2.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4"><span class="nav-number">2.3.</span> <span class="nav-text">4</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="nav-number">1.</span> <span class="nav-text">正在运行的任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E5%B7%A5%E4%BD%9C%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">进程工作集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#win32%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3"><span class="nav-number">2.1.</span> <span class="nav-text">win32官方文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">2.2.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4"><span class="nav-number">2.3.</span> <span class="nav-text">4</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
