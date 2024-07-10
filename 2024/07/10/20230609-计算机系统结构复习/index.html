@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20230609 计算机系统结构复习 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"你过于安静勇敢，我忘了你正在承受苦痛","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                HOME
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >HOME</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >CATEGORIES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20230609 计算机系统结构复习
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv5</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-07-10 11:17:22</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Jul 10 2024 11:50:56 GMT+0800">2024-07-10 11:50:56</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="20230609-计算机系统结构复习"><a href="#20230609-计算机系统结构复习" class="headerlink" title="20230609 计算机系统结构复习"></a>20230609 计算机系统结构复习</h1><h1 id="cache"><a href="#cache" class="headerlink" title="cache"></a>cache</h1><h2 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h2><ul>
+<li>影响cache命中率的因素</li>
+</ul>
+<h2 id="cache-三种映射"><a href="#cache-三种映射" class="headerlink" title="cache 三种映射"></a>cache 三种映射</h2><p><img   src="/../../../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1686279099518.png"  alt="1686279099518"></p>
+<ul>
+<li>分别的特点</li>
+</ul>
+<blockquote>
+<p>全相关联映射的优点是：</p>
+<p><strong>冲突率小，cache的利用率高</strong>，</p>
+<p>缺点是比较器难实现，需要一个访问速度很快代价很高的相连存储器（<strong>多路比较器</strong>）；</p>
+<p>因为CPU给定存储单元的地址之后，需要首先拿CPU给定地址记为add1的块号和<strong>所有的cache的块号进行比较</strong>，如果命中（就是cache中存在和add1的块号相等的标记），那么就把块号+便宜地址（add1的偏移地址部分）就得到了在cache中的位置；否则的话就是未命中，未命中的话地址必定存在内存中；于是使用同样的方法去遍历，然后找到（一定能找到）;<br>————————————————</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686280568685.png"  alt="1686280568685"></p>
+<hr>
+<p>组关联映射</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686280587042.png"  alt="1686280587042"></p>
+</blockquote>
+<h1 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h1><p>Cache的作用是弥补主存在速度上的不足，因此Cache的性能重点关注的是它对<strong>访存时间的提升</strong>。</p>
+<p>【在提升和改进某个部件的性能时要考虑这个部件存在的意义是什么，这个部件有什么作用，再去考虑如何提升性能】</p>
+<p>平均访存时间&#x3D;命中时间+不命中率x不命中时间</p>
+<p>所以可以从三个方面来改进Cache的性能：</p>
+<p>降低不命中率、减少不命中开销、减少命中时间</p>
+<blockquote>
+<p>复述</p>
+<p>三种问题</p>
+<p><img   src="/../../../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1686395030618.png"  alt="1686395030618"></p>
+<p>1.<strong>第一次</strong>要访问的块不在cache中</p>
+<p>2.程序需要m块，但是访问的块是n，m《n</p>
+<p>3.太多需要被访问的块被映射到同一组</p>
+<hr>
+<h2 id="3-2-增加Cache块的大小"><a href="#3-2-增加Cache块的大小" class="headerlink" title="3.2 增加Cache块的大小"></a>3.2 增加Cache块的大小</h2><p>问题1：不命中率为什么会降低？<br>首次访问，Cache是空的，所以发生强制失效。发生失效只有要从主存调入一块。块越大，调入的字节越多，下次访存的时候不失效的可能性就越大。所以强制性不命中率降低。</p>
+<p>问题2：不命中率为什么后来又升高了？</p>
+<p>块大了，块数少了。所以带来强制性不命中降低的同时，带来了冲突不命中的增加。两者共同作用，导致总的不命中率增加。看来，块大小设置多大，是需要好好设置一下的。</p>
+<p>问题3：增加块大小，会不会对其他性能参数有影响？</p>
+<p>当然有影响，块大了，调块的时间长，所以会增加不命中的开销。</p>
+<hr>
+<h2 id="3-3-增加Cache的容量"><a href="#3-3-增加Cache的容量" class="headerlink" title="3.3 增加Cache的容量"></a>3.3 增加Cache的容量</h2><p><img   src="/../../../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1686395136359.png"  alt="1686395136359"></p>
+<hr>
+<h2 id="3-4-提高相联度"><a href="#3-4-提高相联度" class="headerlink" title="3.4 提高相联度"></a>3.4 提高相联度</h2><p>2条经验规则：</p>
+<ol>
+<li><p>采用相联度超过8的方案的实际意义不大</p>
+</li>
+<li><p>2:1Cache经验规则——容量为N的直接映像Cache的不命中率和容量为N&#x2F;2的两路组相联Cache的不命中率差不多相同。</p>
+</li>
+</ol>
+<p><img   src="/../../../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1686395171504.png"  alt="1686395171504"></p>
+<blockquote>
+<p><strong>这里到底在讲什么东西？？？？</strong></p>
+<p>什么是增加命中时间？？</p>
+<hr>
+<p>chatgpt</p>
+<p>在计算机系统中，缓存是一种用于加快数据访问速度的高速存储器。<strong>相联度是指缓存中每个缓存块可以映射到主存中的多少个可能位置。常见的相联度包括直接映射、全相联映射和组相联映射。</strong></p>
+<p>当提高相联度时，<strong>意味着一个缓存块可以映射到更多的主存位置</strong>，从而增加了缓存命中的可能性。</p>
+<p><strong>因为更多的主存位置可以与缓存块关联，所以在进行缓存查找时，命中的概率会增加。</strong>这意味着在相联度较高的缓存中，可以更频繁地找到需要的数据，从而减少了从主存读取数据的时间。</p>
+<p>然而，提高相联度也会带来一些代价。首先，相联度增加会引入更多的比较逻辑和额外的存储开销。例如，在全相联映射中，需要比较缓存中的所有块标签与要查找的标签进行匹配。这增加了查找的复杂性和延迟。其次，增加相联度会导致更多的替换策略开销。当缓存已满时，需要选择一个缓存块进行替换，而高相联度可能导致更多的冲突，从而增加了替换算法的开销。</p>
+<p>（相联度怎样提高呢？我感觉这几种方法都是？能提高相联度的吗？）</p>
+</blockquote>
+<hr>
+</blockquote>
+<h2 id="3-5-伪相联Cache"><a href="#3-5-伪相联Cache" class="headerlink" title="3.5 伪相联Cache"></a>3.5 伪相联Cache</h2><p>又称列相联，既能获得多路组相联的低不命中率又能保持直接映像Cache的命中速度。</p>
+<p>基本思想：首先按与直接映像相同的方式访问，如果命中直接给CPU；如果不命中，检查将索引字段的最高位取反的位置去寻找另一个位置（块），如果这一块的标识匹配，称发生伪命中。</p>
+<p>伪相联Cache有两种访问时间，分别对应于正常命中和伪命中。要能够指出在同一组的两个块中访问哪个块才更可能是快速命中。解决方法：当出现伪命中时交换两个块的内容，把最近刚访问过的块放到第一位置（直接映像所对应的块上）</p>
+<p>【因为局部性原理，刚访问过的块很可能就是下一次要访问的块】</p>
+<h2 id="降低不命中率"><a href="#降低不命中率" class="headerlink" title="降低不命中率"></a>降低不命中率</h2><h2 id="减少不命中开销"><a href="#减少不命中开销" class="headerlink" title="减少不命中开销"></a>减少不命中开销</h2><h2 id="减少命中时间"><a href="#减少命中时间" class="headerlink" title="减少命中时间"></a>减少命中时间</h2><ul>
+<li>容量小，结构简单的cache</li>
+<li>虚拟cache（比第一种方法多了PID）</li>
+<li>虚拟索引-物理标识方法(5.5的题目看知识看不懂，厌倦了)</li>
+</ul>
+<blockquote>
+<p>20.“虚拟索引+物理标识”Cache的基本思想是什么？</p>
+<p>答：</p>
+<p>直接用虚地址中的页内位移（页内位移在虚拟地址的转换中保持不变），作为访问Cache的索引，但标识确实物理地址，Cpu发出访存请求后，在进行虚地址转换的同时，可并行进行标识的读取，在完成地址变换后，再把得到的物理地址和标识进行比较。</p>
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="http://thebeardsage.com/virtual-memory-cache-tlb-interaction/" >http://thebeardsage.com/virtual-memory-cache-tlb-interaction/<i class="fas fa-external-link-alt"></i></a></p>
+<p>别有图人博客写的三种方法（fq）</p>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686414258514.png"  alt="1686414258514"></p>
+<p>s</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686414283780.png"  alt="1686414283780"></p>
+<p>s</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710115040611.png"  alt="image-20240710115040611"></p>
+</blockquote>
+<h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>某存储系统中，主存容量是Cache容量的4096倍，Cache被分为64个块。当主存地址采用直接映射时，地址映射表的大小应该是 <strong>64 * 13bit</strong>.<br>&#x3D;&#x3D;<strong>PS:b不考虑一致性维护位和替换算法位。</strong>&#x3D;&#x3D;</p>
+<blockquote>
+<p>地址映射表</p>
+<p>单单是主存完整地址，是能够解析出对应cache地址的</p>
+<p>2^12记录多出来的主存</p>
+<p>因为不考虑一致性和替换算法位</p>
+<p><strong>只考虑有效位</strong></p>
+<p>一个cache块除了cache标识位，主存看高位即可</p>
+<p>cache地址映射表</p>
+</blockquote>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686281311436.png"  alt="1686281311436"></p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686304165308.png"  alt="1686304165308"></p>
+<h2 id="5-4"><a href="#5-4" class="headerlink" title="&#x3D;&#x3D;5.4&#x3D;&#x3D;"></a>&#x3D;&#x3D;5.4&#x3D;&#x3D;</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710115030163.png"  alt="image-20240710115030163"></p>
+<blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710115007650.png"  alt="image-20240710115007650"></p>
+<blockquote>
+<p>课本156&#x2F;课本170</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686410062586.png"  alt="1686410062586"></p>
+<p>说实话还是没太理解</p>
+</blockquote>
+</blockquote>
+<h2 id="5-5"><a href="#5-5" class="headerlink" title="&#x3D;&#x3D;5.5&#x3D;&#x3D;"></a>&#x3D;&#x3D;5.5&#x3D;&#x3D;</h2><p>某虚拟Cache采用虚拟索引-物理标识方法，其主存页面大小为4KB，那么如果采用4路组相联映像，用虚拟索引最多可以对多少KB的Cache进行寻址的这个问题中，我不太理解的是,虚拟地址,和页面主存大小的关系和虚拟索引和cache寻址之间的关系是什么,你能否用表格或者图片给我解释一下他们之间的关系</p>
+<blockquote>
+<p>看看看课本192来直接硬记好了，累了</p>
+</blockquote>
+<h2 id="5-6"><a href="#5-6" class="headerlink" title="&#x3D;&#x3D;5.6&#x3D;&#x3D;"></a>&#x3D;&#x3D;5.6&#x3D;&#x3D;</h2><p>设主存每个分体的存取周期为2μs,宽度为4个字节。采用模m多分体交叉存取,但实际频宽只能达到最大频宽的0.6倍。现要求主存实际频宽为4MB&#x2F;s,问主存分体数为</p>
+<blockquote>
+<p>首先，我们需要计算主存的最大频宽。</p>
+<p>每个分体的存取周期为2μs，宽度为4个字节，可以计算出每个分体的带宽为：</p>
+<p>带宽 &#x3D; 宽度 &#x2F; 存取周期 &#x3D; 4字节 &#x2F; 2μs &#x3D; 2MB&#x2F;s</p>
+<p>根据题目中的信息，实际频宽只能达到最大频宽的0.6倍，所以实际频宽为：</p>
+<p>实际频宽 &#x3D; 0.6 * 2MB&#x2F;s &#x3D; 1.2MB&#x2F;s</p>
+<p>要求主存的实际频宽为4MB&#x2F;s，所以我们可以列一个方程：</p>
+<p>1.2MB&#x2F;s * 模m &#x3D; 4MB&#x2F;s</p>
+<p>解这个方程可以得到：</p>
+<p>模m &#x3D; 4MB&#x2F;s &#x2F; 1.2MB&#x2F;s ≈ 3.33</p>
+<p>由于分体数必须是整数，所以最接近3.33的整数为4。</p>
+<p>因此，主存分体数为4个。</p>
+</blockquote>
+<h1 id="基本计算机体系结构和改进"><a href="#基本计算机体系结构和改进" class="headerlink" title="基本计算机体系结构和改进"></a>基本计算机体系结构和改进</h1><p>16</p>
+<h1 id="并发-并行-同时"><a href="#并发-并行-同时" class="headerlink" title="并发 并行 同时"></a>并发 并行 同时</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686455351126.png"  alt="1686455351126"></p>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114953113.png"  alt="image-20240710114953113"></p>
+<blockquote>
+<p>看起来是同时发生，但是实际上不是同时发生的</p>
+</blockquote>
+<hr>
+<p>同时性（Concurrency）：同时性指的是在同一时间段内，多个任务或事件都在进行，但不一定是真正的同时进行。<strong>这种情况下，任务之间可能会交替执行或者通过时间片轮转等方式进行切换。</strong>例如，在一个多线程的程序中，多个线程可以同时执行，<strong>但在任意时刻只有一个线程在真正运行。</strong></p>
+<p>并发性（Parallelism）：并发性指的是多个任务或事件在同一时间段内真正地同时进行，通常需要多个物理或逻辑处理单元（如多核处理器）来实现。<strong>在并发性中，每个任务都在独立的处理单元上执行，而不需要进行切换或者等待。</strong>例如，在一个多核处理器的计算机上，不同的核心可以同时执行不同的任务，实现真正的并发性。</p>
+<p>并行性（Parallelism）：并行性指的是同时执行多个任务或事件，每个任务都在独立的处理单元上进行，<strong>并且彼此之间没有依赖关系。</strong>在并行性中，任务之间可以独立地执行，不需要相互等待或进行切换。例如，在一个分布式系统中，不同的计算节点可以同时进行独立的计算任务，实现真正的并行性。</p>
+<blockquote>
+<p>&#x3D;&#x3D;并行性&#x3D;&#x3D;<strong>这个是我认可的独立的同时性</strong></p>
+<p>并行的时件或者活动一定是幷发的，但是反之并发的时间或者活动未必是并行的。并行性是并发性的特例，而并发性是并行性的拓展。</p>
+</blockquote>
+<p>综上所述，同时性是指在同一时间段内多个任务或事件进行，但不一定是真正的同时进行；并发性是指多个任务或事件在同一时间段内真正地同时进行，通常需要多个处理单元来实现；并行性是指同时执行多个独立的任务或事件，每个任务在独立的处理单元上进行。</p>
+<hr>
+<blockquote>
+<p>自我总结一下：</p>
+<p>同时性：在同一时间段内，多个任务或者时间都在进行</p>
+<p>并行性：每个单元相互独立，每个任务可以在独立的处理单元上进行，任务彼此之间没有依赖关系，并行一定是并发，但是并发不一定是并行</p>
+<p>并发性：每个任务可以在独立的处理单元上进行，不需要切换或者等待</p>
+<hr>
+<p>感觉还是理解不够清楚</p>
+<p>还是得看看时间线之类的东西阿</p>
+<hr>
+</blockquote>
+<p>同时性（Concurrency）并发性（Parallelism）并行性（Parallelism）</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114925174.png"  alt="image-20240710114925174"></p>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686456660250.png"  alt="1686456660250"></p>
+<blockquote>
+<p>有点懂了</p>
+<p>很直观</p>
+<p>但是文字描述又是另一回事</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://i.stack.imgur.com/ZqHC3.gif%EF%BC%88%E8%BF%99%E4%B8%AA%E5%9B%BE%E7%9C%9F%E7%9A%84%E5%BE%88%E5%A5%BD%EF%BC%89" >https://i.stack.imgur.com/ZqHC3.gif（这个图真的很好）<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<hr>
+<p><a class="link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism" >https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism<i class="fas fa-external-link-alt"></i></a></p>
+<p>精辟论述</p>
+<p>826</p>
+<h2 id="为什么存在混乱"><a href="#为什么存在混乱" class="headerlink" title="为什么存在混乱"></a>为什么存在混乱</h2><p>存在混淆是因为这两个词的字典含义几乎相同：</p>
+<ul>
+<li><strong>并发</strong>：同时存在、发生或完成（dictionary.com）</li>
+<li><strong>并行</strong>：非常相似并且经常同时发生（韦氏词典）。</li>
+</ul>
+<p>然而，它们在计算机科学和编程中的使用方式却大不相同。这是我的解释：</p>
+<ul>
+<li><strong>并发性</strong>：可中断性</li>
+<li><strong>并行性</strong>：独立性</li>
+</ul>
+<p><strong>那么上面的定义是什么意思呢？</strong></p>
+<p>我将用现实世界的类比来澄清。假设您必须在一天内完成 2 项非常重要的任务：</p>
+<ol>
+<li>拿到护照</li>
+<li>完成演示</li>
+</ol>
+<p>现在，问题是任务 1 要求你去一个极其官僚的政府办公室，让你排队等候 4 个小时才能拿到护照。同时，task-2是你办公室需要的，是一个critical task。两者都必须在特定的一天完成。</p>
+<blockquote>
+<p>后面例子懒得看了</p>
+</blockquote>
+<h1 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h1><h2 id="加速计算题"><a href="#加速计算题" class="headerlink" title="加速计算题"></a>加速计算题</h2><p>在计算机系统中，某一功能的处理时间为整个系统运行时间的10%，如果要使整个系统的性能提高到原来的1.6倍，则该功能的处理速度应加快（  ）倍</p>
+<blockquote>
+<p>本题疑惑是</p>
+<p>在改变了该功能的处理时间后</p>
+<p>这个时间就不会再是50%了</p>
+<p>这该怎样子计算呢</p>
+</blockquote>
+<h2 id="加速计算题-带宽"><a href="#加速计算题-带宽" class="headerlink" title="加速计算题+带宽"></a>加速计算题+带宽</h2><p>在一台服务器上运行一段I&#x2F;O密集型基准测试程序，该测试程序共有3,000,000条指令，运行时间为5毫秒，其中CPU时间占20%，I&#x2F;O时间占80%。为提高性能，将服务器CPU从1.5GHz升级为3GHz，服务器内存和磁盘升级为访问速度更快的内存和固态硬盘，使得I&#x2F;O访问速度提高至原来的4倍；升级后，该服务器运行同一段基准测试程序的执行时间为_____毫秒。</p>
+<p>​								</p>
+<h2 id="两个等级"><a href="#两个等级" class="headerlink" title="两个等级"></a>两个等级</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114907562.png"  alt="image-20240710114907562"></p>
+<blockquote>
+<p>从执行程序的角度来看，并行性等级可以按照以下顺序从低到高排列：</p>
+<ol>
+<li>无并行性（No Parallelism）：程序中不存在可以并行执行的任务或操作。所有的任务按照顺序依次执行，没有并行执行的机会。</li>
+<li><strong>任务级</strong>并行性（Task-level Parallelism）：程序中存在多个独立的任务，这些任务之间没有依赖关系，可以同时执行。每个任务可以在独立的处理单元上并行执行，从而提高整体的执行效率。</li>
+<li>数据级并行性（Data-level Parallelism）：程序中的某些任务涉及对大规模数据集的操作，这些数据可以被分成多个部分，并且这些部分之间没有依赖关系。这样，多个处理单元可以同时对不同部分的数据执行相同的操作，从而实现数据级的并行性。</li>
+<li><strong>指令级</strong>并行性（Instruction-level Parallelism）：程序中的不同指令之间存在独立性，可以在同一时间点上同时执行多个指令。通过流水线技术、乱序执行等方式，处理器可以同时执行多个指令的不同阶段，从而实现指令级的并行性。</li>
+<li><strong>线程级</strong>并行性（Thread-level Parallelism）：程序中使用多个线程来执行不同的任务或操作，这些线程可以在多个处理单元上同时执行。每个线程可以独立地执行自己的任务，并且线程之间可以通过同步机制来实现通信和协作。</li>
+<li><strong>进程级</strong>并行性（Process-level Parallelism）：程序通过多个进程来执行不同的任务或操作，这些进程可以在多个处理器或计算节点上同时运行。每个进程有自己的地址空间和执行环境，通过进程间通信来实现任务的划分和协作。</li>
+</ol>
+<p>请注意，以上是一种一般的排序，具体情况可能因程序特性、硬件平台和并行编程模型等因素而有所不同。</p>
+</blockquote>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114857749.png"  alt="image-20240710114857749"></p>
+<h1 id="2-1"><a href="#2-1" class="headerlink" title="2"></a>2</h1><h2 id="寻址方式和操作数位置关系"><a href="#寻址方式和操作数位置关系" class="headerlink" title="寻址方式和操作数位置关系"></a>寻址方式和操作数位置关系</h2><p>在不同的寻址方式下，操作数可以位于不同的位置。以下是常见的几种寻址方式及其操作数的位置：</p>
+<ol>
+<li>立即寻址（Immediate Addressing）：操作数直接包含在指令中，指令本身就包含了要操作的数据。在这种寻址方式下，操作数位于指令中。</li>
+<li>直接寻址（Direct Addressing）：操作数的地址直接指定在指令中，指令中包含了要操作的数据的内存地址。在这种寻址方式下，操作数位于内存中，指令中只包含了操作数的地址。</li>
+<li>寄存器寻址（Register Addressing）：操作数位于寄存器中，指令中直接指定要使用的寄存器。在这种寻址方式下，操作数位于寄存器中。</li>
+<li>寄存器间接寻址（Register Indirect Addressing）：操作数的地址存储在寄存器中，指令中指定要使用的寄存器。在这种寻址方式下，操作数位于内存中，地址存储在寄存器中。</li>
+<li>寄存器相对寻址（Register Relative Addressing）：操作数的地址由寄存器的内容和指令中的偏移量计算得出。在这种寻址方式下，操作数位于内存中，地址由寄存器和偏移量计算得出。</li>
+<li>基址寻址（Base Addressing）：操作数的地址由基址寄存器和指令中的偏移量相加得出。在这种寻址方式下，操作数位于内存中，地址由基址寄存器和偏移量相加计算得出。</li>
+<li>相对基址寻址（Relative Base Addressing）：操作数的地址由基址寄存器、指令中的偏移量和程序计数器（PC）相加得出。在这种寻址方式下，操作数位于内存中，地址由基址寄存器、偏移量和PC相加计算得出。</li>
+</ol>
+<p>需要注意的是，不同的处理器和指令集架构可能支持不同的寻址方式，而且可以有更多特定的寻址方式。在程序执行时，处理器会根据指令中指定的寻址方式来确定操作数所在的位置，并进行相应的数据访问。</p>
+<h2 id="取指令基本的运作"><a href="#取指令基本的运作" class="headerlink" title="取指令基本的运作"></a>取指令基本的运作</h2><p>对于一个16位的机器字长，存储器按字编址，那么每个存储器地址单元可以存储一个字，即16位的数据。</p>
+<p>对于双字指令来说，它需要使用两个连续的存储器地址单元来存储指令的两个字。当程序计数器（PC）指向当前要执行的指令时，双字指令的第一个字存储在PC指向的存储器地址单元，而第二个字存储在PC指向的存储器地址单元的下一个地址单元中。</p>
+<p>因此，为了获取双字指令的两个字，PC的值需要自动增加2个存储器地址单元的偏移量，即增加2。这样，当执行完当前指令后，PC会自动指向下一条指令的起始地址，以便顺序执行程序。</p>
+<p>这种PC自动增加的机制是为了保证程序的正确执行和顺序访问存储器中的指令。通过增加2个存储器地址单元的偏移量，可以确保每次PC的变化都指向下一条指令的起始地址，避免出现指令跳过或重复执行的错误情况。</p>
+<p>总结起来，对于双字指令，在16位机器字长的情况下，PC的值需要自动加2，以便顺序获取指令的两个字，并确保程序的正确执行和顺序访问存储器中的指令。</p>
+<h1 id="3-1"><a href="#3-1" class="headerlink" title="3"></a>3</h1><h2 id="流水线概念-what"><a href="#流水线概念-what" class="headerlink" title="流水线概念&#x2F;what"></a>流水线概念&#x2F;what</h2><p><strong>流水线技术</strong></p>
+<pre><code>把一个重复的过程分解为若干个子过程，每个子过程由专门的功能部件来实现。
+把多个处理过程在时间上错开，依次通过各功能段，这样，每个子过程就可以与其它的子过程并行进行。
+</code></pre>
+<p><strong>流水线的段</strong></p>
+<pre><code>流水线中的每个子过程及其功能部件称为流水线的级或段，段与段相互连接形成流水线。
+流水线的段数称为流水线的深度。
+</code></pre>
+<p><strong>3.1.2 流水线的分类</strong></p>
+<p><strong>部件级、处理机级及处理机间流水线</strong></p>
+<p>按照流水技术用于计算机系统的等级不同进行分类</p>
+<p>部件级流水线（运算操作流水线）：把处理机中的部件分段，再把这些分段相互连接起来，使得各种类型的运算操作能够按流水方式进行。</p>
+<p>处理机级流水线（指令流水线）：把指令的执行过程按照流水方式处理。把一条指令的执行过程分解为若干个子过程，每个子过程在独立的功能 部件中执行。</p>
+<p>系统级流水线（宏流水线）：把多台处理机串行连接起来，对同一数据流进行处理，每个处理机完成整个任务中的一部分。</p>
+<p><strong>单功能流水线与多功能流水线</strong></p>
+<pre><code>按照流水线所完成的功能来分类
+
+单功能流水线：只能完成一种固定功能的流水线。
+
+多功能流水线：流水线的各段可以进行不同的连接，以实现不同的功能。
+</code></pre>
+<p><strong>静态流水线与动态流水线</strong></p>
+<pre><code>按照同一时间内各段之间的连接方式对多功能流水线作进一步的分类（对多功能流水线的深入）
+
+静态流水线：在同一时间内，多功能流水线中的各段只能按同一种功能的连接方式工作。
+    对于静态流水线来说，只有当输入的是一串相同的运算任务时，流水的效率才能得到充分的发挥。
+    例如：ASC的8段流水线
+
+动态流水线：在同一时间内，多功能流水线中的各段可以按照不同的方式连接，同时执行多种功能。
+    优点：灵活，能够提高流水线各段的使用率，从而提高处理速度。
+    缺点：控制复杂。
+</code></pre>
+<blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114827773.png"  alt="image-20240710114827773"></p>
+</blockquote>
+<p><strong>线性流水线与非线性流水线</strong></p>
+<pre><code>按照流水线中是否有反馈回路来进行分类
+线性流水线：流水线的各段串行连接，没有反馈回路。数据通过流水线中的各段时，每一个段最多只流过一次。
+非线性流水线：流水线中除了有串行的连接外，还有反馈回路。
+    非线性流水线的调度问题
+    确定什么时候向流水线引进新的任务，才能使该任务不会与先前进入流水线的任务发生冲突——争用流水段。
+</code></pre>
+<p><strong>顺序流水线与乱序流水线</strong></p>
+<pre><code>根据任务流入和流出的顺序是否相同来进行分类
+顺序流水线：流水线输出端任务流出的顺序与输入端任务流入的顺序完全相同。每一个任务在流水线的各段中是一个跟着一个顺序流动的。
+乱序流水线：流水线输出端任务流出的顺序与输入端任务流入的顺序可以不同，允许后进入流水线的任务先完成（从输出端流出）。也称为无序流水线、错序流水线、异步流水线
+</code></pre>
+<p><strong>标量处理机与向量流水处理机</strong></p>
+<pre><code>把指令执行部件中采用了流水线的处理机称为流水线处理机。
+
+标量处理机：处理机不具有向量数据表示和向量指令
+    仅对标量数据进行流水处理。
+
+向量流水处理机：具有向量数据表示和向量指令的处理机。
+    向量数据表示和流水技术的结合。
+</code></pre>
+<h2 id="指标"><a href="#指标" class="headerlink" title="指标"></a>指标</h2><h3 id="吞吐率"><a href="#吞吐率" class="headerlink" title="吞吐率"></a>吞吐率</h3><p>吞吐率：在单位时间内流水线所完成的任务数量或输出结果的数量。计算公式如下</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686494738973.png"  alt="1686494738973"></p>
+<p>其中：</p>
+<ul>
+<li>n ：任务数</li>
+<li>Tk：处理完成 n 个任务所用的时间</li>
+</ul>
+<h4 id="各段时间均相等的流水线"><a href="#各段时间均相等的流水线" class="headerlink" title="各段时间均相等的流水线"></a>各段时间均相等的流水线</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686497097340.png"  alt="1686497097340"></p>
+<h4 id="各段时间不完全相等的流水线"><a href="#各段时间不完全相等的流水线" class="headerlink" title="各段时间不完全相等的流水线"></a>各段时间不完全相等的流水线</h4><ul>
+<li>各段时间不等的流水线及其时空图</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114736473.png"  alt="image-20240710114736473"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686495930961.png"  alt="1686495930961"></p>
+<h4 id="流水线瓶颈问题"><a href="#流水线瓶颈问题" class="headerlink" title="流水线瓶颈问题"></a><strong>流水线瓶颈问题</strong></h4><p>解决流水线瓶颈问题的常用方法</p>
+<ul>
+<li><p>细分瓶颈段<br>把流水线中的<strong>瓶颈段切分</strong>为几个独立的功能段，从而使流水线各段的处理时间都相等</p>
+</li>
+<li><p>重复设置瓶颈段<br>将处理时间较长的段重复设置，假设其他段处理时间为 Δ t ，瓶颈段处理时间为 n Δ t ，则设置n个</p>
+</li>
+<li><p>缺点：控制逻辑比较复杂，所需的硬件增加了。</p>
+</li>
+</ul>
+<h3 id="流水线的加速比"><a href="#流水线的加速比" class="headerlink" title="流水线的加速比"></a>流水线的加速比</h3><p>加速比：完成同样一批任务，不使用流水线所用的时间与使用流水线所用的时间之比。</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114638198.png"  alt="image-20240710114638198"></p>
+<h4 id="流水线各段时间相等"><a href="#流水线各段时间相等" class="headerlink" title="流水线各段时间相等"></a>流水线各段时间相等</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686497103160.png"  alt="1686497103160"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114629174.png"  alt="image-20240710114629174"></p>
+<h4 id="流水线的各段时间不完全相等时"><a href="#流水线的各段时间不完全相等时" class="headerlink" title="流水线的各段时间不完全相等时"></a>流水线的各段时间不完全相等时</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114618899.png"  alt="image-20240710114618899"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686496851821.png"  alt="1686496851821"></p>
+<h3 id="流水线的效率"><a href="#流水线的效率" class="headerlink" title="流水线的效率"></a>流水线的效率</h3><p>流水线的效率：<strong>流水线中的&#x3D;&#x3D;设备实际使用时间&#x3D;&#x3D;与整个运行时间的比值</strong>，即流水线设备的利用率。</p>
+<p>由于流水线有通过时间和排空时间，所以在连续完成n个任务的时间内，各段并不是满负荷地工作。</p>
+<blockquote>
+<p>不是这个勾八到底在说什么东西</p>
+</blockquote>
+<h4 id="各段时间相等"><a href="#各段时间相等" class="headerlink" title="各段时间相等"></a>各段时间相等</h4><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114604922.png"  alt="image-20240710114604922"></p>
+<p><strong>可以写成这个结论就很能理解，上面这个两个推导什么鬼</strong></p>
+<p>&#x3D;&#x3D;第二步推导的意思是：？？？？？？？&#x3D;&#x3D;</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686498505467.png"  alt="1686498505467"></p>
+<blockquote>
+<p>当我们考虑一个具有等段时间的流水线时，可以使用流水线的效率来评估其性能。流水线的效率是指在给定时间内有多少个时钟周期被用于执行实际的指令。</p>
+<p>在一个等段时间的流水线中，</p>
+<p>假设流水线有n个阶段（或段），每个阶段的时钟周期为T。在每个时钟周期内，每个阶段都会执行一个指令的部分工作。</p>
+<p>流水线的效率可以通过以下公式计算：</p>
+<p>效率 &#x3D; 有效的时钟周期 &#x2F; 总的时钟周期</p>
+<p>有效的时钟周期是指流水线中实际执行指令的时钟周期数量。总的时钟周期是指在给定时间内的总时钟周期数量，可以表示为执行的指令数乘以每个指令的阶段数。</p>
+<p>具体计算流水线的效率的步骤如下：</p>
+<ol>
+<li>确定流水线中的阶段数n。</li>
+<li>确定每个阶段的时钟周期数T。</li>
+<li>计算总的时钟周期数量，即执行的指令数乘以每个指令的阶段数：总时钟周期 &#x3D; 指令数 × n。</li>
+<li>计算有效的时钟周期数量，即流水线中实际执行指令的时钟周期数。</li>
+<li>使用公式计算流水线的效率：效率 &#x3D; 有效的时钟周期 &#x2F; 总的时钟周期。</li>
+</ol>
+<p>请注意，这是一个理想情况下的计算，假设没有流水线的冲突和延迟等因素。在实际情况下，流水线效率可能会受到许多因素的影响，如流水线冒险、数据相关性、分支预测等。</p>
+<p>通过计算流水线的效率，我们可以评估流水线的性能，并通过优化流水线的设计和处理冲突来提高效率，以达到更高的指令吞吐量和性能。</p>
+</blockquote>
+<h3 id="流水线设计中的若干问题"><a href="#流水线设计中的若干问题" class="headerlink" title="流水线设计中的若干问题"></a>流水线设计中的若干问题</h3><ol>
+<li><p>瓶颈问题</p>
+<p> 理想情况下，流水线在工作时，其中的任务是同步地每一个时钟周期往前流动一段。<br> 当流水线各段不均匀时，机器的时钟周期取决于瓶颈段的延迟时间。<br> 在设计流水线时，要尽可能使各段时间相等。</p>
+</li>
+<li><p><strong>流水线的额外开销</strong></p>
+<ul>
+<li><p>流水寄存器延迟<br>需要建立时间和传输延迟<br>建立时间：在触发写操作的时钟信号到达之前，寄存器输入必须保持稳定的时间。<br>传输延迟：时钟信号到达后到寄存器输出可用的时间。</p>
+</li>
+<li><p>时钟偏移开销<br>流水线中，时钟到达各流水寄存器的最大差值时间。（时钟到达各流水寄存器的时间不是完全相同）</p>
+</li>
+</ul>
+<p> ⚠️<strong>几个关键问题</strong></p>
+<ul>
+<li>流水线并不能减少（而且一般是增加）单条指令的执行时间，但却能提高吞吐率。</li>
+<li>增加流水线的深度（段数）可以提高流水线的性能。</li>
+<li>流水线的深度受限于流水线的额外开销。</li>
+<li>当时钟周期小到与额外开销相同时，流水已没意义。因为这时在每一个时钟周期中已没有时间来做有用的工作。</li>
+</ul>
+</li>
+</ol>
+<p>冲突问题</p>
+<p>流水线设计中要解决的重要问题之一。 </p>
+<h2 id="相关题型：从时空图求流水线的效率"><a href="#相关题型：从时空图求流水线的效率" class="headerlink" title="相关题型：从时空图求流水线的效率"></a>相关题型：从时空图求流水线的效率</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686499555549.png"  alt="1686499555549"></p>
+<blockquote>
+<p>61页的公式07</p>
+</blockquote>
+<h2 id="非线性流水线的调度"><a href="#非线性流水线的调度" class="headerlink" title="非线性流水线的调度*"></a>非线性流水线的调度*</h2><p>在非线性流水线中，<strong>存在反馈回路</strong>，当一个任务在流水线中流过时，可能要多次经过某些段。</p>
+<ul>
+<li><p>流水线调度要解决的问题：</p>
+<p>应按什么样的时间间隔向流水线输入新任务，才能既不发生功能段使用冲突，</p>
+<p>又能使流水线有较高的吞吐率和效率？</p>
+</li>
+</ul>
+<h3 id="3-3-1-单功能非线性流水线的最优调度"><a href="#3-3-1-单功能非线性流水线的最优调度" class="headerlink" title="3.3.1 单功能非线性流水线的最优调度"></a>3.3.1 单功能非线性流水线的最优调度</h3><p><strong>预约表</strong></p>
+<ul>
+<li>横向（向右）：时间（一般用时钟周期表示）</li>
+<li>纵向（向下）：流水线的段</li>
+</ul>
+<p>本教材的例子：一个5功能段非线性流水线预约表 P65</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114547174.png"  alt="image-20240710114547174"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114535761.png"  alt="image-20240710114535761"></p>
+<p>：一张预约表可能与多个流水线连接图相对应，可能有多种反馈回路对应一张预约表</p>
+<h2 id="流水线的相关与冲突"><a href="#流水线的相关与冲突" class="headerlink" title="流水线的相关与冲突"></a>流水线的相关与冲突</h2><p><strong>指令周期详解</strong></p>
+<p>一条指令的执行过程分为以下5个周期：</p>
+<blockquote>
+<p>1.取指令周期（IF）</p>
+<p> 以程序计数器PC中的内容作为地址，从存储器中取出指令并放入指令寄存器IR；<br> 同时PC值加4（假设每条指令占4个字节），指向顺序的下一条指令。</p>
+<p>2.指令译码&#x2F;读寄存器周期（ID）</p>
+<p> <strong>对指令进行译码</strong>，并用IR中的寄存器地址去访问通用寄存器组，读出所需的操作数。</p>
+<p>3.执行&#x2F;有效地址计算周期（EX）</p>
+<p> 不同指令所进行的操作不同：</p>
+<p> load和store指令：ALU把指令中所指定的寄存器的内容与偏移量相加，形成<strong>访存有效地址</strong>。</p>
+<p> 寄存器－寄存器ALU指令：ALU按照操作码指定的操作对从通用寄存器组中<strong>读出的数据进行运算</strong>。</p>
+<p> 寄存器－立即数ALU指令：ALU按照操作码指定的操作对从通用寄存器组中读出的操作数和指令中给出的立即数进行运算。</p>
+<p> 分支指令：ALU把<strong>指令中给出的偏移量与PC值相加，形成转移目标的地址</strong>。</p>
+<p>同时，对在前一个周期读出的操作数进行判断，<strong>确定分支是否成功</strong>。</p>
+<p>4.存储器访问／分支完成周期（MEM）&#x2F;Memory</p>
+<p> &#x3D;&#x3D;<strong>该周期处理的指令只有load、store和分支指令。</strong>&#x3D;&#x3D;</p>
+<p> 其它类型的指令在此周期不做任何操作。</p>
+<p> load指令：用上一个周期计算出的有效地址从存储器中读出相应的数据；</p>
+<p> store指令：把指定的数据写入这个有效地址所指出的存储器单元。</p>
+<p> 分支指令：分支“成功”，就把转移目标地址送入PC。分支指令执行完成。</p>
+<p>5.写回周期（WB）</p>
+<p> ALU运算指令和load指令在这个周期把<strong>结果数据写入通用寄存器组</strong>。</p>
+<p> ALU运算指令：结果数据来自ALU。</p>
+<p> load指令：结果数据来自存储器。</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686503725725.png"  alt="1686503725725"></p>
+</blockquote>
+<p>在这个实现方案中：</p>
+<p>分支指令需要4个时钟周期（如果把分支指令的执行提前到ID周期，则只需要2个周期）；</p>
+<p>store指令需要4个周期；</p>
+<p>其它指令需要5个周期才能完成。</p>
+<p><strong>将上述实现方案修改为流水线实现：</strong></p>
+<ul>
+<li><p>每一个周期作为一个流水段；</p>
+</li>
+<li><p>在各段之间加上锁存器（流水寄存器）。</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114506684.png"  alt="image-20240710114506684"></p>
+<p>采用流水线方式实现时，应解决的问题</p>
+<p>1.要保证不会在同一时钟周期要求同一个功能段做两件不同的工作。</p>
+<pre><code>例如：不能要求ALU同时做有效地址计算和算术运算。
+</code></pre>
+<p>2.避免IF段的访存（取指令）与<strong>MEM段的访存（读&#x2F;写数据）</strong>发生冲突。</p>
+<pre><code>可以采用分离的指令存储器和数据存储器；
+一般采用分离的指令Cache和数据Cache。
+</code></pre>
+<p>3.ID段和WB段都要<strong>访问同一寄存器</strong>文件。</p>
+<pre><code>ID段：读、WB段：写
+
+解决对同一寄存器的访问冲突：
+</code></pre>
+<p>把写操作安排在时钟周期的前半拍完成，把读操作安排在后半拍完成。</p>
+<p>4.对PC的处理</p>
+<pre><code>流水线为了能够每个时钟周期启动一条新的指令，就必须在每个时钟周期进行PC值的加4操作
+</code></pre>
+<p>（默认一条指令长度为4字节），并保留新的PC值。</p>
+<p>这种操作必须在IF段完成（需设置一个专门的加法器），以便为取下一条指令做好准备。</p>
+<p>但分支指令也可能改变PC的值，而且是在MEM段进行，这会导致冲突。</p>
+</li>
+</ul>
+<h3 id="段流水线的两种描述方式"><a href="#段流水线的两种描述方式" class="headerlink" title="段流水线的两种描述方式"></a>段流水线的两种描述方式</h3><ul>
+<li>第一种描述（类似于时空图）</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686505108079.png"  alt="1686505108079"></p>
+<ul>
+<li>第二种描述（按时间错开的数据通路序列）</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114453884.png"  alt="image-20240710114453884"></p>
+<h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h3><p><strong>相关</strong></p>
+<p>相关：两条指令之间存在某种依赖关系。</p>
+<pre><code>如果两条指令相关，**则它们就有可能不能在流水线中重叠执行或者只能部分重叠执行**。
+</code></pre>
+<p><strong>3种类型</strong></p>
+<pre><code>数据相关（也称真数据相关）
+
+名相关
+
+控制相关
+</code></pre>
+<h4 id="数据相关"><a href="#数据相关" class="headerlink" title="数据相关"></a><strong>数据相关</strong></h4><p>对于两条指令i（在前，下同）和j（在后，下同），<strong>如果下述条件之一成立</strong>，则称指令j与指令i数据相关。</p>
+<pre><code>指令j使用指令i产生的结果，指令j与指令i数据相关；
+
+指令j与指令k数据相关，而指令k又与指令i数据相关。
+</code></pre>
+<blockquote>
+<p>数据相关具有传递性。</p>
+<p>数据相关反映了数据的流动关系</p>
+<p>当数据的流动是经过寄存器时，相关的检测比较直观和容易。</p>
+<p>当数据的流动是经过存储器时，检测比较复杂。</p>
+<p> 相同形式的地址其有效地址未必相同；</p>
+<p> 形式不同的地址其有效地址却可能相同。</p>
+</blockquote>
+<p>例：下面这一段代码存在数据相关。</p>
+<p>Loop:  L.D     F0，0（R1）		&#x2F;&#x2F; F0为数组元素</p>
+<pre><code>   ADD.D   F4，F0，F2		 // 加上F2中的值
+
+   S.D     F4，0（R1）		// 保存结果
+
+   DADDIU  R1，R1，－8		// 数组指针递减8个字节
+
+   BNE     R1，R2，Loop	 // 如果R1≠R2，则分支 
+</code></pre>
+<h4 id="名相关"><a href="#名相关" class="headerlink" title="名相关"></a>名相关</h4><p>指令所访问的寄存器或存储器单元的名称。</p>
+<p><strong>如果两条指令使用相同的名，但是它们之间并没有数据流动</strong>，则称这两条指令存在名相关。</p>
+<p>指令j与指令i之间的名相关又分为两种（j后进入）</p>
+<blockquote>
+<p>反相关：如果指令j写的名与指令i<strong>读的名相同</strong>，则称指令i和j发生了反相关。</p>
+<p>指令j写的名＝指令i读的名</p>
+<p>输出相：如果指令j和指令i<strong>写相同的名</strong>，则称指令i和j发生了输出相关。</p>
+<p>指令j写的名＝指令i写的名</p>
+</blockquote>
+<p>​    </p>
+<p>名相关的两条指令之间并没有数据的传送。</p>
+<p>因此，如果一条指令中的名改变了，并不影响另外一条指令的执行。</p>
+<p>换名技术</p>
+<pre><code>通过改变指令中操作数的名来消除名相关。
+对于寄存器操作数进行换名称为寄存器换名。
+既可以用编译器静态实现，也可以用硬件动态完成。
+</code></pre>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1686506144144.png"  alt="1686506144144"></p>
+<h4 id="控制相关"><a href="#控制相关" class="headerlink" title="控制相关"></a>控制相关</h4><p>控制相关是指由分支指令引起的相关它需要根据分支指令的执行结果来确定后面该执行哪个分支上的指令。<br>    为了保证程序应有的执行顺序，必须严格按控制相关确定的顺序执行。</p>
+<p>JMP 跳转可以引起全局相关</p>
+<p>示例：典型的“if-then”结构</p>
+<pre><code>if p1 与S1控制相关、if p2 与S2控制相关
+S与p1和p2均无关
+</code></pre>
+<p>控制相关带来了以下两个限制：</p>
+<pre><code>与一条分支指令控制相关的指令不能被移到该分支之前。否则这些指令就不受该分支控制了。
+    对于上述的例子，then 部分中的指令（如S1）不能移到if语句之前。
+
+如果一条指令与某分支指令不存在控制相关，就不能把该指令移到该分支之后。
+    对于上述的例子，不能把S移到if语句的then 部分中。
+</code></pre>
+<h3 id="流水线冲突"><a href="#流水线冲突" class="headerlink" title="流水线冲突"></a>流水线冲突</h3><p>流水线冲突是指对于具体的流水线来说，由于相关的存在，使得指令流中的下一条指令不能在指定的时钟周期执行。</p>
+<p>流水线冲突有3种类型：</p>
+<pre><code>结构冲突：因硬件资源满足不了指令重叠执行的要求而发生的冲突。
+数据冲突：当指令在流水线中重叠执行时，因需要用到前面指令的执行结果而发生的冲突。
+控制冲突：流水线遇到分支指令和其它会改变PC值的指令所引起的冲突。
+</code></pre>
+<p>流水线冲突带来的问题：</p>
+<pre><code>导致错误的执行结果。
+流水线可能会出现停顿，从而降低流水线的效率和实际的加速比。
+我们约定：当一条指令被暂停时，在该暂停指令之后流出的所有指令都要被暂停，而在该暂停指令之前流出的指令则继续进行（否则就永远无法消除冲突）。
+</code></pre>
+<h4 id="结构冲突"><a href="#结构冲突" class="headerlink" title="结构冲突"></a><strong>结构冲突</strong></h4><p>在流水线处理机中，为了能够使各种组合的指令都能顺利地重叠执行，需要对功能部件进行流水或重复设置资源。</p>
+<p>如果某种指令组合因为资源冲突而不能正常执行，则称该处理机有结构冲突。</p>
+<ul>
+<li><p>常见的导致结构冲突的原因：</p>
+<p>功能部件不是完全流水</p>
+<p>资源份数不够</p>
+</li>
+<li><p>举例：访存冲突</p>
+</li>
+</ul>
+<p>有些流水线处理机只有一个存储器，将数据和指令放在一起，访存指令会导致访存冲突。</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114436974.png"  alt="image-20240710114436974"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114428459.png"  alt="image-20240710114428459"></p>
+<ul>
+<li>解决方法Ⅱ： 设置相互独立的<code>指令存储器</code>和<code>数据存储器</code>、或设置相互独立的<code>指令Cache</code>和<code>数据Cache</code>。</li>
+</ul>
+<p>有时流水线设计者允许结构冲突的存在</p>
+<pre><code>主要原因：减少硬件成本
+如果把流水线中的所有功能单元完全流水化，或者重复设置足够份数，那么所花费的成本将相当高。
+</code></pre>
+<h4 id="数据冲突"><a href="#数据冲突" class="headerlink" title="数据冲突"></a><strong>数据冲突</strong></h4><p>当相关的指令靠得足够近时，它们在流水线中的重叠执行或者重新排序会改变指令读&#x2F;写操作数的顺序，使之不同于它们串行执行时的顺序，则发生了数据冲突。<br><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114416363.png"  alt="image-20240710114416363"></p>
+<p>根据指令读访问和写访问的顺序，可以将数据冲突分为3种类型。</p>
+<p>考虑两条指令i和j ，且i在j之前进入流水线，可能发生的数据冲突有：</p>
+<ol>
+<li><p>写后读冲突（RAW）</p>
+<pre><code>    在 i 写入之前，j 先去读。 j 读出的内容是错误的。
+    这是最常见的一种数据冲突，它对应于真数据相关。
+</code></pre>
+</li>
+<li><p>写后写冲突（WAW）</p>
+<p>在 i 写入之前，j 先写。最后写入的结果是i写入 的。错误！</p>
+<p>这种冲突对应于输出相关。</p>
+<p>写后写冲突仅发生在这样的流水线中：</p>
+<p>流水线中不只一个段可以进行写操作；</p>
+<p>指令被重新排序了。</p>
+</li>
+</ol>
+<p><strong>前面介绍的5段流水线不会发生写后写冲突。原因：只在WB段写寄存器</strong></p>
+<p>3.读后写冲突（WAR）</p>
+<pre><code>在 i 读之前，j 先写。i 读出的内容是错误的！
+
+由反相关引起。
+
+发生的情况
+
+    有些指令的写结果操作提前了，而且有些指令的读操作滞后了；
+
+    指令被重新排序了。
+</code></pre>
+<p>（这几种冲突的名字实际上是正确执行的顺序，冲突的含义是这一顺序被颠倒了）</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p><strong>1.通过定向技术减少数据冲突引起的停顿</strong></p>
+<p>定向技术也称为旁路或短路</p>
+<p>关键思想：</p>
+<p>在计算结果尚未出来之前，后面等待使用该结果的指令并不真正立即需要该计算结果，如果能够将该计算结果从其产生的地方直接送到其它指令需要它的地方，那么就可以避免停顿。</p>
+<p>解释如下：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114401484.png"  alt="image-20240710114401484"></p>
+<p>采用定向技术后的流水线数据通路前后对比</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114025166.png"  alt="image-20240710114025166"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710114241637.png"  alt="image-20240710114241637"></p>
+<p>定向的实现：</p>
+<p>EX段和MEM段之间的流水寄存器中保存的ALU运算结果总是回送到ALU的入口。</p>
+<p>当定向硬件检测到前一个ALU运算结果写入的寄存器就是当前ALU操作的源寄存器时，那么控制逻辑就选择定向的数据作为ALU的输入，而不采用从通用寄存器组读出的数据。</p>
+<p>结果数据不仅可以从某一功能部件的输出定向到其自身的输入，而且还可以定向到其它功能部件的输入。</p>
+<p>⚠️并不是所有的数据冲突都可以用定向技术来解决</p>
+<p>例如：无法将LD指令的结果定向到DADD指令</p>
+<h1 id="程序员的看得见与看不见"><a href="#程序员的看得见与看不见" class="headerlink" title="程序员的看得见与看不见"></a>程序员的看得见与看不见</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710113936254.png"  alt="image-20240710113936254"></p>
+<h1 id="CISC-RISC"><a href="#CISC-RISC" class="headerlink" title="CISC RISC"></a>CISC RISC</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240710113951066.png"  alt="image-20240710113951066"></p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/07/10/20240710-%E7%90%83%E6%A0%B9%E5%BC%93/"
+                                   title="20240710 球根弓"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240710 球根弓</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230609-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">20230609 计算机系统结构复习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cache"><span class="nav-number">2.</span> <span class="nav-text">cache</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cache-%E4%B8%89%E7%A7%8D%E6%98%A0%E5%B0%84"><span class="nav-number">2.2.</span> <span class="nav-text">cache 三种映射</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B"><span class="nav-number">3.</span> <span class="nav-text">改进</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%A2%9E%E5%8A%A0Cache%E5%9D%97%E7%9A%84%E5%A4%A7%E5%B0%8F"><span class="nav-number">3.1.</span> <span class="nav-text">3.2 增加Cache块的大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E5%A2%9E%E5%8A%A0Cache%E7%9A%84%E5%AE%B9%E9%87%8F"><span class="nav-number">3.2.</span> <span class="nav-text">3.3 增加Cache的容量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E6%8F%90%E9%AB%98%E7%9B%B8%E8%81%94%E5%BA%A6"><span class="nav-number">3.3.</span> <span class="nav-text">3.4 提高相联度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E4%BC%AA%E7%9B%B8%E8%81%94Cache"><span class="nav-number">3.4.</span> <span class="nav-text">3.5 伪相联Cache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%8D%E4%BD%8E%E4%B8%8D%E5%91%BD%E4%B8%AD%E7%8E%87"><span class="nav-number">3.5.</span> <span class="nav-text">降低不命中率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%8F%E5%B0%91%E4%B8%8D%E5%91%BD%E4%B8%AD%E5%BC%80%E9%94%80"><span class="nav-number">3.6.</span> <span class="nav-text">减少不命中开销</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%8F%E5%B0%91%E5%91%BD%E4%B8%AD%E6%97%B6%E9%97%B4"><span class="nav-number">3.7.</span> <span class="nav-text">减少命中时间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5"><span class="nav-number">4.</span> <span class="nav-text">5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-number">4.1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-number">4.2.</span> <span class="nav-text">2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">4.3.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4"><span class="nav-number">4.4.</span> <span class="nav-text">&#x3D;&#x3D;5.4&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5"><span class="nav-number">4.5.</span> <span class="nav-text">&#x3D;&#x3D;5.5&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6"><span class="nav-number">4.6.</span> <span class="nav-text">&#x3D;&#x3D;5.6&#x3D;&#x3D;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%92%8C%E6%94%B9%E8%BF%9B"><span class="nav-number">5.</span> <span class="nav-text">基本计算机体系结构和改进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91-%E5%B9%B6%E8%A1%8C-%E5%90%8C%E6%97%B6"><span class="nav-number">6.</span> <span class="nav-text">并发 并行 同时</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%98%E5%9C%A8%E6%B7%B7%E4%B9%B1"><span class="nav-number">6.1.</span> <span class="nav-text">为什么存在混乱</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1"><span class="nav-number">7.</span> <span class="nav-text">1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E8%AE%A1%E7%AE%97%E9%A2%98"><span class="nav-number">7.1.</span> <span class="nav-text">加速计算题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E8%AE%A1%E7%AE%97%E9%A2%98-%E5%B8%A6%E5%AE%BD"><span class="nav-number">7.2.</span> <span class="nav-text">加速计算题+带宽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E7%AD%89%E7%BA%A7"><span class="nav-number">7.3.</span> <span class="nav-text">两个等级</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-1"><span class="nav-number">8.</span> <span class="nav-text">2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F%E5%92%8C%E6%93%8D%E4%BD%9C%E6%95%B0%E4%BD%8D%E7%BD%AE%E5%85%B3%E7%B3%BB"><span class="nav-number">8.1.</span> <span class="nav-text">寻址方式和操作数位置关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%96%E6%8C%87%E4%BB%A4%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%BF%90%E4%BD%9C"><span class="nav-number">8.2.</span> <span class="nav-text">取指令基本的运作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-1"><span class="nav-number">9.</span> <span class="nav-text">3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%A6%82%E5%BF%B5-what"><span class="nav-number">9.1.</span> <span class="nav-text">流水线概念&#x2F;what</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E6%A0%87"><span class="nav-number">9.2.</span> <span class="nav-text">指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%9E%E5%90%90%E7%8E%87"><span class="nav-number">9.2.1.</span> <span class="nav-text">吞吐率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E5%9D%87%E7%9B%B8%E7%AD%89%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="nav-number">9.2.1.1.</span> <span class="nav-text">各段时间均相等的流水线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E4%B8%8D%E5%AE%8C%E5%85%A8%E7%9B%B8%E7%AD%89%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="nav-number">9.2.1.2.</span> <span class="nav-text">各段时间不完全相等的流水线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%93%B6%E9%A2%88%E9%97%AE%E9%A2%98"><span class="nav-number">9.2.1.3.</span> <span class="nav-text">流水线瓶颈问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%8A%A0%E9%80%9F%E6%AF%94"><span class="nav-number">9.2.2.</span> <span class="nav-text">流水线的加速比</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E7%9B%B8%E7%AD%89"><span class="nav-number">9.2.2.1.</span> <span class="nav-text">流水线各段时间相等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E4%B8%8D%E5%AE%8C%E5%85%A8%E7%9B%B8%E7%AD%89%E6%97%B6"><span class="nav-number">9.2.2.2.</span> <span class="nav-text">流水线的各段时间不完全相等时</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E6%95%88%E7%8E%87"><span class="nav-number">9.2.3.</span> <span class="nav-text">流水线的效率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E7%9B%B8%E7%AD%89"><span class="nav-number">9.2.3.1.</span> <span class="nav-text">各段时间相等</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E8%8B%A5%E5%B9%B2%E9%97%AE%E9%A2%98"><span class="nav-number">9.2.4.</span> <span class="nav-text">流水线设计中的若干问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E9%A2%98%E5%9E%8B%EF%BC%9A%E4%BB%8E%E6%97%B6%E7%A9%BA%E5%9B%BE%E6%B1%82%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E6%95%88%E7%8E%87"><span class="nav-number">9.3.</span> <span class="nav-text">相关题型：从时空图求流水线的效率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E8%B0%83%E5%BA%A6"><span class="nav-number">9.4.</span> <span class="nav-text">非线性流水线的调度*</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-%E5%8D%95%E5%8A%9F%E8%83%BD%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E6%9C%80%E4%BC%98%E8%B0%83%E5%BA%A6"><span class="nav-number">9.4.1.</span> <span class="nav-text">3.3.1 单功能非线性流水线的最优调度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E4%B8%8E%E5%86%B2%E7%AA%81"><span class="nav-number">9.5.</span> <span class="nav-text">流水线的相关与冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%8F%8F%E8%BF%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">9.5.1.</span> <span class="nav-text">段流水线的两种描述方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3"><span class="nav-number">9.5.2.</span> <span class="nav-text">相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3"><span class="nav-number">9.5.2.1.</span> <span class="nav-text">数据相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8D%E7%9B%B8%E5%85%B3"><span class="nav-number">9.5.2.2.</span> <span class="nav-text">名相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E7%9B%B8%E5%85%B3"><span class="nav-number">9.5.2.3.</span> <span class="nav-text">控制相关</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%86%B2%E7%AA%81"><span class="nav-number">9.5.3.</span> <span class="nav-text">流水线冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%86%B2%E7%AA%81"><span class="nav-number">9.5.3.1.</span> <span class="nav-text">结构冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%86%B2%E7%AA%81"><span class="nav-number">9.5.3.2.</span> <span class="nav-text">数据冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">9.5.3.3.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E7%9C%8B%E5%BE%97%E8%A7%81%E4%B8%8E%E7%9C%8B%E4%B8%8D%E8%A7%81"><span class="nav-number">10.</span> <span class="nav-text">程序员的看得见与看不见</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CISC-RISC"><span class="nav-number">11.</span> <span class="nav-text">CISC RISC</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230609-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">20230609 计算机系统结构复习</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cache"><span class="nav-number">2.</span> <span class="nav-text">cache</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cache-%E4%B8%89%E7%A7%8D%E6%98%A0%E5%B0%84"><span class="nav-number">2.2.</span> <span class="nav-text">cache 三种映射</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B"><span class="nav-number">3.</span> <span class="nav-text">改进</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%A2%9E%E5%8A%A0Cache%E5%9D%97%E7%9A%84%E5%A4%A7%E5%B0%8F"><span class="nav-number">3.1.</span> <span class="nav-text">3.2 增加Cache块的大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E5%A2%9E%E5%8A%A0Cache%E7%9A%84%E5%AE%B9%E9%87%8F"><span class="nav-number">3.2.</span> <span class="nav-text">3.3 增加Cache的容量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E6%8F%90%E9%AB%98%E7%9B%B8%E8%81%94%E5%BA%A6"><span class="nav-number">3.3.</span> <span class="nav-text">3.4 提高相联度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E4%BC%AA%E7%9B%B8%E8%81%94Cache"><span class="nav-number">3.4.</span> <span class="nav-text">3.5 伪相联Cache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%8D%E4%BD%8E%E4%B8%8D%E5%91%BD%E4%B8%AD%E7%8E%87"><span class="nav-number">3.5.</span> <span class="nav-text">降低不命中率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%8F%E5%B0%91%E4%B8%8D%E5%91%BD%E4%B8%AD%E5%BC%80%E9%94%80"><span class="nav-number">3.6.</span> <span class="nav-text">减少不命中开销</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%8F%E5%B0%91%E5%91%BD%E4%B8%AD%E6%97%B6%E9%97%B4"><span class="nav-number">3.7.</span> <span class="nav-text">减少命中时间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5"><span class="nav-number">4.</span> <span class="nav-text">5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1"><span class="nav-number">4.1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2"><span class="nav-number">4.2.</span> <span class="nav-text">2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">4.3.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4"><span class="nav-number">4.4.</span> <span class="nav-text">&#x3D;&#x3D;5.4&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5"><span class="nav-number">4.5.</span> <span class="nav-text">&#x3D;&#x3D;5.5&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6"><span class="nav-number">4.6.</span> <span class="nav-text">&#x3D;&#x3D;5.6&#x3D;&#x3D;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%92%8C%E6%94%B9%E8%BF%9B"><span class="nav-number">5.</span> <span class="nav-text">基本计算机体系结构和改进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91-%E5%B9%B6%E8%A1%8C-%E5%90%8C%E6%97%B6"><span class="nav-number">6.</span> <span class="nav-text">并发 并行 同时</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%98%E5%9C%A8%E6%B7%B7%E4%B9%B1"><span class="nav-number">6.1.</span> <span class="nav-text">为什么存在混乱</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1"><span class="nav-number">7.</span> <span class="nav-text">1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E8%AE%A1%E7%AE%97%E9%A2%98"><span class="nav-number">7.1.</span> <span class="nav-text">加速计算题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E8%AE%A1%E7%AE%97%E9%A2%98-%E5%B8%A6%E5%AE%BD"><span class="nav-number">7.2.</span> <span class="nav-text">加速计算题+带宽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E7%AD%89%E7%BA%A7"><span class="nav-number">7.3.</span> <span class="nav-text">两个等级</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-1"><span class="nav-number">8.</span> <span class="nav-text">2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F%E5%92%8C%E6%93%8D%E4%BD%9C%E6%95%B0%E4%BD%8D%E7%BD%AE%E5%85%B3%E7%B3%BB"><span class="nav-number">8.1.</span> <span class="nav-text">寻址方式和操作数位置关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%96%E6%8C%87%E4%BB%A4%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%BF%90%E4%BD%9C"><span class="nav-number">8.2.</span> <span class="nav-text">取指令基本的运作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-1"><span class="nav-number">9.</span> <span class="nav-text">3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%A6%82%E5%BF%B5-what"><span class="nav-number">9.1.</span> <span class="nav-text">流水线概念&#x2F;what</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E6%A0%87"><span class="nav-number">9.2.</span> <span class="nav-text">指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%9E%E5%90%90%E7%8E%87"><span class="nav-number">9.2.1.</span> <span class="nav-text">吞吐率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E5%9D%87%E7%9B%B8%E7%AD%89%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="nav-number">9.2.1.1.</span> <span class="nav-text">各段时间均相等的流水线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E4%B8%8D%E5%AE%8C%E5%85%A8%E7%9B%B8%E7%AD%89%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="nav-number">9.2.1.2.</span> <span class="nav-text">各段时间不完全相等的流水线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%93%B6%E9%A2%88%E9%97%AE%E9%A2%98"><span class="nav-number">9.2.1.3.</span> <span class="nav-text">流水线瓶颈问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%8A%A0%E9%80%9F%E6%AF%94"><span class="nav-number">9.2.2.</span> <span class="nav-text">流水线的加速比</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E7%9B%B8%E7%AD%89"><span class="nav-number">9.2.2.1.</span> <span class="nav-text">流水线各段时间相等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E4%B8%8D%E5%AE%8C%E5%85%A8%E7%9B%B8%E7%AD%89%E6%97%B6"><span class="nav-number">9.2.2.2.</span> <span class="nav-text">流水线的各段时间不完全相等时</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E6%95%88%E7%8E%87"><span class="nav-number">9.2.3.</span> <span class="nav-text">流水线的效率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%84%E6%AE%B5%E6%97%B6%E9%97%B4%E7%9B%B8%E7%AD%89"><span class="nav-number">9.2.3.1.</span> <span class="nav-text">各段时间相等</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E8%8B%A5%E5%B9%B2%E9%97%AE%E9%A2%98"><span class="nav-number">9.2.4.</span> <span class="nav-text">流水线设计中的若干问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E9%A2%98%E5%9E%8B%EF%BC%9A%E4%BB%8E%E6%97%B6%E7%A9%BA%E5%9B%BE%E6%B1%82%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E6%95%88%E7%8E%87"><span class="nav-number">9.3.</span> <span class="nav-text">相关题型：从时空图求流水线的效率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E8%B0%83%E5%BA%A6"><span class="nav-number">9.4.</span> <span class="nav-text">非线性流水线的调度*</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-%E5%8D%95%E5%8A%9F%E8%83%BD%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E6%9C%80%E4%BC%98%E8%B0%83%E5%BA%A6"><span class="nav-number">9.4.1.</span> <span class="nav-text">3.3.1 单功能非线性流水线的最优调度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E7%9B%B8%E5%85%B3%E4%B8%8E%E5%86%B2%E7%AA%81"><span class="nav-number">9.5.</span> <span class="nav-text">流水线的相关与冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%8F%8F%E8%BF%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">9.5.1.</span> <span class="nav-text">段流水线的两种描述方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3"><span class="nav-number">9.5.2.</span> <span class="nav-text">相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%9B%B8%E5%85%B3"><span class="nav-number">9.5.2.1.</span> <span class="nav-text">数据相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8D%E7%9B%B8%E5%85%B3"><span class="nav-number">9.5.2.2.</span> <span class="nav-text">名相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E7%9B%B8%E5%85%B3"><span class="nav-number">9.5.2.3.</span> <span class="nav-text">控制相关</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%86%B2%E7%AA%81"><span class="nav-number">9.5.3.</span> <span class="nav-text">流水线冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%86%B2%E7%AA%81"><span class="nav-number">9.5.3.1.</span> <span class="nav-text">结构冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%86%B2%E7%AA%81"><span class="nav-number">9.5.3.2.</span> <span class="nav-text">数据冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">9.5.3.3.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E7%9C%8B%E5%BE%97%E8%A7%81%E4%B8%8E%E7%9C%8B%E4%B8%8D%E8%A7%81"><span class="nav-number">10.</span> <span class="nav-text">程序员的看得见与看不见</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CISC-RISC"><span class="nav-number">11.</span> <span class="nav-text">CISC RISC</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
