@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20240717 基于QT的电子海图的实现与开发 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"你过于安静勇敢，我忘了你正在承受苦痛","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                HOME
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >HOME</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >CATEGORIES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20240717 基于QT的电子海图的实现与开发
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv5</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-07-17 11:11:07</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Fri Jul 19 2024 10:17:33 GMT+0800">2024-07-19 10:17:33</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="基本开发思路"><a href="#基本开发思路" class="headerlink" title="基本开发思路"></a>基本开发思路</h1><h1 id="基本概念了解"><a href="#基本概念了解" class="headerlink" title="基本概念了解"></a>基本概念了解</h1><p> 电子海图( Electronic Chart，EC)和电子海图显示与信息系统( ElectronicChart Display and System， ECDIS)及电子海图系统( Electronic Chart System，ECS)是二十世纪七十年代开始的一门新技术，兴起于二十世纪九十年代。术语“电子海图”按照国际权威定义口，它是“用以描述能够显示海图信息的数据，软件和电子的系统，是一个含义广泛的术语”。因此<strong>电子海图从狭义上解释就是以数字形式出现的海图</strong>，即数字海图，而在广义上理解，则可认为是对所有有关电子海图的生产或应用、软件或硬件的技术泛称。</p>
+<blockquote>
+<p>EC 电子海图</p>
+<p>ECDIS 电子海图显示与信息系统</p>
+<p>ECS 电子海图系统</p>
+<p>以数字形式出现的海图</p>
+</blockquote>
+<p>电子海图技术同地理信息系统( Geographic Information System，<strong>GIS</strong>)技术一样，是随着当代电子计算机技术的飞速发展而发展起来的。使用计算机可以快速生产数字化形式的海图一电子海图。</p>
+<p>相对于静态的纸质海图，电子海图的显示有着其无法比拟的优点。</p>
+<p>例如，可以迅速转换比例尺，以便详细观察航行中的关键航段，可以放大缩小感兴趣区域，可以快速更换海图，包括更多的使用简单、操作容易的地理和文字信息，将海图信息与接收到的导航信息以及雷达信息等相叠加，在一个屏幕上显示，从而非常直观地x为船舶的安全航行提供有力的保障。电子海图结合卫星定位设备、水声设备和无线电通信设备，组成电子海图显示与信息系统或电子海图系统，提高海上安全航行的自动化水平。可以讲，电子海图技术的出现，引起了传统的海洋测绘领域和古老的航海领域的一场翻天覆地的技术革命。</p>
+<blockquote>
+<p>迅速转换比例尺</p>
+<p>放大缩小感兴趣区域</p>
+<p>更换海图</p>
+<p>将海图与接收到导航信息与雷达信息相叠加</p>
+</blockquote>
+<p>电子海图信息系统( Electronic Chart Display and information SystemS)，属于海图显示系统，是专门用来显示官方电子导航海图(ENC)的。ENC是唯一可以合法地用于 ECDIS上的电子海图数据库的。 IMO ECDIS性能标准中指出，ECDIS是一个导航信息系统，这个系统具有充分的后备措施，可以被接受为符合1974年SLAS公约中V&#x2F;20条规则要求的最新海图。它可以有选择地显示系统电子导航海图(SENC)中的信息以及从导航传感器获得的位置信息以帮助航海人员进行航路设计，其组成部分为下图所示</p>
+<blockquote>
+<p>ENC是一个矢量电子海图</p>
+<p>ENC是唯一可以合法地用于 ECDIS上的电子海图数据库的？</p>
+<p>ENC有自己的格式要求和标准</p>
+<p>ENC包括安全航行需要的全部海图信息</p>
+<p>也可以包含纸海图上没有的而对安全航行认为是需要的补充信息</p>
+<p>ENC电子导航海图是采用<strong>矢量化</strong>的方式制作的，所以也叫矢量海图；</p>
+<p>SENC是电子海图的一个数据库</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191017576.png"  alt="image-20240719101727521"></p>
+<p>其中，ENC为电子导航海图( Electronic Navigational Chart)，它是指在内容、结构和格式上均已标准化，专为 ECIDS使用而由政府授权的海道测量局(HO 发行的数据库。ENC包括安全航行需要的全部海图信息，也可以包含纸海图上没有的而对安全航行认为是需要的补充信息。</p>
+<p>电子导航海图是采用矢量化的方式制作的，所以也叫矢量海图；</p>
+<p><strong>SENC为系统电子导航海图( System Electronic Navigational Chart)，它是 ECDIS内部的一个数据库。</strong></p>
+<p><strong>这个数据库是为了恰当使用ENC而由 ECDIS将其进行格式转换，同时通过恰当方法改正ENC，并且由航海人员注入其他航线信息，包括航线设计使用的点、线和区域以及 ECDIS图库中的任何符号和文本注记信息。</strong></p>
+<p><strong>SENC供 ECDIS显示存取以及完成其他航海功能，且是ECIDS的一个组成部分，它还包含来自其他信息源的信息，如航海通告等。</strong></p>
+<p><strong>SENC 是 ECDIS中直接读取和显示的数据库，它是由 ECDIS对ENC进行格式转换而得到的，目的是为了快速显示ENC。</strong></p>
+<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/l329831342/article/details/106172736" >https://blog.csdn.net/l329831342/article/details/106172736<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="天津大学电子海图开源引擎"><a href="#天津大学电子海图开源引擎" class="headerlink" title="天津大学电子海图开源引擎"></a>天津大学电子海图开源引擎</h1><p><a class="link"   target="_blank" rel="noopener" href="http://aimip.tju.edu.cn/dzhtkj.htm" >http://aimip.tju.edu.cn/dzhtkj.htm<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>这货怎么下载了之后打开之后闪退啊</p>
+<p>……</p>
+<p>自己配环境看看能不能加载出来</p>
+</blockquote>
+<p>用vs开了一个x64的</p>
+<p>包美的</p>
+<p>可惜是C#</p>
+<p>后面再看看别人的解析和展示思路好了</p>
+<h1 id="读取海图QTdemo"><a href="#读取海图QTdemo" class="headerlink" title="读取海图QTdemo"></a>读取海图QTdemo</h1><p>几个思路</p>
+<p><strong>GDAL库</strong></p>
+<p><strong>用别人的显示引擎</strong></p>
+<blockquote>
+<p>弄了一天GDAL库</p>
+<p>内存一直在崩溃</p>
+<p>我寻思这个海图那么大</p>
+<p>佳哥说别太牛 怎么一个人还能把引擎给写出来完了</p>
+<p>这个引擎也是人家实验室开发了老久开源了</p>
+<hr>
+<blockquote>
+<p>所以说为什么不能用GDAL库？</p>
+</blockquote>
+</blockquote>
+<p><strong>QGIS库来进行显示</strong></p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/07/17/20240717-makefile-%E6%9E%84%E5%BB%BA%E8%A7%84%E5%88%99/"
+                                   title="20240717 makefile 构建规则"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240717 makefile 构建规则</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/07/17/20240717-qt%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/"
+                                   title="20240717 qt串口通信"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240717 qt串口通信</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">基本开发思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%BA%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">基本概念了解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%A9%E6%B4%A5%E5%A4%A7%E5%AD%A6%E7%94%B5%E5%AD%90%E6%B5%B7%E5%9B%BE%E5%BC%80%E6%BA%90%E5%BC%95%E6%93%8E"><span class="nav-number">3.</span> <span class="nav-text">天津大学电子海图开源引擎</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E6%B5%B7%E5%9B%BEQTdemo"><span class="nav-number">4.</span> <span class="nav-text">读取海图QTdemo</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BC%80%E5%8F%91%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">基本开发思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%BA%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">基本概念了解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%A9%E6%B4%A5%E5%A4%A7%E5%AD%A6%E7%94%B5%E5%AD%90%E6%B5%B7%E5%9B%BE%E5%BC%80%E6%BA%90%E5%BC%95%E6%93%8E"><span class="nav-number">3.</span> <span class="nav-text">天津大学电子海图开源引擎</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E6%B5%B7%E5%9B%BEQTdemo"><span class="nav-number">4.</span> <span class="nav-text">读取海图QTdemo</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
