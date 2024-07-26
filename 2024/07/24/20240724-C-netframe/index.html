@@ -9,7 +9,7 @@
     
     <title>
         
-            20230128 ledcontrol |
+            20240724 C#&amp;&amp;netframe |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20230128 ledcontrol
+                        20240724 C#&amp;&amp;netframe
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2023-01-28 15:51:53</span>
+                <span class="datetime">2024-07-24 11:59:46</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Wed Jun 19 2024 15:53:24 GMT+0800">2024-06-19 15:53:24</span>
+                <span class="datetime" data-updated="Fri Jul 26 2024 12:15:18 GMT+0800">2024-07-26 12:15:18</span>
             </span>
         
 
@@ -230,85 +230,31 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="20230128-ledcontrol"><a href="#20230128-ledcontrol" class="headerlink" title="20230128 ledcontrol"></a>20230128 ledcontrol</h1><h1 id="例子三"><a href="#例子三" class="headerlink" title="例子三"></a>例子三</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;LedControl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> DIN = <span class="number">12</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> CS =  <span class="number">11</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> CLK = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">byte e[<span class="number">8</span>]=    &#123;<span class="number">0x7C</span>,<span class="number">0x7C</span>,<span class="number">0x60</span>,<span class="number">0x7C</span>,<span class="number">0x7C</span>,<span class="number">0x60</span>,<span class="number">0x7C</span>,<span class="number">0x7C</span>&#125;;  <span class="comment">//E</span></span><br><span class="line"></span><br><span class="line">byte d[<span class="number">8</span>]=    &#123;<span class="number">0x78</span>,<span class="number">0x7C</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x7C</span>,<span class="number">0x78</span>&#125;;  <span class="comment">//D</span></span><br><span class="line"></span><br><span class="line">byte u[<span class="number">8</span>]=    &#123;<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//U</span></span><br><span class="line"></span><br><span class="line">byte c[<span class="number">8</span>]=    &#123;<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x60</span>,<span class="number">0x60</span>,<span class="number">0x60</span>,<span class="number">0x60</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//C</span></span><br><span class="line"></span><br><span class="line">byte eight[<span class="number">8</span>]= &#123;<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//8</span></span><br><span class="line"></span><br><span class="line">byte s[<span class="number">8</span>]=    &#123;<span class="number">0x7E</span>,<span class="number">0x7C</span>,<span class="number">0x60</span>,<span class="number">0x7C</span>,<span class="number">0x3E</span>,<span class="number">0x06</span>,<span class="number">0x3E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//S</span></span><br><span class="line"></span><br><span class="line">byte dot[<span class="number">8</span>]=  &#123;<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x18</span>,<span class="number">0x18</span>&#125;;  <span class="comment">//.</span></span><br><span class="line"></span><br><span class="line">byte o[<span class="number">8</span>]=    &#123;<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//O</span></span><br><span class="line"></span><br><span class="line">byte m[<span class="number">8</span>]=    &#123;<span class="number">0xE7</span>,<span class="number">0xFF</span>,<span class="number">0xFF</span>,<span class="number">0xDB</span>,<span class="number">0xDB</span>,<span class="number">0xDB</span>,<span class="number">0xC3</span>,<span class="number">0xC3</span>&#125;;  <span class="comment">//M</span></span><br><span class="line"></span><br><span class="line">LedControl lc=<span class="built_in">LedControl</span>(DIN,CLK,CS,<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">lc.<span class="built_in">shutdown</span>(<span class="number">0</span>,<span class="literal">false</span>);    <span class="comment">//启动时，MAX72XX处于省电模式</span></span><br><span class="line"></span><br><span class="line">lc.<span class="built_in">setIntensity</span>(<span class="number">0</span>,<span class="number">8</span>);    <span class="comment">//将亮度设置为最大值</span></span><br><span class="line"></span><br><span class="line">lc.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);      <span class="comment">//清除显示</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">  byte smile[<span class="number">8</span>]=  &#123;<span class="number">0x3C</span>,<span class="number">0x42</span>,<span class="number">0xA5</span>,<span class="number">0x81</span>,<span class="number">0xA5</span>,<span class="number">0x99</span>,<span class="number">0x42</span>,<span class="number">0x3C</span>&#125;;<span class="comment">//笑脸</span></span><br><span class="line"></span><br><span class="line">  byte neutral[<span class="number">8</span>]= &#123;<span class="number">0x3C</span>,<span class="number">0x42</span>,<span class="number">0xA5</span>,<span class="number">0x81</span>,<span class="number">0xBD</span>,<span class="number">0x81</span>,<span class="number">0x42</span>,<span class="number">0x3C</span>&#125;;<span class="comment">//标准脸  </span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">printByte</span>(eight);<span class="comment">//显示8</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">1000</span>);<span class="comment">//延时1秒</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">printByte</span>(neutral);<span class="comment">//显示标准脸</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//点阵显示函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printByte</span><span class="params">(byte character [])</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">8</span>;i++)</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">  lc.<span class="built_in">setRow</span>(<span class="number">0</span>,i,character[i]);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="例子一"><a href="#例子一" class="headerlink" title="例子一"></a>例子一</h1><p>#include “LedControl.h”</p>
-<p>LedControl lc&#x3D;LedControl(12,11,10,1);</p>
-<p>void setup() {</p>
-<p>  &#x2F;*</p>
-<p>   MAX72XX默认是节能模式，需要将其唤醒</p>
-<p>   *&#x2F;</p>
-<p>  lc.shutdown(0,false);</p>
-<p>  &#x2F;* 设置亮度 *&#x2F;</p>
-<p>  lc.setIntensity(0,8);</p>
-<p>  &#x2F;* 清空 *&#x2F;</p>
-<p>  lc.clearDisplay(0);</p>
-<p>}</p>
-<p>void loop()</p>
-<p>{</p>
-<p> lc.setLed(0,2,7,true);</p>
-<p>&#x2F;&#x2F;点亮第三行第八列的LED灯</p>
-<p>lc.setLed(0,0,1,true);</p>
-<p>&#x2F;&#x2F;点亮第一行第二列的LED灯</p>
-<p>delay(500);</p>
-<p>lc.setLed(0,2,7,false);</p>
-<p>lc.setLed(0,0,1,false);</p>
-<p>delay(500);</p>
-<p>}</p>
-<p>解释：</p>
-<p>LedControl lc&#x3D;LedControl(12,11,10,1);</p>
-<p>该行代码声明了一个LEDControl类型的一个实例  Ic  ，占用Arduino12,11,10三个数字针脚，任意三个数字针脚都可以，但是建议不要使用0，1,13号针脚。</p>
-<p>最后的参数1，表示的意思是只使用了一块LED矩阵，如果是多块LED矩阵连在一起的画需要修改该参数。</p>
-<p><strong>另外一个重要的函数是</strong></p>
-<p>setRow(addr,row,value)</p>
-<p>三个参数的意思分别是：</p>
-<p>addr:LED矩阵的地址，第一块地址为0</p>
-<p>row：LED矩阵的行</p>
-<p>value:在一行LED中显示的值，使用byte数据类型（0表示LED灭，1代表LED亮），如</p>
-<p>byte数据B11111110,表示第一至第七列的LED亮，第八列的LED灭</p>
-<h1 id="例子二"><a href="#例子二" class="headerlink" title="例子二"></a>例子二</h1><p>#include “LedControl.h”</p>
-<p>LedControl lc&#x3D;LedControl(12,11,10,1);</p>
-<p>unsigned long delaytime&#x3D;100;</p>
-<p>void setup() {</p>
-<p>  &#x2F;*</p>
-<p>   MAX72XX默认是节能模式，需要将其唤醒</p>
-<p>   *&#x2F;</p>
-<p>  lc.shutdown(0,false);</p>
-<p>  &#x2F;* 设置亮度 *&#x2F;</p>
-<p>  lc.setIntensity(0,8);</p>
-<p>  &#x2F;* 清空 *&#x2F;</p>
-<p>  lc.clearDisplay(0);</p>
-<p>}</p>
-<p>void loop()</p>
-<p>{</p>
-<p>lc.setRow(0,0,B01111110);</p>
-<p>delay(100);</p>
-<p>lc.setRow(0,1,B01111110);</p>
-<p>delay(100);</p>
-<p>lc.setRow(0,2,B01111110);</p>
-<p>delay(100);</p>
-<p>lc.setRow(0,3,B01111110);</p>
-<p>delay(100);</p>
-<p>lc.setRow(0,4,B01111110);</p>
-<p>delay(100);</p>
-<p>lc.setRow(0,5,B01111110);</p>
-<p>delay(100);</p>
-<p>lc.setRow(0,6,B01111110);</p>
-<p>delay(100);</p>
-<p>lc.setRow(0,7,B01111110);</p>
-<p>delay(100);</p>
-<p>lc.setRow(0,0,0);</p>
-<p>lc.setRow(0,1,0);</p>
-<p>lc.setRow(0,2,0);</p>
-<p>lc.setRow(0,3,0);</p>
-<p>lc.setRow(0,4,0);</p>
-<p>lc.setRow(0,5,0);</p>
-<p>lc.setRow(0,6,0);</p>
-<p>lc.setRow(0,7,0);</p>
-<p>delay(100);</p>
-<p>}</p>
+                    <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>要解析别人的源码看看，我们自己的咋设计</p>
+<h1 id="学习链接"><a href="#学习链接" class="headerlink" title="学习链接"></a>学习链接</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hx4y1G7C6?p=3&vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV1hx4y1G7C6?p=3&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h1><ul>
+<li>20240722-20240726 这个周至少得把项目基本的框架过一遍吧</li>
+</ul>
+<h1 id="netframe项目文件结构"><a href="#netframe项目文件结构" class="headerlink" title="netframe项目文件结构"></a>netframe项目文件结构</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407241243649.png"  alt="image-20240724124300528"></p>
+<blockquote>
+<p>上面的 using 类似于包的设置</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407241243026.png"  alt="image-20240724124326978"></p>
+<blockquote>
+<p>1.注意左侧使用using的包和右侧文件夹的对应关系</p>
+<p>2.一个文件夹里可以有很多个cs文件&#x2F;类文件</p>
+<p>3.同一个文件夹里的文件之间的类可以相互调用，不同文件夹（比如Common文件夹里的类和Model文件夹里的类，如果不同的话就需要using引入包之后才能调用类）</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407241329549.png"  alt="image-20240724132922479"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407241320137.png"  alt="image-20240724132005093"></p>
+<hr>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407251057349.png"  alt="image-20240725105726282"></p>
+<h1 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407241332483.png"  alt="image-20240724133225427"></p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407241333288.png"  alt="image-20240724133306245"></p>
+<h1 id="类型转化"><a href="#类型转化" class="headerlink" title="类型转化"></a>类型转化</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407250935613.png"  alt="image-20240725093501379"></p>
+<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407250941664.png"  alt="image-20240725094153627"></p>
+<h1 id="out-ref"><a href="#out-ref" class="headerlink" title="out ref"></a>out ref</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407251031723.png"  alt="image-20240725103138685"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407251032649.png"  alt="image-20240725103224619"></p>
 
                 </div>
                 
@@ -327,31 +273,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/02/22/20230222-%E7%94%B5%E5%AD%90%E6%B2%99%E6%BC%8F/"
-                                   title="20230222 电子沙漏"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20230222 电子沙漏</span>
-                                        <span class="post-nav-item">Prev posts</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2022/12/23/20221223-arduino/"
-                                   title="20221223 arduino"
+                                   href="/2024/07/19/20240719-picgo%E4%B8%8A%E4%BC%A0%E5%A4%B1%E8%B4%A5%E6%8E%92%E6%9F%A5/"
+                                   title="20240719 picgo上传失败排查"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20221223 arduino</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240719 picgo上传失败排查</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -461,7 +391,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230128-ledcontrol"><span class="nav-number">1.</span> <span class="nav-text">20230128 ledcontrol</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%89"><span class="nav-number">2.</span> <span class="nav-text">例子三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text">例子一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text">例子二</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5"><span class="nav-number">2.</span> <span class="nav-text">学习链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4"><span class="nav-number">3.</span> <span class="nav-text">时间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#netframe%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="nav-number">4.</span> <span class="nav-text">netframe项目文件结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#namespace"><span class="nav-number">5.</span> <span class="nav-text">namespace</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">6.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">类型转化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">8.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#out-ref"><span class="nav-number">9.</span> <span class="nav-text">out ref</span></a></li></ol>
     </div>
 </div>
 
@@ -614,7 +544,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230128-ledcontrol"><span class="nav-number">1.</span> <span class="nav-text">20230128 ledcontrol</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%89"><span class="nav-number">2.</span> <span class="nav-text">例子三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text">例子一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text">例子二</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5"><span class="nav-number">2.</span> <span class="nav-text">学习链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4"><span class="nav-number">3.</span> <span class="nav-text">时间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#netframe%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="nav-number">4.</span> <span class="nav-text">netframe项目文件结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#namespace"><span class="nav-number">5.</span> <span class="nav-text">namespace</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">6.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">类型转化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">8.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#out-ref"><span class="nav-number">9.</span> <span class="nav-text">out ref</span></a></li></ol>
     </div>
 </div>
 
