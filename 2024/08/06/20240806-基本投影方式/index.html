@@ -9,7 +9,7 @@
     
     <title>
         
-            20240805 OGR中图层 要素 属性的关系 |
+            20240806 基本投影方式 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240805 OGR中图层 要素 属性的关系
+                        20240806 基本投影方式
                     </div>
                 
 
@@ -196,24 +196,15 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-08-05 15:45:04</span>
+                <span class="datetime">2024-08-06 14:33:18</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Mon Aug 05 2024 16:10:10 GMT+0800">2024-08-05 16:10:10</span>
+                <span class="datetime" data-updated="Tue Aug 06 2024 14:42:32 GMT+0800">2024-08-06 14:42:32</span>
             </span>
         
 
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/OGR/">OGR</a></li>
-                        
-                    
-                </ul>
-            </span>
         
 
         
@@ -239,101 +230,46 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="图层-要素-物标-属性-的关系是什么在OGR中"><a href="#图层-要素-物标-属性-的关系是什么在OGR中" class="headerlink" title="图层 要素&#x2F;(物标) 属性 的关系是什么在OGR中"></a>图层 要素&#x2F;(物标) 属性 的关系是什么在OGR中</h1><blockquote>
-<p>在地理信息系统（GIS）和空间数据库中，数据集中图层与物标的关系并不是固定的，可以根据具体应用需求和数据组织方式有所不同。以下是几种常见的图层与物标的对应关系：</p>
-<h3 id="一种物标一个图层"><a href="#一种物标一个图层" class="headerlink" title="一种物标一个图层"></a>一种物标一个图层</h3><p>这种方式最为常见，尤其是在矢量数据格式（如 Shapefile）中，每个图层只包含一种类型的地理要素。例如：</p>
-<ul>
-<li><strong>图层1</strong>：包含所有的道路（线要素）。</li>
-<li><strong>图层2</strong>：包含所有的建筑物（多边形要素）。</li>
-<li><strong>图层3</strong>：包含所有的基站地标（点要素）。</li>
-</ul>
-<p>这种方式的优点是结构清晰，每个图层只包含一种类型的要素，便于管理和分析。</p>
-<h3 id="多种物标一个图层"><a href="#多种物标一个图层" class="headerlink" title="多种物标一个图层"></a>多种物标一个图层</h3><p>在某些情况下，一个图层中可以包含多种类型的物标。这通常发生在以下情况中：</p>
-<ul>
-<li><strong>相同几何类型但不同类别</strong>：例如，一个图层包含所有的水体，包括河流、湖泊、海洋等，它们都是多边形要素，但属性中包含类别信息。</li>
-<li><strong>综合数据集</strong>：有时为了方便处理或展示，多个相关的物标会放在同一个图层中，例如，一个图层包含城市中所有的点状地标，如公交站、医院、学校等。</li>
-</ul>
-<h3 id="多几何类型一个图层"><a href="#多几何类型一个图层" class="headerlink" title="多几何类型一个图层"></a>多几何类型一个图层</h3><p>在一些 GIS 系统中，一个图层可能包含不同几何类型的要素（点、线、面）。这在数据格式允许的情况下可以简化数据管理，但可能会增加处理复杂度。例如，GeoPackage 和一些空间数据库（如 PostGIS）允许一个表（图层）包含不同类型的几何对象。</p>
+                    <h1 id="EPSG3857"><a href="#EPSG3857" class="headerlink" title="EPSG3857"></a>EPSG3857</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/E7868A/p/11460865.html" >https://www.cnblogs.com/E7868A/p/11460865.html<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32649321/article/details/125051832" >https://blog.csdn.net/qq_32649321/article/details/125051832<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>参考</p>
+<p>ArcGIS中地理坐标（EPSG4326）转投影坐标（EPSG 3857）：<br>参考：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/baoqian1993/article/details/51456771" >https://blog.csdn.net/baoqian1993/article/details/51456771<i class="fas fa-external-link-alt"></i></a></p>
+<p>投影转地理坐标：<br>参考：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40893164/article/details/121022817" >https://blog.csdn.net/weixin_40893164/article/details/121022817<i class="fas fa-external-link-alt"></i></a></p>
+<p>参考资料：<br>1.GIS坐标系转换(EPSG:4326与EPSG:3857相互转换)</p>
+<p>2.<a class="link"   target="_blank" rel="noopener" href="https://gis.stackexchange.com/questions/48949/epsg-3857-or-4326-for-googlemaps-openstreetmap-and-leaflet" >https://gis.stackexchange.com/questions/48949/epsg-3857-or-4326-for-googlemaps-openstreetmap-and-leaflet<i class="fas fa-external-link-alt"></i></a></p>
+<p>3.EPSG:3857和EPSG:4326区别详解&#x2F;分析得很好的文章。</p>
+<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32649321/article/details/125051832" >https://blog.csdn.net/qq_32649321/article/details/125051832<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<h1 id="图层-要素-属性"><a href="#图层-要素-属性" class="headerlink" title="图层 要素 属性"></a>图层 要素 属性</h1><p>在 OGR 中，图层（Layer）、要素（Feature）和属性（Attribute）之间的关系可以通过以下几点来解释：</p>
-<h3 id="图层（Layer）"><a href="#图层（Layer）" class="headerlink" title="图层（Layer）"></a>图层（Layer）</h3><ul>
-<li><p><strong>定义</strong>：图层是一个逻辑集合，&#x3D;&#x3D;包含了一组具有相同类型的几何形状的要素&#x3D;&#x3D;。它通常对应于一个地理数据源（如 Shapefile、数据库表）中的一张表或一个集合。</p>
-</li>
-<li><p><strong>功能</strong>：图层管理和组织要素，为要素提供元数据和空间参考信息。每个图层都有一个几何类型（如点、线、多边形）和一组属性字段定义。</p>
-</li>
-<li><p>接口</p>
-<p>：</p>
-<ul>
-<li><code>OGRLayer::GetFeatureCount()</code>：获取图层中的要素数量。</li>
-<li><code>OGRLayer::GetNextFeature()</code>：遍历图层中的要素。</li>
-<li><code>OGRLayer::GetFeature()</code>：根据要素 ID 获取特定要素。</li>
-<li><code>OGRLayer::GetLayerDefn()</code>：获取图层的定义，包括属性字段和几何类型。</li>
-</ul>
-</li>
-</ul>
-<h3 id="要素（Feature）-物标"><a href="#要素（Feature）-物标" class="headerlink" title="要素（Feature）&#x2F;物标"></a>要素（Feature）&#x2F;物标</h3><ul>
-<li><p><strong>定义</strong>：要素是图层中的一个实例，&#x3D;&#x3D;包含几何数据和属性数据&#x3D;&#x3D;。&#x3D;&#x3D;每个要素表示一个实际的地理对象&#x3D;&#x3D;（如一棵树、一条河流、一个建筑）。</p>
-</li>
-<li><p><strong>功能</strong>：要素将几何形状和属性数据结合在一起，用于表示和存储空间数据。</p>
-</li>
-<li><p>接口</p>
-<p>：</p>
-<ul>
-<li><code>OGRFeature::GetGeometryRef()</code>：获取要素的几何对象。</li>
-<li><code>OGRFeature::GetFieldCount()</code>：获取要素的属性字段数量。</li>
-<li><code>OGRFeature::GetFieldAsString()</code>：获取指定属性字段的值（以字符串形式）。</li>
-<li><code>OGRFeature::GetFieldAsInteger()</code>：获取指定属性字段的值（以整数形式）。</li>
-<li><code>OGRFeature::GetFieldAsDouble()</code>：获取指定属性字段的值（以浮点数形式）。</li>
-</ul>
-</li>
-</ul>
-<h3 id="属性（Attribute）"><a href="#属性（Attribute）" class="headerlink" title="属性（Attribute）"></a>属性（Attribute）</h3><ul>
-<li><p><strong>定义</strong>：属性是要素的描述性信息，以字段的形式存储。每个要素的属性字段数量和类型由图层的定义决定。</p>
-</li>
-<li><p><strong>功能</strong>：属性字段存储非空间数据，用于描述和区分要素。属性可以是多种数据类型（如整数、浮点数、字符串）。</p>
-</li>
-<li><p>接口</p>
-<p>：</p>
-<ul>
-<li><code>OGRFieldDefn::GetNameRef()</code>：获取属性字段的名称。</li>
-<li><code>OGRFieldDefn::GetType()</code>：获取属性字段的类型（如整数、浮点数、字符串）。</li>
-</ul>
-</li>
-</ul>
-<h1 id="物标和要素"><a href="#物标和要素" class="headerlink" title="物标和要素"></a>物标和要素</h1><p>在地理信息系统（GIS）和 OGR 库中，”物标” 和 “要素” 通常是同义的。它们都表示一个具体的地理对象，包含空间几何数据和属性数据。<br>物标（Feature）</p>
-<pre><code>定义：物标是指在地图或空间数据中代表具体地理实体的元素，例如建筑物、道路、河流、湖泊等。每个物标具有空间几何和属性。
-几何数据：描述物标的空间位置和形状（例如，点、线、多边形）。
-属性数据：描述物标的特征和信息（例如，名称、类型、大小）。
-</code></pre>
-<p>要素（Feature）</p>
-<pre><code>定义：在 OGR 和大多数 GIS 系统中，要素是数据模型的一个实例，表示一个具体的地理对象，具有几何和属性。
-几何数据：描述要素的空间位置和形状（例如，点、线、多边形）。
-属性数据：描述要素的特征和信息（例如，名称、类型、大小）。
-</code></pre>
-<p>因此，在 OGR 和 GIS 的上下文中，一个物标等价于一个要素。</p>
-<h1 id="s57格式中的关系"><a href="#s57格式中的关系" class="headerlink" title="s57格式中的关系"></a>s57格式中的关系</h1><p>在 OGR 中读取 S-57 格式的文件时，图层、要素和属性之间的层次关系和读取方法与其他矢量数据格式类似，但有一些特定的细节需要注意。S-57 是一种国际海事组织（IMO）标准的电子海图（ENC）数据格式，包含海上导航所需的各种地理信息。</p>
-<h3 id="层次关系"><a href="#层次关系" class="headerlink" title="层次关系"></a>层次关系</h3><ol>
-<li><strong>数据源（Dataset）</strong> ： <ul>
-<li>一个 S-57 文件代表一个数据源，包含多个图层。</li>
-</ul>
-</li>
-<li><strong>图层（Layer）</strong> ： <ul>
-<li>&#x3D;&#x3D;每个图层对应  <strong>一种</strong>  类型的地理要素&#x3D;&#x3D;。S-57 文件通常包含多个图层，每个图层表示一种特定的地理要素类型（例如，航标、等深线、岸线等）。</li>
-<li>&#x3D;&#x3D;图层中的要素共享相同的属性结构和几何类型&#x3D;&#x3D;。</li>
-</ul>
-</li>
-<li><strong>要素（Feature）</strong> ： <ul>
-<li>每个要素表示一个实际的地理对象，包含几何数据和属性数据。</li>
-<li>要素的几何数据表示其空间位置和形状（例如，点、线、多边形）。</li>
-<li>要素的属性数据表示其描述性信息（例如，航标类型、名称、深度等）。</li>
-</ul>
-</li>
-<li><strong>属性（Attribute）</strong>：<ul>
-<li>属性是描述要素的字段，包括各种数据类型（例如，整数、浮点数、字符串）。</li>
-<li>在 S-57 数据中，属性字段根据 S-57 标准进行定义，具有特定的含义。</li>
-</ul>
-</li>
-</ol>
+<p>对于 Web Map 开发人员来说，最熟悉的应该是EPSG:4326 (WGS84) and EPSG:3857(Pseudo-Mercator)，这又是啥呢？</p>
+<h3 id="3-1-EPSG-4326-WGS84"><a href="#3-1-EPSG-4326-WGS84" class="headerlink" title="3.1 EPSG:4326 (WGS84)"></a>3.1 EPSG:4326 (WGS84)</h3><p>前面说了 WGS84 是目前最流行的地理坐标系统。</p>
+<p>在国际上，<strong>每个坐标系统</strong>都会被分配一个 <a class="link"   target="_blank" rel="noopener" href="https://epsg.io/" >EPSG<i class="fas fa-external-link-alt"></i></a> 代码，EPSG:4326 就是 WGS84 的代码。</p>
+<p>GPS是基于WGS84的，所以通常我们得到的坐标数据都是WGS84的。一般我们在存储数据时，仍然按WGS84存储。</p>
+<p>EPSG4326是基于WGS84椭球的经纬度坐标系。</p>
+<p>EPSG4326 is in degrees - 3D sphere，单位是度。</p>
+<p>EPSG4326使用参考球面或椭球面上的坐标系统。</p>
+<p>特点：利于存储，可读性高。缺点：会导致页面变形。</p>
+<h3 id="3-2-EPSG-3857-Pseudo-Mercator"><a href="#3-2-EPSG-3857-Pseudo-Mercator" class="headerlink" title="3.2 EPSG:3857 (Pseudo-Mercator)"></a>3.2 EPSG:3857 (Pseudo-Mercator)</h3><p>&#x3D;&#x3D;伪墨卡托投影，也被称为球体墨卡托，Web Mercator。它是基于墨卡托投影的，把 WGS84坐标系<strong>投影到正方形</strong>。&#x3D;&#x3D;我们前面已经知道  WGS84  是基于椭球体的，但是伪墨卡托投影把坐标投影到球体上，这导致两极的失真变大，但是却更容易计算。这也许是为什么被称为”伪“墨卡托吧。</p>
+<p>另外，伪墨卡托投影还切掉了南北85.051129°纬度以上的地区，以保证整个投影是正方形的</p>
+<p>因为墨卡托投影等正形性的特点，在不同层级的图层上物体的形状保持不变，一个正方形可以不断被划分为更多更小的正方形以显示更清晰的细节。&#x3D;&#x3D;很明显，伪墨卡托坐标系是非常显示数据，但是不适合存储数据的，通常我们使用WGS84 存储数据，使用伪墨卡托显示数据。&#x3D;&#x3D;</p>
+<p>Web Mercator 最早是由 Google 提出的，当前已经成为 Web Map 的事实标准。</p>
+<p>但是也许是由于上面”伪“的原因，最初  Web Mercator 被拒绝分配EPSG 代码。于是大家普遍使用 EPSG:900913（Google的数字变形）  的非官方代码来代表它。直到2008年，才被分配了EPSG:3785的代码，但在同一年没多久，又被弃用，重新分配了  EPSG:3857 的正式代码，使用至今。</p>
+<p>EPSG3857是基于球体的、web墨卡托投影（伪墨卡托投影）的投影坐标系。</p>
+<p>在openlayers 中默认的坐标就是google的墨卡托坐标，也就是我们经常看到的 EPSG:3857 坐标系。</p>
+<p>EPSG3857 表示方法： [12914838.35,4814529.9]</p>
+<p>EPSG3857 is in metres - 2D projection，单位是米。</p>
+<p>EPSG3857使用从球面或椭球面投射到平面的坐标系统。</p>
+<p>特点：用于分析，显示数据。缺点：数据的可读性差和数值大存储比较占用内存。</p>
+<h1 id="两者特点及转换"><a href="#两者特点及转换" class="headerlink" title="两者特点及转换"></a>两者特点及转换</h1><blockquote>
+<p>因为墨卡托投影等正形性的特点，在不同层级的图层上物体的形状保持不变，一个正方形可以不断被划分为更多更小的正方形以显示更清晰的细节。</p>
+<p>很明显，伪墨卡托坐标系是非常显示数据，但是不适合存储数据的，通常我们使用WGS84 存储数据，使用伪墨卡托显示数据。</p>
+</blockquote>
+<h1 id="应用介绍"><a href="#应用介绍" class="headerlink" title="应用介绍"></a>应用介绍</h1><p>（1）谷歌地球处于以wgs84为基准面的地理坐标系中。(EPSG: 4326)</p>
+<p>（2）谷歌Maps位于基于wgs84基准的投影坐标系中。(EPSG 3857)</p>
+<p>（3）Open Street Map数据库的数据存储在一个以wgs84为基准，单位为十进制的gcs中。(EPSG: 4326)</p>
+<p>（4）Open Street Map tiles和WMS网络服务，都在基于wgs84基准的投影坐标系统中。(EPSG 3857)</p>
+<h1 id="投影与失真"><a href="#投影与失真" class="headerlink" title="投影与失真"></a>投影与失真</h1><p>地理坐标系是三维的，我们要在地图或者屏幕上显示就需要转化为二维，这被称为<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Map_projection" >投影（Map projection）<i class="fas fa-external-link-alt"></i></a>。显而易见的是，从三维到二维的转化，必然会导致变形和失真，失真是不可避免的，但是不同投影下会有不同的失真，这让我们可以有得选择。常用的投影有<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Equirectangular_projection" >等矩矩形投影<i class="fas fa-external-link-alt"></i></a>（Platte Carre）和<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Mercator_projection" >墨卡托投影<i class="fas fa-external-link-alt"></i></a>（Mercator），下图来自<a class="link"   target="_blank" rel="noopener" href="https://idvux.wordpress.com/2007/06/06/mercator-vs-well-not-mercator-platte-carre/" >Mercator vs. well…not Mercator (Platte Carre)<i class="fas fa-external-link-alt"></i></a>，生动地说明了这两种投影下的失真：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202408061435199.png"  alt="image-20240806143502111"></p>
 
                 </div>
                 
@@ -355,14 +291,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/08/06/20240806-%E7%93%A6%E7%89%87%E5%9C%B0%E5%9B%BE/"
-                                   title="20240806 瓦片地图"
+                                   href="/2024/08/07/20240807-%E5%B0%8F%E5%85%AD%E5%A3%AC-%E4%B8%80/"
+                                   title="20240807 小六壬(一)"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240806 瓦片地图</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240807 小六壬(一)</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -372,11 +308,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/08/05/20240805-ISO8211%E6%A0%87%E5%87%86/"
-                                   title="20240805 ISO8211标准"
+                                   href="/2024/08/06/20240806-%E7%93%A6%E7%89%87%E5%9C%B0%E5%9B%BE/"
+                                   title="20240806 瓦片地图"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240805 ISO8211标准</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240806 瓦片地图</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -486,7 +422,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82-%E8%A6%81%E7%B4%A0-%E7%89%A9%E6%A0%87-%E5%B1%9E%E6%80%A7-%E7%9A%84%E5%85%B3%E7%B3%BB%E6%98%AF%E4%BB%80%E4%B9%88%E5%9C%A8OGR%E4%B8%AD"><span class="nav-number">1.</span> <span class="nav-text">图层 要素&#x2F;(物标) 属性 的关系是什么在OGR中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%A7%8D%E7%89%A9%E6%A0%87%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.1.</span> <span class="nav-text">一种物标一个图层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%A7%8D%E7%89%A9%E6%A0%87%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.2.</span> <span class="nav-text">多种物标一个图层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%87%A0%E4%BD%95%E7%B1%BB%E5%9E%8B%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.3.</span> <span class="nav-text">多几何类型一个图层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82-%E8%A6%81%E7%B4%A0-%E5%B1%9E%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">图层 要素 属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82%EF%BC%88Layer%EF%BC%89"><span class="nav-number">2.0.1.</span> <span class="nav-text">图层（Layer）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%81%E7%B4%A0%EF%BC%88Feature%EF%BC%89-%E7%89%A9%E6%A0%87"><span class="nav-number">2.0.2.</span> <span class="nav-text">要素（Feature）&#x2F;物标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%EF%BC%88Attribute%EF%BC%89"><span class="nav-number">2.0.3.</span> <span class="nav-text">属性（Attribute）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E6%A0%87%E5%92%8C%E8%A6%81%E7%B4%A0"><span class="nav-number">3.</span> <span class="nav-text">物标和要素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#s57%E6%A0%BC%E5%BC%8F%E4%B8%AD%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">4.</span> <span class="nav-text">s57格式中的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E5%85%B3%E7%B3%BB"><span class="nav-number">4.0.1.</span> <span class="nav-text">层次关系</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EPSG3857"><span class="nav-number">1.</span> <span class="nav-text">EPSG3857</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-EPSG-4326-WGS84"><span class="nav-number">1.0.1.</span> <span class="nav-text">3.1 EPSG:4326 (WGS84)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-EPSG-3857-Pseudo-Mercator"><span class="nav-number">1.0.2.</span> <span class="nav-text">3.2 EPSG:3857 (Pseudo-Mercator)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E8%80%85%E7%89%B9%E7%82%B9%E5%8F%8A%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">两者特点及转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">应用介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1%E4%B8%8E%E5%A4%B1%E7%9C%9F"><span class="nav-number">4.</span> <span class="nav-text">投影与失真</span></a></li></ol>
     </div>
 </div>
 
@@ -639,7 +575,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82-%E8%A6%81%E7%B4%A0-%E7%89%A9%E6%A0%87-%E5%B1%9E%E6%80%A7-%E7%9A%84%E5%85%B3%E7%B3%BB%E6%98%AF%E4%BB%80%E4%B9%88%E5%9C%A8OGR%E4%B8%AD"><span class="nav-number">1.</span> <span class="nav-text">图层 要素&#x2F;(物标) 属性 的关系是什么在OGR中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%A7%8D%E7%89%A9%E6%A0%87%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.1.</span> <span class="nav-text">一种物标一个图层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%A7%8D%E7%89%A9%E6%A0%87%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.2.</span> <span class="nav-text">多种物标一个图层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%87%A0%E4%BD%95%E7%B1%BB%E5%9E%8B%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.3.</span> <span class="nav-text">多几何类型一个图层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82-%E8%A6%81%E7%B4%A0-%E5%B1%9E%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">图层 要素 属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82%EF%BC%88Layer%EF%BC%89"><span class="nav-number">2.0.1.</span> <span class="nav-text">图层（Layer）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%81%E7%B4%A0%EF%BC%88Feature%EF%BC%89-%E7%89%A9%E6%A0%87"><span class="nav-number">2.0.2.</span> <span class="nav-text">要素（Feature）&#x2F;物标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%EF%BC%88Attribute%EF%BC%89"><span class="nav-number">2.0.3.</span> <span class="nav-text">属性（Attribute）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E6%A0%87%E5%92%8C%E8%A6%81%E7%B4%A0"><span class="nav-number">3.</span> <span class="nav-text">物标和要素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#s57%E6%A0%BC%E5%BC%8F%E4%B8%AD%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">4.</span> <span class="nav-text">s57格式中的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E5%85%B3%E7%B3%BB"><span class="nav-number">4.0.1.</span> <span class="nav-text">层次关系</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EPSG3857"><span class="nav-number">1.</span> <span class="nav-text">EPSG3857</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-EPSG-4326-WGS84"><span class="nav-number">1.0.1.</span> <span class="nav-text">3.1 EPSG:4326 (WGS84)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-EPSG-3857-Pseudo-Mercator"><span class="nav-number">1.0.2.</span> <span class="nav-text">3.2 EPSG:3857 (Pseudo-Mercator)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E8%80%85%E7%89%B9%E7%82%B9%E5%8F%8A%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">两者特点及转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">应用介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1%E4%B8%8E%E5%A4%B1%E7%9C%9F"><span class="nav-number">4.</span> <span class="nav-text">投影与失真</span></a></li></ol>
     </div>
 </div>
 

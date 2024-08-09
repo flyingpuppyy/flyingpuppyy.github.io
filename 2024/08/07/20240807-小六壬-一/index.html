@@ -9,7 +9,7 @@
     
     <title>
         
-            20240805 OGR中图层 要素 属性的关系 |
+            20240807 小六壬(一) |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240805 OGR中图层 要素 属性的关系
+                        20240807 小六壬(一)
                     </div>
                 
 
@@ -196,24 +196,15 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-08-05 15:45:04</span>
+                <span class="datetime">2024-08-07 14:03:13</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Mon Aug 05 2024 16:10:10 GMT+0800">2024-08-05 16:10:10</span>
+                <span class="datetime" data-updated="Wed Aug 07 2024 14:04:09 GMT+0800">2024-08-07 14:04:09</span>
             </span>
         
 
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/OGR/">OGR</a></li>
-                        
-                    
-                </ul>
-            </span>
         
 
         
@@ -239,101 +230,115 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="图层-要素-物标-属性-的关系是什么在OGR中"><a href="#图层-要素-物标-属性-的关系是什么在OGR中" class="headerlink" title="图层 要素&#x2F;(物标) 属性 的关系是什么在OGR中"></a>图层 要素&#x2F;(物标) 属性 的关系是什么在OGR中</h1><blockquote>
-<p>在地理信息系统（GIS）和空间数据库中，数据集中图层与物标的关系并不是固定的，可以根据具体应用需求和数据组织方式有所不同。以下是几种常见的图层与物标的对应关系：</p>
-<h3 id="一种物标一个图层"><a href="#一种物标一个图层" class="headerlink" title="一种物标一个图层"></a>一种物标一个图层</h3><p>这种方式最为常见，尤其是在矢量数据格式（如 Shapefile）中，每个图层只包含一种类型的地理要素。例如：</p>
-<ul>
-<li><strong>图层1</strong>：包含所有的道路（线要素）。</li>
-<li><strong>图层2</strong>：包含所有的建筑物（多边形要素）。</li>
-<li><strong>图层3</strong>：包含所有的基站地标（点要素）。</li>
-</ul>
-<p>这种方式的优点是结构清晰，每个图层只包含一种类型的要素，便于管理和分析。</p>
-<h3 id="多种物标一个图层"><a href="#多种物标一个图层" class="headerlink" title="多种物标一个图层"></a>多种物标一个图层</h3><p>在某些情况下，一个图层中可以包含多种类型的物标。这通常发生在以下情况中：</p>
-<ul>
-<li><strong>相同几何类型但不同类别</strong>：例如，一个图层包含所有的水体，包括河流、湖泊、海洋等，它们都是多边形要素，但属性中包含类别信息。</li>
-<li><strong>综合数据集</strong>：有时为了方便处理或展示，多个相关的物标会放在同一个图层中，例如，一个图层包含城市中所有的点状地标，如公交站、医院、学校等。</li>
-</ul>
-<h3 id="多几何类型一个图层"><a href="#多几何类型一个图层" class="headerlink" title="多几何类型一个图层"></a>多几何类型一个图层</h3><p>在一些 GIS 系统中，一个图层可能包含不同几何类型的要素（点、线、面）。这在数据格式允许的情况下可以简化数据管理，但可能会增加处理复杂度。例如，GeoPackage 和一些空间数据库（如 PostGIS）允许一个表（图层）包含不同类型的几何对象。</p>
-</blockquote>
-<h1 id="图层-要素-属性"><a href="#图层-要素-属性" class="headerlink" title="图层 要素 属性"></a>图层 要素 属性</h1><p>在 OGR 中，图层（Layer）、要素（Feature）和属性（Attribute）之间的关系可以通过以下几点来解释：</p>
-<h3 id="图层（Layer）"><a href="#图层（Layer）" class="headerlink" title="图层（Layer）"></a>图层（Layer）</h3><ul>
-<li><p><strong>定义</strong>：图层是一个逻辑集合，&#x3D;&#x3D;包含了一组具有相同类型的几何形状的要素&#x3D;&#x3D;。它通常对应于一个地理数据源（如 Shapefile、数据库表）中的一张表或一个集合。</p>
-</li>
-<li><p><strong>功能</strong>：图层管理和组织要素，为要素提供元数据和空间参考信息。每个图层都有一个几何类型（如点、线、多边形）和一组属性字段定义。</p>
-</li>
-<li><p>接口</p>
-<p>：</p>
-<ul>
-<li><code>OGRLayer::GetFeatureCount()</code>：获取图层中的要素数量。</li>
-<li><code>OGRLayer::GetNextFeature()</code>：遍历图层中的要素。</li>
-<li><code>OGRLayer::GetFeature()</code>：根据要素 ID 获取特定要素。</li>
-<li><code>OGRLayer::GetLayerDefn()</code>：获取图层的定义，包括属性字段和几何类型。</li>
-</ul>
-</li>
-</ul>
-<h3 id="要素（Feature）-物标"><a href="#要素（Feature）-物标" class="headerlink" title="要素（Feature）&#x2F;物标"></a>要素（Feature）&#x2F;物标</h3><ul>
-<li><p><strong>定义</strong>：要素是图层中的一个实例，&#x3D;&#x3D;包含几何数据和属性数据&#x3D;&#x3D;。&#x3D;&#x3D;每个要素表示一个实际的地理对象&#x3D;&#x3D;（如一棵树、一条河流、一个建筑）。</p>
-</li>
-<li><p><strong>功能</strong>：要素将几何形状和属性数据结合在一起，用于表示和存储空间数据。</p>
-</li>
-<li><p>接口</p>
-<p>：</p>
-<ul>
-<li><code>OGRFeature::GetGeometryRef()</code>：获取要素的几何对象。</li>
-<li><code>OGRFeature::GetFieldCount()</code>：获取要素的属性字段数量。</li>
-<li><code>OGRFeature::GetFieldAsString()</code>：获取指定属性字段的值（以字符串形式）。</li>
-<li><code>OGRFeature::GetFieldAsInteger()</code>：获取指定属性字段的值（以整数形式）。</li>
-<li><code>OGRFeature::GetFieldAsDouble()</code>：获取指定属性字段的值（以浮点数形式）。</li>
-</ul>
-</li>
-</ul>
-<h3 id="属性（Attribute）"><a href="#属性（Attribute）" class="headerlink" title="属性（Attribute）"></a>属性（Attribute）</h3><ul>
-<li><p><strong>定义</strong>：属性是要素的描述性信息，以字段的形式存储。每个要素的属性字段数量和类型由图层的定义决定。</p>
-</li>
-<li><p><strong>功能</strong>：属性字段存储非空间数据，用于描述和区分要素。属性可以是多种数据类型（如整数、浮点数、字符串）。</p>
-</li>
-<li><p>接口</p>
-<p>：</p>
-<ul>
-<li><code>OGRFieldDefn::GetNameRef()</code>：获取属性字段的名称。</li>
-<li><code>OGRFieldDefn::GetType()</code>：获取属性字段的类型（如整数、浮点数、字符串）。</li>
-</ul>
-</li>
-</ul>
-<h1 id="物标和要素"><a href="#物标和要素" class="headerlink" title="物标和要素"></a>物标和要素</h1><p>在地理信息系统（GIS）和 OGR 库中，”物标” 和 “要素” 通常是同义的。它们都表示一个具体的地理对象，包含空间几何数据和属性数据。<br>物标（Feature）</p>
-<pre><code>定义：物标是指在地图或空间数据中代表具体地理实体的元素，例如建筑物、道路、河流、湖泊等。每个物标具有空间几何和属性。
-几何数据：描述物标的空间位置和形状（例如，点、线、多边形）。
-属性数据：描述物标的特征和信息（例如，名称、类型、大小）。
-</code></pre>
-<p>要素（Feature）</p>
-<pre><code>定义：在 OGR 和大多数 GIS 系统中，要素是数据模型的一个实例，表示一个具体的地理对象，具有几何和属性。
-几何数据：描述要素的空间位置和形状（例如，点、线、多边形）。
-属性数据：描述要素的特征和信息（例如，名称、类型、大小）。
-</code></pre>
-<p>因此，在 OGR 和 GIS 的上下文中，一个物标等价于一个要素。</p>
-<h1 id="s57格式中的关系"><a href="#s57格式中的关系" class="headerlink" title="s57格式中的关系"></a>s57格式中的关系</h1><p>在 OGR 中读取 S-57 格式的文件时，图层、要素和属性之间的层次关系和读取方法与其他矢量数据格式类似，但有一些特定的细节需要注意。S-57 是一种国际海事组织（IMO）标准的电子海图（ENC）数据格式，包含海上导航所需的各种地理信息。</p>
-<h3 id="层次关系"><a href="#层次关系" class="headerlink" title="层次关系"></a>层次关系</h3><ol>
-<li><strong>数据源（Dataset）</strong> ： <ul>
-<li>一个 S-57 文件代表一个数据源，包含多个图层。</li>
-</ul>
-</li>
-<li><strong>图层（Layer）</strong> ： <ul>
-<li>&#x3D;&#x3D;每个图层对应  <strong>一种</strong>  类型的地理要素&#x3D;&#x3D;。S-57 文件通常包含多个图层，每个图层表示一种特定的地理要素类型（例如，航标、等深线、岸线等）。</li>
-<li>&#x3D;&#x3D;图层中的要素共享相同的属性结构和几何类型&#x3D;&#x3D;。</li>
-</ul>
-</li>
-<li><strong>要素（Feature）</strong> ： <ul>
-<li>每个要素表示一个实际的地理对象，包含几何数据和属性数据。</li>
-<li>要素的几何数据表示其空间位置和形状（例如，点、线、多边形）。</li>
-<li>要素的属性数据表示其描述性信息（例如，航标类型、名称、深度等）。</li>
-</ul>
-</li>
-<li><strong>属性（Attribute）</strong>：<ul>
-<li>属性是描述要素的字段，包括各种数据类型（例如，整数、浮点数、字符串）。</li>
-<li>在 S-57 数据中，属性字段根据 S-57 标准进行定义，具有特定的含义。</li>
-</ul>
-</li>
-</ol>
+                    <h1 id="出处"><a href="#出处" class="headerlink" title="出处"></a>出处</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv24625954/" >https://www.bilibili.com/read/cv24625954/<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1><h1 id="一、六神所主含义"><a href="#一、六神所主含义" class="headerlink" title="一、六神所主含义"></a>一、六神所主含义</h1><p>青龙：五行属木。</p>
+<p>青龙为贵，主文凭，文书，财帛，贵人，官贵，主酒色，婚姻喜庆之事。</p>
+<p>性格为人耿直，善良，正义，光明磊落。青龙主人固执己见，为人不活跃。</p>
+<p>白虎：五行属金。</p>
+<p>白虎为煞，主惊扰，凶灾，伤病，横祸，孝服，丧事，也主恶人。白虎主传送，行走，</p>
+<p>主军警，政法之人。主奔波，流动。主凶恶，强悍。</p>
+<p>性格主沉稳，城府深，凶狠。也主脾气脾气不好，暴躁，易怒。</p>
+<p>朱雀：五行属火。</p>
+<p>朱雀为信，主口舌，诉讼，信件，信息。也主文化之人。也主轻薄，轻浮，淫乱。</p>
+<p>性格为人热情多礼，爱说爱讲，好说好笑。朱雀主口舌是非之事。</p>
+<p>玄武：五行属水。</p>
+<p>玄武为贼，主暗昧不明，暗失，私情，隐私，盗窃等，也主贼人，小人。主流动性职业,</p>
+<p>好淫乱。</p>
+<p>性格为虚而不实，做事没有诚信，说话不诚实，明一套，暗一套，无主见，好妄想。</p>
+<p>腾蛇：五行属土。</p>
+<p>腾蛇为虚，主虚惊怪异之事，主鬼神，仙妖，怪事。主曲折，纠缠，牵连，也代表道路。</p>
+<p>主医巫卜相，僧道，孤寡人。</p>
+<p>性格为人奸诈、狡猾、阴险，心眼多，不真诚。</p>
+<p>勾陈：五行属土。</p>
+<p>勾陈为阻，主勾陈主争斗，争执，争夺，打斗官司。勾陈主田土，房产。主陈旧，熟人，</p>
+<p>旧事。</p>
+<p>性格为人主忠厚老实，性情倔强，处世死板，不圆滑，自我约束力强。也主诚实之人。</p>
+<p>二、六神临六亲所主</p>
+<p>（1）青龙六亲所主：</p>
+<p>青龙临父母，主贵人，贵人正直，有权利，有能力。父母为贵。</p>
+<p>青龙临兄弟，主正直的兄弟姐妹，朋友，伙伴等。</p>
+<p>青龙临子孙，主亲生子女，子孙贵，占病，病惰有缓可治愈。</p>
+<p>青龙临妻财，主福禄之财，正道之财，生财有道。也主女人正直，主妻贵，贤憙。</p>
+<p>青龙临官鬼，代表公职，文人，官贵。也主为官清正。</p>
+<p>青龙临自身，主自己有喜庆事，也主自身有正气。</p>
+<p>(2)朱雀临六亲所主:</p>
+<p>朱雀临父母，主贵人口舌，书信，诉状、供词等。也主父母口舌官非。</p>
+<p>朱雀临兄弟，主口舌争端，争执是非，吵架，辨论。</p>
+<p>朱雀临子孙，主小人口舌，子孙口舌，因六禽纠纷等。</p>
+<p>朱雀临妻财，主因钱财引起的口舌官司，主女人口舌是非，求财靠口才来赚钱营生。</p>
+<p>朱雀临官鬼，主口舌官非之事或官司诉讼，占职业为文化或文艺行业。求官职有信息。</p>
+<p>朱雀临自身，主自己犯口舌是非官司等。</p>
+<p>（3）勾陈临六亲所主：</p>
+<p>勾陈临父母，主父母不安宁，有争斗之事，求谋望事迟滞，无贵人。</p>
+<p>勾陈临兄弟，主兄弟争斗，朋友不和，或因朋友或熟人引起破财。</p>
+<p>勾陈临子孙，主子孙不太平，因六禽争斗，疾病顽固等。</p>
+<p>勾陈临妻财，主财上有争斗，田土有争斗，主女人争胜好强，好斗。</p>
+<p>勾陈临官鬼，主田宅产业官讼争斗。占职业为农林牧行业，占婚姻，有情敌。</p>
+<p>勾陈临自身，主自己有灾难，凶事争斗。</p>
+<p>（4）腾蛇临六亲所主：</p>
+<p>腾蛇临父母，主父母性格怪异，有心计。主无效合同，虚假之事。</p>
+<p>腾蛇临兄弟，合伙做生意，防对方故意巧设圈套坑害自己，朋友为虚。</p>
+<p>腾蛇临子孙，小人心机多，言语狡诈，虚夸不实。子孙多曲折。</p>
+<p>腾蛇临妻财，主外财，靠投机巧取，不正当手段取得钱财。也主女人狡诈。</p>
+<p>腾蛇临官鬼，主官司惊扰，占病为虚病怪病。占职业为自由职业，或巫婆，神汉，卦医。</p>
+<p>腾蛇临自身，主自己有官司，多灾，仙鬼缠身，有癔病。</p>
+<p>（5）白虎临六亲所主：</p>
+<p>白虎临父母，长辈有伤病之灾。测家宅，主有丧事孝服。也主父母凶爆。求贵不顺。</p>
+<p>白虎临兄弟，主平辈有病伤缠身，灾难，朋友或兄弟有灾祸之事。</p>
+<p>白虎临子孙，主小辈有病，伤，死亡之灾，主小孩顽皮，不服管。</p>
+<p>白虎临妻财，主得横财，或得白事之财，强行夺财。也主女人脾气不好暴躁。</p>
+<p>白虎临官鬼，主凶灾，官司，牢狱，灾难。占职业为军职，警察，法官等权利职业。</p>
+<p>白虎临自身，主自己有凶灾祸事，官司诉讼，丧事。</p>
+<p>（6）玄武临六亲所主：</p>
+<p>玄武临父母，主文书有伪，证件有伪，有虚假之事。贵人为虚心假意。父母有暗昧之事。</p>
+<p>玄武临兄弟，主欺诈、欺骗，蒙蔽，测赌博必输，防止熟人欺骗。兄弟朋友多主小人。</p>
+<p>玄武临子孙，主享乐，不正当性行为，主小辈小人有暗昧之事。</p>
+<p>玄武临妻财，主暗财，非法之财，不是正道求财。也主女人暗昧不明隐私之事。</p>
+<p>玄武临官鬼，主官场上有贪污隐私，占官司为暗昧不明，占职业为普通职业或水行业。</p>
+<p>玄武临自身，主小人，暗昧不明之事。防止被人暗算。自身防盗。</p>
+<p>三、六神临六宫所主</p>
+<p>（1）青龙临六宫所主：</p>
+<p>青龙临大安宫主吉祥，顺利，婚姻喜事。</p>
+<p>青龙临留恋宫主喜事拖延，事业晚成。</p>
+<p>青龙临速喜宫主婚姻喜事，工作吉顺，事业有成。</p>
+<p>青龙临赤口宫主工作职业不顺，喜事有阻，凡事不顺。</p>
+<p>青龙临小吉宫主外出吉顺，工作事业吉顺，也主桃花之喜。</p>
+<p>青龙临空亡主喜事落空，求贵人无望，无贵人，事业成空。</p>
+<p>(2)朱雀临六宫所主：</p>
+<p>朱雀临大安宫主家内口舌官司，是非诉讼，</p>
+<p>朱雀临留恋宫主信息拖延，口舌是非牵连。</p>
+<p>朱雀临速喜宫主喜信来报，口传喜音，信息来的快。</p>
+<p>朱雀临赤口宫主有凶信，或因口舌引起的官司诉讼。</p>
+<p>朱雀临小吉宫主桃色非闻，或桃色官司，望信在路上。</p>
+<p>朱雀临空亡宫主信息落空，求望无音，占口舌官非无灾。</p>
+<p>（3）勾陈临六宫所主：</p>
+<p>勾陈临大安宫家里争斗，内部不和，财产不稳。</p>
+<p>勾陈临留恋宫主田宅牵连，田土争斗之事。</p>
+<p>勾陈临速喜宫主喜事有阻，婚姻打斗，争风吃醋，或争地位。</p>
+<p>勾陈临赤口宫主财产官司，田宅官司。</p>
+<p>勾陈临小吉宫主出行不顺，或出行有争斗。</p>
+<p>勾陈临空亡宫主财产落空，凶事落空。</p>
+<p>（4）腾蛇临六宫所主：</p>
+<p>腾蛇临大安宫主家中多出怪异虚惊之事。家有草仙要来安位。</p>
+<p>腾蛇临留恋宫主怪异牵连，小人纠缠拖延。</p>
+<p>腾蛇临速喜宫主仙佛，神位。主小人得志。</p>
+<p>腾蛇临赤口宫主官司虚惊，凶灾横祸，官司曲折，路途坎坷。</p>
+<p>腾蛇临小吉宫主路途有惊扰，道路曲折。</p>
+<p>腾蛇临空亡宫主神鬼落空，惊而无险。</p>
+<p>(5)白虎临六宫所主:</p>
+<p>白虎临大安宫主家有凶事，家宅不安宁，也主婚姻不顺。</p>
+<p>白虎临留恋宫主官司牵连，官司拖延，凶事有缓解。</p>
+<p>白虎临速喜宫主事情发生在公共场所，事多不顺，求军警，政法者吉。</p>
+<p>白虎临赤口宫主官司，凶事，疾病，伤灾，奔波劳碌.</p>
+<p>白虎临小吉宫占事在路上，防止出行路上不顺。</p>
+<p>白虎临空亡宫主凶事落空，虽然有凶，但无灾难。</p>
+<p>(6)玄武临六宫所主:</p>
+<p>玄武临大安宫主家有暗财或外财，或有女人私情。也主家有暗失，防盗。</p>
+<p>玄武临留恋宫主私情牵连，暗昧之事。小人牵连等。</p>
+<p>玄武临速喜宫主有私惰之喜，有暗财进入，或有意外之财。</p>
+<p>玄武临赤口宫主暗藏凶神，防止小人暗算，防止意外灾难。</p>
+<p>玄武临小吉宫主桃花暗藏，秘密情人，暗里私通。外出防止小人，防贼。</p>
+<p>玄武临空亡宫主私情落空，密谋不成。 </p>
 
                 </div>
                 
@@ -355,14 +360,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/08/06/20240806-%E7%93%A6%E7%89%87%E5%9C%B0%E5%9B%BE/"
-                                   title="20240806 瓦片地图"
+                                   href="/2024/08/09/20240809-qt%E7%BB%98%E5%9B%BE%E5%A4%9A%E8%BE%B9%E5%BD%A2%E5%A1%AB%E5%85%85%E7%AE%97%E6%B3%95/"
+                                   title="20240809 qt绘图多边形填充算法"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240806 瓦片地图</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240809 qt绘图多边形填充算法</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -372,11 +377,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/08/05/20240805-ISO8211%E6%A0%87%E5%87%86/"
-                                   title="20240805 ISO8211标准"
+                                   href="/2024/08/06/20240806-%E5%9F%BA%E6%9C%AC%E6%8A%95%E5%BD%B1%E6%96%B9%E5%BC%8F/"
+                                   title="20240806 基本投影方式"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240805 ISO8211标准</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240806 基本投影方式</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -486,7 +491,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82-%E8%A6%81%E7%B4%A0-%E7%89%A9%E6%A0%87-%E5%B1%9E%E6%80%A7-%E7%9A%84%E5%85%B3%E7%B3%BB%E6%98%AF%E4%BB%80%E4%B9%88%E5%9C%A8OGR%E4%B8%AD"><span class="nav-number">1.</span> <span class="nav-text">图层 要素&#x2F;(物标) 属性 的关系是什么在OGR中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%A7%8D%E7%89%A9%E6%A0%87%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.1.</span> <span class="nav-text">一种物标一个图层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%A7%8D%E7%89%A9%E6%A0%87%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.2.</span> <span class="nav-text">多种物标一个图层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%87%A0%E4%BD%95%E7%B1%BB%E5%9E%8B%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.3.</span> <span class="nav-text">多几何类型一个图层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82-%E8%A6%81%E7%B4%A0-%E5%B1%9E%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">图层 要素 属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82%EF%BC%88Layer%EF%BC%89"><span class="nav-number">2.0.1.</span> <span class="nav-text">图层（Layer）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%81%E7%B4%A0%EF%BC%88Feature%EF%BC%89-%E7%89%A9%E6%A0%87"><span class="nav-number">2.0.2.</span> <span class="nav-text">要素（Feature）&#x2F;物标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%EF%BC%88Attribute%EF%BC%89"><span class="nav-number">2.0.3.</span> <span class="nav-text">属性（Attribute）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E6%A0%87%E5%92%8C%E8%A6%81%E7%B4%A0"><span class="nav-number">3.</span> <span class="nav-text">物标和要素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#s57%E6%A0%BC%E5%BC%8F%E4%B8%AD%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">4.</span> <span class="nav-text">s57格式中的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E5%85%B3%E7%B3%BB"><span class="nav-number">4.0.1.</span> <span class="nav-text">层次关系</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BA%E5%A4%84"><span class="nav-number">1.</span> <span class="nav-text">出处</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%85%AD%E7%A5%9E%E6%89%80%E4%B8%BB%E5%90%AB%E4%B9%89"><span class="nav-number">3.</span> <span class="nav-text">一、六神所主含义</span></a></li></ol>
     </div>
 </div>
 
@@ -639,7 +644,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82-%E8%A6%81%E7%B4%A0-%E7%89%A9%E6%A0%87-%E5%B1%9E%E6%80%A7-%E7%9A%84%E5%85%B3%E7%B3%BB%E6%98%AF%E4%BB%80%E4%B9%88%E5%9C%A8OGR%E4%B8%AD"><span class="nav-number">1.</span> <span class="nav-text">图层 要素&#x2F;(物标) 属性 的关系是什么在OGR中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%A7%8D%E7%89%A9%E6%A0%87%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.1.</span> <span class="nav-text">一种物标一个图层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%A7%8D%E7%89%A9%E6%A0%87%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.2.</span> <span class="nav-text">多种物标一个图层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%87%A0%E4%BD%95%E7%B1%BB%E5%9E%8B%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%B1%82"><span class="nav-number">1.0.3.</span> <span class="nav-text">多几何类型一个图层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82-%E8%A6%81%E7%B4%A0-%E5%B1%9E%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">图层 要素 属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%B1%82%EF%BC%88Layer%EF%BC%89"><span class="nav-number">2.0.1.</span> <span class="nav-text">图层（Layer）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%81%E7%B4%A0%EF%BC%88Feature%EF%BC%89-%E7%89%A9%E6%A0%87"><span class="nav-number">2.0.2.</span> <span class="nav-text">要素（Feature）&#x2F;物标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%EF%BC%88Attribute%EF%BC%89"><span class="nav-number">2.0.3.</span> <span class="nav-text">属性（Attribute）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%A9%E6%A0%87%E5%92%8C%E8%A6%81%E7%B4%A0"><span class="nav-number">3.</span> <span class="nav-text">物标和要素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#s57%E6%A0%BC%E5%BC%8F%E4%B8%AD%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">4.</span> <span class="nav-text">s57格式中的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E5%85%B3%E7%B3%BB"><span class="nav-number">4.0.1.</span> <span class="nav-text">层次关系</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BA%E5%A4%84"><span class="nav-number">1.</span> <span class="nav-text">出处</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%85%AD%E7%A5%9E%E6%89%80%E4%B8%BB%E5%90%AB%E4%B9%89"><span class="nav-number">3.</span> <span class="nav-text">一、六神所主含义</span></a></li></ol>
     </div>
 </div>
 
