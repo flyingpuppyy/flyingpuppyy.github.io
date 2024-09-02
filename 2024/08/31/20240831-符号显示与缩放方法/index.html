@@ -9,7 +9,7 @@
     
     <title>
         
-            20240621 算法：递归回溯字符串输出 |
+            20240831 符号显示与缩放方法 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240621 算法：递归回溯字符串输出
+                        20240831 符号显示与缩放方法
                     </div>
                 
 
@@ -196,24 +196,15 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-06-21 16:33:25</span>
+                <span class="datetime">2024-08-31 22:04:19</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Jun 21 2024 16:40:17 GMT+0800">2024-06-21 16:40:17</span>
+                <span class="datetime" data-updated="Sat Aug 31 2024 22:05:25 GMT+0800">2024-08-31 22:05:25</span>
             </span>
         
 
-        
-            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
-                <ul class="post-category-ul">
-                    
-                            <li class="category-item"><a href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li>
-                        
-                    
-                </ul>
-            </span>
         
 
         
@@ -239,28 +230,29 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>创建一个递归回溯算法，注意：字符串的排列组合，而不是字符的排列组合。</p>
-<p>如果输入是 “123”，”456”，”789”输出的结果是 “123456789” “456123789” “456789123” “789123456 “等。</p>
-<p> (a) 一个递归函数 “permutate_strings”，它将接收一个字符串数组作为输入，并生成所有可能的字符串排列组合</p>
-<p> (b) 一个 “swap_strings “函数，它将被用于 “permutate_strings”，以帮助你生成所有可能的排列组合</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap_strings</span><span class="params">(std::vector&lt;std::string&gt;&amp; strs, <span class="type">int</span> i, <span class="type">int</span> j)</span> </span>&#123;</span><br><span class="line">    std::string temp = strs[i];</span><br><span class="line">    strs[i] = strs[j];</span><br><span class="line">    strs[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">permutate_strings</span><span class="params">(std::vector&lt;std::string&gt;&amp; strs, <span class="type">int</span> start, std::vector&lt;std::string&gt;&amp; result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//探索终点将当前站位拼接输出</span></span><br><span class="line">    <span class="keyword">if</span> (start == strs.<span class="built_in">size</span>() - <span class="number">1</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        std::string permutation;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; str : strs)</span><br><span class="line">        &#123;</span><br><span class="line">            permutation += str;</span><br><span class="line">        &#125;</span><br><span class="line">        result.<span class="built_in">push_back</span>(permutation);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//进行排列组合</span></span><br><span class="line">    <span class="comment">//基本思路：定初始一位，后面其他位同样定且交换</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = start; i &lt; strs.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">        <span class="built_in">swap_strings</span>(strs, start, i);</span><br><span class="line">        <span class="built_in">permutate_strings</span>(strs, start + <span class="number">1</span>, result);</span><br><span class="line">        <span class="built_in">swap_strings</span>(strs, start, i);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//回溯过程中将交换还原到初始位置</span></span><br><span class="line">        <span class="comment">//递归多少层就回溯多少层</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::vector&lt;std::string&gt; input = &#123;<span class="string">&quot;123&quot;</span>, <span class="string">&quot;456&quot;</span>, <span class="string">&quot;789&quot;</span>&#125;;</span><br><span class="line">    std::vector&lt;std::string&gt; result;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">permutate_strings</span>(input, <span class="number">0</span>, result);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; permutation : result) &#123;</span><br><span class="line">        std::cout &lt;&lt; permutation &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="回溯总结"><a href="#回溯总结" class="headerlink" title="回溯总结"></a>回溯总结</h1><p>chatgpt</p>
-<h3 id="回溯算法的结构"><a href="#回溯算法的结构" class="headerlink" title="回溯算法的结构"></a>回溯算法的结构</h3><p>回溯算法通常采用递归的形式实现。典型的回溯算法可以描述如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">backtrack</span><span class="params">(部分解)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (当前部分解是完整解) &#123;</span><br><span class="line">        处理完整解;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (选择 : 当前可行的选项) &#123;</span><br><span class="line">        <span class="keyword">if</span> (选择满足约束条件) &#123;</span><br><span class="line">            做选择;</span><br><span class="line">            <span class="built_in">backtrack</span>(新的部分解);</span><br><span class="line">            撤销选择; <span class="comment">// 回溯</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="回溯的应用场景"><a href="#回溯的应用场景" class="headerlink" title="回溯的应用场景"></a>回溯的应用场景</h3><p>回溯算法常用于解决以下类型的问题：</p>
-<ul>
-<li><strong>组合问题</strong>：例如子集生成、排列生成、组合生成。</li>
-<li><strong>约束满足问题</strong>：例如数独、N皇后问题、图的着色问题。</li>
-<li><strong>路径搜索问题</strong>：例如迷宫求解、骑士巡游问题。</li>
+                    <p>在电子海图或地图应用中，对符号进行缩放（放大或缩小）是非常常见的操作。符号缩放的基本思想是根据比例因子调整符号的尺寸和位置，同时保持其相对于参考点的位置关系不变。以下是对符号进行缩放和绘制的一般步骤：</p>
+<h3 id="1-定义缩放操作的基础"><a href="#1-定义缩放操作的基础" class="headerlink" title="1. 定义缩放操作的基础"></a>1. 定义缩放操作的基础</h3><ul>
+<li><strong>中心点（参考点）</strong>：通常是符号的中心或某个固定的锚点。所有的缩放操作都是相对于这个中心点进行的。</li>
+<li><strong>缩放因子</strong>：决定符号的放大或缩小倍数。例如，缩放因子为 <code>2.0</code> 表示放大两倍，缩放因子为 <code>0.5</code> 表示缩小一半。</li>
 </ul>
+<h3 id="2-计算缩放后的坐标"><a href="#2-计算缩放后的坐标" class="headerlink" title="2. 计算缩放后的坐标"></a>2. 计算缩放后的坐标</h3><p>给定一个符号的初始坐标 <code>(x, y)</code> 和缩放因子 <code>scaleFactor</code>，新的坐标 <code>(x&#39;, y&#39;)</code> 可以通过以下公式计算：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202408312205063.png"  alt="image-20240831220505694"></p>
+<h3 id="3-具体操作步骤"><a href="#3-具体操作步骤" class="headerlink" title="3. 具体操作步骤"></a>3. 具体操作步骤</h3><p>假设你有一个符号由多个坐标点组成，例如一个多边形符号，以下是对其进行缩放的步骤：</p>
+<ol>
+<li><strong>确定中心点</strong>：<ul>
+<li>如果符号的所有点已经以某个中心点为基准（例如，符号本身的中心或地图中的某个固定点），则直接使用该中心点作为缩放基准。</li>
+<li>否则，可能需要计算符号的中心点，通常可以通过符号所有点的平均值来确定。</li>
+</ul>
+</li>
+<li><strong>应用缩放因子</strong>：<ul>
+<li>对于符号的每个点，计算缩放后的新坐标。</li>
+</ul>
+</li>
+<li><strong>绘制缩放后的符号</strong>：<ul>
+<li>使用计算后的新坐标点绘制符号。</li>
+</ul>
+</li>
+</ol>
 
                 </div>
                 
@@ -279,31 +271,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/06/22/20240622-C-%E9%9D%A2%E8%AF%95%E5%85%AB%E8%82%A1/"
-                                   title="20240622 C++面试八股"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240622 C++面试八股</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/06/21/20240621-%E6%B3%A8%E5%86%8C%E9%A1%B9/"
-                                   title="20240621 注册项"
+                                   href="/2024/08/29/20240829-HPGL/"
+                                   title="20240829 HPGL"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240621 注册项</span>
+                                        <span class="post-nav-title-item text-ellipsis">20240829 HPGL</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -413,7 +389,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">回溯总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.0.1.</span> <span class="nav-text">回溯算法的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.0.2.</span> <span class="nav-text">回溯的应用场景</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E7%BC%A9%E6%94%BE%E6%93%8D%E4%BD%9C%E7%9A%84%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">1. 定义缩放操作的基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%AE%A1%E7%AE%97%E7%BC%A9%E6%94%BE%E5%90%8E%E7%9A%84%E5%9D%90%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text">2. 计算缩放后的坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">3. 具体操作步骤</span></a></li></ol>
     </div>
 </div>
 
@@ -566,7 +542,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">回溯总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.0.1.</span> <span class="nav-text">回溯算法的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.0.2.</span> <span class="nav-text">回溯的应用场景</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E7%BC%A9%E6%94%BE%E6%93%8D%E4%BD%9C%E7%9A%84%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">1. 定义缩放操作的基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%AE%A1%E7%AE%97%E7%BC%A9%E6%94%BE%E5%90%8E%E7%9A%84%E5%9D%90%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text">2. 计算缩放后的坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">3. 具体操作步骤</span></a></li></ol>
     </div>
 </div>
 
