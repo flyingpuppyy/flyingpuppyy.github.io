@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20240906 史莱姆算法 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"没有一条路径通往真诚 真诚本身就是道路","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"请在此输入您的留言"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20240906 史莱姆算法
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv6</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-09-06 10:17:38</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Fri Sep 06 2024 10:22:24 GMT+0800">2024-09-06 10:22:24</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="了解来源"><a href="#了解来源" class="headerlink" title="了解来源"></a>了解来源</h1><p>chatgot</p>
+<h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1><p>史莱姆算法（Slime Mold Algorithm, SMA）是一种基于自然界中黏菌（Slime Mold）觅食行为的群体智能算法。黏菌是一种单细胞生物，具有很强的适应环境和寻路能力。在黏菌觅食的过程中，它们通过释放化学物质、感知环境中的营养源，逐渐调整自己移动的路径，从而找到最优的食物来源。这种行为启发了SMA的设计。</p>
+<h3 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h3><ol>
+<li><strong>信息传递</strong>：黏菌通过化学信号传递信息，模拟出食物位置。</li>
+<li><strong>路径优化</strong>：通过不断调整移动路径，找到最优的食物获取路径。</li>
+<li><strong>全局搜索与局部优化</strong>：算法在全局范围内搜索最优解，并逐步进行局部优化，类似其他群体智能算法，如蚁群算法和粒子群算法。</li>
+</ol>
+<h3 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h3><p>SMA 常被应用于复杂问题的优化求解，比如：</p>
+<ul>
+<li>路径规划</li>
+<li>函数优化</li>
+<li>物流配送问题</li>
+</ul>
+<p>该算法的启发式过程基于自然界中的真实生物行为，具备一定的鲁棒性和自适应能力，适合处理不确定性较强的问题。</p>
+<h1 id="实现可能方案（尚未认证）"><a href="#实现可能方案（尚未认证）" class="headerlink" title="实现可能方案（尚未认证）"></a>实现可能方案（尚未认证）</h1><p>实现史莱姆算法（Slime Mold Algorithm, SMA）或其他群体智能算法的框架有许多，以下是一些常用的库和框架，它们支持各种优化算法的实现，包括 SMA。</p>
+<ol>
+<li><p>Python 生态中的优化库</p>
+<p> PySwarms: 这是一个基于粒子群优化（PSO）算法的库，但你可以根据它的框架实现类似史莱姆算法。它提供了方便的接口来处理多维度的优化问题。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://pyswarms.readthedocs.io/" >https://pyswarms.readthedocs.io<i class="fas fa-external-link-alt"></i></a><br> DEAP (Distributed Evolutionary Algorithms in Python): DEAP 是一个灵活的进化算法框架，可以用来实现 SMA。你可以根据 DEAP 的模板自定义黏菌算法，处理遗传算法、进化策略等优化问题。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://deap.readthedocs.io/" >https://deap.readthedocs.io<i class="fas fa-external-link-alt"></i></a><br> NiaPy (Nature-inspired Algorithms in Python): 这个库支持多种自然启发的算法，方便扩展新的算法。你可以在这个库的基础上添加黏菌算法。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://github.com/NiaOrg/NiaPy" >https://github.com/NiaOrg/NiaPy<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>Java 生态中的优化框架</p>
+<p> Jenetics: 这是一个适用于 Java 的遗传算法库，同样可以通过定制化实现黏菌算法的行为，来处理不同的优化问题。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://jenetics.io/" >https://jenetics.io<i class="fas fa-external-link-alt"></i></a><br> Watchmaker Framework: 它是一个功能强大的 Java 进化算法框架，支持多种启发式搜索算法，你可以基于它设计黏菌算法。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="http://watchmaker.uncommons.org/" >http://watchmaker.uncommons.org<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>Matlab</p>
+</li>
+</ol>
+<p>Matlab 是实现各种算法的常用平台，具有强大的优化工具箱。你可以直接用 Matlab 编写史莱姆算法的代码，或者在其已有的粒子群、蚁群等算法基础上进行修改。</p>
+<pre><code>Matlab 提供了广泛的工具箱和优化函数，可以方便实现黏菌算法。
+官方文档: https://www.mathworks.com/products/matlab.html
+</code></pre>
+<ol start="4">
+<li>C&#x2F;C++</li>
+</ol>
+<p>如果你需要高效且灵活的实现，可以选择直接用 C&#x2F;C++ 实现。虽然没有现成的专门框架用于 SMA，但你可以基于经典的算法框架，比如：</p>
+<pre><code>GAlib: 一个用于遗传算法的 C++ 库，可以通过修改或扩展来实现黏菌算法。
+    官网: http://lancet.mit.edu/ga/
+</code></pre>
+<ol start="5">
+<li><p>群体智能专用框架</p>
+<p> Swarm Intelligence Framework (SIF): 这是一个专门为群体智能算法设计的框架，提供了蚁群、粒子群等算法的实现，可以在其基础上实现 SMA。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://github.com/SIF" >https://github.com/SIF<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ol>
+<p>你可以根据自己所选的编程语言、平台需求，选择相应的框架并实现史莱姆算法。</p>
+<h1 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h1><p>史莱姆算法（Slime Mold Algorithm, SMA）模仿了黏菌（Slime Mold）在寻找食物过程中通过感知环境、传递信息和调整路径的行为。黏菌在自然界中展示了非常强的自适应能力，能够根据化学物质的浓度，寻找最优的食物源。SMA 基于这种自然现象，主要用于解决复杂的优化问题。<br>核心概念</p>
+<pre><code>黏菌个体（Slime Mold Agents）：
+    这是算法中的基本计算单位，代表一个个体，它模仿自然界中的黏菌。
+    每个黏菌个体在问题的搜索空间中进行移动，尝试找到最优解（类似于找到食物）。
+
+化学浓度（Pheromone Concentration）：
+    类似于黏菌释放和感知的化学物质浓度，用来指示食物的位置。
+    在算法中，这是用来指导个体的移动，类似于信息传递的一种方式。
+
+环境（Environment）：
+    问题的搜索空间，黏菌个体在这个空间内进行移动和优化。环境中存在“食物源”（最优解）和“障碍”（次优解或局部最优解）。
+
+路径规划与反馈（Path Planning and Feedback）：
+    黏菌在移动过程中根据路径的反馈不断调整自己的运动方向，以趋近最优解。
+    当黏菌个体接近最优解时，它的路径会收敛，反之，它可能偏离或者进行全局搜索。
+</code></pre>
+<p>核心对象及其功能</p>
+<pre><code>黏菌个体对象（Agent Object）：
+    功能：代表算法中的一个个体，负责感知化学浓度和进行移动。它根据搜索空间中的化学浓度（或启发式信息）决定移动的方向和速度。
+
+化学浓度场对象（Pheromone Field Object）：
+    功能：这是用来模拟黏菌感知的化学物质浓度分布的对象，帮助个体在环境中找到最优路径。浓度越高，个体越可能向该方向移动。
+
+搜索空间（Search Space）：
+    功能：定义优化问题的范围或解的可能区域。所有个体在这个空间中寻找最优解。
+
+适应度函数（Fitness Function）：
+    功能：用来评估当前个体的解的质量。在每次迭代中，算法通过该函数来评估黏菌个体离最优解的距离，并根据这个反馈调整路径。
+</code></pre>
+<p>从什么到什么的转化</p>
+<p>SMA 的实现过程可以描述为从随机搜索到有方向优化的转化。具体过程如下：</p>
+<pre><code>初始状态：随机分布
+    黏菌个体在问题的搜索空间内随机初始化，类似于在不确定的环境中随机探索。
+
+探索：从无序到有序
+    随着黏菌个体开始感知环境中的化学浓度，个体逐渐倾向于朝着高浓度的方向移动。此时，它们的路径开始从随机无序向有序收敛。
+
+收敛：从全局搜索到局部优化
+    随着黏菌个体接近最优解，其移动路径逐渐集中，局部搜索开始显现。此时，个体大多朝着可能的最优解区域聚集，逐步优化到更精确的解。
+
+最终状态：全局最优或次优解
+    黏菌个体通过多次迭代，最终找到全局最优解（或次优解），其路径也从初始的随机游走转化为最短或最优路径。
+</code></pre>
+<p>主要实现功能</p>
+<pre><code>全局优化：算法可以在复杂搜索空间中找到全局最优解。
+路径规划：模拟自然中的觅食行为，规划出最优路径（如导航、物流中的路径优化）。
+自适应搜索：算法能动态调整搜索方向，避免陷入局部最优，类似于自然界中黏菌对环境变化的适应能力。
+</code></pre>
+<p>应用领域</p>
+<pre><code>路径规划：用于机器人或车辆的最短路径寻找。
+函数优化：解决复杂的多峰函数优化问题。
+网络优化：在计算机网络中用于优化流量路由。
+物流配送：在物流系统中用于优化配送路径和资源分配。
+</code></pre>
+<p>总结来说，史莱姆算法通过模仿自然界中黏菌的觅食行为，将个体的随机搜索转化为有方向的优化过程，用于在复杂环境中找到最优解。</p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/09/06/20240906-%E5%81%9A%E6%A2%A6/"
+                                   title="20240906 畅想"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240906 畅想</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/09/05/20240905-%E4%BB%8E%E7%99%BD%E5%85%B0%E5%9C%B0%E7%9A%84%E5%8E%9F%E6%96%99%E5%BC%80%E5%A7%8B/"
+                                   title="20240905 从白兰地的原料开始"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20240905 从白兰地的原料开始</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '请在此输入您的留言',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">了解来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="nav-number">2.0.1.</span> <span class="nav-text">主要特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.0.2.</span> <span class="nav-text">适用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%8F%AF%E8%83%BD%E6%96%B9%E6%A1%88%EF%BC%88%E5%B0%9A%E6%9C%AA%E8%AE%A4%E8%AF%81%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">实现可能方案（尚未认证）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-number">4.</span> <span class="nav-text">核心概念</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">了解来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="nav-number">2.0.1.</span> <span class="nav-text">主要特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.0.2.</span> <span class="nav-text">适用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%8F%AF%E8%83%BD%E6%96%B9%E6%A1%88%EF%BC%88%E5%B0%9A%E6%9C%AA%E8%AE%A4%E8%AF%81%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">实现可能方案（尚未认证）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-number">4.</span> <span class="nav-text">核心概念</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
