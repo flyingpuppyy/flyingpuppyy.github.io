@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Thu Sep 05 2024 15:02:39 GMT+0800">2024-09-05 15:02:39</span>
+                <span class="datetime" data-updated="Tue Sep 24 2024 08:46:24 GMT+0800">2024-09-24 08:46:24</span>
             </span>
         
 
@@ -251,7 +251,7 @@
 <p>这几部分的关系是：lookups提供总体绘制方法，在绘制方法中调用其他部分的定义实现最终的绘制。也就是说，一个obj对象的绘制，首先需要定位到它属于lookups中的哪一类，再根据lookups的记录查找线、图案、符号和颜色完成绘制和填充。</p>
 <p>在OpenCPN中obj对象绘制前必须与S52文件中的一个lookups匹配上，根据匹配的结果中记录的绘制指令进行绘制。</p>
 <p>在文件中各个符号简称是有意义的：</p>
-<p>SY——————————–符号类型，它带的参数需要到symbols中去找对应的绘制指令；</p>
+<p>SY———符号类型，它带的参数需要到symbols中去找对应的绘制指令；</p>
 <p>CS——————————–条件符号化，这个目前比较复杂，在OpenCPN中很多条件符号化的指令都是在代码中动态生成的，本文对此不做介绍，以后针对条件符号化解析会有详细介绍。</p>
 <p>LS———————————简单线，在color-tables查找颜色，宽度和线型在括号中；</p>
 <p>LC———————————复杂线，在symbols中可以查找指令；</p>
@@ -287,8 +287,10 @@
 <p>EP绘制已经存储的多边形。完成后,恢复原来的笔的位置和状态。</p>
 <p>FP 填充已经存储的多边形。完成后,恢复原来的笔的位置和状态。</p>
 <p>SC 调用一个符号定义，完成符号的绘制。</p>
-<p><a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/static/image/filetype/pdf.gif%E7%94%B5%E5%AD%90%E6%B5%B7%E5%9B%BE%E8%AE%B2%E5%BA%A7" >http://www.landho.cn/static/image/filetype/pdf.gif电子海图讲座<i class="fas fa-external-link-alt"></i></a>“ &#x2F;&gt;<a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/forum.php?mod=attachment&aid=MTA4Njg3fGE5NzI5NDVhfDEzODgzNzIxODJ8MHw0OTY3NQ==" >OpenCPN探索–HPGL指令分析.pdf<i class="fas fa-external-link-alt"></i></a></p>
-<p><a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/xwb/images/bgimg/icon_logo.png%E7%94%B5%E5%AD%90%E6%B5%B7%E5%9B%BE%E8%AE%B2%E5%BA%A7" >http://www.landho.cn/xwb/images/bgimg/icon_logo.png电子海图讲座<i class="fas fa-external-link-alt"></i></a>“  TITLE&#x3D;”OpenCPN探索–HPGL指令分析–ECDIS 电子海图讲座” &#x2F;&gt; 已同步至 <a class="link"   target="_blank" rel="noopener" href="http://api.t.sina.com.cn/1350660627/statuses/3661160648259798" >懒猴航海的微博<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/static/image/filetype/pdf.gif" >http://www.landho.cn/static/image/filetype/pdf.gif<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/forum.php?mod=attachment&aid=MTA4Njg3fGE5NzI5NDVhfDEzODgzNzIxODJ8MHw0OTY3NQ==" >OpenCPN探索–HPGL指令分析.pdf<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/xwb/images/bgimg/icon_logo.png" >http://www.landho.cn/xwb/images/bgimg/icon_logo.png<i class="fas fa-external-link-alt"></i></a></p>
+<p> <a class="link"   target="_blank" rel="noopener" href="http://api.t.sina.com.cn/1350660627/statuses/3661160648259798" >懒猴航海的微博<i class="fas fa-external-link-alt"></i></a></p>
 
                 </div>
                 
