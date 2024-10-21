@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,33 +230,44 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="安装目的"><a href="#安装目的" class="headerlink" title="安装目的"></a>安装目的</h1><ul>
+                    <h1 id="安装目的"><a class="markdownIt-Anchor" href="#安装目的"></a> 安装目的</h1>
+<ul>
 <li>《嵌入式自我修养》中很多代码都需要进行linux中的实操，下一下吧</li>
 </ul>
-<h1 id="安装要求"><a href="#安装要求" class="headerlink" title="安装要求"></a>安装要求</h1><ul>
+<h1 id="安装要求"><a class="markdownIt-Anchor" href="#安装要求"></a> 安装要求</h1>
+<ul>
 <li>分配空间，安装一个常用的ubuntu版本镜像</li>
 <li>安装GCC编译器</li>
 <li>安装GCC-ARM-Linux-gnueabi交叉编译器</li>
 </ul>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
+<h1 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h1>
+<ul>
 <li>这里是基于arm平台来进行相关程序的梳理和讲解</li>
 </ul>
-<h1 id="ubuntu和centos7的区别"><a href="#ubuntu和centos7的区别" class="headerlink" title="ubuntu和centos7的区别"></a>ubuntu和centos7的区别</h1><p>CentOS和<a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=Ubuntu&usm=1&ie=utf-8&rsv_pq=f9c6f373005bae37&oq=centos%E5%92%8Cubuntu%E7%9A%84%E5%8C%BA%E5%88%AB&rsv_t=084a44rYVq5Yg7CzX7ZC34sGqFBmJRFj5Eto3Xa8yX5Lm4+Xj6koSDnAxrs&sa=re_dqa_zy&icon=1">Ubuntu<em></em></a>是两个流行的Linux发行版，它们在系统升级、稳定性、使用复杂度、软件管理、系统性能等方面有所区别。</p>
+<h1 id="ubuntu和centos7的区别"><a class="markdownIt-Anchor" href="#ubuntu和centos7的区别"></a> ubuntu和centos7的区别</h1>
+<p>CentOS和<a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=Ubuntu&amp;usm=1&amp;ie=utf-8&amp;rsv_pq=f9c6f373005bae37&amp;oq=centos%E5%92%8Cubuntu%E7%9A%84%E5%8C%BA%E5%88%AB&amp;rsv_t=084a44rYVq5Yg7CzX7ZC34sGqFBmJRFj5Eto3Xa8yX5Lm4%2BXj6koSDnAxrs&amp;sa=re_dqa_zy&amp;icon=1">Ubuntu<em></em></a>是两个流行的Linux发行版，它们在系统升级、稳定性、使用复杂度、软件管理、系统性能等方面有所区别。</p>
 <p>以下是一些具体区别：</p>
 <ul>
-<li><p>系统<strong>升级</strong>。CentOS升级不频繁，省事省心；Ubuntu升级比较频繁，经常需要更新系统。</p>
+<li>
+<p>系统<strong>升级</strong>。CentOS升级不频繁，省事省心；Ubuntu升级比较频繁，经常需要更新系统。</p>
 </li>
-<li><p>稳定性。CentOS被认为更安全稳定；Ubuntu升级包可能会造成系统的不稳定和不安全。</p>
+<li>
+<p>稳定性。CentOS被认为更安全稳定；Ubuntu升级包可能会造成系统的不稳定和不安全。</p>
 </li>
-<li><p><strong>使用复杂度。CentOS用户量相对较少，没有详细的使用帮助类教程，新用户上手比较难；Ubuntu拥有大量的帮助文档和教程，也有庞大的社区论坛，可以方便的获得帮助。</strong></p>
+<li>
+<p><strong>使用复杂度。CentOS用户量相对较少，没有详细的使用帮助类教程，新用户上手比较难；Ubuntu拥有大量的帮助文档和教程，也有庞大的社区论坛，可以方便的获得帮助。</strong></p>
 </li>
-<li><p>软件管理。<strong>CentOS使用.rmp包，以及使用yum进行软件管理；Ubuntu使用.deb包，以及使用apt-get进行软件管理。</strong></p>
+<li>
+<p>软件管理。<strong>CentOS使用.rmp包，以及使用yum进行软件管理；Ubuntu使用.deb包，以及使用apt-get进行软件管理。</strong></p>
 </li>
-<li><p>系统性能。两者的性能都差不多，主要还是取决于硬件配置以及软件系统。</p>
+<li>
+<p>系统性能。两者的性能都差不多，主要还是取决于硬件配置以及软件系统。</p>
 </li>
-<li><p>架构来源。**Ubuntu基于Debian架构；CentOS来自红帽子企业版Linux(RHEL)**。</p>
+<li>
+<p>架构来源。<strong>Ubuntu基于Debian架构；CentOS来自红帽子企业版Linux(RHEL)</strong>。</p>
 </li>
-<li><p>升级和稳定性。CentOS升级不频繁，省事省心；Ubuntu升级比较频繁，经常需要更新系统。</p>
+<li>
+<p>升级和稳定性。CentOS升级不频繁，省事省心；Ubuntu升级比较频繁，经常需要更新系统。</p>
 </li>
 </ul>
 <p><strong>此外，CentOS和Ubuntu在sudo权限、安装软件包命令格式等方面也有所不同。</strong></p>
@@ -289,7 +300,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240510 内存管理的相关函数</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -303,7 +314,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240509 C加加复习（五）</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -320,15 +331,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -412,7 +423,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%9B%AE%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">安装目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%A6%81%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text">安装要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu%E5%92%8Ccentos7%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text">ubuntu和centos7的区别</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%9B%AE%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text"> 安装目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%A6%81%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text"> 安装要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.</span> <span class="nav-text"> 注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu%E5%92%8Ccentos7%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text"> ubuntu和centos7的区别</span></a></li></ol>
     </div>
 </div>
 
@@ -439,7 +450,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -452,14 +463,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -565,7 +576,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%9B%AE%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">安装目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%A6%81%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text">安装要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu%E5%92%8Ccentos7%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text">ubuntu和centos7的区别</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%9B%AE%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text"> 安装目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%A6%81%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text"> 安装要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.</span> <span class="nav-text"> 注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu%E5%92%8Ccentos7%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text"> ubuntu和centos7的区别</span></a></li></ol>
     </div>
 </div>
 

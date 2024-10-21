@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,35 +230,35 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="20230128-ledcontrol"><a href="#20230128-ledcontrol" class="headerlink" title="20230128 ledcontrol"></a>20230128 ledcontrol</h1><h1 id="例子三"><a href="#例子三" class="headerlink" title="例子三"></a>例子三</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;LedControl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> DIN = <span class="number">12</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> CS =  <span class="number">11</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> CLK = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">byte e[<span class="number">8</span>]=    &#123;<span class="number">0x7C</span>,<span class="number">0x7C</span>,<span class="number">0x60</span>,<span class="number">0x7C</span>,<span class="number">0x7C</span>,<span class="number">0x60</span>,<span class="number">0x7C</span>,<span class="number">0x7C</span>&#125;;  <span class="comment">//E</span></span><br><span class="line"></span><br><span class="line">byte d[<span class="number">8</span>]=    &#123;<span class="number">0x78</span>,<span class="number">0x7C</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x7C</span>,<span class="number">0x78</span>&#125;;  <span class="comment">//D</span></span><br><span class="line"></span><br><span class="line">byte u[<span class="number">8</span>]=    &#123;<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//U</span></span><br><span class="line"></span><br><span class="line">byte c[<span class="number">8</span>]=    &#123;<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x60</span>,<span class="number">0x60</span>,<span class="number">0x60</span>,<span class="number">0x60</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//C</span></span><br><span class="line"></span><br><span class="line">byte eight[<span class="number">8</span>]= &#123;<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//8</span></span><br><span class="line"></span><br><span class="line">byte s[<span class="number">8</span>]=    &#123;<span class="number">0x7E</span>,<span class="number">0x7C</span>,<span class="number">0x60</span>,<span class="number">0x7C</span>,<span class="number">0x3E</span>,<span class="number">0x06</span>,<span class="number">0x3E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//S</span></span><br><span class="line"></span><br><span class="line">byte dot[<span class="number">8</span>]=  &#123;<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x18</span>,<span class="number">0x18</span>&#125;;  <span class="comment">//.</span></span><br><span class="line"></span><br><span class="line">byte o[<span class="number">8</span>]=    &#123;<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//O</span></span><br><span class="line"></span><br><span class="line">byte m[<span class="number">8</span>]=    &#123;<span class="number">0xE7</span>,<span class="number">0xFF</span>,<span class="number">0xFF</span>,<span class="number">0xDB</span>,<span class="number">0xDB</span>,<span class="number">0xDB</span>,<span class="number">0xC3</span>,<span class="number">0xC3</span>&#125;;  <span class="comment">//M</span></span><br><span class="line"></span><br><span class="line">LedControl lc=<span class="built_in">LedControl</span>(DIN,CLK,CS,<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">lc.<span class="built_in">shutdown</span>(<span class="number">0</span>,<span class="literal">false</span>);    <span class="comment">//启动时，MAX72XX处于省电模式</span></span><br><span class="line"></span><br><span class="line">lc.<span class="built_in">setIntensity</span>(<span class="number">0</span>,<span class="number">8</span>);    <span class="comment">//将亮度设置为最大值</span></span><br><span class="line"></span><br><span class="line">lc.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);      <span class="comment">//清除显示</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">  byte smile[<span class="number">8</span>]=  &#123;<span class="number">0x3C</span>,<span class="number">0x42</span>,<span class="number">0xA5</span>,<span class="number">0x81</span>,<span class="number">0xA5</span>,<span class="number">0x99</span>,<span class="number">0x42</span>,<span class="number">0x3C</span>&#125;;<span class="comment">//笑脸</span></span><br><span class="line"></span><br><span class="line">  byte neutral[<span class="number">8</span>]= &#123;<span class="number">0x3C</span>,<span class="number">0x42</span>,<span class="number">0xA5</span>,<span class="number">0x81</span>,<span class="number">0xBD</span>,<span class="number">0x81</span>,<span class="number">0x42</span>,<span class="number">0x3C</span>&#125;;<span class="comment">//标准脸  </span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">printByte</span>(eight);<span class="comment">//显示8</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">1000</span>);<span class="comment">//延时1秒</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">printByte</span>(neutral);<span class="comment">//显示标准脸</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//点阵显示函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printByte</span><span class="params">(byte character [])</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">8</span>;i++)</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">  lc.<span class="built_in">setRow</span>(<span class="number">0</span>,i,character[i]);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="例子一"><a href="#例子一" class="headerlink" title="例子一"></a>例子一</h1><p>#include “LedControl.h”</p>
-<p>LedControl lc&#x3D;LedControl(12,11,10,1);</p>
+                    <h1 id="20230128-ledcontrol"><a class="markdownIt-Anchor" href="#20230128-ledcontrol"></a> 20230128 ledcontrol</h1>
+<h1 id="例子三"><a class="markdownIt-Anchor" href="#例子三"></a> 例子三</h1>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;LedControl.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> DIN = <span class="number">12</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> CS =  <span class="number">11</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> CLK = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">byte e[<span class="number">8</span>]=    &#123;<span class="number">0x7C</span>,<span class="number">0x7C</span>,<span class="number">0x60</span>,<span class="number">0x7C</span>,<span class="number">0x7C</span>,<span class="number">0x60</span>,<span class="number">0x7C</span>,<span class="number">0x7C</span>&#125;;  <span class="comment">//E</span></span><br><span class="line"></span><br><span class="line">byte d[<span class="number">8</span>]=    &#123;<span class="number">0x78</span>,<span class="number">0x7C</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x7C</span>,<span class="number">0x78</span>&#125;;  <span class="comment">//D</span></span><br><span class="line"></span><br><span class="line">byte u[<span class="number">8</span>]=    &#123;<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//U</span></span><br><span class="line"></span><br><span class="line">byte c[<span class="number">8</span>]=    &#123;<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x60</span>,<span class="number">0x60</span>,<span class="number">0x60</span>,<span class="number">0x60</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//C</span></span><br><span class="line"></span><br><span class="line">byte eight[<span class="number">8</span>]= &#123;<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//8</span></span><br><span class="line"></span><br><span class="line">byte s[<span class="number">8</span>]=    &#123;<span class="number">0x7E</span>,<span class="number">0x7C</span>,<span class="number">0x60</span>,<span class="number">0x7C</span>,<span class="number">0x3E</span>,<span class="number">0x06</span>,<span class="number">0x3E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//S</span></span><br><span class="line"></span><br><span class="line">byte dot[<span class="number">8</span>]=  &#123;<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x00</span>,<span class="number">0x18</span>,<span class="number">0x18</span>&#125;;  <span class="comment">//.</span></span><br><span class="line"></span><br><span class="line">byte o[<span class="number">8</span>]=    &#123;<span class="number">0x7E</span>,<span class="number">0x7E</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x66</span>,<span class="number">0x7E</span>,<span class="number">0x7E</span>&#125;;  <span class="comment">//O</span></span><br><span class="line"></span><br><span class="line">byte m[<span class="number">8</span>]=    &#123;<span class="number">0xE7</span>,<span class="number">0xFF</span>,<span class="number">0xFF</span>,<span class="number">0xDB</span>,<span class="number">0xDB</span>,<span class="number">0xDB</span>,<span class="number">0xC3</span>,<span class="number">0xC3</span>&#125;;  <span class="comment">//M</span></span><br><span class="line"></span><br><span class="line">LedControl lc=<span class="built_in">LedControl</span>(DIN,CLK,CS,<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">lc.<span class="built_in">shutdown</span>(<span class="number">0</span>,<span class="literal">false</span>);    <span class="comment">//启动时，MAX72XX处于省电模式</span></span><br><span class="line"></span><br><span class="line">lc.<span class="built_in">setIntensity</span>(<span class="number">0</span>,<span class="number">8</span>);    <span class="comment">//将亮度设置为最大值</span></span><br><span class="line"></span><br><span class="line">lc.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);      <span class="comment">//清除显示</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">  byte smile[<span class="number">8</span>]=  &#123;<span class="number">0x3C</span>,<span class="number">0x42</span>,<span class="number">0xA5</span>,<span class="number">0x81</span>,<span class="number">0xA5</span>,<span class="number">0x99</span>,<span class="number">0x42</span>,<span class="number">0x3C</span>&#125;;<span class="comment">//笑脸</span></span><br><span class="line"></span><br><span class="line">  byte neutral[<span class="number">8</span>]= &#123;<span class="number">0x3C</span>,<span class="number">0x42</span>,<span class="number">0xA5</span>,<span class="number">0x81</span>,<span class="number">0xBD</span>,<span class="number">0x81</span>,<span class="number">0x42</span>,<span class="number">0x3C</span>&#125;;<span class="comment">//标准脸  </span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">printByte</span>(eight);<span class="comment">//显示8</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">1000</span>);<span class="comment">//延时1秒</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">printByte</span>(neutral);<span class="comment">//显示标准脸</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//点阵显示函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printByte</span><span class="params">(byte character [])</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">8</span>;i++)</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">  lc.<span class="built_in">setRow</span>(<span class="number">0</span>,i,character[i]);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="例子一"><a class="markdownIt-Anchor" href="#例子一"></a> 例子一</h1>
+<p>#include “LedControl.h”</p>
+<p>LedControl lc=LedControl(12,11,10,1);</p>
 <p>void setup() {</p>
-<p>  &#x2F;*</p>
-<p>   MAX72XX默认是节能模式，需要将其唤醒</p>
-<p>   *&#x2F;</p>
-<p>  lc.shutdown(0,false);</p>
-<p>  &#x2F;* 设置亮度 *&#x2F;</p>
-<p>  lc.setIntensity(0,8);</p>
-<p>  &#x2F;* 清空 *&#x2F;</p>
-<p>  lc.clearDisplay(0);</p>
+<p>/*</p>
+<p>MAX72XX默认是节能模式，需要将其唤醒</p>
+<p>*/</p>
+<p>lc.shutdown(0,false);</p>
+<p>/* 设置亮度 */</p>
+<p>lc.setIntensity(0,8);</p>
+<p>/* 清空 */</p>
+<p>lc.clearDisplay(0);</p>
 <p>}</p>
 <p>void loop()</p>
 <p>{</p>
-<p> lc.setLed(0,2,7,true);</p>
-<p>&#x2F;&#x2F;点亮第三行第八列的LED灯</p>
+<p>lc.setLed(0,2,7,true);</p>
+<p>//点亮第三行第八列的LED灯</p>
 <p>lc.setLed(0,0,1,true);</p>
-<p>&#x2F;&#x2F;点亮第一行第二列的LED灯</p>
+<p>//点亮第一行第二列的LED灯</p>
 <p>delay(500);</p>
 <p>lc.setLed(0,2,7,false);</p>
 <p>lc.setLed(0,0,1,false);</p>
 <p>delay(500);</p>
 <p>}</p>
 <p>解释：</p>
-<p>LedControl lc&#x3D;LedControl(12,11,10,1);</p>
+<p>LedControl lc=LedControl(12,11,10,1);</p>
 <p>该行代码声明了一个LEDControl类型的一个实例  Ic  ，占用Arduino12,11,10三个数字针脚，任意三个数字针脚都可以，但是建议不要使用0，1,13号针脚。</p>
 <p>最后的参数1，表示的意思是只使用了一块LED矩阵，如果是多块LED矩阵连在一起的画需要修改该参数。</p>
 <p><strong>另外一个重要的函数是</strong></p>
@@ -268,18 +268,19 @@
 <p>row：LED矩阵的行</p>
 <p>value:在一行LED中显示的值，使用byte数据类型（0表示LED灭，1代表LED亮），如</p>
 <p>byte数据B11111110,表示第一至第七列的LED亮，第八列的LED灭</p>
-<h1 id="例子二"><a href="#例子二" class="headerlink" title="例子二"></a>例子二</h1><p>#include “LedControl.h”</p>
-<p>LedControl lc&#x3D;LedControl(12,11,10,1);</p>
-<p>unsigned long delaytime&#x3D;100;</p>
+<h1 id="例子二"><a class="markdownIt-Anchor" href="#例子二"></a> 例子二</h1>
+<p>#include “LedControl.h”</p>
+<p>LedControl lc=LedControl(12,11,10,1);</p>
+<p>unsigned long delaytime=100;</p>
 <p>void setup() {</p>
-<p>  &#x2F;*</p>
-<p>   MAX72XX默认是节能模式，需要将其唤醒</p>
-<p>   *&#x2F;</p>
-<p>  lc.shutdown(0,false);</p>
-<p>  &#x2F;* 设置亮度 *&#x2F;</p>
-<p>  lc.setIntensity(0,8);</p>
-<p>  &#x2F;* 清空 *&#x2F;</p>
-<p>  lc.clearDisplay(0);</p>
+<p>/*</p>
+<p>MAX72XX默认是节能模式，需要将其唤醒</p>
+<p>*/</p>
+<p>lc.shutdown(0,false);</p>
+<p>/* 设置亮度 */</p>
+<p>lc.setIntensity(0,8);</p>
+<p>/* 清空 */</p>
+<p>lc.clearDisplay(0);</p>
 <p>}</p>
 <p>void loop()</p>
 <p>{</p>
@@ -338,7 +339,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20230222 电子沙漏</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -352,7 +353,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20221223 arduino</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -369,15 +370,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -461,7 +462,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230128-ledcontrol"><span class="nav-number">1.</span> <span class="nav-text">20230128 ledcontrol</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%89"><span class="nav-number">2.</span> <span class="nav-text">例子三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text">例子一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text">例子二</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230128-ledcontrol"><span class="nav-number">1.</span> <span class="nav-text"> 20230128 ledcontrol</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%89"><span class="nav-number">2.</span> <span class="nav-text"> 例子三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 例子一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 例子二</span></a></li></ol>
     </div>
 </div>
 
@@ -488,7 +489,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -501,14 +502,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -614,7 +615,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230128-ledcontrol"><span class="nav-number">1.</span> <span class="nav-text">20230128 ledcontrol</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%89"><span class="nav-number">2.</span> <span class="nav-text">例子三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text">例子一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text">例子二</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230128-ledcontrol"><span class="nav-number">1.</span> <span class="nav-text"> 20230128 ledcontrol</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%89"><span class="nav-number">2.</span> <span class="nav-text"> 例子三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 例子一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 例子二</span></a></li></ol>
     </div>
 </div>
 

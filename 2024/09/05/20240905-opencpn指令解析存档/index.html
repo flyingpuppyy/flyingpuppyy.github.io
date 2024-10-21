@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,17 +230,20 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="参考来源"><a href="#参考来源" class="headerlink" title="参考来源"></a>参考来源</h1><p><a class="link"   target="_blank" rel="noopener" href="https://blog.sina.com.cn/s/blog_508172130101fjuv.html" >https://blog.sina.com.cn/s/blog_508172130101fjuv.html<i class="fas fa-external-link-alt"></i></a></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202409051502480.png"  alt="image-20240905150207262"></p>
-<h1 id="文章内容"><a href="#文章内容" class="headerlink" title="文章内容"></a>文章内容</h1><p><strong>摘要</strong>: OpenCPN探索—绘图指令解读概述： 前面已经发表过OpenCPN海图显示的相关文章，海图显示一文主要从函数级别上讲解显示的流程步骤。今天的绘图指令解读主要从文件级别上解析绘图指令含义以及在OpenCPN上是如何分解 …</p>
-<p>**<a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/forum-198-1.html" >opencpn<i class="fas fa-external-link-alt"></i></a>探索—绘图指令解读****概述：<br>**中船工业系统工程研究院 &amp;&amp; 西安融成科技有限公司<a class="link"   target="_blank" rel="noopener" href="http://map.landho.cn/" >电子海图<i class="fas fa-external-link-alt"></i></a>讲座</p>
+                    <h1 id="参考来源"><a class="markdownIt-Anchor" href="#参考来源"></a> 参考来源</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.sina.com.cn/s/blog_508172130101fjuv.html" >https://blog.sina.com.cn/s/blog_508172130101fjuv.html<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202409051502480.png"  alt="image-20240905150207262" ></p>
+<h1 id="文章内容"><a class="markdownIt-Anchor" href="#文章内容"></a> 文章内容</h1>
+<p><strong>摘要</strong>: OpenCPN探索—绘图指令解读概述： 前面已经发表过OpenCPN海图显示的相关文章，海图显示一文主要从函数级别上讲解显示的流程步骤。今天的绘图指令解读主要从文件级别上解析绘图指令含义以及在OpenCPN上是如何分解 …</p>
+<p>**<a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/forum-198-1.html" >opencpn<i class="fas fa-external-link-alt"></i></a>探索—绘图指令解读****概述：<br />
+**中船工业系统工程研究院 &amp;&amp; 西安融成科技有限公司<a class="link"   target="_blank" rel="noopener" href="http://map.landho.cn" >电子海图<i class="fas fa-external-link-alt"></i></a>讲座</p>
 <p>​    前面已经发表过OpenCPN海图显示的相关文章，海图显示一文主要从函数级别上讲解显示的流程步骤。今天的绘图指令解读主要从文件级别上解析绘图指令含义以及在OpenCPN上是如何分解转义该指令的。</p>
 <p>​    OpenCPN中绘图指令初始化获取的方式有两种：</p>
 <p>​    1：根据obj对象查找对应的S52绘图指令；</p>
 <p>​    2：条件符号化的绘图指令转移到回调函数中动态生成；</p>
 <p>​    具体生成指令的方式将在后面发表的文章中详述，本文先针对S52中的绘图指令进行分析。</p>
 <p><strong>分析：</strong></p>
-<p>​    OpenCPN中S52绘图指令主要来源于chartsymbols.xml&#x2F;S52RAZDS.RLE,这两个文件可以在OpenCPN工程中找到。两个文件格式不太一样，但是内容几乎是一样的，OpenCPN中对这两个文件进行了区分，S52RAZDS.RLE属于旧格式文件，chartsymbols.xml是新格式文件。为了方便阅读，本文以chartsymbols.xml作为介绍对象。</p>
+<p>​    OpenCPN中S52绘图指令主要来源于chartsymbols.xml/S52RAZDS.RLE,这两个文件可以在OpenCPN工程中找到。两个文件格式不太一样，但是内容几乎是一样的，OpenCPN中对这两个文件进行了区分，S52RAZDS.RLE属于旧格式文件，chartsymbols.xml是新格式文件。为了方便阅读，本文以chartsymbols.xml作为介绍对象。</p>
 <p><strong>chartsymbols.xml介绍</strong></p>
 <p>文件结构：文件分为5部分，分别是：</p>
 <p>1：color-tables 记录的是S52标准下各种现实模式的基准色；</p>
@@ -251,20 +254,20 @@
 <p>这几部分的关系是：lookups提供总体绘制方法，在绘制方法中调用其他部分的定义实现最终的绘制。也就是说，一个obj对象的绘制，首先需要定位到它属于lookups中的哪一类，再根据lookups的记录查找线、图案、符号和颜色完成绘制和填充。</p>
 <p>在OpenCPN中obj对象绘制前必须与S52文件中的一个lookups匹配上，根据匹配的结果中记录的绘制指令进行绘制。</p>
 <p>在文件中各个符号简称是有意义的：</p>
-<p>SY———符号类型，它带的参数需要到symbols中去找对应的绘制指令；</p>
-<p>CS——————————–条件符号化，这个目前比较复杂，在OpenCPN中很多条件符号化的指令都是在代码中动态生成的，本文对此不做介绍，以后针对条件符号化解析会有详细介绍。</p>
-<p>LS———————————简单线，在color-tables查找颜色，宽度和线型在括号中；</p>
-<p>LC———————————复杂线，在symbols中可以查找指令；</p>
-<p>AC———————————颜色填充，在color-tables中查找颜色；</p>
-<p>AP———————————图案填充，在patterns中查找图案</p>
-<p>TE——————————–数值类文字，需要字母加以区分</p>
-<p>TX———————————普通字符串</p>
+<p>SY---------符号类型，它带的参数需要到symbols中去找对应的绘制指令；</p>
+<p>CS--------------------------------条件符号化，这个目前比较复杂，在OpenCPN中很多条件符号化的指令都是在代码中动态生成的，本文对此不做介绍，以后针对条件符号化解析会有详细介绍。</p>
+<p>LS---------------------------------简单线，在color-tables查找颜色，宽度和线型在括号中；</p>
+<p>LC---------------------------------复杂线，在symbols中可以查找指令；</p>
+<p>AC---------------------------------颜色填充，在color-tables中查找颜色；</p>
+<p>AP---------------------------------图案填充，在patterns中查找图案</p>
+<p>TE--------------------------------数值类文字，需要字母加以区分</p>
+<p>TX---------------------------------普通字符串</p>
 <p>​    OpenCPN工程根据这些将obj进行匹配，最终得到一串绘制指令，类似于：SPC;PU1500,565;ST0;PM0;CI110;PM2;FP;PU1500,840;PM0;CI110;PM2;FP…这个指令即用来完成最终图像绘制。解读这个指令的函数是RenderFromHPGL::Render。</p>
 <p><strong>解析函数介绍</strong></p>
 <p>解析函数RenderFromHPGL::Render的理解最好能跟着一段解析调试过程进行理解。</p>
 <p>解析的步骤：</p>
-<p>1：SP———获取绘制的画笔颜色和画刷颜色；</p>
-<p>2：SW——–获取画笔的宽度；</p>
+<p>1：SP---------获取绘制的画笔颜色和画刷颜色；</p>
+<p>2：SW--------获取画笔的宽度；</p>
 <p>3：PU</p>
 <p>A:设置画笔</p>
 <p>B:获取线的起始点</p>
@@ -272,25 +275,25 @@
 <p>4：PD</p>
 <p>A:获取线的结束点</p>
 <p>B:绘制一根线</p>
-<p>5：CI———-设置半径直接画圆；</p>
-<p>6：PM———绘制复杂多边形，中间会调用PD、CI绘制线和圆；</p>
-<p>7：FP———-绘制多边形；</p>
+<p>5：CI----------设置半径直接画圆；</p>
+<p>6：PM---------绘制复杂多边形，中间会调用PD、CI绘制线和圆；</p>
+<p>7：FP----------绘制多边形；</p>
 <p>指令解释（请参考S52标准）：</p>
-<p>SP用于选择一种画笔颜色，参数是一个字母（ASCII&gt;&#x3D;64），该参数标示一种S52颜色表中标定的颜色。当一种画笔颜色被选定以后直到出现新的SP指令选择新的画笔前，所有的绘制指令均采用上一次设置的画笔进行绘制。</p>
+<p>SP用于选择一种画笔颜色，参数是一个字母（ASCII&gt;=64），该参数标示一种S52颜色表中标定的颜色。当一种画笔颜色被选定以后直到出现新的SP指令选择新的画笔前，所有的绘制指令均采用上一次设置的画笔进行绘制。</p>
 <p>ST 透明度，仅对填充区域有效。</p>
 <p>SW 宽度，定义了线的物理宽度。</p>
 <p>PU 移动的过程，中间并没有任何绘制过程，仅仅是移动画笔。</p>
 <p>PD 绘制的过程，移动过程中完成一条线的绘制。</p>
 <p>CI 绘制圆的过程，绘制完成后，画笔重新回到圆心。</p>
 <p>AA 绘制弧的过程，顺时针绘制，绘制完成后不返回画笔初始位置。</p>
-<p>PM 多边形定义模式。在该模式下,您可以使用其他指示构造多边形(PU、PD、CI、AA)。这些指令都在存储缓冲区多边形;他们不执行,直到多边形完全定义。为了绘制多边形必须填补它与FP指令和&#x2F;或EP指令。</p>
+<p>PM 多边形定义模式。在该模式下,您可以使用其他指示构造多边形(PU、PD、CI、AA)。这些指令都在存储缓冲区多边形;他们不执行,直到多边形完全定义。为了绘制多边形必须填补它与FP指令和/或EP指令。</p>
 <p>EP绘制已经存储的多边形。完成后,恢复原来的笔的位置和状态。</p>
 <p>FP 填充已经存储的多边形。完成后,恢复原来的笔的位置和状态。</p>
 <p>SC 调用一个符号定义，完成符号的绘制。</p>
 <p><a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/static/image/filetype/pdf.gif" >http://www.landho.cn/static/image/filetype/pdf.gif<i class="fas fa-external-link-alt"></i></a></p>
-<p><a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/forum.php?mod=attachment&aid=MTA4Njg3fGE5NzI5NDVhfDEzODgzNzIxODJ8MHw0OTY3NQ==" >OpenCPN探索–HPGL指令分析.pdf<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/forum.php?mod=attachment&amp;aid=MTA4Njg3fGE5NzI5NDVhfDEzODgzNzIxODJ8MHw0OTY3NQ==" >OpenCPN探索–HPGL指令分析.pdf<i class="fas fa-external-link-alt"></i></a></p>
 <p><a class="link"   target="_blank" rel="noopener" href="http://www.landho.cn/xwb/images/bgimg/icon_logo.png" >http://www.landho.cn/xwb/images/bgimg/icon_logo.png<i class="fas fa-external-link-alt"></i></a></p>
-<p> <a class="link"   target="_blank" rel="noopener" href="http://api.t.sina.com.cn/1350660627/statuses/3661160648259798" >懒猴航海的微博<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="http://api.t.sina.com.cn/1350660627/statuses/3661160648259798" >懒猴航海的微博<i class="fas fa-external-link-alt"></i></a></p>
 
                 </div>
                 
@@ -320,7 +323,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240905 从白兰地的原料开始</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -334,7 +337,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240905 海图基本概念存档</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -351,15 +354,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -443,7 +446,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">参考来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">文章内容</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 参考来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text"> 文章内容</span></a></li></ol>
     </div>
 </div>
 
@@ -470,7 +473,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -483,14 +486,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -596,7 +599,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">参考来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">文章内容</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 参考来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text"> 文章内容</span></a></li></ol>
     </div>
 </div>
 

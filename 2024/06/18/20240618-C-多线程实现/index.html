@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,31 +230,41 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
-<li><p>先从最熟悉的东西开始完成自己的开始</p>
+                    <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<ul>
+<li>
+<p>先从最熟悉的东西开始完成自己的开始</p>
 </li>
-<li><h1 id="开始吧"><a href="#开始吧" class="headerlink" title="开始吧"></a>开始吧</h1></li>
-<li><p>本书是介绍如何使用C++11多线程来编写并发程序，及相关的语言特性和库工具(library facilities)。本书以“解释并发和多线程的含义，为什么要使用并发”作为起始点，在对“什么情况下不使用并发”进行阐述之后，将对C++支持的并发方式进行概述；</p>
-<p>最后，以一个简单的C++并发实例结束这一章。资深的多线程开发人员可以跳过前面的小节。在后面的几个章节中，会有更多的例子，以便大家对库工具进行更加深入的了解。本书最后，将会给出所有多线程与并发相关的C++标准库工具的全面参考。</p>
+<li>
+<h1 id="开始吧"><a class="markdownIt-Anchor" href="#开始吧"></a> 开始吧</h1>
 </li>
-<li><p>看代码的时候先看thread，全部先看thread</p>
+<li>
+<p>本书是介绍如何使用C<ins>11多线程来编写并发程序，及相关的语言特性和库工具(library facilities)。本书以“解释并发和多线程的含义，为什么要使用并发”作为起始点，在对“什么情况下不使用并发”进行阐述之后，将对C</ins>支持的并发方式进行概述；</p>
+<p>最后，以一个简单的C<ins>并发实例结束这一章。资深的多线程开发人员可以跳过前面的小节。在后面的几个章节中，会有更多的例子，以便大家对库工具进行更加深入的了解。本书最后，将会给出所有多线程与并发相关的C</ins>标准库工具的全面参考。</p>
+</li>
+<li>
+<p>看代码的时候先看thread，全部先看thread</p>
 </li>
 </ul>
-<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>前4章，介绍了标准库提供的各种库工具，展示了使用方法。</p>
+<h1 id="目录"><a class="markdownIt-Anchor" href="#目录"></a> 目录</h1>
+<p>前4章，介绍了标准库提供的各种库工具，展示了使用方法。</p>
 <p>第5章，涵盖了底层内存模型和原子操作的实际情况，包括原子操作如何对执行顺序进行限制(这章标志着介绍部分的结束)。</p>
 <p>第6、7章，开始讨论高级主题，如何使用基本工具去构建复杂的数据结构——第6章是基于锁的数据结构，第7章是无锁数据结构。</p>
 <p>第8章，对设计多线程代码给了一些指导意见，覆盖了性能问题和并行算法。</p>
 <p>第9章，线程管理——线程池，工作队列和中断操作。</p>
 <p>第10章，测试和调试——Bug类型，定位Bug的技巧，以及如何进行测试等等。</p>
 <p>附录，包括新的语言特性的简要描述，主要是与多线程相关的特性，以及在第4章中提到的消息传递库的实现细节和C++11线程库的完整的参考。</p>
-<h1 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h1><ul>
-<li><p>什么是并发，什么场景算是并发？</p>
+<h1 id="并发"><a class="markdownIt-Anchor" href="#并发"></a> 并发</h1>
+<ul>
+<li>
+<p>什么是并发，什么场景算是并发？</p>
 <blockquote>
 <p>理解并发你才能够明白我们需要处理什么问题。</p>
 <p>计算机领域的并发指的是在单个系统里<strong>同时执行多个独立的任务</strong>，而非顺序的进行一些活动。</p>
 </blockquote>
 </li>
-<li><p>并行和并发的区别是什么？</p>
+<li>
+<p>并行和并发的区别是什么？</p>
 </li>
 </ul>
 <blockquote>
@@ -270,44 +280,43 @@
 <p>二：</p>
 <p>并行(parallel)：指在同一时刻，有多条指令在多个处理器上同时执行。</p>
 <p>就好像两个人各拿一把铁锨在挖坑，一小时后，每人一个大坑。所以无论从微观还是从宏观来看，二者都是一起执行的。</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240618191952059.png"  alt="image-20240618191952059"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240618192047269.png"  alt="image-20240618192047269"></p>
-<p>三<br>当有多个线程在操作时,如果系统只有一个CPU,则它根本不可能真正同时进行一个以上的线程,它只能把CPU运行时间划分成若干个时间段,再将时间段分配给各个线程执行,在一个时间段的线程代码运行时,其它线程处于挂起状态.这种方式我们称之为并发(Concurrent)。</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240618191952059.png"  alt="image-20240618191952059" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240618192047269.png"  alt="image-20240618192047269" ></p>
+<p>三<br />
+当有多个线程在操作时,如果系统只有一个CPU,则它根本不可能真正同时进行一个以上的线程,它只能把CPU运行时间划分成若干个时间段,再将时间段分配给各个线程执行,在一个时间段的线程代码运行时,其它线程处于挂起状态.这种方式我们称之为并发(Concurrent)。</p>
 <p>当系统有一个以上CPU时,则线程的操作有可能非并发.当一个CPU执行一个线程时,另一个CPU可以执行另一个线程,两个线程互不抢占CPU资源,可以同时进行,这种方式我们称之为并行(Parallel)。</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240618192221881.png"  alt="image-20240618192221881"></p>
-<h1 id="为什么需要使用并发？"><a href="#为什么需要使用并发？" class="headerlink" title="为什么需要使用并发？"></a>为什么需要使用并发？</h1><ul>
-<li><p><strong>使用并发分离不同的功能区域</strong>：一个线程可以处理“用户界面”事件，另一个进行“DVD播放”。它们之间会有交互(用户点击“暂停”)，不过任务间需要人为的进行关联。</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240618192221881.png"  alt="image-20240618192221881" ></p>
+<h1 id="为什么需要使用并发"><a class="markdownIt-Anchor" href="#为什么需要使用并发"></a> 为什么需要使用并发？</h1>
+<ul>
+<li>
+<p><strong>使用并发分离不同的功能区域</strong>：一个线程可以处理“用户界面”事件，另一个进行“DVD播放”。它们之间会有交互(用户点击“暂停”)，不过任务间需要人为的进行关联。</p>
 </li>
-<li><p><strong>提高性能</strong>：</p>
+<li>
+<p><strong>提高性能</strong>：</p>
 <blockquote>
 <p>1.第一，将一个单个任务分成几部分，且各自并行运行，从而降低总运行时间。这就是<strong>任务并行（<em>task parallelism</em>）</strong>。虽然这听起来很直观，但它是一个相当复杂的过程，因为在各个部分之间可能存在着依赖。</p>
 <p>2.区别可能是在过程方面——一个线程执行算法的一部分，而另一个线程执行算法的另一个部分——或是在数据方面——每个线程在不同的数据部分上执行相同的操作（第二种方式）。(<strong>数据并行</strong>)</p>
-<hr>
+<hr />
 <p>1.易并行算法具有良好的可扩展特性——当可用硬件线程的数量增加时，算法的并行性也会随之增加。这种算法能很好的体现<em>人多力量大</em>。(?看不懂)</p>
 <p>2.通过对多组数据同时执行相同的操作。例如，可以并行处理图片的各部分，就能提高视频的分辨率。</p>
 </blockquote>
 </li>
 </ul>
-<h1 id="什么时候不使用并发"><a href="#什么时候不使用并发" class="headerlink" title="什么时候不使用并发"></a>什么时候不使用并发</h1><p>基本上，不使用并发的唯一原因就是，收益比不上成本。</p>
+<h1 id="什么时候不使用并发"><a class="markdownIt-Anchor" href="#什么时候不使用并发"></a> 什么时候不使用并发</h1>
+<p>基本上，不使用并发的唯一原因就是，收益比不上成本。</p>
 <p>收益：性能、可维护性、可拓展性、更清晰的代码分离点</p>
 <p>成本：分析并发的脑力成本、所需的额外的开发时间以及与维护多线程代码相关的额外成本。此外，线程是有限的资源。如果让太多的线程同时运行，则会消耗很多操作系统资源，从而使得操作系统整体上运行得更加缓慢。</p>
-<h1 id="启动线程的注意事项"><a href="#启动线程的注意事项" class="headerlink" title="启动线程的注意事项"></a>启动线程的注意事项</h1><p>&#x2F;&#x2F;√</p>
+<h1 id="启动线程的注意事项"><a class="markdownIt-Anchor" href="#启动线程的注意事项"></a> 启动线程的注意事项</h1>
+<p>//√</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">background_task</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">operator</span><span class="params">()</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="built_in">do_something</span>();</span><br><span class="line">    <span class="built_in">do_something_else</span>();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">background_task f;</span><br><span class="line"><span class="function">std::thread <span class="title">my_thread</span><span class="params">(f)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;&#x2F;×</p>
+<p>//×</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::thread <span class="title">my_thread</span><span class="params">(background_task())</span></span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>&#x2F;&#x2F;√</p>
+<p>//√</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::thread <span class="title">my_thread</span><span class="params">((background_task()))</span></span>;  <span class="comment">// 1</span></span><br><span class="line">std::thread my_thread&#123;<span class="built_in">background_task</span>()&#125;;    <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;&#x2F;√</p>
+<p>//√</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::thread <span class="title">my_thread</span><span class="params">([]&#123;</span></span></span><br><span class="line"><span class="params"><span class="function">  do_something();</span></span></span><br><span class="line"><span class="params"><span class="function">  do_something_else();</span></span></span><br><span class="line"><span class="params"><span class="function">&#125;)</span></span>;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="RALL"><a href="#RALL" class="headerlink" title="RALL"></a>RALL</h1><p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240618203719605.png"  alt="image-20240618203719605"></p>
+<h1 id="rall"><a class="markdownIt-Anchor" href="#rall"></a> RALL</h1>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240618203719605.png"  alt="image-20240618203719605" ></p>
 <blockquote>
 <p>当线程执行到④处时，局部对象就要被逆序销毁了。因此，thread_guard对象g是第一个被销毁的，这时线程在析构函数中被加入②到原始线程中。即使do_something_in_current_thread抛出一个异常，这个销毁依旧会发生。</p>
 <p><strong>观察这个机制，在主线程结束前，thread_guard必然会将进行线程的join操作</strong></p>
@@ -315,10 +324,13 @@
 <p>拷贝构造函数和拷贝赋值操作被标记为<code>=delete</code>③，是为了不让编译器自动生成它们。直接对一个对象进行拷贝或赋值是危险的，因为这可能会弄丢已经加入的线程。通过删除声明，任何尝试给thread_guard对象赋值的操作都会引发一个编译错误。</p>
 <p>如果不想等待线程结束，可以_分离_(_detaching)线程，从而避免_异常安全*(exception-safety)问题。不过，这就打破了线程与<code>std::thread</code>对象的联系，即使线程仍然在后台运行着，分离操作也能确保<code>std::terminate()</code>在<code>std::thread</code>对象销毁才被调用。</p>
 </blockquote>
-<h1 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h1><ul>
-<li><p>分离线程&#x2F;守护线程_(daemon threads),UNIX中守护线程是指，没有任何显式的用户接口，并在后台运行的线程。</p>
+<h1 id="守护线程"><a class="markdownIt-Anchor" href="#守护线程"></a> 守护线程</h1>
+<ul>
+<li>
+<p>分离线程/守护线程_(daemon threads),UNIX中守护线程是指，没有任何显式的用户接口，并在后台运行的线程。</p>
 </li>
-<li><p>相应的<code>std::thread</code>对象就与实际执行的线程无关了，并且这个线程也无法加入</p>
+<li>
+<p>相应的<code>std::thread</code>对象就与实际执行的线程无关了，并且这个线程也无法加入</p>
 </li>
 </ul>
 <blockquote>
@@ -330,59 +342,68 @@
 <p>试想如何能让一个文字处理应用同时编辑多个文档。无论是用户界面，还是在内部应用内部进行，都有很多的解决方法。虽然，这些窗口看起来是完全独立的，每个窗口都有自己独立的菜单选项，但他们却运行在同一个应用实例中。一种内部处理方式是，让每个文档处理窗口拥有自己的线程；每个线程运行同样的的代码，并隔离不同窗口处理的数据。如此这般，打开一个文档就要启动一个新线程。因为是对独立的文档进行操作，所以没有必要等待其他线程完成。</p>
 <p>因此，这里就可以让文档处理窗口运行在分离的线程上。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">edit_document</span><span class="params">(std::string <span class="type">const</span>&amp; filename)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">open_document_and_display_gui</span>(filename);</span><br><span class="line">  <span class="keyword">while</span>(!<span class="built_in">done_editing</span>())</span><br><span class="line">  &#123;</span><br><span class="line">    user_command cmd=<span class="built_in">get_user_input</span>();</span><br><span class="line">    <span class="keyword">if</span>(cmd.type == open_new_document)</span><br><span class="line">    &#123;</span><br><span class="line">      std::string <span class="type">const</span> new_name=<span class="built_in">get_filename_from_user</span>();</span><br><span class="line">      <span class="function">std::thread <span class="title">t</span><span class="params">(edit_document,new_name)</span></span>;  <span class="comment">// 1</span></span><br><span class="line">      t.<span class="built_in">detach</span>();  <span class="comment">// 2</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">       <span class="built_in">process_user_input</span>(cmd);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>假设我同时编辑试图在两个不同的线程中操作相同的文件</p>
 <p>要么在开启线程之前就应该判断操作的是否是相同的东西</p>
 <p>要么就设置互斥锁之类的吧</p>
 </blockquote>
-<h1 id="线程传递参数"><a href="#线程传递参数" class="headerlink" title="线程传递参数"></a>线程传递参数</h1><p>在多线程编程中向线程函数传递参数是一个常见的需求。本文讨论了几种不同场景下传递参数的方式及其注意事项，并提出了相应的解决方案。</p>
+<h1 id="线程传递参数"><a class="markdownIt-Anchor" href="#线程传递参数"></a> 线程传递参数</h1>
+<p>在多线程编程中向线程函数传递参数是一个常见的需求。本文讨论了几种不同场景下传递参数的方式及其注意事项，并提出了相应的解决方案。</p>
 <ul>
-<li><p>传引用</p>
+<li>
+<p>传引用</p>
 </li>
-<li><p>参数的类型转化</p>
+<li>
+<p>参数的类型转化</p>
 </li>
-<li><p>传递函数指针、函数对象</p>
+<li>
+<p>传递函数指针、函数对象</p>
 </li>
-<li><p>传递unique_ptr</p>
+<li>
+<p>传递unique_ptr</p>
 </li>
-<li><p>传递share_ptr</p>
+<li>
+<p>传递share_ptr</p>
 </li>
-<li><p>关于上面两个指针的线程安全问题和访问权限的问题</p>
+<li>
+<p>关于上面两个指针的线程安全问题和访问权限的问题</p>
 </li>
 </ul>
-<h1 id="转移线程所有权"><a href="#转移线程所有权" class="headerlink" title="转移线程所有权"></a>转移线程所有权</h1><ul>
+<h1 id="转移线程所有权"><a class="markdownIt-Anchor" href="#转移线程所有权"></a> 转移线程所有权</h1>
+<ul>
 <li>对象名本身是一个壳子：移动语义在不同的 <code>std::thread</code>对象之间转移线程的所有权</li>
 <li>函数的返回值或参数，通过移动语义在函数间传递。</li>
 <li><code>scoped_thread</code>类确保线程在其作用域结束时完成</li>
 <li>应用：自动化管理大量线程</li>
 <li><code>std::thread</code>支持移动，但不支持拷贝</li>
 </ul>
-<h1 id="线程数量的获取与应用"><a href="#线程数量的获取与应用" class="headerlink" title="线程数量的获取与应用"></a>线程数量的获取与应用</h1><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>使用并行算法可以显著提升计算性能，特别是在多核系统中。 C++11引入的 <code>std::thread</code>和 <code>std::thread::hardware_concurrency()</code>提供了便捷的工具来编写并行算法。以下将介绍如何实现一个并行版本的<code>std::accumulate</code>。</p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>下面的代码展示了如何实现一个并行版的<code>std::accumulate</code>。它将整体工作拆分成小任务，并分配给多个线程执行，最终合并结果。</p>
+<h1 id="线程数量的获取与应用"><a class="markdownIt-Anchor" href="#线程数量的获取与应用"></a> 线程数量的获取与应用</h1>
+<h3 id="概述"><a class="markdownIt-Anchor" href="#概述"></a> 概述</h3>
+<p>使用并行算法可以显著提升计算性能，特别是在多核系统中。 C++11引入的 <code>std::thread</code>和 <code>std::thread::hardware_concurrency()</code>提供了便捷的工具来编写并行算法。以下将介绍如何实现一个并行版本的<code>std::accumulate</code>。</p>
+<h3 id="代码示例"><a class="markdownIt-Anchor" href="#代码示例"></a> 代码示例</h3>
+<p>下面的代码展示了如何实现一个并行版的<code>std::accumulate</code>。它将整体工作拆分成小任务，并分配给多个线程执行，最终合并结果。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">accumulate_block</span> &#123;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">operator</span><span class="params">()</span><span class="params">(Iterator first, Iterator last, T&amp; result)</span> </span>&#123;</span><br><span class="line">        result = std::<span class="built_in">accumulate</span>(first, last, result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>这个结构体定义了一个可调用对象，用于计算一段范围内的累加值。  </p>
-<p>**并行累加函数 <code>parallel_accumulate</code>**： </p>
+<p>这个结构体定义了一个可调用对象，用于计算一段范围内的累加值。</p>
+<p><strong>并行累加函数 <code>parallel_accumulate</code></strong>：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">T <span class="title">parallel_accumulate</span><span class="params">(Iterator first, Iterator last, T init)</span> </span>&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">const</span> length = std::<span class="built_in">distance</span>(first, last);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!length)</span><br><span class="line">        <span class="keyword">return</span> init;</span><br><span class="line"></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">const</span> min_per_thread = <span class="number">25</span>;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">const</span> max_threads = (length + min_per_thread - <span class="number">1</span>) / min_per_thread;</span><br><span class="line"></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">const</span> hardware_threads = std::thread::<span class="built_in">hardware_concurrency</span>();</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">const</span> num_threads = std::<span class="built_in">min</span>(hardware_threads != <span class="number">0</span> ? hardware_threads : <span class="number">2</span>, max_threads);</span><br><span class="line"></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">long</span> <span class="type">const</span> block_size = length / num_threads;</span><br><span class="line"></span><br><span class="line">    <span class="function">std::vector&lt;T&gt; <span class="title">results</span><span class="params">(num_threads)</span></span>;</span><br><span class="line">    <span class="function">std::vector&lt;std::thread&gt; <span class="title">threads</span><span class="params">(num_threads - <span class="number">1</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    Iterator block_start = first;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">unsigned</span> <span class="type">long</span> i = <span class="number">0</span>; i &lt; (num_threads - <span class="number">1</span>); ++i) &#123;</span><br><span class="line">        Iterator block_end = block_start;</span><br><span class="line">        std::<span class="built_in">advance</span>(block_end, block_size);</span><br><span class="line">        threads[i] = std::<span class="built_in">thread</span>(</span><br><span class="line">            <span class="built_in">accumulate_block</span>&lt;Iterator, T&gt;(),</span><br><span class="line">            block_start, block_end, std::<span class="built_in">ref</span>(results[i])</span><br><span class="line">        );</span><br><span class="line">        block_start = block_end;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">accumulate_block</span>&lt;Iterator, T&gt;()(block_start, last, results[num_threads - <span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    std::for_each(threads.<span class="built_in">begin</span>(), threads.<span class="built_in">end</span>(), std::<span class="built_in">mem_fn</span>(&amp;std::thread::join));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> std::<span class="built_in">accumulate</span>(results.<span class="built_in">begin</span>(), results.<span class="built_in">end</span>(), init);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>该函数接收一个迭代器范围和初始值<code>init</code>，将范围分成多个块，每个块由一个线程处理。计算出的中间结果存储在<code>results</code>向量中，最后通过<code>std::accumulate</code>将中间结果合并。</p>
 <p><strong>主函数测试并行累加</strong>:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">std::vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(<span class="number">10000</span>, <span class="number">1</span>)</span></span>;</span><br><span class="line">    <span class="type">int</span> sum = <span class="built_in">parallel_accumulate</span>(vec.<span class="built_in">begin</span>(), vec.<span class="built_in">end</span>(), <span class="number">0</span>);</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Sum: &quot;</span> &lt;&lt; sum &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <ol>
 <li>在主函数中创建了一个包含10000个1的向量，并调用<code>parallel_accumulate</code>计算其总和。</li>
 </ol>
-<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>通过使用<code>std::thread::hardware_concurrency()</code>确定适合的线程数量，可以有效地将工作分配给多个线程执行，从而提升并行计算的性能。<code>parallel_accumulate</code>展示了如何实现一个简单的并行算法，同时处理好线程的创建、执行和结果合并。</p>
-<h1 id="线程id"><a href="#线程id" class="headerlink" title="线程id"></a>线程id</h1><ul>
+<h3 id="结论"><a class="markdownIt-Anchor" href="#结论"></a> 结论</h3>
+<p>通过使用<code>std::thread::hardware_concurrency()</code>确定适合的线程数量，可以有效地将工作分配给多个线程执行，从而提升并行计算的性能。<code>parallel_accumulate</code>展示了如何实现一个简单的并行算法，同时处理好线程的创建、执行和结果合并。</p>
+<h1 id="线程id"><a class="markdownIt-Anchor" href="#线程id"></a> 线程id</h1>
+<ul>
 <li>获取方式有两种</li>
 <li>线程库提供的对比操作</li>
 <li>应用：<strong>同样，作为线程和本地存储不适配的替代方案，线程ID在容器中可作为键值</strong>。例如，容器可以存储其掌控下每个线程的信息，或在多个线程中互传信息。</li>
 </ul>
-<h1 id="线程间数据共享的问题"><a href="#线程间数据共享的问题" class="headerlink" title="线程间数据共享的问题"></a>线程间数据共享的问题</h1><ul>
-<li><p>问题可能场景：</p>
+<h1 id="线程间数据共享的问题"><a class="markdownIt-Anchor" href="#线程间数据共享的问题"></a> 线程间数据共享的问题</h1>
+<ul>
+<li>
+<p>问题可能场景：</p>
 <blockquote>
 <p>1.当线程在访问共享数据的时候</p>
 <p>2.一个线程更新了共享数据</p>
@@ -418,7 +439,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240618 做梦</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -432,7 +453,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240618 小目标之NAS</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -449,15 +470,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -541,7 +562,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="nav-number">2.</span> <span class="nav-text">开始吧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91"><span class="nav-number">4.</span> <span class="nav-text">并发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%B9%B6%E5%8F%91%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">为什么需要使用并发？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%B9%B6%E5%8F%91"><span class="nav-number">6.</span> <span class="nav-text">什么时候不使用并发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">7.</span> <span class="nav-text">启动线程的注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RALL"><span class="nav-number">8.</span> <span class="nav-text">RALL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B"><span class="nav-number">9.</span> <span class="nav-text">守护线程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text">线程传递参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AC%E7%A7%BB%E7%BA%BF%E7%A8%8B%E6%89%80%E6%9C%89%E6%9D%83"><span class="nav-number">11.</span> <span class="nav-text">转移线程所有权</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%95%B0%E9%87%8F%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="nav-number">12.</span> <span class="nav-text">线程数量的获取与应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">12.0.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">12.0.2.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">12.0.3.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8Bid"><span class="nav-number">13.</span> <span class="nav-text">线程id</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E9%97%B4%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">14.</span> <span class="nav-text">线程间数据共享的问题</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="nav-number">2.</span> <span class="nav-text"> 开始吧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text"> 目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91"><span class="nav-number">4.</span> <span class="nav-text"> 并发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%B9%B6%E5%8F%91"><span class="nav-number">5.</span> <span class="nav-text"> 为什么需要使用并发？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%B9%B6%E5%8F%91"><span class="nav-number">6.</span> <span class="nav-text"> 什么时候不使用并发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">7.</span> <span class="nav-text"> 启动线程的注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rall"><span class="nav-number">8.</span> <span class="nav-text"> RALL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B"><span class="nav-number">9.</span> <span class="nav-text"> 守护线程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text"> 线程传递参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AC%E7%A7%BB%E7%BA%BF%E7%A8%8B%E6%89%80%E6%9C%89%E6%9D%83"><span class="nav-number">11.</span> <span class="nav-text"> 转移线程所有权</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%95%B0%E9%87%8F%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="nav-number">12.</span> <span class="nav-text"> 线程数量的获取与应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">12.0.1.</span> <span class="nav-text"> 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">12.0.2.</span> <span class="nav-text"> 代码示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">12.0.3.</span> <span class="nav-text"> 结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8Bid"><span class="nav-number">13.</span> <span class="nav-text"> 线程id</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E9%97%B4%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">14.</span> <span class="nav-text"> 线程间数据共享的问题</span></a></li></ol>
     </div>
 </div>
 
@@ -568,7 +589,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -581,14 +602,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -694,7 +715,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="nav-number">2.</span> <span class="nav-text">开始吧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91"><span class="nav-number">4.</span> <span class="nav-text">并发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%B9%B6%E5%8F%91%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">为什么需要使用并发？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%B9%B6%E5%8F%91"><span class="nav-number">6.</span> <span class="nav-text">什么时候不使用并发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">7.</span> <span class="nav-text">启动线程的注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RALL"><span class="nav-number">8.</span> <span class="nav-text">RALL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B"><span class="nav-number">9.</span> <span class="nav-text">守护线程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text">线程传递参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AC%E7%A7%BB%E7%BA%BF%E7%A8%8B%E6%89%80%E6%9C%89%E6%9D%83"><span class="nav-number">11.</span> <span class="nav-text">转移线程所有权</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%95%B0%E9%87%8F%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="nav-number">12.</span> <span class="nav-text">线程数量的获取与应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">12.0.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">12.0.2.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">12.0.3.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8Bid"><span class="nav-number">13.</span> <span class="nav-text">线程id</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E9%97%B4%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">14.</span> <span class="nav-text">线程间数据共享的问题</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="nav-number">2.</span> <span class="nav-text"> 开始吧</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">3.</span> <span class="nav-text"> 目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91"><span class="nav-number">4.</span> <span class="nav-text"> 并发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%B9%B6%E5%8F%91"><span class="nav-number">5.</span> <span class="nav-text"> 为什么需要使用并发？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%B9%B6%E5%8F%91"><span class="nav-number">6.</span> <span class="nav-text"> 什么时候不使用并发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">7.</span> <span class="nav-text"> 启动线程的注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rall"><span class="nav-number">8.</span> <span class="nav-text"> RALL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B"><span class="nav-number">9.</span> <span class="nav-text"> 守护线程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text"> 线程传递参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AC%E7%A7%BB%E7%BA%BF%E7%A8%8B%E6%89%80%E6%9C%89%E6%9D%83"><span class="nav-number">11.</span> <span class="nav-text"> 转移线程所有权</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%95%B0%E9%87%8F%E7%9A%84%E8%8E%B7%E5%8F%96%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="nav-number">12.</span> <span class="nav-text"> 线程数量的获取与应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">12.0.1.</span> <span class="nav-text"> 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">12.0.2.</span> <span class="nav-text"> 代码示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">12.0.3.</span> <span class="nav-text"> 结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8Bid"><span class="nav-number">13.</span> <span class="nav-text"> 线程id</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E9%97%B4%E6%95%B0%E6%8D%AE%E5%85%B1%E4%BA%AB%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">14.</span> <span class="nav-text"> 线程间数据共享的问题</span></a></li></ol>
     </div>
 </div>
 

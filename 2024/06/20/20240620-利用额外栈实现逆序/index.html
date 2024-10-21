@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,29 +239,23 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>题目描述：设计一个算法，将栈中的元素按升序(最大的在top)排列。可另外借用一个栈来实现。</p>
-<h1 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h1><ul>
-<li><p>感觉就是两个栈栈顶之间的判断和进出</p>
+                    <h1 id="题目"><a class="markdownIt-Anchor" href="#题目"></a> 题目</h1>
+<p>题目描述：设计一个算法，将栈中的元素按升序(最大的在top)排列。可另外借用一个栈来实现。</p>
+<h1 id="想法"><a class="markdownIt-Anchor" href="#想法"></a> 想法</h1>
+<ul>
+<li>
+<p>感觉就是两个栈栈顶之间的判断和进出</p>
 </li>
-<li><p>相等情况肯定不用处理，原栈大于辅栈，辅栈大于原栈主要就是这两种情况以及如何进行调整的问题</p>
+<li>
+<p>相等情况肯定不用处理，原栈大于辅栈，辅栈大于原栈主要就是这两种情况以及如何进行调整的问题</p>
 </li>
 </ul>
 <blockquote>
 <p>我最主要的问题：如果只有一个栈的话，在遇到违反规则的成员的时候怎样进行调整</p>
 <p>申请临时变量算是违反规则吗？</p>
 </blockquote>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">stack&lt;<span class="type">int</span>&gt; <span class="title">sort</span><span class="params">(stack&lt;<span class="type">int</span>&gt; num,stack&lt;<span class="type">int</span>&gt; help)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//判断传入num是否为空</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//都取top进行比较</span></span><br><span class="line">    <span class="comment">//可是刚开始的help必然为空，怎样取top呢</span></span><br><span class="line">    <span class="comment">//每一次都判断是否为空再取top</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//num不为空，help不为空的情况下不停判断栈顶</span></span><br><span class="line">    <span class="comment">//符合num.top&gt;help.top num就进去Top</span></span><br><span class="line">    <span class="comment">//反之调用swap</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(!num.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!help.<span class="built_in">empty</span>()&amp;&amp;help.<span class="built_in">top</span>()&gt;num)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">swap</span>(help.<span class="built_in">top</span>(),num.<span class="built_in">top</span>());</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        help.<span class="built_in">push</span>(num.<span class="built_in">pop</span>());</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//倒回去</span></span><br><span class="line">     <span class="keyword">while</span> (!help.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        num.<span class="built_in">push</span>(help.<span class="built_in">top</span>());</span><br><span class="line">        help.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
+<h1 id="代码实现"><a class="markdownIt-Anchor" href="#代码实现"></a> 代码实现</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">stack&lt;<span class="type">int</span>&gt; <span class="title">sort</span><span class="params">(stack&lt;<span class="type">int</span>&gt; num,stack&lt;<span class="type">int</span>&gt; help)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//判断传入num是否为空</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//都取top进行比较</span></span><br><span class="line">    <span class="comment">//可是刚开始的help必然为空，怎样取top呢</span></span><br><span class="line">    <span class="comment">//每一次都判断是否为空再取top</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//num不为空，help不为空的情况下不停判断栈顶</span></span><br><span class="line">    <span class="comment">//符合num.top&gt;help.top num就进去Top</span></span><br><span class="line">    <span class="comment">//反之调用swap</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(!num.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!help.<span class="built_in">empty</span>()&amp;&amp;help.<span class="built_in">top</span>()&gt;num)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">swap</span>(help.<span class="built_in">top</span>(),num.<span class="built_in">top</span>());</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        help.<span class="built_in">push</span>(num.<span class="built_in">pop</span>());</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//倒回去</span></span><br><span class="line">     <span class="keyword">while</span> (!help.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        num.<span class="built_in">push</span>(help.<span class="built_in">top</span>());</span><br><span class="line">        help.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
                 </div>
                 
@@ -291,7 +285,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240620 C++ 互斥量/C++并发编程实战（二）</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -305,7 +299,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240620 思索</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -322,15 +316,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -414,7 +408,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%83%B3%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">想法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text"> 题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%83%B3%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text"> 想法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text"> 代码实现</span></a></li></ol>
     </div>
 </div>
 
@@ -441,7 +435,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -454,14 +448,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -567,7 +561,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%83%B3%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">想法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text"> 题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%83%B3%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text"> 想法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text"> 代码实现</span></a></li></ol>
     </div>
 </div>
 

@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,36 +239,47 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="昨天晚上看了啥"><a href="#昨天晚上看了啥" class="headerlink" title="昨天晚上看了啥"></a>昨天晚上看了啥</h1><ul>
-<li><p>C++三大特性以及实现</p>
+                    <h1 id="昨天晚上看了啥"><a class="markdownIt-Anchor" href="#昨天晚上看了啥"></a> 昨天晚上看了啥</h1>
+<ul>
+<li>
+<p>C++三大特性以及实现</p>
 </li>
-<li><p>虚函数的具体实现原理</p>
+<li>
+<p>虚函数的具体实现原理</p>
 </li>
 </ul>
-<h2 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h2><p>继承 封装 多态</p>
+<h2 id="三大特性"><a class="markdownIt-Anchor" href="#三大特性"></a> 三大特性</h2>
+<p>继承 封装 多态</p>
 <ul>
-<li><p>继承 是子类继承父类的代码 某种程度上增加了代码的复用性 使得代码之间具有一定的层次结构</p>
+<li>
+<p>继承 是子类继承父类的代码 某种程度上增加了代码的复用性 使得代码之间具有一定的层次结构</p>
 </li>
-<li><p>封装 是将代码和数据一起捆绑对外限制接触 保证了数据的安全性和代码的可维护性（更加容易阅读修改梳理）</p>
+<li>
+<p>封装 是将代码和数据一起捆绑对外限制接触 保证了数据的安全性和代码的可维护性（更加容易阅读修改梳理）</p>
 <blockquote>
 <p>class 和struct 的区别</p>
 <p><strong>struct可以看作只是一个复杂一点的数据结构吧</strong></p>
 <p><strong>class的话可以看作一个包含了数据和行为的对象，某种程度上是基于面向对象思想实现的，并且具有继承性和多态性</strong></p>
 </blockquote>
 </li>
-<li><p>多态 是同一个行为在不同的对象身上具有不同的表现形式 一般是通过基类指针指向子类对象虚函数表的动态绑定来实现的(另一个层面来看，也是通过虚函数和函数重写来进行实现的)</p>
+<li>
+<p>多态 是同一个行为在不同的对象身上具有不同的表现形式 一般是通过基类指针指向子类对象虚函数表的动态绑定来实现的(另一个层面来看，也是通过虚函数和函数重写来进行实现的)</p>
 </li>
 </ul>
-<h2 id="虚函数以及其实现原理"><a href="#虚函数以及其实现原理" class="headerlink" title="虚函数以及其实现原理"></a>虚函数以及其实现原理</h2><ul>
-<li><p>虚函数是什么：虚函数是允许子类对父类进行重写的函数，虚函数其实暗含了继承和重写这两层前提在</p>
+<h2 id="虚函数以及其实现原理"><a class="markdownIt-Anchor" href="#虚函数以及其实现原理"></a> 虚函数以及其实现原理</h2>
+<ul>
+<li>
+<p>虚函数是什么：虚函数是允许子类对父类进行重写的函数，虚函数其实暗含了继承和重写这两层前提在</p>
 </li>
-<li><p>虚函数的实现原理：虚函数通过虚函数表和虚指针来实现的</p>
+<li>
+<p>虚函数的实现原理：虚函数通过虚函数表和虚指针来实现的</p>
 <p>同一种对象中的虚指针是相同的，这些虚指针指向相同的虚表，虚表中包含着当前类的对象的所有可以被调用的虚函数</p>
 <p>具有继承关系的两个不同类型的对象中的虚指针是不同的，指向的虚表也是不同的</p>
-<p>联系的话，就是当子类重写了父类中的某个虚函数的时候，子虚表的与父类相同索引&#x2F;函数的那个地方的函数调用地址将会被替换</p>
+<p>联系的话，就是当子类重写了父类中的某个虚函数的时候，子虚表的与父类相同索引/函数的那个地方的函数调用地址将会被替换</p>
 <p>虚函数是在运行的时候通过索引来直接实现调用的，并不是将对象和虚函数们一一捆绑来实现的，子类如果不重写虚函数，拿到的就是对应父类的虚函数对应地址，子类如果重写了虚函数，拿到的就是对应子类重写后函数的对应地址</p>
 </li>
-<li><p>纯虚函数、抽象类：就是必须要继承该父类的子类重写的类，拥有纯虚函数的类也被称作抽象类</p>
+<li>
+<p>纯虚函数、抽象类：就是必须要继承该父类的子类重写的类，拥有纯虚函数的类也被称作抽象类</p>
 </li>
 </ul>
 
@@ -300,7 +311,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240508 C加加复习（四）</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -314,7 +325,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240506 C加加复习（二）</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -331,15 +342,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -423,7 +434,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%A8%E5%A4%A9%E6%99%9A%E4%B8%8A%E7%9C%8B%E4%BA%86%E5%95%A5"><span class="nav-number">1.</span> <span class="nav-text">昨天晚上看了啥</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text">三大特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">1.2.</span> <span class="nav-text">虚函数以及其实现原理</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%A8%E5%A4%A9%E6%99%9A%E4%B8%8A%E7%9C%8B%E4%BA%86%E5%95%A5"><span class="nav-number">1.</span> <span class="nav-text"> 昨天晚上看了啥</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text"> 三大特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">1.2.</span> <span class="nav-text"> 虚函数以及其实现原理</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -450,7 +461,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -463,14 +474,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -576,7 +587,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%A8%E5%A4%A9%E6%99%9A%E4%B8%8A%E7%9C%8B%E4%BA%86%E5%95%A5"><span class="nav-number">1.</span> <span class="nav-text">昨天晚上看了啥</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text">三大特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">1.2.</span> <span class="nav-text">虚函数以及其实现原理</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%A8%E5%A4%A9%E6%99%9A%E4%B8%8A%E7%9C%8B%E4%BA%86%E5%95%A5"><span class="nav-number">1.</span> <span class="nav-text"> 昨天晚上看了啥</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text"> 三大特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="nav-number">1.2.</span> <span class="nav-text"> 虚函数以及其实现原理</span></a></li></ol></li></ol>
     </div>
 </div>
 

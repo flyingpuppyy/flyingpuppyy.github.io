@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,25 +230,26 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy"></a>strcpy</h1><p><strong>将源头指向的C字符串复制到目标指向的数组中,包括结尾的’&#x2F;0’字符,并在’\0’字符处停止拷贝.</strong> </p>
+                    <h1 id="strcpy"><a class="markdownIt-Anchor" href="#strcpy"></a> strcpy</h1>
+<p><strong>将源头指向的C字符串复制到目标指向的数组中,包括结尾的’/0’字符,并在’\0’字符处停止拷贝.</strong></p>
 <ol>
 <li></li>
 </ol>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">/* strcpy example */</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">char</span> str1[] = <span class="string">&quot;Sample string&quot;</span>;</span><br><span class="line">	<span class="type">char</span> str2[<span class="number">40</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;str1: %s\nstr2: %s\n&quot;</span>, str1, str2);</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">strcpy</span>(str2, str1);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;str1: %s\nstr2: %s\n&quot;</span>, str1, str2);</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ol start="2">
 <li></li>
 </ol>
-<h1 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a>strlen</h1><p>size_t strlen ( const char * str );</p>
-<p>strlen函数是C语言中的一个字符串处理函数，其主要用途是计算一个字符串的长度。它接受一个指向字符串的指针作为参数，并返回一个整数值，表示字符串的长度<strong>（不包括空字符’\0’）</strong>。</p>
+<h1 id="strlen"><a class="markdownIt-Anchor" href="#strlen"></a> strlen</h1>
+<p>size_t strlen ( const char * str );</p>
+<p>strlen函数是C语言中的一个字符串处理函数，其主要用途是计算一个字符串的长度。它接受一个指向字符串的指针作为参数，并返回一个整数值，表示字符串的长度**（不包括空字符’\0’）**。</p>
 <p>使用strlen函数必须添加头文件 #include &lt;string.h&gt;</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">strlen</span>(<span class="string">&quot;abc&quot;</span>) - <span class="built_in">strlen</span>(<span class="string">&quot;abcdef&quot;</span>) &gt; <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;&gt;=\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;&lt;\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>如果从数学的角度去分析的话，strlen(“abc”)的长度是3，strlen(“abcdef”)的长度是6，3-6的结果是-3呀，打印出来的结果就应该是&lt;。</p>
-<p>但实际上当我们去运行这个代码的时候会发现打印出来的结果为&gt;&#x3D;。</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615121737441.png"  alt="image-20240615121737441"></p>
-<p>为什么是&gt;&#x3D;呢，就是因为strlen的返回值为无符号整型size_t，而两个无符号数相减得到的还是无符号数，当-3被当作无符号数的时候得到的会是一个非常大的正数，肯定是&gt;0的，所以运行结果就为&gt;&#x3D;。 </p>
-<h2 id="模拟实现strlen"><a href="#模拟实现strlen" class="headerlink" title="模拟实现strlen"></a>模拟实现strlen</h2><p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_65931202/article/details/133608862" >https://blog.csdn.net/weixin_65931202/article/details/133608862<i class="fas fa-external-link-alt"></i></a></p>
+<p>但实际上当我们去运行这个代码的时候会发现打印出来的结果为&gt;=。</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240615121737441.png"  alt="image-20240615121737441" ></p>
+<p>为什么是&gt;=呢，就是因为strlen的返回值为无符号整型size_t，而两个无符号数相减得到的还是无符号数，当-3被当作无符号数的时候得到的会是一个非常大的正数，肯定是&gt;0的，所以运行结果就为&gt;=。</p>
+<h2 id="模拟实现strlen"><a class="markdownIt-Anchor" href="#模拟实现strlen"></a> 模拟实现strlen</h2>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_65931202/article/details/133608862" >https://blog.csdn.net/weixin_65931202/article/details/133608862<i class="fas fa-external-link-alt"></i></a></p>
 
                 </div>
                 
@@ -278,7 +279,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240510 编程范式素材（一）</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -292,7 +293,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240509 ubuntu安装</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -309,15 +310,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -401,7 +402,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#strcpy"><span class="nav-number">1.</span> <span class="nav-text">strcpy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#strlen"><span class="nav-number">2.</span> <span class="nav-text">strlen</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0strlen"><span class="nav-number">2.1.</span> <span class="nav-text">模拟实现strlen</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#strcpy"><span class="nav-number">1.</span> <span class="nav-text"> strcpy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#strlen"><span class="nav-number">2.</span> <span class="nav-text"> strlen</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0strlen"><span class="nav-number">2.1.</span> <span class="nav-text"> 模拟实现strlen</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -428,7 +429,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -441,14 +442,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -554,7 +555,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#strcpy"><span class="nav-number">1.</span> <span class="nav-text">strcpy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#strlen"><span class="nav-number">2.</span> <span class="nav-text">strlen</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0strlen"><span class="nav-number">2.1.</span> <span class="nav-text">模拟实现strlen</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#strcpy"><span class="nav-number">1.</span> <span class="nav-text"> strcpy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#strlen"><span class="nav-number">2.</span> <span class="nav-text"> strlen</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0strlen"><span class="nav-number">2.1.</span> <span class="nav-text"> 模拟实现strlen</span></a></li></ol></li></ol>
     </div>
 </div>
 

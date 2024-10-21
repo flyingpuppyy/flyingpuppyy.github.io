@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,11 +230,13 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h1><p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/super828/article/details/127839649" >https://blog.csdn.net/super828/article/details/127839649<i class="fas fa-external-link-alt"></i></a></p>
+                    <h1 id="第一篇文章"><a class="markdownIt-Anchor" href="#第一篇文章"></a> 第一篇文章</h1>
+<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/super828/article/details/127839649" >https://blog.csdn.net/super828/article/details/127839649<i class="fas fa-external-link-alt"></i></a></p>
 <p>上一篇文章我们成功编译了一个单文件，对于文件数量比较少的工程，这种方法还可以，但是如果文件非常对，到几百几千个文件，那这种通过终端使用GCC的方法显然不靠谱。</p>
 <p>这就引出了一个方法，利用一个编辑好的文件，可以按照提前规定的路径及方式编译源码文件，每次编译只要执行这个文件就可以了。然后工程师就实现了这个想法，这个文件就是本文要说的Makefile。</p>
 <p>当然大家要是习惯IDE编程，可能也都没太注意这个文件，但是事实上IDE也是有这么个文件，只不过已经被封装在图形界面之后了。但是既然我们之后要使用Linux编程，自然有需求去学习下Makefile的。</p>
-<h2 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h2><p><strong>这里以多个C文件为例子：main.c delay.c rtc.c</strong></p>
+<h2 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文：</h2>
+<p><strong>这里以多个C文件为例子：main.c delay.c rtc.c</strong></p>
 <blockquote>
 <p>下面整个过程注意观察makefile解决了什么问题</p>
 </blockquote>
@@ -297,7 +299,7 @@ gcc main.o delay.o rtc.o -o main
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240719 qgis&amp;&amp;qt 安装</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -311,7 +313,7 @@ gcc main.o delay.o rtc.o -o main
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240717 基于QT的电子海图的实现与开发</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -328,15 +330,15 @@ gcc main.o delay.o rtc.o -o main
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -420,7 +422,7 @@ gcc main.o delay.o rtc.o -o main
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">第一篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E6%96%87%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">正文：</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text"> 第一篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-number">1.1.</span> <span class="nav-text"> 正文：</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -447,7 +449,7 @@ gcc main.o delay.o rtc.o -o main
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -460,14 +462,14 @@ gcc main.o delay.o rtc.o -o main
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -573,7 +575,7 @@ gcc main.o delay.o rtc.o -o main
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">第一篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E6%96%87%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">正文：</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text"> 第一篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-number">1.1.</span> <span class="nav-text"> 正文：</span></a></li></ol></li></ol>
     </div>
 </div>
 

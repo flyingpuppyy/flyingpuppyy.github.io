@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,7 +239,8 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="主观认识与回顾"><a href="#主观认识与回顾" class="headerlink" title="主观认识与回顾"></a>主观认识与回顾</h1><ul>
+                    <h1 id="主观认识与回顾"><a class="markdownIt-Anchor" href="#主观认识与回顾"></a> 主观认识与回顾</h1>
+<ul>
 <li>为什么所有程序都需要注册项？</li>
 <li><strong>程序通过注册项能够实现什么功能？</strong></li>
 <li>有不需要注册项的程序吗？</li>
@@ -248,7 +249,8 @@
 <li><strong>为什么越来越多程序不使用注册表了？</strong></li>
 </ul>
 <p>（未加粗有待解决）</p>
-<h1 id="注册项在window操作系统中起到什么作用？"><a href="#注册项在window操作系统中起到什么作用？" class="headerlink" title="注册项在window操作系统中起到什么作用？"></a>注册项在window操作系统中起到什么作用？</h1><p>注册表是操作系统、各种硬件和用户安装的各种应用程序得以正常运行的<strong>核心数据库</strong>。</p>
+<h1 id="注册项在window操作系统中起到什么作用"><a class="markdownIt-Anchor" href="#注册项在window操作系统中起到什么作用"></a> 注册项在window操作系统中起到什么作用？</h1>
+<p>注册表是操作系统、各种硬件和用户安装的各种应用程序得以正常运行的<strong>核心数据库</strong>。</p>
 <p>当了应用程序或添加了新的硬件时，安装程序或设备驱动程序就要向注册表添加新的配置信息。</p>
 <p><strong>windows启动时，对过注册表查找所有硬件设备的驱动程序，然后将其全部加载到系统，加载后，硬件设备驱动程序将直接运行。如果用户需要启动某个应用程序，注册表将会给windows系统提供与该应用程序相关的环境信息，系统据此完成相应的配置检查，并运行该应用程序。</strong></p>
 <p>早期的注册表是以ini为扩展名的文本文件的配置文件，</p>
@@ -261,78 +263,91 @@
 <blockquote>
 <p>总结：</p>
 <ol>
-<li><strong>系统配置和设置</strong>：<ul>
+<li><strong>系统配置和设置</strong>：
+<ul>
 <li><strong>操作系统配置</strong>：注册表存储了与操作系统本身相关的配置信息，如启动设置、服务配置、硬件设备配置、用户界面设置等。操作系统在启动和运行过程中，会不断读取和写入这些信息。</li>
 <li><strong>用户配置文件</strong>：每个用户的个性化设置（如桌面背景、屏幕保护程序、文件夹视图等）都存储在注册表中，允许多个用户在同一台计算机上拥有各自独立的配置。</li>
 </ul>
 </li>
-<li><strong>硬件和驱动程序</strong>：<ul>
+<li><strong>硬件和驱动程序</strong>：
+<ul>
 <li><strong>硬件信息</strong>：注册表中包含了所有已安装硬件设备的信息，如驱动程序路径、设备设置等。当新硬件连接到计算机时，操作系统会查询注册表以找到并加载合适的驱动程序。</li>
 <li><strong>即插即用</strong>：注册表支持即插即用功能，自动检测和配置新硬件设备，确保设备的正确安装和运行。</li>
 </ul>
 </li>
-<li><strong>应用程序设置</strong>：<ul>
+<li><strong>应用程序设置</strong>：
+<ul>
 <li><strong>安装和配置</strong>：大多数Windows应用程序在安装时会在注册表中写入相关信息，包括安装路径、版本信息、许可证密钥等。运行时，应用程序会读取这些配置信息以确定其行为和功能。</li>
 <li><strong>文件关联</strong>：注册表存储了文件类型与应用程序的关联信息，决定了双击某种文件类型时打开的应用程序。</li>
 </ul>
 </li>
-<li><strong>系统安全</strong>：<ul>
+<li><strong>系统安全</strong>：
+<ul>
 <li><strong>安全设置</strong>：注册表中存储了许多安全相关的设置，包括用户账户控制（UAC）、组策略、权限设置等。系统管理员可以通过修改注册表来增强系统的安全性。</li>
 <li><strong>防火墙和防病毒配置</strong>：注册表包含了Windows防火墙和防病毒软件的配置参数，确保系统安全防护措施的有效性。</li>
 </ul>
 </li>
-<li><strong>服务和进程管理</strong>：<ul>
+<li><strong>服务和进程管理</strong>：
+<ul>
 <li><strong>服务配置</strong>：注册表中包含了所有Windows服务的配置信息，如启动类型、依赖关系、登录账户等。操作系统启动时会根据这些信息加载和运行服务。</li>
 <li><strong>进程和线程</strong>：某些进程和线程的配置信息也存储在注册表中，用于控制其运行参数和行为。</li>
 </ul>
 </li>
-<li><strong>系统诊断和维护</strong>：<ul>
+<li><strong>系统诊断和维护</strong>：
+<ul>
 <li><strong>事件日志</strong>：注册表中存储了与系统和应用程序事件日志相关的配置，可以用于诊断系统问题和性能瓶颈。</li>
 <li><strong>系统恢复</strong>：注册表保存了系统还原点的信息，使得用户可以在出现问题时恢复系统到之前的状态。</li>
 </ul>
 </li>
-<li><strong>软件兼容性</strong>：<ul>
+<li><strong>软件兼容性</strong>：
+<ul>
 <li><strong>兼容性设置</strong>：对于某些旧版软件，注册表中可以存储特定的兼容性设置，确保这些软件在新的操作系统版本上能够正常运行。</li>
 </ul>
 </li>
 </ol>
 <p>通过集中存储和管理配置信息，注册表在维持Windows操作系统的稳定性、功能性和安全性方面起到了至关重要的作用。然而，正因为注册表的重要性，对其进行错误修改可能会导致系统或应用程序的不稳定甚至崩溃，因此对注册表的修改应当谨慎进行。</p>
 </blockquote>
-<hr>
+<hr />
 <blockquote>
 <p>再次总结：</p>
 <p>1.给操作系统管理配置信息，用户信息</p>
 <p>2.为用户管理相关软件的环境配置信息，许可证密钥，安装路径等信息</p>
 </blockquote>
-<h1 id="为什么越来越多程序不使用注册表了？"><a href="#为什么越来越多程序不使用注册表了？" class="headerlink" title="为什么越来越多程序不使用注册表了？"></a>为什么越来越多程序不使用注册表了？</h1><ol>
-<li><strong>易用性和便携性</strong>：<ul>
+<h1 id="为什么越来越多程序不使用注册表了"><a class="markdownIt-Anchor" href="#为什么越来越多程序不使用注册表了"></a> 为什么越来越多程序不使用注册表了？</h1>
+<ol>
+<li><strong>易用性和便携性</strong>：
+<ul>
 <li><strong>配置文件更便携</strong>：使用配置文件（如JSON、YAML、XML等）可以更方便地移动和备份配置数据。将配置文件与应用程序一起存放在同一个目录下，使得应用程序更易于部署和迁移。</li>
 <li><strong>跨平台兼容性</strong>：注册表是Windows特有的，而配置文件可以在不同操作系统上使用，从而使得应用程序更具跨平台兼容性。</li>
 </ul>
 </li>
-<li><strong>管理和维护</strong>：<ul>
+<li><strong>管理和维护</strong>：
+<ul>
 <li><strong>集中管理问题</strong>：注册表集中存储系统和应用程序的设置，随着时间的推移可能会变得庞大和混乱，难以管理。使用独立配置文件可以避免这种集中管理的问题。</li>
 <li><strong>权限问题</strong>：修改注册表需要较高的权限，有时需要管理员权限，而修改配置文件通常不需要特殊权限，这使得配置文件更容易管理。</li>
 </ul>
 </li>
-<li><strong>版本控制</strong>：<ul>
+<li><strong>版本控制</strong>：
+<ul>
 <li><strong>配置文件易于版本控制</strong>：文本格式的配置文件可以方便地使用版本控制系统（如Git）进行管理，跟踪配置的变化，这在团队开发和运维中非常重要。</li>
 <li><strong>回滚和比较</strong>：使用版本控制系统，可以轻松地回滚到之前的配置状态，并比较不同版本的配置变化。</li>
 </ul>
 </li>
-<li><strong>调试和开发</strong>：<ul>
+<li><strong>调试和开发</strong>：
+<ul>
 <li><strong>更易于调试</strong>：配置文件可以直接打开和编辑，而不需要特定的工具。调试和修改配置文件比调试和修改注册表更直观和简单。</li>
 <li><strong>临时配置修改</strong>：在开发过程中，可以临时修改配置文件来测试不同的配置，而不必担心对系统其他部分产生影响。</li>
 </ul>
 </li>
-<li><strong>容器化和云计算</strong>：<ul>
+<li><strong>容器化和云计算</strong>：
+<ul>
 <li><strong>适应现代部署方式</strong>：在容器化和微服务架构中，应用程序的配置通常通过环境变量或挂载配置文件来管理，而不是依赖于注册表。这种方式更适应现代的部署和运维方式。</li>
 <li><strong>环境隔离</strong>：在容器化环境中，每个容器都是独立的，使用配置文件而不是注册表可以确保配置的隔离性和独立性。</li>
 </ul>
 </li>
 </ol>
 <p>综上所述，虽然注册表在某些场景下仍然有其优势，但对于现代应用程序开发和部署的需求来说，使用配置文件提供了更大的灵活性和便利性。</p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1fi421v76i/?spm_id_from=333.880.my_history.page.click&vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV1fi421v76i/?spm_id_from=333.880.my_history.page.click&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1fi421v76i/?spm_id_from=333.880.my_history.page.click&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV1fi421v76i/?spm_id_from=333.880.my_history.page.click&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
 <blockquote>
 <p>总结：</p>
 <p>主要是考虑以下几点问题</p>
@@ -340,57 +355,69 @@
 <p>2.操作系统权限问题</p>
 <p>…</p>
 </blockquote>
-<h1 id="程序通过注册项能够实现了？"><a href="#程序通过注册项能够实现了？" class="headerlink" title="程序通过注册项能够实现了？"></a>程序通过注册项能够实现了？</h1><p>程序通过注册表中的注册项（Registry Keys）可以实现多种功能，具体包括但不限于以下几个方面：</p>
+<h1 id="程序通过注册项能够实现了"><a class="markdownIt-Anchor" href="#程序通过注册项能够实现了"></a> 程序通过注册项能够实现了？</h1>
+<p>程序通过注册表中的注册项（Registry Keys）可以实现多种功能，具体包括但不限于以下几个方面：</p>
 <ol>
-<li><strong>配置存储和读取</strong>：<ul>
+<li><strong>配置存储和读取</strong>：
+<ul>
 <li><strong>应用程序配置</strong>：程序可以将其配置选项（如界面设置、用户偏好、连接参数等）存储在注册表中。启动时，程序可以读取这些配置选项以初始化自身。</li>
 <li><strong>用户设置</strong>：允许每个用户拥有独立的设置和偏好，存储在用户特定的注册表区域（如HKEY_CURRENT_USER）。</li>
 </ul>
 </li>
-<li><strong>安装信息管理</strong>：<ul>
+<li><strong>安装信息管理</strong>：
+<ul>
 <li><strong>安装路径和版本信息</strong>：程序在安装时可以将自身的安装路径、版本信息、许可证密钥等信息写入注册表。卸载程序或更新程序时，可以通过这些信息找到安装位置和相关参数。</li>
 <li><strong>卸载信息</strong>：存储卸载信息，使得系统可以在控制面板的“程序和功能”中显示该程序，并允许用户进行卸载操作。</li>
 </ul>
 </li>
-<li><strong>文件关联</strong>：<ul>
+<li><strong>文件关联</strong>：
+<ul>
 <li><strong>文件类型关联</strong>：程序可以在注册表中设置文件扩展名与程序的关联关系，使得用户双击某种文件类型时会自动启动该程序并打开文件。例如，文本编辑器可以将.txt文件关联到自身。</li>
 </ul>
 </li>
-<li><strong>启动管理</strong>：<ul>
+<li><strong>启动管理</strong>：
+<ul>
 <li><strong>自启动项</strong>：程序可以通过在注册表中添加启动项，使其在系统启动时自动运行。这通常用于防病毒软件、系统监控工具等需要在系统启动时立即运行的程序。</li>
 <li><strong>计划任务</strong>：通过注册表与计划任务的结合，程序可以设置定时任务或延时启动。</li>
 </ul>
 </li>
-<li><strong>服务配置</strong>：<ul>
+<li><strong>服务配置</strong>：
+<ul>
 <li><strong>Windows服务</strong>：程序可以安装和配置Windows服务，通过注册表指定服务的启动类型（自动、手动或禁用）、依赖关系、登录账户等信息。</li>
 </ul>
 </li>
-<li><strong>安全设置</strong>：<ul>
+<li><strong>安全设置</strong>：
+<ul>
 <li><strong>权限和访问控制</strong>：程序可以通过注册表设置权限和访问控制，例如控制某些功能或数据的访问权限。</li>
 <li><strong>防火墙规则</strong>：程序可以通过修改注册表配置Windows防火墙规则，以允许或阻止特定的网络通信。</li>
 </ul>
 </li>
-<li><strong>系统集成</strong>：<ul>
+<li><strong>系统集成</strong>：
+<ul>
 <li><strong>上下文菜单</strong>：程序可以通过注册表添加右键菜单项，方便用户通过右键菜单直接使用某些功能。</li>
 <li><strong>Shell扩展</strong>：程序可以在注册表中注册Shell扩展，扩展资源管理器的功能，例如添加预览处理程序、属性页等。</li>
 </ul>
 </li>
-<li><strong>软件兼容性</strong>：<ul>
+<li><strong>软件兼容性</strong>：
+<ul>
 <li><strong>兼容性设置</strong>：程序可以在注册表中设置特定的兼容性选项，以解决在不同Windows版本上的兼容性问题。</li>
 </ul>
 </li>
-<li><strong>诊断和调试</strong>：<ul>
+<li><strong>诊断和调试</strong>：
+<ul>
 <li><strong>日志和调试信息</strong>：程序可以在注册表中设置调试和日志选项，控制日志记录的级别和位置，帮助开发和维护过程中进行问题诊断。</li>
 <li><strong>故障恢复</strong>：存储故障恢复信息，使得程序在崩溃或异常退出后，可以在下次启动时进行恢复操作。</li>
 </ul>
 </li>
-<li><strong>临时数据存储</strong>：<ul>
+<li><strong>临时数据存储</strong>：
+<ul>
 <li><strong>缓存和会话数据</strong>：虽然不推荐长期使用，程序可以临时存储会话数据或缓存数据在注册表中，以便在程序运行过程中快速访问。</li>
 </ul>
 </li>
 </ol>
 <p>通过注册表，程序能够实现上述各种功能，提供灵活的配置和系统集成能力。然而，操作注册表时需要非常谨慎，因为错误的修改可能会导致系统或程序的不稳定甚至崩溃。</p>
-<h1 id="关于注册项的安全漏洞和解决方案有哪些？"><a href="#关于注册项的安全漏洞和解决方案有哪些？" class="headerlink" title="关于注册项的安全漏洞和解决方案有哪些？"></a>关于注册项的安全漏洞和解决方案有哪些？</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/zha0gongz1/p/17192109.html" >https://www.cnblogs.com/zha0gongz1/p/17192109.html<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="关于注册项的安全漏洞和解决方案有哪些"><a class="markdownIt-Anchor" href="#关于注册项的安全漏洞和解决方案有哪些"></a> 关于注册项的安全漏洞和解决方案有哪些？</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/zha0gongz1/p/17192109.html" >https://www.cnblogs.com/zha0gongz1/p/17192109.html<i class="fas fa-external-link-alt"></i></a></p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.4hou.com/posts/L0jp" >https://www.4hou.com/posts/L0jp<i class="fas fa-external-link-alt"></i></a></p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/LittleHann/p/4790000.html" >https://www.cnblogs.com/LittleHann/p/4790000.html<i class="fas fa-external-link-alt"></i></a></p>
 <blockquote>
@@ -425,7 +452,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240621 算法：递归回溯字符串输出</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -439,7 +466,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240620 The Zen</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -456,15 +483,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -548,7 +575,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BB%E8%A7%82%E8%AE%A4%E8%AF%86%E4%B8%8E%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text">主观认识与回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E9%A1%B9%E5%9C%A8window%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%AD%E8%B5%B7%E5%88%B0%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">注册项在window操作系统中起到什么作用？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E7%A8%8B%E5%BA%8F%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BA%86%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">为什么越来越多程序不使用注册表了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E9%80%9A%E8%BF%87%E6%B3%A8%E5%86%8C%E9%A1%B9%E8%83%BD%E5%A4%9F%E5%AE%9E%E7%8E%B0%E4%BA%86%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">程序通过注册项能够实现了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%B3%A8%E5%86%8C%E9%A1%B9%E7%9A%84%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">关于注册项的安全漏洞和解决方案有哪些？</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BB%E8%A7%82%E8%AE%A4%E8%AF%86%E4%B8%8E%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text"> 主观认识与回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E9%A1%B9%E5%9C%A8window%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%AD%E8%B5%B7%E5%88%B0%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text"> 注册项在window操作系统中起到什么作用？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E7%A8%8B%E5%BA%8F%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BA%86"><span class="nav-number">3.</span> <span class="nav-text"> 为什么越来越多程序不使用注册表了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E9%80%9A%E8%BF%87%E6%B3%A8%E5%86%8C%E9%A1%B9%E8%83%BD%E5%A4%9F%E5%AE%9E%E7%8E%B0%E4%BA%86"><span class="nav-number">4.</span> <span class="nav-text"> 程序通过注册项能够实现了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%B3%A8%E5%86%8C%E9%A1%B9%E7%9A%84%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-number">5.</span> <span class="nav-text"> 关于注册项的安全漏洞和解决方案有哪些？</span></a></li></ol>
     </div>
 </div>
 
@@ -575,7 +602,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -588,14 +615,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -701,7 +728,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BB%E8%A7%82%E8%AE%A4%E8%AF%86%E4%B8%8E%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text">主观认识与回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E9%A1%B9%E5%9C%A8window%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%AD%E8%B5%B7%E5%88%B0%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">注册项在window操作系统中起到什么作用？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E7%A8%8B%E5%BA%8F%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BA%86%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">为什么越来越多程序不使用注册表了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E9%80%9A%E8%BF%87%E6%B3%A8%E5%86%8C%E9%A1%B9%E8%83%BD%E5%A4%9F%E5%AE%9E%E7%8E%B0%E4%BA%86%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">程序通过注册项能够实现了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%B3%A8%E5%86%8C%E9%A1%B9%E7%9A%84%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">关于注册项的安全漏洞和解决方案有哪些？</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BB%E8%A7%82%E8%AE%A4%E8%AF%86%E4%B8%8E%E5%9B%9E%E9%A1%BE"><span class="nav-number">1.</span> <span class="nav-text"> 主观认识与回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E9%A1%B9%E5%9C%A8window%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%AD%E8%B5%B7%E5%88%B0%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text"> 注册项在window操作系统中起到什么作用？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E7%A8%8B%E5%BA%8F%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BA%86"><span class="nav-number">3.</span> <span class="nav-text"> 为什么越来越多程序不使用注册表了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E9%80%9A%E8%BF%87%E6%B3%A8%E5%86%8C%E9%A1%B9%E8%83%BD%E5%A4%9F%E5%AE%9E%E7%8E%B0%E4%BA%86"><span class="nav-number">4.</span> <span class="nav-text"> 程序通过注册项能够实现了？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%B3%A8%E5%86%8C%E9%A1%B9%E7%9A%84%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-number">5.</span> <span class="nav-text"> 关于注册项的安全漏洞和解决方案有哪些？</span></a></li></ol>
     </div>
 </div>
 

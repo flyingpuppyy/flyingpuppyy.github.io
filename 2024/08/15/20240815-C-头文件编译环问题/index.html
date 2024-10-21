@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Aug 20 2024 17:02:59 GMT+0800">2024-08-20 17:02:59</span>
+                <span class="datetime" data-updated="Wed Aug 28 2024 09:16:37 GMT+0800">2024-08-28 09:16:37</span>
             </span>
         
 
@@ -230,19 +230,19 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p><a class="link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/34102953/how-to-solve-expected-class-name-before-in-qt-c" >https://stackoverflow.com/questions/34102953/how-to-solve-expected-class-name-before-in-qt-c<i class="fas fa-external-link-alt"></i></a></p>
-<h1 id="解决问题方式"><a href="#解决问题方式" class="headerlink" title="解决问题方式"></a>解决问题方式</h1><p>你有一个循环依赖项：  <code>materials.h</code> 包括  <code>fictionsection.h</code> 和  <code>fictionsection.h</code> 包括  <code>materials.h</code>。  </p>
-<p>由于头文件具有防止多次包含的例程 （ <code>#ifndef FICTIONSECTION_H</code> 和  <code>#ifndef MATERIALS_H</code>，这很好），当  <code>material.h</code> 包括  <code>fictionsection.h</code>，这个包括  <code>material.h</code> 同样，但由于您的多重包含保护，这绝对没有效果……结果是  <code>fictionsection.h</code> 没有得到  <code>Materials</code> 最后声明并拒绝声明  <code>FictionSection</code> 从中衍生出来！ </p>
+                    <h1 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述"></a> 问题描述</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://stackoverflow.com/questions/34102953/how-to-solve-expected-class-name-before-in-qt-c" >https://stackoverflow.com/questions/34102953/how-to-solve-expected-class-name-before-in-qt-c<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="解决问题方式"><a class="markdownIt-Anchor" href="#解决问题方式"></a> 解决问题方式</h1>
+<p>你有一个循环依赖项：  <code>materials.h</code> 包括  <code>fictionsection.h</code> 和  <code>fictionsection.h</code> 包括  <code>materials.h</code>。</p>
+<p>由于头文件具有防止多次包含的例程 （ <code>#ifndef FICTIONSECTION_H</code> 和  <code>#ifndef MATERIALS_H</code>，这很好），当  <code>material.h</code> 包括  <code>fictionsection.h</code>，这个包括  <code>material.h</code> 同样，但由于您的多重包含保护，这绝对没有效果…结果是  <code>fictionsection.h</code> 没有得到  <code>Materials</code> 最后声明并拒绝声明  <code>FictionSection</code> 从中衍生出来！</p>
 <blockquote>
-<p>您需要使用前向声明来解决此问题： </p>
-<p>在  <code>materials.h</code>取代： </p>
+<p>您需要使用前向声明来解决此问题：</p>
+<p>在  <code>materials.h</code>取代：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;fictionsection.h&quot;</span></span></span><br></pre></td></tr></table></figure>
-
-<p>由 </p>
+<p>由</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">FictionSection</span>;</span><br></pre></td></tr></table></figure>
-
-<p>&#x3D;&#x3D;并添加  <code>#include &quot;fictionsection.h&quot;</code> 在  <code>materials.cpp</code> &#x3D;&#x3D;&#x3D;</p>
-<p>转发声明是解决此问题的常见做法。但是，即使没有出现此问题，前向声明仍然是一种很好的做法，因为它将加快编译速度。 </p>
+<p>==并添加  <code>#include &quot;fictionsection.h&quot;</code> 在  <code>materials.cpp</code> ===</p>
+<p>转发声明是解决此问题的常见做法。但是，即使没有出现此问题，前向声明仍然是一种很好的做法，因为它将加快编译速度。</p>
 </blockquote>
 
                 </div>
@@ -273,7 +273,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240819 gdal配置（二）</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -287,7 +287,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240813 绘制点 绘制折线 绘制多边形的功能实现</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -304,15 +304,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -396,7 +396,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">解决问题方式</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text"> 问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text"> 解决问题方式</span></a></li></ol>
     </div>
 </div>
 
@@ -423,7 +423,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -436,14 +436,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -549,7 +549,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">解决问题方式</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text"> 问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text"> 解决问题方式</span></a></li></ol>
     </div>
 </div>
 

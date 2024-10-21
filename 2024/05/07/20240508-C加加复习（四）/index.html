@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,7 +239,8 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="一个C-程序从编写编译到运行的过程"><a href="#一个C-程序从编写编译到运行的过程" class="headerlink" title="一个C++程序从编写编译到运行的过程"></a>一个C++程序从编写编译到运行的过程</h1><ul>
+                    <h1 id="一个c程序从编写编译到运行的过程"><a class="markdownIt-Anchor" href="#一个c程序从编写编译到运行的过程"></a> 一个C++程序从编写编译到运行的过程</h1>
+<ul>
 <li>自己先自己回忆一下这是一个大概的什么过程</li>
 </ul>
 <blockquote>
@@ -251,39 +252,45 @@
 <blockquote>
 <p>果然忘得很彻底</p>
 </blockquote>
-<hr>
-<h1 id="基本过程"><a href="#基本过程" class="headerlink" title="基本过程"></a>基本过程</h1><ul>
-<li><p>看嵌入式C语言自我修养自我总结</p>
+<hr />
+<h1 id="基本过程"><a class="markdownIt-Anchor" href="#基本过程"></a> 基本过程</h1>
+<ul>
+<li>
+<p>看嵌入式C语言自我修养自我总结</p>
 </li>
-<li><p>从开始和结果来看：从源程序到二进制机器指令的过程</p>
+<li>
+<p>从开始和结果来看：从源程序到二进制机器指令的过程</p>
 </li>
-<li><p>过程：</p>
+<li>
+<p>过程：</p>
 <blockquote>
 <p>1.预处理：<strong>处理文件中各种预处理命令</strong>。ci</p>
 <ul>
 <li>头文件展开、宏展开、条件编译、删除注释、添加行号和文件名标识、保留#pragma命令</li>
 <li>ci，将源文件main.c变为main.i</li>
-<li>&#96;g++ main.i -S -o main.s&#96;&#96;</li>
-<li>&#96;&#96;-S&#96; 选项告诉编译器生成汇编代码而不是将其编译成目标文件。具体地说，它告诉编译器在预处理和编译的基础上生成汇编代码，并将汇编代码保存在指定的输出文件中。</li>
+<li>`g++ main.i -S -o main.s``</li>
+<li>``-S` 选项告诉编译器生成汇编代码而不是将其编译成目标文件。具体地说，它告诉编译器在预处理和编译的基础上生成汇编代码，并将汇编代码保存在指定的输出文件中。</li>
 </ul>
-<p>2.编译：<strong>将预处理后的main.i编译成汇编文件main.s。</strong>is</p>
+<p>2.编译：**将预处理后的main.i编译成汇编文件main.s。**is</p>
 <ul>
-<li>把<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E9%A2%84%E7%BC%96%E8%AF%91&spm=1001.2101.3001.7020" >预编译<i class="fas fa-external-link-alt"></i></a>之后生成的xxx.i或xxx.ii文件，进行一系列词法分析、语法分析、语义分析及优化后，生成相应 的汇编代码文件。</li>
+<li>把<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E9%A2%84%E7%BC%96%E8%AF%91&amp;spm=1001.2101.3001.7020" >预编译<i class="fas fa-external-link-alt"></i></a>之后生成的xxx.i或xxx.ii文件，进行一系列词法分析、语法分析、语义分析及优化后，生成相应 的汇编代码文件。</li>
 <li>词法分析语法分析语义分析优化，目标代码生成，目标代码优化</li>
 <li><code>g++ main.i -S -o main.s</code></li>
 </ul>
-<p>3.汇编：<strong>将汇编代码转变成机器可以执行的指令(机器码文件)。</strong>so</p>
+<p>3.汇编：**将汇编代码转变成机器可以执行的指令(机器码文件)。**so</p>
 <ul>
 <li><code>g++ main.s -s -o main.o</code></li>
 </ul>
 <p>4.链接：将不同的源文件产生的目标文件进行链接，从而形成一个可以执行的程序。</p>
 <ul>
-<li><p>编译链接可执行文件的时候，连接器从库中复制这些函数和数据并把它们和引用程序的其它模块组合起来创建最终的可执行文件。链接器主要完成以下两个任务：</p>
+<li>
+<p>编译链接可执行文件的时候，连接器从库中复制这些函数和数据并把它们和引用程序的其它模块组合起来创建最终的可执行文件。链接器主要完成以下两个任务：</p>
 <pre><code>符号解析：每个符号对应于一个函数、一个全局变量或者一个静态变量
 重定位：链接器通过把每个符号定义与一个内存位置关联起来，然后修改所有对于这些符号的引用，使得它们指向这个内存位置
 </code></pre>
 </li>
-<li><p>分为静态链接和动态链接</p>
+<li>
+<p>分为静态链接和动态链接</p>
 </li>
 </ul>
 </blockquote>
@@ -318,7 +325,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240509 C加加复习（五）</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -332,7 +339,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240507 C加加复习（三）</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -349,15 +356,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -441,7 +448,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%B8%AAC-%E7%A8%8B%E5%BA%8F%E4%BB%8E%E7%BC%96%E5%86%99%E7%BC%96%E8%AF%91%E5%88%B0%E8%BF%90%E8%A1%8C%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">一个C++程序从编写编译到运行的过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">基本过程</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%B8%AAc%E7%A8%8B%E5%BA%8F%E4%BB%8E%E7%BC%96%E5%86%99%E7%BC%96%E8%AF%91%E5%88%B0%E8%BF%90%E8%A1%8C%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text"> 一个C++程序从编写编译到运行的过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text"> 基本过程</span></a></li></ol>
     </div>
 </div>
 
@@ -468,7 +475,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -481,14 +488,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -594,7 +601,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%B8%AAC-%E7%A8%8B%E5%BA%8F%E4%BB%8E%E7%BC%96%E5%86%99%E7%BC%96%E8%AF%91%E5%88%B0%E8%BF%90%E8%A1%8C%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">一个C++程序从编写编译到运行的过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">基本过程</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%B8%AAc%E7%A8%8B%E5%BA%8F%E4%BB%8E%E7%BC%96%E5%86%99%E7%BC%96%E8%AF%91%E5%88%B0%E8%BF%90%E8%A1%8C%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text"> 一个C++程序从编写编译到运行的过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text"> 基本过程</span></a></li></ol>
     </div>
 </div>
 

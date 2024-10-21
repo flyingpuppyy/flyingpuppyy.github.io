@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,29 +230,45 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="了解来源"><a href="#了解来源" class="headerlink" title="了解来源"></a>了解来源</h1><p>chatgot</p>
-<h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1><p>史莱姆算法（Slime Mold Algorithm, SMA）是一种基于自然界中黏菌（Slime Mold）觅食行为的群体智能算法。黏菌是一种单细胞生物，具有很强的适应环境和寻路能力。在黏菌觅食的过程中，它们通过释放化学物质、感知环境中的营养源，逐渐调整自己移动的路径，从而找到最优的食物来源。这种行为启发了SMA的设计。</p>
-<h3 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h3><ol>
+                    <h1 id="了解来源"><a class="markdownIt-Anchor" href="#了解来源"></a> 了解来源</h1>
+<p>chatgot</p>
+<h1 id="内容"><a class="markdownIt-Anchor" href="#内容"></a> 内容</h1>
+<p>史莱姆算法（Slime Mold Algorithm, SMA）是一种基于自然界中黏菌（Slime Mold）觅食行为的群体智能算法。黏菌是一种单细胞生物，具有很强的适应环境和寻路能力。在黏菌觅食的过程中，它们通过释放化学物质、感知环境中的营养源，逐渐调整自己移动的路径，从而找到最优的食物来源。这种行为启发了SMA的设计。</p>
+<h3 id="主要特点"><a class="markdownIt-Anchor" href="#主要特点"></a> 主要特点</h3>
+<ol>
 <li><strong>信息传递</strong>：黏菌通过化学信号传递信息，模拟出食物位置。</li>
 <li><strong>路径优化</strong>：通过不断调整移动路径，找到最优的食物获取路径。</li>
 <li><strong>全局搜索与局部优化</strong>：算法在全局范围内搜索最优解，并逐步进行局部优化，类似其他群体智能算法，如蚁群算法和粒子群算法。</li>
 </ol>
-<h3 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h3><p>SMA 常被应用于复杂问题的优化求解，比如：</p>
+<h3 id="适用场景"><a class="markdownIt-Anchor" href="#适用场景"></a> 适用场景</h3>
+<p>SMA 常被应用于复杂问题的优化求解，比如：</p>
 <ul>
 <li>路径规划</li>
 <li>函数优化</li>
 <li>物流配送问题</li>
 </ul>
 <p>该算法的启发式过程基于自然界中的真实生物行为，具备一定的鲁棒性和自适应能力，适合处理不确定性较强的问题。</p>
-<h1 id="实现可能方案（尚未认证）"><a href="#实现可能方案（尚未认证）" class="headerlink" title="实现可能方案（尚未认证）"></a>实现可能方案（尚未认证）</h1><p>实现史莱姆算法（Slime Mold Algorithm, SMA）或其他群体智能算法的框架有许多，以下是一些常用的库和框架，它们支持各种优化算法的实现，包括 SMA。</p>
+<h1 id="实现可能方案尚未认证"><a class="markdownIt-Anchor" href="#实现可能方案尚未认证"></a> 实现可能方案（尚未认证）</h1>
+<p>实现史莱姆算法（Slime Mold Algorithm, SMA）或其他群体智能算法的框架有许多，以下是一些常用的库和框架，它们支持各种优化算法的实现，包括 SMA。</p>
 <ol>
-<li><p>Python 生态中的优化库</p>
-<p> PySwarms: 这是一个基于粒子群优化（PSO）算法的库，但你可以根据它的框架实现类似史莱姆算法。它提供了方便的接口来处理多维度的优化问题。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://pyswarms.readthedocs.io/" >https://pyswarms.readthedocs.io<i class="fas fa-external-link-alt"></i></a><br> DEAP (Distributed Evolutionary Algorithms in Python): DEAP 是一个灵活的进化算法框架，可以用来实现 SMA。你可以根据 DEAP 的模板自定义黏菌算法，处理遗传算法、进化策略等优化问题。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://deap.readthedocs.io/" >https://deap.readthedocs.io<i class="fas fa-external-link-alt"></i></a><br> NiaPy (Nature-inspired Algorithms in Python): 这个库支持多种自然启发的算法，方便扩展新的算法。你可以在这个库的基础上添加黏菌算法。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://github.com/NiaOrg/NiaPy" >https://github.com/NiaOrg/NiaPy<i class="fas fa-external-link-alt"></i></a></p>
+<li>
+<p>Python 生态中的优化库</p>
+<p>PySwarms: 这是一个基于粒子群优化（PSO）算法的库，但你可以根据它的框架实现类似史莱姆算法。它提供了方便的接口来处理多维度的优化问题。<br />
+官网: <a class="link"   target="_blank" rel="noopener" href="https://pyswarms.readthedocs.io" >https://pyswarms.readthedocs.io<i class="fas fa-external-link-alt"></i></a><br />
+DEAP (Distributed Evolutionary Algorithms in Python): DEAP 是一个灵活的进化算法框架，可以用来实现 SMA。你可以根据 DEAP 的模板自定义黏菌算法，处理遗传算法、进化策略等优化问题。<br />
+官网: <a class="link"   target="_blank" rel="noopener" href="https://deap.readthedocs.io" >https://deap.readthedocs.io<i class="fas fa-external-link-alt"></i></a><br />
+NiaPy (Nature-inspired Algorithms in Python): 这个库支持多种自然启发的算法，方便扩展新的算法。你可以在这个库的基础上添加黏菌算法。<br />
+官网: <a class="link"   target="_blank" rel="noopener" href="https://github.com/NiaOrg/NiaPy" >https://github.com/NiaOrg/NiaPy<i class="fas fa-external-link-alt"></i></a></p>
 </li>
-<li><p>Java 生态中的优化框架</p>
-<p> Jenetics: 这是一个适用于 Java 的遗传算法库，同样可以通过定制化实现黏菌算法的行为，来处理不同的优化问题。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://jenetics.io/" >https://jenetics.io<i class="fas fa-external-link-alt"></i></a><br> Watchmaker Framework: 它是一个功能强大的 Java 进化算法框架，支持多种启发式搜索算法，你可以基于它设计黏菌算法。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="http://watchmaker.uncommons.org/" >http://watchmaker.uncommons.org<i class="fas fa-external-link-alt"></i></a></p>
+<li>
+<p>Java 生态中的优化框架</p>
+<p>Jenetics: 这是一个适用于 Java 的遗传算法库，同样可以通过定制化实现黏菌算法的行为，来处理不同的优化问题。<br />
+官网: <a class="link"   target="_blank" rel="noopener" href="https://jenetics.io" >https://jenetics.io<i class="fas fa-external-link-alt"></i></a><br />
+Watchmaker Framework: 它是一个功能强大的 Java 进化算法框架，支持多种启发式搜索算法，你可以基于它设计黏菌算法。<br />
+官网: <a class="link"   target="_blank" rel="noopener" href="http://watchmaker.uncommons.org" >http://watchmaker.uncommons.org<i class="fas fa-external-link-alt"></i></a></p>
 </li>
-<li><p>Matlab</p>
+<li>
+<p>Matlab</p>
 </li>
 </ol>
 <p>Matlab 是实现各种算法的常用平台，具有强大的优化工具箱。你可以直接用 Matlab 编写史莱姆算法的代码，或者在其已有的粒子群、蚁群等算法基础上进行修改。</p>
@@ -260,19 +276,23 @@
 官方文档: https://www.mathworks.com/products/matlab.html
 </code></pre>
 <ol start="4">
-<li>C&#x2F;C++</li>
+<li>C/C++</li>
 </ol>
-<p>如果你需要高效且灵活的实现，可以选择直接用 C&#x2F;C++ 实现。虽然没有现成的专门框架用于 SMA，但你可以基于经典的算法框架，比如：</p>
+<p>如果你需要高效且灵活的实现，可以选择直接用 C/C++ 实现。虽然没有现成的专门框架用于 SMA，但你可以基于经典的算法框架，比如：</p>
 <pre><code>GAlib: 一个用于遗传算法的 C++ 库，可以通过修改或扩展来实现黏菌算法。
     官网: http://lancet.mit.edu/ga/
 </code></pre>
 <ol start="5">
-<li><p>群体智能专用框架</p>
-<p> Swarm Intelligence Framework (SIF): 这是一个专门为群体智能算法设计的框架，提供了蚁群、粒子群等算法的实现，可以在其基础上实现 SMA。<br> 官网: <a class="link"   target="_blank" rel="noopener" href="https://github.com/SIF" >https://github.com/SIF<i class="fas fa-external-link-alt"></i></a></p>
+<li>
+<p>群体智能专用框架</p>
+<p>Swarm Intelligence Framework (SIF): 这是一个专门为群体智能算法设计的框架，提供了蚁群、粒子群等算法的实现，可以在其基础上实现 SMA。<br />
+官网: <a class="link"   target="_blank" rel="noopener" href="https://github.com/SIF" >https://github.com/SIF<i class="fas fa-external-link-alt"></i></a></p>
 </li>
 </ol>
 <p>你可以根据自己所选的编程语言、平台需求，选择相应的框架并实现史莱姆算法。</p>
-<h1 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h1><p>史莱姆算法（Slime Mold Algorithm, SMA）模仿了黏菌（Slime Mold）在寻找食物过程中通过感知环境、传递信息和调整路径的行为。黏菌在自然界中展示了非常强的自适应能力，能够根据化学物质的浓度，寻找最优的食物源。SMA 基于这种自然现象，主要用于解决复杂的优化问题。<br>核心概念</p>
+<h1 id="核心概念"><a class="markdownIt-Anchor" href="#核心概念"></a> 核心概念</h1>
+<p>史莱姆算法（Slime Mold Algorithm, SMA）模仿了黏菌（Slime Mold）在寻找食物过程中通过感知环境、传递信息和调整路径的行为。黏菌在自然界中展示了非常强的自适应能力，能够根据化学物质的浓度，寻找最优的食物源。SMA 基于这种自然现象，主要用于解决复杂的优化问题。<br />
+核心概念</p>
 <pre><code>黏菌个体（Slime Mold Agents）：
     这是算法中的基本计算单位，代表一个个体，它模仿自然界中的黏菌。
     每个黏菌个体在问题的搜索空间中进行移动，尝试找到最优解（类似于找到食物）。
@@ -356,7 +376,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240906 畅想</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -370,7 +390,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240905 从白兰地的原料开始</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -387,15 +407,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -479,7 +499,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">了解来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="nav-number">2.0.1.</span> <span class="nav-text">主要特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.0.2.</span> <span class="nav-text">适用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%8F%AF%E8%83%BD%E6%96%B9%E6%A1%88%EF%BC%88%E5%B0%9A%E6%9C%AA%E8%AE%A4%E8%AF%81%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">实现可能方案（尚未认证）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-number">4.</span> <span class="nav-text">核心概念</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 了解来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text"> 内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="nav-number">2.0.1.</span> <span class="nav-text"> 主要特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.0.2.</span> <span class="nav-text"> 适用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%8F%AF%E8%83%BD%E6%96%B9%E6%A1%88%E5%B0%9A%E6%9C%AA%E8%AE%A4%E8%AF%81"><span class="nav-number">3.</span> <span class="nav-text"> 实现可能方案（尚未认证）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-number">4.</span> <span class="nav-text"> 核心概念</span></a></li></ol>
     </div>
 </div>
 
@@ -506,7 +526,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -519,14 +539,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -632,7 +652,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">了解来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="nav-number">2.0.1.</span> <span class="nav-text">主要特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.0.2.</span> <span class="nav-text">适用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%8F%AF%E8%83%BD%E6%96%B9%E6%A1%88%EF%BC%88%E5%B0%9A%E6%9C%AA%E8%AE%A4%E8%AF%81%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">实现可能方案（尚未认证）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-number">4.</span> <span class="nav-text">核心概念</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 了解来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text"> 内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="nav-number">2.0.1.</span> <span class="nav-text"> 主要特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.0.2.</span> <span class="nav-text"> 适用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%8F%AF%E8%83%BD%E6%96%B9%E6%A1%88%E5%B0%9A%E6%9C%AA%E8%AE%A4%E8%AF%81"><span class="nav-number">3.</span> <span class="nav-text"> 实现可能方案（尚未认证）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-number">4.</span> <span class="nav-text"> 核心概念</span></a></li></ol>
     </div>
 </div>
 

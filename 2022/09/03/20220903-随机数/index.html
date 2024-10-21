@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,8 +239,9 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="20220903-随机数"><a href="#20220903-随机数" class="headerlink" title="20220903 随机数"></a>20220903 随机数</h1><h1 id="rand函数"><a href="#rand函数" class="headerlink" title="rand函数"></a>rand函数</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="built_in">rand</span>() % <span class="number">100</span>+<span class="number">1</span>;  <span class="comment">//1~99</span></span><br></pre></td></tr></table></figure>
-
+                    <h1 id="20220903-随机数"><a class="markdownIt-Anchor" href="#20220903-随机数"></a> 20220903 随机数</h1>
+<h1 id="rand函数"><a class="markdownIt-Anchor" href="#rand函数"></a> rand函数</h1>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="built_in">rand</span>() % <span class="number">100</span>+<span class="number">1</span>;  <span class="comment">//1~99</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>一般性：rand() % (b-a+1)+ a ; 就表示 a~b 之间的一个随机整数。</li>
 </ul>
@@ -248,146 +249,144 @@
 <p>1位置数直接写a,100位置书要将ab差值+1</p>
 </blockquote>
 <ul>
-<li><p>我们知道rand()函数可以用来产生随机数，但是这不是真真意义上的随机数，是一个伪随机数，是根据一个数（我们可以称它为种子）为基准以某个递推公式推算出来的一系列数，当这系列数很大的时候，就符合正态公布，从而相当于产生了随机数，但这不是真正的随机数，当计算机正常开机后，这个种子的值是定了的，除非你破坏了系统。</p>
+<li>
+<p>我们知道rand()函数可以用来产生随机数，但是这不是真真意义上的随机数，是一个伪随机数，是根据一个数（我们可以称它为种子）为基准以某个递推公式推算出来的一系列数，当这系列数很大的时候，就符合正态公布，从而相当于产生了随机数，但这不是真正的随机数，当计算机正常开机后，这个种子的值是定了的，除非你破坏了系统。</p>
 </li>
-<li><p>实现：因为rand() 的内部实现是用线性同余法做的，它不是真的随机数，只不过是因为其周期特别长，所以有一定的范围里可看成是随机的，<br>rand() 会返回一随机数值，范围在 0 至 RAND_MAX 间。  为得到不同的随机数序列，则需改变这个种子的值。</p>
+<li>
+<p>实现：因为rand() 的内部实现是用线性同余法做的，它不是真的随机数，只不过是因为其周期特别长，所以有一定的范围里可看成是随机的，<br />
+rand() 会返回一随机数值，范围在 0 至 RAND_MAX 间。  为得到不同的随机数序列，则需改变这个种子的值。</p>
 </li>
-<li><p>方法：在开始产生随机数前，调用一次srand(time(NULL))</p>
+<li>
+<p>方法：在开始产生随机数前，调用一次srand(time(NULL))</p>
 <p>（注意：srand()一定要放在循环外面或者是循环调用的外面，否则的话得到的是相同的随机数）。</p>
 </li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span> </span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="type">int</span> i; </span><br><span class="line">    <span class="built_in">srand</span>((<span class="type">unsigned</span>)<span class="built_in">time</span>(<span class="literal">NULL</span>)); <span class="comment">//初始化随机数种子 </span></span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) <span class="comment">//产生10个随机数 </span></span><br><span class="line">    &#123; </span><br><span class="line">        cout&lt;&lt;<span class="built_in">rand</span>()&lt;&lt;<span class="string">&quot;/t&quot;</span>; </span><br><span class="line">    &#125; </span><br><span class="line">    cout&lt;&lt;endl; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;      </span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>rand函数有一些问题：很多程序需要不同范围的随机数，一些应用需要<strong>非均匀分布的数</strong>。而程序员为了解决这些问题而试图转换rand生成的随机数的范围、类型或分布时，常常会引入非随机性。</li>
 </ul>
-<h1 id="srand函数"><a href="#srand函数" class="headerlink" title="srand函数"></a><strong>srand函数</strong></h1><ul>
-<li><p>srand()用来设置rand()产生随机数时的随机数种子。</p>
+<h1 id="srand函数"><a class="markdownIt-Anchor" href="#srand函数"></a> <strong>srand函数</strong></h1>
+<ul>
+<li>
+<p>srand()用来设置rand()产生随机数时的随机数种子。</p>
 </li>
-<li><p>参数seed必须是个整数，通常可以利用time(0)的返回值或NULL来当做seed。</p>
+<li>
+<p>参数seed必须是个整数，通常可以利用time(0)的返回值或NULL来当做seed。</p>
 </li>
-<li><p>如果每次seed都设相同值，rand()所产生的随机数值每次就会一样。</p>
+<li>
+<p>如果每次seed都设相同值，rand()所产生的随机数值每次就会一样。</p>
 </li>
 </ul>
-<h1 id="随机数库"><a href="#随机数库" class="headerlink" title="随机数库"></a>随机数库</h1><ul>
-<li><p>C++程序不应该使用库函数rand，而应使用default_random_engine类和恰当的分布类对象。</p>
+<h1 id="随机数库"><a class="markdownIt-Anchor" href="#随机数库"></a> 随机数库</h1>
+<ul>
+<li>
+<p>C++程序不应该使用库函数rand，而应使用default_random_engine类和恰当的分布类对象。</p>
 </li>
-<li><p>定义在头文件random中的随机数库通过一组协作的类来解决rand问题：随机数<strong>引擎****类和随机数</strong>分布****类。</p>
+<li>
+<p>定义在头文件random中的随机数库通过一组协作的类来解决rand问题：随机数<strong>引擎****类和随机数</strong>分布****类。</p>
 <p>一个引擎类可以生成unsigned随机数序列，</p>
 <p>一个分布类使用一个引擎类生成<strong>指定类型的、在给定范</strong>内的、<strong>服从特定</strong>概率分布的随机数。</p>
 </li>
 </ul>
-<h2 id="随机数引擎"><a href="#随机数引擎" class="headerlink" title="随机数引擎"></a>随机数引擎</h2><ul>
+<h2 id="随机数引擎"><a class="markdownIt-Anchor" href="#随机数引擎"></a> 随机数引擎</h2>
+<ul>
 <li>随机数引擎是函数对象类，定义了一个不接受参数的调用运算符，并返回一个随机的unsigned整数。</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">std::default_random_engine e;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)</span><br><span class="line">	std::cout &lt;&lt; <span class="built_in">e</span>() &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">std::cout &lt;&lt; std::endl;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>随机数引擎的操作有：</li>
 </ul>
-<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240621141319322.png"  alt="image-20240621141319322"></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240621141319322.png"  alt="image-20240621141319322" ></p>
 <ul>
 <li>不重复的随机数序列</li>
 </ul>
 <p>注意两个方面，一个是引擎的随机数序列的延后选取，一个是改变随机数发生器的种子</p>
 <p><strong>引擎的随机数序列的延后选取</strong></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621143704904.png"  alt="image-20240621143704904"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621143653422.png"  alt="image-20240621143653422"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621143704904.png"  alt="image-20240621143704904" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621143653422.png"  alt="image-20240621143653422" ></p>
 <blockquote>
 <p>正确：</p>
-<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240621141150928.png"  alt="image-20240621141150928"></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240621141150928.png"  alt="image-20240621141150928" ></p>
 </blockquote>
 <p><strong>改变随机数发生器的种子</strong></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621142721544.png"  alt="image-20240621142721544"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621142721544.png"  alt="image-20240621142721544" ></p>
 <blockquote>
 <p>一般来说，使用time（0）获取随机种子</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621143635195.png"  alt="image-20240621143635195"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621143635195.png"  alt="image-20240621143635195" ></p>
 <p>time(0)函数返回自格林尼治标准时间1970年1月1日00:00:00至当前时刻所流逝的秒数。</p>
 <p>相关头文件：#include <ctime></p>
 </blockquote>
-<h2 id="分布类型"><a href="#分布类型" class="headerlink" title="分布类型"></a>分布类型</h2><p>对于大多数场合，随机数引擎的输出是不能直接使用的，问题在于生成的随机数的值范围通常与我们需要的不符。为了得到一个指定范围内的数，我们使用一个分布类型的对象：</p>
+<h2 id="分布类型"><a class="markdownIt-Anchor" href="#分布类型"></a> 分布类型</h2>
+<p>对于大多数场合，随机数引擎的输出是不能直接使用的，问题在于生成的随机数的值范围通常与我们需要的不符。为了得到一个指定范围内的数，我们使用一个分布类型的对象：</p>
 <p><strong>uniform_int_distribution：产生均匀分布的整数</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::uniform_int_distribution&lt;<span class="type">unsigned</span>&gt; <span class="title">u</span><span class="params">(<span class="number">0</span>, <span class="number">9</span>)</span></span>;</span><br><span class="line">std::default_random_engine e;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">size_t</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)</span><br><span class="line">	std::cout &lt;&lt; <span class="built_in">u</span>(e) &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">std::cout &lt;&lt; std::endl;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>此处我们将u定义为uniform_int_distribution<unsigned>。此类型生成<strong>均匀分布的unsigned值</strong>。当我们定义一个这种类型的对象，可以提供想要的最小值和最大值。</p>
-<p><strong>类似引擎类型，分布类型也是函数对象类。</strong>分布类型定义了一个调用运算答，它接受一个随机数引擎作为参数。分布对象使用它的引擎参数生成随机数，并将其映射到指定的分布。</p>
+<p>**类似引擎类型，分布类型也是函数对象类。**分布类型定义了一个调用运算答，它接受一个随机数引擎作为参数。分布对象使用它的引擎参数生成随机数，并将其映射到指定的分布。</p>
 <blockquote>
 <p>易错：</p>
-<p><img   src="/../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1662193948944.png"  alt="1662193948944"></p>
+<p><img   src="../../typora%E5%9B%BE%E7%89%87%E5%BA%93/1662193948944.png"  alt="1662193948944" ></p>
 </blockquote>
 <p><strong>uniform_real_distribution：产生均匀分布的实数</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    std::default_random_engine e;</span><br><span class="line">    <span class="function">std::uniform_real_distribution&lt;<span class="type">double</span>&gt; <span class="title">u</span><span class="params">(<span class="number">1.5</span>,<span class="number">19.5</span>)</span></span>; <span class="comment">// 左闭右闭区间</span></span><br><span class="line">    e.<span class="built_in">seed</span>(<span class="built_in">time</span>(<span class="number">0</span>));</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="built_in">u</span>(e) &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
 <p><strong>normal_distribution：产生正态分布的实数</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    std::default_random_engine e;</span><br><span class="line">    <span class="function">std::normal_distribution&lt;<span class="type">double</span>&gt; <span class="title">u</span><span class="params">(<span class="number">0</span>,<span class="number">1</span>)</span></span>; <span class="comment">// 均值为0，标准差为1</span></span><br><span class="line">    e.<span class="built_in">seed</span>(<span class="built_in">time</span>(<span class="number">0</span>));</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="built_in">u</span>(e) &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
 <p><strong>bernoulli_distribution：生成二项分布的布尔值</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    std::default_random_engine e;</span><br><span class="line">    <span class="function">std::bernoulli_distribution <span class="title">u</span><span class="params">(<span class="number">0.8</span>)</span></span>; <span class="comment">// 生成1的概率为0.8</span></span><br><span class="line">    e.<span class="built_in">seed</span>(<span class="built_in">time</span>(<span class="number">0</span>));</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="built_in">u</span>(e) &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="20221110-C-等概率数值问题"><a href="#20221110-C-等概率数值问题" class="headerlink" title="20221110 C++ 等概率数值问题"></a>20221110 C++ 等概率数值问题</h1><h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><p>想写一个小函数来产生等概率的0 1，但是测试发现它们这个概率并不相等</p>
+<h1 id="20221110-c-等概率数值问题"><a class="markdownIt-Anchor" href="#20221110-c-等概率数值问题"></a> 20221110 C++ 等概率数值问题</h1>
+<h2 id="问题记录"><a class="markdownIt-Anchor" href="#问题记录"></a> 问题记录</h2>
+<p>想写一个小函数来产生等概率的0 1，但是测试发现它们这个概率并不相等</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">lrseed</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">srand</span>(<span class="built_in">time</span>(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">if</span> (((<span class="built_in">rand</span>() % <span class="number">1000</span>) + <span class="number">1</span>) &gt;= <span class="number">500</span>)<span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//左</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">true</span>;<span class="comment">//右</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621140941131.png"  alt="image-20240621140941131"></p>
-<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">srand</span>(<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line">num=<span class="built_in">rand</span>()%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">if</span>(num==<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">return</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240621140941131.png"  alt="image-20240621140941131" ></p>
+<h2 id="问题原因"><a class="markdownIt-Anchor" href="#问题原因"></a> 问题原因</h2>
+<h2 id="问题解决"><a class="markdownIt-Anchor" href="#问题解决"></a> 问题解决</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">srand</span>(<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line">num=<span class="built_in">rand</span>()%<span class="number">10</span>;</span><br><span class="line"><span class="keyword">if</span>(num==<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">return</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>并没有解决</p>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">std::default_random_engine e;</span><br><span class="line">   std::bernoulli_distribution u;</span><br><span class="line">   <span class="keyword">return</span> <span class="built_in">u</span>(e);</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>想用C++11中的random库来解决</p>
 <p>并没有解决，怀疑还是引擎精度问题</p>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//左右种子</span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">lrseed</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">clock_t</span> start, end;</span><br><span class="line">    start = <span class="built_in">clock</span>();</span><br><span class="line">    <span class="built_in">Sleep</span>(<span class="number">1</span>);</span><br><span class="line">    end = <span class="built_in">clock</span>();</span><br><span class="line"></span><br><span class="line">    <span class="built_in">srand</span>(end-start);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">rand</span>() % <span class="number">2</span> ;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>虽然不知道是不是产生会是等概率的，但是精度确实提高了不少，因为这个随机数的种子总能发生改变了</p>
 <p>√</p>
 </blockquote>
-<h1 id="问题拓展"><a href="#问题拓展" class="headerlink" title="问题拓展"></a>问题拓展</h1><h2 id="一"><a href="#一" class="headerlink" title="一"></a>一</h2><p>笔试代码题–C++–输出概率相等的1和0</p>
-<p>题目：有个输出0和1的函数（BIASED RANDOM），它以概率p输出1，以概率1-p输出0，以此RANDOM函数为基础，生成另一个RANDOM函数，该函数以1&#x2F;2的概率输出1，以1&#x2F;2的概率输出0</p>
+<h1 id="问题拓展"><a class="markdownIt-Anchor" href="#问题拓展"></a> 问题拓展</h1>
+<h2 id="一"><a class="markdownIt-Anchor" href="#一"></a> 一</h2>
+<p>笔试代码题–C+±-输出概率相等的1和0</p>
+<p>题目：有个输出0和1的函数（BIASED RANDOM），它以概率p输出1，以概率1-p输出0，以此RANDOM函数为基础，生成另一个RANDOM函数，该函数以1/2的概率输出1，以1/2的概率输出0</p>
 <p>题目解答：</p>
 <p>两次调用该RANDOM函数，如果其概率为P(x)，调用2次</p>
-<p>P(1) &#x3D; p       P(0) &#x3D; 1-p</p>
-<p>P’(1) &#x3D;p      P’(0) &#x3D; 1-p</p>
+<p>P(1) = p       P(0) = 1-p</p>
+<p>P’(1) =p      P’(0) = 1-p</p>
 <p>概率如下：</p>
-<p>11  p * p        <em><em>10  p</em>(1-p)&#x3D;p-pp</em>*</p>
-<p><em><em>01 (1-p)</em> p&#x3D;p-pp</em>*   00 (1-p)*(1-p)&#x3D;1-2p-pp</p>
-<p>10+01&#x3D;1+p-2pp  00+11&#x3D;1-2p</p>
+<p>11  p * p        <em><em>10  p</em>(1-p)=p-pp</em>*</p>
+<p><em><em>01 (1-p)</em> p=p-pp</em>*   00 (1-p)*(1-p)=1-2p-pp</p>
+<p>10+01=1+p-2pp  00+11=1-2p</p>
 <blockquote>
 <p>意思就是只选这两种模式，然后一种出现就给0，另一种给1，其他不管</p>
 </blockquote>
 <p>函数代码如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//#include &lt;random&gt;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">random_0_1</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="type">int</span> i = <span class="built_in">RANDOM</span>();  <span class="comment">//int i=rand();</span></span><br><span class="line">    <span class="type">int</span> j = <span class="built_in">RANDOM</span>();  <span class="comment">//int j=rand();</span></span><br><span class="line">    <span class="type">int</span> result;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">0</span> &amp;&amp; j == <span class="number">1</span>)  </span><br><span class="line">        &#123;  </span><br><span class="line">            result = <span class="number">0</span>;  </span><br><span class="line">            <span class="keyword">break</span>;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">1</span> &amp;&amp; j == <span class="number">0</span>)  </span><br><span class="line">        &#123;  </span><br><span class="line">            result = <span class="number">1</span>;  </span><br><span class="line">            <span class="keyword">break</span>;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">else</span>  </span><br><span class="line">            <span class="keyword">continue</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> result;  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="二-从0到n-1中随机等概率输出m个不同的数"><a href="#二-从0到n-1中随机等概率输出m个不同的数" class="headerlink" title="二 从0到n-1中随机等概率输出m个不同的数"></a>二 从0到n-1中随机等概率输出m个不同的数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//假设输入的n远大于m</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">deng</span><span class="params">(<span class="type">int</span> n,<span class="type">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">srand</span>((<span class="type">unsigned</span>)<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span> ; i &lt; n ; i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">rand</span>() % (n - i) &lt; m)</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; i &lt;&lt; endl;</span><br><span class="line">			m--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n = <span class="number">6</span>, m = <span class="number">3</span>;</span><br><span class="line">		<span class="built_in">deng</span>(n,m);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
+<h2 id="二-从0到n-1中随机等概率输出m个不同的数"><a class="markdownIt-Anchor" href="#二-从0到n-1中随机等概率输出m个不同的数"></a> 二 从0到n-1中随机等概率输出m个不同的数</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//假设输入的n远大于m</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">deng</span><span class="params">(<span class="type">int</span> n,<span class="type">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">srand</span>((<span class="type">unsigned</span>)<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span> ; i &lt; n ; i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">rand</span>() % (n - i) &lt; m)</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; i &lt;&lt; endl;</span><br><span class="line">			m--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n = <span class="number">6</span>, m = <span class="number">3</span>;</span><br><span class="line">		<span class="built_in">deng</span>(n,m);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>理解：</p>
 <p>1.输出m个不同的数：</p>
 <p>由for循环n次，且满足条件时才输出数字 i，可知，输出不同数的要求已满足，因为每次输出的都是 i 值，而 i 值每次都是不一样的，m–保证了程序在输出了m个值后就不再输出i。</p>
 <p>2.等概率：</p>
-<p>在i&#x3D;0时，rand()%(n-i)的取值范围为0到n-1，共n个数，此时要输出0只需要rand()%(n-i)小于m，故i&#x3D;0被输出的概率为m&#x2F;n;</p>
-<p>在i&#x3D;1时，rand()%(n-i)的取值范围为0到n-2，共n-1个数，若i&#x3D;0没有被输出，则m–未被执行，此时i&#x3D;1被输出的概率为m&#x2F;(n-1)，若i&#x3D;0已经被输出了，则m变为m-1，此时i&#x3D;1被输出的概率为(m-1)&#x2F;(n-1)；</p>
-<p>由概率论的知识，可知此时i&#x3D;1被输出的概率为</p>
-<p>P&#x3D;(1-m&#x2F;n)<em>(m&#x2F;(n-1))+m&#x2F;n</em>((m-1)&#x2F;(n-1))&#x3D;m&#x2F;n；</p>
+<p>在i=0时，rand()%(n-i)的取值范围为0到n-1，共n个数，此时要输出0只需要rand()%(n-i)小于m，故i=0被输出的概率为m/n;</p>
+<p>在i=1时，rand()%(n-i)的取值范围为0到n-2，共n-1个数，若i=0没有被输出，则m–未被执行，此时i=1被输出的概率为m/(n-1)，若i=0已经被输出了，则m变为m-1，此时i=1被输出的概率为(m-1)/(n-1)；</p>
+<p>由概率论的知识，可知此时i=1被输出的概率为</p>
+<p>P=(1-m/n)<em>(m/(n-1))+m/n</em>((m-1)/(n-1))=m/n；</p>
 <blockquote>
 <p>这里是两种情况</p>
 <p>第一种是0输出且1也被输出</p>
 <p>第二种是0未被输出然后1被输出了</p>
 </blockquote>
-<p>以此类推，可知每个数被输出的概率都为m&#x2F;n。</p>
+<p>以此类推，可知每个数被输出的概率都为m/n。</p>
 </blockquote>
 
                 </div>
@@ -418,7 +417,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20220912 快速排序</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -432,7 +431,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20220302 设计模式总纲</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -449,15 +448,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -541,7 +540,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20220903-%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">20220903 随机数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rand%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">rand函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#srand%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">srand函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">随机数库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BC%95%E6%93%8E"><span class="nav-number">4.1.</span> <span class="nav-text">随机数引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">分布类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20221110-C-%E7%AD%89%E6%A6%82%E7%8E%87%E6%95%B0%E5%80%BC%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">20221110 C++ 等概率数值问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="nav-number">5.1.</span> <span class="nav-text">问题记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8E%9F%E5%9B%A0"><span class="nav-number">5.2.</span> <span class="nav-text">问题原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="nav-number">5.3.</span> <span class="nav-text">问题解决</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8B%93%E5%B1%95"><span class="nav-number">6.</span> <span class="nav-text">问题拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80"><span class="nav-number">6.1.</span> <span class="nav-text">一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E4%BB%8E0%E5%88%B0n-1%E4%B8%AD%E9%9A%8F%E6%9C%BA%E7%AD%89%E6%A6%82%E7%8E%87%E8%BE%93%E5%87%BAm%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0"><span class="nav-number">6.2.</span> <span class="nav-text">二 从0到n-1中随机等概率输出m个不同的数</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20220903-%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text"> 20220903 随机数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rand%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text"> rand函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#srand%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text"> srand函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text"> 随机数库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BC%95%E6%93%8E"><span class="nav-number">4.1.</span> <span class="nav-text"> 随机数引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text"> 分布类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20221110-c-%E7%AD%89%E6%A6%82%E7%8E%87%E6%95%B0%E5%80%BC%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text"> 20221110 C++ 等概率数值问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="nav-number">5.1.</span> <span class="nav-text"> 问题记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8E%9F%E5%9B%A0"><span class="nav-number">5.2.</span> <span class="nav-text"> 问题原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="nav-number">5.3.</span> <span class="nav-text"> 问题解决</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8B%93%E5%B1%95"><span class="nav-number">6.</span> <span class="nav-text"> 问题拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80"><span class="nav-number">6.1.</span> <span class="nav-text"> 一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E4%BB%8E0%E5%88%B0n-1%E4%B8%AD%E9%9A%8F%E6%9C%BA%E7%AD%89%E6%A6%82%E7%8E%87%E8%BE%93%E5%87%BAm%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0"><span class="nav-number">6.2.</span> <span class="nav-text"> 二 从0到n-1中随机等概率输出m个不同的数</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -568,7 +567,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -581,14 +580,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -694,7 +693,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20220903-%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">20220903 随机数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rand%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">rand函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#srand%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">srand函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">随机数库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BC%95%E6%93%8E"><span class="nav-number">4.1.</span> <span class="nav-text">随机数引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">分布类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20221110-C-%E7%AD%89%E6%A6%82%E7%8E%87%E6%95%B0%E5%80%BC%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">20221110 C++ 等概率数值问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="nav-number">5.1.</span> <span class="nav-text">问题记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8E%9F%E5%9B%A0"><span class="nav-number">5.2.</span> <span class="nav-text">问题原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="nav-number">5.3.</span> <span class="nav-text">问题解决</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8B%93%E5%B1%95"><span class="nav-number">6.</span> <span class="nav-text">问题拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80"><span class="nav-number">6.1.</span> <span class="nav-text">一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E4%BB%8E0%E5%88%B0n-1%E4%B8%AD%E9%9A%8F%E6%9C%BA%E7%AD%89%E6%A6%82%E7%8E%87%E8%BE%93%E5%87%BAm%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0"><span class="nav-number">6.2.</span> <span class="nav-text">二 从0到n-1中随机等概率输出m个不同的数</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20220903-%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text"> 20220903 随机数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rand%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text"> rand函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#srand%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text"> srand函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text"> 随机数库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%BC%95%E6%93%8E"><span class="nav-number">4.1.</span> <span class="nav-text"> 随机数引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text"> 分布类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20221110-c-%E7%AD%89%E6%A6%82%E7%8E%87%E6%95%B0%E5%80%BC%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text"> 20221110 C++ 等概率数值问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="nav-number">5.1.</span> <span class="nav-text"> 问题记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8E%9F%E5%9B%A0"><span class="nav-number">5.2.</span> <span class="nav-text"> 问题原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="nav-number">5.3.</span> <span class="nav-text"> 问题解决</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8B%93%E5%B1%95"><span class="nav-number">6.</span> <span class="nav-text"> 问题拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80"><span class="nav-number">6.1.</span> <span class="nav-text"> 一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E4%BB%8E0%E5%88%B0n-1%E4%B8%AD%E9%9A%8F%E6%9C%BA%E7%AD%89%E6%A6%82%E7%8E%87%E8%BE%93%E5%87%BAm%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0"><span class="nav-number">6.2.</span> <span class="nav-text"> 二 从0到n-1中随机等概率输出m个不同的数</span></a></li></ol></li></ol>
     </div>
 </div>
 

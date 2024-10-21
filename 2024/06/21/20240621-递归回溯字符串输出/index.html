@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,23 +239,20 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>创建一个递归回溯算法，注意：字符串的排列组合，而不是字符的排列组合。</p>
-<p>如果输入是 “123”，”456”，”789”输出的结果是 “123456789” “456123789” “456789123” “789123456 “等。</p>
-<p> (a) 一个递归函数 “permutate_strings”，它将接收一个字符串数组作为输入，并生成所有可能的字符串排列组合</p>
-<p> (b) 一个 “swap_strings “函数，它将被用于 “permutate_strings”，以帮助你生成所有可能的排列组合</p>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap_strings</span><span class="params">(std::vector&lt;std::string&gt;&amp; strs, <span class="type">int</span> i, <span class="type">int</span> j)</span> </span>&#123;</span><br><span class="line">    std::string temp = strs[i];</span><br><span class="line">    strs[i] = strs[j];</span><br><span class="line">    strs[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">permutate_strings</span><span class="params">(std::vector&lt;std::string&gt;&amp; strs, <span class="type">int</span> start, std::vector&lt;std::string&gt;&amp; result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//探索终点将当前站位拼接输出</span></span><br><span class="line">    <span class="keyword">if</span> (start == strs.<span class="built_in">size</span>() - <span class="number">1</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        std::string permutation;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; str : strs)</span><br><span class="line">        &#123;</span><br><span class="line">            permutation += str;</span><br><span class="line">        &#125;</span><br><span class="line">        result.<span class="built_in">push_back</span>(permutation);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//进行排列组合</span></span><br><span class="line">    <span class="comment">//基本思路：定初始一位，后面其他位同样定且交换</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = start; i &lt; strs.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">        <span class="built_in">swap_strings</span>(strs, start, i);</span><br><span class="line">        <span class="built_in">permutate_strings</span>(strs, start + <span class="number">1</span>, result);</span><br><span class="line">        <span class="built_in">swap_strings</span>(strs, start, i);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//回溯过程中将交换还原到初始位置</span></span><br><span class="line">        <span class="comment">//递归多少层就回溯多少层</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::vector&lt;std::string&gt; input = &#123;<span class="string">&quot;123&quot;</span>, <span class="string">&quot;456&quot;</span>, <span class="string">&quot;789&quot;</span>&#125;;</span><br><span class="line">    std::vector&lt;std::string&gt; result;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">permutate_strings</span>(input, <span class="number">0</span>, result);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; permutation : result) &#123;</span><br><span class="line">        std::cout &lt;&lt; permutation &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="回溯总结"><a href="#回溯总结" class="headerlink" title="回溯总结"></a>回溯总结</h1><p>chatgpt</p>
-<h3 id="回溯算法的结构"><a href="#回溯算法的结构" class="headerlink" title="回溯算法的结构"></a>回溯算法的结构</h3><p>回溯算法通常采用递归的形式实现。典型的回溯算法可以描述如下：</p>
+                    <h1 id="题目"><a class="markdownIt-Anchor" href="#题目"></a> 题目</h1>
+<p>创建一个递归回溯算法，注意：字符串的排列组合，而不是字符的排列组合。</p>
+<p>如果输入是 “123”，“456”，&quot;789&quot;输出的结果是 “123456789” “456123789” “456789123” &quot;789123456 &quot;等。</p>
+<p>(a) 一个递归函数 “permutate_strings”，它将接收一个字符串数组作为输入，并生成所有可能的字符串排列组合</p>
+<p>(b) 一个 &quot;swap_strings &quot;函数，它将被用于 “permutate_strings”，以帮助你生成所有可能的排列组合</p>
+<h1 id="代码实现"><a class="markdownIt-Anchor" href="#代码实现"></a> 代码实现</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap_strings</span><span class="params">(std::vector&lt;std::string&gt;&amp; strs, <span class="type">int</span> i, <span class="type">int</span> j)</span> </span>&#123;</span><br><span class="line">    std::string temp = strs[i];</span><br><span class="line">    strs[i] = strs[j];</span><br><span class="line">    strs[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">permutate_strings</span><span class="params">(std::vector&lt;std::string&gt;&amp; strs, <span class="type">int</span> start, std::vector&lt;std::string&gt;&amp; result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//探索终点将当前站位拼接输出</span></span><br><span class="line">    <span class="keyword">if</span> (start == strs.<span class="built_in">size</span>() - <span class="number">1</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        std::string permutation;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; str : strs)</span><br><span class="line">        &#123;</span><br><span class="line">            permutation += str;</span><br><span class="line">        &#125;</span><br><span class="line">        result.<span class="built_in">push_back</span>(permutation);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//进行排列组合</span></span><br><span class="line">    <span class="comment">//基本思路：定初始一位，后面其他位同样定且交换</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = start; i &lt; strs.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">        <span class="built_in">swap_strings</span>(strs, start, i);</span><br><span class="line">        <span class="built_in">permutate_strings</span>(strs, start + <span class="number">1</span>, result);</span><br><span class="line">        <span class="built_in">swap_strings</span>(strs, start, i);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//回溯过程中将交换还原到初始位置</span></span><br><span class="line">        <span class="comment">//递归多少层就回溯多少层</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::vector&lt;std::string&gt; input = &#123;<span class="string">&quot;123&quot;</span>, <span class="string">&quot;456&quot;</span>, <span class="string">&quot;789&quot;</span>&#125;;</span><br><span class="line">    std::vector&lt;std::string&gt; result;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">permutate_strings</span>(input, <span class="number">0</span>, result);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">const</span> <span class="keyword">auto</span>&amp; permutation : result) &#123;</span><br><span class="line">        std::cout &lt;&lt; permutation &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="回溯总结"><a class="markdownIt-Anchor" href="#回溯总结"></a> 回溯总结</h1>
+<p>chatgpt</p>
+<h3 id="回溯算法的结构"><a class="markdownIt-Anchor" href="#回溯算法的结构"></a> 回溯算法的结构</h3>
+<p>回溯算法通常采用递归的形式实现。典型的回溯算法可以描述如下：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">backtrack</span><span class="params">(部分解)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (当前部分解是完整解) &#123;</span><br><span class="line">        处理完整解;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (选择 : 当前可行的选项) &#123;</span><br><span class="line">        <span class="keyword">if</span> (选择满足约束条件) &#123;</span><br><span class="line">            做选择;</span><br><span class="line">            <span class="built_in">backtrack</span>(新的部分解);</span><br><span class="line">            撤销选择; <span class="comment">// 回溯</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="回溯的应用场景"><a href="#回溯的应用场景" class="headerlink" title="回溯的应用场景"></a>回溯的应用场景</h3><p>回溯算法常用于解决以下类型的问题：</p>
+<h3 id="回溯的应用场景"><a class="markdownIt-Anchor" href="#回溯的应用场景"></a> 回溯的应用场景</h3>
+<p>回溯算法常用于解决以下类型的问题：</p>
 <ul>
 <li><strong>组合问题</strong>：例如子集生成、排列生成、组合生成。</li>
 <li><strong>约束满足问题</strong>：例如数独、N皇后问题、图的着色问题。</li>
@@ -290,7 +287,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240622 C++面试八股</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -304,7 +301,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240621 注册项</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -321,15 +318,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -413,7 +410,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">回溯总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.0.1.</span> <span class="nav-text">回溯算法的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.0.2.</span> <span class="nav-text">回溯的应用场景</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text"> 题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text"> 代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text"> 回溯总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.0.1.</span> <span class="nav-text"> 回溯算法的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.0.2.</span> <span class="nav-text"> 回溯的应用场景</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
@@ -440,7 +437,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -453,14 +450,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -566,7 +563,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">回溯总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.0.1.</span> <span class="nav-text">回溯算法的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.0.2.</span> <span class="nav-text">回溯的应用场景</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text"> 题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text"> 代码实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text"> 回溯总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.0.1.</span> <span class="nav-text"> 回溯算法的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%BA%AF%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.0.2.</span> <span class="nav-text"> 回溯的应用场景</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 

@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Sat Aug 31 2024 22:05:25 GMT+0800">2024-08-31 22:05:25</span>
+                <span class="datetime" data-updated="Tue Sep 03 2024 21:49:34 GMT+0800">2024-09-03 21:49:34</span>
             </span>
         
 
@@ -231,24 +231,30 @@
                     
 
                     <p>在电子海图或地图应用中，对符号进行缩放（放大或缩小）是非常常见的操作。符号缩放的基本思想是根据比例因子调整符号的尺寸和位置，同时保持其相对于参考点的位置关系不变。以下是对符号进行缩放和绘制的一般步骤：</p>
-<h3 id="1-定义缩放操作的基础"><a href="#1-定义缩放操作的基础" class="headerlink" title="1. 定义缩放操作的基础"></a>1. 定义缩放操作的基础</h3><ul>
+<h3 id="1-定义缩放操作的基础"><a class="markdownIt-Anchor" href="#1-定义缩放操作的基础"></a> 1. 定义缩放操作的基础</h3>
+<ul>
 <li><strong>中心点（参考点）</strong>：通常是符号的中心或某个固定的锚点。所有的缩放操作都是相对于这个中心点进行的。</li>
 <li><strong>缩放因子</strong>：决定符号的放大或缩小倍数。例如，缩放因子为 <code>2.0</code> 表示放大两倍，缩放因子为 <code>0.5</code> 表示缩小一半。</li>
 </ul>
-<h3 id="2-计算缩放后的坐标"><a href="#2-计算缩放后的坐标" class="headerlink" title="2. 计算缩放后的坐标"></a>2. 计算缩放后的坐标</h3><p>给定一个符号的初始坐标 <code>(x, y)</code> 和缩放因子 <code>scaleFactor</code>，新的坐标 <code>(x&#39;, y&#39;)</code> 可以通过以下公式计算：</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202408312205063.png"  alt="image-20240831220505694"></p>
-<h3 id="3-具体操作步骤"><a href="#3-具体操作步骤" class="headerlink" title="3. 具体操作步骤"></a>3. 具体操作步骤</h3><p>假设你有一个符号由多个坐标点组成，例如一个多边形符号，以下是对其进行缩放的步骤：</p>
+<h3 id="2-计算缩放后的坐标"><a class="markdownIt-Anchor" href="#2-计算缩放后的坐标"></a> 2. 计算缩放后的坐标</h3>
+<p>给定一个符号的初始坐标 <code>(x, y)</code> 和缩放因子 <code>scaleFactor</code>，新的坐标 <code>(x', y')</code> 可以通过以下公式计算：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202408312205063.png"  alt="image-20240831220505694" ></p>
+<h3 id="3-具体操作步骤"><a class="markdownIt-Anchor" href="#3-具体操作步骤"></a> 3. 具体操作步骤</h3>
+<p>假设你有一个符号由多个坐标点组成，例如一个多边形符号，以下是对其进行缩放的步骤：</p>
 <ol>
-<li><strong>确定中心点</strong>：<ul>
+<li><strong>确定中心点</strong>：
+<ul>
 <li>如果符号的所有点已经以某个中心点为基准（例如，符号本身的中心或地图中的某个固定点），则直接使用该中心点作为缩放基准。</li>
 <li>否则，可能需要计算符号的中心点，通常可以通过符号所有点的平均值来确定。</li>
 </ul>
 </li>
-<li><strong>应用缩放因子</strong>：<ul>
+<li><strong>应用缩放因子</strong>：
+<ul>
 <li>对于符号的每个点，计算缩放后的新坐标。</li>
 </ul>
 </li>
-<li><strong>绘制缩放后的符号</strong>：<ul>
+<li><strong>绘制缩放后的符号</strong>：
+<ul>
 <li>使用计算后的新坐标点绘制符号。</li>
 </ul>
 </li>
@@ -282,7 +288,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240904 如有</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -296,7 +302,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240829 HPGL</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -313,15 +319,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -405,7 +411,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E7%BC%A9%E6%94%BE%E6%93%8D%E4%BD%9C%E7%9A%84%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">1. 定义缩放操作的基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%AE%A1%E7%AE%97%E7%BC%A9%E6%94%BE%E5%90%8E%E7%9A%84%E5%9D%90%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text">2. 计算缩放后的坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">3. 具体操作步骤</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E7%BC%A9%E6%94%BE%E6%93%8D%E4%BD%9C%E7%9A%84%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text"> 1. 定义缩放操作的基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%AE%A1%E7%AE%97%E7%BC%A9%E6%94%BE%E5%90%8E%E7%9A%84%E5%9D%90%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text"> 2. 计算缩放后的坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text"> 3. 具体操作步骤</span></a></li></ol>
     </div>
 </div>
 
@@ -432,7 +438,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -445,14 +451,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -558,7 +564,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E7%BC%A9%E6%94%BE%E6%93%8D%E4%BD%9C%E7%9A%84%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">1. 定义缩放操作的基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%AE%A1%E7%AE%97%E7%BC%A9%E6%94%BE%E5%90%8E%E7%9A%84%E5%9D%90%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text">2. 计算缩放后的坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">3. 具体操作步骤</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89%E7%BC%A9%E6%94%BE%E6%93%8D%E4%BD%9C%E7%9A%84%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text"> 1. 定义缩放操作的基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%AE%A1%E7%AE%97%E7%BC%A9%E6%94%BE%E5%90%8E%E7%9A%84%E5%9D%90%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text"> 2. 计算缩放后的坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text"> 3. 具体操作步骤</span></a></li></ol>
     </div>
 </div>
 

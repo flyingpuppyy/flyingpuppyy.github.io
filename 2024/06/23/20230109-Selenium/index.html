@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,12 +239,16 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="20230109-Selenium"><a href="#20230109-Selenium" class="headerlink" title="20230109 Selenium"></a>20230109 Selenium</h1><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Z4411o7TA?p=1" >点击这里，边看视频讲解，边学习以下内容<i class="fas fa-external-link-alt"></i></a></p>
-<p>Selenium 是一套 Web网站 的<strong>程序&#x3D;&#x3D;自动化&#x3D;&#x3D;操作 解决方案</strong>。</p>
+                    <h1 id="20230109-selenium"><a class="markdownIt-Anchor" href="#20230109-selenium"></a> 20230109 Selenium</h1>
+<h1 id="简介"><a class="markdownIt-Anchor" href="#简介"></a> 简介</h1>
+<h2 id="原理"><a class="markdownIt-Anchor" href="#原理"></a> 原理</h2>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Z4411o7TA?p=1" >点击这里，边看视频讲解，边学习以下内容<i class="fas fa-external-link-alt"></i></a></p>
+<p>Selenium 是一套 Web网站 的<strong>程序<mark>自动化</mark>操作 解决方案</strong>。</p>
 <p>通过它，我们可以写出自动化程序，像人一样在浏览器里操作web界面。 比如点击界面按钮，在文本框中输入文字 等操作。</p>
 <p>而且还能从web界面获取信息。  比如获取 火车、汽车票务信息，招聘网站职位信息，财经网站股票价格信息 等等，然后用程序进行分析处理。</p>
-<h1 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h1><p>Selenium 的自动化原理是这样的</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1673241676761.png"  alt="1673241676761"></p>
+<h1 id="原理-2"><a class="markdownIt-Anchor" href="#原理-2"></a> 原理</h1>
+<p>Selenium 的自动化原理是这样的</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/1673241676761.png"  alt="1673241676761" ></p>
 <p>我们再总结一下，selenium 自动化流程如下：</p>
 <ol>
 <li>自动化程序调用Selenium 客户端库函数（比如点击按钮元素）</li>
@@ -270,48 +274,63 @@
 <p>自动化程序的客户端库 接收到响应后，将结果转化为   <code>数据对象</code>  返回给 我们的代码。</p>
 <p>我们的程序就可以知道这次自动化操作的结果如何了。</p>
 </blockquote>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Selenium环境的安装主要就是安装两样东西：  <code>客户端库</code>  和 <code>浏览器 驱动</code> 。</p>
+<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
+<p>Selenium环境的安装主要就是安装两样东西：  <code>客户端库</code>  和 <code>浏览器 驱动</code> 。</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.byhy.net/tut/auto/selenium/01/" >https://www.byhy.net/tut/auto/selenium/01/<i class="fas fa-external-link-alt"></i></a></p>
 <p>驱动下载（要和浏览器版本号对应）：<a class="link"   target="_blank" rel="noopener" href="https://chromedriver.storage.googleapis.com/index.html?path=101.0.4951.41/" >https://chromedriver.storage.googleapis.com/index.html?path=101.0.4951.41/<i class="fas fa-external-link-alt"></i></a></p>
-<h1 id="加载代码"><a href="#加载代码" class="headerlink" title="加载代码"></a>加载代码</h1><ul>
-<li>注：Linux用的是&#x2F;分隔符，而Windows才用的是\</li>
+<h1 id="加载代码"><a class="markdownIt-Anchor" href="#加载代码"></a> 加载代码</h1>
+<ul>
+<li>注：Linux用的是/分隔符，而Windows才用的是\</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 驱动路径设置</span><br><span class="line">https://blog.csdn.net/weixin_38210066/article/details/113994975</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/lonlon29/article/details/79112830</span><br><span class="line"></span><br><span class="line">https://www.bbsmax.com/A/KE5QwKqyzL/</span><br></pre></td></tr></table></figure>
-
-<h2 id="os-path-abspath"><a href="#os-path-abspath" class="headerlink" title="os.path.abspath"></a>os.path.abspath</h2><ul>
+<h2 id="ospathabspath"><a class="markdownIt-Anchor" href="#ospathabspath"></a> os.path.abspath</h2>
+<ul>
 <li>获取当前目录的绝对路径</li>
 </ul>
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 用例补充</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(os.path.abspath(<span class="string">&quot;.&quot;</span>)) <span class="comment">#当前目录的绝对路径</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(os.path.abspath(<span class="string">r&quot;..&quot;</span>)) <span class="comment">#上级目录的绝对路径</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(os.path.abspath(<span class="string">r&quot;D:\python_workshop\python6\revise\函数.py&quot;</span>))</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
 </blockquote>
-<h2 id="os-path-join"><a href="#os-path-join" class="headerlink" title="os.path.join()"></a>os.path.join()</h2><p>os.path.join()函数用于路径<strong>拼接文件路径</strong>，可以传入多个路径。</p>
+<h2 id="ospathjoin"><a class="markdownIt-Anchor" href="#ospathjoin"></a> os.path.join()</h2>
+<p>os.path.join()函数用于路径<strong>拼接文件路径</strong>，可以传入多个路径。</p>
 <ul>
-<li><strong>从后往前看，会从第一个以”&#x2F;”开头</strong>的参数开始拼接，之前的参数全部丢弃；</li>
-<li>以上一种情况为先。在上一种情况确保情况下，若出现”.&#x2F;”开头的参数，会从”.&#x2F;”开头的参数的前面参数全部保留；</li>
+<li><strong>从后往前看，会从第一个以”/”开头</strong>的参数开始拼接，之前的参数全部丢弃；</li>
+<li>以上一种情况为先。在上一种情况确保情况下，若出现”./”开头的参数，会从”./”开头的参数的前面参数全部保留；</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">import</span> os</span><br><span class="line">     </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;1:&quot;</span>,os.path.join(<span class="string">&#x27;aaaa&#x27;</span>,<span class="string">&#x27;/bbbb&#x27;</span>,<span class="string">&#x27;ccccc.txt&#x27;</span>))</span><br><span class="line">     </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;2:&quot;</span>,os.path.join(<span class="string">&#x27;/aaaa&#x27;</span>,<span class="string">&#x27;/bbbb&#x27;</span>,<span class="string">&#x27;/ccccc.txt&#x27;</span>))</span><br><span class="line">     </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;3:&quot;</span>,os.path.join(<span class="string">&#x27;aaaa&#x27;</span>,<span class="string">&#x27;ddd&#x27;</span>,<span class="string">&#x27;./bbb&#x27;</span>,<span class="string">&#x27;ccccc.txt&#x27;</span>))</span><br><span class="line"></span><br><span class="line">输出为：</span><br><span class="line"></span><br><span class="line">    <span class="number">1</span>: /bbbb\ccccc.txt</span><br><span class="line">    <span class="number">2</span>: /ccccc.txt</span><br><span class="line">    <span class="number">3</span>: aaaa\ddd\./bbb\ccccc.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>果最后一个组件为空，则生成的路径以一个’&#x2F;’分隔符结尾 ；</p>
-<p> 输出：</p>
+<li>
+<p>果最后一个组件为空，则生成的路径以一个’/’分隔符结尾 ；</p>
+<p>输出：</p>
 <ul>
-<li><p>import os</p>
-<p>Path1 &#x3D; ‘home’<br>Path2 &#x3D; ‘develop’<br>Path3 &#x3D; ‘’</p>
-<p>Path10 &#x3D; Path1 + Path2 + Path3<br>Path20 &#x3D; os.path.join(Path1, Path2, Path3)<br>Path30 &#x3D; os.path.join(Path2, Path1, Path3)<br>print(‘Path10 &#x3D; ‘,Path10)<br>print(‘Path20 &#x3D; ‘,Path20)</p>
+<li>
+<p>import os</p>
+<p>Path1 = ‘home’<br />
+Path2 = ‘develop’<br />
+Path3 = ‘’</p>
+<p>Path10 = Path1 + Path2 + Path3<br />
+Path20 = os.path.join(Path1, Path2, Path3)<br />
+Path30 = os.path.join(Path2, Path1, Path3)<br />
+print('Path10 = ',Path10)<br />
+print('Path20 = ',Path20)</p>
 </li>
 </ul>
-<p> Path10 &#x3D;  homedevelop</p>
-<p> Path20 &#x3D;  home\develop\
- </p>
+<p>Path10 =  homedevelop</p>
+<p>Path20 =  home\develop\</p>
 </li>
-<li><p>os.path.join()的功能只是起到连接文件的作用，而不能生成文件，如果执行这条语句之后就想生成一个目录或者文件名，可以用：os.mkdir(os.path.join(“F:&quot;, “test.txt”))<br>os.path.join(os.getcwd(),’data’)是获取当前目录，并组合成新目录</p>
+<li>
+<p>os.path.join()的功能只是起到连接文件的作用，而不能生成文件，如果执行这条语句之后就想生成一个目录或者文件名，可以用：os.mkdir(os.path.join(&quot;F:&quot;, “test.txt”))<br />
+os.path.join(os.getcwd(),‘data’)是获取当前目录，并组合成新目录</p>
 </li>
-<li><p>————————————————<br>版权声明：本文为CSDN博主「MclarenSenna」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/MclarenSenna/article/details/117046027" >https://blog.csdn.net/MclarenSenna/article/details/117046027<i class="fas fa-external-link-alt"></i></a></p>
+<li>
+<p>————————————————<br />
+版权声明：本文为CSDN博主「MclarenSenna」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br />
+原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/MclarenSenna/article/details/117046027" >https://blog.csdn.net/MclarenSenna/article/details/117046027<i class="fas fa-external-link-alt"></i></a></p>
 </li>
 </ul>
-<h1 id="爬虫应用"><a href="#爬虫应用" class="headerlink" title="爬虫应用"></a>爬虫应用</h1><h2 id="原理-2"><a href="#原理-2" class="headerlink" title="原理"></a>原理</h2><ul>
-<li><strong>调用selenium&#x3D;&#x3D;选择元素&#x3D;&#x3D;并且利用相关函数实现基本操作</strong></li>
+<h1 id="爬虫应用"><a class="markdownIt-Anchor" href="#爬虫应用"></a> 爬虫应用</h1>
+<h2 id="原理-3"><a class="markdownIt-Anchor" href="#原理-3"></a> 原理</h2>
+<ul>
+<li><strong>调用selenium<mark>选择元素</mark>并且利用相关函数实现基本操作</strong></li>
 </ul>
 <p>对于百度搜索页面，如果我们想自动化输入 <code>白月黑羽</code> ，怎么做呢？</p>
 <p>这就是在网页中，操控界面元素。</p>
@@ -325,19 +344,24 @@
 <li>获取元素包含的信息，比如文本内容，元素的属性</li>
 </ul>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.byhy.net/tut/auto/selenium/03/" >https://www.byhy.net/tut/auto/selenium/03/<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="选择元素方法"><a href="#选择元素方法" class="headerlink" title="选择元素方法"></a>选择元素方法</h2><ul>
+<h2 id="选择元素方法"><a class="markdownIt-Anchor" href="#选择元素方法"></a> 选择元素方法</h2>
+<ul>
 <li>CSS语法选择元素</li>
 <li>Xpath选择元素（可以比上面的多选择<strong>父节点</strong>和<strong>兄弟节点</strong>）</li>
 </ul>
 <blockquote>
 <p>可以安装xpath插件来帮助爬虫内容的筛选</p>
 </blockquote>
-<h1 id="特殊总结"><a href="#特殊总结" class="headerlink" title="特殊总结"></a>特殊总结</h1><h2 id="元素存在判断"><a href="#元素存在判断" class="headerlink" title="元素存在判断"></a>元素存在判断</h2><p>isEnable()、isDisplayed()和isSelected()  </p>
-<p> 1、以上三个为<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B&spm=1001.2101.3001.7020" >布尔类型<i class="fas fa-external-link-alt"></i></a>的函数  </p>
-<p> 2、isEnable用于存储input、select等元素的可编辑状态，可以编辑返回true，否则返回false     </p>
-<p>3、isDisplayed()这个有点陌生，在大神写的脚本看到几次不知道何用意先不管，本身这个函数用于判断某个元素是否存在页面上（这里的存在不是肉眼看到的存在，而是html代码的存在。某些情况元素的visibility为hidden或者display属性为none，我们在页面看不到但是实际是存在页面的一些元素）  </p>
-<p> 4、isSelected()，很显然，这个是判断某个元素是否被选中。例如   页面展示如下：   isEnable（）、isDisplayed（）和isSelected()   html代码如下：   isEnable（）、isDisplayed（）和isSelected()</p>
-<h2 id="js相关语句"><a href="#js相关语句" class="headerlink" title="js相关语句"></a>js相关语句</h2><h2 id="iframe内元素"><a href="#iframe内元素" class="headerlink" title="iframe内元素"></a>iframe内元素</h2>
+<h1 id="特殊总结"><a class="markdownIt-Anchor" href="#特殊总结"></a> 特殊总结</h1>
+<h2 id="元素存在判断"><a class="markdownIt-Anchor" href="#元素存在判断"></a> 元素存在判断</h2>
+<p>isEnable()、isDisplayed()和isSelected()</p>
+<p>1、以上三个为<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B&amp;spm=1001.2101.3001.7020" >布尔类型<i class="fas fa-external-link-alt"></i></a>的函数</p>
+<p>2、isEnable用于存储input、select等元素的可编辑状态，可以编辑返回true，否则返回false</p>
+<p>3、isDisplayed()这个有点陌生，在大神写的脚本看到几次不知道何用意先不管，本身这个函数用于判断某个元素是否存在页面上（这里的存在不是肉眼看到的存在，而是html代码的存在。某些情况元素的visibility为hidden或者display属性为none，我们在页面看不到但是实际是存在页面的一些元素）</p>
+<p>4、isSelected()，很显然，这个是判断某个元素是否被选中。例如   页面展示如下：   isEnable（）、isDisplayed（）和isSelected()   html代码如下：   isEnable（）、isDisplayed（）和isSelected()</p>
+<h2 id="js相关语句"><a class="markdownIt-Anchor" href="#js相关语句"></a> js相关语句</h2>
+<h2 id="iframe内元素"><a class="markdownIt-Anchor" href="#iframe内元素"></a> iframe内元素</h2>
+
                 </div>
                 
 
@@ -366,7 +390,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240624 电信面试</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -380,7 +404,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240623 今日的头脑风暴</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -397,15 +421,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -489,7 +513,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230109-Selenium"><span class="nav-number">1.</span> <span class="nav-text">20230109 Selenium</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-1"><span class="nav-number">3.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">加载代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#os-path-abspath"><span class="nav-number">5.1.</span> <span class="nav-text">os.path.abspath</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-path-join"><span class="nav-number">5.2.</span> <span class="nav-text">os.path.join()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%88%AC%E8%99%AB%E5%BA%94%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">爬虫应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-2"><span class="nav-number">6.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text">选择元素方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">特殊总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E5%AD%98%E5%9C%A8%E5%88%A4%E6%96%AD"><span class="nav-number">7.1.</span> <span class="nav-text">元素存在判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js%E7%9B%B8%E5%85%B3%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.2.</span> <span class="nav-text">js相关语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iframe%E5%86%85%E5%85%83%E7%B4%A0"><span class="nav-number">7.3.</span> <span class="nav-text">iframe内元素</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230109-selenium"><span class="nav-number">1.</span> <span class="nav-text"> 20230109 Selenium</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.</span> <span class="nav-text"> 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text"> 原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-2"><span class="nav-number">3.</span> <span class="nav-text"> 原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text"> 安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text"> 加载代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ospathabspath"><span class="nav-number">5.1.</span> <span class="nav-text"> os.path.abspath</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ospathjoin"><span class="nav-number">5.2.</span> <span class="nav-text"> os.path.join()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%88%AC%E8%99%AB%E5%BA%94%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text"> 爬虫应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-3"><span class="nav-number">6.1.</span> <span class="nav-text"> 原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text"> 选择元素方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text"> 特殊总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E5%AD%98%E5%9C%A8%E5%88%A4%E6%96%AD"><span class="nav-number">7.1.</span> <span class="nav-text"> 元素存在判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js%E7%9B%B8%E5%85%B3%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.2.</span> <span class="nav-text"> js相关语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iframe%E5%86%85%E5%85%83%E7%B4%A0"><span class="nav-number">7.3.</span> <span class="nav-text"> iframe内元素</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -516,7 +540,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -529,14 +553,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -642,7 +666,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230109-Selenium"><span class="nav-number">1.</span> <span class="nav-text">20230109 Selenium</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-1"><span class="nav-number">3.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">加载代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#os-path-abspath"><span class="nav-number">5.1.</span> <span class="nav-text">os.path.abspath</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#os-path-join"><span class="nav-number">5.2.</span> <span class="nav-text">os.path.join()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%88%AC%E8%99%AB%E5%BA%94%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">爬虫应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-2"><span class="nav-number">6.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text">选择元素方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">特殊总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E5%AD%98%E5%9C%A8%E5%88%A4%E6%96%AD"><span class="nav-number">7.1.</span> <span class="nav-text">元素存在判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js%E7%9B%B8%E5%85%B3%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.2.</span> <span class="nav-text">js相关语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iframe%E5%86%85%E5%85%83%E7%B4%A0"><span class="nav-number">7.3.</span> <span class="nav-text">iframe内元素</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20230109-selenium"><span class="nav-number">1.</span> <span class="nav-text"> 20230109 Selenium</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.</span> <span class="nav-text"> 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text"> 原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-2"><span class="nav-number">3.</span> <span class="nav-text"> 原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text"> 安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text"> 加载代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ospathabspath"><span class="nav-number">5.1.</span> <span class="nav-text"> os.path.abspath</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ospathjoin"><span class="nav-number">5.2.</span> <span class="nav-text"> os.path.join()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%88%AC%E8%99%AB%E5%BA%94%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text"> 爬虫应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86-3"><span class="nav-number">6.1.</span> <span class="nav-text"> 原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%85%83%E7%B4%A0%E6%96%B9%E6%B3%95"><span class="nav-number">6.2.</span> <span class="nav-text"> 选择元素方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text"> 特殊总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E5%AD%98%E5%9C%A8%E5%88%A4%E6%96%AD"><span class="nav-number">7.1.</span> <span class="nav-text"> 元素存在判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#js%E7%9B%B8%E5%85%B3%E8%AF%AD%E5%8F%A5"><span class="nav-number">7.2.</span> <span class="nav-text"> js相关语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iframe%E5%86%85%E5%85%83%E7%B4%A0"><span class="nav-number">7.3.</span> <span class="nav-text"> iframe内元素</span></a></li></ol></li></ol>
     </div>
 </div>
 

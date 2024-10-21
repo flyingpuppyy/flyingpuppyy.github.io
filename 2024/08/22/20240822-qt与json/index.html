@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,21 +230,20 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><p>JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，使用键值对来表示数据。JSON 格式确实以键值对的形式组织数据，常用于数据的存储和传输。下面是一些 JSON 格式的简单例子：</p>
+                    <h1 id="json"><a class="markdownIt-Anchor" href="#json"></a> JSON</h1>
+<p>JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，使用键值对来表示数据。JSON 格式确实以键值对的形式组织数据，常用于数据的存储和传输。下面是一些 JSON 格式的简单例子：</p>
 <p><strong>简单的 JSON 对象</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;: &quot;Alice&quot;,</span><br><span class="line">    &quot;age&quot;: 30,</span><br><span class="line">    &quot;isStudent&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><strong>包含数组的 JSON 对象</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;: &quot;Bob&quot;,</span><br><span class="line">    &quot;hobbies&quot;: [&quot;reading&quot;, &quot;traveling&quot;, &quot;swimming&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><strong>嵌套的 JSON 对象</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;employee&quot;: &#123;</span><br><span class="line">        &quot;name&quot;: &quot;Charlie&quot;,</span><br><span class="line">        &quot;age&quot;: 28,</span><br><span class="line">        &quot;address&quot;: &#123;</span><br><span class="line">            &quot;street&quot;: &quot;123 Main St&quot;,</span><br><span class="line">            &quot;city&quot;: &quot;Anytown&quot;,</span><br><span class="line">            &quot;postalCode&quot;: &quot;12345&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;skills&quot;: [&quot;C++&quot;, &quot;Python&quot;, &quot;Java&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="在-Qt-中的-JSON-对象"><a href="#在-Qt-中的-JSON-对象" class="headerlink" title="在 Qt 中的 JSON 对象"></a>在 Qt 中的 JSON 对象</h1><p>在 Qt 中，可以使用 <code>QJsonObject</code> 和 <code>QJsonArray</code> 类来创建和操作 JSON 数据。以下是如何在 Qt 中创建和读取复杂 JSON 对象的示例。</p>
-<h4 id="创建-JSON-对象"><a href="#创建-JSON-对象" class="headerlink" title="创建 JSON 对象"></a>创建 JSON 对象</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;QJsonObject&gt;</span><br><span class="line">#include &lt;QJsonArray&gt;</span><br><span class="line">#include &lt;QJsonDocument&gt;</span><br><span class="line">#include &lt;QFile&gt;</span><br><span class="line">#include &lt;QString&gt;</span><br><span class="line"></span><br><span class="line">void createJson()</span><br><span class="line">&#123;</span><br><span class="line">    QJsonObject address; // 创建地址对象</span><br><span class="line">    address[&quot;street&quot;] = &quot;123 Main St&quot;;</span><br><span class="line">    address[&quot;city&quot;] = &quot;Anytown&quot;;</span><br><span class="line">    address[&quot;postalCode&quot;] = &quot;12345&quot;;</span><br><span class="line"></span><br><span class="line">    QJsonArray skills; // 创建技能数组</span><br><span class="line">    skills.append(&quot;C++&quot;);</span><br><span class="line">    skills.append(&quot;Python&quot;);</span><br><span class="line">    skills.append(&quot;Java&quot;);</span><br><span class="line"></span><br><span class="line">    QJsonObject employee; // 创建员工对象</span><br><span class="line">    employee[&quot;name&quot;] = &quot;Charlie&quot;;</span><br><span class="line">    employee[&quot;age&quot;] = 28;</span><br><span class="line">    employee[&quot;address&quot;] = address;</span><br><span class="line">    employee[&quot;skills&quot;] = skills;</span><br><span class="line"></span><br><span class="line">    QJsonDocument document(employee); // 创建 JSON 文档</span><br><span class="line">    QByteArray jsonData = document.toJson(); // 将 JSON 文档转换为字节数组</span><br><span class="line"></span><br><span class="line">    // 将 JSON 数据写入文件</span><br><span class="line">    QFile file(&quot;employee.json&quot;);</span><br><span class="line">    if (file.open(QIODevice::WriteOnly))</span><br><span class="line">    &#123;</span><br><span class="line">        file.write(jsonData);</span><br><span class="line">        file.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="读取-JSON-对象"><a href="#读取-JSON-对象" class="headerlink" title="读取 JSON 对象"></a>读取 JSON 对象</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;QJsonDocument&gt;</span><br><span class="line">#include &lt;QJsonObject&gt;</span><br><span class="line">#include &lt;QJsonArray&gt;</span><br><span class="line">#include &lt;QFile&gt;</span><br><span class="line">#include &lt;QString&gt;</span><br><span class="line"></span><br><span class="line">void readJson()</span><br><span class="line">&#123;</span><br><span class="line">    QFile file(&quot;employee.json&quot;);</span><br><span class="line">    if (!file.open(QIODevice::ReadOnly)) // 打开文件</span><br><span class="line">    &#123;</span><br><span class="line">        return; // 如果打开失败则返回</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    QByteArray jsonData = file.readAll(); // 读取所有 JSON 数据</span><br><span class="line">    file.close(); // 关闭文件</span><br><span class="line"></span><br><span class="line">    QJsonDocument document = QJsonDocument::fromJson(jsonData); // 将字节数组转换为 JSON 文档</span><br><span class="line">    if (document.isObject()) // 检查文档是否是一个对象</span><br><span class="line">    &#123;</span><br><span class="line">        QJsonObject employee = document.object(); // 获取 JSON 对象</span><br><span class="line"></span><br><span class="line">        QString name = employee[&quot;name&quot;].toString(); // 获取姓名</span><br><span class="line">        int age = employee[&quot;age&quot;].toInt(); // 获取年龄</span><br><span class="line">        QJsonObject address = employee[&quot;address&quot;].toObject(); // 获取地址对象</span><br><span class="line">        QString street = address[&quot;street&quot;].toString(); // 获取街道</span><br><span class="line">        QString city = address[&quot;city&quot;].toString(); // 获取城市</span><br><span class="line">        QString postalCode = address[&quot;postalCode&quot;].toString(); // 获取邮政编码</span><br><span class="line"></span><br><span class="line">        QJsonArray skills = employee[&quot;skills&quot;].toArray(); // 获取技能数组</span><br><span class="line">        QStringList skillList;</span><br><span class="line">        for (const QJsonValue &amp;skill : skills) // 遍历技能数组</span><br><span class="line">        &#123;</span><br><span class="line">            skillList.append(skill.toString());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 输出读取的信息</span><br><span class="line">        qDebug() &lt;&lt; &quot;Name:&quot; &lt;&lt; name;</span><br><span class="line">        qDebug() &lt;&lt; &quot;Age:&quot; &lt;&lt; age;</span><br><span class="line">        qDebug() &lt;&lt; &quot;Address:&quot; &lt;&lt; street &lt;&lt; city &lt;&lt; postalCode;</span><br><span class="line">        qDebug() &lt;&lt; &quot;Skills:&quot; &lt;&lt; skillList;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h1 id="在-qt-中的-json-对象"><a class="markdownIt-Anchor" href="#在-qt-中的-json-对象"></a> 在 Qt 中的 JSON 对象</h1>
+<p>在 Qt 中，可以使用 <code>QJsonObject</code> 和 <code>QJsonArray</code> 类来创建和操作 JSON 数据。以下是如何在 Qt 中创建和读取复杂 JSON 对象的示例。</p>
+<h4 id="创建-json-对象"><a class="markdownIt-Anchor" href="#创建-json-对象"></a> 创建 JSON 对象</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;QJsonObject&gt;</span><br><span class="line">#include &lt;QJsonArray&gt;</span><br><span class="line">#include &lt;QJsonDocument&gt;</span><br><span class="line">#include &lt;QFile&gt;</span><br><span class="line">#include &lt;QString&gt;</span><br><span class="line"></span><br><span class="line">void createJson()</span><br><span class="line">&#123;</span><br><span class="line">    QJsonObject address; // 创建地址对象</span><br><span class="line">    address[&quot;street&quot;] = &quot;123 Main St&quot;;</span><br><span class="line">    address[&quot;city&quot;] = &quot;Anytown&quot;;</span><br><span class="line">    address[&quot;postalCode&quot;] = &quot;12345&quot;;</span><br><span class="line"></span><br><span class="line">    QJsonArray skills; // 创建技能数组</span><br><span class="line">    skills.append(&quot;C++&quot;);</span><br><span class="line">    skills.append(&quot;Python&quot;);</span><br><span class="line">    skills.append(&quot;Java&quot;);</span><br><span class="line"></span><br><span class="line">    QJsonObject employee; // 创建员工对象</span><br><span class="line">    employee[&quot;name&quot;] = &quot;Charlie&quot;;</span><br><span class="line">    employee[&quot;age&quot;] = 28;</span><br><span class="line">    employee[&quot;address&quot;] = address;</span><br><span class="line">    employee[&quot;skills&quot;] = skills;</span><br><span class="line"></span><br><span class="line">    QJsonDocument document(employee); // 创建 JSON 文档</span><br><span class="line">    QByteArray jsonData = document.toJson(); // 将 JSON 文档转换为字节数组</span><br><span class="line"></span><br><span class="line">    // 将 JSON 数据写入文件</span><br><span class="line">    QFile file(&quot;employee.json&quot;);</span><br><span class="line">    if (file.open(QIODevice::WriteOnly))</span><br><span class="line">    &#123;</span><br><span class="line">        file.write(jsonData);</span><br><span class="line">        file.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="读取-json-对象"><a class="markdownIt-Anchor" href="#读取-json-对象"></a> 读取 JSON 对象</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;QJsonDocument&gt;</span><br><span class="line">#include &lt;QJsonObject&gt;</span><br><span class="line">#include &lt;QJsonArray&gt;</span><br><span class="line">#include &lt;QFile&gt;</span><br><span class="line">#include &lt;QString&gt;</span><br><span class="line"></span><br><span class="line">void readJson()</span><br><span class="line">&#123;</span><br><span class="line">    QFile file(&quot;employee.json&quot;);</span><br><span class="line">    if (!file.open(QIODevice::ReadOnly)) // 打开文件</span><br><span class="line">    &#123;</span><br><span class="line">        return; // 如果打开失败则返回</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    QByteArray jsonData = file.readAll(); // 读取所有 JSON 数据</span><br><span class="line">    file.close(); // 关闭文件</span><br><span class="line"></span><br><span class="line">    QJsonDocument document = QJsonDocument::fromJson(jsonData); // 将字节数组转换为 JSON 文档</span><br><span class="line">    if (document.isObject()) // 检查文档是否是一个对象</span><br><span class="line">    &#123;</span><br><span class="line">        QJsonObject employee = document.object(); // 获取 JSON 对象</span><br><span class="line"></span><br><span class="line">        QString name = employee[&quot;name&quot;].toString(); // 获取姓名</span><br><span class="line">        int age = employee[&quot;age&quot;].toInt(); // 获取年龄</span><br><span class="line">        QJsonObject address = employee[&quot;address&quot;].toObject(); // 获取地址对象</span><br><span class="line">        QString street = address[&quot;street&quot;].toString(); // 获取街道</span><br><span class="line">        QString city = address[&quot;city&quot;].toString(); // 获取城市</span><br><span class="line">        QString postalCode = address[&quot;postalCode&quot;].toString(); // 获取邮政编码</span><br><span class="line"></span><br><span class="line">        QJsonArray skills = employee[&quot;skills&quot;].toArray(); // 获取技能数组</span><br><span class="line">        QStringList skillList;</span><br><span class="line">        for (const QJsonValue &amp;skill : skills) // 遍历技能数组</span><br><span class="line">        &#123;</span><br><span class="line">            skillList.append(skill.toString());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 输出读取的信息</span><br><span class="line">        qDebug() &lt;&lt; &quot;Name:&quot; &lt;&lt; name;</span><br><span class="line">        qDebug() &lt;&lt; &quot;Age:&quot; &lt;&lt; age;</span><br><span class="line">        qDebug() &lt;&lt; &quot;Address:&quot; &lt;&lt; street &lt;&lt; city &lt;&lt; postalCode;</span><br><span class="line">        qDebug() &lt;&lt; &quot;Skills:&quot; &lt;&lt; skillList;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
                 </div>
                 
@@ -274,7 +273,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240822 s57水深层</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -288,7 +287,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240822 s52</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -305,15 +304,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -397,7 +396,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JSON"><span class="nav-number">1.</span> <span class="nav-text">JSON</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8-Qt-%E4%B8%AD%E7%9A%84-JSON-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.</span> <span class="nav-text">在 Qt 中的 JSON 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-JSON-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">创建 JSON 对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96-JSON-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">读取 JSON 对象</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#json"><span class="nav-number">1.</span> <span class="nav-text"> JSON</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8-qt-%E4%B8%AD%E7%9A%84-json-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.</span> <span class="nav-text"> 在 Qt 中的 JSON 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-json-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text"> 创建 JSON 对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96-json-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text"> 读取 JSON 对象</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
 </div>
 
@@ -424,7 +423,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -437,14 +436,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -550,7 +549,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JSON"><span class="nav-number">1.</span> <span class="nav-text">JSON</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8-Qt-%E4%B8%AD%E7%9A%84-JSON-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.</span> <span class="nav-text">在 Qt 中的 JSON 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-JSON-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">创建 JSON 对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96-JSON-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">读取 JSON 对象</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#json"><span class="nav-number">1.</span> <span class="nav-text"> JSON</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8-qt-%E4%B8%AD%E7%9A%84-json-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.</span> <span class="nav-text"> 在 Qt 中的 JSON 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-json-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text"> 创建 JSON 对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96-json-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text"> 读取 JSON 对象</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
 </div>
 

@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,14 +230,17 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="加油"><a href="#加油" class="headerlink" title="加油"></a>加油</h1><p>拿出要搬家的气势！！</p>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><p>Standard Template Library，一套基于模板的容器类库，提高了程序开发效率和复用性</p>
-<h1 id="六大部件"><a href="#六大部件" class="headerlink" title="六大部件"></a>六大部件</h1><ol>
-<li><strong>Container(容器)</strong> ：vector、list、deque、set、map </li>
-<li><strong>Adapter(适配器)</strong> </li>
+                    <h1 id="加油"><a class="markdownIt-Anchor" href="#加油"></a> 加油</h1>
+<p>拿出要搬家的气势！！</p>
+<h1 id="stl"><a class="markdownIt-Anchor" href="#stl"></a> STL</h1>
+<p>Standard Template Library，一套基于模板的容器类库，提高了程序开发效率和复用性</p>
+<h1 id="六大部件"><a class="markdownIt-Anchor" href="#六大部件"></a> 六大部件</h1>
+<ol>
+<li><strong>Container(容器)</strong> ：vector、list、deque、set、map</li>
+<li><strong>Adapter(适配器)</strong></li>
 <li><strong>Algorithm(算法)</strong> ：sort、search、copy、erase</li>
-<li><strong>Iterator(迭代器)</strong> </li>
-<li><strong>Function object(函数对象)</strong> </li>
+<li><strong>Iterator(迭代器)</strong></li>
+<li><strong>Function object(函数对象)</strong></li>
 <li><strong>Allocator(分配器)</strong></li>
 </ol>
 <blockquote>
@@ -248,7 +251,8 @@
 <p>适配器：用来修饰容器等，比如queue和stack，底层借助了deque。</p>
 <p>空间配置器：负责空间配置和管理。</p>
 </blockquote>
-<h1 id="内存空间的管理"><a href="#内存空间的管理" class="headerlink" title="内存空间的管理"></a>内存空间的管理</h1><p>对象构造前的空间配置和对象析构后的空间释放，由&lt;stl_alloc.h&gt;负责，SGI对此的设计哲学如下：</p>
+<h1 id="内存空间的管理"><a class="markdownIt-Anchor" href="#内存空间的管理"></a> 内存空间的管理</h1>
+<p>对象构造前的空间配置和对象析构后的空间释放，由&lt;stl_alloc.h&gt;负责，SGI对此的设计哲学如下：</p>
 <ul>
 <li>向system heap要求空间。</li>
 <li>考虑多线程状态。</li>
@@ -260,7 +264,8 @@
 
 第二级视情况使用不同的策略，当配置区块大于128bytes时，调用第一级配置器，当配置区块小于128bytes时，采用内存池的整理方式：配置器维护16个（128/8）自由链表，负责16种小型区块的此配置能力。内存池以malloc配置而得，如果内存不足转第一级配置器处理。
 </code></pre>
-<h1 id="一、STL的介绍"><a href="#一、STL的介绍" class="headerlink" title="一、STL的介绍"></a>一、STL的介绍</h1><p>  Standard Template Library，标准模板库，是C++的标准库之一，一套基于模板的容器类库，还包括许多常用的算法，提高了程序开发效率和复用性。<strong>STL包含6大部件：容器、迭代器、算法、仿函数、适配器和空间配置器。</strong></p>
+<h1 id="一-stl的介绍"><a class="markdownIt-Anchor" href="#一-stl的介绍"></a> 一、STL的介绍</h1>
+<p>Standard Template Library，标准模板库，是C++的标准库之一，一套基于模板的容器类库，还包括许多常用的算法，提高了程序开发效率和复用性。<strong>STL包含6大部件：容器、迭代器、算法、仿函数、适配器和空间配置器。</strong></p>
 <ul>
 <li>容器：容纳一组元素的对象。</li>
 <li>迭代器：提供一种访问容器中每个元素的方法。</li>
@@ -269,7 +274,8 @@
 <li>适配器：用来修饰容器等，比如queue和stack，底层借助了deque。</li>
 <li>空间配置器：负责空间配置和管理。</li>
 </ul>
-<h1 id="二、空间配置器详解"><a href="#二、空间配置器详解" class="headerlink" title="二、空间配置器详解"></a>二、空间配置器详解</h1><p>  对象构造前的空间配置和对象析构后的空间释放，由&lt;stl_alloc.h&gt;负责，SGI对此的设计哲学如下：</p>
+<h1 id="二-空间配置器详解"><a class="markdownIt-Anchor" href="#二-空间配置器详解"></a> 二、空间配置器详解</h1>
+<p>对象构造前的空间配置和对象析构后的空间释放，由&lt;stl_alloc.h&gt;负责，SGI对此的设计哲学如下：</p>
 <ul>
 <li>向system heap要求空间。</li>
 <li>考虑多线程状态。</li>
@@ -278,30 +284,37 @@
 </ul>
 <p>考虑小型区块造成的内存破碎问题，SGI设计了双层级配置器：</p>
 <ul>
-<li>第一级直接使用allocate()调用<strong>malloc()<strong>、deallocate()调用</strong>free()<strong>，使用类似new_handler机制解决内存不足（</strong>抛出异常</strong>），配置无法满足的问题（如果在申请动态内存时找不到足够大的内存块，malloc 和new 将返回NULL 指针，宣告内存申请失败）。</li>
-<li>第二级视情况使用不同的策略，当<strong>配置区块大于128bytes时，调用第一级配置器</strong>，当<strong>配置区块小于128bytes时</strong>，采用<strong>内存池</strong>的整理方式：配置器维护16个（128&#x2F;8）自由链表，负责16种小型区块的此配置能力。内存池以malloc配置而得，如果内存不足转第一级配置器处理。</li>
+<li>第一级直接使用allocate()调用<strong>malloc()</strong>、deallocate()调用<strong>free()</strong>，使用类似new_handler机制解决内存不足（<strong>抛出异常</strong>），配置无法满足的问题（如果在申请动态内存时找不到足够大的内存块，malloc 和new 将返回NULL 指针，宣告内存申请失败）。</li>
+<li>第二级视情况使用不同的策略，当<strong>配置区块大于128bytes时，调用第一级配置器</strong>，当<strong>配置区块小于128bytes时</strong>，采用<strong>内存池</strong>的整理方式：配置器维护16个（128/8）自由链表，负责16种小型区块的此配置能力。内存池以malloc配置而得，如果内存不足转第一级配置器处理。</li>
 </ul>
 <blockquote>
 <p>配置器尚未看</p>
 <p>存档后面看</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/daaikuaichuan/article/details/80717222" >https://blog.csdn.net/daaikuaichuan/article/details/80717222<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<h1 id="三、各种容器的特点和适用情况"><a href="#三、各种容器的特点和适用情况" class="headerlink" title="三、各种容器的特点和适用情况"></a>三、各种容器的特点和适用情况</h1><p>序列式容器 vector   deque   list   forward_list  array string  </p>
+<h1 id="三-各种容器的特点和适用情况"><a class="markdownIt-Anchor" href="#三-各种容器的特点和适用情况"></a> 三、各种容器的特点和适用情况</h1>
+<p>序列式容器 vector   deque   list   forward_list  array string</p>
 <p>关联式容器 set multiset map multimap</p>
-<p>无序容器 unordered_set unordered_multiset ..</p>
+<p>无序容器 unordered_set unordered_multiset …</p>
 <blockquote>
 <p>(无序又专门搞了容器，到底想干嘛)</p>
-<h3 id="无序容器的设计目的"><a href="#无序容器的设计目的" class="headerlink" title="无序容器的设计目的"></a>无序容器的设计目的</h3><ol>
-<li><p><strong>性能优化</strong>：无序容器基于哈希表实现，通常能在平均O(1)时间复杂度内完成插入、查找和删除操作，而关联式容器（如<code>std::map</code>和<code>std::set</code>）基于平衡树实现，操作时间复杂度为O(log n)。因此，在需要快速访问和操作的场景中，无序容器性能更佳。</p>
+<h3 id="无序容器的设计目的"><a class="markdownIt-Anchor" href="#无序容器的设计目的"></a> 无序容器的设计目的</h3>
+<ol>
+<li>
+<p><strong>性能优化</strong>：无序容器基于哈希表实现，通常能在平均O(1)时间复杂度内完成插入、查找和删除操作，而关联式容器（如<code>std::map</code>和<code>std::set</code>）基于平衡树实现，操作时间复杂度为O(log n)。因此，在需要快速访问和操作的场景中，无序容器性能更佳。</p>
 </li>
-<li><p><strong>无序性需求</strong>：有些应用场景并不需要数据按顺序存储，反而更注重操作的速度。无序容器不维护元素的顺序，这使得其在插入和删除操作中无需进行额外的排序调整，从而提高了效率。</p>
+<li>
+<p><strong>无序性需求</strong>：有些应用场景并不需要数据按顺序存储，反而更注重操作的速度。无序容器不维护元素的顺序，这使得其在插入和删除操作中无需进行额外的排序调整，从而提高了效率。</p>
 </li>
-<li><h3 id="具体使用场景"><a href="#具体使用场景" class="headerlink" title="具体使用场景"></a>具体使用场景</h3><ol>
+<li>
+<h3 id="具体使用场景"><a class="markdownIt-Anchor" href="#具体使用场景"></a> 具体使用场景</h3>
+<ol>
 <li><strong>高频查找和插入操作</strong>：在需要频繁进行查找和插入操作的场景中，无序容器如<code>std::unordered_map</code>和<code>std::unordered_set</code>能够显著提升性能。例如，哈希表常用于缓存机制、计数统计和字典查找等场景。</li>
 <li><strong>元素顺序不重要</strong>：在某些应用中，元素的存储顺序并不重要，例如统计元素频率、快速查找元素是否存在等，这些场景下无序容器是更好的选择。</li>
 <li><strong>内存使用情况</strong>：由于哈希表需要额外的空间来存储哈希值和处理冲突，无序容器的内存开销通常比关联容器略高。然而在很多情况下，这一点的开销是可以接受的，特别是当性能优先时。</li>
 </ol>
-<h3 id="关联式容器的优势"><a href="#关联式容器的优势" class="headerlink" title="关联式容器的优势"></a>关联式容器的优势</h3><p>尽管无序容器有许多优势，关联式容器在某些方面仍然具有优势：</p>
+<h3 id="关联式容器的优势"><a class="markdownIt-Anchor" href="#关联式容器的优势"></a> 关联式容器的优势</h3>
+<p>尽管无序容器有许多优势，关联式容器在某些方面仍然具有优势：</p>
 <ol>
 <li><strong>有序数据</strong>：当需要按顺序存储和访问数据时，关联式容器是首选。例如，需要按键排序的数据结构或需要按顺序遍历元素的场景中，<code>std::map</code>和<code>std::set</code>更为适用。</li>
 <li><strong>范围操作</strong>：关联式容器支持高效的范围操作（如查找键在某范围内的所有元素），这是无序容器无法高效完成的。</li>
@@ -310,9 +323,12 @@
 </li>
 </ol>
 </blockquote>
-<h2 id="序列式容器"><a href="#序列式容器" class="headerlink" title="序列式容器"></a>序列式容器</h2><p> vector   deque&#x2F;先进先出   list   forward_list  array string  </p>
-<p><img   src="/../imgs/$%7Bfiilename%7D/1717539175951.png"  alt="1717539175951"></p>
-<h1 id="四、各种容器的底层机制和常见面试题"><a href="#四、各种容器的底层机制和常见面试题" class="headerlink" title="四、各种容器的底层机制和常见面试题"></a>四、各种容器的底层机制和常见面试题</h1><h2 id="traits技术"><a href="#traits技术" class="headerlink" title="traits技术"></a>traits技术</h2><p>原理：利用template的参数推导机制获取传入的参数型别。</p>
+<h2 id="序列式容器"><a class="markdownIt-Anchor" href="#序列式容器"></a> 序列式容器</h2>
+<p>vector   deque/先进先出   list   forward_list  array string</p>
+<p><img   src="../imgs/$%7Bfiilename%7D/1717539175951.png"  alt="1717539175951" ></p>
+<h1 id="四-各种容器的底层机制和常见面试题"><a class="markdownIt-Anchor" href="#四-各种容器的底层机制和常见面试题"></a> 四、各种容器的底层机制和常见面试题</h1>
+<h2 id="traits技术"><a class="markdownIt-Anchor" href="#traits技术"></a> traits技术</h2>
+<p>原理：利用template的参数推导机制获取传入的参数型别。</p>
 <p>被萃取的东西：</p>
 <p>value type：描述iterator指向对象的型别。</p>
 <p>difference type：描述两个iterator之间的距离，默认情况下使用C++内建的ptrdiff_t类型</p>
@@ -334,25 +350,31 @@
 <blockquote>
 <p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46645965/article/details/136436981" >https://blog.csdn.net/weixin_46645965/article/details/136436981<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<h2 id="指针和迭代器的区别"><a href="#指针和迭代器的区别" class="headerlink" title="指针和迭代器的区别"></a>指针和迭代器的区别</h2><blockquote>
+<h2 id="指针和迭代器的区别"><a class="markdownIt-Anchor" href="#指针和迭代器的区别"></a> 指针和迭代器的区别</h2>
+<blockquote>
 <p>一句话，指针是不同的类型们直接通过地址访问内存的</p>
 <p>而迭代器是一种访问容器内数据的入口</p>
 <p>二者都可以访问数据</p>
 </blockquote>
 <p>指针和迭代器在C++中都是用于访问和操作数据元素的工具，但它们在概念、使用场景和功能上有一些重要的区别。以下是指针和迭代器的主要区别：</p>
-<h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><ol>
-<li><p><strong>定义</strong>：指针是一个变量，它存储另一个变量的内存地址。指针本质上是一个内存地址的直接引用。</p>
+<h3 id="指针"><a class="markdownIt-Anchor" href="#指针"></a> 指针</h3>
+<ol>
+<li>
+<p><strong>定义</strong>：指针是一个变量，它存储另一个变量的内存地址。指针本质上是一个内存地址的直接引用。</p>
 </li>
-<li><p><strong>类型</strong>：指针有特定的类型，表示它所指向的内存位置存储的数据类型。例如，<code>int*</code>表示一个指向整数的指针。</p>
+<li>
+<p><strong>类型</strong>：指针有特定的类型，表示它所指向的内存位置存储的数据类型。例如，<code>int*</code>表示一个指向整数的指针。</p>
 </li>
-<li><p><strong>语法和操作</strong>：</p>
+<li>
+<p><strong>语法和操作</strong>：</p>
 <ul>
 <li>可以通过<code>*</code>操作符解引用，访问指针指向的对象。</li>
 <li>可以通过<code>&amp;</code>操作符获取一个变量的地址。</li>
 <li>支持指针算术，如加减操作，可以用来遍历数组。</li>
 </ul>
 </li>
-<li><p><strong>应用场景</strong>：</p>
+<li>
+<p><strong>应用场景</strong>：</p>
 <ul>
 <li>直接操作内存。</li>
 <li>数组遍历和指针算术。</li>
@@ -360,26 +382,31 @@
 <li>函数指针，用于函数回调。</li>
 </ul>
 </li>
-<li><p><strong>示例</strong>：</p>
+<li>
+<p><strong>示例</strong>：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cpp</span><br></pre></td></tr></table></figure>
 </li>
-<li><pre><code>int x = 10;
+<li>
+<pre class="highlight"><code class="">int x = 10;
 int* p = &amp;x; // p指向x的地址
 *p = 20;    // 通过指针修改x的值
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 迭代器</span><br><span class="line"></span><br><span class="line">1. **定义**：迭代器是一个抽象的工具，提供了一种访问容器（如数组、向量、链表等）中元素的方法，而不需要了解底层实现细节。</span><br><span class="line"></span><br><span class="line">2. **类型**：迭代器是容器类型的一部分，每个容器类型都定义了自己的迭代器类型。例如，`std::vector&lt;int&gt;::iterator`是一个指向`std::vector&lt;int&gt;`元素的迭代器。</span><br><span class="line"></span><br><span class="line">3. **语法和操作**：</span><br><span class="line"></span><br><span class="line">   - 通过解引用操作符`*`访问迭代器指向的元素。</span><br><span class="line">   - 通过`++`和`--`操作符前进和后退。</span><br><span class="line">   - 支持与指针类似的算术操作（随机访问迭代器）。</span><br><span class="line">   - 迭代器类型可以是输入迭代器、输出迭代器、前向迭代器、双向迭代器或随机访问迭代器，支持不同级别的功能。</span><br><span class="line"></span><br><span class="line">4. **应用场景**：</span><br><span class="line"></span><br><span class="line">   - 容器遍历。</span><br><span class="line">   - 提供统一接口，支持多种容器类型的泛型算法。</span><br><span class="line">   - STL算法库与容器之间的桥梁。</span><br><span class="line"></span><br><span class="line">5. **示例**：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 cpp
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1. ```</span><br><span class="line">   std::vector&lt;int&gt; vec = &#123;1, 2, 3, 4, 5&#125;;</span><br><span class="line">   std::vector&lt;int&gt;::iterator it = vec.begin();</span><br><span class="line">   while (it != vec.end()) &#123;</span><br><span class="line">       std::cout &lt;&lt; *it &lt;&lt; &quot; &quot;;</span><br><span class="line">       ++it;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
 </code></pre>
 </li>
 </ol>
-<h3 id="区别总结"><a href="#区别总结" class="headerlink" title="区别总结"></a>区别总结</h3><ol>
+<h3 id="区别总结"><a class="markdownIt-Anchor" href="#区别总结"></a> 区别总结</h3>
+<ol>
 <li><strong>抽象层次</strong>：指针是底层的直接内存地址操作工具，而迭代器是更高层次的抽象工具，提供了访问容器元素的统一接口。</li>
 <li><strong>适用范围</strong>：指针适用于任何内存地址操作，而迭代器专门用于容器元素的访问和操作。</li>
 <li><strong>安全性和易用性</strong>：迭代器提供了更安全和易用的接口，隐藏了底层实现细节，减少了内存操作错误的风险。</li>
 <li><strong>容器兼容性</strong>：迭代器与STL算法库紧密结合，提供了容器无关的遍历和操作方式，而指针主要用于简单的数据结构和数组操作。</li>
 </ol>
 <p>通过以上分析，可以看出指针和迭代器各有其特点和适用场景，在实际开发中应根据具体需求选择合适的工具。</p>
-<h2 id="RAII"><a href="#RAII" class="headerlink" title="RAII"></a>RAII</h2><ul>
+<h2 id="raii"><a class="markdownIt-Anchor" href="#raii"></a> RAII</h2>
+<ul>
 <li>一种技术</li>
 <li>在对象的构造函数中获取资源，在对象的析构函数中释放资源。</li>
 <li>在STL中的应用是</li>
@@ -391,7 +418,8 @@ cpp
 <p>3.可以像指针一样的使用。</p>
 <p>4.最重要的是：具有RAII特性</p>
 </blockquote>
-<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><ul>
+<h2 id="vector"><a class="markdownIt-Anchor" href="#vector"></a> vector</h2>
+<ul>
 <li>vector当调用clear（）的时候清空的是什么</li>
 <li>vector底层依靠什么在维护</li>
 <li>vector关于内存的管理是怎样实现的</li>
@@ -399,12 +427,12 @@ cpp
 </ul>
 <blockquote>
 <p>当释放或者删除（vec.clear()）里面的数据时，其存储空间不释放，仅仅是清空了里面的数据。</p>
-<hr>
+<hr />
 <p>一个动态扩张的数组</p>
 <p>底层采用三个迭代器来进行维护</p>
 <p>开始 被使用结尾 被开辟结尾</p>
-<p> vector底层是一个动态数组，包含三个迭代器，start和finish之间是已经被使用的空间范围，end_of_storage是整块连续空间包括备用空间的尾部。</p>
-<hr>
+<p>vector底层是一个动态数组，包含三个迭代器，start和finish之间是已经被使用的空间范围，end_of_storage是整块连续空间包括备用空间的尾部。</p>
+<hr />
 <p>1.分配<code>std::vector</code> 会预先分配一块连续内存来存储元素</p>
 <p>2.扩容当 std::vector 的大小（size）达到容量（capacity）时，需要扩容。扩容通常会倍增（即容量乘以 2），以避免频繁的内存分配。扩容时，会进行以下步骤：</p>
 <blockquote>
@@ -414,84 +442,98 @@ cpp
 </blockquote>
 <p>3.释放内存：当 <code>std::vector</code> 被销毁时，其析构函数会自动释放内存。此外，可以使用 <code>clear</code> 方法清空元素，或使用 <code>shrink_to_fit</code> 方法请求释放未使用的内存，但具体行为依赖于实现。</p>
 <ol start="4">
-<li><p>自定义分配</p>
-<p> 允许使用自定义分配器来控制内存分配和释放行为。自定义分配器需要满足一定的接口要求。</p>
+<li>
+<p>自定义分配</p>
+<p>允许使用自定义分配器来控制内存分配和释放行为。自定义分配器需要满足一定的接口要求。</p>
 </li>
 </ol>
-<hr>
+<hr />
 <p>当空间不够装下数据（vec.push_back(val)）时，会自动申请另一片更大的空间（1.5倍或者2倍），然后把原来的数据拷贝到新的内存空间，接着释放原来的那片空间【vector内存增长机制】。</p>
-<p>   因此，对vector的任何操作一旦引起了空间的重新配置，指向原vector的所有迭代器会都失效了。</p>
+<p>因此，对vector的任何操作一旦引起了空间的重新配置，指向原vector的所有迭代器会都失效了。</p>
 </blockquote>
 <ul>
-<li><h4 id="vector-扩容为什么要以1-5倍或者2倍扩容"><a href="#vector-扩容为什么要以1-5倍或者2倍扩容" class="headerlink" title="vector 扩容为什么要以1.5倍或者2倍扩容?"></a>vector 扩容为什么要以1.5倍或者2倍扩容?</h4></li>
-<li><p>vector如何删除数据和释放内存</p>
+<li>
+<h4 id="vector-扩容为什么要以15倍或者2倍扩容"><a class="markdownIt-Anchor" href="#vector-扩容为什么要以15倍或者2倍扩容"></a> vector 扩容为什么要以1.5倍或者2倍扩容?</h4>
 </li>
-<li><h4 id="vector中的size和capacity的区别"><a href="#vector中的size和capacity的区别" class="headerlink" title="vector中的size和capacity的区别"></a>vector中的size和capacity的区别</h4></li>
-<li><h4 id="vector中的reserve和resize的区别"><a href="#vector中的reserve和resize的区别" class="headerlink" title="vector中的reserve和resize的区别"></a>vector中的reserve和resize的区别</h4></li>
+<li>
+<p>vector如何删除数据和释放内存</p>
+</li>
+<li>
+<h4 id="vector中的size和capacity的区别"><a class="markdownIt-Anchor" href="#vector中的size和capacity的区别"></a> vector中的size和capacity的区别</h4>
+</li>
+<li>
+<h4 id="vector中的reserve和resize的区别"><a class="markdownIt-Anchor" href="#vector中的reserve和resize的区别"></a> vector中的reserve和resize的区别</h4>
+</li>
 </ul>
 <blockquote>
-<p> 根据查阅的资料显示，考虑可能产生的堆空间浪费，成倍增长倍数不能太大，使用较为广泛的扩容方式有两种，以2倍的方式扩容，或者以1.5倍的方式扩容。</p>
-<p>  以2倍的方式扩容，导致下一次申请的内存必然大于之前分配内存的总和，导致之前分配的内存不能再被使用，所以最好倍增长因子设置为(1,2)之间：</p>
-<p><img   src="/../imgs/$%7Bfiilename%7D/1717561481059.png"  alt="1717561481059"></p>
+<p>根据查阅的资料显示，考虑可能产生的堆空间浪费，成倍增长倍数不能太大，使用较为广泛的扩容方式有两种，以2倍的方式扩容，或者以1.5倍的方式扩容。</p>
+<p>以2倍的方式扩容，导致下一次申请的内存必然大于之前分配内存的总和，导致之前分配的内存不能再被使用，所以最好倍增长因子设置为(1,2)之间：</p>
+<p><img   src="../imgs/$%7Bfiilename%7D/1717561481059.png"  alt="1717561481059" ></p>
 <blockquote>
 <p><code>std::vector</code> 在需要扩容时通常以 1.5 倍或 2 倍的倍数增加其容量，这种扩容策略主要出于性能和内存使用效率的考虑。以下是其中的原因和细节：</p>
-<h3 id="1-减少内存分配次数"><a href="#1-减少内存分配次数" class="headerlink" title="1. 减少内存分配次数"></a>1. <strong>减少内存分配次数</strong></h3><p>每次向 <code>std::vector</code> 中添加元素时，如果当前容量不足以容纳新元素，<code>vector</code> 需要分配新的更大容量的内存，并将旧内存中的元素复制到新内存中。这一过程涉及分配内存和复制数据，开销较大。通过成倍增长容量，可以减少内存重新分配的频率，从而提升性能。</p>
-<h3 id="2-平衡内存浪费和重新分配成本"><a href="#2-平衡内存浪费和重新分配成本" class="headerlink" title="2. 平衡内存浪费和重新分配成本"></a>2. <strong>平衡内存浪费和重新分配成本</strong></h3><p>如果每次扩容只增加一个固定的数量，例如增加 1 个或几个元素，那么当有大量元素要插入时，会频繁地进行内存分配和数据复制，严重影响性能。</p>
+<h3 id="1-减少内存分配次数"><a class="markdownIt-Anchor" href="#1-减少内存分配次数"></a> 1. <strong>减少内存分配次数</strong></h3>
+<p>每次向 <code>std::vector</code> 中添加元素时，如果当前容量不足以容纳新元素，<code>vector</code> 需要分配新的更大容量的内存，并将旧内存中的元素复制到新内存中。这一过程涉及分配内存和复制数据，开销较大。通过成倍增长容量，可以减少内存重新分配的频率，从而提升性能。</p>
+<h3 id="2-平衡内存浪费和重新分配成本"><a class="markdownIt-Anchor" href="#2-平衡内存浪费和重新分配成本"></a> 2. <strong>平衡内存浪费和重新分配成本</strong></h3>
+<p>如果每次扩容只增加一个固定的数量，例如增加 1 个或几个元素，那么当有大量元素要插入时，会频繁地进行内存分配和数据复制，严重影响性能。</p>
 <p>如果每次扩容成倍增长，例如增加 2 倍，那么内存使用效率较高，但可能导致内存浪费。例如，如果最终需要 1001 个元素，而容器容量为 1024，则浪费了 23 个元素的空间。通过成倍增加容量，<code>std::vector</code> 在性能和内存浪费之间找到了一个折中。</p>
-<h3 id="3-避免时间复杂度过高"><a href="#3-避免时间复杂度过高" class="headerlink" title="3. 避免时间复杂度过高"></a>3. <strong>避免时间复杂度过高</strong></h3><p>扩容的时间复杂度是摊销的线性时间。假设初始容量为 nnn，每次扩容成倍增长，当 <code>vector</code> 容量增加到 2n2n2n 时，之前的所有扩容操作总共复制了约 nnn 次元素。因此，总的时间复杂度是线性的，而不是指数级增长的。</p>
-<h3 id="4-成倍增长的选择"><a href="#4-成倍增长的选择" class="headerlink" title="4. 成倍增长的选择"></a>4. <strong>成倍增长的选择</strong></h3><p>成倍增长可以是 1.5 倍、2 倍或其他比例。这些选择取决于实现和设计权衡。</p>
+<h3 id="3-避免时间复杂度过高"><a class="markdownIt-Anchor" href="#3-避免时间复杂度过高"></a> 3. <strong>避免时间复杂度过高</strong></h3>
+<p>扩容的时间复杂度是摊销的线性时间。假设初始容量为 nnn，每次扩容成倍增长，当 <code>vector</code> 容量增加到 2n2n2n 时，之前的所有扩容操作总共复制了约 nnn 次元素。因此，总的时间复杂度是线性的，而不是指数级增长的。</p>
+<h3 id="4-成倍增长的选择"><a class="markdownIt-Anchor" href="#4-成倍增长的选择"></a> 4. <strong>成倍增长的选择</strong></h3>
+<p>成倍增长可以是 1.5 倍、2 倍或其他比例。这些选择取决于实现和设计权衡。</p>
 <ul>
 <li><strong>1.5 倍扩容</strong>：较少的内存浪费，但扩容频率更高。</li>
 <li><strong>2 倍扩容</strong>：更少的扩容频率，但内存浪费较多。</li>
 </ul>
 <p>不同的 STL 实现可能选择不同的增长策略。例如，GNU libstdc++ 使用 1.5 倍的扩容策略，而 Microsoft STL 使用 2 倍扩容策略。</p>
 </blockquote>
-<hr>
-<p> vec.clear()：清空内容，但是不释放内存。</p>
-<p>  vector<int>().swap(vec)：清空内容，且释放内存，想得到一个全新的vector。</p>
-<p>  vec.shrink_to_fit()：请求容器降低其capacity和size匹配。</p>
-<p>  vec.clear();vec.shrink_to_fit();：清空内容，且释放内存。</p>
-<hr>
+<hr />
+<p>vec.clear()：清空内容，但是不释放内存。</p>
+<p>vector<int>().swap(vec)：清空内容，且释放内存，想得到一个全新的vector。</p>
+<p>vec.shrink_to_fit()：请求容器降低其capacity和size匹配。</p>
+<p>vec.clear();vec.shrink_to_fit();：清空内容，且释放内存。</p>
+<hr />
 <p>增加 <code>vector</code> 的容量，以便减少未来的内存分配次数。</p>
 <p>不改变 <code>vector</code> 的大小，即 <code>vector</code> 的 <code>size</code> 不变。</p>
 <p>如果新的容量大于当前容量，则分配新的内存，并将现有元素移动到新的内存位置。如果新的容量小于或等于当前容量，则什么都不做。</p>
-<hr>
+<hr />
 <p>reserve是直接扩充到已经确定的大小，可以减少多次开辟、释放空间的问题（优化push_back），就可以提高效率，其次还可以减少多次要拷贝数据的问题。reserve只是保证vector中的空间大小（capacity）最少达到参数所指定的大小n。reserve()只有一个参数。</p>
 <p>resize()可以改变有效空间的大小，也有改变默认值的功能。capacity的大小也会随着改变。resize()可以有多个参数。</p>
 </blockquote>
-<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><ul>
-<li><p>list的底层</p>
+<h2 id="list"><a class="markdownIt-Anchor" href="#list"></a> list</h2>
+<ul>
+<li>
+<p>list的底层</p>
 </li>
-<li><p>list的节点结构</p>
+<li>
+<p>list的节点结构</p>
 </li>
-<li><p>迭代器</p>
-<hr>
+<li>
+<p>迭代器</p>
+<hr />
 </li>
 </ul>
 <p>list的底层是一个<strong>双向链表</strong>，以结点为单位存放数据，结点的地址在内存中不一定连续，每次插入或删除一个元素，就配置或释放一个元素空间。</p>
-<p>  list不支持随机存取，<strong>如果需要大量的插入和删除</strong>，而不关心随即存取</p>
-<hr>
+<p>list不支持随机存取，<strong>如果需要大量的插入和删除</strong>，而不关心随即存取</p>
+<hr />
 <p>list的节点结构(双向节点)</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt; <span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">__list_node</span>&#123;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="type">void</span>* void_pointer;</span><br><span class="line">    void_pointer next; <span class="comment">//型别为void*，也可以设为__list_node&lt;T&gt;*</span></span><br><span class="line">    void_pointer prev;</span><br><span class="line">    T data;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p><img   src="/../imgs/$%7Bfiilename%7D/1717562028251.png"  alt="1717562028251"></p>
-<hr>
+<p><img   src="../imgs/$%7Bfiilename%7D/1717562028251.png"  alt="1717562028251" ></p>
+<hr />
 <p>在Vector中，由于是连续的存储空间，支持随机存取，所以其迭代器可以直接用普通指针代替。但是，在List中行不通。List必须有能力指向List的节点，并有能力进行正确的递增、递减、取值和成员存取等操作。</p>
 <p>List是一个双向链表，迭代器必须具备前移、后退的能力，所以List的迭代器是一个Bidirectional Iterator！在Vector中如果进行插入和删除操作后迭代器会失效，List有一个重要的性质就是插入和接合操作都不会造成原有的List迭代器失效。而且，再删除一个节点时，也仅有指向被删除元素的那个迭代器失效，其他迭代器不受任何影响。</p>
-<p>List的迭代器实现了&#x3D;&#x3D;,!&#x3D;,++,–,取值和成员调用等操作，由于是存放在不连续的内存空间，所以并不支持vector那样的p+n的操作。</p>
-<hr>
+<p>List的迭代器实现了==,!=,++,–,取值和成员调用等操作，由于是存放在不连续的内存空间，所以并不支持vector那样的p+n的操作。</p>
+<hr />
 <ul>
 <li>list构造函数</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">std::list&lt;int&gt; l1; // 构造空的l1</span><br><span class="line">std::list&lt;int&gt; l2 (4,100); // l2中放4个值为100的元素</span><br><span class="line">std::list&lt;int&gt; l3 (l2.begin(), l2.end()); // 用l2的[begin(), end()）左闭右开的区间构造l3</span><br><span class="line">std::list&lt;int&gt; l4 (l3); // 用l3拷贝构造l4</span><br><span class="line">// 以数组为迭代器区间构造l5</span><br><span class="line">int array[] = &#123;16,2,77,29&#125;;</span><br><span class="line">std::list&lt;int&gt; l5 (array, array + sizeof(array) / sizeof(int) );</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>正反迭代器</li>
 </ul>
 <p>begin与end为正向迭代器，对迭代器执行++操作，迭代器向后移动</p>
 <p>rbegin(end)与rend(begin)为反向迭代器，对迭代器执行++操作，迭代器向前移动</p>
-<h3 id="find-和find-if"><a href="#find-和find-if" class="headerlink" title="find()和find_if"></a>find()和find_if</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    list&lt;<span class="type">int</span>&gt; lst;</span><br><span class="line">    lst.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">    lst.<span class="built_in">push_back</span>(<span class="number">20</span>);</span><br><span class="line">    lst.<span class="built_in">push_back</span>(<span class="number">30</span>);</span><br><span class="line">    list&lt;<span class="type">int</span>&gt;::iterator it = <span class="built_in">find</span>(lst.<span class="built_in">begin</span>(), lst.<span class="built_in">end</span>(), <span class="number">10</span>); <span class="comment">// 查找list中是否有元素“10”</span></span><br><span class="line">    <span class="keyword">if</span> (it != lst.<span class="built_in">end</span>()) <span class="comment">// 找到了</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// do something </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="comment">// 没找到</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// do something</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h3 id="find和find_if"><a class="markdownIt-Anchor" href="#find和find_if"></a> find()和find_if</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    list&lt;<span class="type">int</span>&gt; lst;</span><br><span class="line">    lst.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">    lst.<span class="built_in">push_back</span>(<span class="number">20</span>);</span><br><span class="line">    lst.<span class="built_in">push_back</span>(<span class="number">30</span>);</span><br><span class="line">    list&lt;<span class="type">int</span>&gt;::iterator it = <span class="built_in">find</span>(lst.<span class="built_in">begin</span>(), lst.<span class="built_in">end</span>(), <span class="number">10</span>); <span class="comment">// 查找list中是否有元素“10”</span></span><br><span class="line">    <span class="keyword">if</span> (it != lst.<span class="built_in">end</span>()) <span class="comment">// 找到了</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// do something </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="comment">// 没找到</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// do something</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>find的实现</li>
 </ul>
@@ -501,68 +543,62 @@ cpp
 </ul>
 <p>那么，如果容器里的元素是一个类呢？例如，有list<CPerson> ，其中CPerson类定义如下：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CPerson</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">CPerson</span>(<span class="type">void</span>); </span><br><span class="line">    ~<span class="built_in">CPerson</span>(<span class="type">void</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> age; <span class="comment">// 年龄</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>那么如何用find()函数进行查找呢？这时，我们需要提供一个判断两个CPerson对象“相等”的定义，find()函数才能从一个list中找到与指定的CPerson“相等”的元素。 </p>
-<p>这个“相等”的定义，是通过重载“&#x3D;&#x3D;”操作符实现的，我们在CPerson类中添加一个方法，定义为： </p>
+<p>那么如何用find()函数进行查找呢？这时，我们需要提供一个判断两个CPerson对象“相等”的定义，find()函数才能从一个list中找到与指定的CPerson“相等”的元素。</p>
+<p>这个“相等”的定义，是通过重载“==”操作符实现的，我们在CPerson类中添加一个方法，定义为：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="keyword">operator</span>==(<span class="type">const</span> CPerson &amp;rhs) <span class="type">const</span>; </span><br><span class="line"></span><br><span class="line">实现为： </span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> CPerson::<span class="keyword">operator</span>==(<span class="type">const</span> CPerson &amp;rhs) <span class="type">const</span> </span><br><span class="line">&#123; </span><br><span class="line">    <span class="built_in">return</span> (id == rhs.age); </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>然后我们就可以这样查找（假设list中已经有了若干CPerson对象）了： </p>
+<p>然后我们就可以这样查找（假设list中已经有了若干CPerson对象）了：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">list&lt;CPerson&gt; lst; </span><br><span class="line"></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 向lst中添加元素，此处省略 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"></span><br><span class="line">CPerson cp_to_find; <span class="comment">// 要查找的对象 </span></span><br><span class="line"></span><br><span class="line">cp_to_find.age = <span class="number">50</span>; </span><br><span class="line"></span><br><span class="line">list&lt;CPerson&gt;::iterator it = <span class="built_in">find</span>(list.<span class="built_in">begin</span>(), list.<span class="built_in">end</span>(), cp_to_find); <span class="comment">// 查找 </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (it != lst.<span class="built_in">end</span>()) <span class="comment">// 找到了 </span></span><br><span class="line"></span><br><span class="line">&#123; </span><br><span class="line"></span><br><span class="line">    <span class="comment">// do something  </span></span><br><span class="line"></span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="comment">// 没找到 </span></span><br><span class="line"></span><br><span class="line">&#123; </span><br><span class="line"></span><br><span class="line">    <span class="comment">// do something </span></span><br><span class="line"></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-
-
-
-<p>这样就实现了需求。 </p>
-<p>有人说，如果我有自己定义的“相等”呢？例如，有一个list&lt;CPerson*&gt;，这个list中的每一个元素都是一个对象的指针，我们要在这个list中查找具有指定age的元素，找到的话就得到对象的指针。 </p>
+<p>这样就实现了需求。</p>
+<p>有人说，如果我有自己定义的“相等”呢？例如，有一个list&lt;CPerson*&gt;，这个list中的每一个元素都是一个对象的指针，我们要在这个list中查找具有指定age的元素，找到的话就得到对象的指针。</p>
 <p>这时候，你不再能像上面的例子那样做，我们需要用到find_if函数，并自己指定predicate function（即find_if函数的第三个参数，请查阅STL手册）。先看看find_if函数的定义：</p>
 <blockquote>
 <p>未完待续</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/CNHK1225/article/details/48678203" >https://blog.csdn.net/CNHK1225/article/details/48678203<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<h3 id="find-if"><a href="#find-if" class="headerlink" title="find_if"></a>find_if</h3><p><code>std::find_if</code> 是 C++ 标准模板库 (STL) 中的一个算法，用于在范围内查找满足特定条件的第一个元素。它提供了一种灵活的方式，通过使用谓词（即返回布尔值的函数对象或函数）来查找符合条件的元素。</p>
-<h3 id="功能和用法"><a href="#功能和用法" class="headerlink" title="功能和用法"></a>功能和用法</h3><p><code>std::find_if</code> 可以用于任何符合迭代器要求的容器，如 <code>std::vector</code>, <code>std::list</code>, <code>std::deque</code> 等等。它遍历容器中的元素，并返回第一个满足谓词条件的元素的迭代器。如果找不到这样的元素，则返回指向范围末尾的迭代器。</p>
-<h3 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">template&lt; class InputIt, class UnaryPredicate &gt;</span><br><span class="line">InputIt find_if( InputIt first, InputIt last, UnaryPredicate p );</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<h3 id="find_if"><a class="markdownIt-Anchor" href="#find_if"></a> find_if</h3>
+<p><code>std::find_if</code> 是 C++ 标准模板库 (STL) 中的一个算法，用于在范围内查找满足特定条件的第一个元素。它提供了一种灵活的方式，通过使用谓词（即返回布尔值的函数对象或函数）来查找符合条件的元素。</p>
+<h3 id="功能和用法"><a class="markdownIt-Anchor" href="#功能和用法"></a> 功能和用法</h3>
+<p><code>std::find_if</code> 可以用于任何符合迭代器要求的容器，如 <code>std::vector</code>, <code>std::list</code>, <code>std::deque</code> 等等。它遍历容器中的元素，并返回第一个满足谓词条件的元素的迭代器。如果找不到这样的元素，则返回指向范围末尾的迭代器。</p>
+<h3 id="函数原型"><a class="markdownIt-Anchor" href="#函数原型"></a> 函数原型</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">template&lt; class InputIt, class UnaryPredicate &gt;</span><br><span class="line">InputIt find_if( InputIt first, InputIt last, UnaryPredicate p );</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><strong>InputIt first, last</strong>：定义要查找的范围 <code>[first, last)</code>，左闭右开区间。</p>
 <p><strong>UnaryPredicate p</strong>：一个谓词，接收元素并返回布尔值。谓词可以是函数指针、函数对象或 lambda 表达式。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>以下是一些使用 <code>std::find_if</code> 的示例：</p>
-<h4 id="示例-1：查找第一个大于-10-的元素"><a href="#示例-1：查找第一个大于-10-的元素" class="headerlink" title="示例 1：查找第一个大于 10 的元素"></a>示例 1：查找第一个大于 10 的元素</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is_greater_than_10</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value &gt; <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::vector&lt;<span class="type">int</span>&gt; vec = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">20</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> it = std::<span class="built_in">find_if</span>(vec.<span class="built_in">begin</span>(), vec.<span class="built_in">end</span>(), is_greater_than_10);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (it != vec.<span class="built_in">end</span>()) &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;First element greater than 10: &quot;</span> &lt;&lt; *it &lt;&lt; std::endl;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;No element greater than 10 found.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
+<h3 id="示例"><a class="markdownIt-Anchor" href="#示例"></a> 示例</h3>
+<p>以下是一些使用 <code>std::find_if</code> 的示例：</p>
+<h4 id="示例-1查找第一个大于-10-的元素"><a class="markdownIt-Anchor" href="#示例-1查找第一个大于-10-的元素"></a> 示例 1：查找第一个大于 10 的元素</h4>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is_greater_than_10</span><span class="params">(<span class="type">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value &gt; <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::vector&lt;<span class="type">int</span>&gt; vec = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">20</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> it = std::<span class="built_in">find_if</span>(vec.<span class="built_in">begin</span>(), vec.<span class="built_in">end</span>(), is_greater_than_10);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (it != vec.<span class="built_in">end</span>()) &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;First element greater than 10: &quot;</span> &lt;&lt; *it &lt;&lt; std::endl;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;No element greater than 10 found.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><strong>示例 2：使用 lambda 表达式</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::vector&lt;<span class="type">int</span>&gt; vec = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">20</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> it = std::<span class="built_in">find_if</span>(vec.<span class="built_in">begin</span>(), vec.<span class="built_in">end</span>(), [](<span class="type">int</span> value) &#123;</span><br><span class="line">        <span class="keyword">return</span> value &gt; <span class="number">10</span>;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (it != vec.<span class="built_in">end</span>()) &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;First element greater than 10: &quot;</span> &lt;&lt; *it &lt;&lt; std::endl;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;No element greater than 10 found.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p><strong>示例 3：查找具有特定属性的结构体</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    std::string name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::vector&lt;Person&gt; people = &#123;</span><br><span class="line">        &#123;<span class="string">&quot;Alice&quot;</span>, <span class="number">30</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Bob&quot;</span>, <span class="number">25</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Charlie&quot;</span>, <span class="number">35</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;David&quot;</span>, <span class="number">40</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> it = std::<span class="built_in">find_if</span>(people.<span class="built_in">begin</span>(), people.<span class="built_in">end</span>(), [](<span class="type">const</span> Person&amp; person) &#123;</span><br><span class="line">        <span class="keyword">return</span> person.age &gt; <span class="number">30</span>;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (it != people.<span class="built_in">end</span>()) &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;First person older than 30: &quot;</span> &lt;&lt; it-&gt;name &lt;&lt; <span class="string">&quot; (&quot;</span> &lt;&lt; it-&gt;age &lt;&lt; <span class="string">&quot;)&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;No person older than 30 found.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><code>std::find_if</code> 是一个非常强大的工具，可以在范围内查找符合特定条件的第一个元素。它通过使用谓词来实现灵活的查找功能，能够处理各种类型的容器和复杂的查找条件。它的用法简单，结合 C++11 引入的 lambda 表达式，可以极大地提升代码的简洁性和可读性。</p>
-<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>map与multimap是STL中的<strong>关联容器</strong>、提供一对一key-value的数据处理能力； map与multimap的区别在于，multimap允许关键字重复，而map不允许重复。</p>
-<p>这两个关联容器的底层数据结构均为<strong>红黑树</strong>，关于红黑树的理解可以参考<a class="link"   target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/03.01.md" >教你透彻了解红黑树<i class="fas fa-external-link-alt"></i></a>一文。</p>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h3>
+<p><code>std::find_if</code> 是一个非常强大的工具，可以在范围内查找符合特定条件的第一个元素。它通过使用谓词来实现灵活的查找功能，能够处理各种类型的容器和复杂的查找条件。它的用法简单，结合 C++11 引入的 lambda 表达式，可以极大地提升代码的简洁性和可读性。</p>
+<h2 id="map"><a class="markdownIt-Anchor" href="#map"></a> map</h2>
+<p>map与multimap是STL中的<strong>关联容器</strong>、提供一对一key-value的数据处理能力； map与multimap的区别在于，multimap允许关键字重复，而map不允许重复。</p>
+<p>这两个关联容器的底层数据结构均为<strong>红黑树</strong>，关于红黑树的理解可以参考<a class="link"   target="_blank" rel="noopener" href="https://link.jianshu.com?t=https%3A%2F%2Fgithub.com%2Fjulycoding%2FThe-Art-Of-Programming-By-July%2Fblob%2Fmaster%2Febook%2Fzh%2F03.01.md" >教你透彻了解红黑树<i class="fas fa-external-link-alt"></i></a>一文。</p>
 <p>根据红黑树的原理，map与multimap可以实现**O(lgn)**的查找，插入和删除。</p>
 <ul>
 <li>map的基础节点</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key, <span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    std::pair&lt;<span class="type">const</span> Key, T&gt; value;</span><br><span class="line">    Node* parent;</span><br><span class="line">    Node* left;</span><br><span class="line">    Node* right;</span><br><span class="line">    <span class="type">bool</span> isRed;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="核心操作"><a href="#核心操作" class="headerlink" title="核心操作"></a>核心操作</h3><ol>
-<li><p><strong>查找操作</strong>：</p>
+<h3 id="核心操作"><a class="markdownIt-Anchor" href="#核心操作"></a> 核心操作</h3>
+<ol>
+<li>
+<p><strong>查找操作</strong>：</p>
 <ul>
 <li>从根节点开始，依次比较键值，向左子树或右子树递归，直到找到目标键或到达叶节点。</li>
 <li>时间复杂度为 O(log n)。</li>
 </ul>
 </li>
-<li><p><strong>插入操作</strong>：</p>
+<li>
+<p><strong>插入操作</strong>：</p>
 <ul>
 <li>插入新节点后，按照红黑树的规则进行调整（旋转和重新着色），以保持树的平衡。</li>
 <li>时间复杂度为 O(log n)。</li>
 </ul>
 </li>
-<li><p><strong>删除操作</strong>：</p>
+<li>
+<p><strong>删除操作</strong>：</p>
 <ul>
 <li>删除节点后，同样需要按照红黑树的规则进行调整，保证树的平衡。</li>
 <li>时间复杂度为 O(log n)。</li>
@@ -581,31 +617,44 @@ cpp
 <li><strong>右旋</strong>：将当前节点与其左子节点进行旋转。</li>
 </ul>
 <p>红黑树是一种自平衡二叉搜索树，通过节点的颜色和结构调整来保持平衡。节点的选择和重新着色遵循一系列严格的规则，以确保树的平衡性和操作的高效性。下面是红黑树的基本规则和在插入、删除操作中进行选择和重新着色的具体规则：</p>
-<h3 id="红黑树的基本性质"><a href="#红黑树的基本性质" class="headerlink" title="红黑树的基本性质"></a>红黑树的基本性质</h3><ol>
+<h3 id="红黑树的基本性质"><a class="markdownIt-Anchor" href="#红黑树的基本性质"></a> 红黑树的基本性质</h3>
+<ol>
 <li><strong>节点颜色</strong>：每个节点是红色或黑色。</li>
 <li><strong>根节点</strong>：根节点是黑色。</li>
 <li><strong>叶节点（NIL节点）</strong>：每个叶节点（即空节点）是黑色。</li>
 <li><strong>红色节点限制</strong>：红色节点的两个子节点必须是黑色（即红色节点不能连续）。</li>
 <li><strong>黑色节点平衡</strong>：从任一节点到其每个叶节点的所有路径都包含相同数量的黑色节点。</li>
 </ol>
-<h3 id="插入操作中的调整规则"><a href="#插入操作中的调整规则" class="headerlink" title="插入操作中的调整规则"></a>插入操作中的调整规则</h3><p>插入操作可能打破红黑树的平衡，需要通过重新着色和旋转来修复。具体步骤如下：</p>
+<h3 id="插入操作中的调整规则"><a class="markdownIt-Anchor" href="#插入操作中的调整规则"></a> 插入操作中的调整规则</h3>
+<p>插入操作可能打破红黑树的平衡，需要通过重新着色和旋转来修复。具体步骤如下：</p>
 <ol>
-<li><p><strong>插入节点并着色</strong>：新插入的节点总是红色。</p>
+<li>
+<p><strong>插入节点并着色</strong>：新插入的节点总是红色。</p>
 </li>
-<li><p>调整</p>
+<li>
+<p>调整</p>
 <p>：</p>
 <ul>
-<li><p><strong>Case 1</strong>: 插入节点是根节点。将其重新着色为黑色。</p>
+<li>
+<p><strong>Case 1</strong>: 插入节点是根节点。将其重新着色为黑色。</p>
 </li>
-<li><p><strong>Case 2</strong>: 插入节点的父节点是黑色。红黑树仍然平衡，无需调整。</p>
+<li>
+<p><strong>Case 2</strong>: 插入节点的父节点是黑色。红黑树仍然平衡，无需调整。</p>
 </li>
-<li><p>Case 3</p>
-<p>: 插入节点的父节点是红色。</p>
+<li>
+<dl>
+<dt>Case 3</dt>
+<dd>插入节点的父节点是红色。</dd>
+</dl>
 <ul>
-<li><p><strong>Case 3.1</strong>: 叔叔节点（父节点的兄弟节点）是红色。将父节点和叔叔节点重新着色为黑色，祖父节点重新着色为红色，然后将祖父节点作为新的插入节点进行下一轮调整。</p>
+<li>
+<p><strong>Case 3.1</strong>: 叔叔节点（父节点的兄弟节点）是红色。将父节点和叔叔节点重新着色为黑色，祖父节点重新着色为红色，然后将祖父节点作为新的插入节点进行下一轮调整。</p>
 </li>
-<li><p>Case 3.2</p>
-<p>: 叔叔节点是黑色或NIL。</p>
+<li>
+<dl>
+<dt>Case 3.2</dt>
+<dd>叔叔节点是黑色或NIL。</dd>
+</dl>
 <ul>
 <li><strong>Case 3.2.1</strong>: 插入节点是父节点的右子节点，父节点是祖父节点的左子节点。以父节点为中心左旋。</li>
 <li><strong>Case 3.2.2</strong>: 插入节点是父节点的左子节点，父节点是祖父节点的右子节点。以父节点为中心右旋。</li>
@@ -619,15 +668,17 @@ cpp
 </ol>
 <p>以下是一个插入操作的示例图解：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">插入操作前：</span><br><span class="line">       B</span><br><span class="line">      / \</span><br><span class="line">     R   R</span><br><span class="line"></span><br><span class="line">插入节点后：</span><br><span class="line">       B</span><br><span class="line">      / \</span><br><span class="line">     R   R</span><br><span class="line">      \</span><br><span class="line">       R  (新插入的节点)</span><br><span class="line"></span><br><span class="line">调整后的红黑树：</span><br><span class="line">       R</span><br><span class="line">      / \</span><br><span class="line">     B   B</span><br><span class="line">      \</span><br><span class="line">       R</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="删除操作中的调整规则"><a href="#删除操作中的调整规则" class="headerlink" title="删除操作中的调整规则"></a>删除操作中的调整规则</h3><p>删除操作也可能打破红黑树的平衡，尤其是删除黑色节点，需要通过重新着色和旋转来修复。具体步骤如下：</p>
+<h3 id="删除操作中的调整规则"><a class="markdownIt-Anchor" href="#删除操作中的调整规则"></a> 删除操作中的调整规则</h3>
+<p>删除操作也可能打破红黑树的平衡，尤其是删除黑色节点，需要通过重新着色和旋转来修复。具体步骤如下：</p>
 <ol>
-<li><strong>标记节点和子节点</strong>：<ul>
+<li><strong>标记节点和子节点</strong>：
+<ul>
 <li>如果删除的节点是红色，直接删除即可。</li>
 <li>如果删除的节点是黑色，标记替代它的子节点（如果有）为双重黑色节点。</li>
 </ul>
 </li>
-<li><strong>调整</strong>：<ul>
+<li><strong>调整</strong>：
+<ul>
 <li><strong>Case 1</strong>: 双重黑色节点是根节点。直接移除双重黑色标记。</li>
 <li><strong>Case 2</strong>: 双重黑色节点的兄弟节点是红色。将兄弟节点重新着色为黑色，将父节点重新着色为红色，然后进行旋转。</li>
 <li><strong>Case 3</strong>: 双重黑色节点的兄弟节点是黑色，兄弟节点的两个子节点都是黑色。将兄弟节点重新着色为红色，双重黑色上移到父节点。</li>
@@ -637,36 +688,41 @@ cpp
 </ol>
 <p>以下是一个删除操作的示例图解：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">删除操作前：</span><br><span class="line">       B</span><br><span class="line">      / \</span><br><span class="line">     R   B</span><br><span class="line">         /</span><br><span class="line">        R</span><br><span class="line"></span><br><span class="line">删除节点后：</span><br><span class="line">       B</span><br><span class="line">      / \</span><br><span class="line">     R   B (双重黑色)</span><br><span class="line"></span><br><span class="line">调整后的红黑树：</span><br><span class="line">       B</span><br><span class="line">      / \</span><br><span class="line">     B   R</span><br><span class="line">         /</span><br><span class="line">        B</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="旋转操作"><a href="#旋转操作" class="headerlink" title="旋转操作"></a>旋转操作</h3><p>旋转操作用于在调整红黑树时保持树的平衡，包括左旋和右旋：</p>
+<h3 id="旋转操作"><a class="markdownIt-Anchor" href="#旋转操作"></a> 旋转操作</h3>
+<p>旋转操作用于在调整红黑树时保持树的平衡，包括左旋和右旋：</p>
 <ul>
 <li><strong>左旋</strong>：以某个节点为中心，右子节点成为新的根，原来的根成为新根的左子节点。</li>
 <li><strong>右旋</strong>：以某个节点为中心，左子节点成为新的根，原来的根成为新根的右子节点。</li>
 </ul>
 <p>旋转的示例：</p>
-<p><img   src="/../imgs/$%7Bfiilename%7D/1717565623756.png"  alt="1717565623756"></p>
-<h2 id="map-和multimap"><a href="#map-和multimap" class="headerlink" title="map 和multimap"></a>map 和multimap</h2><p>map与multimap在STL底层的区别在哪</p>
+<p><img   src="../imgs/$%7Bfiilename%7D/1717565623756.png"  alt="1717565623756" ></p>
+<h2 id="map-和multimap"><a class="markdownIt-Anchor" href="#map-和multimap"></a> map 和multimap</h2>
+<p>map与multimap在STL底层的区别在哪</p>
 <p><code>std::map</code> 和 <code>std::multimap</code> 是 C++ 标准模板库 (STL) 中的两种关联容器，它们的底层实现都基于红黑树，但它们在键值对的存储和处理上有一些重要的区别。</p>
-<h3 id="主要区别"><a href="#主要区别" class="headerlink" title="主要区别"></a>主要区别</h3><ol>
-<li><strong>唯一键 vs. 允许重复键</strong>：<ul>
+<h3 id="主要区别"><a class="markdownIt-Anchor" href="#主要区别"></a> 主要区别</h3>
+<ol>
+<li><strong>唯一键 vs. 允许重复键</strong>：
+<ul>
 <li><strong>std::map</strong>：存储唯一的键值对，每个键只能出现一次。</li>
 <li><strong>std::multimap</strong>：允许存储重复的键，每个键可以对应多个值。</li>
 </ul>
 </li>
-<li><strong>插入操作</strong>：<ul>
+<li><strong>插入操作</strong>：
+<ul>
 <li><strong>std::map</strong>：如果插入具有相同键的元素，插入操作将失败，或者替换已有元素的值。</li>
 <li><strong>std::multimap</strong>：可以插入具有相同键的多个元素。</li>
 </ul>
 </li>
 </ol>
-<h3 id="底层实现的共同点"><a href="#底层实现的共同点" class="headerlink" title="底层实现的共同点"></a>底层实现的共同点</h3><ul>
+<h3 id="底层实现的共同点"><a class="markdownIt-Anchor" href="#底层实现的共同点"></a> 底层实现的共同点</h3>
+<ul>
 <li><strong>红黑树</strong>：两者都使用红黑树作为底层数据结构，以保持键值对的有序性和操作的对数时间复杂度。</li>
 <li><strong>平衡和旋转</strong>：红黑树通过颜色标记和旋转操作保持树的平衡，这在 <code>std::map</code> 和 <code>std::multimap</code> 中是相同的。</li>
 </ul>
-<h3 id="底层实现的不同点"><a href="#底层实现的不同点" class="headerlink" title="底层实现的不同点"></a>底层实现的不同点</h3><ul>
-<li><p>处理重复键</p>
+<h3 id="底层实现的不同点"><a class="markdownIt-Anchor" href="#底层实现的不同点"></a> 底层实现的不同点</h3>
+<ul>
+<li>
+<p>处理重复键</p>
 <p>：</p>
 <ul>
 <li><strong>std::map</strong>：红黑树中的每个节点包含唯一的键值对。插入时，如果键已存在，则不插入新元素（或者替换旧值，具体行为取决于插入方法）。</li>
@@ -674,61 +730,79 @@ cpp
 </ul>
 </li>
 </ul>
-<h2 id="C-的前置-和后置"><a href="#C-的前置-和后置" class="headerlink" title="C++的前置++和后置++"></a>C++的前置++和后置++</h2><p>对于迭代器和其他模板对象使用前缀形式 (++i) 的自增, 自减<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%BF%90%E7%AE%97%E7%AC%A6&spm=1001.2101.3001.7020" >运算符<i class="fas fa-external-link-alt"></i></a>.，理由是 前置自增 (++i) 通常要比后置自增 (i++) 效率更高。</p>
+<h2 id="c的前置和后置"><a class="markdownIt-Anchor" href="#c的前置和后置"></a> C<ins>的前置</ins>和后置++</h2>
+<p>对于迭代器和其他模板对象使用前缀形式 (++i) 的自增, 自减<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%BF%90%E7%AE%97%E7%AC%A6&amp;spm=1001.2101.3001.7020" >运算符<i class="fas fa-external-link-alt"></i></a>.，理由是 前置自增 (<ins>i) 通常要比后置自增 (i</ins>) 效率更高。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一起来看看源码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Age</span>   </span><br><span class="line">	&#123;   </span><br><span class="line">	<span class="keyword">public</span>:   </span><br><span class="line">	  </span><br><span class="line">	    Age&amp; <span class="keyword">operator</span>++() <span class="comment">//前置++   </span></span><br><span class="line">	    &#123;   </span><br><span class="line">	        ++i;   </span><br><span class="line">	        <span class="keyword">return</span> *<span class="keyword">this</span>;   </span><br><span class="line">	    &#125;   </span><br><span class="line">	  </span><br><span class="line">	    <span class="type">const</span> Age <span class="keyword">operator</span>++(<span class="type">int</span>) <span class="comment">//后置++   </span></span><br><span class="line">    &#123;   </span><br><span class="line">	        Age tmp = *<span class="keyword">this</span>;   <span class="comment">//tmp是一个临时对象，会造成一次构造函数和一次析构函数的额外开销。</span></span><br><span class="line">	        ++(*<span class="keyword">this</span>);  <span class="comment">//利用前置++   </span></span><br><span class="line">	        <span class="keyword">return</span> tmp;   </span><br><span class="line">	    &#125;   </span><br><span class="line">	  </span><br><span class="line">	    Age&amp; <span class="keyword">operator</span>=(<span class="type">int</span> i) <span class="comment">//赋值操作   </span></span><br><span class="line">	    &#123;   </span><br><span class="line">	        <span class="keyword">this</span>-&gt;i = i;   </span><br><span class="line">	        <span class="keyword">return</span> *<span class="keyword">this</span>;   </span><br><span class="line">	    &#125;   </span><br><span class="line">	  </span><br><span class="line">	<span class="keyword">private</span>:   </span><br><span class="line">	    <span class="type">int</span> i;   </span><br><span class="line">	&#125;; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>1.返回值类型的区别</p>
-<p>前置++的返回类型是（引用）Age&amp;，后置++的返回类型const Age（临时对象）。这意味着，前置++返回的是左值，后置++返回的是右值。</p>
+<p>前置<ins>的返回类型是（引用）Age&amp;，后置</ins>的返回类型const Age（临时对象）。这意味着，前置<ins>返回的是左值，后置</ins>返回的是右值。</p>
 <p>2.形参的区别</p>
-<p>前置++没有形参，而后置++有一个int形参，但是该形参也没有被用到。很奇怪，难道有什么特殊的用意？<br>其实也没有特殊的用意，只是为了绕过语法的限制。<br>前置++与后置++的操作符重载函数，函数原型必须不同。否则就违反了“重载函数必须拥有不同的函数原型”的语法规定。</p>
+<p>前置<ins>没有形参，而后置</ins>有一个int形参，但是该形参也没有被用到。很奇怪，难道有什么特殊的用意？<br />
+其实也没有特殊的用意，只是为了绕过语法的限制。<br />
+前置<ins>与后置</ins>的操作符重载函数，函数原型必须不同。否则就违反了“重载函数必须拥有不同的函数原型”的语法规定。</p>
 <p>3.代码实现的区别</p>
 <p>前置++的实现比较简单，自增之后，将this返回即可。需要注意的是，一定要返回this。</p>
 <p>后置++的实现稍微麻烦一些。因为要返回自增之前的对象，所以先将对象拷贝一份，再进行自增，最后返回那个拷贝。</p>
 <p>4.效率的区别</p>
 </blockquote>
-<h2 id="map-、set、multiset、multimap"><a href="#map-、set、multiset、multimap" class="headerlink" title="map 、set、multiset、multimap"></a>map 、set、multiset、multimap</h2><h2 id="hashtable"><a href="#hashtable" class="headerlink" title="hashtable"></a>hashtable</h2><p>STL 中并没有直接提供 <code>hashtable</code> 这个容器，但在 C++11 及之后的标准库中提供了基于哈希表实现的无序关联容器，包括 <code>std::unordered_map</code>、<code>std::unordered_set</code>、<code>std::unordered_multimap</code> 和 <code>std::unordered_multiset</code>。这些容器实际上是哈希表的实现。</p>
-<h3 id="数据结构复习与理解"><a href="#数据结构复习与理解" class="headerlink" title="数据结构复习与理解"></a>数据结构复习与理解</h3><p><img   src="/../imgs/$%7Bfiilename%7D/1717566101857.png"  alt="1717566101857"></p>
+<h2 id="map-set-multiset-multimap"><a class="markdownIt-Anchor" href="#map-set-multiset-multimap"></a> map 、set、multiset、multimap</h2>
+<h2 id="hashtable"><a class="markdownIt-Anchor" href="#hashtable"></a> hashtable</h2>
+<p>STL 中并没有直接提供 <code>hashtable</code> 这个容器，但在 C++11 及之后的标准库中提供了基于哈希表实现的无序关联容器，包括 <code>std::unordered_map</code>、<code>std::unordered_set</code>、<code>std::unordered_multimap</code> 和 <code>std::unordered_multiset</code>。这些容器实际上是哈希表的实现。</p>
+<h3 id="数据结构复习与理解"><a class="markdownIt-Anchor" href="#数据结构复习与理解"></a> 数据结构复习与理解</h3>
+<p><img   src="../imgs/$%7Bfiilename%7D/1717566101857.png"  alt="1717566101857" ></p>
 <p>上图就是一个散列表（Hash table，也叫哈希表），是根据关键码值(Key value)而直接进行访问的数据结构。也就是说，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。这个映射函数叫做散列函数，存放记录的数组叫做散列表。但是当关键字数量比较大的时候，难免就会造成一个问题，就是不一样的关键字隐射到同一个地址上，这样就造成了一个问题，就是hash冲突。那么如何解决呢？</p>
-<h3 id="冲突解决方法"><a href="#冲突解决方法" class="headerlink" title="冲突解决方法"></a>冲突解决方法</h3><h3 id="线性探测"><a href="#线性探测" class="headerlink" title="线性探测"></a>线性探测</h3><p>当前项目冲突，就线性向后搜索，直到找到一个可以存放的位置，该方法复杂度较高。该方法会导致主集团(primary clustering)的问题，即多数的冲突会导致数据在array中较为集中的排列。</p>
-<h3 id="二次探测"><a href="#二次探测" class="headerlink" title="二次探测"></a>二次探测</h3><p>当冲突时，向后搜索<img   src="/../imgs/$%7Bfiilename%7D/1717566947647.png"  alt="1717566947647"></p>
-<p>等位置，<strong>为了消除每次计算时需要计算二次函数</strong>，进行如下变换 </p>
-<p><img   src="/../imgs/$%7Bfiilename%7D/1717566958747.png"  alt="1717566958747"></p>
-<h2 id="开链-seperate-chaining"><a href="#开链-seperate-chaining" class="headerlink" title="开链(seperate chaining)"></a>开链(seperate chaining)</h2><p>每个array的位置上，维护一个list，每次通过hash function得到array的位置，在该位置上的list进行插入、搜寻和删除。list够短时，这些操作效率是可以接受的。<br> <strong>STL中就是用的这种方法。</strong></p>
-<h2 id="hashtable的桶-buckets-和节点-nodes"><a href="#hashtable的桶-buckets-和节点-nodes" class="headerlink" title="hashtable的桶(buckets)和节点(nodes)"></a>hashtable的桶(buckets)和节点(nodes)</h2><p>每个hash table表格内的元素为桶子，一就是说一个元素维护的是一桶节点。</p>
+<h3 id="冲突解决方法"><a class="markdownIt-Anchor" href="#冲突解决方法"></a> 冲突解决方法</h3>
+<h3 id="线性探测"><a class="markdownIt-Anchor" href="#线性探测"></a> 线性探测</h3>
+<p>当前项目冲突，就线性向后搜索，直到找到一个可以存放的位置，该方法复杂度较高。该方法会导致主集团(primary clustering)的问题，即多数的冲突会导致数据在array中较为集中的排列。</p>
+<h3 id="二次探测"><a class="markdownIt-Anchor" href="#二次探测"></a> 二次探测</h3>
+<p>当冲突时，向后搜索<img   src="../imgs/$%7Bfiilename%7D/1717566947647.png"  alt="1717566947647" ></p>
+<p>等位置，<strong>为了消除每次计算时需要计算二次函数</strong>，进行如下变换</p>
+<p><img   src="../imgs/$%7Bfiilename%7D/1717566958747.png"  alt="1717566958747" ></p>
+<h2 id="开链seperate-chaining"><a class="markdownIt-Anchor" href="#开链seperate-chaining"></a> 开链(seperate chaining)</h2>
+<p>每个array的位置上，维护一个list，每次通过hash function得到array的位置，在该位置上的list进行插入、搜寻和删除。list够短时，这些操作效率是可以接受的。<br />
+<strong>STL中就是用的这种方法。</strong></p>
+<h2 id="hashtable的桶buckets和节点nodes"><a class="markdownIt-Anchor" href="#hashtable的桶buckets和节点nodes"></a> hashtable的桶(buckets)和节点(nodes)</h2>
+<p>每个hash table表格内的元素为桶子，一就是说一个元素维护的是一桶节点。</p>
 <p>这样表述意思是说：哈希表中的每个单元，有可能是一” 桶 “元素。</p>
-<p><img   src="/../imgs/$%7Bfiilename%7D/1717567534250.png"  alt="1717567534250"></p>
+<p><img   src="../imgs/$%7Bfiilename%7D/1717567534250.png"  alt="1717567534250" ></p>
 <p>哈希表的节点定义为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">template &lt;class Value&gt;</span><br><span class="line">struct __hashtable_node &#123;</span><br><span class="line">    __hashtable_node *next; // 指向下一个节点的指针</span><br><span class="line">    Value val; // 节点的值</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
 <p>需要注意的是，bucket 维护的链表，并不使用 STL 的 list，而是自行维护节点。但是哈希表，也就是 bucket 的聚合体，以 STL 的 vector 完成，以便有动态扩充能力。</p>
-<h3 id="hashtable-的迭代器"><a href="#hashtable-的迭代器" class="headerlink" title="hashtable 的迭代器"></a>hashtable 的迭代器</h3><p>hashtable 的迭代器处理维持当前指向的 bucket 的节点的关联，还需要维持与整个 hash 表的关联。<br>这样前进操作从当前节点出发，通过节点的 next 指针访问下一个节点；</p>
+<h3 id="hashtable-的迭代器"><a class="markdownIt-Anchor" href="#hashtable-的迭代器"></a> hashtable 的迭代器</h3>
+<p>hashtable 的迭代器处理维持当前指向的 bucket 的节点的关联，还需要维持与整个 hash 表的关联。<br />
+这样前进操作从当前节点出发，通过节点的 next 指针访问下一个节点；</p>
 <p>如果当前节点恰好是当前 bucket 的尾端，则需要利用与 hash 表的关联跳转到下一个 bucket 上。</p>
 <p>由于 hashtable 迭代器是一个正向迭代器，所以没有后退操作。</p>
 <blockquote>
 <p><a class="link"   target="_blank" rel="noopener" href="https://guomw.net/posts/3225459827/" >https://guomw.net/posts/3225459827/<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><blockquote>
-<p>一般比较常用的方法有开放地址法：（内容来自百度百科） </p>
-<p> \1. 开放寻址法：Hi&#x3D;(H(key) + di) MOD m,i&#x3D;1,2，…，k(k&lt;&#x3D;m-1），其中H(key）为散列函数，m为散列表长，di为增量序列，可有下列三种取法： </p>
-<p> 1.1. di&#x3D;1,2,3，…，m-1，称线性探测再散列；顺序查看表的下一单元，直至找到某个空单元，或查遍全表。 </p>
-<p> 1.2. di&#x3D;1^2,-1^2,2^2,-2^2，⑶^2，…，±（k)^2,(k&lt;&#x3D;m&#x2F;2）称二次探测再散列；在表的左右进行跳跃式探测。 </p>
-<p> 1.3. di&#x3D;伪随机数序列，称伪随机探测再散列。根据产生的随机数进行探测。</p>
+<h3 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h3>
+<blockquote>
+<p>一般比较常用的方法有开放地址法：（内容来自百度百科）</p>
+<p>\1. 开放寻址法：Hi=(H(key) + di) MOD m,i=1,2，…，k(k&lt;=m-1），其中H(key）为散列函数，m为散列表长，di为增量序列，可有下列三种取法：</p>
+<p>1.1. di=1,2,3，…，m-1，称线性探测再散列；顺序查看表的下一单元，直至找到某个空单元，或查遍全表。</p>
+<p>1.2. di=1<sup>2,-1</sup>2,2<sup>2,-2</sup>2，⑶<sup>2，…，±（k)</sup>2,(k&lt;=m/2）称二次探测再散列；在表的左右进行跳跃式探测。</p>
+<p>1.3. di=伪随机数序列，称伪随机探测再散列。根据产生的随机数进行探测。</p>
 <p>2 再散列法：建立多个hash函数，若是当发生hash冲突的时候，使用下一个hash函数，直到找到可以存放元素的位置。</p>
 <p>3 拉链法（链地址法）：就是在冲突的位置上简历一个链表，然后将冲突的元素插入到链表尾端，</p>
 <p>4 建立公共溢出区：将哈希表分为基本表和溢出表，将与基本表发生冲突的元素放入溢出表中。</p>
 </blockquote>
 <blockquote>
-<p>底层的hashMap是由数组和链表来实现的，就是上面说的拉链法。首先当插入的时候，会根据key的hash值然后计算出相应的数组下标，计算方法是index  &#x3D;  hashcode%table.length，（这个下标就是上面提到的bucket），当这个下标上面已经存在元素的时候那么就会形成链表，将后插入的元素放到尾端，若是下标上面没有存在元素的话，那么将直接将元素放到这个位置上。 </p>
-<p> 当进行查询的时候，同样会根据key的hash值先计算相应的下标，然后到相应的位置上进行查找，若是这个下标上面有很多元素的话，那么将在这个链表上一直查找直到找到对应的元素。</p>
+<p>底层的hashMap是由数组和链表来实现的，就是上面说的拉链法。首先当插入的时候，会根据key的hash值然后计算出相应的数组下标，计算方法是index  =  hashcode%table.length，（这个下标就是上面提到的bucket），当这个下标上面已经存在元素的时候那么就会形成链表，将后插入的元素放到尾端，若是下标上面没有存在元素的话，那么将直接将元素放到这个位置上。</p>
+<p>当进行查询的时候，同样会根据key的hash值先计算相应的下标，然后到相应的位置上进行查找，若是这个下标上面有很多元素的话，那么将在这个链表上一直查找直到找到对应的元素。</p>
 </blockquote>
-<h2 id="迭代器底层和失效的原因"><a href="#迭代器底层和失效的原因" class="headerlink" title="迭代器底层和失效的原因"></a>迭代器底层和失效的原因</h2><h2 id="线程安全问题"><a href="#线程安全问题" class="headerlink" title="线程安全问题"></a>线程安全问题</h2><h2 id="静态类型转换"><a href="#静态类型转换" class="headerlink" title="静态类型转换"></a>静态类型转换</h2><p>在 C++ 中，<code>static_cast&lt;T*&gt;</code> 是一种类型转换操作符，用于进行<strong>静态类型转换</strong>。静态转换是一种在编译时期进行的转换，主要用于转换相关类型之间的指针或引用关系，例如将基类指针或引用转换为派生类指针或引用。它具有以下特点和用途：</p>
+<h2 id="迭代器底层和失效的原因"><a class="markdownIt-Anchor" href="#迭代器底层和失效的原因"></a> 迭代器底层和失效的原因</h2>
+<h2 id="线程安全问题"><a class="markdownIt-Anchor" href="#线程安全问题"></a> 线程安全问题</h2>
+<h2 id="静态类型转换"><a class="markdownIt-Anchor" href="#静态类型转换"></a> 静态类型转换</h2>
+<p>在 C++ 中，<code>static_cast&lt;T*&gt;</code> 是一种类型转换操作符，用于进行<strong>静态类型转换</strong>。静态转换是一种在编译时期进行的转换，主要用于转换相关类型之间的指针或引用关系，例如将基类指针或引用转换为派生类指针或引用。它具有以下特点和用途：</p>
 <ol>
-<li><strong>用法</strong>：<ul>
+<li><strong>用法</strong>：
+<ul>
 <li><code>static_cast&lt;T*&gt;(expression)</code> 表示将 <code>expression</code> 转换为类型 <code>T*</code>。其中 <code>T</code> 可以是任意类型，包括基本数据类型、指针、引用、类类型等。</li>
 </ul>
 </li>
-<li><strong>转换的情况</strong>：<ul>
+<li><strong>转换的情况</strong>：
+<ul>
 <li><strong>类型之间必须存在直接或间接的转换关系。</strong></li>
 <li><strong>安全性由程序员保证，编译器不会检查类型转换的合法性。</strong></li>
 </ul>
@@ -736,7 +810,6 @@ cpp
 </ol>
 <p><strong>3.转换示例</strong>：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 示例 1：基本数据类型转换</span></span><br><span class="line"><span class="type">double</span> d = <span class="number">3.14</span>;</span><br><span class="line"><span class="type">int</span> i = <span class="built_in">static_cast</span>&lt;<span class="type">int</span>&gt;(d); <span class="comment">// d 被转换为 int，结果是 3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 示例 2：指针类型转换</span></span><br><span class="line">Base* basePtr = <span class="keyword">new</span> <span class="built_in">Derived</span>();</span><br><span class="line">Derived* derivedPtr = <span class="built_in">static_cast</span>&lt;Derived*&gt;(basePtr); <span class="comment">// Base* 转换为 Derived*</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 示例 3：引用类型转换</span></span><br><span class="line">Base baseObj;</span><br><span class="line">Derived&amp; derivedRef = <span class="built_in">static_cast</span>&lt;Derived&amp;&gt;(baseObj); <span class="comment">// Base&amp; 转换为 Derived&amp;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>4.<strong>适用场景</strong>：</p>
 <ul>
 <li>对于基本数据类型的转换，<code>static_cast</code> 可以用于显式转换。</li>
@@ -777,7 +850,7 @@ cpp
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240604 MFC急速项目通关</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -791,7 +864,7 @@ cpp
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240602 胡思乱想2</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -808,15 +881,15 @@ cpp
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -900,7 +973,7 @@ cpp
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E6%B2%B9"><span class="nav-number">1.</span> <span class="nav-text">加油</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STL"><span class="nav-number">2.</span> <span class="nav-text">STL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E5%A4%A7%E9%83%A8%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">六大部件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">内存空间的管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81STL%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.</span> <span class="nav-text">一、STL的介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%A9%BA%E9%97%B4%E9%85%8D%E7%BD%AE%E5%99%A8%E8%AF%A6%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text">二、空间配置器详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%90%84%E7%A7%8D%E5%AE%B9%E5%99%A8%E7%9A%84%E7%89%B9%E7%82%B9%E5%92%8C%E9%80%82%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">7.</span> <span class="nav-text">三、各种容器的特点和适用情况</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%9B%AE%E7%9A%84"><span class="nav-number">7.0.1.</span> <span class="nav-text">无序容器的设计目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">7.0.2.</span> <span class="nav-text">具体使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%E5%BC%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">7.0.3.</span> <span class="nav-text">关联式容器的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%BC%8F%E5%AE%B9%E5%99%A8"><span class="nav-number">7.1.</span> <span class="nav-text">序列式容器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%90%84%E7%A7%8D%E5%AE%B9%E5%99%A8%E7%9A%84%E5%BA%95%E5%B1%82%E6%9C%BA%E5%88%B6%E5%92%8C%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text">四、各种容器的底层机制和常见面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#traits%E6%8A%80%E6%9C%AF"><span class="nav-number">8.1.</span> <span class="nav-text">traits技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.2.</span> <span class="nav-text">指针和迭代器的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">8.2.1.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E6%80%BB%E7%BB%93"><span class="nav-number">8.2.2.</span> <span class="nav-text">区别总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RAII"><span class="nav-number">8.3.</span> <span class="nav-text">RAII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-number">8.4.</span> <span class="nav-text">vector</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vector-%E6%89%A9%E5%AE%B9%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BB%A51-5%E5%80%8D%E6%88%96%E8%80%852%E5%80%8D%E6%89%A9%E5%AE%B9"><span class="nav-number">8.4.0.1.</span> <span class="nav-text">vector 扩容为什么要以1.5倍或者2倍扩容?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E4%B8%AD%E7%9A%84size%E5%92%8Ccapacity%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.4.0.2.</span> <span class="nav-text">vector中的size和capacity的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E4%B8%AD%E7%9A%84reserve%E5%92%8Cresize%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.4.0.3.</span> <span class="nav-text">vector中的reserve和resize的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E6%AC%A1%E6%95%B0"><span class="nav-number">8.4.1.</span> <span class="nav-text">1. 减少内存分配次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B9%B3%E8%A1%A1%E5%86%85%E5%AD%98%E6%B5%AA%E8%B4%B9%E5%92%8C%E9%87%8D%E6%96%B0%E5%88%86%E9%85%8D%E6%88%90%E6%9C%AC"><span class="nav-number">8.4.2.</span> <span class="nav-text">2. 平衡内存浪费和重新分配成本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%81%BF%E5%85%8D%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%BF%87%E9%AB%98"><span class="nav-number">8.4.3.</span> <span class="nav-text">3. 避免时间复杂度过高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%88%90%E5%80%8D%E5%A2%9E%E9%95%BF%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">8.4.4.</span> <span class="nav-text">4. 成倍增长的选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list"><span class="nav-number">8.5.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-%E5%92%8Cfind-if"><span class="nav-number">8.5.1.</span> <span class="nav-text">find()和find_if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-if"><span class="nav-number">8.5.2.</span> <span class="nav-text">find_if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%92%8C%E7%94%A8%E6%B3%95"><span class="nav-number">8.5.3.</span> <span class="nav-text">功能和用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8E%9F%E5%9E%8B"><span class="nav-number">8.5.4.</span> <span class="nav-text">函数原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">8.5.5.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-1%EF%BC%9A%E6%9F%A5%E6%89%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%A4%A7%E4%BA%8E-10-%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">8.5.5.1.</span> <span class="nav-text">示例 1：查找第一个大于 10 的元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.5.6.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">8.6.</span> <span class="nav-text">map</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%93%8D%E4%BD%9C"><span class="nav-number">8.6.1.</span> <span class="nav-text">核心操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="nav-number">8.6.2.</span> <span class="nav-text">红黑树的基本性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B0%83%E6%95%B4%E8%A7%84%E5%88%99"><span class="nav-number">8.6.3.</span> <span class="nav-text">插入操作中的调整规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B0%83%E6%95%B4%E8%A7%84%E5%88%99"><span class="nav-number">8.6.4.</span> <span class="nav-text">删除操作中的调整规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%8B%E8%BD%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">8.6.5.</span> <span class="nav-text">旋转操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-%E5%92%8Cmultimap"><span class="nav-number">8.7.</span> <span class="nav-text">map 和multimap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB"><span class="nav-number">8.7.1.</span> <span class="nav-text">主要区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9"><span class="nav-number">8.7.2.</span> <span class="nav-text">底层实现的共同点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E7%9A%84%E4%B8%8D%E5%90%8C%E7%82%B9"><span class="nav-number">8.7.3.</span> <span class="nav-text">底层实现的不同点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E7%9A%84%E5%89%8D%E7%BD%AE-%E5%92%8C%E5%90%8E%E7%BD%AE"><span class="nav-number">8.8.</span> <span class="nav-text">C++的前置++和后置++</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-%E3%80%81set%E3%80%81multiset%E3%80%81multimap"><span class="nav-number">8.9.</span> <span class="nav-text">map 、set、multiset、multimap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashtable"><span class="nav-number">8.10.</span> <span class="nav-text">hashtable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E7%90%86%E8%A7%A3"><span class="nav-number">8.10.1.</span> <span class="nav-text">数据结构复习与理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">8.10.2.</span> <span class="nav-text">冲突解决方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B"><span class="nav-number">8.10.3.</span> <span class="nav-text">线性探测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E6%8E%A2%E6%B5%8B"><span class="nav-number">8.10.4.</span> <span class="nav-text">二次探测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E9%93%BE-seperate-chaining"><span class="nav-number">8.11.</span> <span class="nav-text">开链(seperate chaining)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashtable%E7%9A%84%E6%A1%B6-buckets-%E5%92%8C%E8%8A%82%E7%82%B9-nodes"><span class="nav-number">8.12.</span> <span class="nav-text">hashtable的桶(buckets)和节点(nodes)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hashtable-%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="nav-number">8.12.1.</span> <span class="nav-text">hashtable 的迭代器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">8.12.2.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%BA%95%E5%B1%82%E5%92%8C%E5%A4%B1%E6%95%88%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">8.13.</span> <span class="nav-text">迭代器底层和失效的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="nav-number">8.14.</span> <span class="nav-text">线程安全问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">8.15.</span> <span class="nav-text">静态类型转换</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E6%B2%B9"><span class="nav-number">1.</span> <span class="nav-text"> 加油</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#stl"><span class="nav-number">2.</span> <span class="nav-text"> STL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E5%A4%A7%E9%83%A8%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text"> 六大部件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text"> 内存空间的管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-stl%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.</span> <span class="nav-text"> 一、STL的介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E7%A9%BA%E9%97%B4%E9%85%8D%E7%BD%AE%E5%99%A8%E8%AF%A6%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text"> 二、空间配置器详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-%E5%90%84%E7%A7%8D%E5%AE%B9%E5%99%A8%E7%9A%84%E7%89%B9%E7%82%B9%E5%92%8C%E9%80%82%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">7.</span> <span class="nav-text"> 三、各种容器的特点和适用情况</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%9B%AE%E7%9A%84"><span class="nav-number">7.0.1.</span> <span class="nav-text"> 无序容器的设计目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">7.0.2.</span> <span class="nav-text"> 具体使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%E5%BC%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">7.0.3.</span> <span class="nav-text"> 关联式容器的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%BC%8F%E5%AE%B9%E5%99%A8"><span class="nav-number">7.1.</span> <span class="nav-text"> 序列式容器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B-%E5%90%84%E7%A7%8D%E5%AE%B9%E5%99%A8%E7%9A%84%E5%BA%95%E5%B1%82%E6%9C%BA%E5%88%B6%E5%92%8C%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text"> 四、各种容器的底层机制和常见面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#traits%E6%8A%80%E6%9C%AF"><span class="nav-number">8.1.</span> <span class="nav-text"> traits技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.2.</span> <span class="nav-text"> 指针和迭代器的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">8.2.1.</span> <span class="nav-text"> 指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E6%80%BB%E7%BB%93"><span class="nav-number">8.2.2.</span> <span class="nav-text"> 区别总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#raii"><span class="nav-number">8.3.</span> <span class="nav-text"> RAII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-number">8.4.</span> <span class="nav-text"> vector</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vector-%E6%89%A9%E5%AE%B9%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BB%A515%E5%80%8D%E6%88%96%E8%80%852%E5%80%8D%E6%89%A9%E5%AE%B9"><span class="nav-number">8.4.0.1.</span> <span class="nav-text"> vector 扩容为什么要以1.5倍或者2倍扩容?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E4%B8%AD%E7%9A%84size%E5%92%8Ccapacity%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.4.0.2.</span> <span class="nav-text"> vector中的size和capacity的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E4%B8%AD%E7%9A%84reserve%E5%92%8Cresize%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.4.0.3.</span> <span class="nav-text"> vector中的reserve和resize的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E6%AC%A1%E6%95%B0"><span class="nav-number">8.4.1.</span> <span class="nav-text"> 1. 减少内存分配次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B9%B3%E8%A1%A1%E5%86%85%E5%AD%98%E6%B5%AA%E8%B4%B9%E5%92%8C%E9%87%8D%E6%96%B0%E5%88%86%E9%85%8D%E6%88%90%E6%9C%AC"><span class="nav-number">8.4.2.</span> <span class="nav-text"> 2. 平衡内存浪费和重新分配成本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%81%BF%E5%85%8D%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%BF%87%E9%AB%98"><span class="nav-number">8.4.3.</span> <span class="nav-text"> 3. 避免时间复杂度过高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%88%90%E5%80%8D%E5%A2%9E%E9%95%BF%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">8.4.4.</span> <span class="nav-text"> 4. 成倍增长的选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list"><span class="nav-number">8.5.</span> <span class="nav-text"> list</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find%E5%92%8Cfind_if"><span class="nav-number">8.5.1.</span> <span class="nav-text"> find()和find_if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find_if"><span class="nav-number">8.5.2.</span> <span class="nav-text"> find_if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%92%8C%E7%94%A8%E6%B3%95"><span class="nav-number">8.5.3.</span> <span class="nav-text"> 功能和用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8E%9F%E5%9E%8B"><span class="nav-number">8.5.4.</span> <span class="nav-text"> 函数原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">8.5.5.</span> <span class="nav-text"> 示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-1%E6%9F%A5%E6%89%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%A4%A7%E4%BA%8E-10-%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">8.5.5.1.</span> <span class="nav-text"> 示例 1：查找第一个大于 10 的元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.5.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">8.6.</span> <span class="nav-text"> map</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%93%8D%E4%BD%9C"><span class="nav-number">8.6.1.</span> <span class="nav-text"> 核心操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="nav-number">8.6.2.</span> <span class="nav-text"> 红黑树的基本性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B0%83%E6%95%B4%E8%A7%84%E5%88%99"><span class="nav-number">8.6.3.</span> <span class="nav-text"> 插入操作中的调整规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B0%83%E6%95%B4%E8%A7%84%E5%88%99"><span class="nav-number">8.6.4.</span> <span class="nav-text"> 删除操作中的调整规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%8B%E8%BD%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">8.6.5.</span> <span class="nav-text"> 旋转操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-%E5%92%8Cmultimap"><span class="nav-number">8.7.</span> <span class="nav-text"> map 和multimap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB"><span class="nav-number">8.7.1.</span> <span class="nav-text"> 主要区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9"><span class="nav-number">8.7.2.</span> <span class="nav-text"> 底层实现的共同点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E7%9A%84%E4%B8%8D%E5%90%8C%E7%82%B9"><span class="nav-number">8.7.3.</span> <span class="nav-text"> 底层实现的不同点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c%E7%9A%84%E5%89%8D%E7%BD%AE%E5%92%8C%E5%90%8E%E7%BD%AE"><span class="nav-number">8.8.</span> <span class="nav-text"> C的前置和后置++</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-set-multiset-multimap"><span class="nav-number">8.9.</span> <span class="nav-text"> map 、set、multiset、multimap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashtable"><span class="nav-number">8.10.</span> <span class="nav-text"> hashtable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E7%90%86%E8%A7%A3"><span class="nav-number">8.10.1.</span> <span class="nav-text"> 数据结构复习与理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">8.10.2.</span> <span class="nav-text"> 冲突解决方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B"><span class="nav-number">8.10.3.</span> <span class="nav-text"> 线性探测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E6%8E%A2%E6%B5%8B"><span class="nav-number">8.10.4.</span> <span class="nav-text"> 二次探测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E9%93%BEseperate-chaining"><span class="nav-number">8.11.</span> <span class="nav-text"> 开链(seperate chaining)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashtable%E7%9A%84%E6%A1%B6buckets%E5%92%8C%E8%8A%82%E7%82%B9nodes"><span class="nav-number">8.12.</span> <span class="nav-text"> hashtable的桶(buckets)和节点(nodes)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hashtable-%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="nav-number">8.12.1.</span> <span class="nav-text"> hashtable 的迭代器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">8.12.2.</span> <span class="nav-text"> 其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%BA%95%E5%B1%82%E5%92%8C%E5%A4%B1%E6%95%88%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">8.13.</span> <span class="nav-text"> 迭代器底层和失效的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="nav-number">8.14.</span> <span class="nav-text"> 线程安全问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">8.15.</span> <span class="nav-text"> 静态类型转换</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -927,7 +1000,7 @@ cpp
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -940,14 +1013,14 @@ cpp
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -1053,7 +1126,7 @@ cpp
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E6%B2%B9"><span class="nav-number">1.</span> <span class="nav-text">加油</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#STL"><span class="nav-number">2.</span> <span class="nav-text">STL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E5%A4%A7%E9%83%A8%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">六大部件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">内存空间的管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81STL%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.</span> <span class="nav-text">一、STL的介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%A9%BA%E9%97%B4%E9%85%8D%E7%BD%AE%E5%99%A8%E8%AF%A6%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text">二、空间配置器详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%90%84%E7%A7%8D%E5%AE%B9%E5%99%A8%E7%9A%84%E7%89%B9%E7%82%B9%E5%92%8C%E9%80%82%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">7.</span> <span class="nav-text">三、各种容器的特点和适用情况</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%9B%AE%E7%9A%84"><span class="nav-number">7.0.1.</span> <span class="nav-text">无序容器的设计目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">7.0.2.</span> <span class="nav-text">具体使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%E5%BC%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">7.0.3.</span> <span class="nav-text">关联式容器的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%BC%8F%E5%AE%B9%E5%99%A8"><span class="nav-number">7.1.</span> <span class="nav-text">序列式容器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%90%84%E7%A7%8D%E5%AE%B9%E5%99%A8%E7%9A%84%E5%BA%95%E5%B1%82%E6%9C%BA%E5%88%B6%E5%92%8C%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text">四、各种容器的底层机制和常见面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#traits%E6%8A%80%E6%9C%AF"><span class="nav-number">8.1.</span> <span class="nav-text">traits技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.2.</span> <span class="nav-text">指针和迭代器的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">8.2.1.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E6%80%BB%E7%BB%93"><span class="nav-number">8.2.2.</span> <span class="nav-text">区别总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RAII"><span class="nav-number">8.3.</span> <span class="nav-text">RAII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-number">8.4.</span> <span class="nav-text">vector</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vector-%E6%89%A9%E5%AE%B9%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BB%A51-5%E5%80%8D%E6%88%96%E8%80%852%E5%80%8D%E6%89%A9%E5%AE%B9"><span class="nav-number">8.4.0.1.</span> <span class="nav-text">vector 扩容为什么要以1.5倍或者2倍扩容?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E4%B8%AD%E7%9A%84size%E5%92%8Ccapacity%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.4.0.2.</span> <span class="nav-text">vector中的size和capacity的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E4%B8%AD%E7%9A%84reserve%E5%92%8Cresize%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.4.0.3.</span> <span class="nav-text">vector中的reserve和resize的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E6%AC%A1%E6%95%B0"><span class="nav-number">8.4.1.</span> <span class="nav-text">1. 减少内存分配次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B9%B3%E8%A1%A1%E5%86%85%E5%AD%98%E6%B5%AA%E8%B4%B9%E5%92%8C%E9%87%8D%E6%96%B0%E5%88%86%E9%85%8D%E6%88%90%E6%9C%AC"><span class="nav-number">8.4.2.</span> <span class="nav-text">2. 平衡内存浪费和重新分配成本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%81%BF%E5%85%8D%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%BF%87%E9%AB%98"><span class="nav-number">8.4.3.</span> <span class="nav-text">3. 避免时间复杂度过高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%88%90%E5%80%8D%E5%A2%9E%E9%95%BF%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">8.4.4.</span> <span class="nav-text">4. 成倍增长的选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list"><span class="nav-number">8.5.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-%E5%92%8Cfind-if"><span class="nav-number">8.5.1.</span> <span class="nav-text">find()和find_if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-if"><span class="nav-number">8.5.2.</span> <span class="nav-text">find_if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%92%8C%E7%94%A8%E6%B3%95"><span class="nav-number">8.5.3.</span> <span class="nav-text">功能和用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8E%9F%E5%9E%8B"><span class="nav-number">8.5.4.</span> <span class="nav-text">函数原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">8.5.5.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-1%EF%BC%9A%E6%9F%A5%E6%89%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%A4%A7%E4%BA%8E-10-%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">8.5.5.1.</span> <span class="nav-text">示例 1：查找第一个大于 10 的元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.5.6.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">8.6.</span> <span class="nav-text">map</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%93%8D%E4%BD%9C"><span class="nav-number">8.6.1.</span> <span class="nav-text">核心操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="nav-number">8.6.2.</span> <span class="nav-text">红黑树的基本性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B0%83%E6%95%B4%E8%A7%84%E5%88%99"><span class="nav-number">8.6.3.</span> <span class="nav-text">插入操作中的调整规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B0%83%E6%95%B4%E8%A7%84%E5%88%99"><span class="nav-number">8.6.4.</span> <span class="nav-text">删除操作中的调整规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%8B%E8%BD%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">8.6.5.</span> <span class="nav-text">旋转操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-%E5%92%8Cmultimap"><span class="nav-number">8.7.</span> <span class="nav-text">map 和multimap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB"><span class="nav-number">8.7.1.</span> <span class="nav-text">主要区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9"><span class="nav-number">8.7.2.</span> <span class="nav-text">底层实现的共同点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E7%9A%84%E4%B8%8D%E5%90%8C%E7%82%B9"><span class="nav-number">8.7.3.</span> <span class="nav-text">底层实现的不同点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E7%9A%84%E5%89%8D%E7%BD%AE-%E5%92%8C%E5%90%8E%E7%BD%AE"><span class="nav-number">8.8.</span> <span class="nav-text">C++的前置++和后置++</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-%E3%80%81set%E3%80%81multiset%E3%80%81multimap"><span class="nav-number">8.9.</span> <span class="nav-text">map 、set、multiset、multimap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashtable"><span class="nav-number">8.10.</span> <span class="nav-text">hashtable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E7%90%86%E8%A7%A3"><span class="nav-number">8.10.1.</span> <span class="nav-text">数据结构复习与理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">8.10.2.</span> <span class="nav-text">冲突解决方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B"><span class="nav-number">8.10.3.</span> <span class="nav-text">线性探测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E6%8E%A2%E6%B5%8B"><span class="nav-number">8.10.4.</span> <span class="nav-text">二次探测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E9%93%BE-seperate-chaining"><span class="nav-number">8.11.</span> <span class="nav-text">开链(seperate chaining)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashtable%E7%9A%84%E6%A1%B6-buckets-%E5%92%8C%E8%8A%82%E7%82%B9-nodes"><span class="nav-number">8.12.</span> <span class="nav-text">hashtable的桶(buckets)和节点(nodes)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hashtable-%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="nav-number">8.12.1.</span> <span class="nav-text">hashtable 的迭代器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">8.12.2.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%BA%95%E5%B1%82%E5%92%8C%E5%A4%B1%E6%95%88%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">8.13.</span> <span class="nav-text">迭代器底层和失效的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="nav-number">8.14.</span> <span class="nav-text">线程安全问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">8.15.</span> <span class="nav-text">静态类型转换</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%A0%E6%B2%B9"><span class="nav-number">1.</span> <span class="nav-text"> 加油</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#stl"><span class="nav-number">2.</span> <span class="nav-text"> STL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E5%A4%A7%E9%83%A8%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text"> 六大部件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text"> 内存空间的管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-stl%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="nav-number">5.</span> <span class="nav-text"> 一、STL的介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E7%A9%BA%E9%97%B4%E9%85%8D%E7%BD%AE%E5%99%A8%E8%AF%A6%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text"> 二、空间配置器详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-%E5%90%84%E7%A7%8D%E5%AE%B9%E5%99%A8%E7%9A%84%E7%89%B9%E7%82%B9%E5%92%8C%E9%80%82%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">7.</span> <span class="nav-text"> 三、各种容器的特点和适用情况</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%9B%AE%E7%9A%84"><span class="nav-number">7.0.1.</span> <span class="nav-text"> 无序容器的设计目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">7.0.2.</span> <span class="nav-text"> 具体使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%E5%BC%8F%E5%AE%B9%E5%99%A8%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">7.0.3.</span> <span class="nav-text"> 关联式容器的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%BC%8F%E5%AE%B9%E5%99%A8"><span class="nav-number">7.1.</span> <span class="nav-text"> 序列式容器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B-%E5%90%84%E7%A7%8D%E5%AE%B9%E5%99%A8%E7%9A%84%E5%BA%95%E5%B1%82%E6%9C%BA%E5%88%B6%E5%92%8C%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text"> 四、各种容器的底层机制和常见面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#traits%E6%8A%80%E6%9C%AF"><span class="nav-number">8.1.</span> <span class="nav-text"> traits技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.2.</span> <span class="nav-text"> 指针和迭代器的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">8.2.1.</span> <span class="nav-text"> 指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E6%80%BB%E7%BB%93"><span class="nav-number">8.2.2.</span> <span class="nav-text"> 区别总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#raii"><span class="nav-number">8.3.</span> <span class="nav-text"> RAII</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-number">8.4.</span> <span class="nav-text"> vector</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vector-%E6%89%A9%E5%AE%B9%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BB%A515%E5%80%8D%E6%88%96%E8%80%852%E5%80%8D%E6%89%A9%E5%AE%B9"><span class="nav-number">8.4.0.1.</span> <span class="nav-text"> vector 扩容为什么要以1.5倍或者2倍扩容?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E4%B8%AD%E7%9A%84size%E5%92%8Ccapacity%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.4.0.2.</span> <span class="nav-text"> vector中的size和capacity的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vector%E4%B8%AD%E7%9A%84reserve%E5%92%8Cresize%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">8.4.0.3.</span> <span class="nav-text"> vector中的reserve和resize的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%87%8F%E5%B0%91%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E6%AC%A1%E6%95%B0"><span class="nav-number">8.4.1.</span> <span class="nav-text"> 1. 减少内存分配次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B9%B3%E8%A1%A1%E5%86%85%E5%AD%98%E6%B5%AA%E8%B4%B9%E5%92%8C%E9%87%8D%E6%96%B0%E5%88%86%E9%85%8D%E6%88%90%E6%9C%AC"><span class="nav-number">8.4.2.</span> <span class="nav-text"> 2. 平衡内存浪费和重新分配成本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%81%BF%E5%85%8D%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%BF%87%E9%AB%98"><span class="nav-number">8.4.3.</span> <span class="nav-text"> 3. 避免时间复杂度过高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%88%90%E5%80%8D%E5%A2%9E%E9%95%BF%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">8.4.4.</span> <span class="nav-text"> 4. 成倍增长的选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list"><span class="nav-number">8.5.</span> <span class="nav-text"> list</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find%E5%92%8Cfind_if"><span class="nav-number">8.5.1.</span> <span class="nav-text"> find()和find_if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find_if"><span class="nav-number">8.5.2.</span> <span class="nav-text"> find_if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%92%8C%E7%94%A8%E6%B3%95"><span class="nav-number">8.5.3.</span> <span class="nav-text"> 功能和用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8E%9F%E5%9E%8B"><span class="nav-number">8.5.4.</span> <span class="nav-text"> 函数原型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">8.5.5.</span> <span class="nav-text"> 示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-1%E6%9F%A5%E6%89%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%A4%A7%E4%BA%8E-10-%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">8.5.5.1.</span> <span class="nav-text"> 示例 1：查找第一个大于 10 的元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.5.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">8.6.</span> <span class="nav-text"> map</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%93%8D%E4%BD%9C"><span class="nav-number">8.6.1.</span> <span class="nav-text"> 核心操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A2%E9%BB%91%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="nav-number">8.6.2.</span> <span class="nav-text"> 红黑树的基本性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B0%83%E6%95%B4%E8%A7%84%E5%88%99"><span class="nav-number">8.6.3.</span> <span class="nav-text"> 插入操作中的调整规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%B0%83%E6%95%B4%E8%A7%84%E5%88%99"><span class="nav-number">8.6.4.</span> <span class="nav-text"> 删除操作中的调整规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%8B%E8%BD%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">8.6.5.</span> <span class="nav-text"> 旋转操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-%E5%92%8Cmultimap"><span class="nav-number">8.7.</span> <span class="nav-text"> map 和multimap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB"><span class="nav-number">8.7.1.</span> <span class="nav-text"> 主要区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9"><span class="nav-number">8.7.2.</span> <span class="nav-text"> 底层实现的共同点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E7%9A%84%E4%B8%8D%E5%90%8C%E7%82%B9"><span class="nav-number">8.7.3.</span> <span class="nav-text"> 底层实现的不同点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c%E7%9A%84%E5%89%8D%E7%BD%AE%E5%92%8C%E5%90%8E%E7%BD%AE"><span class="nav-number">8.8.</span> <span class="nav-text"> C的前置和后置++</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-set-multiset-multimap"><span class="nav-number">8.9.</span> <span class="nav-text"> map 、set、multiset、multimap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashtable"><span class="nav-number">8.10.</span> <span class="nav-text"> hashtable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E7%90%86%E8%A7%A3"><span class="nav-number">8.10.1.</span> <span class="nav-text"> 数据结构复习与理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">8.10.2.</span> <span class="nav-text"> 冲突解决方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%8E%A2%E6%B5%8B"><span class="nav-number">8.10.3.</span> <span class="nav-text"> 线性探测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E6%8E%A2%E6%B5%8B"><span class="nav-number">8.10.4.</span> <span class="nav-text"> 二次探测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E9%93%BEseperate-chaining"><span class="nav-number">8.11.</span> <span class="nav-text"> 开链(seperate chaining)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hashtable%E7%9A%84%E6%A1%B6buckets%E5%92%8C%E8%8A%82%E7%82%B9nodes"><span class="nav-number">8.12.</span> <span class="nav-text"> hashtable的桶(buckets)和节点(nodes)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hashtable-%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="nav-number">8.12.1.</span> <span class="nav-text"> hashtable 的迭代器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">8.12.2.</span> <span class="nav-text"> 其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%BA%95%E5%B1%82%E5%92%8C%E5%A4%B1%E6%95%88%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">8.13.</span> <span class="nav-text"> 迭代器底层和失效的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="nav-number">8.14.</span> <span class="nav-text"> 线程安全问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">8.15.</span> <span class="nav-text"> 静态类型转换</span></a></li></ol></li></ol>
     </div>
 </div>
 

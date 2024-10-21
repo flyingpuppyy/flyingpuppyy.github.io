@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,28 +230,34 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="EPSG3857"><a href="#EPSG3857" class="headerlink" title="EPSG3857"></a>EPSG3857</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/E7868A/p/11460865.html" >https://www.cnblogs.com/E7868A/p/11460865.html<i class="fas fa-external-link-alt"></i></a></p>
+                    <h1 id="epsg3857"><a class="markdownIt-Anchor" href="#epsg3857"></a> EPSG3857</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/E7868A/p/11460865.html" >https://www.cnblogs.com/E7868A/p/11460865.html<i class="fas fa-external-link-alt"></i></a></p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32649321/article/details/125051832" >https://blog.csdn.net/qq_32649321/article/details/125051832<i class="fas fa-external-link-alt"></i></a></p>
 <blockquote>
 <p>参考</p>
-<p>ArcGIS中地理坐标（EPSG4326）转投影坐标（EPSG 3857）：<br>参考：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/baoqian1993/article/details/51456771" >https://blog.csdn.net/baoqian1993/article/details/51456771<i class="fas fa-external-link-alt"></i></a></p>
-<p>投影转地理坐标：<br>参考：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40893164/article/details/121022817" >https://blog.csdn.net/weixin_40893164/article/details/121022817<i class="fas fa-external-link-alt"></i></a></p>
-<p>参考资料：<br>1.GIS坐标系转换(EPSG:4326与EPSG:3857相互转换)</p>
+<p>ArcGIS中地理坐标（EPSG4326）转投影坐标（EPSG 3857）：<br />
+参考：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/baoqian1993/article/details/51456771" >https://blog.csdn.net/baoqian1993/article/details/51456771<i class="fas fa-external-link-alt"></i></a></p>
+<p>投影转地理坐标：<br />
+参考：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40893164/article/details/121022817" >https://blog.csdn.net/weixin_40893164/article/details/121022817<i class="fas fa-external-link-alt"></i></a></p>
+<p>参考资料：<br />
+1.GIS坐标系转换(EPSG:4326与EPSG:3857相互转换)</p>
 <p>2.<a class="link"   target="_blank" rel="noopener" href="https://gis.stackexchange.com/questions/48949/epsg-3857-or-4326-for-googlemaps-openstreetmap-and-leaflet" >https://gis.stackexchange.com/questions/48949/epsg-3857-or-4326-for-googlemaps-openstreetmap-and-leaflet<i class="fas fa-external-link-alt"></i></a></p>
-<p>3.EPSG:3857和EPSG:4326区别详解&#x2F;分析得很好的文章。</p>
+<p>3.EPSG:3857和EPSG:4326区别详解/分析得很好的文章。</p>
 <p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_32649321/article/details/125051832" >https://blog.csdn.net/qq_32649321/article/details/125051832<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
 <p>对于 Web Map 开发人员来说，最熟悉的应该是EPSG:4326 (WGS84) and EPSG:3857(Pseudo-Mercator)，这又是啥呢？</p>
-<h3 id="3-1-EPSG-4326-WGS84"><a href="#3-1-EPSG-4326-WGS84" class="headerlink" title="3.1 EPSG:4326 (WGS84)"></a>3.1 EPSG:4326 (WGS84)</h3><p>前面说了 WGS84 是目前最流行的地理坐标系统。</p>
+<h3 id="31-epsg4326-wgs84"><a class="markdownIt-Anchor" href="#31-epsg4326-wgs84"></a> 3.1 EPSG:4326 (WGS84)</h3>
+<p>前面说了 WGS84 是目前最流行的地理坐标系统。</p>
 <p>在国际上，<strong>每个坐标系统</strong>都会被分配一个 <a class="link"   target="_blank" rel="noopener" href="https://epsg.io/" >EPSG<i class="fas fa-external-link-alt"></i></a> 代码，EPSG:4326 就是 WGS84 的代码。</p>
 <p>GPS是基于WGS84的，所以通常我们得到的坐标数据都是WGS84的。一般我们在存储数据时，仍然按WGS84存储。</p>
 <p>EPSG4326是基于WGS84椭球的经纬度坐标系。</p>
 <p>EPSG4326 is in degrees - 3D sphere，单位是度。</p>
 <p>EPSG4326使用参考球面或椭球面上的坐标系统。</p>
 <p>特点：利于存储，可读性高。缺点：会导致页面变形。</p>
-<h3 id="3-2-EPSG-3857-Pseudo-Mercator"><a href="#3-2-EPSG-3857-Pseudo-Mercator" class="headerlink" title="3.2 EPSG:3857 (Pseudo-Mercator)"></a>3.2 EPSG:3857 (Pseudo-Mercator)</h3><p>&#x3D;&#x3D;伪墨卡托投影，也被称为球体墨卡托，Web Mercator。它是基于墨卡托投影的，把 WGS84坐标系<strong>投影到正方形</strong>。&#x3D;&#x3D;我们前面已经知道  WGS84  是基于椭球体的，但是伪墨卡托投影把坐标投影到球体上，这导致两极的失真变大，但是却更容易计算。这也许是为什么被称为”伪“墨卡托吧。</p>
+<h3 id="32-epsg3857-pseudo-mercator"><a class="markdownIt-Anchor" href="#32-epsg3857-pseudo-mercator"></a> 3.2 EPSG:3857 (Pseudo-Mercator)</h3>
+<p>==伪墨卡托投影，也被称为球体墨卡托，Web Mercator。它是基于墨卡托投影的，把 WGS84坐标系<strong>投影到正方形</strong>。==我们前面已经知道  WGS84  是基于椭球体的，但是伪墨卡托投影把坐标投影到球体上，这导致两极的失真变大，但是却更容易计算。这也许是为什么被称为”伪“墨卡托吧。</p>
 <p>另外，伪墨卡托投影还切掉了南北85.051129°纬度以上的地区，以保证整个投影是正方形的</p>
-<p>因为墨卡托投影等正形性的特点，在不同层级的图层上物体的形状保持不变，一个正方形可以不断被划分为更多更小的正方形以显示更清晰的细节。&#x3D;&#x3D;很明显，伪墨卡托坐标系是非常显示数据，但是不适合存储数据的，通常我们使用WGS84 存储数据，使用伪墨卡托显示数据。&#x3D;&#x3D;</p>
+<p>因为墨卡托投影等正形性的特点，在不同层级的图层上物体的形状保持不变，一个正方形可以不断被划分为更多更小的正方形以显示更清晰的细节。<mark>很明显，伪墨卡托坐标系是非常显示数据，但是不适合存储数据的，通常我们使用WGS84 存储数据，使用伪墨卡托显示数据。</mark></p>
 <p>Web Mercator 最早是由 Google 提出的，当前已经成为 Web Map 的事实标准。</p>
 <p>但是也许是由于上面”伪“的原因，最初  Web Mercator 被拒绝分配EPSG 代码。于是大家普遍使用 EPSG:900913（Google的数字变形）  的非官方代码来代表它。直到2008年，才被分配了EPSG:3785的代码，但在同一年没多久，又被弃用，重新分配了  EPSG:3857 的正式代码，使用至今。</p>
 <p>EPSG3857是基于球体的、web墨卡托投影（伪墨卡托投影）的投影坐标系。</p>
@@ -260,16 +266,19 @@
 <p>EPSG3857 is in metres - 2D projection，单位是米。</p>
 <p>EPSG3857使用从球面或椭球面投射到平面的坐标系统。</p>
 <p>特点：用于分析，显示数据。缺点：数据的可读性差和数值大存储比较占用内存。</p>
-<h1 id="两者特点及转换"><a href="#两者特点及转换" class="headerlink" title="两者特点及转换"></a>两者特点及转换</h1><blockquote>
+<h1 id="两者特点及转换"><a class="markdownIt-Anchor" href="#两者特点及转换"></a> 两者特点及转换</h1>
+<blockquote>
 <p>因为墨卡托投影等正形性的特点，在不同层级的图层上物体的形状保持不变，一个正方形可以不断被划分为更多更小的正方形以显示更清晰的细节。</p>
 <p>很明显，伪墨卡托坐标系是非常显示数据，但是不适合存储数据的，通常我们使用WGS84 存储数据，使用伪墨卡托显示数据。</p>
 </blockquote>
-<h1 id="应用介绍"><a href="#应用介绍" class="headerlink" title="应用介绍"></a>应用介绍</h1><p>（1）谷歌地球处于以wgs84为基准面的地理坐标系中。(EPSG: 4326)</p>
+<h1 id="应用介绍"><a class="markdownIt-Anchor" href="#应用介绍"></a> 应用介绍</h1>
+<p>（1）谷歌地球处于以wgs84为基准面的地理坐标系中。(EPSG: 4326)</p>
 <p>（2）谷歌Maps位于基于wgs84基准的投影坐标系中。(EPSG 3857)</p>
 <p>（3）Open Street Map数据库的数据存储在一个以wgs84为基准，单位为十进制的gcs中。(EPSG: 4326)</p>
 <p>（4）Open Street Map tiles和WMS网络服务，都在基于wgs84基准的投影坐标系统中。(EPSG 3857)</p>
-<h1 id="投影与失真"><a href="#投影与失真" class="headerlink" title="投影与失真"></a>投影与失真</h1><p>地理坐标系是三维的，我们要在地图或者屏幕上显示就需要转化为二维，这被称为<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Map_projection" >投影（Map projection）<i class="fas fa-external-link-alt"></i></a>。显而易见的是，从三维到二维的转化，必然会导致变形和失真，失真是不可避免的，但是不同投影下会有不同的失真，这让我们可以有得选择。常用的投影有<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Equirectangular_projection" >等矩矩形投影<i class="fas fa-external-link-alt"></i></a>（Platte Carre）和<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Mercator_projection" >墨卡托投影<i class="fas fa-external-link-alt"></i></a>（Mercator），下图来自<a class="link"   target="_blank" rel="noopener" href="https://idvux.wordpress.com/2007/06/06/mercator-vs-well-not-mercator-platte-carre/" >Mercator vs. well…not Mercator (Platte Carre)<i class="fas fa-external-link-alt"></i></a>，生动地说明了这两种投影下的失真：</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202408061435199.png"  alt="image-20240806143502111"></p>
+<h1 id="投影与失真"><a class="markdownIt-Anchor" href="#投影与失真"></a> 投影与失真</h1>
+<p>地理坐标系是三维的，我们要在地图或者屏幕上显示就需要转化为二维，这被称为<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Map_projection" >投影（Map projection）<i class="fas fa-external-link-alt"></i></a>。显而易见的是，从三维到二维的转化，必然会导致变形和失真，失真是不可避免的，但是不同投影下会有不同的失真，这让我们可以有得选择。常用的投影有<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Equirectangular_projection" >等矩矩形投影<i class="fas fa-external-link-alt"></i></a>（Platte Carre）和<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Mercator_projection" >墨卡托投影<i class="fas fa-external-link-alt"></i></a>（Mercator），下图来自<a class="link"   target="_blank" rel="noopener" href="https://idvux.wordpress.com/2007/06/06/mercator-vs-well-not-mercator-platte-carre/" >Mercator vs. well…not Mercator (Platte Carre)<i class="fas fa-external-link-alt"></i></a>，生动地说明了这两种投影下的失真：</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202408061435199.png"  alt="image-20240806143502111" ></p>
 
                 </div>
                 
@@ -299,7 +308,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240807 小六壬(一)</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -313,7 +322,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240806 瓦片地图</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -330,15 +339,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -422,7 +431,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EPSG3857"><span class="nav-number">1.</span> <span class="nav-text">EPSG3857</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-EPSG-4326-WGS84"><span class="nav-number">1.0.1.</span> <span class="nav-text">3.1 EPSG:4326 (WGS84)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-EPSG-3857-Pseudo-Mercator"><span class="nav-number">1.0.2.</span> <span class="nav-text">3.2 EPSG:3857 (Pseudo-Mercator)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E8%80%85%E7%89%B9%E7%82%B9%E5%8F%8A%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">两者特点及转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">应用介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1%E4%B8%8E%E5%A4%B1%E7%9C%9F"><span class="nav-number">4.</span> <span class="nav-text">投影与失真</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#epsg3857"><span class="nav-number">1.</span> <span class="nav-text"> EPSG3857</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#31-epsg4326-wgs84"><span class="nav-number">1.0.1.</span> <span class="nav-text"> 3.1 EPSG:4326 (WGS84)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#32-epsg3857-pseudo-mercator"><span class="nav-number">1.0.2.</span> <span class="nav-text"> 3.2 EPSG:3857 (Pseudo-Mercator)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E8%80%85%E7%89%B9%E7%82%B9%E5%8F%8A%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text"> 两者特点及转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text"> 应用介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1%E4%B8%8E%E5%A4%B1%E7%9C%9F"><span class="nav-number">4.</span> <span class="nav-text"> 投影与失真</span></a></li></ol>
     </div>
 </div>
 
@@ -449,7 +458,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -462,14 +471,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -575,7 +584,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EPSG3857"><span class="nav-number">1.</span> <span class="nav-text">EPSG3857</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-EPSG-4326-WGS84"><span class="nav-number">1.0.1.</span> <span class="nav-text">3.1 EPSG:4326 (WGS84)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-EPSG-3857-Pseudo-Mercator"><span class="nav-number">1.0.2.</span> <span class="nav-text">3.2 EPSG:3857 (Pseudo-Mercator)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E8%80%85%E7%89%B9%E7%82%B9%E5%8F%8A%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">两者特点及转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">应用介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1%E4%B8%8E%E5%A4%B1%E7%9C%9F"><span class="nav-number">4.</span> <span class="nav-text">投影与失真</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#epsg3857"><span class="nav-number">1.</span> <span class="nav-text"> EPSG3857</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#31-epsg4326-wgs84"><span class="nav-number">1.0.1.</span> <span class="nav-text"> 3.1 EPSG:4326 (WGS84)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#32-epsg3857-pseudo-mercator"><span class="nav-number">1.0.2.</span> <span class="nav-text"> 3.2 EPSG:3857 (Pseudo-Mercator)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%A4%E8%80%85%E7%89%B9%E7%82%B9%E5%8F%8A%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text"> 两者特点及转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text"> 应用介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%95%E5%BD%B1%E4%B8%8E%E5%A4%B1%E7%9C%9F"><span class="nav-number">4.</span> <span class="nav-text"> 投影与失真</span></a></li></ol>
     </div>
 </div>
 

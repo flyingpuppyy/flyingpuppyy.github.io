@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,17 +239,22 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第一遍看到啥写啥</p>
-<h1 id="迭代递归"><a href="#迭代递归" class="headerlink" title="迭代递归"></a>迭代递归</h1><ul>
-<li><p>递</p>
+                    <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>第一遍看到啥写啥</p>
+<h1 id="迭代递归"><a class="markdownIt-Anchor" href="#迭代递归"></a> 迭代递归</h1>
+<ul>
+<li>
+<p>递</p>
 </li>
-<li><p>归</p>
+<li>
+<p>归</p>
 </li>
-<li><p>分治</p>
+<li>
+<p>分治</p>
 </li>
-<li><p>栈、递归转迭代</p>
+<li>
+<p>栈、递归转迭代</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 使用迭代模拟递归 */</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">forLoopRecur</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用一个显式的栈来模拟系统调用栈</span></span><br><span class="line">    stack&lt;<span class="type">int</span>&gt; stack;</span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 递：递归调用</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = n; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="comment">// 通过“入栈操作”模拟“递”</span></span><br><span class="line">        stack.<span class="built_in">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 归：返回结果</span></span><br><span class="line">    <span class="keyword">while</span> (!stack.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="comment">// 通过“出栈操作”模拟“归”</span></span><br><span class="line">        res += stack.<span class="built_in">top</span>();</span><br><span class="line">        stack.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// res = 1+2+3+...+n</span></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>选择方法的考虑</p>
 <p>观察以上代码，当递归转化为迭代后，代码变得更加复杂了。尽管迭代和递归在很多情况下可以互相转化，但不一定值得这样做，有以下两点原因。</p>
@@ -262,59 +267,70 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><h2 id="记忆一般的比较"><a href="#记忆一般的比较" class="headerlink" title="记忆一般的比较"></a>记忆一般的比较</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628154213212.png"  alt="image-20240628154213212"></p>
-<h2 id="时间复杂度分析要点"><a href="#时间复杂度分析要点" class="headerlink" title="时间复杂度分析要点"></a>时间复杂度分析要点</h2><ul>
+<h1 id="时间复杂度"><a class="markdownIt-Anchor" href="#时间复杂度"></a> 时间复杂度</h1>
+<h2 id="记忆一般的比较"><a class="markdownIt-Anchor" href="#记忆一般的比较"></a> 记忆一般的比较</h2>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628154213212.png"  alt="image-20240628154213212" ></p>
+<h2 id="时间复杂度分析要点"><a class="markdownIt-Anchor" href="#时间复杂度分析要点"></a> 时间复杂度分析要点</h2>
+<ul>
 <li>输入数据的规模（一般来说是看个数n）</li>
 <li>输入数据本身的排序状态</li>
 </ul>
-<h2 id="一般分析方法"><a href="#一般分析方法" class="headerlink" title="一般分析方法"></a>一般分析方法</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628143055534.png"  alt="image-20240628143055534"></p>
+<h2 id="一般分析方法"><a class="markdownIt-Anchor" href="#一般分析方法"></a> 一般分析方法</h2>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628143055534.png"  alt="image-20240628143055534" ></p>
 <blockquote>
 <p>判断该评估方法的优势以及合理性</p>
 <p>1.泛而不具体</p>
 <p>2.更多的是在评估一种时间增长的趋势，而非实际体量的运行时间（实际中，<strong>实际体量非常重要</strong>）</p>
 </blockquote>
-<h2 id="不同类型时间复杂度分析实例"><a href="#不同类型时间复杂度分析实例" class="headerlink" title="不同类型时间复杂度分析实例"></a>不同类型时间复杂度分析实例</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628151250690.png"  alt="image-20240628151250690"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628151304941.png"  alt="image-20240628151304941"></p>
+<h2 id="不同类型时间复杂度分析实例"><a class="markdownIt-Anchor" href="#不同类型时间复杂度分析实例"></a> 不同类型时间复杂度分析实例</h2>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628151250690.png"  alt="image-20240628151250690" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628151304941.png"  alt="image-20240628151304941" ></p>
 <blockquote>
 <p>对于递归例子的分析</p>
 <p>1.函数内部是否又调用函数本身</p>
 <p>2.递归到底最后return 在递什么，又在归什么！</p>
 </blockquote>
-<hr>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628151830855.png"  alt="image-20240628151830855"></p>
+<hr />
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628151830855.png"  alt="image-20240628151830855" ></p>
 <blockquote>
 <p>发现一个问题</p>
 <p>我将并列出现特征与 *本身结合起来了，这个可不是一个很好的关联关系</p>
 <p>递归存在的时候， 外塔延申和向内存在是必然的</p>
 <p>在递归内部相关n的调用 和递归本身指数阶关系也是值得讨论的</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628152136258.png"  alt="image-20240628152136258"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628152136258.png"  alt="image-20240628152136258" ></p>
 <p>看看这个分析路径</p>
 </blockquote>
-<hr>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628152329446.png"  alt="image-20240628152329446"></p>
+<hr />
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628152329446.png"  alt="image-20240628152329446" ></p>
 <blockquote>
 <p>这个例子的话</p>
 <p>递归相关的分析变量</p>
 <p>第一层的n形态</p>
 <p>第二层的形态的数量与n是什么关系 是* 2的关系吗？还是  *（n-1）  的关系</p>
 <p>然后看看层数和n的联系在哪</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628152637469.png"  alt="image-20240628152637469"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628152637469.png"  alt="image-20240628152637469" ></p>
 </blockquote>
-<h2 id="对数阶-一分为多"><a href="#对数阶-一分为多" class="headerlink" title="对数阶&#x2F;一分为多"></a>对数阶&#x2F;一分为多</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628151524104.png"  alt="image-20240628151524104"></p>
-<h2 id="平均时间复杂度"><a href="#平均时间复杂度" class="headerlink" title="平均时间复杂度"></a>平均时间复杂度</h2><ul>
-<li><p>特殊数据出现概率 导致最好最坏情况出现</p>
+<h2 id="对数阶一分为多"><a class="markdownIt-Anchor" href="#对数阶一分为多"></a> 对数阶/一分为多</h2>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628151524104.png"  alt="image-20240628151524104" ></p>
+<h2 id="平均时间复杂度"><a class="markdownIt-Anchor" href="#平均时间复杂度"></a> 平均时间复杂度</h2>
+<ul>
+<li>
+<p>特殊数据出现概率 导致最好最坏情况出现</p>
 </li>
-<li><p>平均时间复杂度</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628154123012.png"  alt="image-20240628154123012"></p>
+<li>
+<p>平均时间复杂度</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628154123012.png"  alt="image-20240628154123012" ></p>
 </li>
 </ul>
-<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><h2 id="过程中几个涉及空间的概念"><a href="#过程中几个涉及空间的概念" class="headerlink" title="过程中几个涉及空间的概念"></a>过程中几个涉及空间的概念</h2><p>算法在运行过程中使用的内存空间主要包括以下几种。</p>
+<h1 id="空间复杂度"><a class="markdownIt-Anchor" href="#空间复杂度"></a> 空间复杂度</h1>
+<h2 id="过程中几个涉及空间的概念"><a class="markdownIt-Anchor" href="#过程中几个涉及空间的概念"></a> 过程中几个涉及空间的概念</h2>
+<p>算法在运行过程中使用的内存空间主要包括以下几种。</p>
 <ul>
 <li><strong>输入空间</strong>：用于存储算法的输入数据。</li>
 <li><strong>暂存空间</strong>：用于存储算法在运行过程中的变量、对象、函数上下文等数据。</li>
 <li><strong>输出空间</strong>：用于存储算法的输出数据。</li>
 </ul>
-<p>一般情况下，空间复杂度的统计范围是&#x3D;&#x3D;“暂存空间”加上“输出空间”。(不算输入)&#x3D;&#x3D;</p>
+<p>一般情况下，空间复杂度的统计范围是==“暂存空间”加上“输出空间”。(不算输入)==</p>
 <p>暂存空间可以进一步划分为三个部分。</p>
 <ul>
 <li><strong>暂存数据</strong>：用于保存算法运行过程中的各种常量、变量、对象等。</li>
@@ -322,117 +338,144 @@
 <li><strong>指令空间</strong>：用于保存编译后的程序指令，在实际统计中通常忽略不计。</li>
 </ul>
 <p>在分析一段程序的空间复杂度时，<strong>我们通常统计暂存数据、栈帧空间和输出数据三部分</strong>，如图 2-15 所示。</p>
-<p>[<img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/space_types.png"  alt="算法使用的相关空间"></p>
+<p>[<img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/space_types.png"  alt="算法使用的相关空间" ></p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.hello-algo.com/chapter_computational_complexity/space_complexity.assets/space_types.png" ><i class="fas fa-external-link-alt"></i></a></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 结构体 */</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    Node *next;</span><br><span class="line">    <span class="built_in">Node</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">next</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 函数 */</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 执行某些操作...</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">algorithm</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;        <span class="comment">// 输入数据</span></span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> a = <span class="number">0</span>;          <span class="comment">// 暂存数据（常量）</span></span><br><span class="line">    <span class="type">int</span> b = <span class="number">0</span>;                <span class="comment">// 暂存数据（变量）</span></span><br><span class="line">    Node* node = <span class="keyword">new</span> <span class="built_in">Node</span>(<span class="number">0</span>); <span class="comment">// 暂存数据（对象）</span></span><br><span class="line">    <span class="type">int</span> c = <span class="built_in">func</span>();           <span class="comment">// 栈帧空间（调用函数）</span></span><br><span class="line">    <span class="keyword">return</span> a + b + c;         <span class="comment">// 输出数据</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="一般分析角度"><a href="#一般分析角度" class="headerlink" title="一般分析角度"></a>一般分析角度</h2><ul>
-<li><p>空间复杂度的推算方法与时间复杂度大致相同，只需将统计对象从“操作数量”转为“使用空间大小”。</p>
+<h2 id="一般分析角度"><a class="markdownIt-Anchor" href="#一般分析角度"></a> 一般分析角度</h2>
+<ul>
+<li>
+<p>空间复杂度的推算方法与时间复杂度大致相同，只需将统计对象从“操作数量”转为“使用空间大小”。</p>
 </li>
-<li><p><strong>只关注最差空间复杂度</strong>。这是因为内存空间是一项硬性要求，我们必须确保在所有输入数据下都有足够的内存空间预留。</p>
+<li>
+<p><strong>只关注最差空间复杂度</strong>。这是因为内存空间是一项硬性要求，我们必须确保在所有输入数据下都有足够的内存空间预留。</p>
 <blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628223320720.png"  alt="image-20240628223320720"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628223320720.png"  alt="image-20240628223320720" ></p>
 </blockquote>
 </li>
-<li><p><strong>在递归函数中，需要注意统计栈帧空间</strong>。</p>
+<li>
+<p><strong>在递归函数中，需要注意统计栈帧空间</strong>。</p>
 </li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 执行某些操作</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 循环的空间复杂度为 O(1) */</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">func</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 递归的空间复杂度为 O(n) */</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">recur</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">recur</span>(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628223358158.png"  alt="image-20240628223358158"></p>
-<h2 id="分析实例"><a href="#分析实例" class="headerlink" title="分析实例"></a>分析实例</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628155711168.png"  alt="image-20240628155711168"></p>
-<hr>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628155723967.png"  alt="image-20240628155723967"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628223358158.png"  alt="image-20240628223358158" ></p>
+<h2 id="分析实例"><a class="markdownIt-Anchor" href="#分析实例"></a> 分析实例</h2>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628155711168.png"  alt="image-20240628155711168" ></p>
+<hr />
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628155723967.png"  alt="image-20240628155723967" ></p>
 <blockquote>
 <p>分析空间不是说看 n不在哪里就可以了，要看哪些东西的执行次数和 n 有关</p>
 </blockquote>
-<hr>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628160134331.png"  alt="image-20240628160134331"></p>
+<hr />
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628160134331.png"  alt="image-20240628160134331" ></p>
 <blockquote>
 <p>递归实例的分析，深度和空间的关系</p>
 </blockquote>
-<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628160713682.png"  alt="image-20240628160713682"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628160738058.png"  alt="image-20240628160738058"></p>
-<h2 id="对数阶"><a href="#对数阶" class="headerlink" title="对数阶"></a>对数阶</h2><ul>
+<h2 id="二叉树"><a class="markdownIt-Anchor" href="#二叉树"></a> 二叉树</h2>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628160713682.png"  alt="image-20240628160713682" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628160738058.png"  alt="image-20240628160738058" ></p>
+<h2 id="对数阶"><a class="markdownIt-Anchor" href="#对数阶"></a> 对数阶</h2>
+<ul>
 <li>分治</li>
 </ul>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628222101041.png"  alt="image-20240628222101041"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628222101041.png"  alt="image-20240628222101041" ></p>
 <blockquote>
 <p>递归层面 调用多少层递归层也是一个很重要衡量空间复杂度的情况</p>
 </blockquote>
-<h1 id="权衡时间与空间"><a href="#权衡时间与空间" class="headerlink" title="权衡时间与空间"></a>权衡时间与空间</h1><p>理想情况下，我们希望算法的时间复杂度和空间复杂度都能达到最优。然而在实际情况中，同时优化时间复杂度和空间复杂度通常非常困难。</p>
+<h1 id="权衡时间与空间"><a class="markdownIt-Anchor" href="#权衡时间与空间"></a> 权衡时间与空间</h1>
+<p>理想情况下，我们希望算法的时间复杂度和空间复杂度都能达到最优。然而在实际情况中，同时优化时间复杂度和空间复杂度通常非常困难。</p>
 <p><strong>降低时间复杂度通常需要以提升空间复杂度为代价，反之亦然</strong>。我们将牺牲内存空间来提升算法运行速度的思路称为“以空间换时间”；反之，则称为“以时间换空间”。</p>
 <p>选择哪种思路取决于我们更看重哪个方面。在大多数情况下，时间比空间更宝贵，因此“以空间换时间”通常是更常用的策略。当然，在数据量很大的情况下，控制空间复杂度也非常重要。</p>
-<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><ul>
-<li><p>基本数据类型提供了数据的“内容类型”，而数据结构提供了数据的“组织方式。</p>
+<h1 id="基本数据类型"><a class="markdownIt-Anchor" href="#基本数据类型"></a> 基本数据类型</h1>
+<ul>
+<li>
+<p>基本数据类型提供了数据的“内容类型”，而数据结构提供了数据的“组织方式。</p>
 </li>
-<li><p>基本数据类型:int、float、double、char、bool…..</p>
+<li>
+<p>基本数据类型:int、float、double、char、bool…</p>
 </li>
-<li><p>基本数据类型的取值范围取决于其占用的空间大小。</p>
-<p>byte占用的空间是1字节&#x3D;8bit，可以表示2^8个数字</p>
-<p>int占用的空间是4字节&#x3D;4*8bit，可以表示…</p>
+<li>
+<p>基本数据类型的取值范围取决于其占用的空间大小。</p>
+<p>byte占用的空间是1字节=8bit，可以表示2^8个数字</p>
+<p>int占用的空间是4字节=4*8bit，可以表示…</p>
 </li>
 </ul>
-<h1 id="数据结构分类"><a href="#数据结构分类" class="headerlink" title="数据结构分类"></a>数据结构分类</h1><h2 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h2><ul>
+<h1 id="数据结构分类"><a class="markdownIt-Anchor" href="#数据结构分类"></a> 数据结构分类</h1>
+<h2 id="逻辑"><a class="markdownIt-Anchor" href="#逻辑"></a> 逻辑</h2>
+<ul>
 <li>线性</li>
-<li>非线性<ul>
+<li>非线性
+<ul>
 <li>树形结构</li>
 <li>网状结构</li>
 </ul>
 </li>
 </ul>
-<h2 id="空间"><a href="#空间" class="headerlink" title="空间"></a>空间</h2><p><strong>基于数组可实现</strong>：栈、队列、哈希表、树、堆、图、矩阵、张量（维度 </p>
-<p> 的数组）等。</p>
+<h2 id="空间"><a class="markdownIt-Anchor" href="#空间"></a> 空间</h2>
+<p><strong>基于数组可实现</strong>：栈、队列、哈希表、树、堆、图、矩阵、张量（维度</p>
+<p>的数组）等。</p>
 <p><strong>基于链表可实现</strong>：栈、队列、哈希表、树、堆、图等。</p>
-<h2 id="静动"><a href="#静动" class="headerlink" title="静动"></a>静动</h2><p>链表在初始化后，仍可以在程序运行过程中对其长度进行调整，因此也称“动态数据结构”。数组在初始化后长度不可变，因此也称“<strong>静态数据结构</strong>”。值得注意的是，数组可通过重新分配内存实现长度变化，从而具备一定的“<strong>动态性</strong>”。</p>
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628225618547.png"  alt="image-20240628225618547"></p>
+<h2 id="静动"><a class="markdownIt-Anchor" href="#静动"></a> 静动</h2>
+<p>链表在初始化后，仍可以在程序运行过程中对其长度进行调整，因此也称“动态数据结构”。数组在初始化后长度不可变，因此也称“<strong>静态数据结构</strong>”。值得注意的是，数组可通过重新分配内存实现长度变化，从而具备一定的“<strong>动态性</strong>”。</p>
+<h1 id="数组"><a class="markdownIt-Anchor" href="#数组"></a> 数组</h1>
+<h2 id="理解"><a class="markdownIt-Anchor" href="#理解"></a> 理解</h2>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628225618547.png"  alt="image-20240628225618547" ></p>
 <ul>
-<li><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628230016630.png"  alt="image-20240628230016630"></p>
-<hr>
+<li>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628230016630.png"  alt="image-20240628230016630" ></p>
+<hr />
 </li>
 </ul>
-<h1 id="一般操作"><a href="#一般操作" class="headerlink" title="一般操作"></a>一般操作</h1><ul>
-<li><p>适合解决问题的特点</p>
+<h1 id="一般操作"><a class="markdownIt-Anchor" href="#一般操作"></a> 一般操作</h1>
+<ul>
+<li>
+<p>适合解决问题的特点</p>
 <p>1.随机访问</p>
 <p>2.排序与搜索</p>
-<p>3.查找表&#x2F;映射关系</p>
+<p>3.查找表/映射关系</p>
 <p>4.线性代数相关运算</p>
-<p><del>5.其他数据结构基础</del></p>
+<p><s>5.其他数据结构基础</s></p>
 </li>
 </ul>
-<hr>
+<hr />
 <ul>
 <li>优点：随机访问、缓存局部、空间效率高</li>
 <li>局限性：插入、删除不行，长度变化是个问题，空间容易造成浪费</li>
 </ul>
-<hr>
+<hr />
 <ul>
-<li><p>插入、删除、查找、遍历 、扩容</p>
+<li>
+<p>插入、删除、查找、遍历 、扩容</p>
 </li>
-<li><p>插入即移动之后的数据+插入</p>
+<li>
+<p>插入即移动之后的数据+插入</p>
 </li>
-<li><p>删除即移动之后的数据+删除</p>
+<li>
+<p>删除即移动之后的数据+删除</p>
 </li>
 </ul>
 <blockquote>
-<p>时间复杂度：<img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628230554435.png"  alt="image-20240628230554435"></p>
+<p>时间复杂度：<img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628230554435.png"  alt="image-20240628230554435" ></p>
 </blockquote>
-<h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1><ul>
-<li><p>行为：初始化、插入、删除、访问、查找</p>
+<h1 id="链表"><a class="markdownIt-Anchor" href="#链表"></a> 链表</h1>
+<ul>
+<li>
+<p>行为：初始化、插入、删除、访问、查找</p>
 </li>
-<li><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240629010659569.png"  alt="image-20240629010659569"></p>
+<li>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240629010659569.png"  alt="image-20240629010659569" ></p>
 </li>
-<li><p>基本类型</p>
+<li>
+<p>基本类型</p>
 <p>单向链表：</p>
 <p>环形链表：</p>
 <p>双向链表：</p>
 </li>
-<li><p>链表典型应用</p>
+<li>
+<p>链表典型应用</p>
 </li>
 </ul>
-<h3 id="单向链表"><a href="#单向链表" class="headerlink" title="单向链表"></a>单向链表</h3><p>单向链表是一种常见的链表结构，每个节点包含一个指向下一个节点的指针。</p>
+<h3 id="单向链表"><a class="markdownIt-Anchor" href="#单向链表"></a> 单向链表</h3>
+<p>单向链表是一种常见的链表结构，每个节点包含一个指向下一个节点的指针。</p>
 <ol>
 <li>资源管理：单向链表可以用来管理资源，例如<strong>内存分配</strong>中的空闲块链表，通过将空闲的内存块连接成一个链表，可以方便地进行分配和释放。</li>
 <li>队列实现：单向链表可以用于实现<strong>队列</strong>（FIFO）的数据结构，通过在链表的尾部添加元素，并在链表的头部移除元素，<strong>可以实现高效的入队和出队</strong>操作。</li>
@@ -441,7 +484,8 @@
 <li>多级反馈队列调度算法：多级反馈队列调度算法中，任务被分成多个优先级队列，并<strong>按照一定规则进行调度</strong>。每个队列可以使用单向链表来管理任务，实现按优先级进行任务调度。</li>
 <li>符号表和字典实现：在符号表和字典的实现中，可以使用单向链表来<strong>存储键值对</strong>。每个节点包含一个键和一个值，并通过指针连接成一个链表，实现高效的查找、插入和删除操作。</li>
 </ol>
-<h3 id="环形链表"><a href="#环形链表" class="headerlink" title="环形链表"></a>环形链表</h3><p>首尾相接的链表结构，</p>
+<h3 id="环形链表"><a class="markdownIt-Anchor" href="#环形链表"></a> 环形链表</h3>
+<p>首尾相接的链表结构，</p>
 <ol>
 <li><strong>约瑟夫问题</strong>（Josephus Problem）：在约瑟夫问题中，有n个人围成一个环形，每次从指定位置开始计数，并按照固定规则将当前位置的<strong>人移出环形，直到最后只剩下一个人</strong>。环形链表可以用来模拟和解决这个问题。</li>
 <li><strong>循环队列</strong>（Circular Queue）：循环队列是一种特殊的队列数据结构，当队列的尾部达到数组的末尾时，可以绕回数组的开头，形成一个循环。环形链表可以用来实现循环队列，提供高效的队列操作。</li>
@@ -449,7 +493,8 @@
 <li>环形缓冲区（Circular Buffer）：环形缓冲区是一种常见的数据结构，用于在<strong>固定大小的缓冲区中循环存储数据</strong>。环形链表可以用来实现环形缓冲区，实现高效的数据读写操作。</li>
 <li>快慢指针算法（Floyd’s Cycle Detection Algorithm）：快慢指针算法是一种使用两个<strong>指针在环形链表中寻找环的算法</strong>。该算法可以应用于检测环形链表中是否存在环以及找到环的起始节点等问题。</li>
 </ol>
-<h3 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h3><p>双向链表是一种链表结构，每个节点都包含指向前一个节点和后一个节点的指针。</p>
+<h3 id="双向链表"><a class="markdownIt-Anchor" href="#双向链表"></a> 双向链表</h3>
+<p>双向链表是一种链表结构，每个节点都包含指向前一个节点和后一个节点的指针。</p>
 <ol>
 <li>LRU缓存（Least Recently Used Cache）：LRU缓存是一种常见的缓存替换策略，<strong>其中最近最少使用的数据被淘汰</strong>。双向链表可以用来实现LRU缓存，每次访问数据时，将其移到链表的头部，这样尾部的节点就是最近最少使用的数据，可以方便地淘汰。</li>
 <li>双向队列（Deque）：双向队列是一种具有队列和栈的特性的数据结构，可以在<strong>队列的头部和尾部进行插入和删除操作</strong>。双向链表可以用来实现双向队列，提供高效的插入和删除操作。</li>
@@ -458,7 +503,8 @@
 <li>文本编辑器的撤销和重做操作：在文本编辑器中，双向链表可以用来实现撤销和重做操作。每次编辑操作都可以将<strong>编辑内容添加到链表的尾部，可以通过向前或向后遍历链表来实现撤销和重做操作</strong>。</li>
 <li>音乐播放器的播放列表：在音乐播放器中，双向链表可以用来实现播放列表，每个节点表示一个音乐文件，<strong>可以方便地在当前歌曲的前后插入或删除歌曲</strong>。</li>
 </ol>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1>
+<h1 id="列表"><a class="markdownIt-Anchor" href="#列表"></a> 列表</h1>
+
                 </div>
                 
 
@@ -487,7 +533,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240629 测试</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -501,7 +547,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240627 处理超大文件方案</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -518,15 +564,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -610,7 +656,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E9%80%92%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text">迭代递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.</span> <span class="nav-text">时间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BF%86%E4%B8%80%E8%88%AC%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">3.1.</span> <span class="nav-text">记忆一般的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E8%A6%81%E7%82%B9"><span class="nav-number">3.2.</span> <span class="nav-text">时间复杂度分析要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">一般分析方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E5%AE%9E%E4%BE%8B"><span class="nav-number">3.4.</span> <span class="nav-text">不同类型时间复杂度分析实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6-%E4%B8%80%E5%88%86%E4%B8%BA%E5%A4%9A"><span class="nav-number">3.5.</span> <span class="nav-text">对数阶&#x2F;一分为多</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.6.</span> <span class="nav-text">平均时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">空间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%A0%E4%B8%AA%E6%B6%89%E5%8F%8A%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">4.1.</span> <span class="nav-text">过程中几个涉及空间的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90%E8%A7%92%E5%BA%A6"><span class="nav-number">4.2.</span> <span class="nav-text">一般分析角度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E5%AE%9E%E4%BE%8B"><span class="nav-number">4.3.</span> <span class="nav-text">分析实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">4.4.</span> <span class="nav-text">二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6"><span class="nav-number">4.5.</span> <span class="nav-text">对数阶</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%83%E8%A1%A1%E6%97%B6%E9%97%B4%E4%B8%8E%E7%A9%BA%E9%97%B4"><span class="nav-number">5.</span> <span class="nav-text">权衡时间与空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB"><span class="nav-number">7.</span> <span class="nav-text">数据结构分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91"><span class="nav-number">7.1.</span> <span class="nav-text">逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4"><span class="nav-number">7.2.</span> <span class="nav-text">空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E5%8A%A8"><span class="nav-number">7.3.</span> <span class="nav-text">静动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">8.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%90%86%E8%A7%A3"><span class="nav-number">8.1.</span> <span class="nav-text">理解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">9.</span> <span class="nav-text">一般操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">10.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.1.</span> <span class="nav-text">单向链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.2.</span> <span class="nav-text">环形链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.3.</span> <span class="nav-text">双向链表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">11.</span> <span class="nav-text">列表</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E9%80%92%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text"> 迭代递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.</span> <span class="nav-text"> 时间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BF%86%E4%B8%80%E8%88%AC%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">3.1.</span> <span class="nav-text"> 记忆一般的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E8%A6%81%E7%82%B9"><span class="nav-number">3.2.</span> <span class="nav-text"> 时间复杂度分析要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text"> 一般分析方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E5%AE%9E%E4%BE%8B"><span class="nav-number">3.4.</span> <span class="nav-text"> 不同类型时间复杂度分析实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6%E4%B8%80%E5%88%86%E4%B8%BA%E5%A4%9A"><span class="nav-number">3.5.</span> <span class="nav-text"> 对数阶&#x2F;一分为多</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.6.</span> <span class="nav-text"> 平均时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text"> 空间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%A0%E4%B8%AA%E6%B6%89%E5%8F%8A%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">4.1.</span> <span class="nav-text"> 过程中几个涉及空间的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90%E8%A7%92%E5%BA%A6"><span class="nav-number">4.2.</span> <span class="nav-text"> 一般分析角度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E5%AE%9E%E4%BE%8B"><span class="nav-number">4.3.</span> <span class="nav-text"> 分析实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">4.4.</span> <span class="nav-text"> 二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6"><span class="nav-number">4.5.</span> <span class="nav-text"> 对数阶</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%83%E8%A1%A1%E6%97%B6%E9%97%B4%E4%B8%8E%E7%A9%BA%E9%97%B4"><span class="nav-number">5.</span> <span class="nav-text"> 权衡时间与空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text"> 基本数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB"><span class="nav-number">7.</span> <span class="nav-text"> 数据结构分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91"><span class="nav-number">7.1.</span> <span class="nav-text"> 逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4"><span class="nav-number">7.2.</span> <span class="nav-text"> 空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E5%8A%A8"><span class="nav-number">7.3.</span> <span class="nav-text"> 静动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">8.</span> <span class="nav-text"> 数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%90%86%E8%A7%A3"><span class="nav-number">8.1.</span> <span class="nav-text"> 理解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">9.</span> <span class="nav-text"> 一般操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">10.</span> <span class="nav-text"> 链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.1.</span> <span class="nav-text"> 单向链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.2.</span> <span class="nav-text"> 环形链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.3.</span> <span class="nav-text"> 双向链表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">11.</span> <span class="nav-text"> 列表</span></a></li></ol>
     </div>
 </div>
 
@@ -637,7 +683,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -650,14 +696,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -763,7 +809,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E9%80%92%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text">迭代递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.</span> <span class="nav-text">时间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BF%86%E4%B8%80%E8%88%AC%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">3.1.</span> <span class="nav-text">记忆一般的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E8%A6%81%E7%82%B9"><span class="nav-number">3.2.</span> <span class="nav-text">时间复杂度分析要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">一般分析方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E5%AE%9E%E4%BE%8B"><span class="nav-number">3.4.</span> <span class="nav-text">不同类型时间复杂度分析实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6-%E4%B8%80%E5%88%86%E4%B8%BA%E5%A4%9A"><span class="nav-number">3.5.</span> <span class="nav-text">对数阶&#x2F;一分为多</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.6.</span> <span class="nav-text">平均时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">空间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%A0%E4%B8%AA%E6%B6%89%E5%8F%8A%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">4.1.</span> <span class="nav-text">过程中几个涉及空间的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90%E8%A7%92%E5%BA%A6"><span class="nav-number">4.2.</span> <span class="nav-text">一般分析角度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E5%AE%9E%E4%BE%8B"><span class="nav-number">4.3.</span> <span class="nav-text">分析实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">4.4.</span> <span class="nav-text">二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6"><span class="nav-number">4.5.</span> <span class="nav-text">对数阶</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%83%E8%A1%A1%E6%97%B6%E9%97%B4%E4%B8%8E%E7%A9%BA%E9%97%B4"><span class="nav-number">5.</span> <span class="nav-text">权衡时间与空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB"><span class="nav-number">7.</span> <span class="nav-text">数据结构分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91"><span class="nav-number">7.1.</span> <span class="nav-text">逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4"><span class="nav-number">7.2.</span> <span class="nav-text">空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E5%8A%A8"><span class="nav-number">7.3.</span> <span class="nav-text">静动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">8.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%90%86%E8%A7%A3"><span class="nav-number">8.1.</span> <span class="nav-text">理解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">9.</span> <span class="nav-text">一般操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">10.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.1.</span> <span class="nav-text">单向链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.2.</span> <span class="nav-text">环形链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.3.</span> <span class="nav-text">双向链表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">11.</span> <span class="nav-text">列表</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E9%80%92%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text"> 迭代递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.</span> <span class="nav-text"> 时间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BF%86%E4%B8%80%E8%88%AC%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">3.1.</span> <span class="nav-text"> 记忆一般的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E8%A6%81%E7%82%B9"><span class="nav-number">3.2.</span> <span class="nav-text"> 时间复杂度分析要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text"> 一般分析方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90%E5%AE%9E%E4%BE%8B"><span class="nav-number">3.4.</span> <span class="nav-text"> 不同类型时间复杂度分析实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6%E4%B8%80%E5%88%86%E4%B8%BA%E5%A4%9A"><span class="nav-number">3.5.</span> <span class="nav-text"> 对数阶&#x2F;一分为多</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.6.</span> <span class="nav-text"> 平均时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text"> 空间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%87%A0%E4%B8%AA%E6%B6%89%E5%8F%8A%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">4.1.</span> <span class="nav-text"> 过程中几个涉及空间的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E5%88%86%E6%9E%90%E8%A7%92%E5%BA%A6"><span class="nav-number">4.2.</span> <span class="nav-text"> 一般分析角度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E5%AE%9E%E4%BE%8B"><span class="nav-number">4.3.</span> <span class="nav-text"> 分析实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">4.4.</span> <span class="nav-text"> 二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E9%98%B6"><span class="nav-number">4.5.</span> <span class="nav-text"> 对数阶</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%83%E8%A1%A1%E6%97%B6%E9%97%B4%E4%B8%8E%E7%A9%BA%E9%97%B4"><span class="nav-number">5.</span> <span class="nav-text"> 权衡时间与空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text"> 基本数据类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB"><span class="nav-number">7.</span> <span class="nav-text"> 数据结构分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91"><span class="nav-number">7.1.</span> <span class="nav-text"> 逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4"><span class="nav-number">7.2.</span> <span class="nav-text"> 空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%99%E5%8A%A8"><span class="nav-number">7.3.</span> <span class="nav-text"> 静动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">8.</span> <span class="nav-text"> 数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%90%86%E8%A7%A3"><span class="nav-number">8.1.</span> <span class="nav-text"> 理解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">9.</span> <span class="nav-text"> 一般操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">10.</span> <span class="nav-text"> 链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.1.</span> <span class="nav-text"> 单向链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.2.</span> <span class="nav-text"> 环形链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="nav-number">10.0.3.</span> <span class="nav-text"> 双向链表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-number">11.</span> <span class="nav-text"> 列表</span></a></li></ol>
     </div>
 </div>
 

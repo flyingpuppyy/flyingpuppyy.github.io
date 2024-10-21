@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,75 +239,75 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="实现字符串类，怎样设计拷贝、赋值、析构函数"><a href="#实现字符串类，怎样设计拷贝、赋值、析构函数" class="headerlink" title="实现字符串类，怎样设计拷贝、赋值、析构函数"></a>实现字符串类，怎样设计拷贝、赋值、析构函数</h1><h1 id="字符串类的实现"><a href="#字符串类的实现" class="headerlink" title="字符串类的实现"></a>字符串类的实现</h1><h1 id="拷贝、赋值、析构"><a href="#拷贝、赋值、析构" class="headerlink" title="拷贝、赋值、析构"></a>拷贝、赋值、析构</h1><ul>
+                    <h1 id="实现字符串类怎样设计拷贝-赋值-析构函数"><a class="markdownIt-Anchor" href="#实现字符串类怎样设计拷贝-赋值-析构函数"></a> 实现字符串类，怎样设计拷贝、赋值、析构函数</h1>
+<h1 id="字符串类的实现"><a class="markdownIt-Anchor" href="#字符串类的实现"></a> 字符串类的实现</h1>
+<h1 id="拷贝-赋值-析构"><a class="markdownIt-Anchor" href="#拷贝-赋值-析构"></a> 拷贝、赋值、析构</h1>
+<ul>
 <li>拷贝构造（函数名称和类名相同），参数是自己。需要分配内存，将被拷贝的类的内存拷贝到分配的内存里</li>
 <li>拷贝赋值：赋值，参数是自己。先自我赋值校验，通过后释放原来指向的内存，最后分配内存，将被拷贝的类的内存拷贝到分配的内存里</li>
 <li>析构函数：释放指针指向的内存区域</li>
 </ul>
-<h2 id="赋值运算或者表达式返回值是引用"><a href="#赋值运算或者表达式返回值是引用" class="headerlink" title="赋值运算或者表达式返回值是引用"></a>赋值运算或者表达式返回值是引用</h2><ul>
+<h2 id="赋值运算或者表达式返回值是引用"><a class="markdownIt-Anchor" href="#赋值运算或者表达式返回值是引用"></a> 赋值运算或者表达式返回值是引用</h2>
+<ul>
 <li>从两个问题来进行分析<strong>返回值问题和引用问题</strong></li>
 </ul>
 <p>1.首先，赋值表达式为什么要有返回值呢？<strong>为了支持链式的复制表达式！</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a,b;</span><br><span class="line">a = b = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等号运算符是右结合的，相当于：</span></span><br><span class="line">a = (b = <span class="number">1</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>其实是把b&#x3D;1的返回值赋给了a，所以赋值表达式要有返回值。</p>
+<p>其实是把b=1的返回值赋给了a，所以赋值表达式要有返回值。</p>
 <p>2.为什么不返回值，而是返回引用呢？为了效率！</p>
 <p>而且通常返回常量引用。比如你的赋值变量不是基本数据类型，而是对象时：</p>
-<p>如果b&#x3D;c返回的是值，则需要在&#x3D;运算结束后，调用拷贝构造函数将结果复制为返回值（因为函数结束后栈空间是要被销毁的，而局部变量存储在栈空间中）。如果返回引用，则不需要调用复制返回值，直接将引用原有的变量。</p>
-<h1 id="编译器为类默认生成的这几个"><a href="#编译器为类默认生成的这几个" class="headerlink" title="编译器为类默认生成的这几个"></a>编译器为类默认生成的这几个</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">A</span>()            <span class="comment">//默认构造函数</span></span><br><span class="line">A（<span class="type">const</span> A&amp;)  <span class="comment">//默认拷贝构造函数</span></span><br><span class="line">~<span class="built_in">A</span>()         <span class="comment">//默认析构函数</span></span><br><span class="line">A&amp; <span class="keyword">operator</span> = (<span class="type">const</span> A &amp;) <span class="comment">//默认赋值函数。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="不同构造函数的调用时机"><a href="#不同构造函数的调用时机" class="headerlink" title="不同构造函数的调用时机"></a>不同构造函数的调用时机</h1><p>拷贝初始化   A y&#x3D;x;&#x2F;&#x2F;拷贝初始化，调用拷贝构造函数</p>
-<p>直接初始化   A x(2);&#x2F;&#x2F;直接初始化，调用构造函数</p>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><blockquote>
-<p>1.存储的开辟和管理（需要一个指向字符串地址的指针，当前字符串的长度，当前字符串所开辟空间的长度&#x3D;&#x3D;在我看来至少需要这三个要素&#x3D;&#x3D;）</p>
+<p>如果b=c返回的是值，则需要在=运算结束后，调用拷贝构造函数将结果复制为返回值（因为函数结束后栈空间是要被销毁的，而局部变量存储在栈空间中）。如果返回引用，则不需要调用复制返回值，直接将引用原有的变量。</p>
+<h1 id="编译器为类默认生成的这几个"><a class="markdownIt-Anchor" href="#编译器为类默认生成的这几个"></a> 编译器为类默认生成的这几个</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">A</span>()            <span class="comment">//默认构造函数</span></span><br><span class="line">A（<span class="type">const</span> A&amp;)  <span class="comment">//默认拷贝构造函数</span></span><br><span class="line">~<span class="built_in">A</span>()         <span class="comment">//默认析构函数</span></span><br><span class="line">A&amp; <span class="keyword">operator</span> = (<span class="type">const</span> A &amp;) <span class="comment">//默认赋值函数。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="不同构造函数的调用时机"><a class="markdownIt-Anchor" href="#不同构造函数的调用时机"></a> 不同构造函数的调用时机</h1>
+<p>拷贝初始化   A y=x;//拷贝初始化，调用拷贝构造函数</p>
+<p>直接初始化   A x(2);//直接初始化，调用构造函数</p>
+<h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
+<blockquote>
+<p>1.存储的开辟和管理（需要一个指向字符串地址的指针，当前字符串的长度，当前字符串所开辟空间的长度<mark>在我看来至少需要这三个要素</mark>）</p>
 <p>2.字符串本身基本概念的理解和设计</p>
 <p>3.深拷贝和浅拷贝的实现和理解</p>
 <p>4.拷贝函数、赋值函数、析构函数一般需要实现的功能</p>
-<p>5.字符串是怎样被C++流给读取的和识别的，在自定义中如何实现（&#x3D;&#x3D;感觉这个涉及得更深一点就要到输入输出了&#x3D;&#x3D;）</p>
+<p>5.字符串是怎样被C++流给读取的和识别的，在自定义中如何实现（<mark>感觉这个涉及得更深一点就要到输入输出了</mark>）</p>
 <p>6.特殊情况的处理（空指针和nullptr）</p>
 </blockquote>
-<hr>
+<hr />
 <blockquote>
 <p>思考关键点：</p>
 </blockquote>
-<h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">String</span></span><br><span class="line">&#123; </span><br><span class="line"> <span class="keyword">public</span>: </span><br><span class="line"> 	<span class="built_in">String</span>(<span class="type">const</span> <span class="type">char</span> *str = <span class="literal">NULL</span>); <span class="comment">// 普通构造函数 </span></span><br><span class="line"> 	<span class="built_in">String</span>(<span class="type">const</span> String &amp;other); <span class="comment">// 拷贝构造函数 </span></span><br><span class="line"> 	~ <span class="built_in">String</span>(<span class="type">void</span>); <span class="comment">// 析构函数 </span></span><br><span class="line">	 String &amp; <span class="keyword">operator</span> =(<span class="type">const</span> String &amp;other); <span class="comment">// 赋值函数 </span></span><br><span class="line"> <span class="keyword">private</span>: </span><br><span class="line">	 <span class="type">char</span> *m_data; <span class="comment">// 用于保存字符串 </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
+<h1 id="code"><a class="markdownIt-Anchor" href="#code"></a> code</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">String</span></span><br><span class="line">&#123; </span><br><span class="line"> <span class="keyword">public</span>: </span><br><span class="line"> 	<span class="built_in">String</span>(<span class="type">const</span> <span class="type">char</span> *str = <span class="literal">NULL</span>); <span class="comment">// 普通构造函数 </span></span><br><span class="line"> 	<span class="built_in">String</span>(<span class="type">const</span> String &amp;other); <span class="comment">// 拷贝构造函数 </span></span><br><span class="line"> 	~ <span class="built_in">String</span>(<span class="type">void</span>); <span class="comment">// 析构函数 </span></span><br><span class="line">	 String &amp; <span class="keyword">operator</span> =(<span class="type">const</span> String &amp;other); <span class="comment">// 赋值函数 </span></span><br><span class="line"> <span class="keyword">private</span>: </span><br><span class="line">	 <span class="type">char</span> *m_data; <span class="comment">// 用于保存字符串 </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>普通构造传的是指针</p>
 <p>拷贝构造传的是引用</p>
 <p>赋值函数传的是引用</p>
-<hr>
+<hr />
 <p>首先了解形参:形参是实参额拷贝.</p>
 <p>如果传值,那么形参会拷贝一份实参,用在对象上就是调用类的拷贝构造函数拷贝一个新的对象.</p>
 <p>for example:</p>
-<p>date (const date d1)&#x2F;&#x2F;这里传的是值而不是引用.</p>
-<p><strong>&#x2F;&#x2F;那么形参d1就会调用类的拷贝构造函数date(const date d1)</strong></p>
+<p>date (const date d1)//这里传的是值而不是引用.</p>
+<p><strong>//那么形参d1就会调用类的拷贝构造函数date(const date d1)</strong></p>
 <p>复制一份</p>
-<p> &#x2F;&#x2F; d1,现在这一层的d1又会再次调用拷贝构造函数,与刚才第一部的过程一致,</p>
-<p> &#x2F;&#x2F; 层层循环,无穷调用,导致程序崩溃.</p>
+<p>// d1,现在这一层的d1又会再次调用拷贝构造函数,与刚才第一部的过程一致,</p>
+<p>// 层层循环,无穷调用,导致程序崩溃.</p>
 <p>3.那么传引用有什么用呢,首先要知道引用是什么,它是变量的别名,存变量的地址,通过它可以直接找到变量,然后直接对变量本身进行修改.如果传入一个对象的引用,那就不会调用它的拷贝构造函数.</p>
-<hr>
+<hr />
 </blockquote>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//普通构造函数</span></span><br><span class="line">String::<span class="built_in">String</span>(<span class="type">const</span> <span class="type">char</span> *str) </span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(str==<span class="literal">NULL</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        m_data = <span class="keyword">new</span> <span class="type">char</span>[<span class="number">1</span>]; <span class="comment">// 得分点：对空字符串自动申请存放结束标志&#x27;\0&#x27;的空</span></span><br><span class="line">        <span class="comment">//加分点：对m_data加NULL 判断</span></span><br><span class="line">        *m_data = <span class="string">&#x27;\0&#x27;</span>; </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> length = <span class="built_in">strlen</span>(str); </span><br><span class="line">        m_data = <span class="keyword">new</span> <span class="type">char</span>[length+<span class="number">1</span>]; <span class="comment">// 若能加 NULL 判断则更好 </span></span><br><span class="line">        <span class="built_in">strcpy</span>(m_data, str); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// String的析构函数</span></span><br><span class="line">String::~<span class="built_in">String</span>(<span class="type">void</span>) </span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">delete</span> [] m_data; <span class="comment">// 或delete m_data;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//拷贝构造函数</span></span><br><span class="line">String::<span class="built_in">String</span>(<span class="type">const</span> String &amp;other) 　　　<span class="comment">// 得分点：输入参数为const型</span></span><br><span class="line">&#123; </span><br><span class="line"> 	<span class="type">int</span> length = <span class="built_in">strlen</span>(other.m_data); </span><br><span class="line"> 	m_data = <span class="keyword">new</span> <span class="type">char</span>[length+<span class="number">1</span>]; 　　　　<span class="comment">//加分点：对m_data加NULL 判断</span></span><br><span class="line">	 <span class="built_in">strcpy</span>(m_data, other.m_data); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//赋值函数</span></span><br><span class="line">String &amp; String::<span class="keyword">operator</span> =(<span class="type">const</span> String &amp;other) <span class="comment">// 得分点：输入参数为const型</span></span><br><span class="line">&#123; </span><br><span class="line">    </span><br><span class="line">	 <span class="keyword">if</span>(<span class="keyword">this</span> == &amp;other) 　　<span class="comment">//得分点：检查自赋值</span></span><br><span class="line">		 <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">    </span><br><span class="line">	 <span class="keyword">delete</span> [] m_data; 　　　　<span class="comment">//得分点：释放原有的内存资源</span></span><br><span class="line">	 <span class="type">int</span> length = <span class="built_in">strlen</span>( other.m_data ); </span><br><span class="line">	 m_data = <span class="keyword">new</span> <span class="type">char</span>[length+<span class="number">1</span>]; 　<span class="comment">//加分点：对m_data加NULL 判断</span></span><br><span class="line"> 	 <span class="built_in">strcpy</span>( m_data, other.m_data ); </span><br><span class="line">	 <span class="keyword">return</span> *<span class="keyword">this</span>; 　　　　　　　　<span class="comment">//得分点：返回本对象的引用</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><p>构造函数的任务，就是初始化对象的数据成员，无论何时只要类的对象被创建，就会执行构造函数。</p>
+<h1 id="构造函数"><a class="markdownIt-Anchor" href="#构造函数"></a> 构造函数</h1>
+<p>构造函数的任务，就是初始化对象的数据成员，无论何时只要类的对象被创建，就会执行构造函数。</p>
 <ul>
 <li>分类：</li>
 </ul>
-<p>隐式创建&#x2F;默认构造函数 </p>
-<p>显式创建&#x2F;带参数的默认构造函数</p>
-<hr>
-<p>1.默认的还好，主要就是涉及一个新空间的开辟是否是必须的问题（默认情况下是‘&#x2F;0’状态还是nullptr状态）</p>
+<p>隐式创建/默认构造函数</p>
+<p>显式创建/带参数的默认构造函数</p>
+<hr />
+<p>1.默认的还好，主要就是涉及一个新空间的开辟是否是必须的问题（默认情况下是‘/0’状态还是nullptr状态）</p>
 <p>2.如果是带参数的话，就是第一个是判断传入的参数是否是合法的，第二个就是处理传入的参数的相关内容</p>
 <p>3.涉及到多种不同的带参形式的话，要对于所有可能传入的参数类型和组合进行分析，以便得出最优的参数设计组合</p>
-<hr>
-<h1 id="赋值函数"><a href="#赋值函数" class="headerlink" title="赋值函数"></a>赋值函数</h1>
+<hr />
+<h1 id="赋值函数"><a class="markdownIt-Anchor" href="#赋值函数"></a> 赋值函数</h1>
+
                 </div>
                 
 
@@ -336,7 +336,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240509 ubuntu安装</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -350,7 +350,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240508 C加加复习（四）</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -367,15 +367,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -459,7 +459,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%EF%BC%8C%E6%80%8E%E6%A0%B7%E8%AE%BE%E8%AE%A1%E6%8B%B7%E8%B4%9D%E3%80%81%E8%B5%8B%E5%80%BC%E3%80%81%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">实现字符串类，怎样设计拷贝、赋值、析构函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">字符串类的实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D%E3%80%81%E8%B5%8B%E5%80%BC%E3%80%81%E6%9E%90%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">拷贝、赋值、析构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E6%88%96%E8%80%85%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%94%E5%9B%9E%E5%80%BC%E6%98%AF%E5%BC%95%E7%94%A8"><span class="nav-number">3.1.</span> <span class="nav-text">赋值运算或者表达式返回值是引用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8%E4%B8%BA%E7%B1%BB%E9%BB%98%E8%AE%A4%E7%94%9F%E6%88%90%E7%9A%84%E8%BF%99%E5%87%A0%E4%B8%AA"><span class="nav-number">4.</span> <span class="nav-text">编译器为类默认生成的这几个</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA"><span class="nav-number">5.</span> <span class="nav-text">不同构造函数的调用时机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#code"><span class="nav-number">7.</span> <span class="nav-text">code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">8.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E5%87%BD%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">赋值函数</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E6%80%8E%E6%A0%B7%E8%AE%BE%E8%AE%A1%E6%8B%B7%E8%B4%9D-%E8%B5%8B%E5%80%BC-%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text"> 实现字符串类，怎样设计拷贝、赋值、析构函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text"> 字符串类的实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D-%E8%B5%8B%E5%80%BC-%E6%9E%90%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text"> 拷贝、赋值、析构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E6%88%96%E8%80%85%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%94%E5%9B%9E%E5%80%BC%E6%98%AF%E5%BC%95%E7%94%A8"><span class="nav-number">3.1.</span> <span class="nav-text"> 赋值运算或者表达式返回值是引用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8%E4%B8%BA%E7%B1%BB%E9%BB%98%E8%AE%A4%E7%94%9F%E6%88%90%E7%9A%84%E8%BF%99%E5%87%A0%E4%B8%AA"><span class="nav-number">4.</span> <span class="nav-text"> 编译器为类默认生成的这几个</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA"><span class="nav-number">5.</span> <span class="nav-text"> 不同构造函数的调用时机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">6.</span> <span class="nav-text"> 思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#code"><span class="nav-number">7.</span> <span class="nav-text"> code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">8.</span> <span class="nav-text"> 构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E5%87%BD%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text"> 赋值函数</span></a></li></ol>
     </div>
 </div>
 
@@ -486,7 +486,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -499,14 +499,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -612,7 +612,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%EF%BC%8C%E6%80%8E%E6%A0%B7%E8%AE%BE%E8%AE%A1%E6%8B%B7%E8%B4%9D%E3%80%81%E8%B5%8B%E5%80%BC%E3%80%81%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">实现字符串类，怎样设计拷贝、赋值、析构函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">字符串类的实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D%E3%80%81%E8%B5%8B%E5%80%BC%E3%80%81%E6%9E%90%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">拷贝、赋值、析构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E6%88%96%E8%80%85%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%94%E5%9B%9E%E5%80%BC%E6%98%AF%E5%BC%95%E7%94%A8"><span class="nav-number">3.1.</span> <span class="nav-text">赋值运算或者表达式返回值是引用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8%E4%B8%BA%E7%B1%BB%E9%BB%98%E8%AE%A4%E7%94%9F%E6%88%90%E7%9A%84%E8%BF%99%E5%87%A0%E4%B8%AA"><span class="nav-number">4.</span> <span class="nav-text">编译器为类默认生成的这几个</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA"><span class="nav-number">5.</span> <span class="nav-text">不同构造函数的调用时机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">6.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#code"><span class="nav-number">7.</span> <span class="nav-text">code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">8.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E5%87%BD%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">赋值函数</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E6%80%8E%E6%A0%B7%E8%AE%BE%E8%AE%A1%E6%8B%B7%E8%B4%9D-%E8%B5%8B%E5%80%BC-%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text"> 实现字符串类，怎样设计拷贝、赋值、析构函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text"> 字符串类的实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D-%E8%B5%8B%E5%80%BC-%E6%9E%90%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text"> 拷贝、赋值、析构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E6%88%96%E8%80%85%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%94%E5%9B%9E%E5%80%BC%E6%98%AF%E5%BC%95%E7%94%A8"><span class="nav-number">3.1.</span> <span class="nav-text"> 赋值运算或者表达式返回值是引用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%99%A8%E4%B8%BA%E7%B1%BB%E9%BB%98%E8%AE%A4%E7%94%9F%E6%88%90%E7%9A%84%E8%BF%99%E5%87%A0%E4%B8%AA"><span class="nav-number">4.</span> <span class="nav-text"> 编译器为类默认生成的这几个</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA"><span class="nav-number">5.</span> <span class="nav-text"> 不同构造函数的调用时机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">6.</span> <span class="nav-text"> 思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#code"><span class="nav-number">7.</span> <span class="nav-text"> code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">8.</span> <span class="nav-text"> 构造函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E5%87%BD%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text"> 赋值函数</span></a></li></ol>
     </div>
 </div>
 

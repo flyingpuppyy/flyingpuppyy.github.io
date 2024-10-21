@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -239,159 +239,155 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="20220925-函数式编程"><a href="#20220925-函数式编程" class="headerlink" title="20220925 函数式编程"></a>20220925 函数式编程</h1><h1 id="第一次了解"><a href="#第一次了解" class="headerlink" title="第一次了解"></a>第一次了解</h1><h2 id="一、函数式编程"><a href="#一、函数式编程" class="headerlink" title="一、函数式编程"></a>一、函数式编程</h2><p>与 OOP 不同，函数式编程首先将程序分成<strong>输入、中间函数以及输出三个模块</strong>。</p>
-<p> 其中，</p>
+                    <h1 id="20220925-函数式编程"><a class="markdownIt-Anchor" href="#20220925-函数式编程"></a> 20220925 函数式编程</h1>
+<h1 id="第一次了解"><a class="markdownIt-Anchor" href="#第一次了解"></a> 第一次了解</h1>
+<h2 id="一-函数式编程"><a class="markdownIt-Anchor" href="#一-函数式编程"></a> 一、函数式编程</h2>
+<p>与 OOP 不同，函数式编程首先将程序分成<strong>输入、中间函数以及输出三个模块</strong>。</p>
+<p>其中，</p>
 <p>输入模块负责将各种输入设备中的数据<strong>转化</strong>成方便处理的数据结构。</p>
 <p>中间函数<strong>处理</strong>输入数据，输出处理后的数据或状态。</p>
 <p>输出模块再将处理后的内存数据<strong>交给</strong>各种输出设备。</p>
 <p>其中，中间函数要求是纯函数，即没有副作用（不会改变函数帧以外的内存数据）且对相同输入参数永远给出相同返回值的函数。一个复杂的纯函数可以通过更简单的纯函数组合而成。纯函数的特点允许程序员自由调用它们而不必担心环境的变化。</p>
 <p>除了函数组合意外，函数式编程还支持对纯函数的 partial application 和 currying，这很好的避免了代码的重复。</p>
-<h3 id="1-1-创建纯函数"><a href="#1-1-创建纯函数" class="headerlink" title="1.1 创建纯函数"></a>1.1 创建纯函数</h3><p><strong>类成员函数</strong></p>
+<h3 id="11-创建纯函数"><a class="markdownIt-Anchor" href="#11-创建纯函数"></a> 1.1 创建纯函数</h3>
+<p><strong>类成员函数</strong></p>
 <p>由于纯函数不会改变类成员变量，所以要么直接声明成 static 要么用 const 修饰函数。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  传值</span></span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">int</span> <span class="title">increment</span><span class="params">(<span class="type">const</span> <span class="type">int</span> value)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">increment</span><span class="params">(<span class="type">const</span> <span class="type">int</span> value)</span> <span class="type">const</span></span>;</span><br><span class="line"><span class="comment">// 传引用</span></span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">int</span> <span class="title">increment</span><span class="params">(<span class="type">const</span> <span class="type">int</span>&amp; value)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">increment</span><span class="params">(<span class="type">const</span> <span class="type">int</span>&amp; value)</span> <span class="type">const</span></span>;</span><br><span class="line"><span class="comment">// 传指针，形参不必是指针常量</span></span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">const</span> <span class="type">int</span>* <span class="title">increment</span><span class="params">(<span class="type">const</span> <span class="type">int</span>* value)</span></span>;</span><br><span class="line"><span class="function"><span class="type">const</span> <span class="type">int</span>* <span class="title">increment</span><span class="params">(<span class="type">const</span> <span class="type">int</span>* value)</span> <span class="type">const</span></span>;</span><br><span class="line"><span class="comment">// 传指针的引用</span></span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">const</span> <span class="type">int</span>* <span class="title">increment</span><span class="params">(<span class="type">const</span> <span class="type">int</span>* <span class="type">const</span>&amp; value)</span></span>;</span><br><span class="line"><span class="function"><span class="type">const</span> <span class="type">int</span>* <span class="title">increment</span><span class="params">(<span class="type">const</span> <span class="type">int</span>* <span class="type">const</span> &amp; value)</span> <span class="type">const</span></span>;</span><br></pre></td></tr></table></figure>
-
 <p><strong>独立函数</strong></p>
 <p>对于独立的非成员函数，static 和修饰函数的 const 关键字就可以去掉了。</p>
 <p><strong>Lambda 表达式</strong></p>
-<p>Lambda 表达式本质上编译器在编译期间创建的一个类。它将捕获到的变量作为成员变量并重载了”()” 算符实现Lambda函数体。</p>
+<p>Lambda 表达式本质上编译器在编译期间创建的一个类。它将捕获到的变量作为成员变量并重载了&quot;()&quot; 算符实现Lambda函数体。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 捕获值，改变捕获的变量会报错</span></span><br><span class="line"><span class="type">int</span> var = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">auto</span> increment = [var](<span class="type">const</span> <span class="type">int</span> p)&#123;<span class="keyword">return</span> var+p;&#125;; <span class="comment">// 捕获指定变量</span></span><br><span class="line"><span class="keyword">auto</span> increment = [=](<span class="type">const</span> <span class="type">int</span> p)&#123;<span class="keyword">return</span> var+p;&#125;; <span class="comment">// 捕获所有变量</span></span><br><span class="line"><span class="comment">// 尽量避免捕获引用</span></span><br><span class="line"><span class="type">int</span> var = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">auto</span> increment = [&amp;var](<span class="type">const</span> <span class="type">int</span> p)&#123;<span class="keyword">return</span> var + p;&#125;;</span><br><span class="line"><span class="keyword">auto</span> increment = [&amp;](<span class="type">const</span> <span class="type">int</span> p)&#123;<span class="keyword">return</span> var+p;&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-2-Partial-Application-与-Currying"><a href="#1-2-Partial-Application-与-Currying" class="headerlink" title="1.2 Partial Application 与 Currying"></a>1.2 Partial Application 与 Currying</h2><p><strong>Partial Application</strong></p>
-<p>就是通过&#x3D;&#x3D;固定部分函数参数的值&#x3D;&#x3D;来实现新的函数的意思，</p>
+<h2 id="12-partial-application-与-currying"><a class="markdownIt-Anchor" href="#12-partial-application-与-currying"></a> 1.2 Partial Application 与 Currying</h2>
+<p><strong>Partial Application</strong></p>
+<p>就是通过<mark>固定部分函数参数的值</mark>来实现新的函数的意思，</p>
 <p>在 C++ 中主要靠 functional 库中的 bind() 函数来实现。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std::placeholders;</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> addThree = [](<span class="type">const</span> <span class="type">int</span> first, <span class="type">const</span> <span class="type">int</span> second, <span class="type">const</span> <span class="type">int</span> third)&#123;</span><br><span class="line">    <span class="keyword">return</span> first+second+third;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> addTwoNumbersTo10 = <span class="built_in">bind</span>(addThree,<span class="number">10</span>,_1,_2);</span><br><span class="line"><span class="keyword">auto</span> addTo10Plus20 = <span class="built_in">bind</span>(addThree,<span class="number">10</span>,<span class="number">20</span>,_1);</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;doctest.h&quot;</span></span></span><br><span class="line"><span class="built_in">TEST_CASE</span>(<span class="string">&quot;Partial Application&quot;</span>)&#123;</span><br><span class="line">    <span class="built_in">CHECK_EQ</span>(<span class="number">60</span>,<span class="built_in">addTwoNumbersTo10</span>(<span class="number">20</span>,<span class="number">30</span>));</span><br><span class="line">    <span class="built_in">CHECK_EQ</span>(<span class="number">60</span>,<span class="built_in">addTo10Plus20</span>(<span class="number">30</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><strong>Currying</strong></p>
-<p>就是将  f(auto first, auto second,auto third …) </p>
+<p>就是将  f(auto first, auto second,auto third …)</p>
 <p>写成 f(auto first)(auto  second)(auto third)… 的意思。</p>
 <p>主要通过在 Lambda表达式中返回 Lambda 表达式来实现。</p>
 <p>与 Partial  Application 相比，Currying 虽然缺少了指定参数顺序的灵活性，但是语法上更简单。在定义纯函数时，应该尽可能将其  Currying 化。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> curriedAddThree = [](<span class="type">const</span> <span class="type">int</span> first)&#123;</span><br><span class="line">    <span class="keyword">return</span> [first](<span class="type">const</span> <span class="type">int</span> second)&#123;</span><br><span class="line">        <span class="keyword">return</span> [first,second](<span class="type">const</span> <span class="type">int</span> third)&#123;</span><br><span class="line">            <span class="keyword">return</span> first + second + third;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">auto</span> addTo10Plus20 = <span class="built_in">curriedAddThree</span>(<span class="number">10</span>)(<span class="number">20</span>);</span><br><span class="line"><span class="built_in">TEST_CASE</span>(<span class="string">&quot;Add three with curry&quot;</span>)&#123;</span><br><span class="line">    <span class="built_in">CHECK_EQ</span>(<span class="number">42</span>,<span class="built_in">curriedAddThree</span>(<span class="number">15</span>)(<span class="number">10</span>)(<span class="number">17</span>));</span><br><span class="line">    <span class="built_in">CHECK_EQ</span>(<span class="number">60</span>,<span class="built_in">addTo10Plus20</span>(<span class="number">30</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>好怪，不知道在干什么</p>
 </blockquote>
-<hr>
-<h2 id="二、-functional"><a href="#二、-functional" class="headerlink" title="二、 &lt; functional &gt;"></a>二、 &lt; functional &gt;</h2><p><strong>function&lt; T &gt;</strong></p>
+<hr />
+<h2 id="二-functional"><a class="markdownIt-Anchor" href="#二-functional"></a> 二、 &lt; functional &gt;</h2>
+<p><strong>function&lt; T &gt;</strong></p>
 <p>该数据类型可以用于各种函数，如 lambda 表达式，独立函数以及成员函数等。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function&lt;<span class="type">const</span> <span class="type">int</span>(<span class="type">const</span> <span class="type">int</span>)&gt; identity = [](<span class="type">const</span> <span class="type">int</span> value)&#123; <span class="keyword">return</span> value;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">const</span> <span class="type">int</span> <span class="title">f</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> <span class="number">2</span>;&#125;;</span><br><span class="line">function&lt;<span class="type">const</span> <span class="type">int</span>()&gt; fun = f;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">c</span>&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">const</span> <span class="type">int</span> <span class="title">cf</span><span class="params">()</span> <span class="type">const</span> </span>&#123;<span class="keyword">return</span> <span class="number">2</span>;&#125;;</span><br><span class="line">&#125;</span><br><span class="line">function&lt;<span class="type">const</span> <span class="type">int</span>(<span class="type">const</span> c&amp;)&gt; func = &amp;c::<span class="built_in">cf</span>();</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、-algorithms"><a href="#三、-algorithms" class="headerlink" title="三、 &lt; algorithms&gt;"></a>三、 &lt; algorithms&gt;</h2><p><strong>all_of、any_of、none_of</strong></p>
+<h2 id="三-algorithms"><a class="markdownIt-Anchor" href="#三-algorithms"></a> 三、 &lt; algorithms&gt;</h2>
+<p><strong>all_of、any_of、none_of</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">std::vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">auto</span> isEven = [](<span class="type">int</span> i)-&gt;<span class="type">bool</span> &#123;<span class="keyword">return</span> !(i%<span class="number">2</span>);&#125;;</span><br><span class="line"><span class="built_in">CHECK</span>(std::<span class="built_in">all_of</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),isEven)==FALSE);</span><br><span class="line"><span class="built_in">CHECK</span>(std::<span class="built_in">any_of</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),isEven)==TRUE);</span><br><span class="line"><span class="built_in">CHECK</span>(std::<span class="built_in">none_of</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),isEven)==FALSE);</span><br></pre></td></tr></table></figure>
-
 <p><strong>find 系列</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">std::vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">11</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">auto</span> isDividedByThree = [](<span class="type">int</span> i)-&gt;<span class="type">bool</span>&#123;<span class="built_in">return</span> (i%<span class="number">3</span>==<span class="number">0</span>);&#125;;</span><br><span class="line"><span class="comment">// 查找等于给定值的第一个位置，若没有找到则返回last;</span></span><br><span class="line"><span class="keyword">auto</span> it = std::<span class="built_in">find</span>(<span class="keyword">auto</span> first = v.<span class="built_in">begin</span>(),<span class="keyword">auto</span> last = v.<span class="built_in">end</span>(),<span class="number">4</span>);</span><br><span class="line"><span class="comment">// 查找满足/不满足条件的元素的第一个位置</span></span><br><span class="line"><span class="keyword">auto</span> it2 = std::<span class="built_in">find_if</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),isDividedByThree);</span><br><span class="line"><span class="keyword">auto</span> it3 = std::<span class="built_in">find_if_not</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),isDividedByThree);</span><br></pre></td></tr></table></figure>
-
 <p><strong>count 系列</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">std::vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">11</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">auto</span> isDividedByThree = [](<span class="type">int</span> i)-&gt;<span class="type">bool</span>&#123;<span class="built_in">return</span> (i%<span class="number">3</span>==<span class="number">0</span>);&#125;;</span><br><span class="line">std::<span class="built_in">count</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),<span class="number">4</span>);</span><br><span class="line">std::<span class="built_in">count_if</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),isDividedByThree);</span><br></pre></td></tr></table></figure>
-
 <p><strong>copy 系列</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">std::vector&lt;<span class="type">int</span>&gt; v = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">11</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; v1;</span><br><span class="line">std::<span class="built_in">copy</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),v1.<span class="built_in">begin</span>());</span><br><span class="line">std::<span class="built_in">copy_if</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),v1.<span class="built_in">begin</span>(),isEven);</span><br></pre></td></tr></table></figure>
-
 <p><strong>transform</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">std::string <span class="title">s</span><span class="params">(<span class="string">&quot;hello&quot;</span>)</span></span>;</span><br><span class="line">std::<span class="built_in">transform</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>(),s.<span class="built_in">begin</span>(),[](<span class="type">unsigned</span> <span class="type">char</span> c)&#123;<span class="keyword">return</span> std::<span class="built_in">toupper</span>(c)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="四、-numeric"><a href="#四、-numeric" class="headerlink" title="四、&lt; numeric&gt;"></a>四、&lt; numeric&gt;</h2><p><strong>accumulate</strong></p>
+<h2 id="四-numeric"><a class="markdownIt-Anchor" href="#四-numeric"></a> 四、&lt; numeric&gt;</h2>
+<p><strong>accumulate</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对 v 求和，初始值为0</span></span><br><span class="line">std::<span class="built_in">accumulate</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),<span class="number">0</span>);</span><br><span class="line"><span class="comment">// 对 v 求连乘，初始值为1</span></span><br><span class="line">std::<span class="built_in">accumulate</span>(v.<span class="built_in">begin</span>(),v.<span class="built_in">end</span>(),<span class="number">1</span>,std::<span class="built_in">multiply</span>&lt;<span class="type">int</span>&gt;());</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="五、-ranges"><a href="#五、-ranges" class="headerlink" title="五、 &lt; ranges&gt;"></a>五、 &lt; ranges&gt;</h2><p><strong>algorithms</strong></p>
+<h2 id="五-ranges"><a class="markdownIt-Anchor" href="#五-ranges"></a> 五、 &lt; ranges&gt;</h2>
+<p><strong>algorithms</strong></p>
 <p>ranges 重载了 <algorithms> 中的算法，<strong>可以用容器 v 本身代替 v.begin() 和 v.end()。</strong></p>
 <p><strong>views</strong></p>
 <p>views 支持管道算法和惰性求值（Lazy Evaluation），避免了过多的拷贝过程，从而提高了程序运行效率。</p>
 <p>views 不会改变源容器，最后会将满足条件的元素拷贝到一个新的容器中。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// filter and transform</span></span><br><span class="line">    std::vector&lt;<span class="type">int</span>&gt; <span class="type">const</span> vi&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>&#125;;</span><br><span class="line">    <span class="keyword">using</span> <span class="keyword">namespace</span> ranges;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> rng = vi | views::<span class="built_in">filter</span>([](<span class="type">int</span> i) &#123; <span class="keyword">return</span> i % <span class="number">2</span> == <span class="number">0</span>; &#125;) |</span><br><span class="line">               views::<span class="built_in">transform</span>([](<span class="type">int</span> i) &#123; <span class="keyword">return</span> std::<span class="built_in">to_string</span>(i); &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// generate and accumulate</span></span><br><span class="line">    <span class="type">int</span> sum = <span class="built_in">accumulate</span>(views::<span class="built_in">ints</span>(<span class="number">1</span>, unreachable) | views::<span class="built_in">transform</span>([](<span class="type">int</span> i) &#123;</span><br><span class="line">                             <span class="keyword">return</span> i * i;&#125;) | views::<span class="built_in">take</span>(<span class="number">10</span>), <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>除了知道vi在哪里，真不理解这个调用过程又会是怎样完成的</p>
 <p>rng到底再求什么东西啊？？？又按位运算</p>
 </blockquote>
-<h1 id="第二次了解"><a href="#第二次了解" class="headerlink" title="第二次了解"></a>第二次了解</h1><h2 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h2><p>函数式编程是一种声明式的编程风格。它的唯一重点是“<strong>解决什么</strong>”，而命令式风格则主要关注“<strong>如何解决</strong>”。它使用表达式而不是语句。</p>
-<h2 id="函数式编程关键概念"><a href="#函数式编程关键概念" class="headerlink" title="函数式编程关键概念"></a>函数式编程关键概念</h2><ul>
+<h1 id="第二次了解"><a class="markdownIt-Anchor" href="#第二次了解"></a> 第二次了解</h1>
+<h2 id="核心思想"><a class="markdownIt-Anchor" href="#核心思想"></a> 核心思想</h2>
+<p>函数式编程是一种声明式的编程风格。它的唯一重点是“<strong>解决什么</strong>”，而命令式风格则主要关注“<strong>如何解决</strong>”。它使用表达式而不是语句。</p>
+<h2 id="函数式编程关键概念"><a class="markdownIt-Anchor" href="#函数式编程关键概念"></a> 函数式编程关键概念</h2>
+<ul>
 <li>作为第一类对象的函数</li>
 <li>纯函数</li>
 </ul>
-<h2 id="函数式编程规则"><a href="#函数式编程规则" class="headerlink" title="函数式编程规则"></a>函数式编程规则</h2><ul>
+<h2 id="函数式编程规则"><a class="markdownIt-Anchor" href="#函数式编程规则"></a> 函数式编程规则</h2>
+<ul>
 <li><em>不可变变量</em>：在函数式编程中，变量初始化后不能修改。你就是不能。您可以创建新变量，但不能修改现有变量。</li>
 <li><em>无副作用</em>：副作用是当前正在执行的函数之外的状态变化。修改函数外部定义的变量、打印到控制台、引发异常以及从文件中读取数据都是副作用的示例。</li>
-<li><em>无状态：</em>函数内部可能有包含临时状态的局部变量，但该函数<strong>不能引用该函数所属的类或对象的任何成员变量</strong>。状态鼓励导致副作用的可变性。函数式编程不希望你这样做。</li>
+<li>*无状态：*函数内部可能有包含临时状态的局部变量，但该函数<strong>不能引用该函数所属的类或对象的任何成员变量</strong>。状态鼓励导致副作用的可变性。函数式编程不希望你这样做。</li>
 </ul>
 <p>这些是FP的几个关键概念，规则。即使您没有一直遵循所有这些规则，您仍然可以从应用程序中的 FP 思想中受益。无论如何，C++ 从来都不是一种严格或纯粹的函数式编程语言。老实说，函数式编程并不是解决所有问题的正确工具（是的！这是我的观点。将来可能会改变。观点会随着经验而改变！）。现在，让我们了解一下 FP 擅长解决哪些问题。</p>
-<h2 id="作为第一类对象的函数"><a href="#作为第一类对象的函数" class="headerlink" title="作为第一类对象的函数"></a>作为第一类对象的函数</h2><p>在函数式编程世界中，函数是一流的对象。函数被视为任何其他变量。例如，一个函数可以作为参数传递给其他函数，也可以作为值分配给变量。</p>
+<h2 id="作为第一类对象的函数"><a class="markdownIt-Anchor" href="#作为第一类对象的函数"></a> 作为第一类对象的函数</h2>
+<p>在函数式编程世界中，函数是一流的对象。函数被视为任何其他变量。例如，一个函数可以作为参数传递给其他函数，也可以作为值分配给变量。</p>
 <p>在 C++ 中，函数不是第一类对象。我们得到的最接近的是 lambda 表达式。</p>
   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> printText = [](std::string text) &#123; std::cout &lt;&lt; text &lt;&lt; std::endl; &#125;;</span><br></pre></td></tr></table></figure>
-
 <p>上面的代码正在创建一个 lambda <code>printText</code>，它接受一个参数<code>text </code>，打印它并且什么都不返回。<code>[]</code>括号用于指定函数的闭包。更多关于 lambdas 的信息可以在<a class="link"   target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/language/lambda" >这里<i class="fas fa-external-link-alt"></i></a>找到。</p>
 <p>让我们看看我们如何在 C++ vector或任何集合上应用不同的组合器，如过滤器、映射、减少，来看看我们如何做 FP。让我们采用以下vector：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">std::vector&lt;std::string&gt; messages = &#123; <span class="string">&quot;Hello Pal&quot;</span>, <span class="string">&quot;How are you?&quot;</span>, <span class="string">&quot;I&#x27;m still coding in C++&quot;</span> &#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="for-each"><a href="#for-each" class="headerlink" title="for_each"></a>for_each</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">std::for_each(messages.<span class="built_in">begin</span>(), messages.<span class="built_in">end</span>(), printText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<h2 id="for_each"><a class="markdownIt-Anchor" href="#for_each"></a> for_each</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">std::for_each(messages.<span class="built_in">begin</span>(), messages.<span class="built_in">end</span>(), printText);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>前两个参数是集合的开始和结束。然后我们传递的第三个参数是一个对每个元素进行操作的一元 lambda。</p>
 <p>Let’s create a vector of custom student objects and apply the combinators on it.</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    string _name;</span><br><span class="line">    <span class="type">int</span> _score;</span><br><span class="line">    <span class="built_in">Student</span>(string name, <span class="type">int</span> score)</span><br><span class="line">    &#123;</span><br><span class="line">        _name = name;</span><br><span class="line">        _score = score;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">incrementScore</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        _score += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">string <span class="title">name</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> _name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">score</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> _score;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">std::vector&lt;Student&gt; students = &#123;<span class="built_in">Student</span>(<span class="string">&quot;Alice&quot;</span>, <span class="number">85</span>), <span class="built_in">Student</span>(<span class="string">&quot;Bob&quot;</span>, <span class="number">62</span>), <span class="built_in">Student</span>(<span class="string">&quot;Charlie&quot;</span>, <span class="number">81</span>), <span class="built_in">Student</span>(<span class="string">&quot;Jack&quot;</span>, <span class="number">90</span>), <span class="built_in">Student</span>(<span class="string">&quot;Jimmy&quot;</span>, <span class="number">40</span>), <span class="built_in">Student</span>(<span class="string">&quot;Sherlock&quot;</span>, <span class="number">67</span>),&#125;;</span><br></pre></td></tr></table></figure>
-
 <p>Assume, you’re the teacher and want to print their details. Then, you can use for_each to print their details.</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> printStudentDetails = [](Student student) &#123; std::cout &lt;&lt; student.<span class="built_in">name</span>() &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; student.<span class="built_in">score</span>() &lt;&lt; std::endl; &#125;;</span><br><span class="line">std::for_each(students.<span class="built_in">begin</span>(), students.<span class="built_in">end</span>(), printStudentDetails);</span><br></pre></td></tr></table></figure>
-
 <p>In the above code, we have used a printing lambda to print each student’s detail.</p>
-<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>In C++, the equivalent for the functional <code>map</code> is <code>transform</code>. Assume, </p>
-<p>You gave a one mark question with insufficient&#x2F;invalid data </p>
-<p>and want to add one mark to every student. </p>
+<h2 id="map"><a class="markdownIt-Anchor" href="#map"></a> map</h2>
+<p>In C++, the equivalent for the functional <code>map</code> is <code>transform</code>. Assume,</p>
+<p>You gave a one mark question with insufficient/invalid data</p>
+<p>and want to add one mark to every student.</p>
 <p>Then you can use transform to update every student’s score.</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> addOne = [](Student student) &#123; student.<span class="built_in">incrementScore</span>(); <span class="keyword">return</span> student; &#125;;</span><br><span class="line"> std::<span class="built_in">transform</span>(students.<span class="built_in">begin</span>(), students.<span class="built_in">end</span>(), students.<span class="built_in">begin</span>(), addOne);</span><br></pre></td></tr></table></figure>
-
 <p>您必须提供输入集合的开始、结束指针、输出集合的开始指针和操作。您甚至可以<code>transform</code>一次在两个集合上执行。您可以查看它，它超出了本博客的范围。</p>
-<h2 id="筛选"><a href="#筛选" class="headerlink" title="筛选"></a>筛选</h2><p>在 C++ 中，函数<code>filter</code>有许多基于用例的等价物。如果您只想获取具有特定属性的元素的副本，您可以使用<code>copy_if</code>. 无论如何，还有其他功能，例如<code>remove_if</code>,<code>find_if</code>等。并且每个这样的功能都有一个“ <code>not</code>”替代品以及<code>copy_if_not</code>，<code>find_if_not</code>等。</p>
+<h2 id="筛选"><a class="markdownIt-Anchor" href="#筛选"></a> 筛选</h2>
+<p>在 C++ 中，函数<code>filter</code>有许多基于用例的等价物。如果您只想获取具有特定属性的元素的副本，您可以使用<code>copy_if</code>. 无论如何，还有其他功能，例如<code>remove_if</code>,<code>find_if</code>等。并且每个这样的功能都有一个“ <code>not</code>”替代品以及<code>copy_if_not</code>，<code>find_if_not</code>等。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> aboveEighty = [](Student student) &#123; <span class="keyword">return</span> student.<span class="built_in">score</span>() &gt; <span class="number">80</span>; &#125;; </span><br><span class="line"></span><br><span class="line">vector&lt;student</span><br><span class="line">&gt; topStudents = &#123;&#125;; </span><br><span class="line"><span class="keyword">auto</span> it = std::<span class="built_in">copy_if</span>(students.<span class="built_in">begin</span>(),students.<span class="built_in">end</span>(), <span class="built_in">back_inserter</span>(topStudents), aboveEighty); </span><br><span class="line">std::for_each(topStudents.<span class="built_in">begin</span>(), topStudents.<span class="built_in">end</span>(), printStudentDetails);</span><br></pre></td></tr></table></figure>
-
 <p>的语法<code>copy_if</code>是：<code>copy_if(Iterator inputBegin, Iterator inputEnd, Iterator outputBegin, predicate)</code>. 您必须提供输入集合的开始、结束指针、输出集合的开始指针和操作。我使用了<a class="link"   target="_blank" rel="noopener" href="http://www.cplusplus.com/reference/iterator/back_inserter/" >back_inserter_iterator<i class="fas fa-external-link-alt"></i></a>而不是 outputBegin，这使我能够将元素推送到 topStudents 向量中，而无需初始化向量。</p>
-<h2 id="Reduce-or-Fold"><a href="#Reduce-or-Fold" class="headerlink" title="Reduce or Fold"></a>Reduce or Fold</h2><p>The functional <code>reduce</code> equivalent in C++ is <code>accumulate</code>. Assume you’ve a vector with numbers and you want to sum them all.</p>
+<h2 id="reduce-or-fold"><a class="markdownIt-Anchor" href="#reduce-or-fold"></a> Reduce or Fold</h2>
+<p>The functional <code>reduce</code> equivalent in C++ is <code>accumulate</code>. Assume you’ve a vector with numbers and you want to sum them all.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt; numbers&#123;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&#125;;</span><br><span class="line"> std::cout &lt;&lt; std::accumulate(numbers.begin(), numbers.end(), 0,</span><br><span class="line">        [](int first, int second) &#123; return  first + second; &#125;);</span><br></pre></td></tr></table></figure>
-
 <p>You’ll have to provide the begin, end pointers of the input collection, the initial value of the accumulator and a binary lambda. Accumulator can also be applied to our custom students vector. Below code calculates the average score of the classroom.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">auto binaryOp = [](int score, Student student) &#123; return score + student.score(); &#125;;</span><br><span class="line">std::cout &lt;&lt; std::accumulate(students.begin(), students.end(), 0, binaryOp)/students.size();</span><br></pre></td></tr></table></figure>
-
-<h2 id="纯函数"><a href="#纯函数" class="headerlink" title="纯函数"></a>纯函数</h2><p>A function is a pure function if:</p>
+<h2 id="纯函数"><a class="markdownIt-Anchor" href="#纯函数"></a> 纯函数</h2>
+<p>A function is a pure function if:</p>
 <ul>
 <li>The execution of the function has no side effects.</li>
 <li>The return value of the function depends only on the input parameters passed to the function.</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int sum(int a, int b)&#123;</span><br><span class="line">   return a+b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>Above created function is a pure function. Many in-built C++ functions are pure like min, max, strlen, etc. You can write functions which accept all const parameters and don’t change the instance variables. In GCC, you can even mark functions as pure using the “<code>pure</code>” attribute which enables better optimization. If a function is known as pure to the compiler then <a class="link"   target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Loop_optimization" >Loop optimization<i class="fas fa-external-link-alt"></i></a> and <a class="link"   target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Common_subexpression_elimination" >subexpression elimination<i class="fas fa-external-link-alt"></i></a> can be applied to it. But C++ allows side-effects, mutability as well by default.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class NonPureFunctionAndMutatingParametersExample&#123;</span><br><span class="line">    private int total= 0;</span><br><span class="line"></span><br><span class="line">    public int add(int nextValue) &#123;</span><br><span class="line">        this.total+= nextValue;</span><br><span class="line">        return this.total;</span><br><span class="line">    &#125;</span><br><span class="line">    public void incrementScore(Student &amp;student)&#123;</span><br><span class="line">         student.score += 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>In the above code:</p>
 <ul>
 <li>add method is changing the state</li>
 <li>incrementScore method is changing the function parameters</li>
 </ul>
 <p>We should avoid doing the above things unless necessary. Yes, there are cases where side effects, mutability would benefit.</p>
-<p>The rule <em>Immutable variables</em> is a good practice to follow. Once you create a variable and set its value, you can have full confidence knowing that the value of that variable will never change but sometimes it is not suitable. If you’re building an application which has to run in the end-users low configuration machines, then you’ll have limited memory, time. In such cases, it’s suggested to accept the references&#x2F;pointers of the parameters, mutate them to save memory and copying time.</p>
+<p>The rule <em>Immutable variables</em> is a good practice to follow. Once you create a variable and set its value, you can have full confidence knowing that the value of that variable will never change but sometimes it is not suitable. If you’re building an application which has to run in the end-users low configuration machines, then you’ll have limited memory, time. In such cases, it’s suggested to accept the references/pointers of the parameters, mutate them to save memory and copying time.</p>
 <p>The rule <em>No side effects</em> is very helpful. It gives confidence that this function won’t affect the outside world and it’s safe to call it anywhere. But it makes it hard in some scenarios e.g. writing to a database (that is a side effect).</p>
 <p>There are some other concepts, rules like Higher order functions, recursion over loop, etc which can be applied whenever needed.</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>1.第一次看通篇看下来蛮奇怪的，<strong>一点都感受不到什么函数式编程</strong>，只看见一堆lambda狂用</p>
+<h1 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h1>
+<p>1.第一次看通篇看下来蛮奇怪的，<strong>一点都感受不到什么函数式编程</strong>，只看见一堆lambda狂用</p>
 <p>2.函数式编程感觉<strong>就是仿函数和lambda们的使用</strong>，能够通过这种方式来使得<strong>函数能够作为对象进行传参</strong>来被其他可能有改变的（<strong>？？？</strong>）算法或者行为进行调用</p>
-<h1 id="第三次了解"><a href="#第三次了解" class="headerlink" title="第三次了解"></a>第三次了解</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv25550735/" >https://www.bilibili.com/read/cv25550735/<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="第三次了解"><a class="markdownIt-Anchor" href="#第三次了解"></a> 第三次了解</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv25550735/" >https://www.bilibili.com/read/cv25550735/<i class="fas fa-external-link-alt"></i></a></p>
 <blockquote>
 <p>感觉这个讲解的很清楚了</p>
 <p>甚至其他编程范式的区别也很明显的表示出来了</p>
 <ul>
-<li><p>函数作为对象</p>
+<li>
+<p>函数作为对象</p>
 </li>
-<li><p>以函数式作为编程思想的出发点</p>
+<li>
+<p>以函数式作为编程思想的出发点</p>
 </li>
-<li><p><strong>不可变性和无副作用我不太理解</strong></p>
+<li>
+<p><strong>不可变性和无副作用我不太理解</strong></p>
 </li>
-<li><p>介绍了基于函数式编程的几种代码形式</p>
+<li>
+<p>介绍了基于函数式编程的几种代码形式</p>
 <blockquote>
-<p>函数组合 </p>
+<p>函数组合</p>
 <p>Pipeline （链式调用函数对象）</p>
 <p>PointFree （<strong>看不懂</strong>）</p>
 <p>懒惰求值（<strong>这个是在编译器层面做的工作吗？</strong>）</p>
@@ -399,7 +395,8 @@
 <p>MapReduce （<strong>好家伙这么来的是吧</strong>）</p>
 </blockquote>
 </li>
-<li><p>4.1.1 优点</p>
+<li>
+<p>4.1.1 优点</p>
 <p>简洁性：函数式编程通常比命令式编程更简洁，因为它们不需要维护状态或副作用。这使得代码更容易理解和维护。</p>
 <p><strong>可读</strong>性：函数式编程通常更容易阅读，因为它们的代码更加模块化和组合化。这使得代码更容易理解和修改。</p>
 <p>可扩展性：函数式编程通常更容易扩展，因为它们的代码更加模块化和组合化。这使得代码更容易重用和修改。</p>
@@ -443,7 +440,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20221223 arduino</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -457,7 +454,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20220912 快速排序</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -474,15 +471,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -566,7 +563,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20220925-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">20220925 函数式编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">第一次了解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">一、函数式编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%88%9B%E5%BB%BA%E7%BA%AF%E5%87%BD%E6%95%B0"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.1 创建纯函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Partial-Application-%E4%B8%8E-Currying"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 Partial Application 与 Currying</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81-functional"><span class="nav-number">2.3.</span> <span class="nav-text">二、 &lt; functional &gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81-algorithms"><span class="nav-number">2.4.</span> <span class="nav-text">三、 &lt; algorithms&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81-numeric"><span class="nav-number">2.5.</span> <span class="nav-text">四、&lt; numeric&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81-ranges"><span class="nav-number">2.6.</span> <span class="nav-text">五、 &lt; ranges&gt;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">第二次了解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="nav-number">3.1.</span> <span class="nav-text">核心思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%B3%E9%94%AE%E6%A6%82%E5%BF%B5"><span class="nav-number">3.2.</span> <span class="nav-text">函数式编程关键概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%A7%84%E5%88%99"><span class="nav-number">3.3.</span> <span class="nav-text">函数式编程规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E4%B8%BA%E7%AC%AC%E4%B8%80%E7%B1%BB%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">3.4.</span> <span class="nav-text">作为第一类对象的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-each"><span class="nav-number">3.5.</span> <span class="nav-text">for_each</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">3.6.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E9%80%89"><span class="nav-number">3.7.</span> <span class="nav-text">筛选</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reduce-or-Fold"><span class="nav-number">3.8.</span> <span class="nav-text">Reduce or Fold</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%AF%E5%87%BD%E6%95%B0"><span class="nav-number">3.9.</span> <span class="nav-text">纯函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">5.</span> <span class="nav-text">第三次了解</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20220925-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text"> 20220925 函数式编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text"> 第一次了解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text"> 一、函数式编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%88%9B%E5%BB%BA%E7%BA%AF%E5%87%BD%E6%95%B0"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 1.1 创建纯函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-partial-application-%E4%B8%8E-currying"><span class="nav-number">2.2.</span> <span class="nav-text"> 1.2 Partial Application 与 Currying</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-functional"><span class="nav-number">2.3.</span> <span class="nav-text"> 二、 &lt; functional &gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-algorithms"><span class="nav-number">2.4.</span> <span class="nav-text"> 三、 &lt; algorithms&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-numeric"><span class="nav-number">2.5.</span> <span class="nav-text"> 四、&lt; numeric&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94-ranges"><span class="nav-number">2.6.</span> <span class="nav-text"> 五、 &lt; ranges&gt;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text"> 第二次了解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="nav-number">3.1.</span> <span class="nav-text"> 核心思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%B3%E9%94%AE%E6%A6%82%E5%BF%B5"><span class="nav-number">3.2.</span> <span class="nav-text"> 函数式编程关键概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%A7%84%E5%88%99"><span class="nav-number">3.3.</span> <span class="nav-text"> 函数式编程规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E4%B8%BA%E7%AC%AC%E4%B8%80%E7%B1%BB%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">3.4.</span> <span class="nav-text"> 作为第一类对象的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for_each"><span class="nav-number">3.5.</span> <span class="nav-text"> for_each</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">3.6.</span> <span class="nav-text"> map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E9%80%89"><span class="nav-number">3.7.</span> <span class="nav-text"> 筛选</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reduce-or-fold"><span class="nav-number">3.8.</span> <span class="nav-text"> Reduce or Fold</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%AF%E5%87%BD%E6%95%B0"><span class="nav-number">3.9.</span> <span class="nav-text"> 纯函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text"> 总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">5.</span> <span class="nav-text"> 第三次了解</span></a></li></ol>
     </div>
 </div>
 
@@ -593,7 +590,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -606,14 +603,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -719,7 +716,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20220925-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">20220925 函数式编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">第一次了解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">一、函数式编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E5%88%9B%E5%BB%BA%E7%BA%AF%E5%87%BD%E6%95%B0"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.1 创建纯函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Partial-Application-%E4%B8%8E-Currying"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 Partial Application 与 Currying</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81-functional"><span class="nav-number">2.3.</span> <span class="nav-text">二、 &lt; functional &gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81-algorithms"><span class="nav-number">2.4.</span> <span class="nav-text">三、 &lt; algorithms&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81-numeric"><span class="nav-number">2.5.</span> <span class="nav-text">四、&lt; numeric&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81-ranges"><span class="nav-number">2.6.</span> <span class="nav-text">五、 &lt; ranges&gt;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">第二次了解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="nav-number">3.1.</span> <span class="nav-text">核心思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%B3%E9%94%AE%E6%A6%82%E5%BF%B5"><span class="nav-number">3.2.</span> <span class="nav-text">函数式编程关键概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%A7%84%E5%88%99"><span class="nav-number">3.3.</span> <span class="nav-text">函数式编程规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E4%B8%BA%E7%AC%AC%E4%B8%80%E7%B1%BB%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">3.4.</span> <span class="nav-text">作为第一类对象的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-each"><span class="nav-number">3.5.</span> <span class="nav-text">for_each</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">3.6.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E9%80%89"><span class="nav-number">3.7.</span> <span class="nav-text">筛选</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reduce-or-Fold"><span class="nav-number">3.8.</span> <span class="nav-text">Reduce or Fold</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%AF%E5%87%BD%E6%95%B0"><span class="nav-number">3.9.</span> <span class="nav-text">纯函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">5.</span> <span class="nav-text">第三次了解</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20220925-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text"> 20220925 函数式编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text"> 第一次了解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="nav-number">2.1.</span> <span class="nav-text"> 一、函数式编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%88%9B%E5%BB%BA%E7%BA%AF%E5%87%BD%E6%95%B0"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 1.1 创建纯函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-partial-application-%E4%B8%8E-currying"><span class="nav-number">2.2.</span> <span class="nav-text"> 1.2 Partial Application 与 Currying</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-functional"><span class="nav-number">2.3.</span> <span class="nav-text"> 二、 &lt; functional &gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-algorithms"><span class="nav-number">2.4.</span> <span class="nav-text"> 三、 &lt; algorithms&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-numeric"><span class="nav-number">2.5.</span> <span class="nav-text"> 四、&lt; numeric&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94-ranges"><span class="nav-number">2.6.</span> <span class="nav-text"> 五、 &lt; ranges&gt;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text"> 第二次了解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="nav-number">3.1.</span> <span class="nav-text"> 核心思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%85%B3%E9%94%AE%E6%A6%82%E5%BF%B5"><span class="nav-number">3.2.</span> <span class="nav-text"> 函数式编程关键概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E8%A7%84%E5%88%99"><span class="nav-number">3.3.</span> <span class="nav-text"> 函数式编程规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E4%B8%BA%E7%AC%AC%E4%B8%80%E7%B1%BB%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">3.4.</span> <span class="nav-text"> 作为第一类对象的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for_each"><span class="nav-number">3.5.</span> <span class="nav-text"> for_each</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">3.6.</span> <span class="nav-text"> map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%9B%E9%80%89"><span class="nav-number">3.7.</span> <span class="nav-text"> 筛选</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reduce-or-fold"><span class="nav-number">3.8.</span> <span class="nav-text"> Reduce or Fold</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%AF%E5%87%BD%E6%95%B0"><span class="nav-number">3.9.</span> <span class="nav-text"> 纯函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text"> 总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BA%86%E8%A7%A3"><span class="nav-number">5.</span> <span class="nav-text"> 第三次了解</span></a></li></ol>
     </div>
 </div>
 

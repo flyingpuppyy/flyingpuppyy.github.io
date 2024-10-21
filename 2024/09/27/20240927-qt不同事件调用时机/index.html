@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,21 +230,28 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>mousePressEvent（QMouseEvent* event）和mouseDoubleClickEvent（QMouseEvent* event）调用时机的不同 </p>
-<h1 id="chat问答"><a href="#chat问答" class="headerlink" title="chat问答"></a>chat问答</h1><h3 id="1-事件类型："><a href="#1-事件类型：" class="headerlink" title="1.  事件类型："></a>1.  <strong>事件类型：</strong></h3><ul>
-<li><strong><code>mousePressEvent</code></strong>: 该事件在用户按下鼠标按钮时被触发。 无论是单击、双击还是多次点击，只要鼠标按钮被按下，都会调用这个事件处理函数。  </li>
+                    <h1 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h1>
+<p>mousePressEvent（QMouseEvent* event）和mouseDoubleClickEvent（QMouseEvent* event）调用时机的不同</p>
+<h1 id="chat问答"><a class="markdownIt-Anchor" href="#chat问答"></a> chat问答</h1>
+<h3 id="1-事件类型"><a class="markdownIt-Anchor" href="#1-事件类型"></a> 1.  <strong>事件类型：</strong></h3>
+<ul>
+<li><strong><code>mousePressEvent</code></strong>: 该事件在用户按下鼠标按钮时被触发。 无论是单击、双击还是多次点击，只要鼠标按钮被按下，都会调用这个事件处理函数。</li>
 <li><strong><code>mouseDoubleClickEvent</code></strong>: 该事件仅在用户快速连续地按下同一个鼠标按钮两次时被触发。 它是在第一下  <code>mousePressEvent</code> 和第二下  <code>mousePressEvent</code> 之间的时间窗口内被调用的。</li>
 </ul>
-<h3 id="2-事件传播："><a href="#2-事件传播：" class="headerlink" title="2.  事件传播："></a>2.  <strong>事件传播：</strong></h3><ul>
-<li><strong><code>mousePressEvent</code></strong>: 该事件可以被处理并可能继续向上传递，具体取决于开发者在事件处理中的调用  <code>event-&gt;accept()</code> 或  <code>event-&gt;ignore()</code>。 如果被接受，它不会再传播到其他控件。  </li>
+<h3 id="2-事件传播"><a class="markdownIt-Anchor" href="#2-事件传播"></a> 2.  <strong>事件传播：</strong></h3>
+<ul>
+<li><strong><code>mousePressEvent</code></strong>: 该事件可以被处理并可能继续向上传递，具体取决于开发者在事件处理中的调用  <code>event-&gt;accept()</code> 或  <code>event-&gt;ignore()</code>。 如果被接受，它不会再传播到其他控件。</li>
 <li><strong><code>mouseDoubleClickEvent</code></strong>: 这个事件处理通常在  <code>mousePressEvent</code> 之后进行。 只有在没有处理  <code>mousePressEvent</code> 的情况下，双击事件才会被发出。比如，如果在 <code>mousePressEvent</code> 中接受了事件，<code>mouseDoubleClickEvent</code> 就不会被调用。</li>
 </ul>
-<h3 id="3-调用顺序："><a href="#3-调用顺序：" class="headerlink" title="3.  调用顺序："></a>3.  <strong>调用顺序：</strong></h3><blockquote>
+<h3 id="3-调用顺序"><a class="markdownIt-Anchor" href="#3-调用顺序"></a> 3.  <strong>调用顺序：</strong></h3>
+<blockquote>
 <ol>
-<li>单击操作的完整过程通常如下： <ol>
+<li>单击操作的完整过程通常如下：
+<ol>
 <li>用户按下鼠标按钮：触发  <code>mousePressEvent</code></li>
-<li>用户释放鼠标按钮：触发  <code>mouseReleaseEvent</code>（这个事件通常会被视为单击事件） </li>
-<li>如果用户快速连续按下两次鼠标按钮： <ul>
+<li>用户释放鼠标按钮：触发  <code>mouseReleaseEvent</code>（这个事件通常会被视为单击事件）</li>
+<li>如果用户快速连续按下两次鼠标按钮：
+<ul>
 <li>第一次按下：触发 <code>mousePressEvent</code></li>
 <li>第一次释放：触发  <code>mouseReleaseEvent</code></li>
 <li>第二次按下：触发第二个  <code>mousePressEvent</code></li>
@@ -256,7 +263,8 @@
 </li>
 </ol>
 </blockquote>
-<h3 id="4-检测双击："><a href="#4-检测双击：" class="headerlink" title="4.  检测双击："></a>4.  <strong>检测双击：</strong></h3><ul>
+<h3 id="4-检测双击"><a class="markdownIt-Anchor" href="#4-检测双击"></a> 4.  <strong>检测双击：</strong></h3>
+<ul>
 <li>在  <code>mousePressEvent</code> 中可以设置双击检测，决定是否需要执行特定的操作。 双击事件会在确认为双击后立即触发，因此它更适合用于快速交互的操作，比如打开文件或编辑内容。</li>
 </ul>
 
@@ -288,7 +296,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240928 方位线</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -302,7 +310,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240927 投影基本了解</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -319,15 +327,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -411,7 +419,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chat%E9%97%AE%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">chat问答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.  事件类型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%8B%E4%BB%B6%E4%BC%A0%E6%92%AD%EF%BC%9A"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.  事件传播：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F%EF%BC%9A"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.  调用顺序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%A3%80%E6%B5%8B%E5%8F%8C%E5%87%BB%EF%BC%9A"><span class="nav-number">2.0.4.</span> <span class="nav-text">4.  检测双击：</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text"> 问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chat%E9%97%AE%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text"> chat问答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.0.1.</span> <span class="nav-text"> 1.  事件类型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%8B%E4%BB%B6%E4%BC%A0%E6%92%AD"><span class="nav-number">2.0.2.</span> <span class="nav-text"> 2.  事件传播：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F"><span class="nav-number">2.0.3.</span> <span class="nav-text"> 3.  调用顺序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%A3%80%E6%B5%8B%E5%8F%8C%E5%87%BB"><span class="nav-number">2.0.4.</span> <span class="nav-text"> 4.  检测双击：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
@@ -438,7 +446,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -451,14 +459,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -564,7 +572,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chat%E9%97%AE%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">chat问答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.  事件类型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%8B%E4%BB%B6%E4%BC%A0%E6%92%AD%EF%BC%9A"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.  事件传播：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F%EF%BC%9A"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.  调用顺序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%A3%80%E6%B5%8B%E5%8F%8C%E5%87%BB%EF%BC%9A"><span class="nav-number">2.0.4.</span> <span class="nav-text">4.  检测双击：</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text"> 问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chat%E9%97%AE%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text"> chat问答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.0.1.</span> <span class="nav-text"> 1.  事件类型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%8B%E4%BB%B6%E4%BC%A0%E6%92%AD"><span class="nav-number">2.0.2.</span> <span class="nav-text"> 2.  事件传播：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F"><span class="nav-number">2.0.3.</span> <span class="nav-text"> 3.  调用顺序：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%A3%80%E6%B5%8B%E5%8F%8C%E5%87%BB"><span class="nav-number">2.0.4.</span> <span class="nav-text"> 4.  检测双击：</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 

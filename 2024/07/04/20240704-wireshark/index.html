@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,11 +230,13 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="wireshark使用没有相关接口显示"><a href="#wireshark使用没有相关接口显示" class="headerlink" title="wireshark使用没有相关接口显示"></a>wireshark使用没有相关接口显示</h1><p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/littlle_yan/article/details/79403680" >https://blog.csdn.net/littlle_yan/article/details/79403680<i class="fas fa-external-link-alt"></i></a></p>
+                    <h1 id="wireshark使用没有相关接口显示"><a class="markdownIt-Anchor" href="#wireshark使用没有相关接口显示"></a> wireshark使用没有相关接口显示</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/littlle_yan/article/details/79403680" >https://blog.csdn.net/littlle_yan/article/details/79403680<i class="fas fa-external-link-alt"></i></a></p>
 <p>我遇到这个问题是出现在Win10系统中，出现这个问题的原因是Wireshark中由于自带的Winpcap不支持Win10。</p>
 <p>1.这个问题的解决方法是下载一个Win10支持的Winpcap，下载链接为<a class="link"   target="_blank" rel="noopener" href="http://www.win10pcap.org/download/" >点击打开链接<i class="fas fa-external-link-alt"></i></a>，界面如图：</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240704231956260.png"  alt="image-20240704231956260"></p>
-<h1 id="Winpcap"><a href="#Winpcap" class="headerlink" title="Winpcap"></a>Winpcap</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/happygirl-zjj/p/6247271.html" >https://www.cnblogs.com/happygirl-zjj/p/6247271.html<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240704231956260.png"  alt="image-20240704231956260" ></p>
+<h1 id="winpcap"><a class="markdownIt-Anchor" href="#winpcap"></a> Winpcap</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/happygirl-zjj/p/6247271.html" >https://www.cnblogs.com/happygirl-zjj/p/6247271.html<i class="fas fa-external-link-alt"></i></a></p>
 <p>WinPcap 是由伯克利分组捕获库派生而来的分组捕获库，<strong>它是在Windows 操作平台上来实现对底层包的截取过滤。</strong></p>
 <blockquote>
 <p>作用</p>
@@ -242,87 +244,107 @@
 <p>WinPcap 是 BPF 模型和 Libpcap 函数库在 Windows 平台下网络数据包捕获和网络状态分析的一种体系结构，这个体系结构是由一个核心的包过滤驱动程序，一个底层的动态连接库 Packet.dll 和一个高层的独立于系统的函数库 Libpcap 组成。</p>
 <p>底层的包 捕获驱动程序实际为一个协议网 络驱动程序，通过对 NDIS 中函数的调用为 Win95、Win98、WinNT、和  Win2000 提供一类似于 UNIX 系统 下 Berkeley Packet Filter  的捕获和发送原始数据包的能力。</p>
 <p>Packet.dll 是对这个 BPF 驱动程序进行访问 的 API 接口，同时它有一套符合 Libpcap  接口（UNIX 下的捕获函数库）的函数库。</p>
-<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><p>WinPcap 包括三个部分：</p>
+<h2 id="组成部分"><a class="markdownIt-Anchor" href="#组成部分"></a> 组成部分</h2>
+<p>WinPcap 包括三个部分：</p>
 <p>第一个模块NPF(Netgroup Packet  Filter)，是一个虚拟设备驱动程序文件。</p>
 <p><strong>它的功能是过滤数据包</strong>，并把这些数据包原封不动地传给用户态模块，这个过程中包括了一些操作系统特有的代码。</p>
 <p>第二个模块packet.dll为win32平台提供了一个公共的接口。不同版本的Windows系统都有自己的内核模块和用户层模块。Packet.dll用于解决这些不同。<strong>调用Packet.dll的程序可以运行 在不同版本的Windows平台上，而无需重新编译。</strong></p>
-<p> 第三个模块 <strong>Wpcap.dll是不依赖于操作系统的</strong>。它提供了更加高层、抽象的函数。<br>　 　<strong>packet.dll和Wpcap.dll：packet.dll直接映射了内核的调用</strong>。</p>
+<p>第三个模块 <strong>Wpcap.dll是不依赖于操作系统的</strong>。它提供了更加高层、抽象的函数。<br />
+　 　<strong>packet.dll和Wpcap.dll：packet.dll直接映射了内核的调用</strong>。</p>
 <blockquote>
 <p>好牛，谁写的</p>
 </blockquote>
-<p> Wpcap.dll提供了更加友好、功能更加强大的函数调  用。</p>
+<p>Wpcap.dll提供了更加友好、功能更加强大的函数调  用。</p>
 <p>WinPcap的优势提供了一套标准的抓包接口，与libpcap兼容，可使得原来许多UNIX平台下的网络分析工具快速移植过来便于开发各种网络分 析工具，充分考虑了各种性能和效率的优化，包括对于NPF内核层次上的过滤器支持，支持内核态的统计模式，提供了发送数据包的能力。</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>Winpcap(windows packet capture)是windows平台下一个免费，公共的网络访问系统。</p>
-<p>　　它有如下几个功能：</p>
-<p>　　1、捕获原始数据包，包括在共享网络上各主机发送&#x2F;接收的以及相互之间交换的数据；</p>
-<p>　　&#x3D;&#x3D;2、在数据包发往应用程序之前，按照自定义的规则将某些特殊的数据包过滤掉&#x3D;&#x3D;</p>
-<p>　　3、在网络上发送原始的数据包； </p>
-<p>　　4、收集网络通信过程中的统计信息。 </p>
-<hr>
+<h2 id="3"><a class="markdownIt-Anchor" href="#3"></a> 3</h2>
+<p>Winpcap(windows packet capture)是windows平台下一个免费，公共的网络访问系统。</p>
+<p>它有如下几个功能：</p>
+<p>1、捕获原始数据包，包括在共享网络上各主机发送/接收的以及相互之间交换的数据；</p>
+<p><mark>2、在数据包发往应用程序之前，按照自定义的规则将某些特殊的数据包过滤掉</mark></p>
+<p>3、在网络上发送原始的数据包；</p>
+<p>4、收集网络通信过程中的统计信息。</p>
+<hr />
 <p>​    从上面的功能来看，这个库文件提供了许多的API函数，可以让我们捕获网络上的数据包以及统计网络通信的信息。为了更直观的反应这个库文件的作用，我们来看看利用这个库文件写出来的一个应用软件，wireshark。界面如下图所示，这个界面只是捕获数据的一个小界面，里面有很多的设置，有兴趣可以下载一个试试。他能统计在一个局域网的所有网络信息。</p>
 <p>这里面重要一点，需要提醒的是：<strong>winpcap的主要功能在于独立于主机协议（如TCP-IP)而发送和接收原始数据包。</strong></p>
-<p>也就是说，&#x3D;&#x3D;winpcap不能阻塞，过滤或控制其他应用程序数据包的发收&#x3D;&#x3D;，它仅仅只是监听共享网络上传送的数据包。也就是说，WinpCap主要功能不能截取网络中的数据，他只能监听里面的数据。</p>
+<p>也就是说，<mark>winpcap不能阻塞，过滤或控制其他应用程序数据包的发收</mark>，它仅仅只是监听共享网络上传送的数据包。也就是说，WinpCap主要功能不能截取网络中的数据，他只能监听里面的数据。</p>
 <blockquote>
 <p>谁的资料，前后矛盾啊西巴？</p>
 </blockquote>
-<p>　　对于WinpCap的结构以及原理，我们自然可以不用理会啦，我们只需要知道他的用途就行啦！</p>
-<h2 id="抓包原理"><a href="#抓包原理" class="headerlink" title="抓包原理"></a>抓包原理</h2><h1 id="Wireshark使用笔记"><a href="#Wireshark使用笔记" class="headerlink" title="Wireshark使用笔记"></a>Wireshark使用笔记</h1><blockquote>
+<p>对于WinpCap的结构以及原理，我们自然可以不用理会啦，我们只需要知道他的用途就行啦！</p>
+<h2 id="抓包原理"><a class="markdownIt-Anchor" href="#抓包原理"></a> 抓包原理</h2>
+<h1 id="wireshark使用笔记"><a class="markdownIt-Anchor" href="#wireshark使用笔记"></a> Wireshark使用笔记</h1>
+<blockquote>
 <p>Wireshark使用笔记，转载&amp;学习《<a class="link"   target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/aF8wZRM5Ppo5xXT61GBrrQ" >超详细的Wireshark使用教程<i class="fas fa-external-link-alt"></i></a>》，并结合自己操作写以下笔记。</p>
 </blockquote>
-<h2 id="wireshark？"><a href="#wireshark？" class="headerlink" title="wireshark？"></a>wireshark？</h2><p>wireshark是非常流行的<strong>网络封包分析软件</strong>，简称小鲨鱼，功能十分强大。可以截取各种网络封包，显示网络封包的详细信息。</p>
-<p>wireshark是开源软件，可以放心使用。可以运行在Windows和MacOS上。对应的，linux下的抓包工具是 <strong>tcpdump</strong>（接下来好好研究一下）。<br>使用wireshark的人<strong>必须了解网络协议</strong>，否则就看不懂wireshark了。</p>
-<h2 id="Wireshark常用应用场景"><a href="#Wireshark常用应用场景" class="headerlink" title="Wireshark常用应用场景"></a>Wireshark常用应用场景</h2><ol>
+<h2 id="wireshark"><a class="markdownIt-Anchor" href="#wireshark"></a> wireshark？</h2>
+<p>wireshark是非常流行的<strong>网络封包分析软件</strong>，简称小鲨鱼，功能十分强大。可以截取各种网络封包，显示网络封包的详细信息。</p>
+<p>wireshark是开源软件，可以放心使用。可以运行在Windows和MacOS上。对应的，linux下的抓包工具是 <strong>tcpdump</strong>（接下来好好研究一下）。<br />
+使用wireshark的人<strong>必须了解网络协议</strong>，否则就看不懂wireshark了。</p>
+<h2 id="wireshark常用应用场景"><a class="markdownIt-Anchor" href="#wireshark常用应用场景"></a> Wireshark常用应用场景</h2>
+<ol>
 <li>网络管理员会使用wireshark来检查网络问题</li>
 <li>软件测试工程师使用wireshark抓包，来分析自己测试的软件</li>
 <li>从事socket编程的工程师会用wireshark来调试</li>
 <li>运维人员用于日常工作，应急响应等</li>
 </ol>
 <p>总之跟网络相关的东西，都可能会用到wireshark</p>
-<h2 id="Wireshark抓包原理"><a href="#Wireshark抓包原理" class="headerlink" title="Wireshark抓包原理"></a>Wireshark抓包原理</h2><p>Wireshark使用WinPCAP作为接口，直接与网卡进行数据报文交换。</p>
+<h2 id="wireshark抓包原理"><a class="markdownIt-Anchor" href="#wireshark抓包原理"></a> Wireshark抓包原理</h2>
+<p>Wireshark使用WinPCAP作为接口，直接与网卡进行数据报文交换。</p>
 <blockquote>
-<p>Winpcap(windows packet  capture)是windows平台下一个免费，公共的网络访问系统，winpcap是libpcap【是unix&#x2F;linux平台下的网络数据包捕获函数包】在windows上的对应物。</p>
-<p>简单来说，wireshark就是&#x3D;&#x3D;基于winpcap处理网络驱动层&#x3D;&#x3D;，就是里面套了一个Winpcap。</p>
+<p>Winpcap(windows packet  capture)是windows平台下一个免费，公共的网络访问系统，winpcap是libpcap【是unix/linux平台下的网络数据包捕获函数包】在windows上的对应物。</p>
+<p>简单来说，wireshark就是<mark>基于winpcap处理网络驱动层</mark>，就是里面套了一个Winpcap。</p>
 <p>关于Winpcap更多学习参考：<a class="link"   target="_blank" rel="noopener" href="http://t.zoukankan.com/yingfang18-p-1889596.html" >http://t.zoukankan.com/yingfang18-p-1889596.html<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
 <p>Wireshark使用的环境大致分为两种，一种是电脑直连网络的单机环境，另外一种就是应用比较多的网络环境，即连接交换机的情况。</p>
 <ul>
-<li>&#x3D;&#x3D;「单机情况」下，Wireshark直接抓取本机网卡的网络流量；&#x3D;&#x3D;</li>
-<li>&#x3D;&#x3D;「交换机情况」下，Wireshark通过<strong>端口镜像</strong>、<strong>ARP欺骗</strong>等方式获取局域网中的网络流量。&#x3D;&#x3D;</li>
+<li><mark>「单机情况」下，Wireshark直接抓取本机网卡的网络流量；</mark></li>
+<li><mark>「交换机情况」下，Wireshark通过<strong>端口镜像</strong>、<strong>ARP欺骗</strong>等方式获取局域网中的网络流量。</mark></li>
 </ul>
 <ul>
-<li><p>&#x3D;&#x3D;端口镜像：利用交换机的接口，将局域网的网络流量转发到指定电脑的网卡上。&#x3D;&#x3D;</p>
+<li>
+<p><mark>端口镜像：利用交换机的接口，将局域网的网络流量转发到指定电脑的网卡上。</mark></p>
 </li>
-<li><p>&#x3D;&#x3D;ARP欺骗：交换机根据MAC地址转发数据，伪装其他终端的MAC地址，从而获取局域网的网络流量。&#x3D;&#x3D;</p>
+<li>
+<p><mark>ARP欺骗：交换机根据MAC地址转发数据，伪装其他终端的MAC地址，从而获取局域网的网络流量。</mark></p>
 </li>
 </ul>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/pam-sh/p/16984002.html" >https://www.cnblogs.com/pam-sh/p/16984002.html<i class="fas fa-external-link-alt"></i></a></p>
-<h1 id="Wiresharks分析"><a href="#Wiresharks分析" class="headerlink" title="Wiresharks分析"></a>Wiresharks分析</h1><p>Packet Details Pane(数据包详细信息), 在数据包列表中选择指定数据包，在数据包详细信息中会显示数据包的所有详细信息内容。数据包详细信息面板是最重要的，用来查看协议中的每一个字段。各行信息分别为</p>
+<h1 id="wiresharks分析"><a class="markdownIt-Anchor" href="#wiresharks分析"></a> Wiresharks分析</h1>
+<p>Packet Details Pane(数据包详细信息), 在数据包列表中选择指定数据包，在数据包详细信息中会显示数据包的所有详细信息内容。数据包详细信息面板是最重要的，用来查看协议中的每一个字段。各行信息分别为</p>
 <p>（1）Frame:  物理层的数据帧概况</p>
 <p>（2）Ethernet II: 数据链路层以太网帧头部信息</p>
 <p>（3）Internet Protocol Version 4: 互联网层IP包头部信息</p>
 <p>（4）Transmission Control Protocol: 传输层T的数据段头部信息，此处是TCP</p>
 <p>（5）Hypertext Transfer Protocol: 应用层的信息，此处是HTTP协议</p>
-<h1 id="TCP相关细节信息"><a href="#TCP相关细节信息" class="headerlink" title="TCP相关细节信息"></a>TCP相关细节信息</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240705093220489.png"  alt="image-20240705093220489"></p>
+<h1 id="tcp相关细节信息"><a class="markdownIt-Anchor" href="#tcp相关细节信息"></a> TCP相关细节信息</h1>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240705093220489.png"  alt="image-20240705093220489" ></p>
 <blockquote>
 <p>一一点开都可以<strong>在右侧</strong>看到对应的包的</p>
 <p>对应数据</p>
 <p>即以数据对应的位置</p>
 <p>具体的包的数据要看对照下面的图来进行查看</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240705093126171.png"  alt="image-20240705093126171"></p>
-<h1 id="基本筛选"><a href="#基本筛选" class="headerlink" title="基本筛选"></a>基本筛选</h1><h1 id="一般网络问题及其分析"><a href="#一般网络问题及其分析" class="headerlink" title="一般网络问题及其分析"></a>一般网络问题及其分析</h1><ul>
-<li><pre><code>存在延迟，延迟点的查看即查看峰值较高的点(这个图没找到在哪)
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240705093126171.png"  alt="image-20240705093126171" ></p>
+<h1 id="基本筛选"><a class="markdownIt-Anchor" href="#基本筛选"></a> 基本筛选</h1>
+<h1 id="一般网络问题及其分析"><a class="markdownIt-Anchor" href="#一般网络问题及其分析"></a> 一般网络问题及其分析</h1>
+<ul>
+<li>
+<pre class="highlight"><code class="">存在延迟，延迟点的查看即查看峰值较高的点(这个图没找到在哪)
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* ```</span><br><span class="line">  因为ack包无数据，若延迟过高，则判断为线路问题。</span><br><span class="line">  http get请求包延迟高，则判断为客户端问题。</span><br><span class="line">  http get相应包延迟高，则判断为服务器端问题。</span><br></pre></td></tr></table></figure>
+
 </code></pre>
 </li>
-<li><pre><code>TCP SYN扫描是依赖于三次握手来确定目标主机上哪些端口是开放的。
+<li>
+<pre class="highlight"><code class="">TCP SYN扫描是依赖于三次握手来确定目标主机上哪些端口是开放的。
 攻击者会发送TCP SYN数据包到目标主机的一个范围的端口上，假装是要进行建立正常的通信连接，这也是TCP三次握手的第一次。
 若目标机器回复了TCP SYN/ACK数据包，则表明该端口是打开的，且这时候攻击者是不进行任何回复的，这样导致目标主机会进行3次重传SYN/ACK；若攻击者收到相应的RST数据包，表明端口已经关闭了；
 若攻击者没有收到任何响应，则意味着端口被某个中间设备过滤了，可能是防火墙或者主机本身。
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* ```</span><br><span class="line">  网络延迟高---wireshark解析：https://www.ktanx.com/blog/p/4124</span><br><span class="line">  sys、sys,ack、ack这些报文因为不需要进行应用程序处理，所以即使服务器繁忙，也可以快速回复。</span><br><span class="line">  线路延迟高：客户端发起tcp连接请求，发出sys包，接收回复的sys，ack包慢，则可以判断为线路延迟高。</span><br><span class="line">  客户端负载高：客户端收到sys，ack包后，快速响应，发出ack包；但是之后的data包却延迟较高。这很可能是由于客户端负载高，导致应用层数据包封装慢导致的。</span><br><span class="line">  服务器负载高：服务器在收到请求，例如在接收到get请求后，快速响应ack包，但是之后的data包却延迟高，这很可能是由于服务器负载高，导致应用层数据包封装慢导致的。</span><br></pre></td></tr></table></figure>
+
 </code></pre>
 </li>
-<li><pre><code>针对不存在端口的连接请求
+<li>
+<pre class="highlight"><code class="">针对不存在端口的连接请求
         客户端尝试与服务器未对外提供服务的端口建立TCP连接，服务器将会直接向客户端发送reset报文。
         
     2、接收端收到TCP报文，但是发现该TCP的报文，并不在其已建立的TCP连接列表内，则其直接向对端发送reset报文（例如TCP 半开连接）
@@ -346,7 +368,10 @@
 
     5、有些应用开发者在设计应用系统时，会利用reset报文快速释放已经完成数据交互的TCP连接，以提高业务交互的效率
 </code></pre>
-<h1 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h1><p>一站式学习Wireshark：<a class="link"   target="_blank" rel="noopener" href="https://www.ktanx.com/blog/p/4112" >https://www.ktanx.com/blog/p/4112<i class="fas fa-external-link-alt"></i></a><br>wireshark样本下载：<a class="link"   target="_blank" rel="noopener" href="https://wiki.wireshark.org/SampleCaptures" >https://wiki.wireshark.org/SampleCaptures<i class="fas fa-external-link-alt"></i></a><br>Wireshark中常见的TCP Info ：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/faithc/article/details/52832617" >https://blog.csdn.net/faithc/article/details/52832617<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="参考网站"><a class="markdownIt-Anchor" href="#参考网站"></a> 参考网站</h1>
+<p>一站式学习Wireshark：<a class="link"   target="_blank" rel="noopener" href="https://www.ktanx.com/blog/p/4112" >https://www.ktanx.com/blog/p/4112<i class="fas fa-external-link-alt"></i></a><br />
+wireshark样本下载：<a class="link"   target="_blank" rel="noopener" href="https://wiki.wireshark.org/SampleCaptures" >https://wiki.wireshark.org/SampleCaptures<i class="fas fa-external-link-alt"></i></a><br />
+Wireshark中常见的TCP Info ：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/faithc/article/details/52832617" >https://blog.csdn.net/faithc/article/details/52832617<i class="fas fa-external-link-alt"></i></a></p>
 </li>
 </ul>
 
@@ -378,7 +403,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240705 嵌入式C语言自我修养</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -392,7 +417,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240704 windows探索</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -409,15 +434,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -501,7 +526,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#wireshark%E4%BD%BF%E7%94%A8%E6%B2%A1%E6%9C%89%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3%E6%98%BE%E7%A4%BA"><span class="nav-number">1.</span> <span class="nav-text">wireshark使用没有相关接口显示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Winpcap"><span class="nav-number">2.</span> <span class="nav-text">Winpcap</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="nav-number">2.1.</span> <span class="nav-text">组成部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">2.2.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8C%85%E5%8E%9F%E7%90%86"><span class="nav-number">2.3.</span> <span class="nav-text">抓包原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wireshark%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text">Wireshark使用笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wireshark%EF%BC%9F"><span class="nav-number">3.1.</span> <span class="nav-text">wireshark？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wireshark%E5%B8%B8%E7%94%A8%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.2.</span> <span class="nav-text">Wireshark常用应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wireshark%E6%8A%93%E5%8C%85%E5%8E%9F%E7%90%86"><span class="nav-number">3.3.</span> <span class="nav-text">Wireshark抓包原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wiresharks%E5%88%86%E6%9E%90"><span class="nav-number">4.</span> <span class="nav-text">Wiresharks分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP%E7%9B%B8%E5%85%B3%E7%BB%86%E8%8A%82%E4%BF%A1%E6%81%AF"><span class="nav-number">5.</span> <span class="nav-text">TCP相关细节信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%AD%9B%E9%80%89"><span class="nav-number">6.</span> <span class="nav-text">基本筛选</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E5%88%86%E6%9E%90"><span class="nav-number">7.</span> <span class="nav-text">一般网络问题及其分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E7%AB%99"><span class="nav-number">8.</span> <span class="nav-text">参考网站</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#wireshark%E4%BD%BF%E7%94%A8%E6%B2%A1%E6%9C%89%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3%E6%98%BE%E7%A4%BA"><span class="nav-number">1.</span> <span class="nav-text"> wireshark使用没有相关接口显示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#winpcap"><span class="nav-number">2.</span> <span class="nav-text"> Winpcap</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="nav-number">2.1.</span> <span class="nav-text"> 组成部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">2.2.</span> <span class="nav-text"> 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8C%85%E5%8E%9F%E7%90%86"><span class="nav-number">2.3.</span> <span class="nav-text"> 抓包原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wireshark%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text"> Wireshark使用笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wireshark"><span class="nav-number">3.1.</span> <span class="nav-text"> wireshark？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wireshark%E5%B8%B8%E7%94%A8%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.2.</span> <span class="nav-text"> Wireshark常用应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wireshark%E6%8A%93%E5%8C%85%E5%8E%9F%E7%90%86"><span class="nav-number">3.3.</span> <span class="nav-text"> Wireshark抓包原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wiresharks%E5%88%86%E6%9E%90"><span class="nav-number">4.</span> <span class="nav-text"> Wiresharks分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tcp%E7%9B%B8%E5%85%B3%E7%BB%86%E8%8A%82%E4%BF%A1%E6%81%AF"><span class="nav-number">5.</span> <span class="nav-text"> TCP相关细节信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%AD%9B%E9%80%89"><span class="nav-number">6.</span> <span class="nav-text"> 基本筛选</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E5%88%86%E6%9E%90"><span class="nav-number">7.</span> <span class="nav-text"> 一般网络问题及其分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E7%AB%99"><span class="nav-number">8.</span> <span class="nav-text"> 参考网站</span></a></li></ol>
     </div>
 </div>
 
@@ -528,7 +553,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -541,14 +566,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -654,7 +679,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#wireshark%E4%BD%BF%E7%94%A8%E6%B2%A1%E6%9C%89%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3%E6%98%BE%E7%A4%BA"><span class="nav-number">1.</span> <span class="nav-text">wireshark使用没有相关接口显示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Winpcap"><span class="nav-number">2.</span> <span class="nav-text">Winpcap</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="nav-number">2.1.</span> <span class="nav-text">组成部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">2.2.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8C%85%E5%8E%9F%E7%90%86"><span class="nav-number">2.3.</span> <span class="nav-text">抓包原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wireshark%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text">Wireshark使用笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wireshark%EF%BC%9F"><span class="nav-number">3.1.</span> <span class="nav-text">wireshark？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wireshark%E5%B8%B8%E7%94%A8%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.2.</span> <span class="nav-text">Wireshark常用应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wireshark%E6%8A%93%E5%8C%85%E5%8E%9F%E7%90%86"><span class="nav-number">3.3.</span> <span class="nav-text">Wireshark抓包原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wiresharks%E5%88%86%E6%9E%90"><span class="nav-number">4.</span> <span class="nav-text">Wiresharks分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP%E7%9B%B8%E5%85%B3%E7%BB%86%E8%8A%82%E4%BF%A1%E6%81%AF"><span class="nav-number">5.</span> <span class="nav-text">TCP相关细节信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%AD%9B%E9%80%89"><span class="nav-number">6.</span> <span class="nav-text">基本筛选</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E5%88%86%E6%9E%90"><span class="nav-number">7.</span> <span class="nav-text">一般网络问题及其分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E7%AB%99"><span class="nav-number">8.</span> <span class="nav-text">参考网站</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#wireshark%E4%BD%BF%E7%94%A8%E6%B2%A1%E6%9C%89%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3%E6%98%BE%E7%A4%BA"><span class="nav-number">1.</span> <span class="nav-text"> wireshark使用没有相关接口显示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#winpcap"><span class="nav-number">2.</span> <span class="nav-text"> Winpcap</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="nav-number">2.1.</span> <span class="nav-text"> 组成部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3"><span class="nav-number">2.2.</span> <span class="nav-text"> 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8C%85%E5%8E%9F%E7%90%86"><span class="nav-number">2.3.</span> <span class="nav-text"> 抓包原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wireshark%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text"> Wireshark使用笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wireshark"><span class="nav-number">3.1.</span> <span class="nav-text"> wireshark？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wireshark%E5%B8%B8%E7%94%A8%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">3.2.</span> <span class="nav-text"> Wireshark常用应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wireshark%E6%8A%93%E5%8C%85%E5%8E%9F%E7%90%86"><span class="nav-number">3.3.</span> <span class="nav-text"> Wireshark抓包原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wiresharks%E5%88%86%E6%9E%90"><span class="nav-number">4.</span> <span class="nav-text"> Wiresharks分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tcp%E7%9B%B8%E5%85%B3%E7%BB%86%E8%8A%82%E4%BF%A1%E6%81%AF"><span class="nav-number">5.</span> <span class="nav-text"> TCP相关细节信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%AD%9B%E9%80%89"><span class="nav-number">6.</span> <span class="nav-text"> 基本筛选</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E5%88%86%E6%9E%90"><span class="nav-number">7.</span> <span class="nav-text"> 一般网络问题及其分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E7%AB%99"><span class="nav-number">8.</span> <span class="nav-text"> 参考网站</span></a></li></ol>
     </div>
 </div>
 

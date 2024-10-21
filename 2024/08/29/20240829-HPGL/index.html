@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,16 +230,21 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="HPGL基本指令手册"><a href="#HPGL基本指令手册" class="headerlink" title="HPGL基本指令手册"></a>HPGL基本指令手册</h1><p>以下是HPGL文档的翻译：</p>
-<hr>
+                    <h1 id="hpgl基本指令手册"><a class="markdownIt-Anchor" href="#hpgl基本指令手册"></a> HPGL基本指令手册</h1>
+<p>以下是HPGL文档的翻译：</p>
+<hr />
 <p><strong>使用HPGL作为绘图交换媒介</strong></p>
-<p>（不要这么做！遗憾的是，许多DOS&#x2F;Windows系统仍然坚持这样做）</p>
-<p><em>作者：Paul Bourke</em><br><em>1992年9月</em></p>
+<p>（不要这么做！遗憾的是，许多DOS/Windows系统仍然坚持这样做）</p>
+<p><em>作者：Paul Bourke</em><br />
+<em>1992年9月</em></p>
 <p>此文档的俄文版由Sergey Paramonov提供。（您需要俄文字体集！）</p>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>HPGL是为HP系列绘图仪设计的HP图形语言，用于指定二维图形信息。HPGL最初并不是作为一种数据交换格式而设计的，但一些软件供应商却将其用作这种用途。尽管如此，它确实高效且易于书写和阅读。本文简要描述了HPGL用于描述几何图形的那些部分。HPGL语言本身包含大量指令，其中大多数指令与绘图仪设备直接相关。关于该语言的完整描述，通常与兼容HPGL的绘图仪一起提供。</p>
-<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><p>HPGL命令基本上由两个大写字母组成的指令、后随的任何参数以及最后的分隔符字符组成，默认情况下是分号。参数通常用逗号分隔。字符串参数通常以回车符结束。</p>
+<h3 id="介绍"><a class="markdownIt-Anchor" href="#介绍"></a> 介绍</h3>
+<p>HPGL是为HP系列绘图仪设计的HP图形语言，用于指定二维图形信息。HPGL最初并不是作为一种数据交换格式而设计的，但一些软件供应商却将其用作这种用途。尽管如此，它确实高效且易于书写和阅读。本文简要描述了HPGL用于描述几何图形的那些部分。HPGL语言本身包含大量指令，其中大多数指令与绘图仪设备直接相关。关于该语言的完整描述，通常与兼容HPGL的绘图仪一起提供。</p>
+<h3 id="基础"><a class="markdownIt-Anchor" href="#基础"></a> 基础</h3>
+<p>HPGL命令基本上由两个大写字母组成的指令、后随的任何参数以及最后的分隔符字符组成，默认情况下是分号。参数通常用逗号分隔。字符串参数通常以回车符结束。</p>
 <p>在接下来的内容中，将列出所有标准的HPGL命令，那些可能对数据交换有用的命令将在本文档的末尾讨论。任何命令的可选参数都用括号表示。</p>
-<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><table>
+<h3 id="命令"><a class="markdownIt-Anchor" href="#命令"></a> 命令</h3>
+<table>
 <thead>
 <tr>
 <th>指令</th>
@@ -247,7 +252,8 @@
 <th>参数</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>AA</td>
 <td>绝对弧</td>
 <td>x,y,角度(,公差)</td>
@@ -617,8 +623,10 @@
 <td>Y刻度</td>
 <td>无参数</td>
 </tr>
-</tbody></table>
-<h3 id="输出指令"><a href="#输出指令" class="headerlink" title="输出指令"></a>输出指令</h3><p>以下指令没有任何参数，而是从绘图设备生成输出。它们对几何数据交换没有用，因此不讨论其输出形式。请参阅HPGL参考书。</p>
+</tbody>
+</table>
+<h3 id="输出指令"><a class="markdownIt-Anchor" href="#输出指令"></a> 输出指令</h3>
+<p>以下指令没有任何参数，而是从绘图设备生成输出。它们对几何数据交换没有用，因此不讨论其输出形式。请参阅HPGL参考书。</p>
 <table>
 <thead>
 <tr>
@@ -626,7 +634,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>OA</td>
 <td>输出实际位置</td>
 </tr>
@@ -686,8 +695,10 @@
 <td>OW</td>
 <td>输出窗口</td>
 </tr>
-</tbody></table>
-<h3 id="转义序列"><a href="#转义序列" class="headerlink" title="转义序列"></a>转义序列</h3><p>以下转义序列通常仅在通过串行接口连接到物理绘图仪时适用，它们与数据交换无关，因此不会列出其参数，也不会列出大多数序列生成的输出形式。</p>
+</tbody>
+</table>
+<h3 id="转义序列"><a class="markdownIt-Anchor" href="#转义序列"></a> 转义序列</h3>
+<p>以下转义序列通常仅在通过串行接口连接到物理绘图仪时适用，它们与数据交换无关，因此不会列出其参数，也不会列出大多数序列生成的输出形式。</p>
 <table>
 <thead>
 <tr>
@@ -695,7 +706,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>esc@</td>
 <td>设置绘图仪配置</td>
 </tr>
@@ -783,8 +795,10 @@
 <td>esc)</td>
 <td>绘图仪关</td>
 </tr>
-</tbody></table>
-<h3 id="有用的命令和示例"><a href="#有用的命令和示例" class="headerlink" title="有用的命令和示例"></a>有用的命令和示例</h3><p>由于绘图仪是非常基本的线条绘制硬件设备，所以最常用的命令自然是那些用于从一个点绘制到另一个点的命令。</p>
+</tbody>
+</table>
+<h3 id="有用的命令和示例"><a class="markdownIt-Anchor" href="#有用的命令和示例"></a> 有用的命令和示例</h3>
+<p>由于绘图仪是非常基本的线条绘制硬件设备，所以最常用的命令自然是那些用于从一个点绘制到另一个点的命令。</p>
 <p>这个操作由四个命令控制：</p>
 <ul>
 <li><strong>PA</strong> - 绝对绘图</li>
@@ -793,7 +807,7 @@
 <li><strong>PD</strong> - 下笔</li>
 </ul>
 <p>抬笔和下笔决定了何时实际创建一条线，绘图命令负责点之间的移动。</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202408291359426.png"  alt="image-20240829135518895"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202408291359426.png"  alt="image-20240829135518895" ></p>
 <p>可以为线条分配两个基本属性，它们实际上应用于绘图设备的笔上。它们是：</p>
 <ul>
 <li><strong>SP</strong> - 笔号</li>
@@ -811,21 +825,36 @@
 <li><strong>LB</strong> - 标签</li>
 </ul>
 <p>有许多设置用于控制文本，这些指令和上述指令的进一步详细信息将留给读者自行实验或阅读完整的HPGL手册。</p>
-<h1 id="HPGL"><a href="#HPGL" class="headerlink" title="HPGL"></a>HPGL</h1><ol>
-<li><strong>PA - Plot Absolute</strong><br>绝对绘图指令，指定绘图仪的笔移动到指定的绝对坐标位置。例如，<code>PA 100,100;</code>将笔移动到(100, 100)的坐标。</li>
-<li><strong>PR - Plot Relative</strong><br>相对绘图指令，指定绘图仪的笔相对于当前的位置移动。例如，<code>PR 50,50;</code>会将笔从当前的位置移动50单位（x方向）和50单位（y方向）。</li>
-<li><strong>PU - Pen Up</strong><br>抬笔指令，命令绘图仪的笔在移动到新位置时抬起（不画线）。例如，<code>PU;</code>会抬起笔以便移动到下一个绘图位置。</li>
-<li><strong>PD - Pen Down</strong><br>下笔指令，命令绘图仪的笔在移动时放下（开始画线）。例如，<code>PD;</code>会放下笔并开始绘制。</li>
-<li><strong>SP - Select Pen</strong><br>选择笔指令，指定使用哪一支笔进行绘图。笔号一般用整数表示。例如，<code>SP 1;</code>表示选择笔1。</li>
-<li><strong>PT - Pen Thickness</strong><br>笔厚度指令，设置绘图仪笔的厚度。例如，<code>PT 0.5;</code>会将笔的厚度设置为0.5个单位。</li>
-<li><strong>AR - Arc Relative</strong><br>相对弧线指令，用于绘制相对于当前笔位置的圆弧。参数通常包括终点坐标和角度。例如，<code>AR 100,100,90;</code>会以当前点为起点画一个90度的弧线。</li>
-<li><strong>CI - Circle</strong><br>圆形指令，用于绘制一个以当前笔位置为中心的圆。参数通常是圆的半径。例如，<code>CI 50;</code>会绘制一个半径为50单位的圆。</li>
-<li><strong>EA - Edge Rectangle Absolute</strong><br>绝对矩形边缘指令，绘制一个指定坐标的矩形。指定两个对角点的绝对坐标来定义矩形。例如，<code>EA 100,100,200,200;</code>会绘制一个从(100, 100)到(200, 200)的矩形。</li>
-<li><strong>ER - Edge Rectangle Relative</strong><br>相对矩形边缘指令，绘制一个相对于当前笔位置的矩形。指定两个对角点的相对坐标来定义矩形。例如，<code>ER 100,100;</code>会从当前点绘制一个宽和高为100单位的矩形。</li>
-<li><strong>EP - Edge Polygon</strong><br>多边形边缘指令，用于定义一个多边形。通过连续给出顶点的坐标来指定多边形。该指令用于定义绘制边框的多边形。</li>
-<li><strong>EW - Edge Wedge</strong><br>楔形指令，用于绘制一个以当前笔位置为中心的圆形楔子。参数通常是半径、起始角和扫过的角度。例如，<code>EW 50,0,90;</code>会从当前位置开始绘制一个半径为50的90度的圆弧。</li>
-<li><strong>LB - Label</strong><br>标签指令，用于在指定的位置放置文本。标签文本跟随在指令后面并以回车符终止。例如，<code>LB Hello, World!</code> 会在当前位置放置“Hello, World!”的文本。</li>
-<li><strong>LT - Line Type</strong><br>线型指令，用于设置绘制线条的样式，如实线、虚线或点线。参数通常是线型模式编号和模式长度。例如，<code>LT 2,5;</code>会设置线型为模式2，长度为5个单位。</li>
+<h1 id="hpgl"><a class="markdownIt-Anchor" href="#hpgl"></a> HPGL</h1>
+<ol>
+<li><strong>PA - Plot Absolute</strong><br />
+绝对绘图指令，指定绘图仪的笔移动到指定的绝对坐标位置。例如，<code>PA 100,100;</code>将笔移动到(100, 100)的坐标。</li>
+<li><strong>PR - Plot Relative</strong><br />
+相对绘图指令，指定绘图仪的笔相对于当前的位置移动。例如，<code>PR 50,50;</code>会将笔从当前的位置移动50单位（x方向）和50单位（y方向）。</li>
+<li><strong>PU - Pen Up</strong><br />
+抬笔指令，命令绘图仪的笔在移动到新位置时抬起（不画线）。例如，<code>PU;</code>会抬起笔以便移动到下一个绘图位置。</li>
+<li><strong>PD - Pen Down</strong><br />
+下笔指令，命令绘图仪的笔在移动时放下（开始画线）。例如，<code>PD;</code>会放下笔并开始绘制。</li>
+<li><strong>SP - Select Pen</strong><br />
+选择笔指令，指定使用哪一支笔进行绘图。笔号一般用整数表示。例如，<code>SP 1;</code>表示选择笔1。</li>
+<li><strong>PT - Pen Thickness</strong><br />
+笔厚度指令，设置绘图仪笔的厚度。例如，<code>PT 0.5;</code>会将笔的厚度设置为0.5个单位。</li>
+<li><strong>AR - Arc Relative</strong><br />
+相对弧线指令，用于绘制相对于当前笔位置的圆弧。参数通常包括终点坐标和角度。例如，<code>AR 100,100,90;</code>会以当前点为起点画一个90度的弧线。</li>
+<li><strong>CI - Circle</strong><br />
+圆形指令，用于绘制一个以当前笔位置为中心的圆。参数通常是圆的半径。例如，<code>CI 50;</code>会绘制一个半径为50单位的圆。</li>
+<li><strong>EA - Edge Rectangle Absolute</strong><br />
+绝对矩形边缘指令，绘制一个指定坐标的矩形。指定两个对角点的绝对坐标来定义矩形。例如，<code>EA 100,100,200,200;</code>会绘制一个从(100, 100)到(200, 200)的矩形。</li>
+<li><strong>ER - Edge Rectangle Relative</strong><br />
+相对矩形边缘指令，绘制一个相对于当前笔位置的矩形。指定两个对角点的相对坐标来定义矩形。例如，<code>ER 100,100;</code>会从当前点绘制一个宽和高为100单位的矩形。</li>
+<li><strong>EP - Edge Polygon</strong><br />
+多边形边缘指令，用于定义一个多边形。通过连续给出顶点的坐标来指定多边形。该指令用于定义绘制边框的多边形。</li>
+<li><strong>EW - Edge Wedge</strong><br />
+楔形指令，用于绘制一个以当前笔位置为中心的圆形楔子。参数通常是半径、起始角和扫过的角度。例如，<code>EW 50,0,90;</code>会从当前位置开始绘制一个半径为50的90度的圆弧。</li>
+<li><strong>LB - Label</strong><br />
+标签指令，用于在指定的位置放置文本。标签文本跟随在指令后面并以回车符终止。例如，<code>LB Hello, World!</code> 会在当前位置放置“Hello, World!”的文本。</li>
+<li><strong>LT - Line Type</strong><br />
+线型指令，用于设置绘制线条的样式，如实线、虚线或点线。参数通常是线型模式编号和模式长度。例如，<code>LT 2,5;</code>会设置线型为模式2，长度为5个单位。</li>
 </ol>
 <p>这些HPGL指令被广泛用于控制绘图仪的绘图操作，指定绘图的形状、路径和样式。</p>
 
@@ -857,7 +886,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240831 符号显示与缩放方法</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -871,7 +900,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20220903 tuple类型</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -888,15 +917,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -980,7 +1009,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HPGL%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4%E6%89%8B%E5%86%8C"><span class="nav-number">1.</span> <span class="nav-text">HPGL基本指令手册</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.0.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.0.2.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.3.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%8C%87%E4%BB%A4"><span class="nav-number">1.0.4.</span> <span class="nav-text">输出指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97"><span class="nav-number">1.0.5.</span> <span class="nav-text">转义序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%E5%92%8C%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.0.6.</span> <span class="nav-text">有用的命令和示例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HPGL"><span class="nav-number">2.</span> <span class="nav-text">HPGL</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hpgl%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4%E6%89%8B%E5%86%8C"><span class="nav-number">1.</span> <span class="nav-text"> HPGL基本指令手册</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.0.1.</span> <span class="nav-text"> 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.0.2.</span> <span class="nav-text"> 基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.3.</span> <span class="nav-text"> 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%8C%87%E4%BB%A4"><span class="nav-number">1.0.4.</span> <span class="nav-text"> 输出指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97"><span class="nav-number">1.0.5.</span> <span class="nav-text"> 转义序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%E5%92%8C%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.0.6.</span> <span class="nav-text"> 有用的命令和示例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hpgl"><span class="nav-number">2.</span> <span class="nav-text"> HPGL</span></a></li></ol>
     </div>
 </div>
 
@@ -1007,7 +1036,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -1020,14 +1049,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -1133,7 +1162,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HPGL%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4%E6%89%8B%E5%86%8C"><span class="nav-number">1.</span> <span class="nav-text">HPGL基本指令手册</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.0.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.0.2.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.3.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%8C%87%E4%BB%A4"><span class="nav-number">1.0.4.</span> <span class="nav-text">输出指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97"><span class="nav-number">1.0.5.</span> <span class="nav-text">转义序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%E5%92%8C%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.0.6.</span> <span class="nav-text">有用的命令和示例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HPGL"><span class="nav-number">2.</span> <span class="nav-text">HPGL</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hpgl%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4%E6%89%8B%E5%86%8C"><span class="nav-number">1.</span> <span class="nav-text"> HPGL基本指令手册</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.0.1.</span> <span class="nav-text"> 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.0.2.</span> <span class="nav-text"> 基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4"><span class="nav-number">1.0.3.</span> <span class="nav-text"> 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%8C%87%E4%BB%A4"><span class="nav-number">1.0.4.</span> <span class="nav-text"> 输出指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97"><span class="nav-number">1.0.5.</span> <span class="nav-text"> 转义序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%E5%92%8C%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.0.6.</span> <span class="nav-text"> 有用的命令和示例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hpgl"><span class="nav-number">2.</span> <span class="nav-text"> HPGL</span></a></li></ol>
     </div>
 </div>
 

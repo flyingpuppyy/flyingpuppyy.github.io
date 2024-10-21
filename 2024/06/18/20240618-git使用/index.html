@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,35 +230,36 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="基本使用命令"><a href="#基本使用命令" class="headerlink" title="基本使用命令"></a>基本使用命令</h1><p>git init</p>
-<p>git config user.name &#x2F;&#x2F;看看局部名字</p>
-<p>git config user.email&#x2F;&#x2F;同上</p>
-<p>git config –global user.name&#x2F;&#x2F;看看全局</p>
-<p>git config –global user.email</p>
-<p>ssh -T  <a class="link"   href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#x6f;&#x6d;" >&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a>&#x2F;&#x2F;粘仓库的ssh，记得自己的双配置要记得修改前缀</p>
-<p>&#x2F;&#x2F;添加远程仓库</p>
+                    <h1 id="基本使用命令"><a class="markdownIt-Anchor" href="#基本使用命令"></a> 基本使用命令</h1>
+<p>git init</p>
+<p>git config <a class="link"   target="_blank" rel="noopener" href="http://user.name" >user.name<i class="fas fa-external-link-alt"></i></a> //看看局部名字</p>
+<p>git config user.email//同上</p>
+<p>git config --global <a class="link"   target="_blank" rel="noopener" href="http://user.name//%E7%9C%8B%E7%9C%8B%E5%85%A8%E5%B1%80" >user.name//看看全局<i class="fas fa-external-link-alt"></i></a></p>
+<p>git config --global user.email</p>
+<p>ssh -T  <a class="link"   href="mailto:git@github.com" >git@github.com<i class="fas fa-external-link-alt"></i></a>//粘仓库的ssh，记得自己的双配置要记得修改前缀</p>
+<p>//添加远程仓库</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;主机名&gt; &lt;网址&gt;</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm &lt;主机名&gt;</span><br></pre></td></tr></table></figure>
-
 <p>git remote -v</p>
-<p>&#x2F;&#x2F;关于提交</p>
+<p>//关于提交</p>
 <p>git add .</p>
 <p>git push master origin</p>
-<p>&#x2F;&#x2F;如果有过大的文件</p>
+<p>//如果有过大的文件</p>
 <p>看下面的提示</p>
-<h1 id="git-单个文件过大"><a href="#git-单个文件过大" class="headerlink" title="git 单个文件过大"></a>git 单个文件过大</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240618103020768.png"  alt="image-20240618103020768"></p>
+<h1 id="git-单个文件过大"><a class="markdownIt-Anchor" href="#git-单个文件过大"></a> git 单个文件过大</h1>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240618103020768.png"  alt="image-20240618103020768" ></p>
 <blockquote>
 <p>文件太大产生了问题</p>
 <p>我们需要通过lfs来解决</p>
 <p>git lfs install</p>
 <p>git init</p>
-<p>git lfs track “*.zip”&#x2F;&#x2F;在git add之前要记得开始跟踪大文件</p>
+<p>git lfs track “*.zip”//在git add之前要记得开始跟踪大文件</p>
 <p>git add .</p>
 <p>git commit -m “Add large files”</p>
 </blockquote>
-<h1 id="fatal-Not-a-git-repository-or-any-of-the-parent-directories-git的情况。"><a href="#fatal-Not-a-git-repository-or-any-of-the-parent-directories-git的情况。" class="headerlink" title="fatal: Not a git repository (or any of the parent directories): .git的情况。"></a>fatal: Not a git repository (or any of the parent directories): .git的情况。</h1><p> 其实字面意思写得挺明显的：（当前）不是一个git的目录（或任何一个父目录），</p>
-<p> 所以按照字面意思使用 git init 新建一个.git目录就能解决问题了。</p>
+<h1 id="fatal-not-a-git-repository-or-any-of-the-parent-directories-git的情况"><a class="markdownIt-Anchor" href="#fatal-not-a-git-repository-or-any-of-the-parent-directories-git的情况"></a> fatal: Not a git repository (or any of the parent directories): .git的情况。</h1>
+<p>其实字面意思写得挺明显的：（当前）不是一个git的目录（或任何一个父目录），</p>
+<p>所以按照字面意思使用 git init 新建一个.git目录就能解决问题了。</p>
 <blockquote>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/forforever/p/13201612.html" >https://www.cnblogs.com/forforever/p/13201612.html<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
@@ -291,7 +292,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240618 啊？</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -305,7 +306,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240617 C++ 右值 的验证困惑/省略复制</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -322,15 +323,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -414,7 +415,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">基本使用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E8%BF%87%E5%A4%A7"><span class="nav-number">2.</span> <span class="nav-text">git 单个文件过大</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fatal-Not-a-git-repository-or-any-of-the-parent-directories-git%E7%9A%84%E6%83%85%E5%86%B5%E3%80%82"><span class="nav-number">3.</span> <span class="nav-text">fatal: Not a git repository (or any of the parent directories): .git的情况。</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text"> 基本使用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E8%BF%87%E5%A4%A7"><span class="nav-number">2.</span> <span class="nav-text"> git 单个文件过大</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fatal-not-a-git-repository-or-any-of-the-parent-directories-git%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-number">3.</span> <span class="nav-text"> fatal: Not a git repository (or any of the parent directories): .git的情况。</span></a></li></ol>
     </div>
 </div>
 
@@ -441,7 +442,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -454,14 +455,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -567,7 +568,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">基本使用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E8%BF%87%E5%A4%A7"><span class="nav-number">2.</span> <span class="nav-text">git 单个文件过大</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fatal-Not-a-git-repository-or-any-of-the-parent-directories-git%E7%9A%84%E6%83%85%E5%86%B5%E3%80%82"><span class="nav-number">3.</span> <span class="nav-text">fatal: Not a git repository (or any of the parent directories): .git的情况。</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text"> 基本使用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E8%BF%87%E5%A4%A7"><span class="nav-number">2.</span> <span class="nav-text"> git 单个文件过大</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fatal-not-a-git-repository-or-any-of-the-parent-directories-git%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-number">3.</span> <span class="nav-text"> fatal: Not a git repository (or any of the parent directories): .git的情况。</span></a></li></ol>
     </div>
 </div>
 

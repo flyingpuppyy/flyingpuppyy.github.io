@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,54 +230,60 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="问题路径"><a href="#问题路径" class="headerlink" title="问题路径"></a>问题路径</h1><p>qt怎样读取enc</p>
+                    <h1 id="问题路径"><a class="markdownIt-Anchor" href="#问题路径"></a> 问题路径</h1>
+<p>qt怎样读取enc</p>
 <p>qt怎样读取海图文件</p>
 <p>qt怎样配置qgis</p>
 <blockquote>
 <p>VS2022如何配置qgis</p>
-<p>qt 5.&#x2F;12.7如何配置qgis</p>
+<p>qt 5./12.7如何配置qgis</p>
 </blockquote>
-<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>完成在 qt 5.12.7版本下编译器mingw和mscv的配置 以及qgis的配置</p>
-<h1 id="娇嗔一（×）"><a href="#娇嗔一（×）" class="headerlink" title="娇嗔一（×）"></a>娇嗔一（×）</h1><p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/83805300" >https://zhuanlan.zhihu.com/p/83805300<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="需求"><a class="markdownIt-Anchor" href="#需求"></a> 需求</h1>
+<p>完成在 qt 5.12.7版本下编译器mingw和mscv的配置 以及qgis的配置</p>
+<h1 id="娇嗔一"><a class="markdownIt-Anchor" href="#娇嗔一"></a> 娇嗔一（×）</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/83805300" >https://zhuanlan.zhihu.com/p/83805300<i class="fas fa-external-link-alt"></i></a></p>
 <blockquote>
 <p>教程缺点jioachen：</p>
 <p>1.这个到了后面的文件移植的时候 share部分在3.38版本中都缺少名为gdal的文件夹子</p>
 <p>2.选取下载的目录看不清楚</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191017859.png"  alt="image-20240719101749782"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191017859.png"  alt="image-20240719101749782" ></p>
 <p>3.下载的版本和教程时间比较久远</p>
 <p>好：</p>
 <p>也告诉我一定要拷贝</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191018615.png"  alt="image-20240719101801582"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191018050.png"  alt="image-20240719101810007"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191018110.png"  alt="image-20240719101819081"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191018615.png"  alt="image-20240719101801582" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191018050.png"  alt="image-20240719101810007" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191018110.png"  alt="image-20240719101819081" ></p>
 <p>告诉我一定要在pro里配相关库文件</p>
 <blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">QT       += core gui xml</span><br><span class="line">greaterThan(QT_MAJOR_VERSION, 4): QT += widgets</span><br><span class="line">CONFIG += c++1z</span><br><span class="line">DEFINES += QT_DEPRECATED_WARNINGS</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">INCLUDEPATH+=&quot;C:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include&quot;</span><br><span class="line">INCLUDEPATH+=&quot;C:/OSGeo4W2/include&quot;</span><br><span class="line">INCLUDEPATH+=&quot;C:/OSGeo4W2/apps/qgis-ltr/include&quot;</span><br><span class="line">LIBS+= -L&quot;C:/OSGeo4W2/apps/qgis-ltr/lib&quot;</span><br><span class="line">LIBS+= -L&quot;C:/OSGeo4W2/lib&quot; -lqgis_app -lqgis_core -lqgis_gui</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># debug</span><br><span class="line">LIBS += -L</span><br><span class="line">SOURCES += \</span><br><span class="line">    main.cpp \</span><br><span class="line">    mainwindow.cpp</span><br><span class="line">HEADERS += \</span><br><span class="line">    mainwindow.h</span><br><span class="line">FORMS += \</span><br><span class="line">    mainwindow.ui</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"># Default rules for deployment.</span><br><span class="line">qnx: target.path = /tmp/$$&#123;TARGET&#125;/bin</span><br><span class="line">else: unix:!android: target.path = /opt/$$&#123;TARGET&#125;/bin</span><br><span class="line">!isEmpty(target.path): INSTALLS += target</span><br></pre></td></tr></table></figure>
 </blockquote>
 </blockquote>
-<h2 id="相关测试代码"><a href="#相关测试代码" class="headerlink" title="相关测试代码"></a>相关测试代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _USE_MATH_DEFINES</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;mainwindow.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QApplication&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;qgsapplication.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;qgsmapcanvas.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;qgsvectorlayer.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QDebug&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    QgsApplication::<span class="built_in">setPrefixPath</span>(<span class="string">&quot;C:/OSGeo4W2/share&quot;</span>) ;</span><br><span class="line">    <span class="function">QgsApplication <span class="title">a</span><span class="params">(argc,argv,<span class="literal">true</span>)</span> </span>;</span><br><span class="line">    QgsApplication::<span class="built_in">initQgis</span>();</span><br><span class="line">    MainWindow w;</span><br><span class="line">    QgsVectorLayer* layer1 = <span class="keyword">new</span> <span class="built_in">QgsVectorLayer</span>(<span class="string">&quot;D:/datas/shps/ne_50m_land/ne_50m_land.shp&quot;</span>,<span class="string">&quot;vec&quot;</span>,<span class="string">&quot;ogr&quot;</span>) ;<span class="comment">//注意文件路径</span></span><br><span class="line">    <span class="keyword">if</span>( layer1==<span class="literal">nullptr</span> ) &#123;</span><br><span class="line">        <span class="built_in">qDebug</span>(<span class="string">&quot;bad vec layer&quot;</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">    QgsProject::<span class="built_in">instance</span>()-&gt;<span class="built_in">addMapLayer</span>(layer1);</span><br><span class="line">    QList&lt;QgsMapLayer*&gt; layerlist ;</span><br><span class="line">    layerlist.<span class="built_in">append</span>(layer1) ;</span><br><span class="line"></span><br><span class="line">    QgsMapCanvas* mapcanvas = <span class="keyword">new</span> QgsMapCanvas ;</span><br><span class="line">    mapcanvas-&gt;<span class="built_in">setProject</span>( QgsProject::<span class="built_in">instance</span>() ) ;</span><br><span class="line">    mapcanvas-&gt;<span class="built_in">setLayers</span>(layerlist) ;</span><br><span class="line">    w.<span class="built_in">setCentralWidget</span>(mapcanvas);</span><br><span class="line">    w.<span class="built_in">show</span>();</span><br><span class="line">    mapcanvas-&gt;<span class="built_in">zoomToFullExtent</span>();</span><br><span class="line">    mapcanvas-&gt;<span class="built_in">refresh</span>();</span><br><span class="line">    <span class="built_in">qDebug</span>()&lt;&lt; QString::<span class="built_in">number</span>(mapcanvas-&gt;<span class="built_in">layerCount</span>() ) ;</span><br><span class="line">    <span class="keyword">return</span> a.<span class="built_in">exec</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="1-error-LNK1158-无法运行“rc-exe”"><a href="#1-error-LNK1158-无法运行“rc-exe”" class="headerlink" title=":-1: error: LNK1158: 无法运行“rc.exe”"></a>:-1: error: LNK1158: 无法运行“rc.exe”</h2><h1 id="娇嗔二"><a href="#娇嗔二" class="headerlink" title="娇嗔二"></a>娇嗔二</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191145139.png"  alt="image-20240719114541054"></p>
+<h2 id="相关测试代码"><a class="markdownIt-Anchor" href="#相关测试代码"></a> 相关测试代码</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _USE_MATH_DEFINES</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;mainwindow.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QApplication&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;qgsapplication.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;qgsmapcanvas.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;qgsvectorlayer.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QDebug&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    QgsApplication::<span class="built_in">setPrefixPath</span>(<span class="string">&quot;C:/OSGeo4W2/share&quot;</span>) ;</span><br><span class="line">    <span class="function">QgsApplication <span class="title">a</span><span class="params">(argc,argv,<span class="literal">true</span>)</span> </span>;</span><br><span class="line">    QgsApplication::<span class="built_in">initQgis</span>();</span><br><span class="line">    MainWindow w;</span><br><span class="line">    QgsVectorLayer* layer1 = <span class="keyword">new</span> <span class="built_in">QgsVectorLayer</span>(<span class="string">&quot;D:/datas/shps/ne_50m_land/ne_50m_land.shp&quot;</span>,<span class="string">&quot;vec&quot;</span>,<span class="string">&quot;ogr&quot;</span>) ;<span class="comment">//注意文件路径</span></span><br><span class="line">    <span class="keyword">if</span>( layer1==<span class="literal">nullptr</span> ) &#123;</span><br><span class="line">        <span class="built_in">qDebug</span>(<span class="string">&quot;bad vec layer&quot;</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">    QgsProject::<span class="built_in">instance</span>()-&gt;<span class="built_in">addMapLayer</span>(layer1);</span><br><span class="line">    QList&lt;QgsMapLayer*&gt; layerlist ;</span><br><span class="line">    layerlist.<span class="built_in">append</span>(layer1) ;</span><br><span class="line"></span><br><span class="line">    QgsMapCanvas* mapcanvas = <span class="keyword">new</span> QgsMapCanvas ;</span><br><span class="line">    mapcanvas-&gt;<span class="built_in">setProject</span>( QgsProject::<span class="built_in">instance</span>() ) ;</span><br><span class="line">    mapcanvas-&gt;<span class="built_in">setLayers</span>(layerlist) ;</span><br><span class="line">    w.<span class="built_in">setCentralWidget</span>(mapcanvas);</span><br><span class="line">    w.<span class="built_in">show</span>();</span><br><span class="line">    mapcanvas-&gt;<span class="built_in">zoomToFullExtent</span>();</span><br><span class="line">    mapcanvas-&gt;<span class="built_in">refresh</span>();</span><br><span class="line">    <span class="built_in">qDebug</span>()&lt;&lt; QString::<span class="built_in">number</span>(mapcanvas-&gt;<span class="built_in">layerCount</span>() ) ;</span><br><span class="line">    <span class="keyword">return</span> a.<span class="built_in">exec</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="error-lnk1158-无法运行rcexe"><a class="markdownIt-Anchor" href="#error-lnk1158-无法运行rcexe"></a> 👎 error: LNK1158: 无法运行“rc.exe”</h2>
+<h1 id="娇嗔二"><a class="markdownIt-Anchor" href="#娇嗔二"></a> 娇嗔二</h1>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191145139.png"  alt="image-20240719114541054" ></p>
 <blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">F:\OSGeo4W\include;</span><br><span class="line">F:\OSGeo4W\apps\Qt5\include\QtXml;</span><br><span class="line">F:\OSGeo4W\apps\Qt5\include\QtCore;</span><br><span class="line">F:\OSGeo4W\apps\Qt5\include\QtWidgets;</span><br><span class="line">F:\OSGeo4W\apps\Qt5\include\QtGui;</span><br><span class="line">F:\OSGeo4W\apps\Qt5\include;</span><br><span class="line">F:\OSGeo4W\apps\qgis\include;</span><br><span class="line">%(AdditionalIncludeDirectories)</span><br></pre></td></tr></table></figure>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191149722.png"  alt="image-20240719114930669"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191149722.png"  alt="image-20240719114930669" ></p>
 <blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">F:\OSGeo4W\apps\Qt5\lib;</span><br><span class="line">F:\OSGeo4W\apps\qgis\lib;</span><br><span class="line">%(AdditionalLibraryDirectories)</span><br></pre></td></tr></table></figure>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191151383.png"  alt="image-20240719115108332"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191151383.png"  alt="image-20240719115108332" ></p>
 <blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">qgis_core.lib;</span><br><span class="line">qgis_app.lib;</span><br><span class="line">qgis_gui.lib;</span><br><span class="line">Qt5Widgets.lib;</span><br><span class="line">Qt5Xml.lib;%(AdditionalDependencies)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>_USE_MATH_DEFINES;</p>
-<h1 id="1-qt-error-LNK1158-无法运行“rc-exe”"><a href="#1-qt-error-LNK1158-无法运行“rc-exe”" class="headerlink" title=":-1: qt error: 	LNK1158: 无法运行“rc.exe”"></a>:-1: qt error: 	LNK1158: 无法运行“rc.exe”</h1><p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/my_angle2016/article/details/126284219" >https://blog.csdn.net/my_angle2016/article/details/126284219<i class="fas fa-external-link-alt"></i></a></p>
-<h1 id="F-OSGeo4W-apps-Qt5-include-QtWidgets-qdatetimeedit-h-45-10-error-C1083-无法打开包括文件-“QtCore-qcalendar-h”-No-such-file-or-directory"><a href="#F-OSGeo4W-apps-Qt5-include-QtWidgets-qdatetimeedit-h-45-10-error-C1083-无法打开包括文件-“QtCore-qcalendar-h”-No-such-file-or-directory" class="headerlink" title="&gt;F:\OSGeo4W\apps\Qt5\include\QtWidgets\qdatetimeedit.h(45,10): error C1083: 无法打开包括文件: “QtCore&#x2F;qcalendar.h”: No such file or directory"></a>&gt;F:\OSGeo4W\apps\Qt5\include\QtWidgets\qdatetimeedit.h(45,10): error C1083: 无法打开包括文件: “QtCore&#x2F;qcalendar.h”: No such file or directory</h1><h1 id="娇嗔三（×）"><a href="#娇嗔三（×）" class="headerlink" title="娇嗔三（×）"></a>娇嗔三（×）</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ei4y127LM/?vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV1ei4y127LM/?vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191603918.png"  alt="image-20240719160358835"></p>
-<p><img   src="/"  alt="image-20240719160506371"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191502298.png"  alt="image-20240719150204090"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191502636.png"  alt="image-20240719150219588"></p>
+<h1 id="qt-error-lnk1158-无法运行rcexe"><a class="markdownIt-Anchor" href="#qt-error-lnk1158-无法运行rcexe"></a> 👎 qt error: 	LNK1158: 无法运行“rc.exe”</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/my_angle2016/article/details/126284219" >https://blog.csdn.net/my_angle2016/article/details/126284219<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="fosgeo4wappsqt5includeqtwidgetsqdatetimeedith4510-error-c1083-无法打开包括文件-qtcoreqcalendarh-no-such-file-or-directory"><a class="markdownIt-Anchor" href="#fosgeo4wappsqt5includeqtwidgetsqdatetimeedith4510-error-c1083-无法打开包括文件-qtcoreqcalendarh-no-such-file-or-directory"></a> &gt;F:\OSGeo4W\apps\Qt5\include\QtWidgets\qdatetimeedit.h(45,10): error C1083: 无法打开包括文件: “QtCore/qcalendar.h”: No such file or directory</h1>
+<h1 id="娇嗔三"><a class="markdownIt-Anchor" href="#娇嗔三"></a> 娇嗔三（×）</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ei4y127LM/?vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV1ei4y127LM/?vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191603918.png"  alt="image-20240719160358835" ></p>
+<p><img src="" alt="image-20240719160506371" /></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191502298.png"  alt="image-20240719150204090" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191502636.png"  alt="image-20240719150219588" ></p>
 <blockquote>
 <p>F:\OSGeo4w\apps\gdal-dev;</p>
 <p>F:\OSGeo4w\apps\Qt5\include;</p>
@@ -287,14 +293,14 @@
 <p>F:\OSGeo4w\apps\Qt5\include\QtXml</p>
 <p>F:\OSGeo4w\apps\qgis\include</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191507387.png"  alt="image-20240719150759318"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191510903.png"  alt="image-20240719151016827"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191507387.png"  alt="image-20240719150759318" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191510903.png"  alt="image-20240719151016827" ></p>
 <blockquote>
 <p>F:\OSGeo4w\apps\Qt5\lib;</p>
 <p>F:\OSGeo4w\apps\qgis-dev\lib</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191511172.png"  alt="image-20240719151142085"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191514722.png"  alt="image-20240719151427654"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191511172.png"  alt="image-20240719151142085" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191514722.png"  alt="image-20240719151427654" ></p>
 <blockquote>
 <p>qgis_core.lib;</p>
 <p>qgis_app.lib;</p>
@@ -303,152 +309,171 @@
 <p>Qt5Gui.lib;</p>
 <p>Qt5Widgets.lib</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191516429.png"  alt="image-20240719151620386"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191516433.png"  alt="image-20240719151634387"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191516429.png"  alt="image-20240719151620386" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191516433.png"  alt="image-20240719151634387" ></p>
 <blockquote>
-<p>PATH&#x3D;F:\OSGeo4w\bin;</p>
-<p>PATH&#x3D;F:\OSGeo4w\apps\qgis\bin;</p>
-<p>PATH&#x3D;F:\OSGeo4w\apps\Qt5\bin</p>
+<p>PATH=F:\OSGeo4w\bin;</p>
+<p>PATH=F:\OSGeo4w\apps\qgis\bin;</p>
+<p>PATH=F:\OSGeo4w\apps\Qt5\bin</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191519821.png"  alt="image-20240719151946755"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191520025.png"  alt="image-20240719151959978"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191519821.png"  alt="image-20240719151946755" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191520025.png"  alt="image-20240719151959978" ></p>
 <blockquote>
 <p>_USE_MATH_DEFINES</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191523900.png"  alt="image-20240719152325856"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191528385.png"  alt="image-20240719152855317"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191523900.png"  alt="image-20240719152325856" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191528385.png"  alt="image-20240719152855317" ></p>
 <blockquote>
-<p>#include “stdafx.h”<br>#include “test5.h”<br>#include &lt;QtWidgets&#x2F;QApplication&gt;<br>#include&lt;qmainwindow.h&gt;</p>
-<p>#include&lt;qgsmapcanvas.h&gt;<br>#include&lt;qgsmaptoolpan.h&gt;<br>#include&lt;qgsrasterlayer.h&gt;</p>
-<p>int main(int argc, char *argv[])<br>{<br>    QApplication a(argc, argv);<br>    test5 w;<br>    w.show();<br>    return a.exec();<br>}</p>
+<p>#include “stdafx.h”<br />
+#include “test5.h”<br />
+#include &lt;QtWidgets/QApplication&gt;<br />
+#include&lt;qmainwindow.h&gt;</p>
+<p>#include&lt;qgsmapcanvas.h&gt;<br />
+#include&lt;qgsmaptoolpan.h&gt;<br />
+#include&lt;qgsrasterlayer.h&gt;</p>
+<p>int main(int argc, char *argv[])<br />
+{<br />
+QApplication a(argc, argv);<br />
+test5 w;<br />
+w.show();<br />
+return a.exec();<br />
+}</p>
 </blockquote>
 <p>最后这里在</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191621817.png"  alt="image-20240719162152772"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191621817.png"  alt="image-20240719162152772" ></p>
 <blockquote>
 <p>这个库里面</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191622707.png"  alt="image-20240719162228671"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191622707.png"  alt="image-20240719162228671" ></p>
 <p>这个锁引入不进去 真的很无语</p>
 <p>为什么呢？</p>
-<p>qt VS2022开发环境中已经在文件中引入了未定义标识符 “QRecursiveMutex”的相关库	QRecursiveMutex 标识符依然显示未定义 为什么</p>
+<p>qt VS2022开发环境中已经在文件中引入了未定义标识符 &quot;QRecursiveMutex&quot;的相关库	QRecursiveMutex 标识符依然显示未定义 为什么</p>
 <blockquote>
 <p><strong>检查 Qt 版本</strong>： 确认你使用的 Qt 版本是否支持 <code>QRecursiveMutex</code>。这个类是在 Qt 5.14 及以后的版本中引入的。如果你使用的是旧版本的 Qt，可能没有这个类。</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191646474.png"  alt="image-20240719164653403"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191646474.png"  alt="image-20240719164653403" ></p>
 <p>现在下一个5.15版本的试试看，估计很久</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191659249.png"  alt="image-20240719165956203"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191659249.png"  alt="image-20240719165956203" ></p>
 <p>这里可以看到至少要下5.15.13之后的才行</p>
 <p>我这里qt目前只提供5.15.2的</p>
 <p>剩下的都到6了</p>
 </blockquote>
 </blockquote>
-<h1 id="娇嗔四"><a href="#娇嗔四" class="headerlink" title="娇嗔四"></a>娇嗔四</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/Qt895996365/p/13516902.html" >https://www.cnblogs.com/Qt895996365/p/13516902.html<i class="fas fa-external-link-alt"></i></a></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191618269.png"  alt="image-20240719161807218"></p>
-<h1 id="娇嗔五（自创）"><a href="#娇嗔五（自创）" class="headerlink" title="娇嗔五（自创）"></a>娇嗔五（自创）</h1><p>qt 5.12.7 + qgis 3.10+ qt creator</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191717661.png"  alt="image-20240719171708620"></p>
-<h1 id="qgis-3-10下载"><a href="#qgis-3-10下载" class="headerlink" title="qgis 3.10下载"></a>qgis 3.10下载</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.osgeo.cn/qgis/site/forusers/download.html" >https://www.osgeo.cn/qgis/site/forusers/download.html<i class="fas fa-external-link-alt"></i></a></p>
-<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240719172129353.png"  alt="image-20240719172129353"></p>
+<h1 id="娇嗔四"><a class="markdownIt-Anchor" href="#娇嗔四"></a> 娇嗔四</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/Qt895996365/p/13516902.html" >https://www.cnblogs.com/Qt895996365/p/13516902.html<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191618269.png"  alt="image-20240719161807218" ></p>
+<h1 id="娇嗔五自创"><a class="markdownIt-Anchor" href="#娇嗔五自创"></a> 娇嗔五（自创）</h1>
+<p>qt 5.12.7 + qgis 3.10+ qt creator</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407191717661.png"  alt="image-20240719171708620" ></p>
+<h1 id="qgis-310下载"><a class="markdownIt-Anchor" href="#qgis-310下载"></a> qgis 3.10下载</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.osgeo.cn/qgis/site/forusers/download.html" >https://www.osgeo.cn/qgis/site/forusers/download.html<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240719172129353.png"  alt="image-20240719172129353" ></p>
 <p>两个86 和64 都下</p>
 <blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192054460.png"  alt="image-20240719205441361"></p>
-<hr>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192057191.png"  alt="image-20240719205731146"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192054460.png"  alt="image-20240719205441361" ></p>
+<hr />
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192057191.png"  alt="image-20240719205731146" ></p>
 <blockquote>
-<p>这个下载在后面包含路径的时候没有包含<img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192100294.png"  alt="image-20240719210051259"></p>
+<p>这个下载在后面包含路径的时候没有包含<img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192100294.png"  alt="image-20240719210051259" ></p>
 <p>根本没有include这个文件夹里面</p>
 </blockquote>
-<hr>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192100767.png"  alt="image-20240719210015711"></p>
+<hr />
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192100767.png"  alt="image-20240719210015711" ></p>
 <blockquote>
 <p>我下载的时候这两个链接失效了</p>
 </blockquote>
-<hr>
+<hr />
 <p>最后下这个</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192110509.png"  alt="image-20240719211033429"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192117806.png"  alt="image-20240719211726707"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192110509.png"  alt="image-20240719211033429" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192117806.png"  alt="image-20240719211726707" ></p>
 <p>还是存在这个问题</p>
 <p>没有这个文件怎么引入呢？</p>
-<hr>
+<hr />
 <p>下别人的包试一下</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/j_in2018/article/details/107304496" >https://blog.csdn.net/j_in2018/article/details/107304496<i class="fas fa-external-link-alt"></i></a></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192142323.png"  alt="image-20240719214233257"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192142323.png"  alt="image-20240719214233257" ></p>
 <p>别人的包真的有include</p>
 <p>我好无语靠靠靠靠靠</p>
 <p>include的话</p>
 <p>就是把接口暴露出来给二次开发用的</p>
 <p>上面那两个不是二次开发来着的吧</p>
 </blockquote>
-<h1 id="娇嗔六"><a href="#娇嗔六" class="headerlink" title="娇嗔六"></a>娇嗔六</h1><p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/j_in2018/article/details/107304496" >https://blog.csdn.net/j_in2018/article/details/107304496<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="娇嗔六"><a class="markdownIt-Anchor" href="#娇嗔六"></a> 娇嗔六</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/j_in2018/article/details/107304496" >https://blog.csdn.net/j_in2018/article/details/107304496<i class="fas fa-external-link-alt"></i></a></p>
 <p>唯一走到不一样的一步</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192239654.png"  alt="image-20240719223937584"></p>
-<h1 id="qgis版本说明"><a href="#qgis版本说明" class="headerlink" title="qgis版本说明"></a>qgis版本说明</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192128527.png"  alt="image-20240719212842463"></p>
-<h1 id="编译过程中jom-exe退出"><a href="#编译过程中jom-exe退出" class="headerlink" title="编译过程中jom.exe退出"></a>编译过程中jom.exe退出</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192243749.png"  alt="image-20240719224353709"></p>
-<h1 id="娇嗔六之后能运行又crash的程序"><a href="#娇嗔六之后能运行又crash的程序" class="headerlink" title="娇嗔六之后能运行又crash的程序"></a>娇嗔六之后能运行又crash的程序</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220917406.png"  alt="image-20240722091705305"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192239654.png"  alt="image-20240719223937584" ></p>
+<h1 id="qgis版本说明"><a class="markdownIt-Anchor" href="#qgis版本说明"></a> qgis版本说明</h1>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192128527.png"  alt="image-20240719212842463" ></p>
+<h1 id="编译过程中jomexe退出"><a class="markdownIt-Anchor" href="#编译过程中jomexe退出"></a> 编译过程中jom.exe退出</h1>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407192243749.png"  alt="image-20240719224353709" ></p>
+<h1 id="娇嗔六之后能运行又crash的程序"><a class="markdownIt-Anchor" href="#娇嗔六之后能运行又crash的程序"></a> 娇嗔六之后能运行又crash的程序</h1>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220917406.png"  alt="image-20240722091705305" ></p>
 <blockquote>
 <p>没事</p>
 <p>人崩溃很正常</p>
 <p>活着挺开心的</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220918631.png"  alt="image-20240722091848509"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220918631.png"  alt="image-20240722091848509" ></p>
 <blockquote>
 <p>把qgs里面的相关程序代码调用屏蔽掉可以运行的</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220921745.png"  alt="image-20240722092109692"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220921745.png"  alt="image-20240722092109692" ></p>
 <blockquote>
 <p>真的很神经</p>
 <p>那我改一下C++版本</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220922690.png"  alt="image-20240722092203607"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220922690.png"  alt="image-20240722092203607" ></p>
 <blockquote>
 <p>重新写了C++版本之后？</p>
 <p>还是程序会崩溃</p>
 </blockquote>
 <p>按照教程移植过去ddl们之后</p>
 <p>出现了这个</p>
-<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240722093939951.png"  alt="image-20240722093939951"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220939209.png"  alt="image-20240722093949164"></p>
+<p><img   src="C:/Users/Lucinda/AppData/Roaming/Typora/typora-user-images/image-20240722093939951.png"  alt="image-20240722093939951" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220939209.png"  alt="image-20240722093949164" ></p>
 <blockquote>
 <p>此时库是这样的，我删除试试咯</p>
 </blockquote>
-<hr>
+<hr />
 <p>好像我把版本放错了</p>
 <p>我把32位的osg的版本放到64位的release程序之下</p>
 <p>重新按照</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/83805300" >https://zhuanlan.zhihu.com/p/83805300<i class="fas fa-external-link-alt"></i></a></p>
 <p>搬完64位的dll之后</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220953167.png"  alt="image-20240722095358085"></p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220954149.png"  alt="image-20240722095418071"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220953167.png"  alt="image-20240722095358085" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220954149.png"  alt="image-20240722095418071" ></p>
 <p>程序构建没有问题了</p>
-<hr>
+<hr />
 <blockquote>
 <p>让我们祈祷它接下来能够跑起来去啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊！</p>
 </blockquote>
 <blockquote>
 <p>恢复</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220956888.png"  alt="image-20240722095634824"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220956888.png"  alt="image-20240722095634824" ></p>
 <blockquote>
 <p>只是链接头文件是可以的</p>
 <p>但是如果是要那啥可不行</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220957647.png"  alt="image-20240722095739597"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407220957647.png"  alt="image-20240722095739597" ></p>
 <p>程序还是会crash</p>
 </blockquote>
-<hr>
+<hr />
 <p>查看编译过程信息</p>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407221006573.png"  alt="image-20240722100639538"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407221006573.png"  alt="image-20240722100639538" ></p>
 <blockquote>
 <p>这个真的合理吗</p>
 </blockquote>
-<hr>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407221007369.png"  alt="image-20240722100742292"></p>
+<hr />
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407221007369.png"  alt="image-20240722100742292" ></p>
 <blockquote>
 <p>这个是屏蔽掉代码之后的情况</p>
 </blockquote>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407221009205.png"  alt="image-20240722100934253"></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407221009205.png"  alt="image-20240722100934253" ></p>
 <blockquote>
 <p>C++版本的问题？</p>
 <p>并不是</p>
 <p>代码还是跑不起来</p>
 </blockquote>
-<h1 id="setProject无法调用"><a href="#setProject无法调用" class="headerlink" title="setProject无法调用"></a>setProject无法调用</h1><p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407221105027.png"  alt="image-20240722110459960"></p>
+<h1 id="setproject无法调用"><a class="markdownIt-Anchor" href="#setproject无法调用"></a> setProject无法调用</h1>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202407221105027.png"  alt="image-20240722110459960" ></p>
 <blockquote>
 <p>估计是gis版本有点老</p>
 <p>没有这个函数</p>
@@ -483,7 +508,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240719 picgo上传失败排查</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -497,7 +522,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240717 makefile 构建规则</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -514,15 +539,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -606,7 +631,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%B7%AF%E5%BE%84"><span class="nav-number">1.</span> <span class="nav-text">问题路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9C%80%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%B8%80%EF%BC%88%C3%97%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">娇嗔一（×）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="nav-number">3.1.</span> <span class="nav-text">相关测试代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-error-LNK1158-%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E2%80%9Crc-exe%E2%80%9D"><span class="nav-number">3.2.</span> <span class="nav-text">:-1: error: LNK1158: 无法运行“rc.exe”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text">娇嗔二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-qt-error-LNK1158-%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E2%80%9Crc-exe%E2%80%9D"><span class="nav-number">5.</span> <span class="nav-text">:-1: qt error: 	LNK1158: 无法运行“rc.exe”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#F-OSGeo4W-apps-Qt5-include-QtWidgets-qdatetimeedit-h-45-10-error-C1083-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E5%8C%85%E6%8B%AC%E6%96%87%E4%BB%B6-%E2%80%9CQtCore-qcalendar-h%E2%80%9D-No-such-file-or-directory"><span class="nav-number">6.</span> <span class="nav-text">&gt;F:\OSGeo4W\apps\Qt5\include\QtWidgets\qdatetimeedit.h(45,10): error C1083: 无法打开包括文件: “QtCore&#x2F;qcalendar.h”: No such file or directory</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%B8%89%EF%BC%88%C3%97%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">娇嗔三（×）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%9B%9B"><span class="nav-number">8.</span> <span class="nav-text">娇嗔四</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%BA%94%EF%BC%88%E8%87%AA%E5%88%9B%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">娇嗔五（自创）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qgis-3-10%E4%B8%8B%E8%BD%BD"><span class="nav-number">10.</span> <span class="nav-text">qgis 3.10下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%85%AD"><span class="nav-number">11.</span> <span class="nav-text">娇嗔六</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qgis%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E"><span class="nav-number">12.</span> <span class="nav-text">qgis版本说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%ADjom-exe%E9%80%80%E5%87%BA"><span class="nav-number">13.</span> <span class="nav-text">编译过程中jom.exe退出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%85%AD%E4%B9%8B%E5%90%8E%E8%83%BD%E8%BF%90%E8%A1%8C%E5%8F%88crash%E7%9A%84%E7%A8%8B%E5%BA%8F"><span class="nav-number">14.</span> <span class="nav-text">娇嗔六之后能运行又crash的程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setProject%E6%97%A0%E6%B3%95%E8%B0%83%E7%94%A8"><span class="nav-number">15.</span> <span class="nav-text">setProject无法调用</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%B7%AF%E5%BE%84"><span class="nav-number">1.</span> <span class="nav-text"> 问题路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9C%80%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text"> 需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 娇嗔一（×）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="nav-number">3.1.</span> <span class="nav-text"> 相关测试代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#error-lnk1158-%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Crcexe"><span class="nav-number">3.2.</span> <span class="nav-text"> 👎 error: LNK1158: 无法运行“rc.exe”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 娇嗔二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qt-error-lnk1158-%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Crcexe"><span class="nav-number">5.</span> <span class="nav-text"> 👎 qt error: 	LNK1158: 无法运行“rc.exe”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fosgeo4wappsqt5includeqtwidgetsqdatetimeedith4510-error-c1083-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E5%8C%85%E6%8B%AC%E6%96%87%E4%BB%B6-qtcoreqcalendarh-no-such-file-or-directory"><span class="nav-number">6.</span> <span class="nav-text"> &gt;F:\OSGeo4W\apps\Qt5\include\QtWidgets\qdatetimeedit.h(45,10): error C1083: 无法打开包括文件: “QtCore&#x2F;qcalendar.h”: No such file or directory</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%B8%89"><span class="nav-number">7.</span> <span class="nav-text"> 娇嗔三（×）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%9B%9B"><span class="nav-number">8.</span> <span class="nav-text"> 娇嗔四</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%BA%94%E8%87%AA%E5%88%9B"><span class="nav-number">9.</span> <span class="nav-text"> 娇嗔五（自创）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qgis-310%E4%B8%8B%E8%BD%BD"><span class="nav-number">10.</span> <span class="nav-text"> qgis 3.10下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%85%AD"><span class="nav-number">11.</span> <span class="nav-text"> 娇嗔六</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qgis%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E"><span class="nav-number">12.</span> <span class="nav-text"> qgis版本说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%ADjomexe%E9%80%80%E5%87%BA"><span class="nav-number">13.</span> <span class="nav-text"> 编译过程中jom.exe退出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%85%AD%E4%B9%8B%E5%90%8E%E8%83%BD%E8%BF%90%E8%A1%8C%E5%8F%88crash%E7%9A%84%E7%A8%8B%E5%BA%8F"><span class="nav-number">14.</span> <span class="nav-text"> 娇嗔六之后能运行又crash的程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setproject%E6%97%A0%E6%B3%95%E8%B0%83%E7%94%A8"><span class="nav-number">15.</span> <span class="nav-text"> setProject无法调用</span></a></li></ol>
     </div>
 </div>
 
@@ -633,7 +658,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -646,14 +671,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -759,7 +784,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%B7%AF%E5%BE%84"><span class="nav-number">1.</span> <span class="nav-text">问题路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9C%80%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%B8%80%EF%BC%88%C3%97%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">娇嗔一（×）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="nav-number">3.1.</span> <span class="nav-text">相关测试代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-error-LNK1158-%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E2%80%9Crc-exe%E2%80%9D"><span class="nav-number">3.2.</span> <span class="nav-text">:-1: error: LNK1158: 无法运行“rc.exe”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text">娇嗔二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-qt-error-LNK1158-%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E2%80%9Crc-exe%E2%80%9D"><span class="nav-number">5.</span> <span class="nav-text">:-1: qt error: 	LNK1158: 无法运行“rc.exe”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#F-OSGeo4W-apps-Qt5-include-QtWidgets-qdatetimeedit-h-45-10-error-C1083-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E5%8C%85%E6%8B%AC%E6%96%87%E4%BB%B6-%E2%80%9CQtCore-qcalendar-h%E2%80%9D-No-such-file-or-directory"><span class="nav-number">6.</span> <span class="nav-text">&gt;F:\OSGeo4W\apps\Qt5\include\QtWidgets\qdatetimeedit.h(45,10): error C1083: 无法打开包括文件: “QtCore&#x2F;qcalendar.h”: No such file or directory</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%B8%89%EF%BC%88%C3%97%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">娇嗔三（×）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%9B%9B"><span class="nav-number">8.</span> <span class="nav-text">娇嗔四</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%BA%94%EF%BC%88%E8%87%AA%E5%88%9B%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">娇嗔五（自创）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qgis-3-10%E4%B8%8B%E8%BD%BD"><span class="nav-number">10.</span> <span class="nav-text">qgis 3.10下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%85%AD"><span class="nav-number">11.</span> <span class="nav-text">娇嗔六</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qgis%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E"><span class="nav-number">12.</span> <span class="nav-text">qgis版本说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%ADjom-exe%E9%80%80%E5%87%BA"><span class="nav-number">13.</span> <span class="nav-text">编译过程中jom.exe退出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%85%AD%E4%B9%8B%E5%90%8E%E8%83%BD%E8%BF%90%E8%A1%8C%E5%8F%88crash%E7%9A%84%E7%A8%8B%E5%BA%8F"><span class="nav-number">14.</span> <span class="nav-text">娇嗔六之后能运行又crash的程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setProject%E6%97%A0%E6%B3%95%E8%B0%83%E7%94%A8"><span class="nav-number">15.</span> <span class="nav-text">setProject无法调用</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%B7%AF%E5%BE%84"><span class="nav-number">1.</span> <span class="nav-text"> 问题路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9C%80%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text"> 需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 娇嗔一（×）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="nav-number">3.1.</span> <span class="nav-text"> 相关测试代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#error-lnk1158-%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Crcexe"><span class="nav-number">3.2.</span> <span class="nav-text"> 👎 error: LNK1158: 无法运行“rc.exe”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 娇嗔二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qt-error-lnk1158-%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Crcexe"><span class="nav-number">5.</span> <span class="nav-text"> 👎 qt error: 	LNK1158: 无法运行“rc.exe”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fosgeo4wappsqt5includeqtwidgetsqdatetimeedith4510-error-c1083-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E5%8C%85%E6%8B%AC%E6%96%87%E4%BB%B6-qtcoreqcalendarh-no-such-file-or-directory"><span class="nav-number">6.</span> <span class="nav-text"> &gt;F:\OSGeo4W\apps\Qt5\include\QtWidgets\qdatetimeedit.h(45,10): error C1083: 无法打开包括文件: “QtCore&#x2F;qcalendar.h”: No such file or directory</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%B8%89"><span class="nav-number">7.</span> <span class="nav-text"> 娇嗔三（×）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%9B%9B"><span class="nav-number">8.</span> <span class="nav-text"> 娇嗔四</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E4%BA%94%E8%87%AA%E5%88%9B"><span class="nav-number">9.</span> <span class="nav-text"> 娇嗔五（自创）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qgis-310%E4%B8%8B%E8%BD%BD"><span class="nav-number">10.</span> <span class="nav-text"> qgis 3.10下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%85%AD"><span class="nav-number">11.</span> <span class="nav-text"> 娇嗔六</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qgis%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E"><span class="nav-number">12.</span> <span class="nav-text"> qgis版本说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%ADjomexe%E9%80%80%E5%87%BA"><span class="nav-number">13.</span> <span class="nav-text"> 编译过程中jom.exe退出</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A8%87%E5%97%94%E5%85%AD%E4%B9%8B%E5%90%8E%E8%83%BD%E8%BF%90%E8%A1%8C%E5%8F%88crash%E7%9A%84%E7%A8%8B%E5%BA%8F"><span class="nav-number">14.</span> <span class="nav-text"> 娇嗔六之后能运行又crash的程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setproject%E6%97%A0%E6%B3%95%E8%B0%83%E7%94%A8"><span class="nav-number">15.</span> <span class="nav-text"> setProject无法调用</span></a></li></ol>
     </div>
 </div>
 

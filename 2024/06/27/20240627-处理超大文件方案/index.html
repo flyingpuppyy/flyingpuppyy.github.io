@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分类
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首页</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >归档</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分类</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -230,7 +230,8 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="如何读取和处理和输出一个拥有超多数据的文件"><a href="#如何读取和处理和输出一个拥有超多数据的文件" class="headerlink" title="如何读取和处理和输出一个拥有超多数据的文件"></a>如何读取和处理和输出一个拥有超多数据的文件</h1><p>C++提供了一些用于读写大文件的库和技术，例如：</p>
+                    <h1 id="如何读取和处理和输出一个拥有超多数据的文件"><a class="markdownIt-Anchor" href="#如何读取和处理和输出一个拥有超多数据的文件"></a> 如何读取和处理和输出一个拥有超多数据的文件</h1>
+<p>C++提供了一些用于读写大文件的库和技术，例如：</p>
 <ol>
 <li>使用fstream库：C++标准库中的fstream库提供了对文件的读写操作。可以使用ifstream类进行文件的读取，使用ofstream类进行文件的写入。通过逐行或逐个字符读写文件，可以避免一次性加载整个文件到内存中。</li>
 <li>使用mmap函数：mmap函数可以将文件映射到内存中，通过内存映射的方式进行读写操作。这种方式可以减少对内存的直接访问，提高读写效率。</li>
@@ -239,19 +240,19 @@
 <li>使用异步IO：C++11引入了异步IO机制，可以通过异步方式进行文件的读写操作。异步IO可以在读写操作进行的同时执行其他任务，提高程序的并发性能。</li>
 </ol>
 <blockquote>
-<p><a class="link"   target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/information/%E8%AF%BB%E5%86%99%E5%A4%A7%E6%96%87%E4%BB%B6C%2B%2B(%E5%86%85%E5%AD%98%E8%BF%87%E8%BD%BD)-video" >https://cloud.tencent.com/developer/information/%E8%AF%BB%E5%86%99%E5%A4%A7%E6%96%87%E4%BB%B6C%2B%2B(%E5%86%85%E5%AD%98%E8%BF%87%E8%BD%BD)-video<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/information/%E8%AF%BB%E5%86%99%E5%A4%A7%E6%96%87%E4%BB%B6C%2B%2B(%E5%86%85%E5%AD%98%E8%BF%87%E8%BD%BD)-video" >https://cloud.tencent.com/developer/information/读写大文件C%2B%2B(内存过载)-video<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<h2 id="使用mmap函数"><a href="#使用mmap函数" class="headerlink" title="使用mmap函数"></a>使用mmap函数</h2><p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/TenosDoIt/p/3157596.html" >https://www.cnblogs.com/TenosDoIt/p/3157596.html<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="使用mmap函数"><a class="markdownIt-Anchor" href="#使用mmap函数"></a> 使用mmap函数</h2>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/TenosDoIt/p/3157596.html" >https://www.cnblogs.com/TenosDoIt/p/3157596.html<i class="fas fa-external-link-alt"></i></a></p>
 <p><a class="link"   target="_blank" rel="noopener" href="http://blog.csdn.net/wcyoot/article/details/7363393" >http://blog.csdn.net/wcyoot/article/details/7363393<i class="fas fa-external-link-alt"></i></a></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstringt.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* charString = <span class="string">&quot;o6.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">LPCWSTR <span class="title">ConvertToLPCWSTR</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* charArray)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 获取转换后的字符串长度</span></span><br><span class="line">    <span class="type">int</span> len = <span class="built_in">MultiByteToWideChar</span>(CP_ACP, <span class="number">0</span>, charArray, <span class="number">-1</span>, <span class="literal">NULL</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 为转换后的字符串分配内存</span></span><br><span class="line">    <span class="type">wchar_t</span>* wString = <span class="keyword">new</span> <span class="type">wchar_t</span>[len];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行转换</span></span><br><span class="line">    <span class="built_in">MultiByteToWideChar</span>(CP_ACP, <span class="number">0</span>, charArray, <span class="number">-1</span>, wString, len);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> wString;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    LPCWSTR wideString = <span class="built_in">ConvertToLPCWSTR</span>(charString);</span><br><span class="line">    </span><br><span class="line">    <span class="type">clock_t</span> start, finish;</span><br><span class="line">    <span class="comment">//------------------------------------------------------内存映射方法;</span></span><br><span class="line">    start = <span class="built_in">clock</span>();</span><br><span class="line">    <span class="comment">//创建或打开文件内核对象;</span></span><br><span class="line">    HANDLE fileH = <span class="built_in">CreateFile</span>(</span><br><span class="line">        wideString,</span><br><span class="line">        GENERIC_READ | GENERIC_WRITE,</span><br><span class="line">        FILE_SHARE_READ,</span><br><span class="line">        <span class="literal">NULL</span>,</span><br><span class="line">        OPEN_EXISTING,</span><br><span class="line">        FILE_ATTRIBUTE_NORMAL,</span><br><span class="line">        <span class="literal">NULL</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (fileH == INVALID_HANDLE_VALUE)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;error in CreateFile&quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span>* a = <span class="string">&quot;Resource&quot;</span>;</span><br><span class="line">    LPCWSTR b = <span class="built_in">ConvertToLPCWSTR</span>(a);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建一个文件映射内核对象;</span></span><br><span class="line">    HANDLE mapFileH = <span class="built_in">CreateFileMapping</span>(fileH,</span><br><span class="line">        <span class="literal">NULL</span>,</span><br><span class="line">        PAGE_READWRITE,</span><br><span class="line">        <span class="number">0</span>,</span><br><span class="line">        <span class="number">0</span>,</span><br><span class="line">        b);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (mapFileH == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;error in CreateFileMapping&quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将文件数据映射到进程的地址空间;</span></span><br><span class="line">    <span class="type">char</span>* mapH = (<span class="type">char</span>*)<span class="built_in">MapViewOfFile</span>(</span><br><span class="line">        mapFileH,</span><br><span class="line">        FILE_MAP_ALL_ACCESS,</span><br><span class="line">        <span class="number">0</span>,</span><br><span class="line">        <span class="number">0</span>,</span><br><span class="line">        <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (mapH == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;error in MapViewOfFile&quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//读取数据; </span></span><br><span class="line">    <span class="type">char</span>* buf = mapH;</span><br><span class="line">    <span class="type">double</span> k;</span><br><span class="line">    <span class="type">int</span> times = <span class="number">300000</span>*<span class="number">34</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= times; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        k = <span class="built_in">atof</span>(buf);</span><br><span class="line">        buf = <span class="built_in">strstr</span>(buf + <span class="number">9</span>, <span class="string">&quot; &quot;</span>);</span><br><span class="line">        <span class="comment">//cout&lt;&lt;k&lt;&lt;endl;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//关闭句柄;</span></span><br><span class="line">    <span class="built_in">UnmapViewOfFile</span>(mapH);</span><br><span class="line">    <span class="built_in">CloseHandle</span>(mapFileH);</span><br><span class="line">    <span class="built_in">CloseHandle</span>(fileH);</span><br><span class="line"></span><br><span class="line">    finish = <span class="built_in">clock</span>();</span><br><span class="line">    <span class="comment">//打印耗时;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;time:&quot;</span> &lt;&lt; (<span class="type">double</span>)(finish - start) / CLOCKS_PER_SEC &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//------------------------------------------------------传统方法;</span></span><br><span class="line">    start = <span class="built_in">clock</span>();</span><br><span class="line"></span><br><span class="line">    FILE* fp = <span class="built_in">fopen</span>(charString, <span class="string">&quot;r&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (fp == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;error in fopen&quot;</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= times; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">fscanf</span>(fp, <span class="string">&quot;%lf&quot;</span>, &amp;k);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">fclose</span>(fp);</span><br><span class="line"></span><br><span class="line">    finish = <span class="built_in">clock</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;time:&quot;</span> &lt;&lt; (<span class="type">double</span>)(finish - start) / CLOCKS_PER_SEC &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span>[] wideString;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>缩小范围映射完全符合规范的小范围数据是ok的</p>
 <p>但是奇怪的就是</p>
 <p>我自己的生成数据的脚本写出来的数据总是不符合规范</p>
 <p>反正读到后面指针老是为空的时候还在读取数据西巴</p>
-<hr>
-<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628131202516.png"  alt="image-20240628131202516"></p>
+<hr />
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/image-20240628131202516.png"  alt="image-20240628131202516" ></p>
 <blockquote>
 <p>300000*33之前的数据都没问题</p>
 <p>300000*33之后的数据有问题，很大的问题</p>
@@ -259,8 +260,8 @@
 <p>傻了，后面生成的数据没调用过</p>
 </blockquote>
 </blockquote>
-<h1 id="生成超多数据的python脚本"><a href="#生成超多数据的python脚本" class="headerlink" title="生成超多数据的python脚本"></a>生成超多数据的python脚本</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generate_floats</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;生成一个包含300000行，每行34个浮点数的列表。&quot;&quot;&quot;</span></span><br><span class="line">    data = []</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">300000</span>):</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">34</span>):</span><br><span class="line">             line = <span class="string">&#x27; &#x27;</span>.join(<span class="string">f&quot;<span class="subst">&#123;random.randint(<span class="number">0</span>, <span class="number">9</span>)&#125;</span>.<span class="subst">&#123;random.randint(<span class="number">0</span>, <span class="number">9999999</span>):07d&#125;</span>&quot;</span>)</span><br><span class="line">             i+=<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">save_to_file</span>(<span class="params">data, filename</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;将生成的浮点数列表保存到文件中。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        file.write(<span class="string">&#x27; &#x27;</span>.join(data))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    data = generate_floats()</span><br><span class="line">    save_to_file(data, <span class="string">&#x27;o7.txt&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<h1 id="生成超多数据的python脚本"><a class="markdownIt-Anchor" href="#生成超多数据的python脚本"></a> 生成超多数据的python脚本</h1>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generate_floats</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;生成一个包含300000行，每行34个浮点数的列表。&quot;&quot;&quot;</span></span><br><span class="line">    data = []</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">300000</span>):</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">34</span>):</span><br><span class="line">             line = <span class="string">&#x27; &#x27;</span>.join(<span class="string">f&quot;<span class="subst">&#123;random.randint(<span class="number">0</span>, <span class="number">9</span>)&#125;</span>.<span class="subst">&#123;random.randint(<span class="number">0</span>, <span class="number">9999999</span>):07d&#125;</span>&quot;</span>)</span><br><span class="line">             i+=<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">save_to_file</span>(<span class="params">data, filename</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;将生成的浮点数列表保存到文件中。&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        file.write(<span class="string">&#x27; &#x27;</span>.join(data))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    data = generate_floats()</span><br><span class="line">    save_to_file(data, <span class="string">&#x27;o7.txt&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
                 </div>
                 
@@ -290,7 +291,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20246028 Hello-algo read</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -304,7 +305,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20240627 武汉面试</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -321,15 +322,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;评论
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">评论插件加载失败</span>
-    <button class="reload keep-button">点击重新加载</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加载评论插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -413,7 +414,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96%E5%92%8C%E5%A4%84%E7%90%86%E5%92%8C%E8%BE%93%E5%87%BA%E4%B8%80%E4%B8%AA%E6%8B%A5%E6%9C%89%E8%B6%85%E5%A4%9A%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">如何读取和处理和输出一个拥有超多数据的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8mmap%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">使用mmap函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E8%B6%85%E5%A4%9A%E6%95%B0%E6%8D%AE%E7%9A%84python%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">生成超多数据的python脚本</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96%E5%92%8C%E5%A4%84%E7%90%86%E5%92%8C%E8%BE%93%E5%87%BA%E4%B8%80%E4%B8%AA%E6%8B%A5%E6%9C%89%E8%B6%85%E5%A4%9A%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text"> 如何读取和处理和输出一个拥有超多数据的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8mmap%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text"> 使用mmap函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E8%B6%85%E5%A4%9A%E6%95%B0%E6%8D%AE%E7%9A%84python%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text"> 生成超多数据的python脚本</span></a></li></ol>
     </div>
 </div>
 
@@ -440,7 +441,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -453,14 +454,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">访客数</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">访问量</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -566,7 +567,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96%E5%92%8C%E5%A4%84%E7%90%86%E5%92%8C%E8%BE%93%E5%87%BA%E4%B8%80%E4%B8%AA%E6%8B%A5%E6%9C%89%E8%B6%85%E5%A4%9A%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">如何读取和处理和输出一个拥有超多数据的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8mmap%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">使用mmap函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E8%B6%85%E5%A4%9A%E6%95%B0%E6%8D%AE%E7%9A%84python%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">生成超多数据的python脚本</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96%E5%92%8C%E5%A4%84%E7%90%86%E5%92%8C%E8%BE%93%E5%87%BA%E4%B8%80%E4%B8%AA%E6%8B%A5%E6%9C%89%E8%B6%85%E5%A4%9A%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text"> 如何读取和处理和输出一个拥有超多数据的文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8mmap%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text"> 使用mmap函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E8%B6%85%E5%A4%9A%E6%95%B0%E6%8D%AE%E7%9A%84python%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text"> 生成超多数据的python脚本</span></a></li></ol>
     </div>
 </div>
 
