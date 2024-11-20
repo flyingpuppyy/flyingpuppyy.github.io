@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20241120 椭球面、基准面和大地水准面：地球形状在惯性导航中的重要性 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"没有一条路径通往真诚 真诚本身就是道路","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"markdown":{"preset":"default","render":{"html":true,"xhtmlOut":false,"langPrefix":"language-","breaks":true,"linkify":true,"typographer":true,"quotes":"“”‘’"},"enable_rules":null,"disable_rules":null,"plugins":["markdown-it-abbr","markdown-it-cjk-breaks","markdown-it-deflist","markdown-it-emoji","markdown-it-footnote","markdown-it-ins","markdown-it-mark","markdown-it-sub","markdown-it-sup",{"name":"markdown-it-container","options":"success"},{"name":"markdown-it-container","options":"tips"},{"name":"markdown-it-container","options":"warning"},{"name":"markdown-it-container","options":"danger"}],"anchors":{"level":2,"collisionSuffix":"","permalink":false,"permalinkClass":"header-anchor","permalinkSide":"left","permalinkSymbol":"¶","case":0,"separator":"-"}},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                HOME
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >HOME</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >CATEGORIES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20241120 椭球面、基准面和大地水准面：地球形状在惯性导航中的重要性
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv6</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-11-20 11:49:56</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Wed Nov 20 2024 11:50:40 GMT+0800">2024-11-20 11:50:40</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="来源"><a class="markdownIt-Anchor" href="#来源"></a> 来源</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.oxts.com/zh/blog/ellipsoids-datums-and-geoids-why-the-shape-of-the-earth-matters/" >https://www.oxts.com/zh/blog/ellipsoids-datums-and-geoids-why-the-shape-of-the-earth-matters/<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="椭球面-基准面和大地水准面地球形状在惯性导航中的重要性"><a class="markdownIt-Anchor" href="#椭球面-基准面和大地水准面地球形状在惯性导航中的重要性"></a> 椭球面、基准面和大地水准面：地球形状在惯性导航中的重要性</h1>
+<p>您如何确保您正在制造的自动驾驶卡车到达预定地点？或者确保您的自动驾驶机器人出租车 <em>经过</em>而不是 <em>通过</em> 灯柱？</p>
+<p>答案当然是建立一个导航引擎，让车辆处理地理空间数据，告诉它自己和其他东西在地球上的确切位置。要制造一个能在地球上任何地方（或至少在您希望销售自主平台的地区）成功运行的导航引擎，需要考虑很多变量和挑战。</p>
+<p>在本文中，我们将重点讨论地球形状所带来的挑战。</p>
+<h2 id="我需要考虑什么"><a class="markdownIt-Anchor" href="#我需要考虑什么"></a> 我需要考虑什么？</h2>
+<p>总之，您需要注意以下关键事项：</p>
+<ul>
+<li>地球的形状有不同的描述系统。</li>
+<li>有不同的模型利用这些系统绘制出地球的部分或整体。</li>
+<li>在您的自主平台中，并非所有硬件都使用相同的系统或型号。</li>
+</ul>
+<p>如果您的导航引擎没有考虑到这些因素，那么您的平台就有可能无法到达目的地。除非在测试轨道上运行，否则这可能会导致乘客被成功送往目的地，而您的机器人出租车则会在路面上留下凹痕。</p>
+<p>为了帮助您理解这一切的原因，让我们从地球的形状开始。</p>
+<h2 id="地球不是一个球体"><a class="markdownIt-Anchor" href="#地球不是一个球体"></a> 地球不是一个球体</h2>
+<p>互联网上流传着这样一个小故事：尽管地球凹凸不平，但它仍然比台球光滑，如果台球和地球一样大的话。尽管现在已经没有人打台球了，但您可以理解为这意味着地球是相对平滑的。不幸的是，在测量地球以便为自主平台绘制地图时，这个比喻就像台球桌边上的一根台球杆一样不攻自破。</p>
+<p>首先，地球不是一个完美的球体，而是一个椭圆体–一个凹凸不平的椭圆体。在大地测量方面，我们最接近于绘制出 <em>实际</em> 在大地测量方面，我们最接近于绘制地球表面的实际形状，即大地水准面–一种基于平均海平面的理论形状（如果海洋位于陆地之下）。但即使 <em>但即便如此</em>对于测绘来说也过于复杂。当科学家们开始尝试为地球创建一个全球坐标系时，他们很快意识到，他们需要创建一个理论上的椭球体，这个椭球体必须是 <em>是平的</em>作为起点。随着时间的推移，多个椭球体应运而生。</p>
+<h2 id="为什么椭圆体不止一个"><a class="markdownIt-Anchor" href="#为什么椭圆体不止一个"></a> 为什么椭圆体不止一个？</h2>
+<p>任何大地椭球的目的都是尽可能地接近大地水准面，但事情并非如此简单。我们同时使用多个椭球面有几个不同的原因：</p>
+<ul>
+<li>
+<p>一些椭球体被设计为最适合整个大地水准面。目前，两个最流行的全球椭球体是WGS84（世界大地测量系统84）和GRS80（大地测量参考系统1980）。如果您要绘制地球的大部分或全部，这两个椭球体能为您提供最佳结果。</p>
+</li>
+<li>
+<p>有些椭球体对大地水准面的某一特定部分（如某一国家）具有最佳拟合度，因此在这些地区比全球椭球体更准确，但在其他地区则不太准确。例如，在英国，我们使用的是Airy 1830椭球体（参见OS的这篇文章）。<a class="link"   target="_blank" rel="noopener" href="https://www.ordnancesurvey.co.uk/blog/ostn15-new-geoid-britain" >这篇OS文章<i class="fas fa-external-link-alt"></i></a>向您展示了Airy 1830如何比GRS80更接近大地水准面）。</p>
+</li>
+<li>
+<p>当技术进步使我们能够重新计算椭球面，使其更接近大地水准面时（或大地水准面发生变化时，如由于构造活动），椭球面会偶尔更新。</p>
+</li>
+</ul>
+<h2 id="那么什么是基准"><a class="markdownIt-Anchor" href="#那么什么是基准"></a> 那么，什么是基准？</h2>
+<p>基准是地理坐标系的关键部分。可以这样理解</p>
+<ul>
+<li>地理坐标系统告诉您如何描述某物在地球上的位置。</li>
+<li>基准点为您提供了地球上的一个固定点，您可以据此建立坐标系。</li>
+</ul>
+<p>有两种不同的基准–水平基准和垂直基准。</p>
+<h3 id="水平基准"><a class="markdownIt-Anchor" href="#水平基准"></a> 水平基准</h3>
+<p>水平基准将您的经纬度与现实世界联系起来。它们基于特定的椭球体–与椭球体一样，有旨在提供全球最佳总体精度的全球水平基准和旨在提供特定区域最佳精度的地方基准。</p>
+<p>然而，地方基准并不总是由地方椭球体创建的。在英国，我们使用OSGB36基准，它基于Airy 1830当地椭球体，但在北美，他们使用NAD  83，它基于GRS80全球椭球体。基准也会根据构造变化或技术改进定期更新（有时也会根据更适合的新椭球面更新）。地方基准也可能因构造活动而更新–例如，日本使用的JGD2011基准就是在东北地震后为取代JGD2000而创建的，地震对当地地质的影响足以使JGD2000无法用于精确测量。</p>
+<h3 id="垂直基准"><a class="markdownIt-Anchor" href="#垂直基准"></a> 垂直基准</h3>
+<p>垂直基准将坐标系的高度固定在现实世界中。有些系统使用椭球面作为垂直基准（特别是WGS84），但大多数其他系统使用海平面等于平均海平面的特定点（因此最接近大地水准面）。可以说，垂直基准对于陆基自动驾驶车辆来说并不那么重要，但对于水上或空中飞行器来说，它们当然非常重要。</p>
+<h2 id="为什么会有这些问题"><a class="markdownIt-Anchor" href="#为什么会有这些问题"></a> 为什么会有这些问题？</h2>
+<p>您会意识到，由于基于不同的椭球面有许多不同的基准，有三件事是正确的：</p>
+<ul>
+<li>
+<p>一组坐标可以指多个位置，这取决于您使用的基准。</p>
+</li>
+<li>
+<p>一个地点在不同的基准面上可以有不同的坐标。</p>
+</li>
+<li>
+<p>根据您是从海平面/大地水准面测量高度还是从椭球面测量高度，该位置的高度也可能不同。</p>
+</li>
+</ul>
+<p>通常，距离上的差异并不是很大（例如，WGS84 和 ITRF 之间的差异通常小于 10 毫米）。但是，它们也可能相差很大。例如，在澳大利亚，最新的基准GDA94和它的前身AGD84在某些地方相差200多米。更糟糕的是 <em>旧版本</em>更糟糕的是，还有一个更老的版本，叫做ADG66–这三个版本的数据仍在澳大利亚不同的地方使用。在澳大利亚和美国这样的大国，不同的州使用不同的基准，因此跨州测绘又增加了一层复杂性。</p>
+<p>数据问题会给您的自动驾驶汽车带来两大后果（如果您制造的是无人机或潜水艇，则会带来三大后果）：</p>
+<ul>
+<li>
+<p>物体不在您的车辆所认为的位置上，这意味着它不会去它需要去的地方，或者它撞上了它认为不应该在那里的东西。</p>
+</li>
+<li>
+<p>对于高度相关的车辆，您的车辆可能会错误地估计自己的高度–这可能会导致它撞向地面，试图在半空中着陆（剧透：这也会导致它撞向地面），或者以为自己在水面上，其实仍在水下（反之亦然）。</p>
+</li>
+<li>
+<p>您的车辆几乎不可能将行驶距离转换成纬度/经度坐标。</p>
+</li>
+</ul>
+<p>第三点非常重要，因为您的IMU将输出以米为单位的数据，而您的GNSS接收机将提供纬度/直线坐标–您的卡尔曼滤波器将试图评估数据的准确性。您必须确保您的导航引擎能够正确地将以米为单位的运动放大到以纬度/直线坐标为单位的运动，否则您的卡尔曼滤波器将开始拒绝至少一组不准确的测量，从而阻碍您的平台。此外，您还必须记住，越靠近两极，坐标网格就越小，因此您不必移动那么多米来改变纬度/经度坐标。如果想让自动驾驶汽车在测试轨道以外的任何地方正常运行，这一点至关重要。由于每个基准网格的对齐方式略有不同，因此移动量的变化将取决于您使用的基准。</p>
+<h2 id="oxts-方法"><a class="markdownIt-Anchor" href="#oxts-方法"></a> OxTS 方法</h2>
+<p>我们的惯性导航系统设备能够以尽可能少的麻烦处理基准问题。所有<a class="link"   target="_blank" rel="noopener" href="https://www.oxts.com/zh/industry/oxts-products/" >OxTS 惯性导航系统<i class="fas fa-external-link-alt"></i></a>均可使用以下基准实时输出位置数据：</p>
+<ul>
+<li>
+<p>WGS84</p>
+</li>
+<li>
+<p>ITRF2008</p>
+</li>
+<li>
+<p>ETRS89</p>
+</li>
+<li>
+<p>NAD83</p>
+</li>
+</ul>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/11/19/20241119-gdal-3-4-0%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E4%BA%86%E8%A7%A3/"
+                                   title="20241119 gdal 3.4.0文件结构了解"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20241119 gdal 3.4.0文件结构了解</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A4%AD%E7%90%83%E9%9D%A2-%E5%9F%BA%E5%87%86%E9%9D%A2%E5%92%8C%E5%A4%A7%E5%9C%B0%E6%B0%B4%E5%87%86%E9%9D%A2%E5%9C%B0%E7%90%83%E5%BD%A2%E7%8A%B6%E5%9C%A8%E6%83%AF%E6%80%A7%E5%AF%BC%E8%88%AA%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text"> 椭球面、基准面和大地水准面：地球形状在惯性导航中的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text"> 我需要考虑什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%B0%E7%90%83%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E7%90%83%E4%BD%93"><span class="nav-number">2.2.</span> <span class="nav-text"> 地球不是一个球体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%A4%AD%E5%9C%86%E4%BD%93%E4%B8%8D%E6%AD%A2%E4%B8%80%E4%B8%AA"><span class="nav-number">2.3.</span> <span class="nav-text"> 为什么椭圆体不止一个？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E4%B9%88%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.</span> <span class="nav-text"> 那么，什么是基准？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.1.</span> <span class="nav-text"> 水平基准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%82%E7%9B%B4%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.2.</span> <span class="nav-text"> 垂直基准</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text"> 为什么会有这些问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oxts-%E6%96%B9%E6%B3%95"><span class="nav-number">2.6.</span> <span class="nav-text"> OxTS 方法</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A4%AD%E7%90%83%E9%9D%A2-%E5%9F%BA%E5%87%86%E9%9D%A2%E5%92%8C%E5%A4%A7%E5%9C%B0%E6%B0%B4%E5%87%86%E9%9D%A2%E5%9C%B0%E7%90%83%E5%BD%A2%E7%8A%B6%E5%9C%A8%E6%83%AF%E6%80%A7%E5%AF%BC%E8%88%AA%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text"> 椭球面、基准面和大地水准面：地球形状在惯性导航中的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text"> 我需要考虑什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%B0%E7%90%83%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E7%90%83%E4%BD%93"><span class="nav-number">2.2.</span> <span class="nav-text"> 地球不是一个球体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%A4%AD%E5%9C%86%E4%BD%93%E4%B8%8D%E6%AD%A2%E4%B8%80%E4%B8%AA"><span class="nav-number">2.3.</span> <span class="nav-text"> 为什么椭圆体不止一个？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E4%B9%88%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.</span> <span class="nav-text"> 那么，什么是基准？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.1.</span> <span class="nav-text"> 水平基准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%82%E7%9B%B4%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.2.</span> <span class="nav-text"> 垂直基准</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text"> 为什么会有这些问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oxts-%E6%96%B9%E6%B3%95"><span class="nav-number">2.6.</span> <span class="nav-text"> OxTS 方法</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
