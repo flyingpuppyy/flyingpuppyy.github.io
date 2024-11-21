@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Wed Nov 20 2024 11:50:40 GMT+0800">2024-11-20 11:50:40</span>
+                <span class="datetime" data-updated="Wed Nov 20 2024 14:30:21 GMT+0800">2024-11-20 14:30:21</span>
             </span>
         
 
@@ -239,12 +239,12 @@
 <h2 id="我需要考虑什么"><a class="markdownIt-Anchor" href="#我需要考虑什么"></a> 我需要考虑什么？</h2>
 <p>总之，您需要注意以下关键事项：</p>
 <ul>
-<li>地球的形状有不同的描述系统。</li>
-<li>有不同的模型利用这些系统绘制出地球的部分或整体。</li>
-<li>在您的自主平台中，并非所有硬件都使用相同的系统或型号。</li>
+<li>地球的<mark>形状有不同的描述系统</mark>。</li>
+<li>有<mark>不同的模型利用这些系统</mark>绘制出地球的部分或整体。</li>
+<li>在您的自主平台中，<mark>并非所有硬件都使用相同的系统</mark>或型号。</li>
 </ul>
 <p>如果您的导航引擎没有考虑到这些因素，那么您的平台就有可能无法到达目的地。除非在测试轨道上运行，否则这可能会导致乘客被成功送往目的地，而您的机器人出租车则会在路面上留下凹痕。</p>
-<p>为了帮助您理解这一切的原因，让我们从地球的形状开始。</p>
+<p>为了帮助您理解这一切的原因，让我们从<mark>地球的形状</mark>开始。</p>
 <h2 id="地球不是一个球体"><a class="markdownIt-Anchor" href="#地球不是一个球体"></a> 地球不是一个球体</h2>
 <p>互联网上流传着这样一个小故事：尽管地球凹凸不平，但它仍然比台球光滑，如果台球和地球一样大的话。尽管现在已经没有人打台球了，但您可以理解为这意味着地球是相对平滑的。不幸的是，在测量地球以便为自主平台绘制地图时，这个比喻就像台球桌边上的一根台球杆一样不攻自破。</p>
 <p>首先，地球不是一个完美的球体，而是一个椭圆体–一个凹凸不平的椭圆体。在大地测量方面，我们最接近于绘制出 <em>实际</em> 在大地测量方面，我们最接近于绘制地球表面的实际形状，即大地水准面–一种基于平均海平面的理论形状（如果海洋位于陆地之下）。但即使 <em>但即便如此</em>对于测绘来说也过于复杂。当科学家们开始尝试为地球创建一个全球坐标系时，他们很快意识到，他们需要创建一个理论上的椭球体，这个椭球体必须是 <em>是平的</em>作为起点。随着时间的推移，多个椭球体应运而生。</p>
@@ -265,7 +265,7 @@
 <p>基准是地理坐标系的关键部分。可以这样理解</p>
 <ul>
 <li>地理坐标系统告诉您如何描述某物在地球上的位置。</li>
-<li>基准点为您提供了地球上的一个固定点，您可以据此建立坐标系。</li>
+<li>基准点为您提供了地球上的一个固定点，您可以据此建立坐标系。  (<mark>基准即是标准</mark>)</li>
 </ul>
 <p>有两种不同的基准–水平基准和垂直基准。</p>
 <h3 id="水平基准"><a class="markdownIt-Anchor" href="#水平基准"></a> 水平基准</h3>
@@ -273,6 +273,38 @@
 <p>然而，地方基准并不总是由地方椭球体创建的。在英国，我们使用OSGB36基准，它基于Airy 1830当地椭球体，但在北美，他们使用NAD  83，它基于GRS80全球椭球体。基准也会根据构造变化或技术改进定期更新（有时也会根据更适合的新椭球面更新）。地方基准也可能因构造活动而更新–例如，日本使用的JGD2011基准就是在东北地震后为取代JGD2000而创建的，地震对当地地质的影响足以使JGD2000无法用于精确测量。</p>
 <h3 id="垂直基准"><a class="markdownIt-Anchor" href="#垂直基准"></a> 垂直基准</h3>
 <p>垂直基准将坐标系的高度固定在现实世界中。有些系统使用椭球面作为垂直基准（特别是WGS84），但大多数其他系统使用海平面等于平均海平面的特定点（因此最接近大地水准面）。可以说，垂直基准对于陆基自动驾驶车辆来说并不那么重要，但对于水上或空中飞行器来说，它们当然非常重要。</p>
+<blockquote>
+<p>人们一般如何描述一个椭球体（利用哪些参数来进行描述）</p>
+<hr />
+<p>来源：<a class="link"   target="_blank" rel="noopener" href="http://chzhou.blog.sohu.com/100634843.html" >http://chzhou.blog.sohu.com/100634843.html<i class="fas fa-external-link-alt"></i></a></p>
+<p>看了很多人讲这几个概念，大山觉得没有讲清楚，我也来学习一下，讲一下：</p>
+<p>为了把地球上的一个位置，例如某个商场的位置进行确切的描述，我们需要建立坐标系。这样，有好多种坐标系：</p>
+<p>1、笛卡尔坐标系，就是我们从小到大学习的坐标系，平面的或立体的，我们给一个原点，二个或三个方向，各个方向上定义一个单位长度。这个坐标系一般是概念坐标系，人们不关心坐标系的单位长度。也就是说，（1，1）这个平面上的点，我们不知道它离两个坐标轴是一公分还是一公里，我们也不关心，通常几个坐标轴的单位长度是相同的。</p>
+<p>2、本地坐标系，在笛卡尔坐标系中，我们如果定义某个确切的位置为原点，确切的方向为坐标轴，确切的长度为坐标单位，可以建立本地坐标系，或称地方坐标系。比如，定义武汉市政府为起算原点，正北为Y轴正方向，正东为X轴正方向，以米为长度单位，描述武汉市内的所有位置。这是可以的，很确切的。用于武汉市的测量，建立地图，不会有太大的问题。但是地球是一个圆的，这种测量方法在离原点越远的位置，误差就越大，距离和面积的度量越不准确，不适合大范围的测量。如全国的道路网，我们以哪个地方为原点呢，离原点较远的域，100公时的路程在地图上可能就变成80公里或120公里。</p>
+<p>3、地理坐标系。这样，我们直接用经纬度对坐标进行度量，这实际上是大地坐标，或称地理坐标。大地坐标系或称地理坐标系理论上是这样的，我们假想有一个地心，向北级点建立一个轴，以格林威治和南北极三个点作一个大圆弧，得到0度和180度经线。和南北极这个轴垂直的大圆面，和地表的交线也为一个大圆，就是赤道。这个坐标系实际上称为球面极坐标，经纬度是两个极角，再加上一个极半径，也就是离地心的距离，我们可以描述地球内部，地球表面，天空，太空中的仍何点。<br />
+注意，这里的地心是一个假想的地球内部的点。我们不要极半径，只有经纬度，我们如何描述地表的一个位置呢。我们讲(120E，30N)这个坐标，是假想地表上的某个点。我们也假想地球是一个球，它有某个固定的半径。这样我们说经纬度就是在这个假想的球面上的某个位置。</p>
+<p>4，椭球体。有人为了描述地球这个不规则的球体，就用一个椭球来描述它。<mark>通常是用长轴，短轴，扁率等参数来描述一个旋转的椭球体</mark>。</p>
+<p>有很多研究者定义了不同的参数，描述了不同的椭球体。人们试图用它来逼近真实的地球表面。</p>
+<p><mark>理想情况和一般默认情况下，假设把这个椭球的球心放在地球内的某个位置，再转运它，使这个椭球的三个轴分别指向地球的某些方向，</mark></p>
+<p><mark>是的，这样我们就得到了想要的地球面。每个经纬度坐标和这个椭球面上的位置一一对应。默认的情况下也是这样的</mark>。</p>
+<p>地球的形状有点扁，我们用椭球，这很好。然而，地球上有的地方高，有的地方低，局部形状极不规则。如果全球各地都用这个椭球来进行量测，也就是说，我们都把自己的位置对应到这个椭球上去的话，会产生一些问题。主要是测量上的问题，因为椭球一定，两个点一定，这两个点的距离是可以解算的，但是椭球上的位置可能比实际的位置“高”或者“低”，所以在距离和面积的量测上都会产生误差，这个误差在很多地区无法忽略不计。</p>
+<p>5，大地基准面。<mark>不同的国家选择了适合的椭球</mark>，并把这个椭球的位置（球心位置）进行一些调整，比如朝X，Y，Z各偏移多少，可能还需要旋转一点点，以使该椭球在该国家所处的地区和地表尽可能的吻合。这样极大的减少量测产生的误差。</p>
+<p>因此可以看出，基准面是椭球（ELLIPSOID_ID）经过平移（SHIFT_X,SHIFT_Y,SHIFT_Z),旋转(ROTATE_X,ROTATE_Y,ROTATE_Z),缩放(SCALE_ADJUST)形成的。经过变换去拟合地表的某一局部的椭球体，称为参考椭球体。</p>
+<p><mark>也就是说，一个椭球经不过同的变换可以对应与多个参考椭球。</mark></p>
+<p>这些括号中的英文就是基准面主要的定义参数，实际上就是数学模型。</p>
+<p><mark>大地基准面称为参考椭球面，也是可以的，但要明白的是，基准面大多不是指全球的一个面，</mark></p>
+<p><mark>而是旋转椭球经过平移旋转等变换后切合到某一区域的那部分表面，在该区域，椭球面和地表较好的吻合，测量的精度可以满足需要。</mark></p>
+<p>大地基准面，与“高程基准面”不是同一基准面，高程基准面在我国是以似大地水准面为起算面，所确定的高程为正常高，而大地基准面是大地高的起算面，大地高与正常高之差即为高程异常。</p>
+<p>6，<mark>大地坐标系，大地基准面对应的椭球确定了一个大地坐标系</mark>。因此各地区的大地坐标系也不是统一的。</p>
+<p>7，投影坐标系。在地图出版的时候，通常是一个纸平面。因此，如何把大地坐标表示的坐标映射到平面上，是一个问题。很多投影方法因此产生，如心射投影，横轴墨卡托投影，高斯投影等。通常有的要求等面积，有的要求等距离，有的要求等方向。例如墨卡托投影的地图上，一条直线上的处处方向是一样的。而采用心射投影生成的地图上，一条直线段则代表了球面上的一段大圆弧。不巾和应用和不同的区域，适合用不同的投影方式。</p>
+<p>以上是大山的见解，欢迎批评指正。</p>
+<hr />
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.sina.com.cn/s/blog_6ea2965001015a24.html" >https://blog.sina.com.cn/s/blog_6ea2965001015a24.html<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<h2 id="大地坐标系和投影坐标系的联系"><a class="markdownIt-Anchor" href="#大地坐标系和投影坐标系的联系"></a> 大地坐标系和投影坐标系的联系</h2>
+<p><strong>坐标系</strong>提供了一个参考框架，用来描述地理位置，通常包括经纬度或平面坐标。</p>
+<p><strong>投影方式</strong>则是将地球表面上的三维坐标转换为二维地图上的方法。</p>
+<p><strong>坐标系与投影方式密切相关</strong>，在具体应用中，坐标系定义了位置的表达方式，而投影方式决定了这些位置在二维平面上的呈现方法。</p>
 <h2 id="为什么会有这些问题"><a class="markdownIt-Anchor" href="#为什么会有这些问题"></a> 为什么会有这些问题？</h2>
 <p>您会意识到，由于基于不同的椭球面有许多不同的基准，有三件事是正确的：</p>
 <ul>
@@ -299,7 +331,9 @@
 <p>您的车辆几乎不可能将行驶距离转换成纬度/经度坐标。</p>
 </li>
 </ul>
-<p>第三点非常重要，因为您的IMU将输出以米为单位的数据，而您的GNSS接收机将提供纬度/直线坐标–您的卡尔曼滤波器将试图评估数据的准确性。您必须确保您的导航引擎能够正确地将以米为单位的运动放大到以纬度/直线坐标为单位的运动，否则您的卡尔曼滤波器将开始拒绝至少一组不准确的测量，从而阻碍您的平台。此外，您还必须记住，越靠近两极，坐标网格就越小，因此您不必移动那么多米来改变纬度/经度坐标。如果想让自动驾驶汽车在测试轨道以外的任何地方正常运行，这一点至关重要。由于每个基准网格的对齐方式略有不同，因此移动量的变化将取决于您使用的基准。</p>
+<p>第三点非常重要，因为您的IMU将输出以米为单位的数据，而您的GNSS接收机将提供纬度/直线坐标–您的卡尔曼滤波器将试图评估数据的准确性。</p>
+<p>您必须确保您的导航引擎能够正确地将以米为单位的运动放大到以纬度/直线坐标为单位的运动，否则您的卡尔曼滤波器将开始拒绝至少一组不准确的测量，从而阻碍您的平台。</p>
+<p>此外，您还必须记住，越靠近两极，坐标网格就越小，因此您不必移动那么多米来改变纬度/经度坐标。如果想让自动驾驶汽车在测试轨道以外的任何地方正常运行，这一点至关重要。由于每个基准网格的对齐方式略有不同，因此移动量的变化将取决于您使用的基准。</p>
 <h2 id="oxts-方法"><a class="markdownIt-Anchor" href="#oxts-方法"></a> OxTS 方法</h2>
 <p>我们的惯性导航系统设备能够以尽可能少的麻烦处理基准问题。所有<a class="link"   target="_blank" rel="noopener" href="https://www.oxts.com/zh/industry/oxts-products/" >OxTS 惯性导航系统<i class="fas fa-external-link-alt"></i></a>均可使用以下基准实时输出位置数据：</p>
 <ul>
@@ -333,6 +367,22 @@
 
                 
                     <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/11/20/20241120-%E5%9E%82%E7%9B%B4%E5%9F%BA%E5%87%86-%E5%9C%B0%E7%90%83%E9%AB%98%E7%A8%8B%E5%8F%82%E8%80%83%E6%A1%86%E6%9E%B6/"
+                                   title="20241120 垂直基准-地球高程参考框架"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20241120 垂直基准-地球高程参考框架</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
                         
                         
                             <div class="next-post">
@@ -452,7 +502,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A4%AD%E7%90%83%E9%9D%A2-%E5%9F%BA%E5%87%86%E9%9D%A2%E5%92%8C%E5%A4%A7%E5%9C%B0%E6%B0%B4%E5%87%86%E9%9D%A2%E5%9C%B0%E7%90%83%E5%BD%A2%E7%8A%B6%E5%9C%A8%E6%83%AF%E6%80%A7%E5%AF%BC%E8%88%AA%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text"> 椭球面、基准面和大地水准面：地球形状在惯性导航中的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text"> 我需要考虑什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%B0%E7%90%83%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E7%90%83%E4%BD%93"><span class="nav-number">2.2.</span> <span class="nav-text"> 地球不是一个球体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%A4%AD%E5%9C%86%E4%BD%93%E4%B8%8D%E6%AD%A2%E4%B8%80%E4%B8%AA"><span class="nav-number">2.3.</span> <span class="nav-text"> 为什么椭圆体不止一个？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E4%B9%88%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.</span> <span class="nav-text"> 那么，什么是基准？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.1.</span> <span class="nav-text"> 水平基准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%82%E7%9B%B4%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.2.</span> <span class="nav-text"> 垂直基准</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text"> 为什么会有这些问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oxts-%E6%96%B9%E6%B3%95"><span class="nav-number">2.6.</span> <span class="nav-text"> OxTS 方法</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A4%AD%E7%90%83%E9%9D%A2-%E5%9F%BA%E5%87%86%E9%9D%A2%E5%92%8C%E5%A4%A7%E5%9C%B0%E6%B0%B4%E5%87%86%E9%9D%A2%E5%9C%B0%E7%90%83%E5%BD%A2%E7%8A%B6%E5%9C%A8%E6%83%AF%E6%80%A7%E5%AF%BC%E8%88%AA%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text"> 椭球面、基准面和大地水准面：地球形状在惯性导航中的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text"> 我需要考虑什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%B0%E7%90%83%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E7%90%83%E4%BD%93"><span class="nav-number">2.2.</span> <span class="nav-text"> 地球不是一个球体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%A4%AD%E5%9C%86%E4%BD%93%E4%B8%8D%E6%AD%A2%E4%B8%80%E4%B8%AA"><span class="nav-number">2.3.</span> <span class="nav-text"> 为什么椭圆体不止一个？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E4%B9%88%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.</span> <span class="nav-text"> 那么，什么是基准？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.1.</span> <span class="nav-text"> 水平基准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%82%E7%9B%B4%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.2.</span> <span class="nav-text"> 垂直基准</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E5%9C%B0%E5%9D%90%E6%A0%87%E7%B3%BB%E5%92%8C%E6%8A%95%E5%BD%B1%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E8%81%94%E7%B3%BB"><span class="nav-number">2.5.</span> <span class="nav-text"> 大地坐标系和投影坐标系的联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">2.6.</span> <span class="nav-text"> 为什么会有这些问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oxts-%E6%96%B9%E6%B3%95"><span class="nav-number">2.7.</span> <span class="nav-text"> OxTS 方法</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -605,7 +655,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A4%AD%E7%90%83%E9%9D%A2-%E5%9F%BA%E5%87%86%E9%9D%A2%E5%92%8C%E5%A4%A7%E5%9C%B0%E6%B0%B4%E5%87%86%E9%9D%A2%E5%9C%B0%E7%90%83%E5%BD%A2%E7%8A%B6%E5%9C%A8%E6%83%AF%E6%80%A7%E5%AF%BC%E8%88%AA%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text"> 椭球面、基准面和大地水准面：地球形状在惯性导航中的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text"> 我需要考虑什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%B0%E7%90%83%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E7%90%83%E4%BD%93"><span class="nav-number">2.2.</span> <span class="nav-text"> 地球不是一个球体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%A4%AD%E5%9C%86%E4%BD%93%E4%B8%8D%E6%AD%A2%E4%B8%80%E4%B8%AA"><span class="nav-number">2.3.</span> <span class="nav-text"> 为什么椭圆体不止一个？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E4%B9%88%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.</span> <span class="nav-text"> 那么，什么是基准？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.1.</span> <span class="nav-text"> 水平基准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%82%E7%9B%B4%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.2.</span> <span class="nav-text"> 垂直基准</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text"> 为什么会有这些问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oxts-%E6%96%B9%E6%B3%95"><span class="nav-number">2.6.</span> <span class="nav-text"> OxTS 方法</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A5%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 来源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A4%AD%E7%90%83%E9%9D%A2-%E5%9F%BA%E5%87%86%E9%9D%A2%E5%92%8C%E5%A4%A7%E5%9C%B0%E6%B0%B4%E5%87%86%E9%9D%A2%E5%9C%B0%E7%90%83%E5%BD%A2%E7%8A%B6%E5%9C%A8%E6%83%AF%E6%80%A7%E5%AF%BC%E8%88%AA%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text"> 椭球面、基准面和大地水准面：地球形状在惯性导航中的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E4%BB%80%E4%B9%88"><span class="nav-number">2.1.</span> <span class="nav-text"> 我需要考虑什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%B0%E7%90%83%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E7%90%83%E4%BD%93"><span class="nav-number">2.2.</span> <span class="nav-text"> 地球不是一个球体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%A4%AD%E5%9C%86%E4%BD%93%E4%B8%8D%E6%AD%A2%E4%B8%80%E4%B8%AA"><span class="nav-number">2.3.</span> <span class="nav-text"> 为什么椭圆体不止一个？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%A3%E4%B9%88%E4%BB%80%E4%B9%88%E6%98%AF%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.</span> <span class="nav-text"> 那么，什么是基准？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.1.</span> <span class="nav-text"> 水平基准</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%82%E7%9B%B4%E5%9F%BA%E5%87%86"><span class="nav-number">2.4.2.</span> <span class="nav-text"> 垂直基准</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E5%9C%B0%E5%9D%90%E6%A0%87%E7%B3%BB%E5%92%8C%E6%8A%95%E5%BD%B1%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E8%81%94%E7%B3%BB"><span class="nav-number">2.5.</span> <span class="nav-text"> 大地坐标系和投影坐标系的联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%BF%99%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">2.6.</span> <span class="nav-text"> 为什么会有这些问题？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#oxts-%E6%96%B9%E6%B3%95"><span class="nav-number">2.7.</span> <span class="nav-text"> OxTS 方法</span></a></li></ol></li></ol>
     </div>
 </div>
 

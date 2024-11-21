@@ -9,7 +9,7 @@
     
     <title>
         
-            20240717 makefile 构建规则 |
+            20241120 choco 和make |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20240717 makefile 构建规则
+                        20241120 choco 和make
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2024-07-17 14:46:30</span>
+                <span class="datetime">2024-11-20 16:45:23</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Wed Nov 20 2024 16:51:36 GMT+0800">2024-11-20 16:51:36</span>
+                <span class="datetime" data-updated="Wed Nov 20 2024 16:51:17 GMT+0800">2024-11-20 16:51:17</span>
             </span>
         
 
@@ -230,50 +230,18 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="第一篇文章"><a class="markdownIt-Anchor" href="#第一篇文章"></a> 第一篇文章</h1>
-<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/super828/article/details/127839649" >https://blog.csdn.net/super828/article/details/127839649<i class="fas fa-external-link-alt"></i></a></p>
-<p>上一篇文章我们成功编译了一个单文件，对于文件数量比较少的工程，这种方法还可以，但是如果文件非常对，到几百几千个文件，那这种通过终端使用GCC的方法显然不靠谱。</p>
-<p>这就引出了一个方法，利用一个编辑好的文件，可以按照提前规定的路径及方式编译源码文件，每次编译只要执行这个文件就可以了。然后工程师就实现了这个想法，这个文件就是本文要说的Makefile。</p>
-<p>当然大家要是习惯IDE编程，可能也都没太注意这个文件，但是事实上IDE也是有这么个文件，只不过已经被封装在图形界面之后了。但是既然我们之后要使用Linux编程，自然有需求去学习下Makefile的。</p>
-<h2 id="正文"><a class="markdownIt-Anchor" href="#正文"></a> 正文：</h2>
-<p><strong>这里以多个C文件为例子：main.c delay.c rtc.c</strong></p>
-<blockquote>
-<p>下面整个过程注意观察makefile解决了什么问题</p>
-</blockquote>
-<p>Makefile由来</p>
-<p>1.第一步先对其进行编译：这步的意思是对三个C文件进行编译，生成的可执行文件名字为main。</p>
-<pre><code>gcc main.c delay.c rtc.c -o main
-</code></pre>
-<p>2.需要验证这个执行文件的话。</p>
-<pre><code>./main
-</code></pre>
-<p>3.上述这个方法有一个很明显的问题，现在文件比较少，每次修改编译时间成本不明显，但是如果文件非常多的情况下，这种每次都一起编译的方式就会非常慢。</p>
-<p>所以我们想要的行为当然是，每次修改那个文件，就编译这个文件。</p>
-<p>下边的命令是先把文件编译为.o文件，-c 参数是只编译不链接。</p>
-<p>然后通过-o 参数把编译文件链接为可执行文件。</p>
-<pre><code>gcc -c main.c
-
-gcc -c delay.c
-
-gcc -c rtc.c
-
-gcc main.o delay.o rtc.o -o main
-</code></pre>
-<p>之后比如delay.c文件被修改，只需要单独编译delay.c即可。</p>
-<pre><code>gcc -c delay.c
-
-gcc main.o delay.o rtc.o -o main
-</code></pre>
-<p>4.然后这又引出一个问题，文件比较多的情况，我们根本不可能记得哪些文件修改过；</p>
-<p><strong>因此我们需要一个工具；</strong></p>
-<p><strong>1、如果工程没有编译过，那么工程中的所有.c 文件都要被编译并且链接成可执行程序。</strong></p>
-<p><strong>2、如果工程中只有个别 C 文件被修改了，那么只编译这些被修改的 C 文件即可。</strong></p>
-<p><strong>3、如果工程的头文件被修改了，那么我们需要编译所有引用这个头文件的 C 文件，并且链接成可执行文件。</strong></p>
-<p>然后这个工具就是Makefile，这也是Makefile的一个简单地发展过程。</p>
-<h1 id="makefiel-20241120了解"><a class="markdownIt-Anchor" href="#makefiel-20241120了解"></a> makefiel 20241120了解</h1>
-<p><a class="link"   target="_blank" rel="noopener" href="https://seisman.github.io/how-to-write-makefile/overview.html" >https://seisman.github.io/how-to-write-makefile/overview.html<i class="fas fa-external-link-alt"></i></a></p>
-<p>F:\companyall\s57\product\ecdis-3.0\configure</p>
-
+                    <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e28d62570e07b26ed89feb9315c4c1964be21729acc67ab7b40d89e08cb38ba2">ccc03bb707e66f6732d54c5d65637f97f8edddd8541e8b5d7091f017821f70e42f66400b92edef5d9337c14d583811298b7451128720b11e40a30049fe40b92482b854ae67eb053194cb627f4fe5f0bf79fabefebe1c5d7d49f9e4c2a9a3a7402088babb773537381f129ca3454b30d98fee7d254a9a2ef8b517d56a30e12a456bce8c5441f4cf376b39ab21e35a78f68f1cbe52b256342ab19f922a66585dfde6e59634f49a036ac2715b6d1cf0741567816af19587932f704002a14fe92d947f4c885ac332f9e9ae852ab3a3592f48c098449b23f61ae08a2ec11eab3fd98270c9de6e61851cb9df233f1c23aa29eefc28a6dcf25c36f12291483f8b147a93372efec1eae43a3c341db86d01df535157000efffc7bb2e40f8650ab696159dea49726b48caeb3634cfd11808e9198b9aac6054c066bb6d83b5df8fdfac6c0c40c15a3dafe579be6bf880e02e261f5bf13ed4641426f0a69756be5e5d3c19ae28411d380230be586366a60a7b10cb7cd0b5302ff13376a557e1d2bfa3fdba4f45073bbf69c28fe662c03cf42254875b02c5976a1816bbad7206f55fabe060bfe39b76123e9a3aa52c576696c72090adb86144e1b725937b7936a8a6e455617cb05371906c1d3a7b1b0dad818ceef984b9d6cc76cfd0448442c38107dcbd2a71ba7a4246b6fc5d12faf6ecf0b1f80803e8ac4e2b6bad70c2b9592cccd41928122a06e0292fb6cd930d3deefd75268d78aac0fc6292a030c5e21dbd4a01d484898c5c031494081f0262198bfb9017bfa1159d939a0754e592091176549b184c2535d6c2b6fd73386c81caa22dfe585171302c367bb37bb11502c4b50ec833968b46d16ff3f5a7320cc34888f35579933ac38ced672bd275299527edef75956ca0b7f0dec8a8e9368e3f05dab78d9bf0dc9dc6157b86ecc903474375efd08a83aa05b2deb47af7179e106d0613351e199c278dd3f15382dfb1d9877851e833cf5bf832b606b0c768e9c13e439377a40b81ef61baea7772800714ea61e150b24705d7b24577c77f3be3d3c1203a21fc14c5299d43c7e455fcc93a9786cfd0e4531ebc2cba3e8df1ddb9fc432bb2dd3f6686eb42b9c47f43cf9d39096cd18594638cca0f71426d1b619c89127f2634c992dee68cb4925dca74a9c63971045483c5c8b2dc00f8c8f4f8d9cedc587b2352419b917618746b626cc0d7ab19173d8b7614a392f447f30e7f9f2f6f8bda9138b2a828c3252675fe2acf44772908901277317754d245a7b5ae57d633802c61bcd3bdf1ef28b877698f78fe312a531675a501ab3dee4afa5b1331e22a5bd7a036b55af6935f0a14920ba9479c0402bbd7cdc066db9c99791c150f7f397888d062a6c7d3ba0eda838fe13f401c6f3dc71dffd604ed469996f7379c476851517bcd1ee21e6ee39973a9d498c7e9dd7691f2bbceb9515a2f63a65798d138a0598469ac6b1c7d902f841920926ccfb6a641eaeb8ca05a6a7a1f6b1536b73d4a01f5ae847c18ca3eb1d45bb6fd1e572ce0d18697f27cbe3740271f8da2d50226fc60d3af0fc9505048145974401f97e4519628c76f42faa663af3ea090854845b80a4121bd5fab354870e50d4caddf1993e6f90010e1c78ce7f6dea73c6cb648405417ee4e34bb8c84d372f58ad4c0ba55b643035c63220edf9b4fdc8fcb9b87e3c5a4eb9a11dabed629c0e6c5a253a91b373b0f7253ffd4c08867b9e98c0fd1b15d891771c36781239ae6b83c087ca5b2831eb70365b9b15a1d464a5f7dcb842694b29d13536531f3d6d5631d6f0d5d6c227a10864a84e508c3d42cfc6829b6356aff7f6c0f4f075cff1bf1979b9b445796eecc58eaecc343fb1ed3398ea051c0c205ada1fee15b98d6c3eb6f4989324857cd2ff7676514585042ee182027cdc402a7fe83480b80710ac6e18c6b2a715408dcd1651f15a7a48366f0b5920e94b2dc6270196788bbc9a8e6a3294123497d7f9f7a2ae19c8fef5af8281fd212a4bf8d7676945ba3bebd3246736532767b02a8ceaa8713a5eafb80edfafcaed392edf74b18811a35fd531da73abd0677cfc0dadd30d64a96f7d42ccd923de657590890a2e0e82f26780ec4fa1fa5f91e8c818615ba024d9f7866c3e8c4ad997a2f9de77003f4d885764e4223bf250da19c807d98caefcdcd831c1baa43eadd759d285401cb69d9436b42614cbc190e023e57abfe1d249a12b3dd079e422cb5803287096470c0a3b4f6ba51b508a190899cc932708bcb239df3c6e5310df72baebb8e2756739197e416728224b19df894183c15ce0d3add4f753db0d40feaff18eb89811ddfc8f96170b3afb8d68849d76ea3f2e72dddc1b16ae595ced2e0e9378ee2727ee26c9d7585e9c3f1ca19982ae0fbd56f1c3aa5f709fe3890645f1efc1f81f7f501a5f1c7a41f85781b14253b5ce150cc5fe8f071807f53c0d9e0eaf3b87bef63801e9eb85e9e13be4152350ce32d98e45c07da3104cb32eef0ad5dd0ae9e747b91655b81fa0ebc93cdbf65ecbbc797b549ea2cefd83f2e641b04ffc5e6569e36ae08cd11962d67c50f2a190ac7b5c9bcca8fdc9bf3520569cd85790044aa1a8bae0437f3a562ec2fd04d79899a898a207b9de12b61bf86f90a5db004cc7b7bf37fcab5c0113f52d9f28da09aa5f2ff4757f1ce9a76eb6cbc874c2afde7f8b72764aad817e1c2ac5779501422a78c5cdb876bd190ad2c0b7c936c63256e38bcbbe19f1</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 </div>
                 
 
@@ -291,31 +259,15 @@ gcc main.o delay.o rtc.o -o main
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/07/19/20240719-qgit-qt-%E5%AE%89%E8%A3%85/"
-                                   title="20240719 qgis&amp;&amp;qt 安装"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240719 qgis&amp;&amp;qt 安装</span>
-                                        <span class="post-nav-item">Prev posts</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/07/17/20240717-%E7%94%B5%E5%AD%90%E6%B5%B7%E5%9B%BE/"
-                                   title="20240717 基于QT的电子海图的实现与开发"
+                                   href="/2024/11/20/20241120-%E5%9E%82%E7%9B%B4%E5%9F%BA%E5%87%86-%E5%9C%B0%E7%90%83%E9%AB%98%E7%A8%8B%E5%8F%82%E8%80%83%E6%A1%86%E6%9E%B6/"
+                                   title="20241120 垂直基准-地球高程参考框架"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20240717 基于QT的电子海图的实现与开发</span>
+                                        <span class="post-nav-title-item text-ellipsis">20241120 垂直基准-地球高程参考框架</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -425,7 +377,7 @@ gcc main.o delay.o rtc.o -o main
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text"> 第一篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-number">1.1.</span> <span class="nav-text"> 正文：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#makefiel-20241120%E4%BA%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text"> makefiel 20241120了解</span></a></li></ol>
+        
     </div>
 </div>
 
@@ -578,7 +530,7 @@ gcc main.o delay.o rtc.o -o main
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text"> 第一篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-number">1.1.</span> <span class="nav-text"> 正文：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#makefiel-20241120%E4%BA%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text"> makefiel 20241120了解</span></a></li></ol>
+        
     </div>
 </div>
 
