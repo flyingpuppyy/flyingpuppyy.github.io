@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20241219 配置NVIDIA AGX xavier yolov5 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"没有一条路径通往真诚 真诚本身就是道路","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"markdown":{"preset":"default","render":{"html":true,"xhtmlOut":false,"langPrefix":"language-","breaks":true,"linkify":true,"typographer":true,"quotes":"“”‘’"},"enable_rules":null,"disable_rules":null,"plugins":["markdown-it-abbr","markdown-it-cjk-breaks","markdown-it-deflist","markdown-it-emoji","markdown-it-footnote","markdown-it-ins","markdown-it-mark","markdown-it-sub","markdown-it-sup",{"name":"markdown-it-container","options":"success"},{"name":"markdown-it-container","options":"tips"},{"name":"markdown-it-container","options":"warning"},{"name":"markdown-it-container","options":"danger"}],"anchors":{"level":2,"collisionSuffix":"","permalink":false,"permalinkClass":"header-anchor","permalinkSide":"left","permalinkSymbol":"¶","case":0,"separator":"-"}},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20241219 配置NVIDIA AGX xavier yolov5
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv6</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-12-19 14:14:20</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Fri Dec 20 2024 17:10:44 GMT+0800">2024-12-20 17:10:44</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<ul>
+<li>一定要会刷机，要是装错了重装一下+安中文输入法就恢复环境了</li>
+</ul>
+<h1 id="刷机后初始环境"><a class="markdownIt-Anchor" href="#刷机后初始环境"></a> 刷机后初始环境</h1>
+<ul>
+<li>python3.6 （原装自带）</li>
+</ul>
+<h1 id="参考尝试一"><a class="markdownIt-Anchor" href="#参考尝试一"></a> 参考尝试一</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/bringlu/p/14964333.html" >https://www.cnblogs.com/bringlu/p/14964333.html<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412191423285.png"  alt="image-20241219142310877" ></p>
+<blockquote>
+<p>配到这里我感觉自己还是升级一下比较好</p>
+</blockquote>
+<h1 id="参考尝试二"><a class="markdownIt-Anchor" href="#参考尝试二"></a> 参考尝试二</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/YY_DS_ysj/article/details/134412965" >https://blog.csdn.net/YY_DS_ysj/article/details/134412965<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="参考尝试三"><a class="markdownIt-Anchor" href="#参考尝试三"></a> 参考尝试三</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/YY_DS_ysj/article/details/134412965?spm=1001.2014.3001.5501" >https://blog.csdn.net/YY_DS_ysj/article/details/134412965?spm=1001.2014.3001.5501<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="配置环境了解"><a class="markdownIt-Anchor" href="#配置环境了解"></a> 配置环境了解</h1>
+<h1 id="三者区别和联系"><a class="markdownIt-Anchor" href="#三者区别和联系"></a> 三者区别和联系</h1>
+<p><strong>Miniforge</strong>、<strong>Conda</strong> 和 <strong>Anaconda</strong> 是与 Python 环境管理和包管理相关的工具和发行版。虽然它们在功能上有一些重叠，但它们之间存在一些关键的区别和联系。下面我将详细介绍它们的区别和联系。</p>
+<h3 id="1-conda"><a class="markdownIt-Anchor" href="#1-conda"></a> 1. <strong>Conda</strong></h3>
+<p><strong>Conda</strong> 是一个 <strong>开源的包管理工具</strong> 和 <strong>环境管理器</strong>，用于安装、管理和部署软件包，尤其是在数据科学、机器学习、科学计算等领域。它支持 Python 和其他编程语言（如 R、Java、Ruby 等）的包管理。</p>
+<ul>
+<li>
+<p>功能</p>
+<p>：</p>
+<ul>
+<li>安装、更新和卸载软件包。</li>
+<li>创建、激活和管理虚拟环境。</li>
+<li>管理软件包的依赖关系和版本。</li>
+</ul>
+</li>
+<li>
+<p>独立工具</p>
+<p>：</p>
+<ul>
+<li>Conda 本身并不是一个操作系统或一个完整的软件发行版，它只是一个包管理工具和环境管理器。它可以和多个不同的发行版（如 Anaconda、Miniforge 等）一起使用。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-anaconda"><a class="markdownIt-Anchor" href="#2-anaconda"></a> 2. <strong>Anaconda</strong></h3>
+<p><strong>Anaconda</strong> 是一个包含 <strong>Conda</strong> 包管理器的大型数据科学平台，它是一个 <strong>Python 和 R 数据科学平台</strong>，专为科学计算、机器学习、数据分析等任务而设计。</p>
+<ul>
+<li><strong>包含内容</strong>：
+<ul>
+<li><strong>Conda</strong> 包管理器：用于创建和管理虚拟环境。</li>
+<li><strong>大量预安装的库和工具</strong>：例如 <strong>NumPy</strong>、<strong>Pandas</strong>、<strong>SciPy</strong>、<strong>TensorFlow</strong>、<strong>Jupyter Notebook</strong> 等。这使得 Anaconda 成为一个“即装即用”的平台，适合于数据科学和机器学习的应用。</li>
+<li><strong>Anaconda Navigator</strong>：一个 GUI 工具，帮助用户更容易地管理环境、包和项目。</li>
+</ul>
+</li>
+<li><strong>优点</strong>：
+<ul>
+<li><strong>集成化环境</strong>：Anaconda 提供了一个完全集成的数据科学平台，减少了手动安装和配置依赖的麻烦。</li>
+<li><strong>易用性</strong>：对于初学者来说，Anaconda 的 GUI 工具（如 Anaconda Navigator）和广泛的库支持使得设置环境和工作流程变得简单。</li>
+<li><strong>庞大的包库</strong>：Anaconda 提供了超过 1500 个数据科学相关的包，适用于机器学习、深度学习、统计学等任务。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li><strong>较大体积</strong>：Anaconda 包含很多不需要的工具和库，因此它的安装包较大。通常会占用几 GB 的存储空间。</li>
+<li><strong>可能带来不必要的包</strong>：Anaconda 的完整安装包含大量的预安装包，很多用户可能并不需要全部的包，因此这可能会导致冗余。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-miniforge"><a class="markdownIt-Anchor" href="#3-miniforge"></a> 3. <strong>Miniforge</strong></h3>
+<p><strong>Miniforge</strong> 是一个轻量级的 Conda 发行版，它提供了 <strong>Conda</strong> 包管理器和基本的包管理功能，但不像 <strong>Anaconda</strong> 那样包含大量预安装的包。Miniforge 是由 <strong>conda-forge</strong> 社区维护的，主要面向那些希望以最小化的方式安装 Conda 环境的用户。</p>
+<ul>
+<li><strong>包含内容</strong>：
+<ul>
+<li><strong>Conda</strong> 包管理器：用于创建和管理虚拟环境。</li>
+<li><strong>conda-forge</strong> 仓库：Miniforge 默认使用 <strong>conda-forge</strong> 作为包源，这是一个社区驱动的 Conda 包仓库，提供比 Anaconda 官方仓库更多和更新的包。</li>
+</ul>
+</li>
+<li><strong>优点</strong>：
+<ul>
+<li><strong>轻量级</strong>：Miniforge 只包含最基础的 Conda 和必要的工具，避免了 Anaconda 中可能不需要的冗余工具和库。</li>
+<li><strong>灵活性</strong>：用户可以根据需要安装额外的库和包，而不会被不必要的库和工具占用大量存储空间。</li>
+<li><strong>社区驱动</strong>：Miniforge 使用 <strong>conda-forge</strong> 仓库，许多开源社区包和工具的更新较为频繁。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li><strong>需要更多手动配置</strong>：如果你需要安装某些常用的包（如 NumPy、Pandas 等），需要手动安装，而不是像 Anaconda 那样“即装即用”。</li>
+<li><strong>缺乏 GUI</strong>：Miniforge 没有像 Anaconda 那样的 GUI 工具（如 Anaconda Navigator），需要更多依赖命令行操作。</li>
+</ul>
+</li>
+</ul>
+<h3 id="区别与联系"><a class="markdownIt-Anchor" href="#区别与联系"></a> <strong>区别与联系</strong></h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th><strong>Conda</strong></th>
+<th><strong>Anaconda</strong></th>
+<th><strong>Miniforge</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>类型</strong></td>
+<td>包管理器和环境管理工具</td>
+<td>数据科学平台，包含 Conda 和大量预装的包</td>
+<td>轻量级 Conda 发行版，使用 Conda 和 Conda-Forge</td>
+</tr>
+<tr>
+<td><strong>包含内容</strong></td>
+<td>仅 Conda 工具</td>
+<td>Conda、预安装的库（如 NumPy、SciPy、Jupyter）</td>
+<td>Conda、conda-forge 仓库</td>
+</tr>
+<tr>
+<td><strong>包来源</strong></td>
+<td>可自定义（默认从官方仓库）</td>
+<td>官方 Anaconda 仓库</td>
+<td>仅从 <strong>conda-forge</strong> 仓库</td>
+</tr>
+<tr>
+<td><strong>安装体积</strong></td>
+<td>取决于用户安装的包</td>
+<td>包含很多预装库和工具，通常较大</td>
+<td>更小，默认只安装 Conda，轻量化安装</td>
+</tr>
+<tr>
+<td><strong>适用用户</strong></td>
+<td>适用于需要定制化环境的用户</td>
+<td>初学者或需要快速搭建完整数据科学环境的用户</td>
+<td>适合想要轻量化环境、手动安装所需库的用户</td>
+</tr>
+<tr>
+<td><strong>依赖关系管理</strong></td>
+<td>支持自动管理包依赖</td>
+<td>自动管理依赖和包安装</td>
+<td>自动管理包依赖，但需要手动安装需要的包</td>
+</tr>
+<tr>
+<td><strong>GUI 工具</strong></td>
+<td>无</td>
+<td>有 Anaconda Navigator GUI 工具</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> <strong>总结</strong></h3>
+<ul>
+<li><strong>Conda</strong>：一个包管理工具和环境管理工具，可以与不同的发行版一起使用。</li>
+<li><strong>Anaconda</strong>：一个完整的数据科学平台，包含 Conda 和很多常用的数据科学工具和库，适合初学者和需要完整工具的用户。</li>
+<li><strong>Miniforge</strong>：一个轻量级的 Conda 发行版，适合那些需要更小体积、更灵活的环境，并且希望使用社区驱动的包（<strong>conda-forge</strong>）的用户。</li>
+</ul>
+<p>如果你需要一个即开即用、包含大量预装工具的完整平台，<strong>Anaconda</strong> 是一个好选择。如果你想要一个轻量化、灵活的环境，可以选择 <strong>Miniforge</strong>，并手动选择安装所需的包。<strong>Conda</strong> 则是这些工具的核心，它提供了包和环境管理的功能，可以与 Anaconda 或 Miniforge 一起使用。</p>
+<h1 id="anaconda"><a class="markdownIt-Anchor" href="#anaconda"></a> <strong>Anaconda</strong></h1>
+<blockquote>
+<p><strong>Anaconda</strong> 是一个开源的 Python 和 R 数据科学平台，它提供了一个简单的环境管理工具，用于创建虚拟环境并管理包。</p>
+<p><code>Archiconda</code> 似乎是一个打字错误，正确的名称是 <strong>Anaconda</strong>。</p>
+<p>以下是关于 Anaconda 和虚拟环境的详细解释，以及在 YOLOv5 中如何使用它们。</p>
+<h3 id="anaconda-简介"><a class="markdownIt-Anchor" href="#anaconda-简介"></a> Anaconda 简介</h3>
+<p>Anaconda 是一个 Python 包和环境管理器，它使得在不同项目中使用不同版本的 Python 和包变得非常容易。使用 Anaconda，你可以：</p>
+<ul>
+<li>创建多个虚拟环境，每个环境中可以有不同的 Python 版本和依赖库。</li>
+<li>通过 <code>conda</code> 包管理器来安装、升级和删除库和工具。</li>
+<li>使用 Anaconda 提供的包和工具，尤其是在数据科学、机器学习和人工智能领域。</li>
+</ul>
+<h3 id="虚拟环境的作用"><a class="markdownIt-Anchor" href="#虚拟环境的作用"></a> 虚拟环境的作用</h3>
+<p>虚拟环境是一个隔离的 Python 环境，其中包括一个特定版本的 Python 和你需要的所有库。每个项目都可以拥有独立的虚拟环境，这样它们就不会彼此干扰，也不会影响全局 Python 环境。</p>
+<p>创建虚拟环境的好处：</p>
+<ul>
+<li><strong>隔离依赖</strong>：每个项目可以拥有不同的依赖库和版本，避免不同项目之间产生冲突。</li>
+<li><strong>管理 Python 版本</strong>：你可以为每个项目指定不同的 Python 版本。</li>
+<li><strong>便于部署</strong>：虚拟环境使得在不同机器或团队成员之间迁移项目变得简单。</li>
+</ul>
+<h3 id="在-yolov5-中使用-anaconda-虚拟环境"><a class="markdownIt-Anchor" href="#在-yolov5-中使用-anaconda-虚拟环境"></a> 在 YOLOv5 中使用 Anaconda 虚拟环境</h3>
+<p>YOLOv5 依赖于多个 Python 库和工具，使用虚拟环境可以确保它在干净的环境中运行，不受其他项目或全局安装的影响。你可以按照以下步骤在 Anaconda 中创建虚拟环境并安装 YOLOv5。</p>
+<h3 id="步骤使用-anaconda-虚拟环境搭建-yolov5"><a class="markdownIt-Anchor" href="#步骤使用-anaconda-虚拟环境搭建-yolov5"></a> 步骤：使用 Anaconda 虚拟环境搭建 YOLOv5</h3>
+<ol>
+<li>
+<p><strong>安装 Anaconda</strong> 如果你还没有安装 Anaconda，可以从 Anaconda 官方网站 下载并安装 Anaconda。安装完成后，确保 <code>conda</code> 命令在你的终端中可用。</p>
+</li>
+<li>
+<p><strong>创建虚拟环境</strong> 使用 <code>conda</code> 创建一个新的虚拟环境，指定 Python 版本（例如，Python 3.8）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line">conda create -n yolov5 python=3.8</span><br></pre></td></tr></table></figure>
+<p>这里，<code>yolov5</code> 是你要创建的虚拟环境的名称，你可以根据需要自定义。<code>python=3.8</code> 表示你要安装的 Python 版本是 3.8。</p>
+</li>
+<li>
+<p><strong>激活虚拟环境</strong> 激活你刚才创建的虚拟环境：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bash</span><br><span class="line">conda activate yolov5</span><br></pre></td></tr></table></figure>
+<p>激活后，你的终端提示符会发生变化，显示虚拟环境的名称，例如 <code>(yolov5)</code>。</p>
+</li>
+<li>
+<p><strong>安装必要的依赖</strong> 克隆 YOLOv5 的 GitHub 仓库并安装相关依赖。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bash复制代码git clone https://github.com/ultralytics/yolov5.git</span><br><span class="line">cd yolov5</span><br><span class="line">pip install -U -r requirements.txt</span><br></pre></td></tr></table></figure>
+<p>这会安装 YOLOv5 运行所需的所有库，包括 PyTorch、NumPy、OpenCV 等。</p>
+</li>
+<li>
+<p><strong>测试 YOLOv5 是否工作正常</strong> 安装完所有依赖后，你可以运行一个简单的推理测试，来确认 YOLOv5 是否能正常工作：</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python detect.py --source data/images --weights yolov5s.pt</span><br></pre></td></tr></table></figure>
+<p>这将使用预训练的 YOLOv5s 权重文件对 <code>data/images</code> 文件夹中的图像进行推理。</p>
+</blockquote>
+<h3 id="为什么在-yolov5-中使用虚拟环境"><a class="markdownIt-Anchor" href="#为什么在-yolov5-中使用虚拟环境"></a> 为什么在 YOLOv5 中使用虚拟环境？</h3>
+<ol>
+<li><strong>依赖管理</strong>：YOLOv5 依赖的库（如 PyTorch、OpenCV、Matplotlib 等）可能与其他项目使用的库版本不同。虚拟环境能确保 YOLOv5 的依赖不会干扰其他项目。</li>
+<li><strong>简化设置</strong>：使用虚拟环境可以避免全局 Python 安装的冲突，确保每个项目使用的库版本是独立且合适的。</li>
+<li><strong>跨平台一致性</strong>：YOLOv5 的代码和依赖在不同平台（Windows、Linux、macOS）上可能有所不同，虚拟环境帮助确保你在不同机器上可以复现相同的环境。</li>
+</ol>
+<h3 id="总结-2"><a class="markdownIt-Anchor" href="#总结-2"></a> 总结</h3>
+<p><code>Anaconda</code> 虚拟环境是一种隔离的 Python 环境，它能帮助你管理不同项目之间的依赖。使用虚拟环境可以避免库版本冲突，并确保你的 YOLOv5 安装和运行过程干净、稳定。在 YOLOv5 的开发过程中，虚拟环境是一个非常有用的工具，能帮助你快速搭建并测试模型，同时避免与其他项目的干扰。</p>
+<h1 id="miniforge"><a class="markdownIt-Anchor" href="#miniforge"></a> miniforge</h1>
+<p><strong>Miniforge</strong> 是一个轻量级的开源 Python 环境管理工具，类似于 <strong>Anaconda</strong>，但它更加简洁、快速，并且完全基于 <strong>Conda-forge</strong> 包管理仓库。</p>
+<p>Miniforge 提供了一个与 Anaconda 类似的环境管理工具，但它默认只使用 Conda-forge 作为包源，这意味着它不包括 Anaconda 的默认包源，也不包含 Anaconda 自带的额外包和工具，因此其体积较小。</p>
+<h3 id="miniforge-简介"><a class="markdownIt-Anchor" href="#miniforge-简介"></a> Miniforge 简介</h3>
+<ul>
+<li><strong>Conda-forge</strong>：Miniforge 默认使用的是 <strong>Conda-forge</strong>，这是一个社区驱动的开源 Conda 包仓库，提供了大量的开源 Python 包。使用 Conda-forge 的好处在于它能够保证更快速的更新和更高的包兼容性。</li>
+<li><strong>轻量化</strong>：Miniforge 的安装包比 Anaconda 更加轻量，并且没有冗余的包，因此特别适合那些只需要 Conda 环境管理、无需附加工具的人。</li>
+<li><strong>平台兼容性</strong>：Miniforge 可以在 <strong>Windows</strong>、<strong>Linux</strong> 和 <strong>macOS</strong> 上使用，它提供了与 Anaconda 相似的功能，但没有预装 Anaconda 的那些默认包。</li>
+</ul>
+<h3 id="miniforge-与-anaconda-的区别"><a class="markdownIt-Anchor" href="#miniforge-与-anaconda-的区别"></a> Miniforge 与 Anaconda 的区别</h3>
+<ol>
+<li><strong>安装包大小</strong>：
+<ul>
+<li><strong>Anaconda</strong> 是一个非常庞大的发行版，包含了很多工具和库，体积较大。</li>
+<li><strong>Miniforge</strong> 更加精简，仅提供 Conda 环境和从 Conda-forge 下载的必要工具和库。</li>
+</ul>
+</li>
+<li><strong>包来源</strong>：
+<ul>
+<li><strong>Anaconda</strong> 默认使用 <code>defaults</code> 仓库。</li>
+<li><strong>Miniforge</strong> 默认使用 <code>conda-forge</code> 仓库。<code>conda-forge</code> 通常更新较快且维护更加活跃，且没有冗余包。</li>
+</ul>
+</li>
+<li><strong>适合场景</strong>：
+<ul>
+<li><strong>Anaconda</strong> 适用于那些需要完整开发工具和库支持的用户（例如，数据科学、机器学习等）。</li>
+<li><strong>Miniforge</strong> 适合那些需要更轻量环境、且能够依赖 Conda-forge 包源的用户，尤其是那些希望减小环境大小的场景。</li>
+</ul>
+</li>
+</ol>
+<h3 id="在-yolov5-环境搭建中-miniforge-的作用"><a class="markdownIt-Anchor" href="#在-yolov5-环境搭建中-miniforge-的作用"></a> 在 YOLOv5 环境搭建中 Miniforge 的作用</h3>
+<p>在 YOLOv5 的环境搭建过程中，Miniforge 起到的作用与 Anaconda 相似。使用 Miniforge 可以帮助你创建 Python 虚拟环境并管理依赖包，确保 YOLOv5 环境的独立性和可移植性。特别是在某些机器上，Miniforge 由于其小巧和快速的特点，可能更加适合一些不需要过多工具和库的用户。</p>
+<p><strong>搭建 YOLOv5 环境时，Miniforge 的优势主要体现在以下几个方面：</strong></p>
+<ol>
+<li><strong>简化环境搭建</strong>： 使用 Miniforge，你可以轻松创建一个虚拟环境，并且通过 <code>conda-forge</code> 获取最新的包和依赖。与使用 Anaconda 相比，Miniforge 减少了额外的包和工具，从而降低了包冲突的概率。</li>
+<li><strong>更轻量级</strong>： 对于一些只关心核心 Python 环境而不需要其他大包（如 Jupyter、Spyder 等）的用户，Miniforge 提供了一个非常精简的环境，减少了不必要的磁盘占用。</li>
+<li><strong>与 YOLOv5 完美兼容</strong>： YOLOv5 本身基于 PyTorch 和一些常用 Python 库（如 OpenCV、NumPy、Matplotlib 等），这些库都可以通过 <code>conda-forge</code> 安装。因此，Miniforge 完全可以满足 YOLOv5 的依赖要求，并且可以通过 Conda 简单的命令安装这些库。</li>
+</ol>
+<h1 id="miniforge安装过程"><a class="markdownIt-Anchor" href="#miniforge安装过程"></a> miniforge安装过程</h1>
+<p>1.去官网下载相关包<a class="link"   target="_blank" rel="noopener" href="https://github.com/conda-forge/miniforge/releases" >https://github.com/conda-forge/miniforge/releases<i class="fas fa-external-link-alt"></i></a></p>
+<p>（我一开始是下载最新版本的 Release 24.11.0-0 Latest，但是安装到最后告诉我xxxx东西后面不在这里安装了，要自己独立安装，吓得我赶紧找到那个老版本进行下载os:真的很怕配环境有多余的麻烦，后面就下了Release 24.7.1- Latest）</p>
+<p>2.去到那个下载目录，我自己单独给这个文件建立了新目录</p>
+<blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201519499.png"  alt="image-20241220151940420" ></p>
+<blockquote>
+<p>在终端运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh Mambaforge-24.7.1-0-Linux-aarch64.sh</span><br></pre></td></tr></table></figure>
+</blockquote>
+</blockquote>
+<p>3.一路安装 yes输入秘密</p>
+<p>…</p>
+<p>4.成功之后会显示如下相关文字告诉你激活环境（不能照抄，因为这时候命令还没到环境变量还是怎么样，直接运行下面任何命令运行不起来）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Transaction finished</span><br><span class="line"></span><br><span class="line">To activate this environment, use:</span><br><span class="line"></span><br><span class="line">    micromamba activate /home/linger/mambaforge</span><br><span class="line"></span><br><span class="line">Or to execute a single command in this environment, use:</span><br><span class="line"></span><br><span class="line">    micromamba run -p /home/linger/mambaforge mycommand</span><br><span class="line"></span><br><span class="line">installation finished.</span><br><span class="line">Do you wish to update your shell profile to automatically initialize conda?</span><br><span class="line">This will activate conda on startup and change the command prompt when activated.</span><br><span class="line">If you&#x27;d prefer that conda&#x27;s base environment not be activated on startup,</span><br><span class="line">   run the following command when conda is activated:</span><br><span class="line"></span><br><span class="line">conda config --set auto_activate_base false</span><br><span class="line"></span><br><span class="line">You can undo this by running `conda init --reverse $SHELL`? [yes|no]</span><br><span class="line">[no] &gt;&gt;&gt; </span><br><span class="line">You have chosen to not have conda modify your shell scripts at all.</span><br><span class="line">To activate conda&#x27;s base environment in your current shell session:</span><br><span class="line"></span><br><span class="line">eval &quot;$(/home/linger/mambaforge/bin/conda shell.YOUR_SHELL_NAME hook)&quot; </span><br><span class="line"></span><br><span class="line">To install conda&#x27;s shell functions for easier access, first activate, then:</span><br><span class="line"></span><br><span class="line">conda init</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>5.直接按照这上面的指令没有用，安装下面操作进行环境初始化</p>
+<blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201458567.png"  alt="image-20241220145849370" ></p>
+<p>你得直接去</p>
+<blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201459781.png"  alt="image-20241220145920737" ></p>
+<p>命令行去到这个地方里面，运行activate使得base环境运行起来之后</p>
+<p>你才能使用conda init的命令</p>
+<p>后面重启shell就可以在shell端使用conda相关命令</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201500878.png"  alt="image-20241220150055837" ></p>
+</blockquote>
+</blockquote>
+<h1 id="conda"><a class="markdownIt-Anchor" href="#conda"></a> conda</h1>
+<p><strong>Conda</strong> 是一个 <strong>开源的包管理器</strong> 和 <strong>环境管理器</strong>，专门用于管理和部署 <strong>软件包</strong>，特别是在数据科学、机器学习、科学计算等领域中的 Python 包和其它依赖。Conda 的目标是简化软件包的安装、版本控制、依赖关系管理以及虚拟环境的创建与管理。</p>
+<h3 id="conda-的主要功能"><a class="markdownIt-Anchor" href="#conda-的主要功能"></a> Conda 的主要功能</h3>
+<ol>
+<li>
+<p><strong>包管理</strong>： Conda 使得用户可以轻松地安装、升级和删除软件包。它不仅支持 Python 包，还支持其他语言（如 R、Ruby、Lua、Scala、Java 等）的包管理。</p>
+<ul>
+<li><strong>安装软件包</strong>：可以直接安装各种包，Conda 会自动解决依赖问题。</li>
+<li><strong>升级和卸载软件包</strong>：更新现有软件包或卸载不需要的包。</li>
+</ul>
+<p>例如，安装一个包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install numpy</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>环境管理</strong>： Conda 允许用户创建和管理独立的虚拟环境。每个环境都有自己独立的 Python 版本和包，使得不同的项目可以使用不同的依赖版本，避免版本冲突。</p>
+<ul>
+<li><strong>创建环境</strong>：可以为每个项目创建一个独立的环境。</li>
+<li><strong>激活/停用环境</strong>：方便地激活和切换不同的虚拟环境。</li>
+<li><strong>导出环境配置</strong>：将环境的包列表保存为文件，便于在其他系统上重现环境。</li>
+</ul>
+<p>例如，创建一个新的虚拟环境并指定 Python 版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n myenv python=3.8</span><br></pre></td></tr></table></figure>
+<p>激活环境：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate myenv</span><br></pre></td></tr></table></figure>
+<p>停用环境：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+<p>导出环境配置到文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda list --export &gt; environment.yml</span><br></pre></td></tr></table></figure>
+<p>然后，其他人可以使用该配置文件来重新创建相同的环境：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env create -f environment.yml</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>跨平台支持</strong>： Conda 是跨平台的，支持 <strong>Windows</strong>、<strong>Linux</strong> 和 <strong>macOS</strong> 系统。你可以在这些平台上使用 Conda 创建和管理一致的开发环境。</p>
+</li>
+<li>
+<p><strong>依赖管理</strong>： Conda 会自动处理包之间的依赖关系。如果一个软件包依赖其他软件包，Conda 会自动安装所需的依赖版本，确保安装过程的兼容性和稳定性。</p>
+<p>例如，如果你安装一个包，Conda 会自动检查并安装它所依赖的其他包，而无需用户干预。</p>
+</li>
+</ol>
+<h3 id="conda-的优势"><a class="markdownIt-Anchor" href="#conda-的优势"></a> Conda 的优势</h3>
+<ol>
+<li><strong>简化包和环境管理</strong>： Conda 提供了一个统一的方式来管理项目的包和环境，避免了依赖冲突和版本不一致的问题。这对于数据科学、机器学习、深度学习等领域尤其重要，因为这些领域依赖多个不同的库和工具，Conda 提供了一个干净且可复现的环境。</li>
+<li><strong>解决依赖冲突</strong>： Conda 会自动解决包的依赖关系和版本冲突。与手动安装或使用传统的包管理工具（如 pip）相比，Conda 可以更加智能地选择兼容的包版本，从而避免很多常见的依赖问题。</li>
+<li><strong>快速安装</strong>： Conda 包管理器使用二进制包，而不像 <code>pip</code> 那样需要从源代码构建包。因此，Conda 的包安装速度通常比 <code>pip</code> 快，尤其是在安装需要编译的包（如 NumPy、TensorFlow、PyTorch 等）时。</li>
+<li><strong>支持多语言</strong>： Conda 不仅支持 Python，还支持其他编程语言的包管理，如 <strong>R</strong>、<strong>Ruby</strong>、<strong>Java</strong>、<strong>Lua</strong> 等，适合多语言项目的管理。</li>
+<li><strong>广泛的社区支持</strong>： Conda 拥有广泛的社区支持，尤其是 <strong>Conda-Forge</strong>（一个社区驱动的 Conda 包仓库）。Conda-Forge 提供了成千上万的高质量包，几乎涵盖了所有常用的开源软件包。</li>
+</ol>
+<h3 id="conda-与其他包管理工具的比较"><a class="markdownIt-Anchor" href="#conda-与其他包管理工具的比较"></a> Conda 与其他包管理工具的比较</h3>
+<ol>
+<li><strong>与 pip 的比较</strong>：
+<ul>
+<li><strong>pip</strong> 是 Python 的标准包管理工具，它只管理 Python 包，但不处理依赖问题。pip 需要从源代码安装包，安装速度较慢，且有时无法解决复杂的依赖冲突。</li>
+<li><strong>Conda</strong> 可以管理 Python 和其他语言的包，并且能够自动解决依赖冲突。Conda 使用二进制包进行安装，因此安装速度比 pip 更快，特别是在处理大型科学计算库时（如 NumPy、SciPy、PyTorch 等）。</li>
+</ul>
+</li>
+<li><strong>与 virtualenv/venv 的比较</strong>：
+<ul>
+<li><strong>virtualenv</strong> 和 <strong>venv</strong> 是 Python 提供的虚拟环境管理工具，用于创建和管理 Python 环境。它们仅限于 Python 环境，无法管理其他语言的依赖。</li>
+<li><strong>Conda</strong> 不仅能创建 Python 虚拟环境，还能创建包括其他语言（如 R、Java、Ruby 等）的环境。Conda 提供了更强大的跨语言支持和依赖解决能力。</li>
+</ul>
+</li>
+<li><strong>与 Docker 的比较</strong>：
+<ul>
+<li><strong>Docker</strong> 用于创建容器化应用环境，它允许你将应用程序及其所有依赖项打包成一个镜像。Docker 可以解决环境一致性问题，但容器较为笨重，启动和使用可能比虚拟环境更复杂。</li>
+<li><strong>Conda</strong> 提供了轻量级的环境管理工具，适合处理单机开发和科学计算任务。它不像 Docker 那样依赖虚拟化技术，但对于一些项目而言，使用 Conda 创建虚拟环境更加简便和高效。</li>
+</ul>
+</li>
+</ol>
+<h3 id="conda-的使用案例"><a class="markdownIt-Anchor" href="#conda-的使用案例"></a> Conda 的使用案例</h3>
+<ol>
+<li><strong>数据科学和机器学习</strong>： 数据科学家和机器学习工程师常使用 Conda 创建隔离的 Python 环境，并安装和管理相关库（如 <strong>NumPy</strong>、<strong>Pandas</strong>、<strong>Scikit-learn</strong>、<strong>TensorFlow</strong>、<strong>PyTorch</strong> 等）。Conda 使得安装和管理这些复杂的库变得更加容易。</li>
+<li><strong>跨平台开发</strong>： Conda 支持 Windows、Linux 和 macOS 系统，可以帮助开发人员在多个平台上创建一致的开发环境。</li>
+<li><strong>共享环境配置</strong>： 通过导出和共享环境配置文件（如 <code>environment.yml</code>），开发者可以确保团队成员和不同系统上的开发环境保持一致，避免了“在我的机器上可以工作”的问题。</li>
+</ol>
+<h3 id="安装-conda"><a class="markdownIt-Anchor" href="#安装-conda"></a> 安装 Conda</h3>
+<ol>
+<li><strong>Miniconda</strong>：是 Conda 的最小化安装版本，只包含 Conda 和一些基本工具，非常适合需要轻量化安装的用户。</li>
+<li><strong>Anaconda</strong>：是包含 Conda、Python、以及大量常见数据科学库（如 NumPy、Pandas、Jupyter 等）的完整发行版。</li>
+</ol>
+<p>你可以从官网下载安装：</p>
+<ul>
+<li><strong>Miniconda</strong>：Miniconda 官网</li>
+<li><strong>Anaconda</strong>：Anaconda 官网</li>
+</ul>
+<h3 id="总结-3"><a class="markdownIt-Anchor" href="#总结-3"></a> 总结</h3>
+<p><strong>Conda</strong> 是一个非常强大的包管理工具，适用于 Python 和其他编程语言的包和环境管理。它能够高效地解决依赖关系，支持跨平台操作，且与 <code>pip</code> 和 <code>virtualenv</code> 等工具相比，提供了更多的功能和灵活性。在数据科学、机器学习等领域，Conda 是管理复杂环境和依赖的首选工具。</p>
+<h1 id="pytoch"><a class="markdownIt-Anchor" href="#pytoch"></a> pytoch</h1>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201617050.png"  alt="image-20241220161746953" ></p>
+<blockquote>
+<p>好像直接从pip中下是不行的</p>
+<p>要从whl文件里去找预编译好的numpy才行</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201637200.png"  alt="image-20241220163722134" ></p>
+<blockquote>
+<p>尝试失败，开始找原因</p>
+</blockquote>
+<h2 id="查找"><a class="markdownIt-Anchor" href="#查找"></a> 查找</h2>
+<p>尝试一：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_26811377/article/details/99947448" >https://blog.csdn.net/sinat_26811377/article/details/99947448<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>看完这个文章，我觉得我还是找个numpy的预编译版本 那个torch好像只是torch的预编译文件</p>
+</blockquote>
+<p>尝试二：找了半天没找到numpy预编译版本，看到</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_47166887/article/details/108923466" >https://blog.csdn.net/weixin_47166887/article/details/108923466<i class="fas fa-external-link-alt"></i></a></p>
+<p>这个帖子，但是其点击链接进去到numpy的官网也没有相关whl文件</p>
+<blockquote>
+<p>其实是有的</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://pypi.org/project/numpy/#files" >https://pypi.org/project/numpy/#files<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201649361.png"  alt="image-20241220164958303" ></p>
+<hr />
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201652751.png"  alt="image-20241220165245677" ></p>
+<p>下载的时候注意，线看好release history并且选择想要的版本</p>
+<p>最后再点击download去选择对应平台的文件下载</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://pypi.org/project/numpy/1.19.0/#files" >https://pypi.org/project/numpy/1.19.0/#files<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201653754.png"  alt="image-20241220165341688" ></p>
+<p>最后选择下这个</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201657981.png"  alt="image-20241220165730901" ></p>
+<p>直接预编译下载就是不行啊</p>
+<p>崩溃</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201647858.png"  alt="image-20241220164744775" ></p>
+<blockquote>
+<p>这是另一种方案，换了个版本的话就能够直接pip下载成功</p>
+<p>之前我是想下numpy1.19.0而已，但是这个版本直接pip不成功</p>
+</blockquote>
+<h2 id="试试numpy1200"><a class="markdownIt-Anchor" href="#试试numpy1200"></a> 试试numpy1.20.0</h2>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201700947.png"  alt="image-20241220170005888" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201701338.png"  alt="image-20241220170122265" ></p>
+<blockquote>
+<p>好像是没安装模块</p>
+<p>再试一下</p>
+</blockquote>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201702993.png"  alt="image-20241220170243903" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201703648.png"  alt="image-20241220170316455" ></p>
+<blockquote>
+<p>还是不行，太奇怪了</p>
+<p>下班，明天再搞</p>
+</blockquote>
+<h1 id="20241220当前环境配置总结"><a class="markdownIt-Anchor" href="#20241220当前环境配置总结"></a> 20241220当前环境配置总结</h1>
+<ul>
+<li>
+<p>安装nomachine</p>
+</li>
+<li>
+<p>刷环境的时候是JetPack5.1</p>
+</li>
+<li>
+<p>内置的python环境是3.8</p>
+</li>
+<li>
+<p>pytoch下了一个torch-1.14.0a0+44dac51c.nv23.02-cp38-cp38-linux_aarch64.whl</p>
+</li>
+</ul>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/12/19/20241219-Jetson-AGX-Xavier%E5%88%B7%E6%9C%BA/"
+                                   title="20241219 Jetson AGX Xavier刷机"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20241219 Jetson AGX Xavier刷机</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B7%E6%9C%BA%E5%90%8E%E5%88%9D%E5%A7%8B%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text"> 刷机后初始环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 参考尝试一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 参考尝试二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%89"><span class="nav-number">5.</span> <span class="nav-text"> 参考尝试三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E4%BA%86%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text"> 配置环境了解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E8%80%85%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB"><span class="nav-number">7.</span> <span class="nav-text"> 三者区别和联系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-conda"><span class="nav-number">7.0.1.</span> <span class="nav-text"> 1. Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-anaconda"><span class="nav-number">7.0.2.</span> <span class="nav-text"> 2. Anaconda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-miniforge"><span class="nav-number">7.0.3.</span> <span class="nav-text"> 3. Miniforge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB"><span class="nav-number">7.0.4.</span> <span class="nav-text"> 区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.0.5.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#anaconda"><span class="nav-number">8.</span> <span class="nav-text"> Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#anaconda-%E7%AE%80%E4%BB%8B"><span class="nav-number">8.0.1.</span> <span class="nav-text"> Anaconda 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">8.0.2.</span> <span class="nav-text"> 虚拟环境的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.3.</span> <span class="nav-text"> 在 YOLOv5 中使用 Anaconda 虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-yolov5"><span class="nav-number">8.0.4.</span> <span class="nav-text"> 步骤：使用 Anaconda 虚拟环境搭建 YOLOv5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.5.</span> <span class="nav-text"> 为什么在 YOLOv5 中使用虚拟环境？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-number">8.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge"><span class="nav-number">9.</span> <span class="nav-text"> miniforge</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E7%AE%80%E4%BB%8B"><span class="nav-number">9.0.1.</span> <span class="nav-text"> Miniforge 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E4%B8%8E-anaconda-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">9.0.2.</span> <span class="nav-text"> Miniforge 与 Anaconda 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%AD-miniforge-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">9.0.3.</span> <span class="nav-text"> 在 YOLOv5 环境搭建中 Miniforge 的作用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-number">10.</span> <span class="nav-text"> miniforge安装过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conda"><span class="nav-number">11.</span> <span class="nav-text"> conda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">11.0.1.</span> <span class="nav-text"> Conda 的主要功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">11.0.2.</span> <span class="nav-text"> Conda 的优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">11.0.3.</span> <span class="nav-text"> Conda 与其他包管理工具的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">11.0.4.</span> <span class="nav-text"> Conda 的使用案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-conda"><span class="nav-number">11.0.5.</span> <span class="nav-text"> 安装 Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-number">11.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pytoch"><span class="nav-number">12.</span> <span class="nav-text"> pytoch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">12.1.</span> <span class="nav-text"> 查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E8%AF%95numpy1200"><span class="nav-number">12.2.</span> <span class="nav-text"> 试试numpy1.20.0</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20241220%E5%BD%93%E5%89%8D%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93"><span class="nav-number">13.</span> <span class="nav-text"> 20241220当前环境配置总结</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B7%E6%9C%BA%E5%90%8E%E5%88%9D%E5%A7%8B%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text"> 刷机后初始环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 参考尝试一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 参考尝试二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%89"><span class="nav-number">5.</span> <span class="nav-text"> 参考尝试三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E4%BA%86%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text"> 配置环境了解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E8%80%85%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB"><span class="nav-number">7.</span> <span class="nav-text"> 三者区别和联系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-conda"><span class="nav-number">7.0.1.</span> <span class="nav-text"> 1. Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-anaconda"><span class="nav-number">7.0.2.</span> <span class="nav-text"> 2. Anaconda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-miniforge"><span class="nav-number">7.0.3.</span> <span class="nav-text"> 3. Miniforge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB"><span class="nav-number">7.0.4.</span> <span class="nav-text"> 区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.0.5.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#anaconda"><span class="nav-number">8.</span> <span class="nav-text"> Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#anaconda-%E7%AE%80%E4%BB%8B"><span class="nav-number">8.0.1.</span> <span class="nav-text"> Anaconda 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">8.0.2.</span> <span class="nav-text"> 虚拟环境的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.3.</span> <span class="nav-text"> 在 YOLOv5 中使用 Anaconda 虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-yolov5"><span class="nav-number">8.0.4.</span> <span class="nav-text"> 步骤：使用 Anaconda 虚拟环境搭建 YOLOv5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.5.</span> <span class="nav-text"> 为什么在 YOLOv5 中使用虚拟环境？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-number">8.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge"><span class="nav-number">9.</span> <span class="nav-text"> miniforge</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E7%AE%80%E4%BB%8B"><span class="nav-number">9.0.1.</span> <span class="nav-text"> Miniforge 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E4%B8%8E-anaconda-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">9.0.2.</span> <span class="nav-text"> Miniforge 与 Anaconda 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%AD-miniforge-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">9.0.3.</span> <span class="nav-text"> 在 YOLOv5 环境搭建中 Miniforge 的作用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-number">10.</span> <span class="nav-text"> miniforge安装过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conda"><span class="nav-number">11.</span> <span class="nav-text"> conda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">11.0.1.</span> <span class="nav-text"> Conda 的主要功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">11.0.2.</span> <span class="nav-text"> Conda 的优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">11.0.3.</span> <span class="nav-text"> Conda 与其他包管理工具的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">11.0.4.</span> <span class="nav-text"> Conda 的使用案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-conda"><span class="nav-number">11.0.5.</span> <span class="nav-text"> 安装 Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-number">11.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pytoch"><span class="nav-number">12.</span> <span class="nav-text"> pytoch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">12.1.</span> <span class="nav-text"> 查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E8%AF%95numpy1200"><span class="nav-number">12.2.</span> <span class="nav-text"> 试试numpy1.20.0</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20241220%E5%BD%93%E5%89%8D%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93"><span class="nav-number">13.</span> <span class="nav-text"> 20241220当前环境配置总结</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>

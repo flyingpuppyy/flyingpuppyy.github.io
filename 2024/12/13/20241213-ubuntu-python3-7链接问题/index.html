@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20241213 ubuntu python3.7链接问题/ubuntu python3.7安装/pip替换 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"没有一条路径通往真诚 真诚本身就是道路","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"markdown":{"preset":"default","render":{"html":true,"xhtmlOut":false,"langPrefix":"language-","breaks":true,"linkify":true,"typographer":true,"quotes":"“”‘’"},"enable_rules":null,"disable_rules":null,"plugins":["markdown-it-abbr","markdown-it-cjk-breaks","markdown-it-deflist","markdown-it-emoji","markdown-it-footnote","markdown-it-ins","markdown-it-mark","markdown-it-sub","markdown-it-sup",{"name":"markdown-it-container","options":"success"},{"name":"markdown-it-container","options":"tips"},{"name":"markdown-it-container","options":"warning"},{"name":"markdown-it-container","options":"danger"}],"anchors":{"level":2,"collisionSuffix":"","permalink":false,"permalinkClass":"header-anchor","permalinkSide":"left","permalinkSymbol":"¶","case":0,"separator":"-"}},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20241213 ubuntu python3.7链接问题/ubuntu python3.7安装/pip替换
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv6</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-12-13 15:14:32</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Fri Dec 13 2024 15:35:37 GMT+0800">2024-12-13 15:35:37</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="安装后软链接没有替换"><a class="markdownIt-Anchor" href="#安装后软链接没有替换"></a> 安装后软链接没有替换</h1>
+<p><a class="link"   target="_blank" rel="noopener" href="https://serverfault.com/questions/1008708/python-3-7-doesnt-seem-to-want-to-install-still-shows-2-7-17" >https://serverfault.com/questions/1008708/python-3-7-doesnt-seem-to-want-to-install-still-shows-2-7-17<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="python安装37"><a class="markdownIt-Anchor" href="#python安装37"></a> python安装3.7</h1>
+<p>Ubuntu 18.04系统内置了Python 3.6和Python 2.7版本，以下是在Ubuntu 18.04系统中安装Python 3.7版本的方法。</p>
+<h3 id="1-执行所有升级"><a class="markdownIt-Anchor" href="#1-执行所有升级"></a> 1. 执行所有升级</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># sudo apt update</span><br><span class="line"># sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装编译python源程序所需的包"><a class="markdownIt-Anchor" href="#2-安装编译python源程序所需的包"></a> 2. 安装编译Python源程序所需的包</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># sudo apt install build-essential -y</span><br><span class="line"># sudo apt install libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev -y</span><br><span class="line"># sudo apt-get install zlib1g-dev</span><br></pre></td></tr></table></figure>
+<h3 id="3-下载python-37源程序压缩包"><a class="markdownIt-Anchor" href="#3-下载python-37源程序压缩包"></a> 3. 下载Python 3.7源程序压缩包</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tgz</span><br></pre></td></tr></table></figure>
+<h3 id="4-解压缩"><a class="markdownIt-Anchor" href="#4-解压缩"></a> 4. 解压缩</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># tar -xzvf Python-3.7.1.tgz</span><br></pre></td></tr></table></figure>
+<h3 id="5-配置"><a class="markdownIt-Anchor" href="#5-配置"></a> 5. 配置</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># cd Python-3.7.1</span><br><span class="line"># ./configure --enable-optimizations</span><br></pre></td></tr></table></figure>
+<p>执行上述语句将启用代码的发布版本，可以优化二进制文件以更好的更快的运行，但是需要运行测试，编译时需要花费一些时间（大约半小时），也可以不进行这一项配置。</p>
+<h3 id="6-编译和安装python-37"><a class="markdownIt-Anchor" href="#6-编译和安装python-37"></a> 6. 编译和安装Python 3.7</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># sudo make</span><br><span class="line"># sudo make install</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+<h3 id="7-查看python版本"><a class="markdownIt-Anchor" href="#7-查看python版本"></a> 7. 查看Python版本</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># python3</span><br><span class="line">Python 3.7.1 (default, Nov 21 2018, 16:35:49) </span><br><span class="line">[GCC 7.3.0] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">12345</span><br></pre></td></tr></table></figure>
+<p>出现上述语句说明安装成功。</p>
+<h3 id="8-升级-pip-和更换pip源"><a class="markdownIt-Anchor" href="#8-升级-pip-和更换pip源"></a> 8. 升级 <a class="link"   target="_blank" rel="noopener" href="https://edu.csdn.net/cloud/sd_summit?utm_source=glcblog&amp;spm=1001.2101.3001.7020" >pip <i class="fas fa-external-link-alt"></i></a>和更换pip源</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># sudo pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"># pip3 install --upgrade pip</span><br></pre></td></tr></table></figure>
+<h3 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h3>
+<ol>
+<li><a class="link"   target="_blank" rel="noopener" href="https://dzone.com/articles/install-python-370-on-ubuntu-1804debian-95" >Install Python 3.7.0 on Ubuntu 18.04/Debian 9.5<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/pypi/" >清华大学pypi 镜像使用帮助<i class="fas fa-external-link-alt"></i></a></li>
+</ol>
+<blockquote>
+<p>[【Python】Ubuntu 18.04 安装 python3.7_ubuntu18.04 没有libpython3.7m.so.1.0-CSDN博客](file:///C:/Users/Lucinda/Downloads/5004_84325856.html)</p>
+</blockquote>
+<h1 id="安装2"><a class="markdownIt-Anchor" href="#安装2"></a> 安装2</h1>
+<p>ubuntu16自带的python为python 3.5<br />
+可是有些程序需要3.7的环境，怎么办呢？？- -你一定在网上找过很多无效的方法了吧，别急，听我慢慢道来</p>
+<ol>
+<li>安装必要依赖</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget</span><br></pre></td></tr></table></figure>
+<ol>
+<li>安装python3.7</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:deadsnakes/ppa</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install python3<span class="number">.7</span> 或</span><br><span class="line">apt-get install python3<span class="number">.7</span>-dev</span><br></pre></td></tr></table></figure>
+<ol>
+<li>安装pip3.7 (与自带的对应python3.5的pip3区分)</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3-pip</span><br><span class="line">python3<span class="number">.7</span> -m pip install pip</span><br></pre></td></tr></table></figure>
+<ol>
+<li>使用<code>python3.7 -m pip install &lt;“package”&gt;</code>即可为python3.7装包了</li>
+<li>更新pip3.7</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3<span class="number">.7</span> -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<h1 id="安装3"><a class="markdownIt-Anchor" href="#安装3"></a> 安装3</h1>
+<h1 id="pythonubuntu-1804-安装-python37"><a class="markdownIt-Anchor" href="#pythonubuntu-1804-安装-python37"></a> 【Python】Ubuntu 18.04 安装 python3.7</h1>
+<p><img   src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png"  alt="img" ></p>
+<p><a target="_blank" rel="noopener" href="https://mall.csdn.net/vip"><img   src="https://csdnimg.cn/release/blogv2/dist/pc/img/identityVipNew.png"  alt="img" ></a><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35933777" >有什么不妥<i class="fas fa-external-link-alt"></i></a><img   src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCurrentTime2.png"  alt="img" >于 2018-11-21 16:56:32 发布</p>
+<p><img   src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes2.png"  alt="img" >阅读量2.7w<img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412131535324.png"  alt="img" > 收藏 140</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412131535321.png"  alt="img" >点赞数 45</p>
+<p>分类专栏： <a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35933777/category_8403622.html" >Python<i class="fas fa-external-link-alt"></i></a> 文章标签： <a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search/s.do?q=Python+3.7&amp;t=all&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=&amp;from_tracking_code=tag_word&amp;from_code=app_blog_art" >Python 3.7<i class="fas fa-external-link-alt"></i></a> <a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search/s.do?q=Ubuntu+18.04&amp;t=all&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=&amp;from_tracking_code=tag_word&amp;from_code=app_blog_art" >Ubuntu 18.04<i class="fas fa-external-link-alt"></i></a> <a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search/s.do?q=pip3&amp;t=all&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=&amp;from_tracking_code=tag_word&amp;from_code=app_blog_art" >pip3<i class="fas fa-external-link-alt"></i></a></p>
+<p>版权</p>
+<p>Ubuntu 18.04系统内置了Python 3.6和Python 2.7版本，以下是在Ubuntu 18.04系统中安装Python 3.7版本的方法。</p>
+<h3 id="1-执行所有升级-2"><a class="markdownIt-Anchor" href="#1-执行所有升级-2"></a> 1. 执行所有升级</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># sudo apt update</span><br><span class="line"># sudo apt upgrade -y</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装编译python源程序所需的包-2"><a class="markdownIt-Anchor" href="#2-安装编译python源程序所需的包-2"></a> 2. 安装编译Python源程序所需的包</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># sudo apt install build-essential -y</span><br><span class="line"># sudo apt install libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev -y</span><br><span class="line"># sudo apt-get install zlib1g-dev</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+<h3 id="3-下载python-37源程序压缩包-2"><a class="markdownIt-Anchor" href="#3-下载python-37源程序压缩包-2"></a> 3. 下载Python 3.7源程序压缩包</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tgz</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<h3 id="4-解压缩-2"><a class="markdownIt-Anchor" href="#4-解压缩-2"></a> 4. 解压缩</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># tar -xzvf Python-3.7.1.tgz</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<h3 id="5-配置-2"><a class="markdownIt-Anchor" href="#5-配置-2"></a> 5. 配置</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># cd Python-3.7.1</span><br><span class="line"># ./configure --enable-optimizations</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+<p>执行上述语句将启用代码的发布版本，可以优化二进制文件以更好的更快的运行，但是需要运行测试，编译时需要花费一些时间（大约半小时），也可以不进行这一项配置。</p>
+<h3 id="6-编译和安装python-37-2"><a class="markdownIt-Anchor" href="#6-编译和安装python-37-2"></a> 6. 编译和安装Python 3.7</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># sudo make</span><br><span class="line"># sudo make install</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+<h3 id="7-查看python版本-2"><a class="markdownIt-Anchor" href="#7-查看python版本-2"></a> 7. 查看Python版本</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># python3</span><br><span class="line">Python 3.7.1 (default, Nov 21 2018, 16:35:49) </span><br><span class="line">[GCC 7.3.0] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; </span><br><span class="line">12345</span><br></pre></td></tr></table></figure>
+<p>出现上述语句说明安装成功。</p>
+<h3 id="8-升级-pip-和更换pip源-2"><a class="markdownIt-Anchor" href="#8-升级-pip-和更换pip源-2"></a> 8. 升级 <a class="link"   target="_blank" rel="noopener" href="https://edu.csdn.net/cloud/sd_summit?utm_source=glcblog&amp;spm=1001.2101.3001.7020" >pip <i class="fas fa-external-link-alt"></i></a>和更换pip源</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># sudo pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"># pip3 install --upgrade pip</span><br></pre></td></tr></table></figure>
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/12/19/20241219-Jetson-AGX-Xavier%E5%88%B7%E6%9C%BA/"
+                                   title="20241219 Jetson AGX Xavier刷机"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20241219 Jetson AGX Xavier刷机</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/12/12/20241212-network/"
+                                   title="20241212 network连接方式"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20241212 network连接方式</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%90%8E%E8%BD%AF%E9%93%BE%E6%8E%A5%E6%B2%A1%E6%9C%89%E6%9B%BF%E6%8D%A2"><span class="nav-number">1.</span> <span class="nav-text"> 安装后软链接没有替换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python%E5%AE%89%E8%A3%8537"><span class="nav-number">2.</span> <span class="nav-text"> python安装3.7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%89%A7%E8%A1%8C%E6%89%80%E6%9C%89%E5%8D%87%E7%BA%A7"><span class="nav-number">2.0.1.</span> <span class="nav-text"> 1. 执行所有升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91python%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%89%80%E9%9C%80%E7%9A%84%E5%8C%85"><span class="nav-number">2.0.2.</span> <span class="nav-text"> 2. 安装编译Python源程序所需的包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%8B%E8%BD%BDpython-37%E6%BA%90%E7%A8%8B%E5%BA%8F%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="nav-number">2.0.3.</span> <span class="nav-text"> 3. 下载Python 3.7源程序压缩包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="nav-number">2.0.4.</span> <span class="nav-text"> 4. 解压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%85%8D%E7%BD%AE"><span class="nav-number">2.0.5.</span> <span class="nav-text"> 5. 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E7%BC%96%E8%AF%91%E5%92%8C%E5%AE%89%E8%A3%85python-37"><span class="nav-number">2.0.6.</span> <span class="nav-text"> 6. 编译和安装Python 3.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%9F%A5%E7%9C%8Bpython%E7%89%88%E6%9C%AC"><span class="nav-number">2.0.7.</span> <span class="nav-text"> 7. 查看Python版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%8D%87%E7%BA%A7-pip-%E5%92%8C%E6%9B%B4%E6%8D%A2pip%E6%BA%90"><span class="nav-number">2.0.8.</span> <span class="nav-text"> 8. 升级 pip 和更换pip源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.0.9.</span> <span class="nav-text"> 参考</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%852"><span class="nav-number">3.</span> <span class="nav-text"> 安装2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%853"><span class="nav-number">4.</span> <span class="nav-text"> 安装3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pythonubuntu-1804-%E5%AE%89%E8%A3%85-python37"><span class="nav-number">5.</span> <span class="nav-text"> 【Python】Ubuntu 18.04 安装 python3.7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%89%A7%E8%A1%8C%E6%89%80%E6%9C%89%E5%8D%87%E7%BA%A7-2"><span class="nav-number">5.0.1.</span> <span class="nav-text"> 1. 执行所有升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91python%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%89%80%E9%9C%80%E7%9A%84%E5%8C%85-2"><span class="nav-number">5.0.2.</span> <span class="nav-text"> 2. 安装编译Python源程序所需的包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%8B%E8%BD%BDpython-37%E6%BA%90%E7%A8%8B%E5%BA%8F%E5%8E%8B%E7%BC%A9%E5%8C%85-2"><span class="nav-number">5.0.3.</span> <span class="nav-text"> 3. 下载Python 3.7源程序压缩包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%A7%A3%E5%8E%8B%E7%BC%A9-2"><span class="nav-number">5.0.4.</span> <span class="nav-text"> 4. 解压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%85%8D%E7%BD%AE-2"><span class="nav-number">5.0.5.</span> <span class="nav-text"> 5. 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E7%BC%96%E8%AF%91%E5%92%8C%E5%AE%89%E8%A3%85python-37-2"><span class="nav-number">5.0.6.</span> <span class="nav-text"> 6. 编译和安装Python 3.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%9F%A5%E7%9C%8Bpython%E7%89%88%E6%9C%AC-2"><span class="nav-number">5.0.7.</span> <span class="nav-text"> 7. 查看Python版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%8D%87%E7%BA%A7-pip-%E5%92%8C%E6%9B%B4%E6%8D%A2pip%E6%BA%90-2"><span class="nav-number">5.0.8.</span> <span class="nav-text"> 8. 升级 pip 和更换pip源</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%90%8E%E8%BD%AF%E9%93%BE%E6%8E%A5%E6%B2%A1%E6%9C%89%E6%9B%BF%E6%8D%A2"><span class="nav-number">1.</span> <span class="nav-text"> 安装后软链接没有替换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python%E5%AE%89%E8%A3%8537"><span class="nav-number">2.</span> <span class="nav-text"> python安装3.7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%89%A7%E8%A1%8C%E6%89%80%E6%9C%89%E5%8D%87%E7%BA%A7"><span class="nav-number">2.0.1.</span> <span class="nav-text"> 1. 执行所有升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91python%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%89%80%E9%9C%80%E7%9A%84%E5%8C%85"><span class="nav-number">2.0.2.</span> <span class="nav-text"> 2. 安装编译Python源程序所需的包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%8B%E8%BD%BDpython-37%E6%BA%90%E7%A8%8B%E5%BA%8F%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="nav-number">2.0.3.</span> <span class="nav-text"> 3. 下载Python 3.7源程序压缩包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="nav-number">2.0.4.</span> <span class="nav-text"> 4. 解压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%85%8D%E7%BD%AE"><span class="nav-number">2.0.5.</span> <span class="nav-text"> 5. 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E7%BC%96%E8%AF%91%E5%92%8C%E5%AE%89%E8%A3%85python-37"><span class="nav-number">2.0.6.</span> <span class="nav-text"> 6. 编译和安装Python 3.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%9F%A5%E7%9C%8Bpython%E7%89%88%E6%9C%AC"><span class="nav-number">2.0.7.</span> <span class="nav-text"> 7. 查看Python版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%8D%87%E7%BA%A7-pip-%E5%92%8C%E6%9B%B4%E6%8D%A2pip%E6%BA%90"><span class="nav-number">2.0.8.</span> <span class="nav-text"> 8. 升级 pip 和更换pip源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.0.9.</span> <span class="nav-text"> 参考</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%852"><span class="nav-number">3.</span> <span class="nav-text"> 安装2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%853"><span class="nav-number">4.</span> <span class="nav-text"> 安装3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pythonubuntu-1804-%E5%AE%89%E8%A3%85-python37"><span class="nav-number">5.</span> <span class="nav-text"> 【Python】Ubuntu 18.04 安装 python3.7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%89%A7%E8%A1%8C%E6%89%80%E6%9C%89%E5%8D%87%E7%BA%A7-2"><span class="nav-number">5.0.1.</span> <span class="nav-text"> 1. 执行所有升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91python%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%89%80%E9%9C%80%E7%9A%84%E5%8C%85-2"><span class="nav-number">5.0.2.</span> <span class="nav-text"> 2. 安装编译Python源程序所需的包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%8B%E8%BD%BDpython-37%E6%BA%90%E7%A8%8B%E5%BA%8F%E5%8E%8B%E7%BC%A9%E5%8C%85-2"><span class="nav-number">5.0.3.</span> <span class="nav-text"> 3. 下载Python 3.7源程序压缩包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%A7%A3%E5%8E%8B%E7%BC%A9-2"><span class="nav-number">5.0.4.</span> <span class="nav-text"> 4. 解压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%85%8D%E7%BD%AE-2"><span class="nav-number">5.0.5.</span> <span class="nav-text"> 5. 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E7%BC%96%E8%AF%91%E5%92%8C%E5%AE%89%E8%A3%85python-37-2"><span class="nav-number">5.0.6.</span> <span class="nav-text"> 6. 编译和安装Python 3.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%9F%A5%E7%9C%8Bpython%E7%89%88%E6%9C%AC-2"><span class="nav-number">5.0.7.</span> <span class="nav-text"> 7. 查看Python版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%8D%87%E7%BA%A7-pip-%E5%92%8C%E6%9B%B4%E6%8D%A2pip%E6%BA%90-2"><span class="nav-number">5.0.8.</span> <span class="nav-text"> 8. 升级 pip 和更换pip源</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
