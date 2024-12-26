@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20241223 交叉编译之Linaro |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"没有一条路径通往真诚 真诚本身就是道路","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"markdown":{"preset":"default","render":{"html":true,"xhtmlOut":false,"langPrefix":"language-","breaks":true,"linkify":true,"typographer":true,"quotes":"“”‘’"},"enable_rules":null,"disable_rules":null,"plugins":["markdown-it-abbr","markdown-it-cjk-breaks","markdown-it-deflist","markdown-it-emoji","markdown-it-footnote","markdown-it-ins","markdown-it-mark","markdown-it-sub","markdown-it-sup",{"name":"markdown-it-container","options":"success"},{"name":"markdown-it-container","options":"tips"},{"name":"markdown-it-container","options":"warning"},{"name":"markdown-it-container","options":"danger"}],"anchors":{"level":2,"collisionSuffix":"","permalink":false,"permalinkClass":"header-anchor","permalinkSide":"left","permalinkSymbol":"¶","case":0,"separator":"-"}},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                HOME
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >HOME</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >CATEGORIES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20241223 交叉编译之Linaro
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv6</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-12-23 11:50:06</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Mon Dec 23 2024 14:36:15 GMT+0800">2024-12-23 14:36:15</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <p>Linaro是ARM公司发起，其他做ARM SoC公司（ARM、Freescale、IBM、三星、ST、TI   6家公司）共同投资的一个非盈利组织，在ARMRISC架构处理器的基础上，并引入和基于Linux内核，构建位于底层的Linaro平台（或称ARM平台），支持相应的Linux操作系统（按照Linaro的设想，如：Android、MeeGo、LiMo、Ubuntu、WebOS等），使其搭载开放的移动互联终端设备（如：智能手机、平板电脑、互联电视、车载信息娱乐系统等），能顺利运行和长足发展。</p>
+<p>它的收入主要来自会员公司的会费，所以算是业界最为财大气粗的开源组织之一了。Linaro由一系列的开发组和项目组成，投资上由Board委员会控制，技术上由技术决策委员会控制（TSC），TSC会定期讨论需要成立什么项目，实现什么功能。然后分配到各个项目中。项目由Linaro的开发人员和成员公司的开发人员（称为Assignee）共同组成，根据项目要求，完成相应的开发，然后上传到Linaro自己维护的分支或者开源分支中（后者首选）。Linaro的开发成果，基本上开源。</p>
+<p>这就是为什么你看到比较实用的ARM解决方案都是Linaro提供的，因为它代表了ARM联盟的开源软件团队。</p>
+<p>一般来说，现在大部分软件都可以直接从主线下，他们直接就会支持ARM。但如果你要特定的新平台和新特性的支持，就可以从Linaro下。</p>
+<p>Linaro的解决方案现在主要聚焦在云解决方案，手机解决方案，边缘解决方案（现在叫雾解决方案，从原来的LNG，网络设备解决方案发展过来），IoT，AI等领域。</p>
+<p>Linaro另一个比较大的项目是96Board，主要工作是为ARM生态提供统一的开发板，让所有开发者“有ARM开发板可用”，最早提供的是海思的HiKey，现在已经成为Android AOSP项目的唯一的默认支持开发板。2018年香港的Linaro Connect上，<a class="link"   target="_blank" rel="noopener" href="http://xn--Linaro96Board-uw0yu4xc0qcg3h.ai" >Linaro宣布成立96Board.ai<i class="fas fa-external-link-alt"></i></a>，一口气推出3块聚焦inference的AI开发板，分别来自瑞芯微，海思和Xilinx。</p>
+<p>Linaro Connect是Linaro每年两次的开发者聚会，一次在欧洲或者美洲，一次在亚洲。每次会有数百人参加，但参会费用不低（2500刀一个人），有兴趣的也可以直接看Youtube上的会议视频，那个不要钱，会有很多ARM领域的最新进展和讨论。<br />
+————————————————</p>
+<p>原文链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41076734/article/details/84940621" >https://blog.csdn.net/qq_41076734/article/details/84940621<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="文件的区别"><a class="markdownIt-Anchor" href="#文件的区别"></a> 文件的区别</h1>
+<p>这几个文件是 Linaro 发布的与 AArch64 架构相关的交叉编译工具链和运行时环境。它们包含了为该平台构建和开发程序所需的不同组件。具体来说，每个文件的区别如下：</p>
+<h3 id="1-gcc-linaro-1221-202212-linux-manifesttxt"><a class="markdownIt-Anchor" href="#1-gcc-linaro-1221-202212-linux-manifesttxt"></a> 1. <strong>gcc-linaro-12.2.1-2022.12-linux-manifest.txt</strong></h3>
+<ul>
+<li><strong>类型</strong>: 文本文件</li>
+<li><strong>内容</strong>: 这是一个清单文件，列出 <code>gcc-linaro-12.2.1-2022.12</code> 工具链的所有组件及其版本。它包含了该工具链中的所有文件及其路径信息，通常用于查看工具链中包含的内容。</li>
+</ul>
+<h3 id="2-gcc-linaro-1221-202212-x86_64_aarch64-linux-gnutarxz"><a class="markdownIt-Anchor" href="#2-gcc-linaro-1221-202212-x86_64_aarch64-linux-gnutarxz"></a> 2. <strong>gcc-linaro-12.2.1-2022.12-x86_64_aarch64-linux-gnu.tar.xz</strong></h3>
+<ul>
+<li><strong>类型</strong>: 压缩文件（tar.xz）</li>
+<li><strong>内容</strong>: 这是 Linaro 发布的完整交叉编译工具链，包含用于开发 AArch64 架构程序的 GCC 编译器、库和相关工具。</li>
+<li><strong>用途</strong>: 安装并使用此工具链进行交叉编译，可以将程序从 x86_64 架构编译为 AArch64 架构。</li>
+</ul>
+<h3 id="3-gcc-linaro-1221-202212-x86_64_aarch64-linux-gnutarxzasc"><a class="markdownIt-Anchor" href="#3-gcc-linaro-1221-202212-x86_64_aarch64-linux-gnutarxzasc"></a> 3. <strong>gcc-linaro-12.2.1-2022.12-x86_64_aarch64-linux-gnu.tar.xz.asc</strong></h3>
+<ul>
+<li><strong>类型</strong>: ASCII 文件（签名文件）</li>
+<li><strong>内容</strong>: 这是 <code>gcc-linaro-12.2.1-2022.12-x86_64_aarch64-linux-gnu.tar.xz</code> 文件的 GPG 签名文件，用于验证下载的 <code>.tar.xz</code> 文件是否被篡改。</li>
+<li><strong>用途</strong>: 使用 GPG 公钥验证下载的工具链文件是否是官方发布，确保文件的完整性和来源的可信度。</li>
+</ul>
+<h3 id="4-runtime-gcc-linaro-1221-202212-aarch64-linux-gnutarxz"><a class="markdownIt-Anchor" href="#4-runtime-gcc-linaro-1221-202212-aarch64-linux-gnutarxz"></a> 4. <strong>runtime-gcc-linaro-12.2.1-2022.12-aarch64-linux-gnu.tar.xz</strong></h3>
+<ul>
+<li><strong>类型</strong>: 压缩文件（tar.xz）</li>
+<li><strong>内容</strong>: 这是 Linaro 发布的运行时环境，包含用于 AArch64 架构的运行时库，通常是为了支持 GCC 编译器生成的程序。它可能包含标准 C 库（如 glibc）以及其他运行时依赖项。</li>
+<li><strong>用途</strong>: 此包是运行时环境，确保编译后的程序可以在目标平台（AArch64）上正确运行。它提供了程序运行所需的必要库和依赖项。</li>
+</ul>
+<h3 id="5-runtime-gcc-linaro-1221-202212-aarch64-linux-gnutarxzasc"><a class="markdownIt-Anchor" href="#5-runtime-gcc-linaro-1221-202212-aarch64-linux-gnutarxzasc"></a> 5. <strong>runtime-gcc-linaro-12.2.1-2022.12-aarch64-linux-gnu.tar.xz.asc</strong></h3>
+<ul>
+<li><strong>类型</strong>: ASCII 文件（签名文件）</li>
+<li><strong>内容</strong>: 这是 <code>runtime-gcc-linaro-12.2.1-2022.12-aarch64-linux-gnu.tar.xz</code> 文件的 GPG 签名文件，用于验证下载的运行时环境文件的完整性和来源。</li>
+<li><strong>用途</strong>: 用于确保下载的运行时环境包未被篡改。</li>
+</ul>
+<h3 id="6-sysroot-glibc-linaro-236-202212-aarch64-linux-gnutarxz"><a class="markdownIt-Anchor" href="#6-sysroot-glibc-linaro-236-202212-aarch64-linux-gnutarxz"></a> 6. <strong>sysroot-glibc-linaro-2.36-2022.12-aarch64-linux-gnu.tar.xz</strong></h3>
+<ul>
+<li><strong>类型</strong>: 压缩文件（tar.xz）</li>
+<li><strong>内容</strong>: 这是 Linaro 发布的 sysroot 包，包含用于 AArch64 架构的 glibc 系统根目录文件。它提供了一个用于交叉编译的完整环境，通常包含系统头文件、库文件和其他系统级资源。</li>
+<li><strong>用途</strong>: 用于交叉编译时提供一个完整的目标系统环境。sysroot 是一个必要的部分，它包含了目标架构的系统库和头文件，使得交叉编译器能够在构建过程中使用这些资源。</li>
+</ul>
+<h3 id="7-sysroot-glibc-linaro-236-202212-aarch64-linux-gnutarxzasc"><a class="markdownIt-Anchor" href="#7-sysroot-glibc-linaro-236-202212-aarch64-linux-gnutarxzasc"></a> 7. <strong>sysroot-glibc-linaro-2.36-2022.12-aarch64-linux-gnu.tar.xz.asc</strong></h3>
+<ul>
+<li><strong>类型</strong>: ASCII 文件（签名文件）</li>
+<li><strong>内容</strong>: 这是 <code>sysroot-glibc-linaro-2.36-2022.12-aarch64-linux-gnu.tar.xz</code> 文件的 GPG 签名文件，用于验证下载的 sysroot 包是否未被篡改。</li>
+<li><strong>用途</strong>: 确保 sysroot 包文件的完整性和来源的可信度。</li>
+</ul>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h3>
+<ul>
+<li><strong>GCC 工具链（gcc-linaro-12.2.1-2022.12）</strong>: 这是交叉编译所需的工具链，包含编译器及其相关工具。</li>
+<li><strong>运行时环境（runtime-gcc-linaro-12.2.1-2022.12）</strong>: 包含运行时所需的库和依赖项，用于确保编译后的程序在目标平台上能够运行。</li>
+<li><strong>Sysroot（sysroot-glibc-linaro-2.36）</strong>: 为交叉编译提供目标平台的完整系统环境，包含目标架构的头文件和库。</li>
+</ul>
+<p>这些文件是进行交叉编译的关键部分。您需要根据目标平台（例如 AArch64）安装这些组件，以便能够正确地编译和运行程序。</p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/12/24/20241224-jetson-agx-Xavier%E5%8A%A0%E8%A3%85%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98/"
+                                   title="20241224 jetson agx Xavier加装固态硬盘 挂载"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20241224 jetson agx Xavier加装固态硬盘 挂载</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/12/19/20241219-%E9%85%8D%E7%BD%AENVIDIA-AGX-xavier-yolov5/"
+                                   title="20241219 配置NVIDIA AGX xavier yolov5"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20241219 配置NVIDIA AGX xavier yolov5</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text"> 文件的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-gcc-linaro-1221-202212-linux-manifesttxt"><span class="nav-number">1.0.1.</span> <span class="nav-text"> 1. gcc-linaro-12.2.1-2022.12-linux-manifest.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-gcc-linaro-1221-202212-x86_64_aarch64-linux-gnutarxz"><span class="nav-number">1.0.2.</span> <span class="nav-text"> 2. gcc-linaro-12.2.1-2022.12-x86_64_aarch64-linux-gnu.tar.xz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-gcc-linaro-1221-202212-x86_64_aarch64-linux-gnutarxzasc"><span class="nav-number">1.0.3.</span> <span class="nav-text"> 3. gcc-linaro-12.2.1-2022.12-x86_64_aarch64-linux-gnu.tar.xz.asc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-runtime-gcc-linaro-1221-202212-aarch64-linux-gnutarxz"><span class="nav-number">1.0.4.</span> <span class="nav-text"> 4. runtime-gcc-linaro-12.2.1-2022.12-aarch64-linux-gnu.tar.xz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-runtime-gcc-linaro-1221-202212-aarch64-linux-gnutarxzasc"><span class="nav-number">1.0.5.</span> <span class="nav-text"> 5. runtime-gcc-linaro-12.2.1-2022.12-aarch64-linux-gnu.tar.xz.asc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-sysroot-glibc-linaro-236-202212-aarch64-linux-gnutarxz"><span class="nav-number">1.0.6.</span> <span class="nav-text"> 6. sysroot-glibc-linaro-2.36-2022.12-aarch64-linux-gnu.tar.xz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-sysroot-glibc-linaro-236-202212-aarch64-linux-gnutarxzasc"><span class="nav-number">1.0.7.</span> <span class="nav-text"> 7. sysroot-glibc-linaro-2.36-2022.12-aarch64-linux-gnu.tar.xz.asc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.0.8.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text"> 文件的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-gcc-linaro-1221-202212-linux-manifesttxt"><span class="nav-number">1.0.1.</span> <span class="nav-text"> 1. gcc-linaro-12.2.1-2022.12-linux-manifest.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-gcc-linaro-1221-202212-x86_64_aarch64-linux-gnutarxz"><span class="nav-number">1.0.2.</span> <span class="nav-text"> 2. gcc-linaro-12.2.1-2022.12-x86_64_aarch64-linux-gnu.tar.xz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-gcc-linaro-1221-202212-x86_64_aarch64-linux-gnutarxzasc"><span class="nav-number">1.0.3.</span> <span class="nav-text"> 3. gcc-linaro-12.2.1-2022.12-x86_64_aarch64-linux-gnu.tar.xz.asc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-runtime-gcc-linaro-1221-202212-aarch64-linux-gnutarxz"><span class="nav-number">1.0.4.</span> <span class="nav-text"> 4. runtime-gcc-linaro-12.2.1-2022.12-aarch64-linux-gnu.tar.xz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-runtime-gcc-linaro-1221-202212-aarch64-linux-gnutarxzasc"><span class="nav-number">1.0.5.</span> <span class="nav-text"> 5. runtime-gcc-linaro-12.2.1-2022.12-aarch64-linux-gnu.tar.xz.asc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-sysroot-glibc-linaro-236-202212-aarch64-linux-gnutarxz"><span class="nav-number">1.0.6.</span> <span class="nav-text"> 6. sysroot-glibc-linaro-2.36-2022.12-aarch64-linux-gnu.tar.xz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-sysroot-glibc-linaro-236-202212-aarch64-linux-gnutarxzasc"><span class="nav-number">1.0.7.</span> <span class="nav-text"> 7. sysroot-glibc-linaro-2.36-2022.12-aarch64-linux-gnu.tar.xz.asc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.0.8.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>

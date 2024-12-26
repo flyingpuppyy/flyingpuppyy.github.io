@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Dec 20 2024 17:10:44 GMT+0800">2024-12-20 17:10:44</span>
+                <span class="datetime" data-updated="Tue Dec 24 2024 11:41:55 GMT+0800">2024-12-24 11:41:55</span>
             </span>
         
 
@@ -249,7 +249,7 @@
 <h1 id="参考尝试三"><a class="markdownIt-Anchor" href="#参考尝试三"></a> 参考尝试三</h1>
 <p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/YY_DS_ysj/article/details/134412965?spm=1001.2014.3001.5501" >https://blog.csdn.net/YY_DS_ysj/article/details/134412965?spm=1001.2014.3001.5501<i class="fas fa-external-link-alt"></i></a></p>
 <h1 id="配置环境了解"><a class="markdownIt-Anchor" href="#配置环境了解"></a> 配置环境了解</h1>
-<h1 id="三者区别和联系"><a class="markdownIt-Anchor" href="#三者区别和联系"></a> 三者区别和联系</h1>
+<h1 id="miniforge-conda-anaconda"><a class="markdownIt-Anchor" href="#miniforge-conda-anaconda"></a> <strong>Miniforge</strong>、<strong>Conda</strong> 、<strong>Anaconda</strong></h1>
 <p><strong>Miniforge</strong>、<strong>Conda</strong> 和 <strong>Anaconda</strong> 是与 Python 环境管理和包管理相关的工具和发行版。虽然它们在功能上有一些重叠，但它们之间存在一些关键的区别和联系。下面我将详细介绍它们的区别和联系。</p>
 <h3 id="1-conda"><a class="markdownIt-Anchor" href="#1-conda"></a> 1. <strong>Conda</strong></h3>
 <p><strong>Conda</strong> 是一个 <strong>开源的包管理工具</strong> 和 <strong>环境管理器</strong>，用于安装、管理和部署软件包，尤其是在数据科学、机器学习、科学计算等领域。它支持 Python 和其他编程语言（如 R、Java、Ruby 等）的包管理。</p>
@@ -475,7 +475,7 @@
 <li><strong>更轻量级</strong>： 对于一些只关心核心 Python 环境而不需要其他大包（如 Jupyter、Spyder 等）的用户，Miniforge 提供了一个非常精简的环境，减少了不必要的磁盘占用。</li>
 <li><strong>与 YOLOv5 完美兼容</strong>： YOLOv5 本身基于 PyTorch 和一些常用 Python 库（如 OpenCV、NumPy、Matplotlib 等），这些库都可以通过 <code>conda-forge</code> 安装。因此，Miniforge 完全可以满足 YOLOv5 的依赖要求，并且可以通过 Conda 简单的命令安装这些库。</li>
 </ol>
-<h1 id="miniforge安装过程"><a class="markdownIt-Anchor" href="#miniforge安装过程"></a> miniforge安装过程</h1>
+<h2 id="miniforge安装过程"><a class="markdownIt-Anchor" href="#miniforge安装过程"></a> miniforge安装过程</h2>
 <p>1.去官网下载相关包<a class="link"   target="_blank" rel="noopener" href="https://github.com/conda-forge/miniforge/releases" >https://github.com/conda-forge/miniforge/releases<i class="fas fa-external-link-alt"></i></a></p>
 <p>（我一开始是下载最新版本的 Release 24.11.0-0 Latest，但是安装到最后告诉我xxxx东西后面不在这里安装了，要自己独立安装，吓得我赶紧找到那个老版本进行下载os:真的很怕配环境有多余的麻烦，后面就下了Release 24.7.1- Latest）</p>
 <p>2.去到那个下载目录，我自己单独给这个文件建立了新目录</p>
@@ -588,7 +588,18 @@
 </ul>
 <h3 id="总结-3"><a class="markdownIt-Anchor" href="#总结-3"></a> 总结</h3>
 <p><strong>Conda</strong> 是一个非常强大的包管理工具，适用于 Python 和其他编程语言的包和环境管理。它能够高效地解决依赖关系，支持跨平台操作，且与 <code>pip</code> 和 <code>virtualenv</code> 等工具相比，提供了更多的功能和灵活性。在数据科学、机器学习等领域，Conda 是管理复杂环境和依赖的首选工具。</p>
-<h1 id="pytoch"><a class="markdownIt-Anchor" href="#pytoch"></a> pytoch</h1>
+<h1 id="minforge中conda相关命令"><a class="markdownIt-Anchor" href="#minforge中conda相关命令"></a> minforge中conda相关命令</h1>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">conda env list</span><br><span class="line"></span><br><span class="line"># conda environments:</span><br><span class="line">#</span><br><span class="line">base                  *  /home/username/miniforge3</span><br><span class="line">myenv                    /home/username/miniforge3/envs/myenv</span><br><span class="line">anotherenv               /home/username/miniforge3/envs/anotherenv</span><br><span class="line">这两条命令都会列出所有已创建的 Conda 环境，并标记当前激活的环境。</span><br><span class="line"></span><br><span class="line">conda deactivate</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/PolarisRisingWar/article/details/138535932" >https://blog.csdn.net/PolarisRisingWar/article/details/138535932<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前可以下载的openssl版本</span><br><span class="line">conda search openssl</span><br></pre></td></tr></table></figure>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 例如，创建一个新的虚拟环境并指定 Python 版本：  </span><br><span class="line">conda create -n myenv python=3.8</span><br></pre></td></tr></table></figure>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 激活环境：</span><br><span class="line">conda activate myenv</span><br></pre></td></tr></table></figure>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 停用环境：</span><br><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 导出环境配置到文件</span><br><span class="line">conda list --export &gt; environment.yml</span><br></pre></td></tr></table></figure>
+   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 然后，其他人可以使用该配置文件来重新创建相同的环境</span><br><span class="line">conda env create -f environment.yml</span><br></pre></td></tr></table></figure>
+<h1 id="numpy"><a class="markdownIt-Anchor" href="#numpy"></a> numpy</h1>
+<p><strong>这个线性代数库是下载pytorch的前提</strong></p>
+<h2 id="尝试过程"><a class="markdownIt-Anchor" href="#尝试过程"></a> 尝试过程</h2>
 <p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412201617050.png"  alt="image-20241220161746953" ></p>
 <blockquote>
 <p>好像直接从pip中下是不行的</p>
@@ -639,6 +650,150 @@
 <p>还是不行，太奇怪了</p>
 <p>下班，明天再搞</p>
 </blockquote>
+<h2 id="看看chatgpt"><a class="markdownIt-Anchor" href="#看看chatgpt"></a> 看看chatgpt</h2>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412231012687.png"  alt="image-20241223101239436" ></p>
+<p>还需要下openssl</p>
+<h1 id="openssl"><a class="markdownIt-Anchor" href="#openssl"></a> openssl</h1>
+<ul>
+<li><strong>下numpy前需要这个库</strong></li>
+</ul>
+<h2 id="过程"><a class="markdownIt-Anchor" href="#过程"></a> 过程</h2>
+<ul>
+<li>
+<p>直接从conda下载是不行的</p>
+<blockquote>
+<p>这个版本太旧了</p>
+<p>conda install openssl=1.0.2p</p>
+</blockquote>
+</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412231015601.png"  alt="image-20241223101533361" ></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.oomake.com/download/openssl" >https://www.oomake.com/download/openssl<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412231013446.png"  alt="image-20241223101339350" ></p>
+<blockquote>
+<p>拿到源码要自己编译</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/wmx843230304wmx/article/details/102825150" >https://blog.csdn.net/wmx843230304wmx/article/details/102825150<i class="fas fa-external-link-alt"></i></a></p>
+<p>试试这个方案</p>
+<p>不太行</p>
+<p>试试这个</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/Ai_Sj/article/details/142487097" >https://blog.csdn.net/Ai_Sj/article/details/142487097<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>在虚拟机里弄一下</p>
+<p>sudo apt-get update</p>
+<p>sudo apt-get install build-essential cmake gcc-aarch64-linux-gnu g+±aarch64-linux-gnu autoconf automake libtool</p>
+</blockquote>
+<p>./Configure -fPIC no-asm shared no-async linux-aarch64 --prefix=/absolute/path --cross-compile-prefix=aarch64-himix210-linux-</p>
+<blockquote>
+<p>这个指令不完整 交叉编译工具链还需要重新设计</p>
+</blockquote>
+<hr />
+<p>算了</p>
+<p>还是试试用这个 能编译出  但是不懂能不能用</p>
+<blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/wmx843230304wmx/article/details/102825150" >https://blog.csdn.net/wmx843230304wmx/article/details/102825150<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+</blockquote>
+<hr />
+<blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://snapshots.linaro.org/gnu-toolchain/?_gl=1*1upi1eh*_ga*NTk4NDM3NDM2LjE3MzQ5MjU0NzY.*_ga_E12E6FXFVK*MTczNDkyNTQ3NS4xLjAuMTczNDkyNTQ3NS4wLjAuMA" >https://snapshots.linaro.org/gnu-toolchain/?_gl=1*1upi1eh*_ga*NTk4NDM3NDM2LjE3MzQ5MjU0NzY.*_ga_E12E6FXFVK*MTczNDkyNTQ3NS4xLjAuMTczNDkyNTQ3NS4wLjAuMA<i class="fas fa-external-link-alt"></i></a>…</p>
+<hr />
+</blockquote>
+<h2 id="在arrch64中的conda虚拟环境中安装"><a class="markdownIt-Anchor" href="#在arrch64中的conda虚拟环境中安装"></a> 在arrch64中的conda虚拟环境中安装</h2>
+<ul>
+<li>这里省略了新建的步骤</li>
+</ul>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412231537138.png"  alt="image-20241223153743908" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412231540425.png"  alt="image-20241223154014336" ></p>
+<blockquote>
+<p>完美安装openssl后安装numpy成功</p>
+<p>返回我们的pytorch</p>
+</blockquote>
+<h1 id="pytorch"><a class="markdownIt-Anchor" href="#pytorch"></a> pytorch</h1>
+<p>安装了这么多忘记检查适配问题了</p>
+<h2 id="pytorch版本查看"><a class="markdownIt-Anchor" href="#pytorch版本查看"></a> pytorch版本查看</h2>
+<ul>
+<li>要综合看刷机版本 看刷机内置的python版本</li>
+<li>pytorch也对应着的pytorch版本</li>
+</ul>
+<p><strong>这个靠谱</strong></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048" >https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>本次环境的jetpack5.1</p>
+<p>最后选择下这个</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412231604394.png"  alt="image-20241223160400331" ></p>
+</blockquote>
+<p>**下面这些没有一一验证过，算了</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/pytorch/vision#installation" >https://github.com/pytorch/vision#installation<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412231608424.png"  alt="image-20241223160809367" ></p>
+<blockquote>
+<p>要查看 Jetson 适配的 PyTorch 版本，您可以参考以下几种途径：</p>
+<ol>
+<li>NVIDIA 官方文档</li>
+</ol>
+<p>NVIDIA 提供了针对 Jetson 平台（包括 Jetson AGX Xavier 和其他设备）安装 PyTorch 的指导。可以访问以下链接，查看针对不同 JetPack 和 CUDA 版本的 PyTorch 安装方法：</p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://forums.developer.nvidia.com/c/jetson/jetson-ai/" >NVIDIA Jetson Forum - PyTorch<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://developer.nvidia.com/embedded/jetpack" >NVIDIA Jetson Documentation<i class="fas fa-external-link-alt"></i></a>（查看 JetPack 和 CUDA 兼容性）</li>
+</ul>
+<ol start="2">
+<li>PyTorch GitHub 仓库</li>
+</ol>
+<p>PyTorch 官方 GitHub 仓库会定期更新适用于不同平台的版本，并提供适配和安装的指导。查看 Jetson 特定的安装指南，请参考以下页面：</p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/pytorch/pytorch" >PyTorch GitHub<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/pytorch/pytorch/releases" >PyTorch Release Notes<i class="fas fa-external-link-alt"></i></a>（查看每个版本的发布日志，找到适配 CUDA 版本的说明）</li>
+</ul>
+<ol start="3">
+<li><strong>Jetson Hacks 网站</strong></li>
+</ol>
+<p>Jetson Hacks 提供了很多关于在 Jetson 平台上运行深度学习框架（包括 PyTorch）的教程和指导。您可以在其网站上找到与 Jetson 设备（如 Xavier、Nano）相关的安装和优化方法。</p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/jetsonhacks" >JetsonHacks GitHub<i class="fas fa-external-link-alt"></i></a>（有许多针对 Jetson 平台的示例和资源）</li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.youtube.com/c/JetsonHacks" >JetsonHacks YouTube Channel<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<ol start="4">
+<li><strong>PyTorch 官方网站</strong></li>
+</ol>
+<p>PyTorch 官网提供了安装 PyTorch 的详细说明，可以选择适合你的 CUDA 和平台的版本：</p>
+<ul>
+<li>PyTorch 官方安装页面
+<ul>
+<li>在该页面，您可以选择操作系统（例如 Linux）、包管理器（如 pip 或 conda）、CUDA 版本等信息，来生成适合您系统的安装命令。</li>
+</ul>
+</li>
+</ul>
+<p><strong>5.NVIDIA PyTorch Docker 镜像</strong></p>
+<p>NVIDIA 提供了预编译的 PyTorch Docker 镜像，这些镜像经过优化并专门为 Jetson 平台提供支持。您可以使用 NVIDIA NGC（NVIDIA GPU Cloud）来拉取适合 Jetson 的 PyTorch Docker 镜像：</p>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://ngc.nvidia.com/catalog/containers/nvidia:pytorch" >NVIDIA NGC<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<p>在 NGC 上，您可以选择特定的 JetPack 版本和 CUDA 版本来获取兼容的 PyTorch 镜像。</p>
+<ol start="6">
+<li><strong>检查安装的 PyTorch 版本</strong></li>
+</ol>
+<p>安装 PyTorch 后，您还可以通过 Python 代码检查是否适配您的 Jetson 系统：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python复制代码import torch</span><br><span class="line">print(torch.__version__)  # 查看 PyTorch 版本</span><br><span class="line">print(torch.cuda.is_available())  # 检查是否支持 CUDA</span><br><span class="line">print(torch.backends.cudnn.version())  # 检查 cuDNN 版本</span><br></pre></td></tr></table></figure>
+<p>总结</p>
+<p>要查看适配的 PyTorch 版本，推荐访问 NVIDIA 的官方文档和论坛，查看最新的 JetPack 和 CUDA 版本对应的 PyTorch 版本。同时，您可以通过 PyTorch 官网和 GitHub 仓库获取最新的安装信息。</p>
+</blockquote>
+<h2 id="安装pytorch"><a class="markdownIt-Anchor" href="#安装pytorch"></a> 安装pytorch</h2>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/wanggao_1990/article/details/135077915" >https://blog.csdn.net/wanggao_1990/article/details/135077915<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412231611264.png"  alt="image-20241223161139180" ></p>
+<blockquote>
+<p>尝试安装之后感觉有问题</p>
+<p>torch适配的python版本和虚拟环境的python版本不一致</p>
+<p>但是本地的python版本是3.8</p>
+<p>需要修改一下</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202412231645222.png"  alt="image-20241223164527114" ></p>
+<p>完美</p>
+</blockquote>
+<p>完蛋了</p>
+<p>准备装vison的时候发现适配的sdk刷机的时候都没安装</p>
+<h1 id="第一步-cuda"><a class="markdownIt-Anchor" href="#第一步-cuda"></a> 第一步 cuda</h1>
+<ul>
+<li>刷机的时候忘记安装了</li>
+<li>后面又刷机看上面来了一遍</li>
+</ul>
 <h1 id="20241220当前环境配置总结"><a class="markdownIt-Anchor" href="#20241220当前环境配置总结"></a> 20241220当前环境配置总结</h1>
 <ul>
 <li>
@@ -651,7 +806,10 @@
 <p>内置的python环境是3.8</p>
 </li>
 <li>
-<p>pytoch下了一个torch-1.14.0a0+44dac51c.nv23.02-cp38-cp38-linux_aarch64.whl</p>
+<p>pytorch下了一个torch-1.14.0a0+44dac51c.nv23.02-cp38-cp38-linux_aarch64.whl,但是没有安装成功</p>
+</li>
+<li>
+<p>想下pytorch  看到教程里要下numpy，下numpy，要先下openssl，openssl直接下不行，需要自己在其他平台交叉编译之后再安装</p>
 </li>
 </ul>
 
@@ -672,15 +830,31 @@
                 
                     <div class="post-nav border-box">
                         
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2024/12/23/20241223-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E4%B9%8BLinaro/"
+                                   title="20241223 交叉编译之Linaro"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20241223 交叉编译之Linaro</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
                                    href="/2024/12/19/20241219-Jetson-AGX-Xavier%E5%88%B7%E6%9C%BA/"
-                                   title="20241219 Jetson AGX Xavier刷机"
+                                   title="20241219 Jetson AGX Xavier刷机(For yolov5)"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20241219 Jetson AGX Xavier刷机</span>
+                                        <span class="post-nav-title-item text-ellipsis">20241219 Jetson AGX Xavier刷机(For yolov5)</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -790,7 +964,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B7%E6%9C%BA%E5%90%8E%E5%88%9D%E5%A7%8B%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text"> 刷机后初始环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 参考尝试一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 参考尝试二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%89"><span class="nav-number">5.</span> <span class="nav-text"> 参考尝试三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E4%BA%86%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text"> 配置环境了解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E8%80%85%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB"><span class="nav-number">7.</span> <span class="nav-text"> 三者区别和联系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-conda"><span class="nav-number">7.0.1.</span> <span class="nav-text"> 1. Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-anaconda"><span class="nav-number">7.0.2.</span> <span class="nav-text"> 2. Anaconda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-miniforge"><span class="nav-number">7.0.3.</span> <span class="nav-text"> 3. Miniforge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB"><span class="nav-number">7.0.4.</span> <span class="nav-text"> 区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.0.5.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#anaconda"><span class="nav-number">8.</span> <span class="nav-text"> Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#anaconda-%E7%AE%80%E4%BB%8B"><span class="nav-number">8.0.1.</span> <span class="nav-text"> Anaconda 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">8.0.2.</span> <span class="nav-text"> 虚拟环境的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.3.</span> <span class="nav-text"> 在 YOLOv5 中使用 Anaconda 虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-yolov5"><span class="nav-number">8.0.4.</span> <span class="nav-text"> 步骤：使用 Anaconda 虚拟环境搭建 YOLOv5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.5.</span> <span class="nav-text"> 为什么在 YOLOv5 中使用虚拟环境？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-number">8.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge"><span class="nav-number">9.</span> <span class="nav-text"> miniforge</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E7%AE%80%E4%BB%8B"><span class="nav-number">9.0.1.</span> <span class="nav-text"> Miniforge 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E4%B8%8E-anaconda-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">9.0.2.</span> <span class="nav-text"> Miniforge 与 Anaconda 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%AD-miniforge-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">9.0.3.</span> <span class="nav-text"> 在 YOLOv5 环境搭建中 Miniforge 的作用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-number">10.</span> <span class="nav-text"> miniforge安装过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conda"><span class="nav-number">11.</span> <span class="nav-text"> conda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">11.0.1.</span> <span class="nav-text"> Conda 的主要功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">11.0.2.</span> <span class="nav-text"> Conda 的优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">11.0.3.</span> <span class="nav-text"> Conda 与其他包管理工具的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">11.0.4.</span> <span class="nav-text"> Conda 的使用案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-conda"><span class="nav-number">11.0.5.</span> <span class="nav-text"> 安装 Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-number">11.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pytoch"><span class="nav-number">12.</span> <span class="nav-text"> pytoch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">12.1.</span> <span class="nav-text"> 查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E8%AF%95numpy1200"><span class="nav-number">12.2.</span> <span class="nav-text"> 试试numpy1.20.0</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20241220%E5%BD%93%E5%89%8D%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93"><span class="nav-number">13.</span> <span class="nav-text"> 20241220当前环境配置总结</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B7%E6%9C%BA%E5%90%8E%E5%88%9D%E5%A7%8B%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text"> 刷机后初始环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 参考尝试一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 参考尝试二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%89"><span class="nav-number">5.</span> <span class="nav-text"> 参考尝试三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E4%BA%86%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text"> 配置环境了解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge-conda-anaconda"><span class="nav-number">7.</span> <span class="nav-text"> Miniforge、Conda 、Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-conda"><span class="nav-number">7.0.1.</span> <span class="nav-text"> 1. Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-anaconda"><span class="nav-number">7.0.2.</span> <span class="nav-text"> 2. Anaconda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-miniforge"><span class="nav-number">7.0.3.</span> <span class="nav-text"> 3. Miniforge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB"><span class="nav-number">7.0.4.</span> <span class="nav-text"> 区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.0.5.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#anaconda"><span class="nav-number">8.</span> <span class="nav-text"> Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#anaconda-%E7%AE%80%E4%BB%8B"><span class="nav-number">8.0.1.</span> <span class="nav-text"> Anaconda 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">8.0.2.</span> <span class="nav-text"> 虚拟环境的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.3.</span> <span class="nav-text"> 在 YOLOv5 中使用 Anaconda 虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-yolov5"><span class="nav-number">8.0.4.</span> <span class="nav-text"> 步骤：使用 Anaconda 虚拟环境搭建 YOLOv5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.5.</span> <span class="nav-text"> 为什么在 YOLOv5 中使用虚拟环境？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-number">8.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge"><span class="nav-number">9.</span> <span class="nav-text"> miniforge</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E7%AE%80%E4%BB%8B"><span class="nav-number">9.0.1.</span> <span class="nav-text"> Miniforge 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E4%B8%8E-anaconda-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">9.0.2.</span> <span class="nav-text"> Miniforge 与 Anaconda 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%AD-miniforge-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">9.0.3.</span> <span class="nav-text"> 在 YOLOv5 环境搭建中 Miniforge 的作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#miniforge%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-number">9.1.</span> <span class="nav-text"> miniforge安装过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conda"><span class="nav-number">10.</span> <span class="nav-text"> conda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">10.0.1.</span> <span class="nav-text"> Conda 的主要功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">10.0.2.</span> <span class="nav-text"> Conda 的优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">10.0.3.</span> <span class="nav-text"> Conda 与其他包管理工具的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">10.0.4.</span> <span class="nav-text"> Conda 的使用案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-conda"><span class="nav-number">10.0.5.</span> <span class="nav-text"> 安装 Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-number">10.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#minforge%E4%B8%ADconda%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">11.</span> <span class="nav-text"> minforge中conda相关命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#numpy"><span class="nav-number">12.</span> <span class="nav-text"> numpy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E8%BF%87%E7%A8%8B"><span class="nav-number">12.1.</span> <span class="nav-text"> 尝试过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">12.2.</span> <span class="nav-text"> 查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E8%AF%95numpy1200"><span class="nav-number">12.3.</span> <span class="nav-text"> 试试numpy1.20.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%8B%E7%9C%8Bchatgpt"><span class="nav-number">12.4.</span> <span class="nav-text"> 看看chatgpt</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#openssl"><span class="nav-number">13.</span> <span class="nav-text"> openssl</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B"><span class="nav-number">13.1.</span> <span class="nav-text"> 过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8arrch64%E4%B8%AD%E7%9A%84conda%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%AD%E5%AE%89%E8%A3%85"><span class="nav-number">13.2.</span> <span class="nav-text"> 在arrch64中的conda虚拟环境中安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pytorch"><span class="nav-number">14.</span> <span class="nav-text"> pytorch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pytorch%E7%89%88%E6%9C%AC%E6%9F%A5%E7%9C%8B"><span class="nav-number">14.1.</span> <span class="nav-text"> pytorch版本查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85pytorch"><span class="nav-number">14.2.</span> <span class="nav-text"> 安装pytorch</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-cuda"><span class="nav-number">15.</span> <span class="nav-text"> 第一步 cuda</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20241220%E5%BD%93%E5%89%8D%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93"><span class="nav-number">16.</span> <span class="nav-text"> 20241220当前环境配置总结</span></a></li></ol>
     </div>
 </div>
 
@@ -943,7 +1117,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B7%E6%9C%BA%E5%90%8E%E5%88%9D%E5%A7%8B%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text"> 刷机后初始环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 参考尝试一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 参考尝试二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%89"><span class="nav-number">5.</span> <span class="nav-text"> 参考尝试三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E4%BA%86%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text"> 配置环境了解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E8%80%85%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB"><span class="nav-number">7.</span> <span class="nav-text"> 三者区别和联系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-conda"><span class="nav-number">7.0.1.</span> <span class="nav-text"> 1. Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-anaconda"><span class="nav-number">7.0.2.</span> <span class="nav-text"> 2. Anaconda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-miniforge"><span class="nav-number">7.0.3.</span> <span class="nav-text"> 3. Miniforge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB"><span class="nav-number">7.0.4.</span> <span class="nav-text"> 区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.0.5.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#anaconda"><span class="nav-number">8.</span> <span class="nav-text"> Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#anaconda-%E7%AE%80%E4%BB%8B"><span class="nav-number">8.0.1.</span> <span class="nav-text"> Anaconda 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">8.0.2.</span> <span class="nav-text"> 虚拟环境的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.3.</span> <span class="nav-text"> 在 YOLOv5 中使用 Anaconda 虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-yolov5"><span class="nav-number">8.0.4.</span> <span class="nav-text"> 步骤：使用 Anaconda 虚拟环境搭建 YOLOv5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.5.</span> <span class="nav-text"> 为什么在 YOLOv5 中使用虚拟环境？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-number">8.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge"><span class="nav-number">9.</span> <span class="nav-text"> miniforge</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E7%AE%80%E4%BB%8B"><span class="nav-number">9.0.1.</span> <span class="nav-text"> Miniforge 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E4%B8%8E-anaconda-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">9.0.2.</span> <span class="nav-text"> Miniforge 与 Anaconda 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%AD-miniforge-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">9.0.3.</span> <span class="nav-text"> 在 YOLOv5 环境搭建中 Miniforge 的作用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-number">10.</span> <span class="nav-text"> miniforge安装过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conda"><span class="nav-number">11.</span> <span class="nav-text"> conda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">11.0.1.</span> <span class="nav-text"> Conda 的主要功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">11.0.2.</span> <span class="nav-text"> Conda 的优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">11.0.3.</span> <span class="nav-text"> Conda 与其他包管理工具的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">11.0.4.</span> <span class="nav-text"> Conda 的使用案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-conda"><span class="nav-number">11.0.5.</span> <span class="nav-text"> 安装 Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-number">11.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pytoch"><span class="nav-number">12.</span> <span class="nav-text"> pytoch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">12.1.</span> <span class="nav-text"> 查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E8%AF%95numpy1200"><span class="nav-number">12.2.</span> <span class="nav-text"> 试试numpy1.20.0</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20241220%E5%BD%93%E5%89%8D%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93"><span class="nav-number">13.</span> <span class="nav-text"> 20241220当前环境配置总结</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%B7%E6%9C%BA%E5%90%8E%E5%88%9D%E5%A7%8B%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text"> 刷机后初始环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%80"><span class="nav-number">3.</span> <span class="nav-text"> 参考尝试一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%BA%8C"><span class="nav-number">4.</span> <span class="nav-text"> 参考尝试二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E5%B0%9D%E8%AF%95%E4%B8%89"><span class="nav-number">5.</span> <span class="nav-text"> 参考尝试三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E4%BA%86%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text"> 配置环境了解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge-conda-anaconda"><span class="nav-number">7.</span> <span class="nav-text"> Miniforge、Conda 、Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-conda"><span class="nav-number">7.0.1.</span> <span class="nav-text"> 1. Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-anaconda"><span class="nav-number">7.0.2.</span> <span class="nav-text"> 2. Anaconda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-miniforge"><span class="nav-number">7.0.3.</span> <span class="nav-text"> 3. Miniforge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB"><span class="nav-number">7.0.4.</span> <span class="nav-text"> 区别与联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.0.5.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#anaconda"><span class="nav-number">8.</span> <span class="nav-text"> Anaconda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#anaconda-%E7%AE%80%E4%BB%8B"><span class="nav-number">8.0.1.</span> <span class="nav-text"> Anaconda 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">8.0.2.</span> <span class="nav-text"> 虚拟环境的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.3.</span> <span class="nav-text"> 在 YOLOv5 中使用 Anaconda 虚拟环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BD%BF%E7%94%A8-anaconda-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-yolov5"><span class="nav-number">8.0.4.</span> <span class="nav-text"> 步骤：使用 Anaconda 虚拟环境搭建 YOLOv5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8-yolov5-%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">8.0.5.</span> <span class="nav-text"> 为什么在 YOLOv5 中使用虚拟环境？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-2"><span class="nav-number">8.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#miniforge"><span class="nav-number">9.</span> <span class="nav-text"> miniforge</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E7%AE%80%E4%BB%8B"><span class="nav-number">9.0.1.</span> <span class="nav-text"> Miniforge 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#miniforge-%E4%B8%8E-anaconda-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">9.0.2.</span> <span class="nav-text"> Miniforge 与 Anaconda 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-yolov5-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%AD-miniforge-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">9.0.3.</span> <span class="nav-text"> 在 YOLOv5 环境搭建中 Miniforge 的作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#miniforge%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="nav-number">9.1.</span> <span class="nav-text"> miniforge安装过程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conda"><span class="nav-number">10.</span> <span class="nav-text"> conda</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">10.0.1.</span> <span class="nav-text"> Conda 的主要功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">10.0.2.</span> <span class="nav-text"> Conda 的优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number">10.0.3.</span> <span class="nav-text"> Conda 与其他包管理工具的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conda-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B"><span class="nav-number">10.0.4.</span> <span class="nav-text"> Conda 的使用案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-conda"><span class="nav-number">10.0.5.</span> <span class="nav-text"> 安装 Conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-3"><span class="nav-number">10.0.6.</span> <span class="nav-text"> 总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#minforge%E4%B8%ADconda%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">11.</span> <span class="nav-text"> minforge中conda相关命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#numpy"><span class="nav-number">12.</span> <span class="nav-text"> numpy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E8%BF%87%E7%A8%8B"><span class="nav-number">12.1.</span> <span class="nav-text"> 尝试过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">12.2.</span> <span class="nav-text"> 查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E8%AF%95numpy1200"><span class="nav-number">12.3.</span> <span class="nav-text"> 试试numpy1.20.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%8B%E7%9C%8Bchatgpt"><span class="nav-number">12.4.</span> <span class="nav-text"> 看看chatgpt</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#openssl"><span class="nav-number">13.</span> <span class="nav-text"> openssl</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B"><span class="nav-number">13.1.</span> <span class="nav-text"> 过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8arrch64%E4%B8%AD%E7%9A%84conda%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%AD%E5%AE%89%E8%A3%85"><span class="nav-number">13.2.</span> <span class="nav-text"> 在arrch64中的conda虚拟环境中安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pytorch"><span class="nav-number">14.</span> <span class="nav-text"> pytorch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pytorch%E7%89%88%E6%9C%AC%E6%9F%A5%E7%9C%8B"><span class="nav-number">14.1.</span> <span class="nav-text"> pytorch版本查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85pytorch"><span class="nav-number">14.2.</span> <span class="nav-text"> 安装pytorch</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-cuda"><span class="nav-number">15.</span> <span class="nav-text"> 第一步 cuda</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20241220%E5%BD%93%E5%89%8D%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93"><span class="nav-number">16.</span> <span class="nav-text"> 20241220当前环境配置总结</span></a></li></ol>
     </div>
 </div>
 
