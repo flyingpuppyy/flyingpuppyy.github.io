@@ -9,7 +9,7 @@
     
     <title>
         
-            20241224 jetson agx Xavier加装固态硬盘 挂载 |
+            20241224 jetson agx Xavier加装固态SSD 挂载 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20241224 jetson agx Xavier加装固态硬盘 挂载
+                        20241224 jetson agx Xavier加装固态SSD 挂载
                     </div>
                 
 
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Thu Dec 26 2024 14:09:57 GMT+0800">2024-12-26 14:09:57</span>
+                <span class="datetime" data-updated="Fri Dec 27 2024 15:13:55 GMT+0800">2024-12-27 15:13:55</span>
             </span>
         
 
@@ -231,7 +231,50 @@
                     
 
                     <h1 id="等待硬盘到来之前"><a class="markdownIt-Anchor" href="#等待硬盘到来之前"></a> 等待硬盘到来之前</h1>
-<h2 id="加装硬盘"><a class="markdownIt-Anchor" href="#加装硬盘"></a> 加装硬盘</h2>
+<h1 id="挂载的理解"><a class="markdownIt-Anchor" href="#挂载的理解"></a> 挂载的理解</h1>
+<p>我可以这样理解吗？挂载就是在操作系统中给这块存储空间写一个访问的入口</p>
+<blockquote>
+<p>你的理解是基本正确的。挂载（Mount）在操作系统中的确可以理解为给这块存储空间（如硬盘、分区或网络存储等）写一个访问的入口。</p>
+<p>具体来说，挂载过程就是将一个存储设备或分区与操作系统文件系统中的某个目录（挂载点）相关联。这样，当用户访问这个目录时，实际上就是在访问那块存储设备或分区上的数据。</p>
+<p>以下是对挂载过程的一些进一步解释：</p>
+<ol>
+<li>
+<p>挂载点</p>
+<p>：</p>
+<ul>
+<li>挂载点是操作系统文件系统中的一个空目录或已存在的目录，用于作为存储设备的访问入口。</li>
+<li>当存储设备挂载到这个目录后，用户可以通过访问这个目录来访问存储设备上的文件和数据。</li>
+</ul>
+</li>
+<li>
+<p>挂载过程</p>
+<p>：</p>
+<ul>
+<li>操作系统会识别存储设备，并为其分配一个设备标识符（如/dev/sda1）。</li>
+<li>用户或系统管理员会选择或创建一个挂载点（如/mnt/mydisk）。</li>
+<li>通过挂载命令（如Linux下的<code>mount</code>命令），将存储设备与挂载点相关联。</li>
+</ul>
+</li>
+<li>
+<p>访问存储设备</p>
+<p>：</p>
+<ul>
+<li>挂载完成后，用户可以通过文件管理器或命令行工具访问挂载点，从而访问存储设备上的数据。</li>
+<li>操作系统会将用户对挂载点的访问请求转发到对应的存储设备。</li>
+</ul>
+</li>
+<li>
+<p>卸载过程</p>
+<p>：</p>
+<ul>
+<li>当不再需要访问存储设备时，可以通过卸载命令（如Linux下的<code>umount</code>命令）将其从挂载点卸载。</li>
+<li>卸载后，操作系统将不再通过该挂载点访问存储设备。</li>
+</ul>
+</li>
+</ol>
+<p>因此，挂载就是在操作系统中为存储设备或分区创建一个访问入口，使用户能够方便地存取其上的数据。你的理解是准确的。</p>
+</blockquote>
+<h2 id="加装ssd固态"><a class="markdownIt-Anchor" href="#加装ssd固态"></a> 加装SSD固态</h2>
 <p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/Liangontheway/article/details/120214628" >https://blog.csdn.net/Liangontheway/article/details/120214628<i class="fas fa-external-link-alt"></i></a></p>
 <blockquote>
 <p>小心风扇</p>
@@ -398,7 +441,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%BE%85%E7%A1%AC%E7%9B%98%E5%88%B0%E6%9D%A5%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text"> 等待硬盘到来之前</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%A3%85%E7%A1%AC%E7%9B%98"><span class="nav-number">1.1.</span> <span class="nav-text"> 加装硬盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text"> 挂载相关命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9A%82%E6%97%B6%E7%9A%84%E5%8F%82%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text"> 暂时的参考</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%BE%85%E7%A1%AC%E7%9B%98%E5%88%B0%E6%9D%A5%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text"> 等待硬盘到来之前</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text"> 挂载的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%A3%85ssd%E5%9B%BA%E6%80%81"><span class="nav-number">2.1.</span> <span class="nav-text"> 加装SSD固态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text"> 挂载相关命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9A%82%E6%97%B6%E7%9A%84%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text"> 暂时的参考</span></a></li></ol>
     </div>
 </div>
 
@@ -551,7 +594,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%BE%85%E7%A1%AC%E7%9B%98%E5%88%B0%E6%9D%A5%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text"> 等待硬盘到来之前</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%A3%85%E7%A1%AC%E7%9B%98"><span class="nav-number">1.1.</span> <span class="nav-text"> 加装硬盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text"> 挂载相关命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9A%82%E6%97%B6%E7%9A%84%E5%8F%82%E8%80%83"><span class="nav-number">2.</span> <span class="nav-text"> 暂时的参考</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%BE%85%E7%A1%AC%E7%9B%98%E5%88%B0%E6%9D%A5%E4%B9%8B%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text"> 等待硬盘到来之前</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text"> 挂载的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%A3%85ssd%E5%9B%BA%E6%80%81"><span class="nav-number">2.1.</span> <span class="nav-text"> 加装SSD固态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text"> 挂载相关命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9A%82%E6%97%B6%E7%9A%84%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text"> 暂时的参考</span></a></li></ol>
     </div>
 </div>
 
