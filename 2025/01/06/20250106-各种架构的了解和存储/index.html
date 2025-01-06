@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20250106 各种架构的了解和存储 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"没有一条路径通往真诚 真诚本身就是道路","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"markdown":{"preset":"default","render":{"html":true,"xhtmlOut":false,"langPrefix":"language-","breaks":true,"linkify":true,"typographer":true,"quotes":"“”‘’"},"enable_rules":null,"disable_rules":null,"plugins":["markdown-it-abbr","markdown-it-cjk-breaks","markdown-it-deflist","markdown-it-emoji","markdown-it-footnote","markdown-it-ins","markdown-it-mark","markdown-it-sub","markdown-it-sup",{"name":"markdown-it-container","options":"success"},{"name":"markdown-it-container","options":"tips"},{"name":"markdown-it-container","options":"warning"},{"name":"markdown-it-container","options":"danger"}],"anchors":{"level":2,"collisionSuffix":"","permalink":false,"permalinkClass":"header-anchor","permalinkSide":"left","permalinkSymbol":"¶","case":0,"separator":"-"}},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首頁
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                歸檔
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分類
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首頁</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >歸檔</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分類</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20250106 各种架构的了解和存储
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv6</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2025-01-06 09:01:02</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Mon Jan 06 2025 09:03:17 GMT+0800">2025-01-06 09:03:17</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1 id="x86-64-amd64-arm-aarch64-都是些什么"><a class="markdownIt-Anchor" href="#x86-64-amd64-arm-aarch64-都是些什么"></a> x86-64、amd64、arm、aarch64 都是些什么？</h1>
+<h3 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h3>
+<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/wf19930209/article/details/79536506" >X86和X86_64和AMD64的由来<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25562325/article/details/125374160?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~default-1-125374160-blog-79536506.pc_relevant_default&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~default-1-125374160-blog-79536506.pc_relevant_default&amp;utm_relevant_index=1" >关于x86、x86_64、x64、amd64和arm64、aarch64<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44878336/article/details/124955553" >下载软件时的amd64、x86、x86-64是什么，该怎么选？<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<h3 id="简述"><a class="markdownIt-Anchor" href="#简述"></a> 简述</h3>
+<table>
+<thead>
+<tr>
+<th>架构</th>
+<th>指令集位数</th>
+<th>原因</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X86</td>
+<td>32位</td>
+<td>英特尔出的处理习惯以86为结尾，如80186、80286、80386，所以之后被称之为 X86</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AMD64</td>
+<td>64位</td>
+<td>32位向64位演进时，AMD 抢先制造出了兼容 X86 32位指令集的 64位处理器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>X86-64</td>
+<td>64位</td>
+<td>因特尔设计 IA-64，比amd晚了一步，且不兼容 X86 32位指令集，比较惨淡 因此后续因特尔也采用 AMD64，但在此基础上进行了扩充，并改名为 X86-64 所以 x86_64,x64,AMD64基本上是同一个东西 现在用的intel/amd的桌面级CPU基本上都是x86_64</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ARM</td>
+<td></td>
+<td>适用于移动通信这种低成本、高性能、低耗电的领域</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ARM-V8</td>
+<td>AArch64：64位执行状态 AArch32：32位执行状态</td>
+<td>有两种执行态，适用于 32位和64位</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AArch64</td>
+<td>64位</td>
+<td>从 ARM-V8 中独立出来</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="详述"><a class="markdownIt-Anchor" href="#详述"></a> 详述</h3>
+<h4 id="一-x86与非x86"><a class="markdownIt-Anchor" href="#一-x86与非x86"></a> 一 x86与非x86</h4>
+<p>按照CPU体系<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E6%9E%B6%E6%9E%84&amp;spm=1001.2101.3001.7020" >架构<i class="fas fa-external-link-alt"></i></a>，服务器主要分为两类：</p>
+<ul>
+<li>非x86服务器：使用RISC（精简指令集）或EPIC（并行指令代码）处理器，并且主要采用UNIX和其他专用操作系统的服务器，指令系统相对简单，它只要求硬件执行有限且常用的部分指令，CPU主要有Compaq的Alpha、HP的PA-RISC、IBM的Power  PC、MIPS的MIPS和SUN的Sparc，Intel研发的EPIC安腾处理器等。这种服务器价格昂贵，体系封闭，但是稳定性好，性能强，主要用在金融、电信等大型企业的核心系统。</li>
+<li>x86服务器：又称CISC（复杂指令集）架构服务器，即通常所讲的PC服务器，它是基于PC机的体系结构，使用Intel或其他兼容x86指令集的处理芯片的服务器。目前主要为Interl的E3、E5系列，价格相对便宜，兼容性好，稳定性较差，安全性不算太高。</li>
+</ul>
+<h4 id="二-x86与x86_64"><a class="markdownIt-Anchor" href="#二-x86与x86_64"></a> 二 x86与x86_64</h4>
+<p>x86是指Intek的开发的一种32位指令集，从386时代开始，一直沿用至今，是一种cisc指令集，所有Intel早期的cpu，以及amd早期的cpu都支持这种指令集，在Intel官方文档中称之为（IA-32）。</p>
+<p>x86_64是x86 CPU开始迈向64位时面临两种选择：</p>
+<ul>
+<li>向下兼容x86</li>
+<li>完全重新设计指令集，不兼容x86</li>
+</ul>
+<p>AMD先Intel制造出兼容x86的商用CPU，AMD称之为AMD64，且得到用户的认同。</p>
+<p>Intel选择设计了一种不兼容x86的全新64位指令集，称之为IA-64（这个就是前面所说的安腾）。由于较AMD晚，同时由于是全新设计的CPU，没有编译器、不支持Windows后来不得不在时机落后的情况下也开始支持AMD64指令集。换了个名字叫x86_64。表示x86指令集的64扩展。</p>
+<p>实际上，x86_64、x64、AMD64基本上是同一个东西，我们现在用的Intel/amd的桌面级CPU都是x86_64，与之相对的<a class="link"   target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=arm&amp;spm=1001.2101.3001.7020" >arm<i class="fas fa-external-link-alt"></i></a>、ppc等都不是x86_64。</p>
+<p>x86、x86_64主要区别就是32位和64位的问题，x86中只有8个32位通用寄存器：</p>
+<ul>
+<li>eax</li>
+<li>ebx</li>
+<li>ecx</li>
+<li>edx</li>
+<li>ebp</li>
+<li>esp</li>
+<li>esi</li>
+<li>edi</li>
+</ul>
+<p>x86_64把这8个通用寄存器扩展成了64位的，并且比x86增加了若干个寄存器（好像是增加了8个，具体数量有待考证），同样的MMX的寄存器的位数和数量也进行了扩展。此外cpu扩展到64位后，也能支持更多的内存以及其他的种种好处。</p>
+<p>对于普通程序来说，CPU位数的扩展，寄存器数量的增加不会带来明显的性能提升，比如IE浏览器、Office办公软件这些。<strong>特定的程序</strong>才能够充分利用64位的CPU、以及更多寄存器带来的优势。比如MMX除了提升多媒体程序的性能，对矩阵、多项式、向量计算也能带来提升，更多的MMX寄存器、更大的寄存器都有利于SIMD指令的执行，能够提升CPU对数据的吞吐量（RISC指令集的CPU通常数百例，可以有效的缓存中间计算结果，不需要把中间结果写入内存，从而减少内存的访问次数。显著提升性能）</p>
+<h4 id="三-x86"><a class="markdownIt-Anchor" href="#三-x86"></a> 三 x86</h4>
+<p>x86架构（The x86 architecture）是微处理器执行的计算机语言指令集，指一个Intel通用计算机系列的标准编号缩写，也标识一套通用的计算机指令集合。</p>
+<p>1978年6月8日，Intel发布新款16位微处理器“8086”，x86架构诞生。</p>
+<h4 id="四-amd64-x86-64"><a class="markdownIt-Anchor" href="#四-amd64-x86-64"></a> 四 AMD64、x86-64</h4>
+<p>x86-64有时会简称为x64，是64位微处理器机构及其相应指令集的一种，也是Intel x86架构的延伸产品。</p>
+<p>x86-64是1999年由AMD设计，该64位集主要用于扩充IA-32，成为x86-64，后来改为AMD64。AMD64架构在IA-32基上新增64位寄存器，兼容早期的16位和32位软件，可使现有的以x86为对象的编译器转换为AMD64版本。</p>
+<p>由于AMD64和Intel64基本上一致，很多软硬件产品都使用一种不倾向任何一方的词汇表达对两种架构的兼容。出于这个目的AMD对这种CPU架构的原始成为由x86_64变体为x86_64。其他公司也使用x64代表x86-64的缩写。</p>
+<p>许多操作系统及产品，尤其是那些在Intel进入这块市场之前就引入x86-64支持的，使用amd64同时指代amd64和intel64。</p>
+<p>现在的x86CPU在位数上由32/64bit之分，在ARCH上又有x86/x86_64/x64/i386/IA32/IA64/amd64</p>
+<p>简单可按照下述理解：</p>
+<ul>
+<li>x86=i386=IA32</li>
+<li>amd64=x86_64=x64</li>
+</ul>
+<p>64bit的CPU都做了向下兼容32bit的特殊设计，所以在64bit CPU上运行32bit的软件（kernel、app、driver）是没有问题的。反之则不行。</p>
+<h4 id="五-64位相比32位比较"><a class="markdownIt-Anchor" href="#五-64位相比32位比较"></a> 五 64位相比32位比较</h4>
+<ul>
+<li>64bit拥有64bit的register和bus，在数据传输效率上比32位高很多，64bit的地址总线的寻址空间突破了4G限制，所以大于大内存、密集数据运算的应用场景，64bit的优势是非常明显的。</li>
+<li>对于小内存系统，64bit的CPU在某些情况下可能比32bit的CPU效率更低。因为64bit的CPU地址是64位的，指针是64位的，编译生成的二进制文件更大，运行时占用的内存更多；另一方面，因为64bit地址的问题，cache中能存放的指令更少，所以更容易导致cache的miss。</li>
+</ul>
+<p>所以在某些应用场景下，64bitCPU的更大寻址空间，更快的数据传递，更快的浮点运算的特性，与其64bit地址的指针所导致的cache miss的特性始终并存。</p>
+<p>为了充分利用64bit的优势，又避免64bit导致的cache miss的问题，Intel提出了x32 AB的概念。x32不是一个ARCH，是一个ABI。</p>
+<p>x32可以充分使用64bit的寄存器，64bit的总线以及64bit新增的指令，从而获得更快的数据处理速度。同时x32又使用32位的地址指针，32bit的C数据类型，因此cache miss不会增加。</p>
+<p>x32是一个BAI，其设计到的部分包括：kernel的支持、toolchain的支持、system lib的支持。</p>
+<h4 id="六-arm-amd-x86-aarch64概念"><a class="markdownIt-Anchor" href="#六-arm-amd-x86-aarch64概念"></a> 六 ARM、AMD、x86、AArch64概念</h4>
+<ul>
+<li>amd：超微半导体，是除了Intel以外最大的x86架构微处理器的供应商，也是除了英伟达以外仅有的独立图形处理供应商。</li>
+<li>x86：泛指一系列由Intel公司开发的处理器架构。
+<ul>
+<li>基于x86的32位架构（i386，x86）即IA-32。x86-64通常称为amd64或者Intel64。</li>
+</ul>
+</li>
+<li>arm：（advanced RISC machine或Acorn RISC machine） 适用于移动通信这种低成本、高性能、低耗电的领域。</li>
+<li>**aarch64：是armv8的一种执行状态。arrch64不是一个单纯的32位ARM架构的扩展，而是ARMv8内全新的架构，完全使用全新的A64指令集。**这些都源自于多年对现代架构设计的深入研究。更重要的是，AArch64作为一个分离出的执行状态，意味着一些未来的处理器可能不支持旧的Arrch32状态。
+<ul>
+<li>ARMv8将64位架构支持引入ARM架构中，其中包括：
+<ul>
+<li>64位通用寄存器、SP堆栈指针、PC程序计数器</li>
+<li>64位数据处理和扩展的虚拟寻址</li>
+</ul>
+</li>
+<li>两种主要执行状态：
+<ul>
+<li>AArch64：64位执行状态，包括状态的异常模型、内存模型、程序员模型和指令集支持；</li>
+<li>AArch32：32位执行状态，包括该状态的一场模型、程序员模型、和指令集支持；</li>
+</ul>
+</li>
+<li>这些执行状态支持3个主要指令集：
+<ul>
+<li>A32（或ARM）： 32位固定长度指令集，通过不同架构变体增强部分32位架构执行环境现在称为AArch32；</li>
+<li>T32（Thumb）：是以16位固定长度指令集的形式引入，随后在引入Thumb-2技术时增强为16位和32位混合长度指令集。部分32位架构执行环境现在称为AArch32；</li>
+<li>A64：提供与ARM和Thumb指令集类似功能的32位固定长度指令集，随ARMv8-A一起引入，它是一种AArch64指令集。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2025/01/06/20250106-vim/"
+                                   title="20250106 vim"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20250106 vim</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2025/01/03/20250103-jeston-agx-xavier%E8%BF%9E%E6%8E%A5%E6%B5%B7%E5%BA%B7%E5%A8%81%E8%A7%86%E6%91%84%E5%83%8F%E5%A4%B4/"
+                                   title="20250103 jeston agx xavier连接海康威视摄像头"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20250103 jeston agx xavier连接海康威视摄像头</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;留言
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">評論插件加載失敗</span>
+    <button class="reload keep-button">點擊重新加載</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加載評論插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#x86-64-amd64-arm-aarch64-%E9%83%BD%E6%98%AF%E4%BA%9B%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text"> x86-64、amd64、arm、aarch64 都是些什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">1.0.1.</span> <span class="nav-text"> 参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E8%BF%B0"><span class="nav-number">1.0.2.</span> <span class="nav-text"> 简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%A6%E8%BF%B0"><span class="nav-number">1.0.3.</span> <span class="nav-text"> 详述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80-x86%E4%B8%8E%E9%9D%9Ex86"><span class="nav-number">1.0.3.1.</span> <span class="nav-text"> 一 x86与非x86</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C-x86%E4%B8%8Ex86_64"><span class="nav-number">1.0.3.2.</span> <span class="nav-text"> 二 x86与x86_64</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89-x86"><span class="nav-number">1.0.3.3.</span> <span class="nav-text"> 三 x86</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B-amd64-x86-64"><span class="nav-number">1.0.3.4.</span> <span class="nav-text"> 四 AMD64、x86-64</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94-64%E4%BD%8D%E7%9B%B8%E6%AF%9432%E4%BD%8D%E6%AF%94%E8%BE%83"><span class="nav-number">1.0.3.5.</span> <span class="nav-text"> 五 64位相比32位比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AD-arm-amd-x86-aarch64%E6%A6%82%E5%BF%B5"><span class="nav-number">1.0.3.6.</span> <span class="nav-text"> 六 ARM、AMD、x86、AArch64概念</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2025
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">讀者</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">閱覽</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#x86-64-amd64-arm-aarch64-%E9%83%BD%E6%98%AF%E4%BA%9B%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text"> x86-64、amd64、arm、aarch64 都是些什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">1.0.1.</span> <span class="nav-text"> 参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E8%BF%B0"><span class="nav-number">1.0.2.</span> <span class="nav-text"> 简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%A6%E8%BF%B0"><span class="nav-number">1.0.3.</span> <span class="nav-text"> 详述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80-x86%E4%B8%8E%E9%9D%9Ex86"><span class="nav-number">1.0.3.1.</span> <span class="nav-text"> 一 x86与非x86</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C-x86%E4%B8%8Ex86_64"><span class="nav-number">1.0.3.2.</span> <span class="nav-text"> 二 x86与x86_64</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89-x86"><span class="nav-number">1.0.3.3.</span> <span class="nav-text"> 三 x86</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B-amd64-x86-64"><span class="nav-number">1.0.3.4.</span> <span class="nav-text"> 四 AMD64、x86-64</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94-64%E4%BD%8D%E7%9B%B8%E6%AF%9432%E4%BD%8D%E6%AF%94%E8%BE%83"><span class="nav-number">1.0.3.5.</span> <span class="nav-text"> 五 64位相比32位比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AD-arm-amd-x86-aarch64%E6%A6%82%E5%BF%B5"><span class="nav-number">1.0.3.6.</span> <span class="nav-text"> 六 ARM、AMD、x86、AArch64概念</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
