@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Thu Jun 20 2024 11:28:04 GMT+0800">2024-06-20 11:28:04</span>
+                <span class="datetime" data-updated="Wed Jan 08 2025 10:05:49 GMT+0800">2025-01-08 10:05:49</span>
             </span>
         
 
@@ -239,17 +239,17 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1 id="hexo官网"><a class="markdownIt-Anchor" href="#hexo官网"></a> hexo官网</h1>
+                    <h1>hexo官网</h1>
 <p><a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" >https://hexo.io/zh-cn/<i class="fas fa-external-link-alt"></i></a></p>
-<h1 id="hexo构建中的注意事项"><a class="markdownIt-Anchor" href="#hexo构建中的注意事项"></a> hexo构建中的注意事项</h1>
+<h1>hexo构建中的注意事项</h1>
 <p>1.由于我之前自己已经配置过github多账号了，这里关于ssh的相关配置和验证连接过程不必说</p>
 <p>2.github多账号的话在设置hexo的配置文件的时候要注意repo参数的ssh链接的填写形式</p>
-<h1 id="hexo基本知识"><a class="markdownIt-Anchor" href="#hexo基本知识"></a> hexo基本知识</h1>
+<h1>hexo基本知识</h1>
 <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a class="link"   target="_blank" rel="noopener" href="https://link.jianshu.com?t=http://daringfireball.net/projects/markdown/" >Markdown<i class="fas fa-external-link-alt"></i></a>（或其他<strong>渲染引擎</strong>）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="nodejs的工作原理"><a class="markdownIt-Anchor" href="#nodejs的工作原理"></a> node.js的工作原理</h2>
+<h2 id="node-js的工作原理">node.js的工作原理</h2>
 <p>既然是基于node.js的我们先来看看node.js的基本工作原理是什么</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/momoyan/p/9128076.html" >https://www.cnblogs.com/momoyan/p/9128076.html<i class="fas fa-external-link-alt"></i></a></p>
-<hr />
+<hr>
 <p><strong>chatgpt</strong></p>
 <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。它使用事件驱动、非阻塞 I/O 模型，使得它能够高效地处理并发请求。</p>
 <p>其基本工作原理如下：</p>
@@ -260,7 +260,7 @@
 <li><strong>单线程</strong>：Node.js 是单线程的，但是通过事件循环机制实现了并发处理。它使用一个主事件循环来监听事件，并通过线程池执行异步操作，从而实现并发处理。</li>
 </ol>
 <p>总的来说，Node.js 的工作原理可以概括为使用 V8 引擎执行 JavaScript 代码，在事件驱动和非阻塞 I/O 模型下处理请求，并通过单线程和事件循环实现并发处理。</p>
-<hr />
+<hr>
 <p><strong>chatgpt2</strong></p>
 <p>Hexo 是一个基于 Node.js 的静态博客框架，它利用了 Node.js 的许多特性来实现静态博客的构建和管理。下面是 Hexo 框架如何利用 Node.js 的一些方面：</p>
 <ol>
@@ -274,7 +274,7 @@
 <p>要看懂hexo 必须从node.js入手，然后再来观察hexo的结构</p>
 <p>未完待续</p>
 </blockquote>
-<h1 id="hexo相关操作"><a class="markdownIt-Anchor" href="#hexo相关操作"></a> hexo相关操作</h1>
+<h1>hexo相关操作</h1>
 <blockquote>
 <p>没有特殊情况下，一般这些命令都是在git bash完成</p>
 </blockquote>
@@ -283,23 +283,23 @@
 <p>启动本地服务器进行预览：hexo s（启动之后访问相关给予的端口4000）</p>
 <p>新建文章 hexo new “2024 神经病在打字”</p>
 <p>图片插入 1.执行hexo new插入之后在typora</p>
-<p><img   src="/imgs/$%7Bfiilename%7D/1714726613206.png"  alt="1714726613206" ></p>
+<p><img   src="/imgs/$%7Bfiilename%7D/1714726613206.png"  alt="1714726613206"></p>
 <p>的图片工具中 -&gt;设置图片根目录为source文件夹</p>
 <p>清除缓存文件 hexo clean</p>
 <p>将本地数据部署到远端仓库 hexo d</p>
-<h2 id="个人一般操作"><a class="markdownIt-Anchor" href="#个人一般操作"></a> 个人一般操作</h2>
+<h2 id="个人一般操作">个人一般操作</h2>
 <blockquote>
 <p>当你想要编辑新的文章写完并且需要更新部署的时候</p>
 <p>1.新建文章 hexo new “2024 神经病在打字”</p>
 <p>2.图片插入 1.执行hexo new插入之后在typora</p>
-<p><img   src="/imgs/$%7Bfiilename%7D/1714726613206.png"  alt="1714726613206" ></p>
+<p><img   src="/imgs/$%7Bfiilename%7D/1714726613206.png"  alt="1714726613206"></p>
 <p>的图片工具中 -&gt;设置图片根目录为source文件夹</p>
 <p>3.编译博客系统：hexo g</p>
 <p>4.启动本地服务器进行预览：hexo s（启动之后访问相关给予的端口4000）</p>
 <p>5.将本地数据部署到远端仓库 hexo d</p>
 </blockquote>
-<h1 id="hexo的配置文件"><a class="markdownIt-Anchor" href="#hexo的配置文件"></a> hexo的配置文件</h1>
-<h1 id="npm的配置文件"><a class="markdownIt-Anchor" href="#npm的配置文件"></a> npm的配置文件</h1>
+<h1>hexo的配置文件</h1>
+<h1>npm的配置文件</h1>
 <blockquote>
 <p>需要这个知识点是因为之前设置npm的下载的代理命令和缓存存储的时候</p>
 <p>自己胡乱设置导致后面重新安装的时候反复报错</p>
@@ -312,7 +312,7 @@
 <p>下载哪一个版本的包，把包下载到电脑的哪个路径下？</p>
 <p><strong>这些都可以在.npmrc中进行配置。</strong></p>
 <p>在设置.npmrc之前，我们需要知道：在你的电脑上，不止存在一个.npmrc文件，而是有多个。在我们安装包的时候，</p>
-<h2 id="npmrc的读取"><a class="markdownIt-Anchor" href="#npmrc的读取"></a> .npmrc的读取</h2>
+<h2 id="npmrc的读取">.npmrc的读取</h2>
 <p>npm按照如下顺序读取这些配置文件：</p>
 <p>项目配置文件：你可以在项目的根目录下创建一个.npmrc文件，只用于管理这个项目的npm安装。</p>
 <p>用户配置文件：在你使用一个账号登陆的电脑的时候，可以为当前用户创建一个.npmrc文件，之后用该用户登录电脑，就可以使用该配置文件。可以通过 npm config get userconfig 来获取该文件的位置。</p>
@@ -324,27 +324,27 @@
 <p><strong>windows单个用户下，.npmrc存在于C:\Users\Lucinda中</strong></p>
 <p><strong>上次配置太多导致配置混乱的时候之间删掉这个文件</strong></p>
 </blockquote>
-<h1 id="在git-bash-中-npm命令无法运行"><a class="markdownIt-Anchor" href="#在git-bash-中-npm命令无法运行"></a> 在git bash 中 npm命令无法运行</h1>
+<h1>在git bash 中 npm命令无法运行</h1>
 <p><strong>问题：cmd验证npm node安装后 在git bash npm命令无法运行</strong></p>
-<p>‘npm’ is not recognized as an internal or external command,<br />
+<p>‘npm’ is not recognized as an internal or external command,<br>
 operable program or batch file. WARN  Failed to install dependencies. Please run ‘npm install’ in “E:\gitblog” folder.</p>
-<p><img   src="/imgs/$%7Bfiilename%7D/1714704669502.png"  alt="1714704669502" ></p>
+<p><img   src="/imgs/$%7Bfiilename%7D/1714704669502.png"  alt="1714704669502"></p>
 <blockquote>
 <p>尝试解决方案：</p>
 <p>1.换成cmd执行相关命令</p>
-<p><img   src="/imgs/$%7Bfiilename%7D/1714726192641.png"  alt="1714726192641" ></p>
+<p><img   src="/imgs/$%7Bfiilename%7D/1714726192641.png"  alt="1714726192641"></p>
 <p>2.换成powershell执行一下命令</p>
-<p><img   src="/imgs/$%7Bfiilename%7D/1714726341992.png"  alt="1714726341992" ></p>
+<p><img   src="/imgs/$%7Bfiilename%7D/1714726341992.png"  alt="1714726341992"></p>
 <blockquote>
 <p>用powershell成功了，但是的话并没有像题主所说候没都需要npx命令</p>
 <p><strong>直接在blog文件夹中使用git bash进行相关命令即可</strong></p>
 </blockquote>
 </blockquote>
-<h1 id="fatal-unable-to-auto-detect-email-address"><a class="markdownIt-Anchor" href="#fatal-unable-to-auto-detect-email-address"></a> fatal: unable to auto-detect email address</h1>
-<p><img   src="/imgs/$%7Bfiilename%7D/1714727224226.png"  alt="1714727224226" ></p>
-<h1 id="为什么部署完毕-命令执行之后还是不显示更新之后的页面"><a class="markdownIt-Anchor" href="#为什么部署完毕-命令执行之后还是不显示更新之后的页面"></a> 为什么部署完毕 命令执行之后还是不显示更新之后的页面</h1>
-<p><img   src="/imgs/$%7Bfiilename%7D/1714728273886.png"  alt="1714728273886" ></p>
-<p><img   src="/imgs/$%7Bfiilename%7D/1714728291596.png"  alt="1714728291596" ></p>
+<h1>fatal: unable to auto-detect email address</h1>
+<p><img   src="/imgs/$%7Bfiilename%7D/1714727224226.png"  alt="1714727224226"></p>
+<h1>为什么部署完毕 命令执行之后还是不显示更新之后的页面</h1>
+<p><img   src="/imgs/$%7Bfiilename%7D/1714728273886.png"  alt="1714728273886"></p>
+<p><img   src="/imgs/$%7Bfiilename%7D/1714728291596.png"  alt="1714728291596"></p>
 <blockquote>
 <p>涉及到缓存问题好像是的</p>
 </blockquote>
@@ -500,7 +500,7 @@ operable program or batch file. WARN  Failed to install dependencies. Please run
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E5%AE%98%E7%BD%91"><span class="nav-number">1.</span> <span class="nav-text"> hexo官网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E6%9E%84%E5%BB%BA%E4%B8%AD%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.</span> <span class="nav-text"> hexo构建中的注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">3.</span> <span class="nav-text"> hexo基本知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">3.1.</span> <span class="nav-text"> node.js的工作原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text"> hexo相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E4%B8%80%E8%88%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">4.1.</span> <span class="nav-text"> 个人一般操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text"> hexo的配置文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#npm%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">6.</span> <span class="nav-text"> npm的配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#npmrc%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="nav-number">6.1.</span> <span class="nav-text"> .npmrc的读取</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8git-bash-%E4%B8%AD-npm%E5%91%BD%E4%BB%A4%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C"><span class="nav-number">7.</span> <span class="nav-text"> 在git bash 中 npm命令无法运行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fatal-unable-to-auto-detect-email-address"><span class="nav-number">8.</span> <span class="nav-text"> fatal: unable to auto-detect email address</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%AF%95-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E4%B9%8B%E5%90%8E%E8%BF%98%E6%98%AF%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%9B%B4%E6%96%B0%E4%B9%8B%E5%90%8E%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="nav-number">9.</span> <span class="nav-text"> 为什么部署完毕 命令执行之后还是不显示更新之后的页面</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">hexo官网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">hexo构建中的注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">hexo基本知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node-js%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">3.1.</span> <span class="nav-text">node.js的工作原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">hexo相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E4%B8%80%E8%88%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">4.1.</span> <span class="nav-text">个人一般操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">hexo的配置文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">npm的配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#npmrc%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="nav-number">6.1.</span> <span class="nav-text">.npmrc的读取</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">在git bash 中 npm命令无法运行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">fatal: unable to auto-detect email address</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">为什么部署完毕 命令执行之后还是不显示更新之后的页面</span></a></li></ol>
     </div>
 </div>
 
@@ -653,7 +653,7 @@ operable program or batch file. WARN  Failed to install dependencies. Please run
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E5%AE%98%E7%BD%91"><span class="nav-number">1.</span> <span class="nav-text"> hexo官网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E6%9E%84%E5%BB%BA%E4%B8%AD%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.</span> <span class="nav-text"> hexo构建中的注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="nav-number">3.</span> <span class="nav-text"> hexo基本知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">3.1.</span> <span class="nav-text"> node.js的工作原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text"> hexo相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E4%B8%80%E8%88%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">4.1.</span> <span class="nav-text"> 个人一般操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text"> hexo的配置文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#npm%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">6.</span> <span class="nav-text"> npm的配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#npmrc%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="nav-number">6.1.</span> <span class="nav-text"> .npmrc的读取</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8git-bash-%E4%B8%AD-npm%E5%91%BD%E4%BB%A4%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C"><span class="nav-number">7.</span> <span class="nav-text"> 在git bash 中 npm命令无法运行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fatal-unable-to-auto-detect-email-address"><span class="nav-number">8.</span> <span class="nav-text"> fatal: unable to auto-detect email address</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%AF%95-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E4%B9%8B%E5%90%8E%E8%BF%98%E6%98%AF%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%9B%B4%E6%96%B0%E4%B9%8B%E5%90%8E%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="nav-number">9.</span> <span class="nav-text"> 为什么部署完毕 命令执行之后还是不显示更新之后的页面</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">hexo官网</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">hexo构建中的注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">hexo基本知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#node-js%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">3.1.</span> <span class="nav-text">node.js的工作原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">hexo相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E4%B8%80%E8%88%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">4.1.</span> <span class="nav-text">个人一般操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">hexo的配置文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">npm的配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#npmrc%E7%9A%84%E8%AF%BB%E5%8F%96"><span class="nav-number">6.1.</span> <span class="nav-text">.npmrc的读取</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">在git bash 中 npm命令无法运行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">fatal: unable to auto-detect email address</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">为什么部署完毕 命令执行之后还是不显示更新之后的页面</span></a></li></ol>
     </div>
 </div>
 
