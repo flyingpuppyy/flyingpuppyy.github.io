@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                首頁
+                                HOME
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                歸檔
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                分類
+                                CATEGORIES
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >首頁</a>
+                    >HOME</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >歸檔</a>
+                    >ARCHIVES</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >分類</a>
+                    >CATEGORIES</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Jan 07 2025 17:05:28 GMT+0800">2025-01-07 17:05:28</span>
+                <span class="datetime" data-updated="Tue Jan 07 2025 19:00:20 GMT+0800">2025-01-07 19:00:20</span>
             </span>
         
 
@@ -844,10 +844,22 @@
 </blockquote>
 <h1 id="pycharm配置已经有的conda环境"><a class="markdownIt-Anchor" href="#pycharm配置已经有的conda环境"></a> pycharm配置已经有的conda环境</h1>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#首先获取所需要的conda的位置</span><br><span class="line">conda info --envs</span><br><span class="line"></span><br><span class="line"># 比如</span><br><span class="line"># conda environments:</span><br><span class="line">base                  *  /home/user/miniconda3</span><br><span class="line">myenv                    /home/user/miniconda3/envs/myenv</span><br><span class="line">otherenv                 /home/user/miniconda3/envs/otherenv</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后</p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202501071747112.png"  alt="image-20250107174748011" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202501071748896.png"  alt="image-20250107174812808" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202501071748899.png"  alt="image-20250107174846833" ></p>
+<blockquote>
+<p>然后选择上面的虚拟环境地址中的bin/python里面的对应关系</p>
+<p>apply即可</p>
+</blockquote>
 <h1 id="opencv的cuda加速版本的配置"><a class="markdownIt-Anchor" href="#opencv的cuda加速版本的配置"></a> opencv的cuda加速版本的配置</h1>
 <h2 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h2>
 <p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40243750/article/details/136028179" >https://blog.csdn.net/qq_40243750/article/details/136028179<i class="fas fa-external-link-alt"></i></a></p>
 <h2 id="尝试"><a class="markdownIt-Anchor" href="#尝试"></a> 尝试</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#用tegrastats代替nvidia-smi在jetson agx xaiver中检测驱动是否安装</span><br><span class="line">tegrastats</span><br><span class="line"></span><br><span class="line">#检测cuda安装</span><br><span class="line">nvcc --version</span><br><span class="line"></span><br><span class="line">#检测cudnn安装</span><br><span class="line">cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202501071815187.png"  alt="image-20250107181550131" ></p>
+<p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202501071822308.png"  alt="image-20250107182233255" ></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cmake \ </span><br><span class="line">-D CMAKE_BUILD_TYPE=RELEASE \ </span><br><span class="line">-D BUILD_CUDA_STUBS=ON \         </span><br><span class="line">-D WITH_CUDA=ON \                   </span><br><span class="line">-D CUDA_ARCH_BIN=7.2 \ </span><br><span class="line">-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.7.0/modules .. </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE \</span><br><span class="line">-D BUILD_CUDA_STUBS=ON \</span><br><span class="line">-D WITH_CUDA=ON \</span><br><span class="line">-D CUDA_ARCH_BIN=7.2 \</span><br><span class="line">-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.7.0/modules \</span><br><span class="line">..</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h1 id="20241220当前环境配置总结"><a class="markdownIt-Anchor" href="#20241220当前环境配置总结"></a> 20241220当前环境配置总结</h1>
 <ul>
 <li>
@@ -895,7 +907,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20241223 交叉编译之Linaro</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
                             </div>
@@ -909,7 +921,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20241219 Jetson AGX Xavier刷机(For yolov5 较为完整版)</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -926,15 +938,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;留言
+            <i class="fas fa-comments"></i>&nbsp;Comments
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">評論插件加載失敗</span>
-    <button class="reload keep-button">點擊重新加載</button>
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">正在加載評論插件</span>
+    <span class="load-tip">Loading comment plugin</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -1045,7 +1057,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -1058,14 +1070,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">讀者</span>
+                    <span class="item-type border-box">Unique Visitor</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">閱覽</span>
+                    <span class="item-type border-box">Page View</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
