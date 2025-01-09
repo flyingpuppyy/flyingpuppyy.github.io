@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                HOME
+                                首页
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                ARCHIVES
+                                归档
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                CATEGORIES
+                                分类
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >HOME</a>
+                    >首页</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >ARCHIVES</a>
+                    >归档</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >CATEGORIES</a>
+                    >分类</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Tue Jan 07 2025 19:00:20 GMT+0800">2025-01-07 19:00:20</span>
+                <span class="datetime" data-updated="Thu Jan 09 2025 14:25:40 GMT+0800">2025-01-09 14:25:40</span>
             </span>
         
 
@@ -860,6 +860,7 @@
 <p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202501071815187.png"  alt="image-20250107181550131" ></p>
 <p><img   src="https://raw.githubusercontent.com/flyingpuppyy/pic/main/images/202501071822308.png"  alt="image-20250107182233255" ></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cmake \ </span><br><span class="line">-D CMAKE_BUILD_TYPE=RELEASE \ </span><br><span class="line">-D BUILD_CUDA_STUBS=ON \         </span><br><span class="line">-D WITH_CUDA=ON \                   </span><br><span class="line">-D CUDA_ARCH_BIN=7.2 \ </span><br><span class="line">-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.7.0/modules .. </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE \</span><br><span class="line">-D BUILD_CUDA_STUBS=ON \</span><br><span class="line">-D WITH_CUDA=ON \</span><br><span class="line">-D CUDA_ARCH_BIN=7.2 \</span><br><span class="line">-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.7.0/modules \</span><br><span class="line">..</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">cmake  \</span><br><span class="line">-D CMAKE_BUILD_TYPE=RELEASE  \</span><br><span class="line">-D CMAKE_INSTALL_PREFIX=/usr/local/  \</span><br><span class="line">-D CUDA_CUDA_LIBRARY=/usr/local/cuda-11.4/targets/aarch64-linux/lib/stubs/libcuda.so  \</span><br><span class="line">-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.7.0/modules \</span><br><span class="line">-D OPENCV_GENERATE_PKGCONFIG=ON  \</span><br><span class="line">-D OPENCV_ENABLE_NONFREE=ON  \</span><br><span class="line">-D CUDA_ARCH_BIN= 7.2 \</span><br><span class="line">-D CUDA_FAST_MATH=1  \</span><br><span class="line">-D WITH_CUDA=ON  \</span><br><span class="line">-D WITH_TBB=ON  \</span><br><span class="line">-D WITH_V4L=ON  \</span><br><span class="line">-D WITH_OPENGL=ON  \</span><br><span class="line">-D WITH_CUBLAS=1  \</span><br><span class="line">-D WITH_NVCUVID=ON  \</span><br><span class="line">-D WITH_GSTREAMER=ON  \</span><br><span class="line">-D WITH_FFMPEG=ON  \</span><br><span class="line">-D WITH_GTK=ON  \</span><br><span class="line">-D BUILD_NEW_PYTHON_SUPPORT=ON  \</span><br><span class="line">-D BUILD_opencv_python2=OFF  \</span><br><span class="line">-D BUILD_PYTHON_SUPPORT=ON  \</span><br><span class="line">-D BUILD_OPENCV_PYTHON3=ON  \</span><br><span class="line">-D BUILD_EXAMPLES=OFF  \</span><br><span class="line">-D BUILD_opencv_cudacodec=ON  \</span><br><span class="line">-D INSTALL_C_EXAMPLES=OFF  \</span><br><span class="line">-D INSTALL_PYTHON_EXAMPLES=OFF  \</span><br><span class="line">-D ENABLE_FAST_MATH=1  \</span><br><span class="line">-D BUILD_CUDA_STUBS=ON  \</span><br><span class="line">-D OPENCV_PYTHON3_VERSION=3.8 \</span><br><span class="line">-D PYTHON3_INCLUDE_PATH=/home/linger/mambaforge/envs/myenv/include/python3.8 \</span><br><span class="line">-D PYTHON3_LIBRARIES=/home/linger/mambaforge/envs/myenv/lib/python3.8 \</span><br><span class="line">-D PYTHON3_EXECUTABLE=/home/linger/mambaforge/envs/myenv/bin/python3 \</span><br><span class="line">..</span><br><span class="line">————————————————</span><br><span class="line"></span><br><span class="line">                            版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。</span><br><span class="line">                        </span><br><span class="line">原文链接：https://blog.csdn.net/weixin_43442574/article/details/119543860</span><br><span class="line"></span><br><span class="line">cmake .. \</span><br><span class="line">-D WITH_CUDA=OFF \</span><br><span class="line">-D WITH_VTK=OFF \</span><br><span class="line">-D WITH_MATLAB=OFF \</span><br><span class="line">-D BUILD_DOCS=ON \</span><br><span class="line">-D CMAKE_BUILD_TYPE=RELEASE \</span><br><span class="line">-D CMAKE_INSTALL_PREFIX=/usr/local \</span><br><span class="line">-D OPENCV_PYTHON3_VERSION=3.8 \</span><br><span class="line">-D PYTHON3_INCLUDE_PATH=/usr/include/python3.8 \</span><br><span class="line">-D PYTHON3_LIBRARIES=/usr/lib/python3.8/config-3.8-x86_64-linux-gnu/libpython3.8.so \</span><br><span class="line">-D PYTHON3_EXECUTABLE=/usr/bin/python3.8 \</span><br><span class="line">-D PYTHON3_NUMPY_INCLUDE_DIRS=/usr/lib/python3.8/dist-packages/numpy/core/include/ \</span><br><span class="line">-D OPENCV_EXTRA_MODULES_PATH=/home/cyrus/AI/opencv_contrib-3.4.11/modules \</span><br><span class="line">-D BUILD_opencv_python2=OFF -D BUILD_opencv_python3=OFF </span><br></pre></td></tr></table></figure>
 <h1 id="20241220当前环境配置总结"><a class="markdownIt-Anchor" href="#20241220当前环境配置总结"></a> 20241220当前环境配置总结</h1>
 <ul>
 <li>
@@ -907,7 +908,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20241223 交叉编译之Linaro</span>
-                                        <span class="post-nav-item">Prev posts</span>
+                                        <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
                             </div>
@@ -921,7 +922,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20241219 Jetson AGX Xavier刷机(For yolov5 较为完整版)</span>
-                                        <span class="post-nav-item">Next posts</span>
+                                        <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -938,15 +939,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;Comments
+            <i class="fas fa-comments"></i>&nbsp;评论
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">Comment plugin failed to load</span>
-    <button class="reload keep-button">Click to reload</button>
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">Loading comment plugin</span>
+    <span class="load-tip">正在加载评论插件</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -1057,7 +1058,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -1070,14 +1071,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-type border-box">访客数</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">Page View</span>
+                    <span class="item-type border-box">访问量</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             

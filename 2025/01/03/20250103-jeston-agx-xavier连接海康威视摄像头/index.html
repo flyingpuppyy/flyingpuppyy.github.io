@@ -84,7 +84,7 @@
                                href="/"
                             >
                                 
-                                HOME
+                                首页
                             </a>
                         </li>
                     
@@ -94,7 +94,7 @@
                                href="/archives"
                             >
                                 
-                                ARCHIVES
+                                归档
                             </a>
                         </li>
                     
@@ -104,7 +104,7 @@
                                href="/categories"
                             >
                                 
-                                CATEGORIES
+                                分类
                             </a>
                         </li>
                     
@@ -127,21 +127,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/"
-                    >HOME</a>
+                    >首页</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives"
-                    >ARCHIVES</a>
+                    >归档</a>
                 </li>
             
                 
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/categories"
-                    >CATEGORIES</a>
+                    >分类</a>
                 </li>
             
         </ul>
@@ -201,7 +201,7 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Jan 03 2025 15:28:16 GMT+0800">2025-01-03 15:28:16</span>
+                <span class="datetime" data-updated="Wed Jan 08 2025 15:36:22 GMT+0800">2025-01-08 15:36:22</span>
             </span>
         
 
@@ -241,6 +241,11 @@
 <p>摄像头的网口插入 网口拓展坞也没有办法被识别</p>
 <p>我觉得是不是少驱动啊西巴</p>
 <p>或者是说这个摄像头坏了</p>
+<h1 id="中途发现"><a class="markdownIt-Anchor" href="#中途发现"></a> 中途发现</h1>
+<p>要关掉windows的防火墙</p>
+<p>这个jetson才能ping到windows</p>
+<h1 id="rtsp流的相关格式"><a class="markdownIt-Anchor" href="#rtsp流的相关格式"></a> rtsp流的相关格式</h1>
+<p>gst-launch-1.0 rtspsrc location=rtsp://<username>:<password>@&lt;ip_address&gt;:<port>/Streaming/Channels/101 ! decodebin ! autovideosink</p>
 
                 </div>
                 
@@ -270,7 +275,7 @@
                                     </span>
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20250106 各种架构的了解和存储</span>
-                                        <span class="post-nav-item">Prev posts</span>
+                                        <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
                             </div>
@@ -284,7 +289,7 @@
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">20250102 很喜欢的青涩的文字关于初音未来</span>
-                                        <span class="post-nav-item">Next posts</span>
+                                        <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
                                         <i class="fas fa-chevron-right"></i>
@@ -301,15 +306,15 @@
 
     <div class="comments-container border-box">
         <div id="comments-anchor" class="comment-area-title border-box">
-            <i class="fas fa-comments"></i>&nbsp;Comments
+            <i class="fas fa-comments"></i>&nbsp;评论
         </div>
         <div class="comment-plugin-fail border-box">
-    <span class="fail-tip">Comment plugin failed to load</span>
-    <button class="reload keep-button">Click to reload</button>
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
 </div>
 <div class="comment-plugin-loading flex-center border-box">
     <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
-    <span class="load-tip">Loading comment plugin</span>
+    <span class="load-tip">正在加载评论插件</span>
 </div>
 <script data-pjax>
   window.KeepCommentPlugin = {}
@@ -393,7 +398,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AD%E9%80%94%E5%8F%91%E7%8E%B0"><span class="nav-number">1.</span> <span class="nav-text"> 中途发现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rtsp%E6%B5%81%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text"> rtsp流的相关格式</span></a></li></ol>
     </div>
 </div>
 
@@ -420,7 +425,7 @@
             </div>
 
             <div class="theme-info info-item default">
-                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
@@ -433,14 +438,14 @@
 
             
                 <span class="count-box border-box uv">
-                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-type border-box">访客数</span>
                     <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
                 </span>
             
 
             
                 <span class="count-box border-box pv">
-                    <span class="item-type border-box">Page View</span>
+                    <span class="item-type border-box">访问量</span>
                     <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
                 </span>
             
@@ -546,7 +551,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AD%E9%80%94%E5%8F%91%E7%8E%B0"><span class="nav-number">1.</span> <span class="nav-text"> 中途发现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rtsp%E6%B5%81%E7%9A%84%E7%9B%B8%E5%85%B3%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text"> rtsp流的相关格式</span></a></li></ol>
     </div>
 </div>
 
