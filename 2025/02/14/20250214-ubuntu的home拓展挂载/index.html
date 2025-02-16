@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20250214 ubuntu的home拓展挂载 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"没有一条路径通往真诚 真诚本身就是道路","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"markdown":{"preset":"default","render":{"html":true,"xhtmlOut":false,"langPrefix":"language-","breaks":true,"linkify":true,"typographer":true,"quotes":"“”‘’"},"enable_rules":null,"disable_rules":null,"plugins":["markdown-it-abbr","markdown-it-cjk-breaks","markdown-it-deflist","markdown-it-emoji","markdown-it-footnote","markdown-it-ins","markdown-it-mark","markdown-it-sub","markdown-it-sup",{"name":"markdown-it-container","options":"success"},{"name":"markdown-it-container","options":"tips"},{"name":"markdown-it-container","options":"warning"},{"name":"markdown-it-container","options":"danger"}],"anchors":{"level":2,"collisionSuffix":"","permalink":false,"permalinkClass":"header-anchor","permalinkSide":"left","permalinkSymbol":"¶","case":0,"separator":"-"}},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                HOME
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >HOME</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >ARCHIVES</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >CATEGORIES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20250214 ubuntu的home拓展挂载
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv7</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2025-02-14 16:02:09</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Fri Feb 14 2025 16:06:38 GMT+0800">2025-02-14 16:06:38</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <p>在 Ubuntu 系统中，将 <code>/home</code> 目录扩展到挂载点通常涉及将 <code>/home</code> 目录移动到一个单独的磁盘分区或外部存储设备上。 这样做的主要原因是为了以下几个方面：</p>
+<ul>
+<li><strong>更大的存储空间</strong>: 允许用户拥有比系统分区更大的 <code>/home</code> 目录，以便存储更多个人文件和数据。</li>
+<li><strong>数据安全</strong>: 如果系统分区出现问题需要重装， <code>/home</code> 目录位于单独的分区可以避免用户数据丢失。</li>
+<li><strong>灵活的磁盘管理</strong>: 可以更方便地管理磁盘空间，例如调整 <code>/home</code> 分区的大小，或者在不同的系统之间共享 <code>/home</code> 分区。</li>
+</ul>
+<p>以下是具体步骤和需要理解的关键概念：</p>
+<p><strong>1. 理解基本概念</strong></p>
+<ul>
+<li><strong>分区 (Partition)</strong>: 磁盘被划分为多个逻辑区域，每个区域就是一个分区。例如，<code>/dev/sda1</code>、<code>/dev/sdb2</code> 等。</li>
+<li><strong>挂载点 (Mount Point)</strong>:  操作系统将一个分区或存储设备与文件系统中的一个目录关联起来。 例如，将一个分区挂载到 <code>/home</code> 目录，意味着访问 <code>/home</code> 目录实际上是在访问该分区上的数据。</li>
+<li><strong><code>/home</code> 目录</strong>:  Ubuntu 中，用户的个人目录（例如 <code>/home/user1</code>, <code>/home/user2</code>）都位于 <code>/home</code> 目录下。</li>
+</ul>
+<p><strong>2. 扩展 <code>/home</code> 的步骤 (大致流程)</strong></p>
+<p><strong>警告：以下操作可能导致数据丢失。 请务必备份所有重要数据。</strong></p>
+<ol>
+<li>
+<p><strong>准备一个新的分区或存储设备</strong>:  你需要一个未使用的分区或一个新的磁盘用于挂载 <code>/home</code> 目录。 可以使用 <code>fdisk</code>, <code>parted</code>, <code>gparted</code> 等工具进行分区。  例如，假设你创建了一个新的分区 <code>/dev/sdb1</code>。</p>
+</li>
+<li>
+<p><strong>创建文件系统</strong>:  在新分区上创建一个文件系统，例如 <code>ext4</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkfs.ext4 /dev/sdb1</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>临时挂载新分区</strong>:  创建一个临时目录，并将新分区挂载到该目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">mkdir</span> /mnt/newhome</span><br><span class="line">sudo mount /dev/sdb1 /mnt/newhome</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>复制 <code>/home</code> 目录的内容</strong>:  将当前 <code>/home</code> 目录的所有文件和目录复制到新的分区。  确保使用 <code>rsync</code> 命令，以保留文件权限和属性。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rsync -avx /home/ /mnt/newhome/</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-a</code>: 归档模式，保留所有文件属性（权限、时间戳等）。</li>
+<li><code>-v</code>: 详细模式，显示复制过程。</li>
+<li><code>-x</code>:  不要跨越文件系统。</li>
+</ul>
+</li>
+<li>
+<p><strong>备份 <code>/etc/fstab</code> 文件</strong>:  <code>/etc/fstab</code> 文件定义了系统启动时自动挂载的文件系统。  在修改它之前，务必备份。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> /etc/fstab /etc/fstab.bak</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>修改 <code>/etc/fstab</code> 文件</strong>:  编辑 <code>/etc/fstab</code> 文件，添加一行来指定新分区作为 <code>/home</code> 目录挂载。  可以使用 <code>nano</code> 或 <code>vim</code> 编辑器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/fstab</span><br></pre></td></tr></table></figure>
+<p>添加类似下面的一行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/dev/sdb1 /home ext4 defaults 0 2</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>/dev/sdb1</code>: 你的新分区。</li>
+<li><code>/home</code>: 挂载点。</li>
+<li><code>ext4</code>: 文件系统类型。</li>
+<li><code>defaults</code>: 默认挂载选项。</li>
+<li><code>0</code>:  <code>dump</code> 工具是否备份， <code>0</code> 表示不备份。</li>
+<li><code>2</code>:  文件系统检查顺序，根目录通常是 <code>1</code>， <code>/home</code> 可以是 <code>2</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>卸载当前 <code>/home</code> 目录</strong>:  必须以单用户模式执行此操作，以确保没有用户正在使用 <code>/home</code> 目录。  重启系统进入恢复模式 (Recovery Mode)。</p>
+<p>在恢复模式下，选择 “root” 进入 root shell。  然后卸载 <code>/home</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">umount /home</span><br></pre></td></tr></table></figure>
+<p><em>注意: 如果你直接使用 <code>reboot</code> 或 <code>shutdown</code> 等命令重启，可能会回到图形界面，无法完成卸载。 确保停留在 root shell 中进行后续操作。</em></p>
+</li>
+<li>
+<p><strong>挂载新的 <code>/home</code> 目录</strong>:  使用 <code>mount -a</code> 命令挂载 <code>/etc/fstab</code> 中定义的所有文件系统。  这会挂载你的新分区到 <code>/home</code> 目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -a</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>检查</strong>:  确认 <code>/home</code> 目录已正确挂载到新的分区。  可以使用 <code>df -h</code> 命令查看磁盘使用情况。</p>
+</li>
+<li>
+<p><strong>重启系统</strong>:  退出 root shell，然后选择 “resume” 正常启动系统。</p>
+</li>
+<li>
+<p><strong>删除旧的 <code>/home</code> 目录内容 (可选)</strong>:  如果一切正常，你可以删除旧的 <code>/home</code> 目录中的内容，以释放空间。  但是，在删除之前，请务必再次确认新 <code>/home</code> 目录中的数据完整无误。</p>
+<p><strong>非常重要：不要直接删除 /home 目录本身，只删除里面的内容！</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">rm</span> -rf /home/* /home/.*</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>3. 需要理解的关键点</strong></p>
+<ul>
+<li><strong>备份</strong>:  在进行任何磁盘操作之前，务必备份重要数据。 这是最重要的步骤。</li>
+<li><strong>文件系统类型</strong>:  选择合适的文件系统类型。  <code>ext4</code> 是一个常用的选择，但也有其他选项，如 <code>xfs</code> 或 <code>btrfs</code>，具体取决于你的需求。</li>
+<li><strong><code>/etc/fstab</code></strong>:  正确配置 <code>/etc/fstab</code> 文件至关重要，否则系统可能无法启动。</li>
+<li><strong>权限</strong>:  确保复制文件时保留了正确的权限，否则用户可能无法访问他们的文件。  <code>rsync -avx</code> 命令可以很好地处理权限问题。</li>
+<li><strong>单用户模式</strong>:  在卸载 <code>/home</code> 目录之前，必须进入单用户模式，以避免进程正在使用 <code>/home</code> 目录导致卸载失败。</li>
+<li><strong>检查</strong>:  挂载后，使用 <code>df -h</code> 命令检查挂载点和磁盘使用情况，以确保一切正常。</li>
+</ul>
+<p><strong>简化和安全建议：</strong></p>
+<ul>
+<li><strong>使用 LVM (Logical Volume Management)</strong>：对于更高级的磁盘管理，可以考虑使用 LVM。  LVM 允许你动态调整分区大小，而无需重新分区和复制数据。  但 LVM 的配置比简单的分区更复杂。</li>
+<li><strong>在虚拟机中测试</strong>: 如果不熟悉分区操作，建议先在一个虚拟机中进行测试，以避免对真实系统造成损坏。</li>
+</ul>
+<p><strong>总结</strong></p>
+<p>将 Ubuntu 的 <code>/home</code> 目录扩展到挂载点是一个涉及分区、挂载和文件系统配置的过程。 理解这些基本概念，并仔细执行步骤，可以帮助你安全地扩展 <code>/home</code> 目录，并获得更大的存储空间和更灵活的磁盘管理。  <strong>务必在操作前备份数据，并在不熟悉的情况下寻求帮助。</strong></p>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2025/02/16/20250216-%E6%88%91%E4%BA%8E%E9%99%88%E6%B7%85/"
+                                   title="20250216 我于陈淅"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20250216 我于陈淅</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2025/02/14/20250214-%E6%80%9D%E8%80%83/"
+                                   title="20250214 思考"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20250214 思考</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;Comments
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">Comment plugin failed to load</span>
+    <button class="reload keep-button">Click to reload</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">Loading comment plugin</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2025
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">Unique Visitor</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
