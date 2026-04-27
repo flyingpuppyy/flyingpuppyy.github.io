@@ -9,7 +9,7 @@
     
     <title>
         
-            20251219 概率论基础概念和题型 |
+            20260427 重装win10系统 |
         
         行者无畏
     </title>
@@ -168,7 +168,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        20251219 概率论基础概念和题型
+                        20260427 重装win10系统
                     </div>
                 
 
@@ -196,12 +196,12 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2025-12-19 01:56:56</span>
+                <span class="datetime">2026-04-27 12:41:15</span>
             </span>
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Dec 19 2025 16:06:10 GMT+0800">2025-12-19 16:06:10</span>
+                <span class="datetime" data-updated="Mon Apr 27 2026 19:57:26 GMT+0800">2026-04-27 19:57:26</span>
             </span>
         
 
@@ -230,63 +230,30 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1>随机变量</h1>
+                    <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>猪头刚吃完饭在洗脸真的好臭，没有人改良一下猫粮让这个环节的周围人不这么难受吗？ok，swim某的电脑两个小时都开机不了我该咋重装系统。希望我的电脑也能活过十年吧，十年攒够八千块钱换一个电脑还是可以的。臭电脑。</p>
+<h1 id="步骤回忆"><a class="markdownIt-Anchor" href="#步骤回忆"></a> 步骤回忆</h1>
+<p>1.制作系统安装u盘</p>
 <blockquote>
-<p>随机变量是：把一次随机试验的结果，用一个“数”来表示的规则。</p>
-<p>它本身<strong>不包含概率规律</strong>，只负责“取值”。</p>
+<p>1.1</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1NFDyBfE9Y/?spm_id_from=333.337.search-card.all.click&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV1NFDyBfE9Y/?spm_id_from=333.337.search-card.all.click&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<h1>随机变量的分布、随机变量的密度函数</h1>
+<p>2.开进按f10进入惠普的bios并且调整系统启动为u盘启动</p>
+<p>3.按照微软win10提示进行过程进行安装（对d盘c盘进行格式化）</p>
+<p>4.完成到重启步骤的时候需要拔取u盘否则会再一次进入重启系统</p>
+<p>5.删除了恢复分区将c盘扩容到200g，d盘划分为690g</p>
+<p>6.重新创建恢复分区(<mark>特别要主要需要解压哪一个版本的索引</mark>)</p>
 <blockquote>
-<p><strong>随机变量 → 分布 →（离散：概率函数 / 连续：概率密度）</strong></p>
+<p>6.1视频教程之重新创建恢复分区</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qi4y1h7A4/?spm_id_from=333.788.videopod.sections&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af" >https://www.bilibili.com/video/BV1qi4y1h7A4/?spm_id_from=333.788.videopod.sections&amp;vd_source=dbe14335c46e4fc9f76a6643a614c5af<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<p>可以理解为：</p>
-<ul>
-<li><strong>随机变量</strong>：是谁？</li>
-<li><strong>分布</strong>F（x）：它“怎么随机”，X 取不同数值的可能性有多大？</li>
-<li><strong>概率密度</strong>：连续情形下，分布的“表达工具”。表示随机变量在 x 附近“挤得有多密”。对于连续型随机变量，概率只能通过分布来得到。</li>
-</ul>
 <blockquote>
-<h1>常见误区整理</h1>
-<h2 id="误区一：概率密度就是概率">误区一：概率密度就是概率</h2>
-<p>错误理解：</p>
-<p>认为<br>
-$$<br>
-f_X(x) = P(X = x)<br>
-$$</p>
-<p>正确结论：</p>
-<p>对于连续型随机变量，单点的概率<br>
-$$<br>
-P(X = x) = 0<br>
-$$</p>
-<p>概率密度不是概率，而是“概率的密集程度”。</p>
-<p>正确计算概率的方式：<br>
-$$<br>
-P(a &lt; X &lt; b) = \int_a^b f_X(x),dx<br>
-$$</p>
-<hr>
-<h2 id="误区二：有了概率密度就不需要分布函数">误区二：有了概率密度就不需要分布函数</h2>
-<p>错误理解：</p>
-<p>概率密度函数可以完全代替分布函数。</p>
-<p>正确结论：</p>
-<p>分布函数才是随机变量分布的<strong>根本定义</strong>：<br>
-$$<br>
-F_X(x) = P(X \le x)<br>
-$$</p>
-<p>连续型随机变量中：<br>
-$$<br>
-f_X(x) = \frac{d}{dx} F_X(x)<br>
-$$</p>
-<hr>
-<h2 id="误区三：分布函数一定可导">误区三：分布函数一定可导</h2>
-<p>错误理解：</p>
-<p>所有分布函数都有导数。</p>
-<p>正确结论：</p>
-<ul>
-<li>离散型随机变量：分布函数有跳跃</li>
-<li>连续型随机变量：分布函数连续，几乎处处可导</li>
-<li>混合型随机变量：二者兼有</li>
-</ul>
-<p>只有连续型随机变量才存在概率密度函数。</p>
+<p>6.2其中遇到从wimdows官网下载的镜像为esd，需要通过这个帖子中的命令将esd文件转化成wim格式文件，才能继续按照视频进行操作（截图了两条关键命令以免啥时帖子被删除）</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/wj138753/article/details/132184022?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-132184022-blog-103024144.235%5Ev43%5Epc_blog_bottom_relevance_base2&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=2" >https://blog.csdn.net/wj138753/article/details/132184022?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-132184022-blog-103024144.235^v43^pc_blog_bottom_relevance_base2&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=2<i class="fas fa-external-link-alt"></i></a></p>
+<p><img   src="https://cdn.jsdelivr.net/gh/flyingpuppyy/pic@main/images/202604271956395.png"  alt="image-20260427195634339" ></p>
+<hr />
+<p><img   src="https://cdn.jsdelivr.net/gh/flyingpuppyy/pic@main/images/202604271956018.png"  alt="image-20260427195649977" ></p>
+<p>变成wim可以继续按照帖子进行提取恢复镜像的操作</p>
 </blockquote>
 
                 </div>
@@ -309,14 +276,14 @@ $$</p>
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2026/04/27/20260427-%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"
-                                   title="20260427 重装win10系统"
+                                   href="/2026/04/27/20260427-%E7%AD%89%E7%94%B5%E8%84%91%E5%BC%80%E6%9C%BA%E7%9A%84%E6%97%B6%E5%80%99%E8%83%8C%E5%8D%95%E8%AF%8D/"
+                                   title="20260427 等电脑开机的时候背单词"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20260427 重装win10系统</span>
+                                        <span class="post-nav-title-item text-ellipsis">20260427 等电脑开机的时候背单词</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -326,11 +293,11 @@ $$</p>
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2025/12/18/20251218-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%89%E5%A4%A7%E5%88%86%E5%B8%83/"
-                                   title="20251218 概率论三大分布"
+                                   href="/2025/12/19/20251219-%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E9%A2%98%E5%9E%8B/"
+                                   title="20251219 概率论基础概念和题型"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">20251218 概率论三大分布</span>
+                                        <span class="post-nav-title-item text-ellipsis">20251219 概率论基础概念和题型</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -440,7 +407,7 @@ $$</p>
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">随机变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">随机变量的分布、随机变量的密度函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">常见误区整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%80%EF%BC%9A%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E6%98%AF%E6%A6%82%E7%8E%87"><span class="nav-number">3.1.</span> <span class="nav-text">误区一：概率密度就是概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%BA%8C%EF%BC%9A%E6%9C%89%E4%BA%86%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">误区二：有了概率密度就不需要分布函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%89%EF%BC%9A%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E4%B8%80%E5%AE%9A%E5%8F%AF%E5%AF%BC"><span class="nav-number">3.3.</span> <span class="nav-text">误区三：分布函数一定可导</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E5%9B%9E%E5%BF%86"><span class="nav-number">2.</span> <span class="nav-text"> 步骤回忆</span></a></li></ol>
     </div>
 </div>
 
@@ -593,7 +560,7 @@ $$</p>
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">随机变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">随机变量的分布、随机变量的密度函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">常见误区整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%80%EF%BC%9A%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E6%98%AF%E6%A6%82%E7%8E%87"><span class="nav-number">3.1.</span> <span class="nav-text">误区一：概率密度就是概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%BA%8C%EF%BC%9A%E6%9C%89%E4%BA%86%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">误区二：有了概率密度就不需要分布函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%89%EF%BC%9A%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E4%B8%80%E5%AE%9A%E5%8F%AF%E5%AF%BC"><span class="nav-number">3.3.</span> <span class="nav-text">误区三：分布函数一定可导</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E5%9B%9E%E5%BF%86"><span class="nav-number">2.</span> <span class="nav-text"> 步骤回忆</span></a></li></ol>
     </div>
 </div>
 
