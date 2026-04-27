@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="明昧">
+    
+    <title>
+        
+            20251217 强弱大数定律 依概率收敛 不同的收敛方式 |
+        
+        行者无畏
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"flyingpuppyy.github.io","root":"/","language":"zh-Hans"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#FA8072","title":"行者无畏","author":"明昧","avatar":"/images/tou.jpeg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","categories":"/categories"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"没有一条路径通往真诚 真诚本身就是道路","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":true,"page_pv":true}},"local_search":{"enable":false,"preload":false},"comment":{"enable":true,"use":"valine","valine":{"appid":"DYpeXIX0A58ayXv2jFns418I-gzGzoHsz","appkey":"aVeRlE1OlBTUKleFs6ZKOrga","server_urls":null,"placeholder":"╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"icp":{"enable":false,"record_code":null,"url":"https://beian.miit.gov.cn"},"site_deploy":{"enable":false,"provider":"github","url":null},"shields_style":{"enable":false,"custom":[{"link_url":null,"img_url":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"encrypt":{"enable":true},"markdown":{"preset":"default","render":{"html":true,"xhtmlOut":false,"langPrefix":"language-","breaks":true,"linkify":true,"typographer":true,"quotes":"“”‘’"},"enable_rules":null,"disable_rules":null,"plugins":["markdown-it-abbr","markdown-it-cjk-breaks","markdown-it-deflist","markdown-it-emoji","markdown-it-footnote","markdown-it-ins","markdown-it-mark","markdown-it-sub","markdown-it-sup",{"name":"markdown-it-container","options":"success"},{"name":"markdown-it-container","options":"tips"},{"name":"markdown-it-container","options":"warning"},{"name":"markdown-it-container","options":"danger"}],"anchors":{"level":2,"collisionSuffix":"","permalink":false,"permalinkClass":"header-anchor","permalinkSide":"left","permalinkSymbol":"¶","case":0,"separator":"-"}},"root":"","source_data":{},"version":"4.1.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               行者无畏
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                
+                                首页
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                
+                                归档
+                            </a>
+                        </li>
+                    
+                        
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/"
+                    >首页</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives"
+                    >归档</a>
+                </li>
+            
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories"
+                    >分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        20251217 强弱大数定律 依概率收敛 不同的收敛方式
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/tou.jpeg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">明昧</span>
+                                
+                                    <span class="author-badge">Lv7</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2025-12-17 21:38:46</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Thu Dec 18 2025 04:04:30 GMT+0800">2025-12-18 04:04:30</span>
+            </span>
+        
+
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body">
+                    
+
+                    <h1>前言</h1>
+<ul>
+<li>全部由chatgpt生成，目前尚未考证，作为理解的一层基础以供后面辨析以及理解</li>
+</ul>
+<h1>背景</h1>
+<ul>
+<li>不理解依概率收敛</li>
+</ul>
+<h1>思维过程</h1>
+<ul>
+<li>依概率定律怎样理解</li>
+<li>强大数定律和弱大数定律有什么不同</li>
+<li>几乎处处收敛和依概率收敛有什么不同？描述的对象是？</li>
+<li>有多少种不同的收敛方式？有什么区别？</li>
+<li>强大数关注样本路径，弱大数关注概率，什么是样本路径，什么是固定 ω</li>
+</ul>
+<h1>强大数、弱大数</h1>
+<blockquote>
+<p><strong>弱大数定律</strong>：<br>
+“样本均值<strong>大多数时候</strong>接近总体期望。”</p>
+<p><strong>强大数定律</strong>：<br>
+“样本均值<strong>几乎每一条样本路径</strong>最终都收敛到总体期望。”</p>
+</blockquote>
+<h1>依概率收敛、强大数、弱大数</h1>
+<blockquote>
+<p><strong>依概率收敛</strong>：一种<strong>收敛方式（概念）</strong></p>
+<p><strong>弱大数定律</strong>：一个<strong>定理</strong>，结论是“样本均值依概率收敛于期望”</p>
+<p><strong>强大数定律</strong>：一个<strong>更强的定理</strong>，结论是“样本均值几乎处处收敛于期望”</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>依概率收敛</th>
+<th>弱大数定律</th>
+<th>强大数定律</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性质</td>
+<td>概念</td>
+<td>定理</td>
+<td>定理</td>
+</tr>
+<tr>
+<td>研究对象</td>
+<td>任意随机变量序列</td>
+<td>样本均值</td>
+<td>样本均值</td>
+</tr>
+<tr>
+<td>收敛方式</td>
+<td>依概率收敛</td>
+<td>依概率收敛</td>
+<td>几乎处处收敛</td>
+</tr>
+<tr>
+<td>强弱</td>
+<td>弱</td>
+<td>弱</td>
+<td>强</td>
+</tr>
+<tr>
+<td>是否涉及样本均值</td>
+<td>不一定</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>是否是大数定律</td>
+<td>否</td>
+<td>是</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<h1>依概率收敛与几乎处处收敛</h1>
+<blockquote>
+<p><strong>依概率收敛</strong>：<br>
+“偏离目标的<strong>概率</strong>越来越小。”</p>
+</blockquote>
+<blockquote>
+<p><strong>几乎处处收敛</strong>：<br>
+“对<strong>几乎每一条样本路径</strong>，最终都会收敛。”</p>
+</blockquote>
+<p>这两句话的主语是不同的：</p>
+<ul>
+<li>一个在说 <strong>概率</strong></li>
+<li>一个在说 <strong>样本路径</strong></li>
+</ul>
+<h2 id="二、什么叫“依概率收敛”——你到底在看什么？">二、什么叫“依概率收敛”——你到底在看什么？</h2>
+<h3 id="定义（先不纠结公式）">定义（先不纠结公式）</h3>
+<p><img   src="https://cdn.jsdelivr.net/gh/flyingpuppyy/pic@main/images/202512172221713.png"  alt="image-20251217222151622"></p>
+<p>意思是：</p>
+<blockquote>
+<p>对任意一个你能接受的误差 ε&gt;0<br>
+<strong>“Xn 离 X 超过 ε” 这件事发生的概率 → 0</strong></p>
+</blockquote>
+<p>关键不是 <strong>每一次</strong>，而是 <strong>发生的概率</strong>。</p>
+<h3 id="用一句话翻译定义">用一句话翻译定义</h3>
+<ul>
+<li>并不保证每次实验都接近</li>
+<li>只保证“<strong>大多数时候接近，而且不接近的情况越来越少</strong>”</li>
+</ul>
+<hr>
+<h2 id="三、什么叫“几乎处处收敛”——你到底在看什么？">三、什么叫“几乎处处收敛”——你到底在看什么？</h2>
+<h3 id="定义直观翻译">定义直观翻译</h3>
+<p><img   src="https://cdn.jsdelivr.net/gh/flyingpuppyy/pic@main/images/202512172223569.png"  alt="image-20251217222350528"></p>
+<p>意思是：</p>
+<blockquote>
+<p>对<strong>几乎所有样本点</strong> ω，数列 Xn(ω) 最终真的收敛到 X(ω)</p>
+</blockquote>
+<p>这里强调的是：</p>
+<ul>
+<li><strong>一条一条样本路径</strong></li>
+<li>不是概率大小，而是“是否最终稳定”</li>
+</ul>
+<hr>
+<h2 id="四、用“抛硬币”打比方（非常重要）">四、用“抛硬币”打比方（非常重要）</h2>
+<h3 id="情景">情景</h3>
+<p>你不断抛硬币，记：Xn=前 n 次正面比例</p>
+<hr>
+<h3 id="1️⃣-依概率收敛在说什么？">1️⃣ 依概率收敛在说什么？</h3>
+<p>对任意 ε&gt;0：</p>
+<blockquote>
+<p>“正面比例偏离 0.5超过 ε的概率 → 0”</p>
+</blockquote>
+<p>含义是：</p>
+<ul>
+<li>抛得越多</li>
+<li><strong>大多数实验结果</strong>看起来都很接近 0.5</li>
+<li>但不排除偶尔“偏得很离谱”</li>
+</ul>
+<hr>
+<h3 id="2️⃣-几乎处处收敛在说什么？">2️⃣ 几乎处处收敛在说什么？</h3>
+<blockquote>
+<p>对几乎每一个具体抛硬币结果序列：</p>
+<p><img   src="https://cdn.jsdelivr.net/gh/flyingpuppyy/pic@main/images/202512172225682.png"  alt="image-20251217222548651"></p>
+</blockquote>
+<p>含义是：</p>
+<ul>
+<li>一旦你的硬币序列固定</li>
+<li><strong>从某个时刻起，它就一直靠近 0.5</strong></li>
+<li>再也不会反复大幅偏离</li>
+</ul>
+<hr>
+<h1>理解样本路径</h1>
+<ul>
+<li>例子：掷骰子每天一次，连续三天</li>
+</ul>
+<h3 id="随机变量序列">随机变量序列</h3>
+<p>设：X1=第一天的点数,X2=第二天的点数,X3=第三天的点数</p>
+<p>每个 Xn取值 1,2,3,4,5,6       1,2,3,4,5,6     1,2,3,4,5,6</p>
+<hr>
+<h3 id="样本空间-Ω">样本空间 Ω</h3>
+<ul>
+<li>
+<p>所有可能的三天点数组合Ω={(1,1,1),(1,1,2),(1,1,3),…,(6,6,6)}</p>
+</li>
+<li>
+<p>每一个元素都是<strong>一个样本点 ω</strong></p>
+</li>
+<li>
+<p>样本空间一共有 6^3=216个样本点</p>
+</li>
+</ul>
+<hr>
+<h3 id="样本点-ω">样本点 ω</h3>
+<ul>
+<li>例如选择 ω=(2,5,1)</li>
+<li>这是<strong>一次具体实验的完整结果</strong>，记录了三天的点数</li>
+</ul>
+<hr>
+<h3 id="样本路径">样本路径</h3>
+<ul>
+<li>
+<p>固定这个 ω 后</p>
+<blockquote>
+<p>​          X1(ω)=2,X2(ω)=5,X3(ω)=1</p>
+</blockquote>
+</li>
+<li>
+<p>这个数列 (2,5,1)(2,5,1)(2,5,1) 就是<strong>样本路径</strong></p>
+</li>
+<li>
+<p><strong>注意</strong>：</p>
+<ul>
+<li>样本路径 = 一条确定的数列</li>
+<li>它对应<strong>一条样本点</strong></li>
+<li>样本路径 <strong>不是所有可能实验的集合</strong>，也不是重复实验的平均结果</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="如果你重复实验">如果你重复实验</h3>
+<ul>
+<li>每天同样投骰子，但选择了不同的三天结果 ω=(4,3,6)</li>
+<li>对应的样本路径 = (4,3,6)(4,3,6)(4,3,6)</li>
+<li>每一个样本路径都是一个 <strong>固定实验结果下的序列</strong></li>
+</ul>
+<hr>
+<h3 id="核心理解">核心理解</h3>
+<ol>
+<li>样本空间：<strong>所有可能三天点数组合</strong></li>
+<li>样本点：<strong>某一次三天投掷结果</strong></li>
+<li>样本路径：<strong>固定这个结果后，观察 Xn 随 n 的序列</strong></li>
+</ol>
+<blockquote>
+<p>样本路径 = <strong>一条确定的数列</strong>，而不是平均、概率或者多次实验的集合。</p>
+</blockquote>
+<h1>式子合集</h1>
+<h2 id="依概率收敛">依概率收敛</h2>
+<p>设随机变量序列 ({Xn}) 收敛到常数a：</p>
+<p>$$<br>
+X_n \xrightarrow{P} a \quad \Longleftrightarrow \quad<br>
+\forall \varepsilon &gt; 0,;; \lim_{n\to\infty} P\big(|X_n - a| &lt; \varepsilon\big) = 1<br>
+$$</p>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>固定  ε&gt;0，考察随机变量<strong>偏离极限的概率</strong></li>
+<li>随着  n→∞，偏离概率趋于 0</li>
+</ul>
+<hr>
+<h2 id="弱大数定律">弱大数定律</h2>
+<p>设${X_i}_{i=1}^{\infty}$ ==<strong>独立同分布</strong>==随机变量，==<strong>期望 (E[Xi] = μ)==存在</strong>。</p>
+<p>定义样本均值：<br>
+$$<br>
+\overline{X}<em>n = \frac{1}{n} \sum</em>{i=1}^{n} X_i<br>
+$$</p>
+<p>则：</p>
+<p>$$<br>
+\lim_{n\to\infty} P\Big(|\overline{X}_n - E[X_i]| &gt; \varepsilon\Big) = 0, \quad \forall \varepsilon &gt; 0<br>
+$$</p>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>样本均值依概率收敛到期望（大样本平均值是稳定的，越来越接近真实期望）</li>
+<li>只保证偏离期望的<strong>概率变小</strong></li>
+<li><strong>不保证每条样本路径都收敛</strong></li>
+<li>理解：n越多，均值就更加偏向期望</li>
+<li>当n足够大的时候，可以用期望来代替样本的均值（直接用<strong>用总体期望代替大样本均值</strong>）</li>
+</ul>
+<hr>
+<h2 id="伯努利大数定律">伯努利大数定律</h2>
+<p>设 (Xi) 为<strong>独立</strong>的伯努利随机变量：</p>
+<p>$$<br>
+X_i =<br>
+\begin{cases}<br>
+1, &amp; \text{事件发生} \<br>
+0, &amp; \text{事件不发生}<br>
+\end{cases},\quad P(X_i = 1) = p<br>
+$$</p>
+<p>样本均值为：</p>
+<p>$$<br>
+\overline{X}<em>n = \frac{1}{n} \sum</em>{i=1}^{n} X_i<br>
+$$</p>
+<p>则伯努利大数定律表示：</p>
+<p>$$<br>
+\overline{X}<em>n \xrightarrow{P} p<br>
+\quad\Longleftrightarrow\quad<br>
+\forall \varepsilon &gt; 0,;; \lim</em>{n\to\infty} P\big(|\overline{X}_n - p| &gt; \varepsilon\big) = 0<br>
+$$</p>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>样本均值 = 相对频率</li>
+<li>随着试验次数 (n→∞)，相对频率趋近于理论概率 (p)</li>
+<li>是弱大数定律的典型应用</li>
+</ul>
+<h2 id="计算样本均值期望的推导式子">计算样本均值期望的推导式子</h2>
+<p>设独立同分布随机变量 $X_1, X_2, \dots, X_n$，样本均值为：</p>
+<p>$$<br>
+\overline{X}<em>n = \frac{1}{n} \sum</em>{i=1}^{n} X_i<br>
+$$</p>
+<p>计算样本均值的期望：</p>
+<p>$$<br>
+\begin{aligned}<br>
+E\Bigg[\frac{1}{n} \sum_{i=1}^{n} X_i\Bigg]<br>
+&amp;= \frac{1}{n} \sum_{i=1}^{n} E[X_i] \quad \text{(利用期望的线性性质)} \<br>
+&amp;= \frac{1}{n} \cdot n \cdot E[X_i] \quad \text{(因为 $X_i$ 同分布)} \<br>
+&amp;= E[X_i]<br>
+\end{aligned}<br>
+$$</p>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>样本均值的期望等于单个随机变量的期望</li>
+<li>样本均值是无偏估计，即长期平均值等于理论期望</li>
+</ul>
+<h1>中心极限定理</h1>
+<p>当设 $X_1, X_2, \dots, X_n$ 是==独立==、==同分布==随机变量，满足：</p>
+<ul>
+<li>
+<p>==期望==：<br>
+$$<br>
+E[X_i] = \mu<br>
+$$</p>
+</li>
+<li>
+<p>==方差==：</p>
+</li>
+</ul>
+<p>$$<br>
+\mathrm{Var}(X_i) = \sigma^2 &lt; \infty<br>
+$$</p>
+<p>的前提条件下</p>
+<p>则当 $n \to \infty$ 时，<strong>标准化后的样本均值</strong>趋近标准正态分布：</p>
+<p>$$<br>
+Z_n = \frac{\overline{X}_n - \mu}{\sigma / \sqrt{n}} ;; \xrightarrow{d} ;; N(0,1)<br>
+$$</p>
+<ul>
+<li>$\xrightarrow{d}$ 表示<strong>依分布收敛</strong>（收敛到正态分布）</li>
+<li>标准化：减去期望 $\mu$，除以标准差 $\sigma / \sqrt{n}$</li>
+</ul>
+<blockquote>
+<p>理解：当n足够多的时候，其样本的均值经过标准化后服从于标准正态分布</p>
+</blockquote>
+
+                </div>
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2025/12/18/20251218-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%89%E5%A4%A7%E5%88%86%E5%B8%83/"
+                                   title="20251218 概率论三大分布"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20251218 概率论三大分布</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2025/12/11/20251211-%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%88%86%E6%9E%90%E6%A1%86%E6%9E%B6%EF%BC%88%E4%BB%96%E4%BA%BA%E7%9A%84%E6%9E%84%E5%BB%BA%E6%80%9D%E8%B7%AF%EF%BC%89/"
+                                   title="20251211 宏观经济分析框架（他人的构建思路）"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">20251211 宏观经济分析框架（他人的构建思路）</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        <div class="comment-plugin-fail border-box">
+    <span class="fail-tip">评论插件加载失败</span>
+    <button class="reload keep-button">点击重新加载</button>
+</div>
+<div class="comment-plugin-loading flex-center border-box">
+    <i class="loading-icon fa-solid fa-spinner fa-spin"></i>
+    <span class="load-tip">正在加载评论插件</span>
+</div>
+<script data-pjax>
+  window.KeepCommentPlugin = {}
+  window.KeepCommentPlugin.hideLoading = () => {
+    const cplDom = document.querySelector('.comments-container .comment-plugin-loading')
+    cplDom.style.display = 'none'
+  }
+  window.KeepCommentPlugin.loadFailHandle = () => {
+    window.KeepCommentPlugin.hideLoading()
+    const cpfDom = document.querySelector('.comments-container .comment-plugin-fail')
+    cpfDom.style.display = 'flex'
+    cpfDom.querySelector('.reload').addEventListener('click', () => {
+      window.location.reload()
+    })
+  }
+</script>
+
+        
+            
+
+    <div class="valine-container">
+        <div id="vcomments"></div>
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        ></script>
+        <script 
+                async
+                onerror="window.KeepCommentPlugin.loadFailHandle()"
+        >
+          window.KeepCommentPlugin.initValine = () => {
+            const config = {
+              el: '#vcomments',
+              appId: 'DYpeXIX0A58ayXv2jFns418I-gzGzoHsz',
+              appKey: 'aVeRlE1OlBTUKleFs6ZKOrga',
+              meta: ['nick', 'mail', 'link'],
+              avatar: 'wavatar',
+              enableQQ: true,
+              placeholder: '╲╱__ ╭の╮ ┈不管结局如何ヾ 是否完美゛ .我都不会放弃!',
+              lang: 'zh-Hans'.toLowerCase()
+            }
+
+            if ('') {
+              config.serverURLs = ''
+            }
+
+            if (window?.Valine) {
+              new Valine(config)
+              window.KeepCommentPlugin.hideLoading()
+            } else {
+              setTimeout(() => {
+                window.KeepCommentPlugin.initValine()
+              }, 1000)
+            }
+          }
+
+          if ('false' === 'true') {
+            setTimeout(() => {
+              window.KeepCommentPlugin.initValine()
+            }, 1200)
+          } else {
+            window.addEventListener('DOMContentLoaded', window.KeepCommentPlugin.initValine)
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">思维过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">强大数、弱大数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">依概率收敛、强大数、弱大数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">依概率收敛与几乎处处收敛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BB%80%E4%B9%88%E5%8F%AB%E2%80%9C%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B%E2%80%9D%E2%80%94%E2%80%94%E4%BD%A0%E5%88%B0%E5%BA%95%E5%9C%A8%E7%9C%8B%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">6.1.</span> <span class="nav-text">二、什么叫“依概率收敛”——你到底在看什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%88%E5%85%88%E4%B8%8D%E7%BA%A0%E7%BB%93%E5%85%AC%E5%BC%8F%EF%BC%89"><span class="nav-number">6.1.1.</span> <span class="nav-text">定义（先不纠结公式）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E4%B8%80%E5%8F%A5%E8%AF%9D%E7%BF%BB%E8%AF%91%E5%AE%9A%E4%B9%89"><span class="nav-number">6.1.2.</span> <span class="nav-text">用一句话翻译定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BB%80%E4%B9%88%E5%8F%AB%E2%80%9C%E5%87%A0%E4%B9%8E%E5%A4%84%E5%A4%84%E6%94%B6%E6%95%9B%E2%80%9D%E2%80%94%E2%80%94%E4%BD%A0%E5%88%B0%E5%BA%95%E5%9C%A8%E7%9C%8B%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">6.2.</span> <span class="nav-text">三、什么叫“几乎处处收敛”——你到底在看什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E7%9B%B4%E8%A7%82%E7%BF%BB%E8%AF%91"><span class="nav-number">6.2.1.</span> <span class="nav-text">定义直观翻译</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%94%A8%E2%80%9C%E6%8A%9B%E7%A1%AC%E5%B8%81%E2%80%9D%E6%89%93%E6%AF%94%E6%96%B9%EF%BC%88%E9%9D%9E%E5%B8%B8%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">6.3.</span> <span class="nav-text">四、用“抛硬币”打比方（非常重要）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E6%99%AF"><span class="nav-number">6.3.1.</span> <span class="nav-text">情景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1%EF%B8%8F%E2%83%A3-%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B%E5%9C%A8%E8%AF%B4%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">6.3.2.</span> <span class="nav-text">1️⃣ 依概率收敛在说什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%EF%B8%8F%E2%83%A3-%E5%87%A0%E4%B9%8E%E5%A4%84%E5%A4%84%E6%94%B6%E6%95%9B%E5%9C%A8%E8%AF%B4%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">6.3.3.</span> <span class="nav-text">2️⃣ 几乎处处收敛在说什么？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">理解样本路径</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%BA%8F%E5%88%97"><span class="nav-number">7.0.1.</span> <span class="nav-text">随机变量序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4-%CE%A9"><span class="nav-number">7.0.2.</span> <span class="nav-text">样本空间 Ω</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E6%9C%AC%E7%82%B9-%CF%89"><span class="nav-number">7.0.3.</span> <span class="nav-text">样本点 ω</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E6%9C%AC%E8%B7%AF%E5%BE%84"><span class="nav-number">7.0.4.</span> <span class="nav-text">样本路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E9%87%8D%E5%A4%8D%E5%AE%9E%E9%AA%8C"><span class="nav-number">7.0.5.</span> <span class="nav-text">如果你重复实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E8%A7%A3"><span class="nav-number">7.0.6.</span> <span class="nav-text">核心理解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">式子合集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B"><span class="nav-number">8.1.</span> <span class="nav-text">依概率收敛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B"><span class="nav-number">8.2.</span> <span class="nav-text">弱大数定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%AF%E5%8A%AA%E5%88%A9%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B"><span class="nav-number">8.3.</span> <span class="nav-text">伯努利大数定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%A0%B7%E6%9C%AC%E5%9D%87%E5%80%BC%E6%9C%9F%E6%9C%9B%E7%9A%84%E6%8E%A8%E5%AF%BC%E5%BC%8F%E5%AD%90"><span class="nav-number">8.4.</span> <span class="nav-text">计算样本均值期望的推导式子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">中心极限定理</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2026
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">明昧</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+                <span class="count-box border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+                <span class="count-box border-box pv">
+                    <span class="item-type border-box">访问量</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-toggle-theme-mode flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">思维过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">强大数、弱大数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">依概率收敛、强大数、弱大数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">6.</span> <span class="nav-text">依概率收敛与几乎处处收敛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BB%80%E4%B9%88%E5%8F%AB%E2%80%9C%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B%E2%80%9D%E2%80%94%E2%80%94%E4%BD%A0%E5%88%B0%E5%BA%95%E5%9C%A8%E7%9C%8B%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">6.1.</span> <span class="nav-text">二、什么叫“依概率收敛”——你到底在看什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%88%E5%85%88%E4%B8%8D%E7%BA%A0%E7%BB%93%E5%85%AC%E5%BC%8F%EF%BC%89"><span class="nav-number">6.1.1.</span> <span class="nav-text">定义（先不纠结公式）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E4%B8%80%E5%8F%A5%E8%AF%9D%E7%BF%BB%E8%AF%91%E5%AE%9A%E4%B9%89"><span class="nav-number">6.1.2.</span> <span class="nav-text">用一句话翻译定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BB%80%E4%B9%88%E5%8F%AB%E2%80%9C%E5%87%A0%E4%B9%8E%E5%A4%84%E5%A4%84%E6%94%B6%E6%95%9B%E2%80%9D%E2%80%94%E2%80%94%E4%BD%A0%E5%88%B0%E5%BA%95%E5%9C%A8%E7%9C%8B%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">6.2.</span> <span class="nav-text">三、什么叫“几乎处处收敛”——你到底在看什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E7%9B%B4%E8%A7%82%E7%BF%BB%E8%AF%91"><span class="nav-number">6.2.1.</span> <span class="nav-text">定义直观翻译</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%94%A8%E2%80%9C%E6%8A%9B%E7%A1%AC%E5%B8%81%E2%80%9D%E6%89%93%E6%AF%94%E6%96%B9%EF%BC%88%E9%9D%9E%E5%B8%B8%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">6.3.</span> <span class="nav-text">四、用“抛硬币”打比方（非常重要）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E6%99%AF"><span class="nav-number">6.3.1.</span> <span class="nav-text">情景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1%EF%B8%8F%E2%83%A3-%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B%E5%9C%A8%E8%AF%B4%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">6.3.2.</span> <span class="nav-text">1️⃣ 依概率收敛在说什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%EF%B8%8F%E2%83%A3-%E5%87%A0%E4%B9%8E%E5%A4%84%E5%A4%84%E6%94%B6%E6%95%9B%E5%9C%A8%E8%AF%B4%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">6.3.3.</span> <span class="nav-text">2️⃣ 几乎处处收敛在说什么？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">7.</span> <span class="nav-text">理解样本路径</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%BA%8F%E5%88%97"><span class="nav-number">7.0.1.</span> <span class="nav-text">随机变量序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4-%CE%A9"><span class="nav-number">7.0.2.</span> <span class="nav-text">样本空间 Ω</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E6%9C%AC%E7%82%B9-%CF%89"><span class="nav-number">7.0.3.</span> <span class="nav-text">样本点 ω</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E6%9C%AC%E8%B7%AF%E5%BE%84"><span class="nav-number">7.0.4.</span> <span class="nav-text">样本路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E9%87%8D%E5%A4%8D%E5%AE%9E%E9%AA%8C"><span class="nav-number">7.0.5.</span> <span class="nav-text">如果你重复实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E7%90%86%E8%A7%A3"><span class="nav-number">7.0.6.</span> <span class="nav-text">核心理解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">8.</span> <span class="nav-text">式子合集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B"><span class="nav-number">8.1.</span> <span class="nav-text">依概率收敛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B"><span class="nav-number">8.2.</span> <span class="nav-text">弱大数定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%AF%E5%8A%AA%E5%88%A9%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B"><span class="nav-number">8.3.</span> <span class="nav-text">伯努利大数定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%A0%B7%E6%9C%AC%E5%9D%87%E5%80%BC%E6%9C%9F%E6%9C%9B%E7%9A%84%E6%8E%A8%E5%AF%BC%E5%BC%8F%E5%AD%90"><span class="nav-number">8.4.</span> <span class="nav-text">计算样本均值期望的推导式子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text">中心极限定理</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
