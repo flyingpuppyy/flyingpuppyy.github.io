@@ -201,10 +201,19 @@
 
             <span class="meta-info-item post-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="datetime" data-updated="Fri Dec 19 2025 16:06:10 GMT+0800">2025-12-19 16:06:10</span>
+                <span class="datetime" data-updated="Sun May 03 2026 19:58:01 GMT+0800">2026-05-03 19:58:01</span>
             </span>
         
 
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/Math/">Math</a></li>
+                        
+                    
+                </ul>
+            </span>
         
 
         
@@ -230,12 +239,12 @@
                 <div class="post-content keep-markdown-body">
                     
 
-                    <h1>随机变量</h1>
+                    <h1 id="随机变量"><a class="markdownIt-Anchor" href="#随机变量"></a> 随机变量</h1>
 <blockquote>
 <p>随机变量是：把一次随机试验的结果，用一个“数”来表示的规则。</p>
 <p>它本身<strong>不包含概率规律</strong>，只负责“取值”。</p>
 </blockquote>
-<h1>随机变量的分布、随机变量的密度函数</h1>
+<h1 id="随机变量的分布-随机变量的密度函数"><a class="markdownIt-Anchor" href="#随机变量的分布-随机变量的密度函数"></a> 随机变量的分布、随机变量的密度函数</h1>
 <blockquote>
 <p><strong>随机变量 → 分布 →（离散：概率函数 / 连续：概率密度）</strong></p>
 </blockquote>
@@ -246,38 +255,33 @@
 <li><strong>概率密度</strong>：连续情形下，分布的“表达工具”。表示随机变量在 x 附近“挤得有多密”。对于连续型随机变量，概率只能通过分布来得到。</li>
 </ul>
 <blockquote>
-<h1>常见误区整理</h1>
-<h2 id="误区一：概率密度就是概率">误区一：概率密度就是概率</h2>
+<h1 id="常见误区整理"><a class="markdownIt-Anchor" href="#常见误区整理"></a> 常见误区整理</h1>
+<h2 id="误区一概率密度就是概率"><a class="markdownIt-Anchor" href="#误区一概率密度就是概率"></a> 误区一：概率密度就是概率</h2>
 <p>错误理解：</p>
-<p>认为<br>
-$$<br>
-f_X(x) = P(X = x)<br>
-$$</p>
+<p>认为</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>f</mi><mi>X</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f_X(x) = P(X = x)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></p>
 <p>正确结论：</p>
-<p>对于连续型随机变量，单点的概率<br>
-$$<br>
-P(X = x) = 0<br>
-$$</p>
+<p>对于连续型随机变量，单点的概率</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo>=</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">P(X = x) = 0
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></span></p>
 <p>概率密度不是概率，而是“概率的密集程度”。</p>
-<p>正确计算概率的方式：<br>
-$$<br>
-P(a &lt; X &lt; b) = \int_a^b f_X(x),dx<br>
-$$</p>
-<hr>
-<h2 id="误区二：有了概率密度就不需要分布函数">误区二：有了概率密度就不需要分布函数</h2>
+<p>正确计算概率的方式：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>a</mi><mo>&lt;</mo><mi>X</mi><mo>&lt;</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><msub><mi>f</mi><mi>X</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mtext> </mtext><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">P(a &lt; X &lt; b) = \int_a^b f_X(x)\,dx
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.5109580000000005em;vertical-align:-0.9119499999999999em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5990080000000004em;"><span style="top:-1.7880500000000001em;margin-left:-0.44445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span><span style="top:-3.812900000000001em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119499999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span></span></span></p>
+<hr />
+<h2 id="误区二有了概率密度就不需要分布函数"><a class="markdownIt-Anchor" href="#误区二有了概率密度就不需要分布函数"></a> 误区二：有了概率密度就不需要分布函数</h2>
 <p>错误理解：</p>
 <p>概率密度函数可以完全代替分布函数。</p>
 <p>正确结论：</p>
-<p>分布函数才是随机变量分布的<strong>根本定义</strong>：<br>
-$$<br>
-F_X(x) = P(X \le x)<br>
-$$</p>
-<p>连续型随机变量中：<br>
-$$<br>
-f_X(x) = \frac{d}{dx} F_X(x)<br>
-$$</p>
-<hr>
-<h2 id="误区三：分布函数一定可导">误区三：分布函数一定可导</h2>
+<p>分布函数才是随机变量分布的<strong>根本定义</strong>：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>F</mi><mi>X</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo stretchy="false">(</mo><mi>X</mi><mo>≤</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">F_X(x) = P(X \le x)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></p>
+<p>连续型随机变量中：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>f</mi><mi>X</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><msub><mi>F</mi><mi>X</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f_X(x) = \frac{d}{dx} F_X(x)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.07847em;">X</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></p>
+<hr />
+<h2 id="误区三分布函数一定可导"><a class="markdownIt-Anchor" href="#误区三分布函数一定可导"></a> 误区三：分布函数一定可导</h2>
 <p>错误理解：</p>
 <p>所有分布函数都有导数。</p>
 <p>正确结论：</p>
@@ -440,7 +444,7 @@ $$</p>
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">随机变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">随机变量的分布、随机变量的密度函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">常见误区整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%80%EF%BC%9A%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E6%98%AF%E6%A6%82%E7%8E%87"><span class="nav-number">3.1.</span> <span class="nav-text">误区一：概率密度就是概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%BA%8C%EF%BC%9A%E6%9C%89%E4%BA%86%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">误区二：有了概率密度就不需要分布函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%89%EF%BC%9A%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E4%B8%80%E5%AE%9A%E5%8F%AF%E5%AF%BC"><span class="nav-number">3.3.</span> <span class="nav-text">误区三：分布函数一定可导</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text"> 随机变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%AF%86%E5%BA%A6%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text"> 随机变量的分布、随机变量的密度函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA%E6%95%B4%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text"> 常见误区整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%80%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E6%98%AF%E6%A6%82%E7%8E%87"><span class="nav-number">3.1.</span> <span class="nav-text"> 误区一：概率密度就是概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%BA%8C%E6%9C%89%E4%BA%86%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text"> 误区二：有了概率密度就不需要分布函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%89%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E4%B8%80%E5%AE%9A%E5%8F%AF%E5%AF%BC"><span class="nav-number">3.3.</span> <span class="nav-text"> 误区三：分布函数一定可导</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -593,7 +597,7 @@ $$</p>
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">随机变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">随机变量的分布、随机变量的密度函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">常见误区整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%80%EF%BC%9A%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E6%98%AF%E6%A6%82%E7%8E%87"><span class="nav-number">3.1.</span> <span class="nav-text">误区一：概率密度就是概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%BA%8C%EF%BC%9A%E6%9C%89%E4%BA%86%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text">误区二：有了概率密度就不需要分布函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%89%EF%BC%9A%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E4%B8%80%E5%AE%9A%E5%8F%AF%E5%AF%BC"><span class="nav-number">3.3.</span> <span class="nav-text">误区三：分布函数一定可导</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text"> 随机变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%AF%86%E5%BA%A6%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text"> 随机变量的分布、随机变量的密度函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA%E6%95%B4%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text"> 常见误区整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%80%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E6%98%AF%E6%A6%82%E7%8E%87"><span class="nav-number">3.1.</span> <span class="nav-text"> 误区一：概率密度就是概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%BA%8C%E6%9C%89%E4%BA%86%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%B0%B1%E4%B8%8D%E9%9C%80%E8%A6%81%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.</span> <span class="nav-text"> 误区二：有了概率密度就不需要分布函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E5%8C%BA%E4%B8%89%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E4%B8%80%E5%AE%9A%E5%8F%AF%E5%AF%BC"><span class="nav-number">3.3.</span> <span class="nav-text"> 误区三：分布函数一定可导</span></a></li></ol></li></ol>
     </div>
 </div>
 
